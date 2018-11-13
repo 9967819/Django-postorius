@@ -27,6 +27,7 @@
     <form action="{% url 'list_settings' list_id=list.list_id visible_section=visible_section %}"
           method="post" class="form-horizontal list_settings">
         {% bootstrap_form_horizontal form 3 8 'Save changes' %}
+        <p hidden>{% trans 'Save changes' %}</p>
     </form>
   </div>
 </div>

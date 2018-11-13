@@ -14,6 +14,7 @@
 
     <form action="{% url 'list_new' %}" method="post" class="form-horizontal">
         {% bootstrap_form_horizontal form 2 8 'Create list' %}
+        <p hidden>{% trans 'Create list' %}</p>
     </form>
 
 {% endblock %}

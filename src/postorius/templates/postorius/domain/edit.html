@@ -14,6 +14,7 @@
 
     <form action="{% url 'domain_edit' domain=domain %}" method="post" class="form-horizontal">
         {% bootstrap_form_horizontal form 2 8 'Update' %}
+        <p hidden>{% trans 'Update' %}</p>
     </form>
 
 {% endblock content %}

@@ -13,6 +13,7 @@
 <form action="" method="post" class="form-group">
   {% csrf_token %}
   {% bootstrap_form_horizontal form 3 8 'Save' %}
+  <p hidden>{% trans 'Save' %}</p>
 </form>
 
 {% endblock content %}
