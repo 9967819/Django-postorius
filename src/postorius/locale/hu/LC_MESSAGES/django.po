@@ -1,15 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# balping <balping314@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-18 15:58+0530\n"
-"PO-Revision-Date: 2020-02-27 20:33+0000\n"
-"Last-Translator: akoscomp <nagy.akos@libreoffice.ro>\n"
+"PO-Revision-Date: 2020-11-26 04:14+0000\n"
+"Last-Translator: balping <balping314@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/hu/>\n"
 "Language: hu\n"
@@ -17,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.0-dev\n"
+"X-Generator: Weblate 4.4-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -285,7 +284,7 @@ msgstr ""
 #: forms/list_forms.py:943 forms/list_forms.py:950 forms/list_forms.py:971
 #: forms/user_forms.py:48
 msgid "Yes"
-msgstr ""
+msgstr "Igen"
 
 #: forms/list_forms.py:238 forms/list_forms.py:264 forms/list_forms.py:273
 #: forms/list_forms.py:359 forms/list_forms.py:367 forms/list_forms.py:408
@@ -297,7 +296,7 @@ msgstr ""
 #: forms/list_forms.py:943 forms/list_forms.py:950 forms/list_forms.py:971
 #: forms/user_forms.py:48
 msgid "No"
-msgstr ""
+msgstr "Nem"
 
 #: forms/list_forms.py:240
 msgid "Process Bounces"
@@ -672,7 +671,7 @@ msgstr ""
 
 #: forms/list_forms.py:599
 msgid "Full"
-msgstr ""
+msgstr "Teljes"
 
 #: forms/list_forms.py:603
 msgid ""
@@ -691,13 +690,13 @@ msgstr ""
 #: templates/postorius/lists/pending_confirmations.html:34
 #: templates/postorius/lists/subscription_requests.html:36
 msgid "Discard"
-msgstr ""
+msgstr "Elvetés"
 
 #: forms/list_forms.py:614 templates/postorius/lists/held_messages.html:29
 #: templates/postorius/lists/held_messages.html:107
 #: templates/postorius/lists/subscription_requests.html:35
 msgid "Reject"
-msgstr ""
+msgstr "Elutasítás"
 
 #: forms/list_forms.py:615
 msgid "Forward"
@@ -719,7 +718,7 @@ msgstr ""
 
 #: forms/list_forms.py:636
 msgid "Personalize"
-msgstr ""
+msgstr "Személyre szab"
 
 #: forms/list_forms.py:642
 msgid "Filter content"
@@ -1057,7 +1056,7 @@ msgstr ""
 
 #: forms/list_forms.py:915
 msgid "Information"
-msgstr ""
+msgstr "Információ"
 
 #: forms/list_forms.py:916
 msgid "A longer description of this mailing list."
@@ -1180,7 +1179,7 @@ msgstr ""
 
 #: forms/list_forms.py:1031
 msgid "Invitation"
-msgstr ""
+msgstr "Meghívás"
 
 #: forms/list_forms.py:1035
 msgid ""
@@ -1202,7 +1201,7 @@ msgstr ""
 
 #: forms/list_forms.py:1067
 msgid "Header"
-msgstr ""
+msgstr "Fejléc"
 
 #: forms/list_forms.py:1068
 msgid "Email header to filter on (case-insensitive)."
@@ -1218,7 +1217,7 @@ msgstr ""
 
 #: forms/list_forms.py:1073
 msgid "Pattern"
-msgstr ""
+msgstr "Mintázat"
 
 #: forms/list_forms.py:1074
 msgid "Regular expression matching the header's value."
@@ -1234,7 +1233,7 @@ msgstr ""
 
 #: forms/list_forms.py:1079 templates/postorius/domain/index.html:26
 msgid "Action"
-msgstr ""
+msgstr "Művelet"
 
 #: forms/list_forms.py:1080
 msgid "Please enter a valid action."
@@ -1246,7 +1245,7 @@ msgstr ""
 
 #: forms/list_forms.py:1112
 msgid "Moderation"
-msgstr ""
+msgstr "Moderálás"
 
 #: forms/list_forms.py:1114
 msgid "List default"
@@ -1272,7 +1271,7 @@ msgstr ""
 
 #: forms/list_forms.py:1151
 msgid "Data"
-msgstr ""
+msgstr "Adat"
 
 #: forms/member_forms.py:27
 msgid "Email Address"
@@ -1314,11 +1313,11 @@ msgstr ""
 
 #: forms/user_forms.py:55
 msgid "Enabled"
-msgstr ""
+msgstr "Engedélyezve"
 
 #: forms/user_forms.py:55
 msgid "Disabled"
-msgstr ""
+msgstr "Letiltva"
 
 #: forms/user_forms.py:60
 msgid "Delivery status"
@@ -1561,7 +1560,7 @@ msgstr ""
 
 #: templates/403.html:5
 msgid "Forbidden"
-msgstr ""
+msgstr "Tiltva"
 
 #: templates/403.html:6
 msgid "You do not have permissions to visit this page."
@@ -1593,12 +1592,12 @@ msgstr ""
 
 #: templates/postorius/base.html:38
 msgid "Lists"
-msgstr ""
+msgstr "Listák"
 
 #: templates/postorius/base.html:44 templates/postorius/domain/index.html:5
 #: templates/postorius/domain/index.html:11
 msgid "Domains"
-msgstr ""
+msgstr "Domain-ek"
 
 #: templates/postorius/base.html:50
 msgid "Bans"
@@ -1610,7 +1609,7 @@ msgstr ""
 
 #: templates/postorius/base.html:63 templates/postorius/lists/summary.html:31
 msgid "Archives"
-msgstr ""
+msgstr "Archívumok"
 
 #: templates/postorius/base.html:79
 msgid "Account"
@@ -1626,11 +1625,11 @@ msgstr ""
 
 #: templates/postorius/base.html:94
 msgid "Logout"
-msgstr ""
+msgstr "Kijelentkezés"
 
 #: templates/postorius/base.html:101
 msgid "Login"
-msgstr ""
+msgstr "Bejelentkezés"
 
 #: templates/postorius/base.html:105
 msgid "Sign Up"
@@ -1677,7 +1676,7 @@ msgstr ""
 #: templates/postorius/lists/template_list.html:32
 #: templates/postorius/menu/list_nav.html:59
 msgid "Delete"
-msgstr ""
+msgstr "Törlés"
 
 #: templates/postorius/domain/confirm_delete.html:34
 #: templates/postorius/domain/template_delete.html:28
@@ -1686,7 +1685,7 @@ msgstr ""
 #: templates/postorius/lists/confirm_removeall_subscribers.html:22
 #: templates/postorius/lists/template_delete.html:25
 msgid "Cancel"
-msgstr ""
+msgstr "Mégse"
 
 #: templates/postorius/domain/edit.html:6
 #: templates/postorius/domain/edit.html:12
@@ -1700,22 +1699,22 @@ msgstr ""
 #: templates/postorius/domain/index.html:25
 #: templates/postorius/menu/list_nav.html:42
 msgid "Owners"
-msgstr ""
+msgstr "Tulajdonosok"
 
 #: templates/postorius/domain/index.html:38
 #: templates/postorius/domain/index.html:58
 #: templates/postorius/domain/template_index.html:33
 #: templates/postorius/lists/template_list.html:31
 msgid "Edit"
-msgstr ""
+msgstr "Szerkesztés"
 
 #: templates/postorius/domain/index.html:50
 msgid "remove"
-msgstr ""
+msgstr "eltávolítás"
 
 #: templates/postorius/domain/index.html:54
 msgid "Add"
-msgstr ""
+msgstr "Hozzáadás"
 
 #: templates/postorius/domain/index.html:57
 #: templates/postorius/domain/template_add.html:6
@@ -1728,7 +1727,7 @@ msgstr ""
 #: templates/postorius/lists/template_update.html:7
 #: templates/postorius/menu/list_nav.html:45 templatetags/nav_helpers.py:38
 msgid "Templates"
-msgstr ""
+msgstr "Sablonok"
 
 #: templates/postorius/domain/new.html:6
 msgid "Add domain"
@@ -1920,19 +1919,19 @@ msgstr ""
 #: templates/postorius/lists/held_messages.html:106
 #: templates/postorius/lists/subscription_requests.html:34
 msgid "Accept"
-msgstr ""
+msgstr "Elfogadás"
 
 #: templates/postorius/lists/held_messages.html:38
 msgid "Subject"
-msgstr ""
+msgstr "Tárgy"
 
 #: templates/postorius/lists/held_messages.html:39
 msgid "Sender"
-msgstr ""
+msgstr "Feladó"
 
 #: templates/postorius/lists/held_messages.html:40
 msgid "Reason"
-msgstr ""
+msgstr "Ok"
 
 #: templates/postorius/lists/held_messages.html:41
 msgid "Hold Date"
@@ -1944,7 +1943,7 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:81
 msgid "Attachments"
-msgstr ""
+msgstr "Csatolmányok"
 
 #: templates/postorius/lists/held_messages.html:92
 msgid "Set member moderation"
@@ -2009,7 +2008,7 @@ msgstr ""
 #: templates/postorius/lists/members.html:74
 #: templates/postorius/user/address_preferences.html:32
 msgid "Address"
-msgstr ""
+msgstr "Cím"
 
 #: templates/postorius/lists/members.html:93
 msgid "Member Options"
@@ -2035,7 +2034,7 @@ msgstr ""
 #: templates/postorius/lists/pending_confirmations.html:20
 #: templates/postorius/lists/subscription_requests.html:20
 msgid "Actions"
-msgstr ""
+msgstr "Műveletek"
 
 #: templates/postorius/lists/pending_confirmations.html:35
 #: templates/postorius/lists/subscription_requests.html:37
@@ -2050,7 +2049,7 @@ msgstr ""
 #: templates/postorius/lists/settings.html:7
 #: templates/postorius/menu/list_nav.html:46
 msgid "Settings"
-msgstr ""
+msgstr "Beállítások"
 
 #: templates/postorius/lists/subscription_requests.html:7
 #: templates/postorius/menu/list_nav.html:14
@@ -2060,7 +2059,7 @@ msgstr ""
 #: templates/postorius/lists/summary.html:8
 #: templates/postorius/menu/list_nav.html:10
 msgid "Info"
-msgstr ""
+msgstr "Információ"
 
 #: templates/postorius/lists/summary.html:21
 msgid "To contact the list owners, use the following email address:"
@@ -2102,7 +2101,7 @@ msgstr "Leírás"
 
 #: templates/postorius/lists/summary.html:60
 msgid "Unsubscribe"
-msgstr ""
+msgstr "Leiratkozás"
 
 #: templates/postorius/lists/summary.html:63
 msgid ""
@@ -2187,19 +2186,19 @@ msgstr ""
 
 #: templates/postorius/menu/list_nav.html:36
 msgid "Users"
-msgstr ""
+msgstr "Felhasználók"
 
 #: templates/postorius/menu/list_nav.html:39
 msgid "Members"
-msgstr ""
+msgstr "Tagok"
 
 #: templates/postorius/menu/list_nav.html:40
 msgid "Non-Members"
-msgstr ""
+msgstr "Nem tagok"
 
 #: templates/postorius/menu/list_nav.html:41
 msgid "Moderators"
-msgstr ""
+msgstr "Moderátorok"
 
 #: templates/postorius/menu/list_nav.html:50
 msgid "Mass operations"
@@ -2220,7 +2219,7 @@ msgstr ""
 #: templates/postorius/menu/user_nav.html:7
 #: templates/postorius/user/subscriptions.html:8 templatetags/nav_helpers.py:42
 msgid "Subscriptions"
-msgstr ""
+msgstr "Feliratkozások"
 
 #: templates/postorius/menu/user_nav.html:8
 msgid "Global Mailman preferences"
@@ -2273,7 +2272,7 @@ msgstr ""
 #: templates/postorius/user/address_preferences.html:62
 #: templates/postorius/user/subscription_preferences.html:68
 msgid "Save"
-msgstr ""
+msgstr "Mentés"
 
 #: templates/postorius/user/list_options.html:14
 msgid "Subscription options for"
@@ -2299,7 +2298,7 @@ msgstr ""
 
 #: templates/postorius/user/subscription_preferences.html:32
 msgid "Subscription"
-msgstr ""
+msgstr "Feliratkozás"
 
 #: templates/postorius/user/subscriptions.html:17
 msgid "You are subscribed to the following mailing lists:"
@@ -2355,7 +2354,7 @@ msgstr ""
 
 #: templatetags/nav_helpers.py:35
 msgid "Summary"
-msgstr ""
+msgstr "Összegzés"
 
 #: templatetags/nav_helpers.py:37
 msgid "Confirm Removal of All Members"
