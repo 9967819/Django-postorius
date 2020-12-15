@@ -51,6 +51,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   #454)
 * Fix a bug where the Bans form would always use default language instead of
   current request's language. (Closes #441)
+* Fix the URL on cancel buttons in template's confirm delete page. (Closes
+  #458)
 
 1.3.3
 =====
