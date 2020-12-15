@@ -16,14 +16,16 @@
 
 <form action="" method="post">
   {% csrf_token %}
-  <p>{% blocktrans with name=object.name identifier=object.identifier%}
+  <p>{% blocktrans with name=object.name identifier=object.identifier %}
      Are you sure you want to delete the "{{ name }}" template
      from list "{{ identifier }}"?
      {% endblocktrans %}
   </p>
   <input class="btn btn-danger" type="submit" value="{% trans 'Confirm' %}" />
-  <a class="btn btn-info" href="{{ view.success_url }}">{% trans 'Cancel' %}</a>
+  <a class="btn btn-info" href="{% url 'list_template_list' list.list_id %}">{% trans 'Cancel' %}</a>
 
+
+  {{ view }}
 </form>
 
 {% endblock content %}

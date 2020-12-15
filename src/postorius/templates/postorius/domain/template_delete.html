@@ -25,7 +25,7 @@
            {% endblocktrans %}
         </p>
         <input class="btn btn-danger" type="submit" value="{% trans 'Confirm' %}" />
-        <a class="btn btn-info" href="{{ view.success_url }}">{% trans 'Cancel' %}</a>
+        <a class="btn btn-info" href="{% url 'domain_template_list' domain.mail_host %}">{% trans 'Cancel' %}</a>
 
     </form>
 

@@ -22,7 +22,7 @@ from django.core.exceptions import MultipleObjectsReturned
 from django.db import IntegrityError
 from django.http import Http404, HttpResponse, HttpResponseBadRequest
 from django.shortcuts import redirect
-from django.urls import reverse_lazy
+from django.urls import reverse
 from django.views.decorators.http import require_safe
 from django.views.generic import CreateView, DeleteView, ListView, UpdateView
 
@@ -68,7 +68,7 @@ class ListTemplateCreateView(ListOwnerMixin, ListContextMixin, CreateView):
     fields = ['name', 'data']
 
     def get_success_url(self):
-        return reverse_lazy(
+        return reverse(
             'list_template_list', args=(self.kwargs['list_id'],))
 
     def form_valid(self, form):
@@ -99,7 +99,7 @@ class ListTemplateUpdateView(ListOwnerMixin, ListContextMixin, UpdateView):
     form_class = TemplateUpdateForm
 
     def get_success_url(self):
-        return reverse_lazy(
+        return reverse(
             'list_template_list', args=(self.kwargs['list_id'],))
 
 
@@ -109,7 +109,7 @@ class ListTemplateDeleteView(ListOwnerMixin, ListContextMixin, DeleteView):
     model = EmailTemplate
 
     def get_success_url(self):
-        return reverse_lazy(
+        return reverse(
             'list_template_list', args=(self.kwargs['list_id'],))
 
 
@@ -141,8 +141,8 @@ class DomainTemplateCreateView(
     header = 'New Template'
 
     def get_success_url(self):
-        return reverse_lazy('domain_template_list',
-                            args=(self.kwargs['domain'],))
+        return reverse('domain_template_list',
+                       args=(self.kwargs['domain'],))
 
     def form_valid(self, form):
         formdata = form.cleaned_data
@@ -174,8 +174,8 @@ class DomainTemplateUpdateView(
     header = 'Edit Template'
 
     def get_success_url(self):
-        return reverse_lazy('domain_template_list',
-                            args=(self.kwargs['domain'],))
+        return reverse('domain_template_list',
+                       args=(self.kwargs['domain'],))
 
 
 class DomainTemplateDeleteView(
@@ -185,8 +185,8 @@ class DomainTemplateDeleteView(
     model = EmailTemplate
 
     def get_success_url(self):
-        return reverse_lazy('domain_template_list',
-                            args=(self.kwargs['domain'],))
+        return reverse('domain_template_list',
+                       args=(self.kwargs['domain'],))
 
 
 @require_safe
