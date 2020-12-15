@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-18 15:58+0530\n"
-"PO-Revision-Date: 2020-08-16 22:03+0000\n"
+"PO-Revision-Date: 2020-11-19 04:10+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/he/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.2-dev\n"
+"X-Generator: Weblate 4.4-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -507,10 +507,8 @@ msgstr ""
 "המוחזקות, הנדחות (החזרה) והמושלכות."
 
 #: forms/list_forms.py:410
-#, fuzzy
-#| msgid "Moderation"
 msgid "Emergency Moderation"
-msgstr "פיקוח"
+msgstr "פיקוח חירום"
 
 #: forms/list_forms.py:412
 msgid ""
@@ -518,6 +516,9 @@ msgid ""
 "held for moderation. Turn this option on when your list is experiencing a "
 "flamewar and you want a cooling off period. "
 msgstr ""
+"כאשר אפשרות זו פעילה, כל תעבורת הרשימה מנותבת לחירום, כלומר מוחזקת עד לסקירת "
+"הפיקוח. יש להפעיל את האפשרות הזאת כאשר הרשימה שלך מותקפת בכל צורה שהיא וצריך "
+"קצת לצנן את העניינים. "
 
 #: forms/list_forms.py:419
 msgid "Maximum message size"
@@ -1707,12 +1708,8 @@ msgid ""
 msgstr "ההודעה נשלחת למנויים כאשר צריך לאמת את ביטול המינוי."
 
 #: template_list.py:54
-#, fuzzy
-#| msgid ""
-#| "The message sent to subscribers when a subscription confirmation is "
-#| "required."
 msgid "The message sent to subscribers when they are invited to join a list."
-msgstr "ההודעה נשלחת למנויים כאשר צריך לאמת את המינוי."
+msgstr "ההודעה נשלחת למנויים כאשר הם מוזמנים להצטרף לרשימה."
 
 #: template_list.py:56
 msgid "The notice sent to a member when they unsubscribe from a mailing list."

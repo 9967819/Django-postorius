@@ -7,16 +7,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-18 15:58+0530\n"
-"PO-Revision-Date: 2020-08-11 03:36+0000\n"
+"PO-Revision-Date: 2020-12-11 04:16+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
-"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/gnu-"
-"mailman/postorius/nb_NO/>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
+"gnu-mailman/postorius/nb_NO/>\n"
 "Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.2-dev\n"
+"X-Generator: Weblate 4.4-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -157,7 +157,7 @@ msgstr "Skriv inn listeeierens e-postadresse."
 
 #: forms/list_forms.py:80
 msgid "Advertise this list?"
-msgstr ""
+msgstr "Offentliggjør denne listen?"
 
 #: forms/list_forms.py:82
 msgid "Please choose a list type."
@@ -165,11 +165,11 @@ msgstr "Velg en listetype."
 
 #: forms/list_forms.py:85
 msgid "Advertise this list in list index"
-msgstr ""
+msgstr "Offentliggjør denne listen i listeindeksen"
 
 #: forms/list_forms.py:86
 msgid "Hide this list in list index"
-msgstr ""
+msgstr "Skjul denne listen fra listeindeksen"
 
 #: forms/list_forms.py:99
 #, fuzzy
@@ -178,7 +178,7 @@ msgstr "Velg et eksisterende domene."
 
 #: forms/list_forms.py:100
 msgid "Choose a valid Mail Host"
-msgstr ""
+msgstr "Velg en gyldig e-postvert"
 
 #: forms/list_forms.py:103
 msgid "List Style"
@@ -194,7 +194,7 @@ msgstr "Velg en gyldig listestil."
 
 #: forms/list_forms.py:110
 msgid "Site admin has not created any domains"
-msgstr ""
+msgstr "Denne administratoren har ikke opprettet noen domener"
 
 #: forms/list_forms.py:123
 msgid "Please enter a valid listname"
@@ -444,7 +444,7 @@ msgstr ""
 
 #: forms/list_forms.py:380
 msgid "Please choose a default member action."
-msgstr ""
+msgstr "Velg en forvalgt medlemshandling."
 
 #: forms/list_forms.py:384
 msgid ""
@@ -516,7 +516,7 @@ msgstr ""
 
 #: forms/list_forms.py:444
 msgid "Accept these non-members"
-msgstr ""
+msgstr "Godta disse ikke-medlemmene"
 
 #: forms/list_forms.py:447
 msgid ""
@@ -543,7 +543,7 @@ msgstr ""
 
 #: forms/list_forms.py:469
 msgid "Reject these non-members"
-msgstr ""
+msgstr "Avslå disse ikke-medlemmene"
 
 #: forms/list_forms.py:472
 msgid ""
@@ -556,7 +556,7 @@ msgstr ""
 
 #: forms/list_forms.py:482
 msgid "Discard these non-members"
-msgstr ""
+msgstr "Forkast disse ikke-medlemmene"
 
 #: forms/list_forms.py:485
 msgid ""
@@ -586,15 +586,15 @@ msgstr ""
 
 #: forms/list_forms.py:532
 msgid "Send Digest Periodically"
-msgstr ""
+msgstr "Send føljetong periodisk"
 
 #: forms/list_forms.py:533
 msgid "Should Mailman send out digests periodically?"
-msgstr ""
+msgstr "Skal Mailman sende ut føljetonger periodisk?"
 
 #: forms/list_forms.py:539
 msgid "Digest Volume Frequency"
-msgstr ""
+msgstr "Føljetongsfrekvens"
 
 #: forms/list_forms.py:540
 msgid ""
@@ -678,15 +678,15 @@ msgstr ""
 
 #: forms/list_forms.py:597
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 #: forms/list_forms.py:598
 msgid "Individual"
-msgstr ""
+msgstr "Individuell"
 
 #: forms/list_forms.py:599
 msgid "Full"
-msgstr ""
+msgstr "Full"
 
 #: forms/list_forms.py:603
 msgid ""
@@ -715,11 +715,11 @@ msgstr ""
 
 #: forms/list_forms.py:615
 msgid "Forward"
-msgstr ""
+msgstr "Videresend"
 
 #: forms/list_forms.py:616
 msgid "Preserve"
-msgstr ""
+msgstr "Bevar"
 
 #: forms/list_forms.py:619
 msgid ""
@@ -733,7 +733,7 @@ msgstr ""
 
 #: forms/list_forms.py:636
 msgid "Personalize"
-msgstr ""
+msgstr "Personaliser"
 
 #: forms/list_forms.py:642
 #, fuzzy
@@ -745,6 +745,8 @@ msgid ""
 "Should Mailman filter the content of list traffic according to the settings "
 "below?"
 msgstr ""
+"Skal Mailman filtrere listetrafikkens innhold i hendhold til innstillingene "
+"nedenfor?"
 
 #: forms/list_forms.py:646
 #, fuzzy
@@ -1668,7 +1670,7 @@ msgstr "Logg inn"
 
 #: templates/postorius/base.html:105
 msgid "Sign Up"
-msgstr "Registrering"
+msgstr "Registrer"
 
 #: templates/postorius/base.html:128
 msgid "Postorius Documentation"

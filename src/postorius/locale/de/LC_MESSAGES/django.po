@@ -5,13 +5,14 @@
 # Milo Ivir <mail@milotype.de>, 2020.
 # Tobias Hägele <haegelix@yahoo.de>, 2020.
 # Claas Augner <github@caugner.de>, 2020.
+# Michael Lorenzen <ml@m-lorenzen.de>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-18 15:57+0530\n"
-"PO-Revision-Date: 2020-09-13 22:01+0000\n"
-"Last-Translator: Claas Augner <github@caugner.de>\n"
+"PO-Revision-Date: 2020-12-01 15:09+0000\n"
+"Last-Translator: Michael Lorenzen <ml@m-lorenzen.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/de/>\n"
 "Language: de\n"
@@ -19,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Weblate 4.3-dev\n"
+"X-Generator: Weblate 4.4-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -534,10 +535,8 @@ msgstr ""
 "Übereinstimmung gefunden wird, kommt es zur Anwendung dieser Einstellung."
 
 #: forms/list_forms.py:410
-#, fuzzy
-#| msgid "Moderation"
 msgid "Emergency Moderation"
-msgstr "Moderation"
+msgstr "Notfall-Moderation"
 
 #: forms/list_forms.py:412
 msgid ""
@@ -545,6 +544,9 @@ msgid ""
 "held for moderation. Turn this option on when your list is experiencing a "
 "flamewar and you want a cooling off period. "
 msgstr ""
+"Diese Option aktiviert die Notfall-Moderation, bei der alle Nachrichten die "
+"Moderation durchlaufen. Benutzen Sie diese Option, wenn Ihre Liste von einem "
+"Flamewar betroffen ist und Sie die Diskussion abkühlen wollen. "
 
 #: forms/list_forms.py:419
 msgid "Maximum message size"
@@ -1819,14 +1821,10 @@ msgstr ""
 "erforderlich ist."
 
 #: template_list.py:54
-#, fuzzy
-#| msgid ""
-#| "The message sent to subscribers when a subscription confirmation is "
-#| "required."
 msgid "The message sent to subscribers when they are invited to join a list."
 msgstr ""
-"Die Nachricht, die an Abonnenten gesendet wird, wenn eine "
-"Abonnementbestätigung erforderlich ist."
+"Diese Nachricht wird an Abonnenten gesendet, wenn sie zu einer Liste "
+"eingeladen werden."
 
 #: template_list.py:56
 msgid "The notice sent to a member when they unsubscribe from a mailing list."
@@ -2556,8 +2554,8 @@ msgid ""
 "     "
 msgstr ""
 "\n"
-"     Möchten Sie die Vorlage \"%(name)s\" wirklich aus der Liste "
-"\"%(identifier)s\" löschen?\n"
+"     Möchten Sie die Vorlage \"%(name)s\" wirklich \n"
+"…aus der Liste \"%(identifier)s\" löschen?\n"
 "     "
 
 #: templates/postorius/menu/list_nav.html:19
@@ -2654,8 +2652,8 @@ msgid ""
 "Any options showing as not set here have inherit at runtime from your global "
 "preferences (viewable on other tab)"
 msgstr ""
-"Alle Optionen, die hier nicht als gesetzt angezeigt werden, werden zur "
-"Laufzeit aus den globalen Einstellungen übernommen (siehe anderen Tab)"
+"Die hier nicht als gesetzt angezeigten Optionen übernehmen zur Laufzeit die "
+"Werte aus den globalen Einstellungen (siehe anderen Tab)"
 
 #: templates/postorius/user/address_preferences.html:62
 #: templates/postorius/user/subscription_preferences.html:68
@@ -2686,9 +2684,9 @@ msgid ""
 "Any options showing as not set inherit at runtime from your global or "
 "address specific preferences (viewable on other tabs)"
 msgstr ""
-"Alle Optionen, die hier nicht als gesetzt angezeigt werden, werden zur "
-"Laufzeit aus den globalen oder adressspezifischen Einstellungen übernommen "
-"(siehe andere Tabs)"
+"Die hier nicht als gesetzt angezeigten Optionen übernehmen zur Laufzeit die "
+"Werte aus den globalen oder adressspezifischen Einstellungen (siehe anderen "
+"Tab)"
 
 #: templates/postorius/user/subscription_preferences.html:32
 msgid "Subscription"

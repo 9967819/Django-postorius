@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-18 15:58+0530\n"
-"PO-Revision-Date: 2020-10-25 22:24+0000\n"
+"PO-Revision-Date: 2020-11-19 04:10+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/tr/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.3.2-dev\n"
+"X-Generator: Weblate 4.4-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -523,14 +523,12 @@ msgid ""
 "discarded addresses. If no match is found, then this action is taken."
 msgstr ""
 "Üye olmayan birinden bir gönderi alındığında, mesajın göndereni açıkça kabul "
-"edilen, tutulan, reddedilen (geri dönen) ve atılan adreslerin listesiyle "
+"edilen, bekletilen, reddedilen (geri dönen) ve atılan adreslerin listesiyle "
 "eşleştirilir. Eşleşme bulunamazsa, bu eylem gerçekleştirilir."
 
 #: forms/list_forms.py:410
-#, fuzzy
-#| msgid "Moderation"
 msgid "Emergency Moderation"
-msgstr "Denetim"
+msgstr "Acil Durum Denetimi"
 
 #: forms/list_forms.py:412
 msgid ""
@@ -538,6 +536,9 @@ msgid ""
 "held for moderation. Turn this option on when your list is experiencing a "
 "flamewar and you want a cooling off period. "
 msgstr ""
+"Bu seçenek etkinleştirildiğinde, tüm liste trafiği acil durum denetimine "
+"alınır, yani denetim için bekletilir. Listenizde öfkeli bir tartışma "
+"yaşandığında ve bir sakinleşme arası istediğinizde bu seçeneği açın. "
 
 #: forms/list_forms.py:419
 msgid "Maximum message size"
@@ -1781,12 +1782,9 @@ msgid ""
 msgstr "Abonelikten çıkma onayı gerektiğinde abonelere gönderilecek mesaj."
 
 #: template_list.py:54
-#, fuzzy
-#| msgid ""
-#| "The message sent to subscribers when a subscription confirmation is "
-#| "required."
 msgid "The message sent to subscribers when they are invited to join a list."
-msgstr "Abonelik doğrulama gerektiğinde abonelere gönderilecek mesaj."
+msgstr ""
+"Bir listeye katılmaya davet edildiklerinde abonelere gönderilecek mesaj."
 
 #: template_list.py:56
 msgid "The notice sent to a member when they unsubscribe from a mailing list."
