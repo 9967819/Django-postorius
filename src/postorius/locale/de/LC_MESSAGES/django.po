@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-18 15:57+0530\n"
 "PO-Revision-Date: 2020-12-16 22:44+0000\n"
-"Last-Translator: Paul <paulwiesinger+weblate@gmail.com>\n"
+"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/de/>\n"
 "Language: de\n"
@@ -46,7 +46,7 @@ msgstr "Bitte geben Sie einen Domain-Namen an"
 
 #: forms/domain_forms.py:47 forms/domain_forms.py:66
 msgid "Please enter a valid domain name."
-msgstr "Bitte geben Sie einen gültigen Domain-Namen an."
+msgstr "Bitte geben Sie einen gültigen Domänen-Namen an."
 
 #: forms/domain_forms.py:50
 msgid ""
@@ -278,7 +278,7 @@ msgstr ""
 
 #: forms/list_forms.py:223
 msgid "Un-Subscription Policy"
-msgstr "Abmelderichtlinie"
+msgstr "Abmeldungsrichtlinie"
 
 #: forms/list_forms.py:225
 msgid ""
