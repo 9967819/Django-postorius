@@ -7,13 +7,14 @@
 # Claas Augner <github@caugner.de>, 2020.
 # Michael Lorenzen <ml@m-lorenzen.de>, 2020.
 # J. Lavoie <j.lavoie@net-c.ca>, 2020.
+# Paul <paulwiesinger+weblate@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-18 15:57+0530\n"
-"PO-Revision-Date: 2020-12-16 21:37+0000\n"
-"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
+"PO-Revision-Date: 2020-12-16 22:44+0000\n"
+"Last-Translator: Paul <paulwiesinger+weblate@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/de/>\n"
 "Language: de\n"
@@ -288,12 +289,12 @@ msgid ""
 "Confirm then Moderate: First subscribers have to confirm, then a moderator "
 "needs to authorize."
 msgstr ""
-"Offen: Mitgliedschaften werden automatisch gekündigt\n"
+"Offen: Abmeldungen werden automatisch durchgeführt\n"
 "Bestätigen: Mitglieder müssen eine Abmeldung anhand einer zugesandten E-Mail "
 "vornehmen\n"
-"Moderieren: Moderatoren müssen jede Kündigungsanfrage manuell autorisieren.\n"
-"Bestätigen, dann Moderieren: zuerst müssen Mitglieder die Bestätigung "
-"durchlaufen, dann muss ein Moderator autorisieren."
+"Moderieren: Moderatoren müssen jede Abmeldungsanfrage manuell autorisieren.\n"
+"Bestätigen, dann Moderieren: zuerst müssen Mitglieder die Abmeldung "
+"bestätigen, dann muss ein Moderator autorisieren."
 
 #: forms/list_forms.py:238 forms/list_forms.py:264 forms/list_forms.py:273
 #: forms/list_forms.py:359 forms/list_forms.py:367 forms/list_forms.py:408
@@ -321,7 +322,7 @@ msgstr "Nein"
 
 #: forms/list_forms.py:240
 msgid "Process Bounces"
-msgstr "Behandle Zurückgewiesene"
+msgstr "Verarbeite Zurückgewiesene"
 
 #: forms/list_forms.py:242
 msgid ""
