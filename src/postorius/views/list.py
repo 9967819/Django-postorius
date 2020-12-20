@@ -53,7 +53,7 @@ from postorius.forms import (
     ListIdentityForm, ListMassRemoval, ListMassSubscription, ListNew,
     ListSubscribe, MemberForm, MemberModeration, MemberPolicyForm,
     MessageAcceptanceForm, MultipleChoiceForm, UserPreferences)
-from postorius.forms.list_forms import ACTION_CHOICES
+from postorius.forms.list_forms import ACTION_CHOICES, TokenConfirmForm
 from postorius.models import (
     Domain, List, Mailman404Error, Style, SubscriptionMode)
 from postorius.utils import get_member_or_nonmember, set_preferred
@@ -1207,3 +1207,67 @@ def list_header_matches(request, list_id):
         'list': m_list,
         'formset': formset,
         })
+
+
+def confirm_token(request, list_id):
+    """Confirm token sent via Mailman Core.
+
+    This view allows confirming tokens sent via Mailman Core for confirming
+    subscriptions or verifying email addresses. This is an un-authenticated
+    view and the authentication is done by assuming the secrecy of the token
+    sent.
+
+    :param request: The Django request object.
+    :param list_id: The current mailinglist id.
+
+    """
+    m_list = List.objects.get_or_404(fqdn_listname=list_id)
+    if request.method == 'POST':
+        form = TokenConfirmForm(request.POST)
+        # If the token is None or something, just raise 400 error.
+        if not form.is_valid():
+            raise HTTPError(request.path, 400, _('Invalid confirmation token'),
+                            None, None)
+        token = form.cleaned_data.get('token')
+        try:
+            pending_req = m_list.get_request(token)
+        except HTTPError as e:
+            if e.code == 404:
+                raise HTTPError(request.path, 404,
+                                _('Token expired or invalid.'), None, None)
+            raise
+        # Since we only accept the token there isn't any need for Form data. We
+        # just need a POST request at this URL to accept the token.
+        m_list.moderate_request(token, action='accept')
+        return redirect('list_summary', m_list.list_id)
+    # Get the token from url parameter.
+    token = request.GET.get('token')
+    try:
+        pending_req = m_list.get_request(token)
+    except HTTPError as e:
+        if e.code == 404:
+            raise HTTPError(request.path, 404, _('Token expired or invalid.'),
+                            None, None)
+        raise
+
+    # If this is a token pending moderator approval, they need to login and
+    # approve it from the pending requests page.
+    if pending_req.get('token_owner') == 'moderator':
+        return redirect('list_subscription_requests', m_list.list_id)
+
+    token_type = pending_req.get('type')
+    form = TokenConfirmForm(initial=dict(token=token))
+    # Show the display_name if it is not None or "".
+    if pending_req.get('display_name'):
+        addr = email.utils.formataddr((pending_req.get('display_name'),
+                                       pending_req.get('email')))
+    else:
+        addr = pending_req.get('email')
+
+    return render(request, 'postorius/lists/confirm_token.html', {
+        'mlist': m_list,
+        'addr': addr,
+        'token': token,
+        'type': token_type,
+        'form': form,
+    })

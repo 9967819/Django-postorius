@@ -57,6 +57,9 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   approval. (See !559)
 * Allow setting moderation action for a nonmember from Held Message modal. (
   Closes #448)
+* Add a new view to confirm subscriptions or new emails for Users using
+  Postorius. (Fixes #459)
+
 
 1.3.3
 =====
