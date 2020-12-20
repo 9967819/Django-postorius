@@ -53,6 +53,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   current request's language. (Closes #441)
 * Fix the URL on cancel buttons in template's confirm delete page. (Closes
   #458)
+* Use server side filtering for pending subscription requests for moderator
+  approval. (See !559)
 
 1.3.3
 =====

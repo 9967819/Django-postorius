@@ -928,8 +928,7 @@ def list_subscription_requests(request, list_id):
 def _list_subscriptions(request, list_id, token_owner, template, page_title):
     m_list = List.objects.get_or_404(fqdn_listname=list_id)
     requests = [req
-                for req in m_list.requests
-                if req['token_owner'] == token_owner]
+                for req in m_list.get_requests(token_owner=token_owner)]
     paginated_requests = paginate(
         requests,
         request.GET.get('page'),
