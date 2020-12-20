@@ -1157,3 +1157,11 @@ class TemplateUpdateForm(forms.ModelForm):
     class Meta:
         model = EmailTemplate
         fields = ['data']
+
+
+class TokenConfirmForm(forms.Form):
+    """Form to confirm pending (un)subscription requests from User."""
+    token = forms.CharField(
+        required=True,
+        label="",
+        widget=forms.TextInput(attrs={'readonly': True, 'hidden': True}))

@@ -70,6 +70,8 @@ list_patterns = [
         name='list_settings'),
     url(r'^unsubscribe_all$', list_views.remove_all_subscribers,
         name='unsubscribe_all'),
+    url(r'^confirm/$', list_views.confirm_token,
+        name='confirm_token'),
     url(r'^templates$',
         template_views.ListTemplateIndexView.as_view(),
         name='list_template_list'),

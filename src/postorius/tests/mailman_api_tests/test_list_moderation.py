@@ -237,3 +237,85 @@ This is a test message.
         self.assertEqual(len(mlist.held), 0)
         member = mlist.get_member('aperson@example.com')
         self.assertEqual(member.moderation_action, 'defer')
+
+
+class TestConfirmToken(ViewTestCase):
+
+    def setUp(self):
+        super().setUp()
+        self.domain = self.mm_client.create_domain('example.com')
+        self.mlist = self.domain.create_list('mylist')
+        settings = self.mlist.settings
+        settings['subscription_policy'] = 'confirm'
+        settings.save()
+
+    def tearDown(self):
+        self.mlist.delete()
+        self.domain.delete()
+
+    def test_confirm_token(self):
+        # Test that we can first get a token page to confirm.
+        token = self.mlist.subscribe('aperson@example.com', 'Anne Person')
+        self.assertIsNotNone(token.get('token'))
+        resp = self.client.get(
+            reverse('confirm_token', args=(self.mlist.list_id, )) +
+            '?token={}'.format(token.get('token')))
+        self.assertEqual(resp.status_code, 200)
+        self.assertTrue(b'Confirm subscription of Anne Person'
+                        in resp.content)
+        self.assertTrue(token.get('token') in resp.content.decode('utf-8'))
+        # Now, let's confirm the token.
+        with self.assertRaises(ValueError):
+            self.mlist.get_member('aperson@example.com')
+        resp = self.client.post(
+            reverse('confirm_token', args=(self.mlist.list_id,)),
+            data={'token': token.get('token')})
+        self.assertTrue(resp.status_code, 301)
+        member = self.mlist.get_member('aperson@example.com')
+        self.assertIsNotNone(member)
+
+    def test_invalid_expired_token(self):
+        resp = self.client.get(
+            reverse('confirm_token', args=(self.mlist.list_id, )) +
+            '?token=badtoken')
+        self.assertEqual(resp.status_code, 404)
+        self.assertTrue(b'Token expired or invalid' in resp.content)
+
+    def test_moderator_token(self):
+        # Set the subscription policy to moderate for confirmation from mod.
+        settings = self.mlist.settings
+        settings['subscription_policy'] = 'moderate'
+        settings.save()
+        # Subscribe to generate a mod approval req.
+        token = self.mlist.subscribe(
+            'aperson@example.com', 'Anne Person', pre_verified=True)
+        self.assertIsNotNone(token.get('token'))
+        token = self.mlist.get_request(token.get('token'))
+        self.assertEqual(token['token_owner'], 'moderator')
+        resp = self.client.get(
+            reverse('confirm_token', args=(self.mlist.list_id, )) +
+            '?token={}'.format(token.get('token')))
+        self.assertEqual(resp.status_code, 302)
+        self.assertEqual(
+            resp.url,
+            '/postorius/lists/mylist.example.com/subscription_requests')
+
+    def test_subscribe_unsubscribe_token(self):
+        # TODO: This test requires the unsubscription requests to be exposed
+        # and hence next version of Mailman Core 3.3.3
+
+        # settings = self.mlist.settings
+        # settings['unsubscription_policy'] = 'moderate'
+        # settings.save()
+        # # Subscribe the address.
+        # self.mlist.subscribe(
+        #     'aperson@example.com', 'Anne Person',
+        #     pre_verified=True, pre_confirmed=True, pre_approved=True)
+        # member = self.mlist.get_member('aperson@example.com')
+        # self.assertIsNotNone(member)
+        # # Unsubscribe the user.
+        # self.mlist.unsubscribe('aperson@example.com')
+        # member = self.mlist.get_member('aperson@example.com')
+        # requests = self.mlist.get_requests(token_owner='moderator')
+        # self.assertEqual(len(requests), 1)
+        pass
