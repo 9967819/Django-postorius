@@ -6,12 +6,14 @@
 # Tobias Hägele <haegelix@yahoo.de>, 2020.
 # Claas Augner <github@caugner.de>, 2020.
 # Michael Lorenzen <ml@m-lorenzen.de>, 2020.
+# J. Lavoie <j.lavoie@net-c.ca>, 2020.
+# Paul <paulwiesinger+weblate@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-18 15:57+0530\n"
-"PO-Revision-Date: 2020-12-01 15:09+0000\n"
+"PO-Revision-Date: 2020-12-16 22:44+0000\n"
 "Last-Translator: Michael Lorenzen <ml@m-lorenzen.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/de/>\n"
@@ -44,7 +46,7 @@ msgstr "Bitte geben Sie einen Domain-Namen an"
 
 #: forms/domain_forms.py:47 forms/domain_forms.py:66
 msgid "Please enter a valid domain name."
-msgstr "Bitte geben Sie einen gültigen Domain-Namen an."
+msgstr "Bitte geben Sie einen gültigen Domänen-Namen an."
 
 #: forms/domain_forms.py:50
 msgid ""
@@ -215,7 +217,7 @@ msgid ""
 "Subscribing via \"Primary Address\" will change subscription address when "
 "you change your primary address."
 msgstr ""
-"Wenn Sie über \"Primäre Adresse\" abonnieren, ändert sich die Abo-Adresse, "
+"Wenn Sie über „Primäre Adresse“ abonnieren, ändert sich die Abo-Adresse, "
 "wenn Sie Ihre primäre Adresse ändern."
 
 #: forms/list_forms.py:156 forms/list_forms.py:181 forms/member_forms.py:29
@@ -276,7 +278,7 @@ msgstr ""
 
 #: forms/list_forms.py:223
 msgid "Un-Subscription Policy"
-msgstr "Abmelderichtlinie"
+msgstr "Abmeldungsrichtlinie"
 
 #: forms/list_forms.py:225
 msgid ""
@@ -287,12 +289,12 @@ msgid ""
 "Confirm then Moderate: First subscribers have to confirm, then a moderator "
 "needs to authorize."
 msgstr ""
-"Offen: Mitgliedschaften werden automatisch gekündigt\n"
+"Offen: Abmeldungen werden automatisch durchgeführt\n"
 "Bestätigen: Mitglieder müssen eine Abmeldung anhand einer zugesandten E-Mail "
 "vornehmen\n"
-"Moderieren: Moderatoren müssen jede Kündigungsanfrage manuell autorisieren.\n"
-"Bestätigen, dann Moderieren: zuerst müssen Mitglieder die Bestätigung "
-"durchlaufen, dann muss ein Moderator autorisieren."
+"Moderieren: Moderatoren müssen jede Abmeldungsanfrage manuell autorisieren.\n"
+"Bestätigen, dann Moderieren: zuerst müssen Mitglieder die Abmeldung "
+"bestätigen, dann muss ein Moderator autorisieren."
 
 #: forms/list_forms.py:238 forms/list_forms.py:264 forms/list_forms.py:273
 #: forms/list_forms.py:359 forms/list_forms.py:367 forms/list_forms.py:408
@@ -320,7 +322,7 @@ msgstr "Nein"
 
 #: forms/list_forms.py:240
 msgid "Process Bounces"
-msgstr "Behandle Zurückgewiesene"
+msgstr "Verarbeite Zurückgewiesene"
 
 #: forms/list_forms.py:242
 msgid ""
@@ -338,9 +340,10 @@ msgid ""
 "automatically disabled. When the subscription is  re-enabled, their bounce "
 "score will be reset to zero."
 msgstr ""
-"Bounce Score, oberhalb dessen das Abonnement eines Mitglieds automatisch "
-"deaktiviert wird. Wenn das Abonnement wieder aktiviert wird, wird der Bounce "
-"Score wieder auf Null zurückgesetzt."
+"Falls die Anzahl der unzustellbaren Nachrichten diesen Wert überschreitet, "
+"wird das Abonnement eines Mitglieds automatisch deaktiviert. Wenn das "
+"Abonnement wieder aktiviert wird, wird der Zähler für unzustellbare "
+"Nachrichten wieder auf Null zurückgesetzt."
 
 #: forms/list_forms.py:255
 msgid "Bounce info stale after"
@@ -529,10 +532,10 @@ msgid ""
 "against the list of explicitly accepted, held, rejected (bounced), and "
 "discarded addresses. If no match is found, then this action is taken."
 msgstr ""
-"Wenn eine Nachricht von einem Nichtmitglied empfangen wird, wird der Sender "
-"gegen die Liste der explizit akzeptierten, zurückgehaltenen, "
-"zurückgewiesenen und verworfenen Adressen geprüft. Falls keine "
-"Übereinstimmung gefunden wird, kommt es zur Anwendung dieser Einstellung."
+"Nachrichten, die nicht von Listenmitgliedern stammen, werden gegen die "
+"Listen der explizit akzeptierten, zurückgehaltenen, zurückgewiesenen und "
+"verworfenen Adressen geprüft. Falls keine Übereinstimmung gefunden wird, "
+"kommt es zur Anwendung dieser Einstellung."
 
 #: forms/list_forms.py:410
 msgid "Emergency Moderation"

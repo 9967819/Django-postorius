@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Massimo Zappalà <maszap@tin.it>, 2020.
+# J. Lavoie <j.lavoie@net-c.ca>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-18 15:58+0530\n"
-"PO-Revision-Date: 2020-11-07 11:52+0000\n"
-"Last-Translator: Massimo Zappalà <maszap@tin.it>\n"
+"PO-Revision-Date: 2020-12-16 22:44+0000\n"
+"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/it/>\n"
 "Language: it\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2\n"
+"X-Generator: Weblate 4.4-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -77,7 +78,7 @@ msgstr "Inserisci un nome di dominio valido"
 
 #: forms/domain_forms.py:103
 msgid "Owner's Email"
-msgstr "e-mail del proprietario"
+msgstr "E-mail del proprietario"
 
 #: forms/fields.py:81
 msgid "Make at least one selection"
@@ -208,7 +209,7 @@ msgid ""
 "Subscribing via \"Primary Address\" will change subscription address when "
 "you change your primary address."
 msgstr ""
-"L'iscrizione tramite \"Indirizzo Principale\" cambierà l'indirizzo di "
+"L'iscrizione tramite «Indirizzo principale» cambierà l'indirizzo di "
 "iscrizione quando cambi il tuo indirizzo principale."
 
 #: forms/list_forms.py:156 forms/list_forms.py:181 forms/member_forms.py:29
@@ -227,7 +228,7 @@ msgstr "Il tuo nome (opzionale)"
 
 #: forms/list_forms.py:169 forms/list_forms.py:1145 views/list.py:411
 msgid "Primary Address ({})"
-msgstr "Indirizzo e-mail ({})"
+msgstr "Indirizzo principale ({})"
 
 #: forms/list_forms.py:200
 msgid "Open"
@@ -526,10 +527,8 @@ msgstr ""
 "intrapresa questa azione."
 
 #: forms/list_forms.py:410
-#, fuzzy
-#| msgid "Moderation"
 msgid "Emergency Moderation"
-msgstr "Moderazione"
+msgstr "Moderazione di emergenza"
 
 #: forms/list_forms.py:412
 msgid ""
@@ -537,6 +536,10 @@ msgid ""
 "held for moderation. Turn this option on when your list is experiencing a "
 "flamewar and you want a cooling off period. "
 msgstr ""
+"Quando questa opzione è abilitata, tutto il traffico dell'elenco è moderato "
+"di emergenza, ovvero trattenuto per moderazione. Attiva questa opzione "
+"quando la tua lista sta vivendo una guerra infuocata e desideri un periodo "
+"di raffreddamento. "
 
 #: forms/list_forms.py:419
 msgid "Maximum message size"
@@ -1794,14 +1797,10 @@ msgstr ""
 "disiscrizione."
 
 #: template_list.py:54
-#, fuzzy
-#| msgid ""
-#| "The message sent to subscribers when a subscription confirmation is "
-#| "required."
 msgid "The message sent to subscribers when they are invited to join a list."
 msgstr ""
-"Messaggio da inviare agli iscritti quando è richiesta la conferma "
-"dell'iscrizione."
+"Il messaggio inviato agli abbonati quando vengono invitati a partecipare a "
+"un elenco."
 
 #: template_list.py:56
 msgid "The notice sent to a member when they unsubscribe from a mailing list."
@@ -1894,7 +1893,7 @@ msgstr "C'è stato un errore nel processare la tua richiesta."
 
 #: templates/postorius/bans.html:5 templates/postorius/bans.html:10
 msgid "Global Bans"
-msgstr "Divieti Globali"
+msgstr "Divieti globali"
 
 #: templates/postorius/base.html:32
 msgid "Mailman logo"
@@ -2423,11 +2422,11 @@ msgstr "Sei iscritto a questa lista on il seguente indirizzo:"
 
 #: templates/postorius/lists/summary.html:49
 msgid "Primary Address"
-msgstr "Indirizzo e-mail"
+msgstr "Indirizzo principale"
 
 #: templates/postorius/lists/summary.html:55
 msgid "Manage Subscription"
-msgstr "Gestisci Iscrizione"
+msgstr "Gestisci iscrizione"
 
 #: templates/postorius/lists/summary.html:60
 msgid "Unsubscribe"

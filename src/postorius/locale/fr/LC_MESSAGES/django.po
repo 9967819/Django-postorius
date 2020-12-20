@@ -1,15 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# J. Lavoie <j.lavoie@net-c.ca>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-18 15:57+0530\n"
-"PO-Revision-Date: 2020-04-17 04:36+0000\n"
-"Last-Translator: Frédéric Lehobey <weblate@proxience.com>\n"
+"PO-Revision-Date: 2020-12-16 22:44+0000\n"
+"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/fr/>\n"
 "Language: fr\n"
@@ -17,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.0.1-dev\n"
+"X-Generator: Weblate 4.4-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -215,6 +214,8 @@ msgid ""
 "Subscribing via \"Primary Address\" will change subscription address when "
 "you change your primary address."
 msgstr ""
+"L'abonnement via « Adresse principale » changera l'adresse d'abonnement "
+"lorsque vous changerez votre adresse principale."
 
 #: forms/list_forms.py:156 forms/list_forms.py:181 forms/member_forms.py:29
 #: forms/system.py:36
@@ -231,10 +232,8 @@ msgid "Your name (optional)"
 msgstr "Votre nom (optionnel)"
 
 #: forms/list_forms.py:169 forms/list_forms.py:1145 views/list.py:411
-#, fuzzy
-#| msgid "Email Address"
 msgid "Primary Address ({})"
-msgstr "Adresse de courriel"
+msgstr "Adresse principale ({})"
 
 #: forms/list_forms.py:200
 msgid "Open"
@@ -511,7 +510,7 @@ msgstr ""
 "Action par défaut à effectuer lorsqu'un⋅e membre poste sur la liste\n"
 "Retenir : Retient le message en modération pour approbation.\n"
 "Rejeter : Automatiquement rejette le message en envoyant une notification de "
-"rebond à l'auteurice du post. Le texte de la notification de rebond peut "
+"rebond à l'auteur·ice du post. Le texte de la notification de rebond peut "
 "être configuré.\n"
 "Ignorer : Jette simplement le message, sans envoyer de notification à "
 "l'auteurice du message.\n"
@@ -540,10 +539,8 @@ msgstr ""
 "cette action qui est utilisée."
 
 #: forms/list_forms.py:410
-#, fuzzy
-#| msgid "Moderation"
 msgid "Emergency Moderation"
-msgstr "Modération"
+msgstr "Modération d’urgence"
 
 #: forms/list_forms.py:412
 msgid ""
@@ -551,6 +548,10 @@ msgid ""
 "held for moderation. Turn this option on when your list is experiencing a "
 "flamewar and you want a cooling off period. "
 msgstr ""
+"Lorsque cette option est activée, tout le trafic de la liste est modéré "
+"d'urgence, c'est-à-dire maintenu pour modération. Activez cette option "
+"lorsque votre liste connaît une guerre enflammée et que vous souhaitez une "
+"période de réflexion. "
 
 #: forms/list_forms.py:419
 msgid "Maximum message size"
@@ -1428,16 +1429,17 @@ msgstr ""
 "adresse de courriel est correcte."
 
 #: forms/list_forms.py:1031
-#, fuzzy
-#| msgid "Information"
 msgid "Invitation"
-msgstr "Information"
+msgstr "Invitation"
 
 #: forms/list_forms.py:1035
 msgid ""
 "If checked, the other checkboxes are ignored and the users will be sent an "
 "invitation to join the list and will be subscribed upon acceptance thereof."
 msgstr ""
+"Si cochée, les autres cases à cocher sont ignorées et les utilisateurs "
+"recevront une invitation à rejoindre la liste et seront inscrits dès leur "
+"acceptation."
 
 #: forms/list_forms.py:1047
 msgid "Emails to Unsubscribe"
@@ -1679,8 +1681,6 @@ msgstr ""
 "diffusion"
 
 #: forms/user_forms.py:119
-#, fuzzy
-#| msgid "Preferred Language"
 msgid "Preferred language"
 msgstr "Langue préférée"
 
@@ -1690,11 +1690,14 @@ msgid ""
 "will override the MailingList's preferred language. This affects which "
 "language is used for your email notifications and such."
 msgstr ""
+"Langue préférée pour vos interactions avec Mailman. Lorsqu'elle est définie, "
+"elle remplacera la langue préférée de la liste de diffusion. Ceci affecte la "
+"langue utilisée pour vos notifications par courriel et autres."
 
 #: forms/validators.py:39
 #, python-brace-format
 msgid "Invalid: \"{0}\" should be either email or UUID"
-msgstr ""
+msgstr "Non valide : « {0} » doit être une adresse courriel ou un UUID"
 
 #: models.py:43
 msgid ""
@@ -1777,18 +1780,16 @@ msgid ""
 "Sent to the list administrators when a bounce message in an unrecognized "
 "format has been received."
 msgstr ""
-"Notifier les administrateur·ices quand un message de rebond dans un format "
+"Notifier les administrateur·ices quand un message de rejet dans un format "
 "inconnu a été reçu."
 
 #: template_list.py:36
-#, fuzzy
-#| msgid ""
-#| "Sent to the list administrators to notify them when a member has been "
-#| "unsubscribed."
 msgid ""
 "Sent to the list administrators to notify them when a member's delivery is "
 "disabled due to excessive bounces."
-msgstr "Notifier les administrateur·ices des désinscriptions."
+msgstr ""
+"Envoyé aux administrateurs de la liste pour les avertir lorsque la livraison "
+"d'un abonné est désactivée en raison de rebonds excessifs."
 
 #: template_list.py:38
 msgid ""
@@ -1821,8 +1822,8 @@ msgstr "Texte ajouté au début des messages (non-condensés)."
 msgid ""
 "The message sent to subscribers when a subscription confirmation is required."
 msgstr ""
-"Message envoyé à l'adresse d'une nouvelle inscription quand une une "
-"confirmation d'inscription est nécessaire."
+"Message envoyé à l'adresse d'une nouvelle inscription quand une confirmation "
+"d'inscription est nécessaire."
 
 #: template_list.py:52
 msgid ""
@@ -1833,14 +1834,9 @@ msgstr ""
 "désinscription est requise."
 
 #: template_list.py:54
-#, fuzzy
-#| msgid ""
-#| "The message sent to subscribers when a subscription confirmation is "
-#| "required."
 msgid "The message sent to subscribers when they are invited to join a list."
 msgstr ""
-"Message envoyé à l'adresse d'une nouvelle inscription quand une une "
-"confirmation d'inscription est nécessaire."
+"Le message envoyé aux abonnés lorsqu'ils sont invités à rejoindre une liste."
 
 #: template_list.py:56
 msgid "The notice sent to a member when they unsubscribe from a mailing list."
@@ -1889,15 +1885,10 @@ msgstr ""
 "rejeté par un·e modérateur·ice de la liste."
 
 #: template_list.py:68
-#, fuzzy
-#| msgid ""
-#| "Notice sent to a poster when their message has been received by the "
-#| "mailing list."
 msgid ""
 "Notice sent to a poster when their message has been rejected automatically."
 msgstr ""
-"Message de notification envoyé à l'adresse d'expédition quand le message a "
-"été reçu par la liste."
+"Avis envoyé à un expéditeur lorsque son message a été rejeté automatiquement."
 
 #: template_list.py:70
 msgid ""
@@ -1907,16 +1898,12 @@ msgstr ""
 "à la liste."
 
 #: template_list.py:72
-#, fuzzy
-#| msgid ""
-#| "A bounce probe sent to a member when their subscription has been disabled "
-#| "due to bounces."
 msgid ""
 "The notice sent to a member when their membership has been disabled due to "
 "excessive bounces."
 msgstr ""
-"Message de test des rejets envoyé à l'adresse d'un·e membre quand son "
-"inscription a été désactivée à cause de rejets."
+"L'avis envoyé à un abonné lorsque son adhésion a été désactivée en raison de "
+"rebonds excessifs."
 
 #: templates/403.html:5
 msgid "Forbidden"
@@ -1943,10 +1930,8 @@ msgid "An error occurred while processing your request."
 msgstr "Une erreur est survenue pendant le traitement de votre requête."
 
 #: templates/postorius/bans.html:5 templates/postorius/bans.html:10
-#, fuzzy
-#| msgid "Global Settings"
 msgid "Global Bans"
-msgstr "Paramètres globaux"
+msgstr "Bannissements globaux"
 
 #: templates/postorius/base.html:32
 msgid "Mailman logo"
@@ -1963,7 +1948,7 @@ msgstr "Domaines"
 
 #: templates/postorius/base.html:50
 msgid "Bans"
-msgstr ""
+msgstr "Bannissements"
 
 #: templates/postorius/base.html:56
 msgid "System Information"
@@ -2331,13 +2316,15 @@ msgstr "Active la modération des abonnés"
 
 #: templates/postorius/lists/held_messages.html:98
 msgid "Rejection reason:"
-msgstr ""
+msgstr "Motif du rejet :"
 
 #: templates/postorius/lists/held_messages.html:101
 msgid ""
 "Reason sent to the sender for message rejection. For other actions, this is "
 "ignored."
 msgstr ""
+"Raison envoyée à l'expéditeur pour le rejet du message. Pour les autres "
+"actions, ceci est ignoré."
 
 #: templates/postorius/lists/held_messages.html:115
 msgid "Show Headers"
@@ -2452,12 +2439,7 @@ msgid "You have to login to visit the archives of this list."
 msgstr "Vous devez vous identifier pour consulter les archives de cette liste."
 
 #: templates/postorius/lists/summary.html:33
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "            To see the prior postings to this list, visit\n"
-#| "            <a href=\"%(hyperkitty_list_url)s\">the archives</a>.\n"
-#| "          "
+#, python-format
 msgid ""
 "\n"
 "            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s"
@@ -2465,8 +2447,8 @@ msgid ""
 "          "
 msgstr ""
 "\n"
-"            Pour voir les messages précédents sur cette liste visitez\n"
-"            <a href=\"%(hyperkitty_list_url)s\">les archives</a>.\n"
+"            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s\"> "
+"Archives </a>\n"
 "          "
 
 #: templates/postorius/lists/summary.html:45
@@ -2479,16 +2461,12 @@ msgid "You are subscribed to this list with the following address:"
 msgstr "Vous êtes abonné à cette liste avec l'adresse suivante :"
 
 #: templates/postorius/lists/summary.html:49
-#, fuzzy
-#| msgid "Email Address"
 msgid "Primary Address"
-msgstr "Adresse de courriel"
+msgstr "Adresse principale"
 
 #: templates/postorius/lists/summary.html:55
-#, fuzzy
-#| msgid "Mass Subscription"
 msgid "Manage Subscription"
-msgstr "Abonnement en masse"
+msgstr "Gérer l’abonnement"
 
 #: templates/postorius/lists/summary.html:60
 msgid "Unsubscribe"
@@ -2652,10 +2630,8 @@ msgid "System Configuration"
 msgstr "Configuration du système"
 
 #: templates/postorius/system_information.html:11
-#, fuzzy
-#| msgid "Mailman Settings"
 msgid "Mailman System"
-msgstr "Paramètres de Mailman"
+msgstr "Système Mailman"
 
 #: templates/postorius/user/address_preferences.html:8
 #: templates/postorius/user/subscription_preferences.html:7
@@ -3072,10 +3048,8 @@ msgid "Member Policy"
 msgstr "Politique d'abonnement"
 
 #: views/list.py:987
-#, fuzzy
-#| msgid "Default processing"
 msgid "Bounce Processing"
-msgstr "Traitement par défaut"
+msgstr "Traitement de rejet"
 
 #: views/list.py:1050
 msgid "The settings have been updated."
