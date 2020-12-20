@@ -59,6 +59,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   Closes #448)
 * Add a new view to confirm subscriptions or new emails for Users using
   Postorius. (Fixes #459)
+* Fix a bug where membership check compared email addresses in different
+  cases. (Closes #457)
 
 
 1.3.3
