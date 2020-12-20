@@ -55,6 +55,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   #458)
 * Use server side filtering for pending subscription requests for moderator
   approval. (See !559)
+* Allow setting moderation action for a nonmember from Held Message modal. (
+  Closes #448)
 
 1.3.3
 =====

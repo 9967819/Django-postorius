@@ -79,6 +79,24 @@ def set_preferred(user, mm_user):
     return None
 
 
+def get_member_or_nonmember(mlist, email):
+    """Return either a Member or a Non-member with `email` in mlist.
+
+    :param mlist: MailingList object to get membership for.
+    :param email: Email address of the member or nonmember.
+    :returns: Member if found otherwise None.
+    """
+    try:
+        member = mlist.get_member(email)
+    except ValueError:
+        # Not a Member, try getting non-member.
+        try:
+            member = mlist.get_nonmember(email)
+        except ValueError:
+            member = None
+    return member
+
+
 LANGUAGES = (
     ('ar', 'Arabic'),
     ('ast', 'Asturian'),

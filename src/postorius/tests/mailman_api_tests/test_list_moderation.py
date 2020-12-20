@@ -164,3 +164,76 @@ This is a test message.
         )
         self.assertEqual(response.status_code, 302)
         self.assertEqual(len(mlist.held), 0)
+
+    def test_moderate_held_message_set_moderation_for_nonmember(self):
+        mlist = self.domain.create_list('test-3')
+        test_msg = """\
+From: aperson@example.com
+To: test-3@example.com
+Subject: This is a test message
+Message-ID: <test-msg@id>
+
+This is a test message.
+
+"""
+        inque = self.mm_client.queues['in']
+        inque.inject('test-3.example.com', test_msg)
+        # Wait for the message to be formatted.
+        self._wait_for_processing(inque)
+        # Wait for message to land in held message queue.
+        self._wait_for_held_message(mlist)
+        # Check that there is a held message.
+        self.assertEqual(len(mlist.held), 1)
+        held_message = mlist.held[0]
+        # Test that a held message is rejected when POST'ing.
+        response = self.client.post(
+            reverse('moderate_held_message', args=('test-3.example.com', )),
+            {'msgid': held_message.request_id,
+             'reject': True,
+             'reason': 'Wrong mailing list',
+             'moderation_choice': 'hold'}
+        )
+        self.assertEqual(response.status_code, 302)
+        self.assertHasSuccessMessage(response, count=2)
+        self.assertEqual(len(mlist.held), 0)
+        nonmember = mlist.get_nonmember('aperson@example.com')
+        self.assertEqual(nonmember.moderation_action, 'hold')
+
+    def test_moderate_held_message_set_moderation_for_member(self):
+        mlist = self.domain.create_list('test-4')
+        member = mlist.subscribe(
+            'aperson@example.com',
+            pre_verified=True, pre_approved=True, pre_confirmed=True)
+        mlist.settings['default_member_action'] = 'hold'
+        mlist.settings.save()
+        self.assertIsNotNone(member)
+        test_msg = """\
+From: aperson@example.com
+To: test-4@example.com
+Subject: This is a test message
+Message-ID: <test-msg1234@id>
+
+This is a test message.
+"""
+        inque = self.mm_client.queues['in']
+        inque.inject('test-4.example.com', test_msg)
+        # Wait for the message to be formatted.
+        self._wait_for_processing(inque)
+        # Wait for message to land in held message queue.
+        self._wait_for_held_message(mlist)
+        # Check that there is a held message.
+        self.assertEqual(len(mlist.held), 1)
+        held_message = mlist.held[0]
+        # Test that a held message is rejected when POST'ing.
+        response = self.client.post(
+            reverse('moderate_held_message', args=('test-4.example.com', )),
+            {'msgid': held_message.request_id,
+             'reject': True,
+             'reason': 'Wrong mailing list',
+             'moderation_choice': 'defer'}
+        )
+        self.assertEqual(response.status_code, 302)
+        self.assertHasSuccessMessage(response, count=2)
+        self.assertEqual(len(mlist.held), 0)
+        member = mlist.get_member('aperson@example.com')
+        self.assertEqual(member.moderation_action, 'defer')

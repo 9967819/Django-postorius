@@ -56,7 +56,7 @@ from postorius.forms import (
 from postorius.forms.list_forms import ACTION_CHOICES
 from postorius.models import (
     Domain, List, Mailman404Error, Style, SubscriptionMode)
-from postorius.utils import set_preferred
+from postorius.utils import get_member_or_nonmember, set_preferred
 from postorius.views.generic import MailingListView, bans_view
 
 
@@ -654,18 +654,18 @@ def moderate_held_message(request, list_id):
 
     moderation_choices = dict(ACTION_CHOICES)
     if moderation_choice in moderation_choices:
-        try:
-            member = mailing_list.get_member(msg.sender)
+        member = get_member_or_nonmember(mailing_list, msg.sender)
+        if member is not None:
             member.moderation_action = moderation_choice
             member.save()
             messages.success(
                 request,
                 _('Moderation action for {} set to {}'.format(
                     member, moderation_choices[moderation_choice])))
-        except ValueError as e:
+        else:
             messages.error(
                 request,
-                _('Failed to set moderation action: {}'.format(e)))
+                _('Failed to set moderation action for {}'.format(msg.sender)))
     return redirect('list_held_messages', list_id)
 
 

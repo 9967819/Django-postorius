@@ -141,9 +141,9 @@ class ViewTestCase(TransactionTestCase):
         for u in self.mm_client.users:
             u.delete()
 
-    def assertHasSuccessMessage(self, response):
+    def assertHasSuccessMessage(self, response, count=1):
         msgs = get_flash_messages(response)
-        self.assertEqual(len(msgs), 1)
+        self.assertEqual(len(msgs), count)
         self.assertEqual(
             msgs[0].level, messages.SUCCESS,
             "%s: %s" % (messages.DEFAULT_TAGS[msgs[0].level], msgs[0].message))
