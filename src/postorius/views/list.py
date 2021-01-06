@@ -572,13 +572,13 @@ class ListMassRemovalView(MailingListView):
                     messages.success(
                         request, _('The address %(address)s has been'
                                    ' unsubscribed from %(list)s.') %
-                        {'address': address,
+                        {'address': data,
                          'list': self.mailing_list.fqdn_listname})
                 except (HTTPError, ValueError) as e:
                     messages.error(request, e)
                 except ValidationError:
                     messages.error(request, _('The email address %s'
-                                              ' is not valid.') % address)
+                                              ' is not valid.') % data)
         return redirect('mass_removal', self.mailing_list.list_id)
 
 
