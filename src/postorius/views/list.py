@@ -563,8 +563,10 @@ class ListMassRemovalView(MailingListView):
         if not form.is_valid():
             messages.error(request, _('Please fill out the form correctly.'))
         else:
-            for address in form.cleaned_data['emails']:
+            for data in form.cleaned_data['emails']:
                 try:
+                    # Parse the data to get the address.
+                    address = email.utils.parseaddr(data)[1]
                     validate_email(address)
                     self.mailing_list.unsubscribe(address.lower())
                     messages.success(

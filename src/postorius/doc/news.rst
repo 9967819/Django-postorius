@@ -61,6 +61,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   Postorius. (Fixes #459)
 * Fix a bug where membership check compared email addresses in different
   cases. (Closes #457)
+* Mass removal now accepts address formats with display names and/or angle
+  brackets. (Closes #455)
 
 
 1.3.3
