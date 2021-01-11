@@ -1,15 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# João Tiago Antunes <jtiago.cbr@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-18 15:58+0530\n"
-"PO-Revision-Date: 2020-01-05 16:21+0000\n"
-"Last-Translator: ssantos <ssantos@web.de>\n"
+"PO-Revision-Date: 2021-01-08 19:15+0000\n"
+"Last-Translator: João Tiago Antunes <jtiago.cbr@gmail.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/pt/>\n"
 "Language: pt\n"
@@ -17,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.10\n"
+"X-Generator: Weblate 4.4.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -1562,11 +1561,11 @@ msgstr ""
 
 #: templates/500.html:24
 msgid "Server error"
-msgstr ""
+msgstr "Erro no servidor"
 
 #: templates/500.html:25
 msgid "An error occurred while processing your request."
-msgstr ""
+msgstr "Ocorreu um erro durante o processamento do seu pedido."
 
 #: templates/postorius/bans.html:5 templates/postorius/bans.html:10
 msgid "Global Bans"
@@ -1578,12 +1577,12 @@ msgstr ""
 
 #: templates/postorius/base.html:38
 msgid "Lists"
-msgstr ""
+msgstr "Listas"
 
 #: templates/postorius/base.html:44 templates/postorius/domain/index.html:5
 #: templates/postorius/domain/index.html:11
 msgid "Domains"
-msgstr ""
+msgstr "Domínios"
 
 #: templates/postorius/base.html:50
 msgid "Bans"
@@ -1595,7 +1594,7 @@ msgstr ""
 
 #: templates/postorius/base.html:63 templates/postorius/lists/summary.html:31
 msgid "Archives"
-msgstr ""
+msgstr "Arquivos"
 
 #: templates/postorius/base.html:79
 msgid "Account"
@@ -1639,11 +1638,11 @@ msgstr ""
 
 #: templates/postorius/domain/confirm_delete.html:13
 msgid "Confirm deletion"
-msgstr ""
+msgstr "Confirmar eliminação"
 
 #: templates/postorius/domain/confirm_delete.html:17
 msgid "Are you sure you want to permanently delete"
-msgstr ""
+msgstr "Tem a certeza que quer apagar permanentemente"
 
 #: templates/postorius/domain/confirm_delete.html:21
 #, python-format
@@ -1671,12 +1670,12 @@ msgstr "Apagar"
 #: templates/postorius/lists/confirm_removeall_subscribers.html:22
 #: templates/postorius/lists/template_delete.html:25
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: templates/postorius/domain/edit.html:6
 #: templates/postorius/domain/edit.html:12
 msgid "Edit domain"
-msgstr ""
+msgstr "Editar domínio"
 
 #: templates/postorius/domain/index.html:14
 msgid "Add Domain"
@@ -1685,22 +1684,22 @@ msgstr ""
 #: templates/postorius/domain/index.html:25
 #: templates/postorius/menu/list_nav.html:42
 msgid "Owners"
-msgstr ""
+msgstr "Donos"
 
 #: templates/postorius/domain/index.html:38
 #: templates/postorius/domain/index.html:58
 #: templates/postorius/domain/template_index.html:33
 #: templates/postorius/lists/template_list.html:31
 msgid "Edit"
-msgstr ""
+msgstr "Editar"
 
 #: templates/postorius/domain/index.html:50
 msgid "remove"
-msgstr ""
+msgstr "Remover"
 
 #: templates/postorius/domain/index.html:54
 msgid "Add"
-msgstr ""
+msgstr "Adicionar"
 
 #: templates/postorius/domain/index.html:57
 #: templates/postorius/domain/template_add.html:6
@@ -1717,11 +1716,11 @@ msgstr ""
 
 #: templates/postorius/domain/new.html:6
 msgid "Add domain"
-msgstr ""
+msgstr "Adicionar domínio"
 
 #: templates/postorius/domain/new.html:12
 msgid "Add a new domain"
-msgstr ""
+msgstr "Adicionar novo domínio"
 
 #: templates/postorius/domain/owners.html:6
 msgid "Add domain owner "
@@ -1769,7 +1768,7 @@ msgstr ""
 
 #: templates/postorius/errors/generic.html:5
 msgid "Something went wrong"
-msgstr ""
+msgstr "Algo correu mal"
 
 #: templates/postorius/fragments/bans.html:14
 msgid "Ban email"
@@ -1797,11 +1796,11 @@ msgstr ""
 
 #: templates/postorius/index.html:40
 msgid "Create New Domain"
-msgstr ""
+msgstr "Criar Novo Domínio"
 
 #: templates/postorius/index.html:42
 msgid "Create New List"
-msgstr ""
+msgstr "Criar Nova Lista"
 
 #: templates/postorius/index.html:54
 msgid "List name"
@@ -1855,7 +1854,7 @@ msgstr ""
 
 #: templates/postorius/lists/confirm_remove_role.html:14
 msgid "Are you sure?"
-msgstr ""
+msgstr "Tem a certeza?"
 
 #: templates/postorius/lists/confirm_remove_role.html:17
 msgid "Remove"
@@ -1886,7 +1885,7 @@ msgstr ""
 
 #: templates/postorius/lists/header_matches.html:58
 msgid "Save changes"
-msgstr ""
+msgstr "Guardar alterações"
 
 #: templates/postorius/lists/header_matches.html:60
 msgid "Changes pending, click on the button to save them."
@@ -1905,7 +1904,7 @@ msgstr ""
 #: templates/postorius/lists/held_messages.html:106
 #: templates/postorius/lists/subscription_requests.html:34
 msgid "Accept"
-msgstr ""
+msgstr "Aceitar"
 
 #: templates/postorius/lists/held_messages.html:38
 msgid "Subject"
@@ -1917,7 +1916,7 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:40
 msgid "Reason"
-msgstr ""
+msgstr "Razão"
 
 #: templates/postorius/lists/held_messages.html:41
 msgid "Hold Date"
@@ -1925,19 +1924,19 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:53
 msgid "No Subject"
-msgstr ""
+msgstr "Nenhum Assunto"
 
 #: templates/postorius/lists/held_messages.html:81
 msgid "Attachments"
-msgstr ""
+msgstr "Anexos"
 
 #: templates/postorius/lists/held_messages.html:92
 msgid "Set member moderation"
-msgstr ""
+msgstr "Definir a moderação dos membros"
 
 #: templates/postorius/lists/held_messages.html:98
 msgid "Rejection reason:"
-msgstr ""
+msgstr "Motivo de rejeição:"
 
 #: templates/postorius/lists/held_messages.html:101
 msgid ""
@@ -2442,7 +2441,7 @@ msgstr ""
 
 #: views/list.py:203
 msgid "Member does not exist"
-msgstr ""
+msgstr "Membro não existe"
 
 #: views/list.py:221
 msgid "The member's preferences have been updated."
@@ -2458,7 +2457,7 @@ msgstr ""
 
 #: views/list.py:403
 msgid "You are already subscribed"
-msgstr ""
+msgstr "Já está subscrito"
 
 #: views/list.py:414
 #, python-format
@@ -2467,7 +2466,7 @@ msgstr ""
 
 #: views/list.py:417 views/list.py:462 views/list.py:492
 msgid "Something went wrong. Please try again."
-msgstr ""
+msgstr "Alguma coisa correu mal. Por favor, tente novamente."
 
 #: views/list.py:453
 msgid ""
@@ -2501,7 +2500,7 @@ msgstr ""
 
 #: views/list.py:564
 msgid "Please fill out the form correctly."
-msgstr ""
+msgstr "Por favor, preencha corretamente o formulário."
 
 #: views/list.py:571
 #, python-format
@@ -2510,31 +2509,31 @@ msgstr ""
 
 #: views/list.py:600
 msgid "The selected messages were accepted"
-msgstr ""
+msgstr "As mensagens selecionadas foram aceites"
 
 #: views/list.py:604
 msgid "The selected messages were rejected"
-msgstr ""
+msgstr "As mensagens selecionadas foram rejeitadas"
 
 #: views/list.py:608
 msgid "The selected messages were discarded"
-msgstr ""
+msgstr "As mensagens selecionadas foram descartadas"
 
 #: views/list.py:610
 msgid "Message could not be found"
-msgstr ""
+msgstr "Mensagem não pôde ser encontrada"
 
 #: views/list.py:639
 msgid "The message was accepted"
-msgstr ""
+msgstr "A mensagem foi aceite"
 
 #: views/list.py:642
 msgid "The message was rejected"
-msgstr ""
+msgstr "A mensagem foi rejeitada"
 
 #: views/list.py:645
 msgid "The message was discarded"
-msgstr ""
+msgstr "A mensagem foi descartada"
 
 #: views/list.py:650
 msgid "Held message was not found."
@@ -2550,11 +2549,11 @@ msgstr ""
 
 #: views/list.py:720
 msgid "Choose a Domain"
-msgstr ""
+msgstr "Escolha um domínio"
 
 #: views/list.py:741
 msgid "List created"
-msgstr ""
+msgstr "Lista criada"
 
 #: views/list.py:753
 msgid "Mailing List already exists."
@@ -2570,15 +2569,15 @@ msgstr ""
 
 #: views/list.py:956
 msgid "The request has been accepted."
-msgstr ""
+msgstr "O pedido foi aceite."
 
 #: views/list.py:957
 msgid "The request has been rejected."
-msgstr ""
+msgstr "O pedido foi rejeitado."
 
 #: views/list.py:958
 msgid "The request has been discarded."
-msgstr ""
+msgstr "O pedido foi descartado."
 
 #: views/list.py:959
 msgid "The request has been defered."
@@ -2600,7 +2599,7 @@ msgstr ""
 
 #: views/list.py:980
 msgid "Automatic Responses"
-msgstr ""
+msgstr "Respostas automáticas"
 
 #: views/list.py:981
 msgid "Alter Messages"
@@ -2616,7 +2615,7 @@ msgstr ""
 
 #: views/list.py:984
 msgid "Message Acceptance"
-msgstr ""
+msgstr "Aceitação de mensagens"
 
 #: views/list.py:985
 msgid "Archiving"
@@ -2632,7 +2631,7 @@ msgstr ""
 
 #: views/list.py:1050
 msgid "The settings have been updated."
-msgstr ""
+msgstr "As definições foram atualizadas."
 
 #: views/list.py:1055
 msgid "An error occurred: "
@@ -2645,7 +2644,7 @@ msgstr ""
 
 #: views/list.py:1085
 msgid "Removing the last owner is impossible"
-msgstr ""
+msgstr "É impossível remover o último proprietário"
 
 #: views/list.py:1099
 #, python-format
@@ -2663,7 +2662,7 @@ msgstr ""
 
 #: views/list.py:1130
 msgid "All members have been unsubscribed from the list."
-msgstr ""
+msgstr "Todos os membros foram retirados da lista."
 
 #: views/list.py:1195
 msgid "The header matches were successfully modified."
@@ -2671,23 +2670,23 @@ msgstr ""
 
 #: views/list.py:1202
 msgid "New header"
-msgstr ""
+msgstr "Novo cabeçalho"
 
 #: views/list.py:1203
 msgid "New pattern"
-msgstr ""
+msgstr "Novo padrão"
 
 #: views/rest.py:60
 msgid "Message does not exist"
-msgstr ""
+msgstr "A mensagem não existe"
 
 #: views/rest.py:97
 msgid "Attachment does not exist"
-msgstr ""
+msgstr "O anexo não existe"
 
 #: views/user.py:78
 msgid "Your preferences have been updated."
-msgstr ""
+msgstr "As suas preferências foram atualizadas."
 
 #: views/user.py:80
 msgid "Your preferences did not change."

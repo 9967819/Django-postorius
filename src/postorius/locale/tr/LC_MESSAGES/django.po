@@ -1,13 +1,13 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Oğuz Ersen <oguzersen@protonmail.com>, 2020.
+# Oğuz Ersen <oguzersen@protonmail.com>, 2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-18 15:58+0530\n"
-"PO-Revision-Date: 2020-11-19 04:10+0000\n"
+"PO-Revision-Date: 2021-01-04 02:52+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/tr/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.4-dev\n"
+"X-Generator: Weblate 4.4.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -182,15 +182,15 @@ msgstr "Geçerli bir Posta Ana Bilgisayarı seçin"
 
 #: forms/list_forms.py:103
 msgid "List Style"
-msgstr "Liste Stili"
+msgstr "Liste Tarzı"
 
 #: forms/list_forms.py:106
 msgid "Choose a List Style."
-msgstr "Bir Liste Stili seçin."
+msgstr "Bir Liste Tarzı seçin."
 
 #: forms/list_forms.py:107
 msgid "Choose a valid List Style."
-msgstr "Geçerli bir Liste Stili seçin."
+msgstr "Geçerli bir Liste Tarzı seçin."
 
 #: forms/list_forms.py:110
 msgid "Site admin has not created any domains"
@@ -348,7 +348,7 @@ msgid ""
 "is reset to zero. This value must be an integer. "
 msgstr ""
 "Bir üyenin geri dönme bilgilerinin eski olduğunun kabul edileceği gün "
-"sayısı. Bu aralıkta yeni bir geri dönüş alınmadıysa, geri dönme puanı "
+"sayısı. Bu aralıkta yeni bir geri dönme alınmadıysa, geri dönme puanı "
 "sıfırlanır. Bu değer bir tam sayı olmalıdır. "
 
 #: forms/list_forms.py:266
@@ -425,7 +425,7 @@ msgstr "Bu liste için mesajları arşivleme politikası"
 
 #: forms/list_forms.py:322
 msgid "Active archivers"
-msgstr "Aktif arşivciler"
+msgstr "Etkin arşivciler"
 
 #: forms/list_forms.py:347
 msgid "Acceptable aliases"
@@ -452,7 +452,7 @@ msgstr ""
 
 #: forms/list_forms.py:361
 msgid "Require Explicit Destination"
-msgstr "Belirgin Hedef İste"
+msgstr "Açık Hedef Gerektir"
 
 #: forms/list_forms.py:363
 msgid ""
@@ -655,7 +655,7 @@ msgstr "Özetleri Etkinleştir"
 
 #: forms/list_forms.py:526
 msgid "Should Mailman enable digests for this MailingList?"
-msgstr "Mailman bu PostaListesi için özetleri etkinleştirmeli mi?"
+msgstr "Mailman bu posta listesi için özetleri etkinleştirmeli mi?"
 
 #: forms/list_forms.py:532
 msgid "Send Digest Periodically"
@@ -1217,7 +1217,7 @@ msgstr "Üyelik değişikliklerini yöneticiye bildir"
 
 #: forms/list_forms.py:884
 msgid "Should administrator get notices of subscribes and unsubscribes?"
-msgstr "Yönetici abone olma ve abonelikleri iptal etme bildirimleri almalı mı?"
+msgstr "Yönetici abone olma ve abonelikten çıkma bildirimleri almalı mı?"
 
 #: forms/list_forms.py:889
 msgid "Not Moderated"
@@ -1267,7 +1267,7 @@ msgstr "Görünen ad, web arayüzünde gösterilen addır."
 
 #: forms/list_forms.py:925
 msgid "Subject prefix"
-msgstr "Konu öneki"
+msgstr "Konu ön eki"
 
 #: forms/list_forms.py:930
 msgid "Preferred Language"
@@ -1279,7 +1279,7 @@ msgstr "Üye Listesi Görünürlüğü"
 
 #: forms/list_forms.py:940
 msgid "Who is allowed to see members list for this MailingList?"
-msgstr "Bu PostaListesi için üye listesini kimler görebilir?"
+msgstr "Bu posta listesi için üye listesini kimler görebilir?"
 
 #: forms/list_forms.py:945
 msgid "Gateway to mail"
@@ -1376,14 +1376,14 @@ msgstr ""
 
 #: forms/list_forms.py:1021
 msgid "Pre Verified"
-msgstr "Önden Kanıtlanmış"
+msgstr "Önden Doğrulanmış"
 
 #: forms/list_forms.py:1025
 msgid ""
 "If checked, users will not have to verify that their email address is valid."
 msgstr ""
 "İşaretlenirse, kullanıcıların e-posta adreslerinin geçerli olduğunu "
-"kanıtlamaları gerekmeyecektir."
+"doğrulamaları gerekmeyecektir."
 
 #: forms/list_forms.py:1031
 msgid "Invitation"
@@ -1617,7 +1617,7 @@ msgstr ""
 
 #: forms/user_forms.py:108
 msgid "Receive list copies (possible duplicates)"
-msgstr "Liste kopyalarını (olası ikinci nüshalar) al"
+msgstr "Liste kopyalarını (olası yinelenenleri) al"
 
 #: forms/user_forms.py:110
 msgid ""
@@ -1737,8 +1737,8 @@ msgid ""
 "Sent to the list administrators to notify them when a member's delivery is "
 "disabled due to excessive bounces."
 msgstr ""
-"Bir üyenin teslimatı aşırı geri dönmeler nedeniyle devre dışı bırakıldığında "
-"bilgilendirmek için liste yöneticilerine gönderilir."
+"Bir üyenin teslimatı çok fazla geri dönme nedeniyle devre dışı "
+"bırakıldığında bilgilendirmek için liste yöneticilerine gönderilir."
 
 #: template_list.py:38
 msgid ""
@@ -1779,7 +1779,8 @@ msgstr "Abonelik doğrulama gerektiğinde abonelere gönderilecek mesaj."
 msgid ""
 "The message sent to subscribers when an unsubscription confirmation is "
 "required."
-msgstr "Abonelikten çıkma onayı gerektiğinde abonelere gönderilecek mesaj."
+msgstr ""
+"Abonelikten çıkmak için doğrulama gerektiğinde abonelere gönderilecek mesaj."
 
 #: template_list.py:54
 msgid "The message sent to subscribers when they are invited to join a list."
@@ -1848,7 +1849,7 @@ msgid ""
 "The notice sent to a member when their membership has been disabled due to "
 "excessive bounces."
 msgstr ""
-"Aşırı geri dönüşler nedeniyle üyeliği devre dışı bırakıldığında üyeye "
+"Çok fazla geri dönme nedeniyle üyeliği devre dışı bırakıldığında üyeye "
 "gönderilen bildirim."
 
 #: templates/403.html:5
@@ -1877,7 +1878,7 @@ msgstr "İşleminiz gerçekleştirilirken bir hata oluştu."
 
 #: templates/postorius/bans.html:5 templates/postorius/bans.html:10
 msgid "Global Bans"
-msgstr "Global Yasaklamalar"
+msgstr "Genel Yasaklamalar"
 
 #: templates/postorius/base.html:32
 msgid "Mailman logo"
@@ -2182,7 +2183,7 @@ msgstr "Kaldır"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 msgid "Unsubscribe all members"
-msgstr "Tüm üyelerin aboneliğini iptal et"
+msgstr "Tüm üyeleri abonelikten çıkar"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:14
 #, python-format
@@ -2192,7 +2193,7 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"        Tüm üyelerin %(listname)s aboneliğini iptal etmek istediğinize emin "
+"        Tüm üyeleri %(listname)s aboneliğinden çıkarmak istediğinize emin "
 "misiniz?\n"
 "    "
 
@@ -2200,7 +2201,7 @@ msgstr ""
 #: templates/postorius/lists/mass_removal.html:17
 #: templates/postorius/lists/members.html:63
 msgid "Unsubscribe All"
-msgstr "Hepsinin aboneliğini iptal et"
+msgstr "Hepsini Abonelikten Çıkar"
 
 #: templates/postorius/lists/header_matches.html:7
 #: templates/postorius/menu/list_nav.html:58
@@ -2284,7 +2285,7 @@ msgstr "Mesaj alınamadı"
 
 #: templates/postorius/lists/mass_removal.html:14
 msgid "Unsubscribe users"
-msgstr "Kullanıcıların aboneliğini iptal et"
+msgstr "Kullanıcıları abonelikten çıkar"
 
 #: templates/postorius/lists/mass_subscribe.html:7
 #: templates/postorius/menu/list_nav.html:53
@@ -2413,7 +2414,7 @@ msgstr "Aboneliği Yönet"
 
 #: templates/postorius/lists/summary.html:60
 msgid "Unsubscribe"
-msgstr "Aboneliği iptal et"
+msgstr "Abonelikten çık"
 
 #: templates/postorius/lists/summary.html:63
 msgid ""
@@ -2558,7 +2559,7 @@ msgstr "Abonelikler"
 
 #: templates/postorius/menu/user_nav.html:8
 msgid "Global Mailman preferences"
-msgstr "Global Mailman tercihleri"
+msgstr "Genel Mailman tercihleri"
 
 #: templates/postorius/menu/user_nav.html:9
 msgid "Address-based preferences"
@@ -2605,7 +2606,7 @@ msgid ""
 "Any options showing as not set here have inherit at runtime from your global "
 "preferences (viewable on other tab)"
 msgstr ""
-"Burada ayarlanmamış olarak gösterilen tüm seçenekler, çalışma anında global "
+"Burada ayarlanmamış olarak gösterilen tüm seçenekler, çalışma anında genel "
 "tercihlerinizden devralınır (diğer sekmede görülebilir)"
 
 #: templates/postorius/user/address_preferences.html:62
@@ -2635,7 +2636,7 @@ msgid ""
 "Any options showing as not set inherit at runtime from your global or "
 "address specific preferences (viewable on other tabs)"
 msgstr ""
-"Burada ayarlanmamış olarak gösterilen tüm seçenekler, çalışma anında global "
+"Burada ayarlanmamış olarak gösterilen tüm seçenekler, çalışma anında genel "
 "veya adrese özel tercihlerinizden devralınır (diğer sekmede görülebilir)"
 
 #: templates/postorius/user/subscription_preferences.html:32
@@ -2712,7 +2713,7 @@ msgstr "Abonelik Ayarları"
 
 #: templatetags/nav_helpers.py:41
 msgid "Global Settings"
-msgstr "Global Ayarlar"
+msgstr "Genel Ayarlar"
 
 #: utils.py:38
 msgid "Mailman REST API not available. Please start Mailman core."
@@ -2789,7 +2790,7 @@ msgstr "Listede {} yok"
 
 #: views/list.py:138
 msgid "The selected members have been unsubscribed"
-msgstr "Seçilen üyelerin aboneliği iptal edildi"
+msgstr "Seçilen üyeler abonelikten çıkarıldı"
 
 #: views/list.py:156
 #, python-brace-format
@@ -2843,7 +2844,7 @@ msgstr "Lütfen sonraki talimatlar için gelen kutunuza bakın"
 #: views/list.py:507
 #, python-format
 msgid "%s has been unsubscribed from this list."
-msgstr "%s bu liste aboneliğinden ayrıldı."
+msgstr "%s bu liste aboneliğinden çıktı."
 
 #: views/list.py:534
 #, python-format
@@ -2862,7 +2863,7 @@ msgstr "Lütfen formu doğru bir şekilde doldurun."
 #: views/list.py:571
 #, python-format
 msgid "The address %(address)s has been unsubscribed from %(list)s."
-msgstr "%(address)s adresi %(list)s aboneliğinden ayrıldı."
+msgstr "%(address)s adresi %(list)s aboneliğinden çıktı."
 
 #: views/list.py:600
 msgid "The selected messages were accepted"
