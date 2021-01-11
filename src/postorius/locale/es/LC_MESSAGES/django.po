@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Victoriano Giralt <victoriano@uma.es>, 2020.
+# Guillermo Hernandez <guillermo@querysoft.es>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-18 15:57+0530\n"
-"PO-Revision-Date: 2020-10-26 04:46+0000\n"
-"Last-Translator: Victoriano Giralt <victoriano@uma.es>\n"
+"PO-Revision-Date: 2021-01-08 19:15+0000\n"
+"Last-Translator: Guillermo Hernandez <guillermo@querysoft.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/es/>\n"
 "Language: es\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2-dev\n"
+"X-Generator: Weblate 4.4.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -531,10 +532,8 @@ msgstr ""
 "coincidencia, entonces se toma esta acción."
 
 #: forms/list_forms.py:410
-#, fuzzy
-#| msgid "Moderation"
 msgid "Emergency Moderation"
-msgstr "Moderación"
+msgstr "Moderación de emergencia"
 
 #: forms/list_forms.py:412
 msgid ""
@@ -542,6 +541,10 @@ msgid ""
 "held for moderation. Turn this option on when your list is experiencing a "
 "flamewar and you want a cooling off period. "
 msgstr ""
+"Cuando se activa esta opción, se interrumpe todo el tráfico de la lista a la "
+"espera de moderación. Active esta opción cuando la lista esté experimentando "
+"un intercambio tumultuoso de mensajes (\"flamewar\") y desee calmar los "
+"ánimos. "
 
 #: forms/list_forms.py:419
 msgid "Maximum message size"
@@ -1808,14 +1811,10 @@ msgstr ""
 "El mensaje enviado a suscriptores cuando hace falta confirmación de baja."
 
 #: template_list.py:54
-#, fuzzy
-#| msgid ""
-#| "The message sent to subscribers when a subscription confirmation is "
-#| "required."
 msgid "The message sent to subscribers when they are invited to join a list."
 msgstr ""
-"El mensaje enviado a suscriptores cuando hace falta confirmación de "
-"suscripción."
+"El mensaje enviado a suscriptores cuando se les ha invitado a unirse a una "
+"lista."
 
 #: template_list.py:56
 msgid "The notice sent to a member when they unsubscribe from a mailing list."
