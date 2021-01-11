@@ -1,13 +1,13 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Besnik Bleta <besnik@programeshqip.org>, 2020.
+# Besnik Bleta <besnik@programeshqip.org>, 2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-18 15:58+0530\n"
-"PO-Revision-Date: 2020-10-18 22:20+0000\n"
+"PO-Revision-Date: 2021-01-10 22:22+0000\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/sq/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.1-dev\n"
+"X-Generator: Weblate 4.4.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -526,10 +526,8 @@ msgstr ""
 "hedhurave tej. Nëse s’gjendet përputhje, atëherë kryhet ky veprim."
 
 #: forms/list_forms.py:410
-#, fuzzy
-#| msgid "Moderation"
 msgid "Emergency Moderation"
-msgstr "Moderim"
+msgstr "Moderim Nën Gjendje të Jashtëzakonshme"
 
 #: forms/list_forms.py:412
 msgid ""
@@ -537,6 +535,10 @@ msgid ""
 "held for moderation. Turn this option on when your list is experiencing a "
 "flamewar and you want a cooling off period. "
 msgstr ""
+"Kur kjo mundësi është e aktivizuar, krejt trafiku në listë moderohet nën "
+"gjendje të jashtëzakonshme, d.m.th., mbahet për moderim. Aktivizojeni këtë "
+"mundësi kur lista juaj po kalon periudhë të ndezur dhe doni një periudhë "
+"uljeje gjakrash "
 
 #: forms/list_forms.py:419
 msgid "Maximum message size"
@@ -1799,12 +1801,9 @@ msgid ""
 msgstr "Mesazhi dërguar pajtimtarëve kur lypset një ripohim shpajtimi."
 
 #: template_list.py:54
-#, fuzzy
-#| msgid ""
-#| "The message sent to subscribers when a subscription confirmation is "
-#| "required."
 msgid "The message sent to subscribers when they are invited to join a list."
-msgstr "Mesazhi dërguar pajtimtarëve kur lypset një ripohim pajtimi."
+msgstr ""
+"Mesazhi dërguar pajtimtarëve, kur janë ftuar të marrin pjesë në një listë."
 
 #: template_list.py:56
 msgid "The notice sent to a member when they unsubscribe from a mailing list."
