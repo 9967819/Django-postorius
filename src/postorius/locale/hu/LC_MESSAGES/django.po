@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # balping <balping314@gmail.com>, 2020.
 # Peter Donka <peter.donka@gmail.com>, 2021.
+# -- <eneremen@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-18 15:58+0530\n"
 "PO-Revision-Date: 2021-01-11 15:16+0000\n"
-"Last-Translator: Peter Donka <peter.donka@gmail.com>\n"
+"Last-Translator: -- <eneremen@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/hu/>\n"
 "Language: hu\n"
@@ -2791,7 +2792,7 @@ msgstr "A listának nincs {}s"
 
 #: views/list.py:138
 msgid "The selected members have been unsubscribed"
-msgstr ""
+msgstr "A kiválasztott tagok leiratkoztak"
 
 #: views/list.py:156
 #, python-brace-format
@@ -2800,79 +2801,79 @@ msgstr "{email} hozzáadva a {role} szerepkörhöz"
 
 #: views/list.py:203
 msgid "Member does not exist"
-msgstr ""
+msgstr "A tag nem létezik"
 
 #: views/list.py:221
 msgid "The member's preferences have been updated."
-msgstr ""
+msgstr "A tag preferenciái frissültek."
 
 #: views/list.py:230
 msgid "No change to the member's moderation."
-msgstr ""
+msgstr "Nincs változás a tag moderálásában."
 
 #: views/list.py:242
 msgid "The member's moderation settings have been updated."
-msgstr ""
+msgstr "A tag moderálási beállításai frissültek."
 
 #: views/list.py:403
 msgid "You are already subscribed"
-msgstr ""
+msgstr "Már feliratkoztál"
 
 #: views/list.py:414
 #, python-format
 msgid "Subscription changed to %s"
-msgstr ""
+msgstr "Előfizetés módosítva erre: %s"
 
 #: views/list.py:417 views/list.py:462 views/list.py:492
 msgid "Something went wrong. Please try again."
-msgstr ""
+msgstr "Valami hiba történt. Próbálja meg újra később."
 
 #: views/list.py:453
 msgid ""
 "Your subscription request has been submitted and is waiting for moderator "
 "approval."
-msgstr ""
+msgstr "Előfizetési kérelmét elküldtük, és a moderátor jóváhagyására vár."
 
 #: views/list.py:458
 #, python-format
 msgid "You are subscribed to %s."
-msgstr ""
+msgstr "Feliratkozott a %s -ra."
 
 #: views/list.py:488
 msgid "Please check your inbox for further instructions"
-msgstr ""
+msgstr "Kérjük, ellenőrizze a postaládáját további utasításokért"
 
 #: views/list.py:507
 #, python-format
 msgid "%s has been unsubscribed from this list."
-msgstr ""
+msgstr "%s leiratkoztatva a listáról."
 
 #: views/list.py:534
 #, python-format
 msgid "The address %(address)s has been subscribed to %(list)s."
-msgstr ""
+msgstr "A cím %(address)s feliratkoztatva ide: %(list)s."
 
 #: views/list.py:541 views/list.py:578
 #, python-format
 msgid "The email address %s is not valid."
-msgstr ""
+msgstr "Az email cím %s nem valós."
 
 #: views/list.py:564
 msgid "Please fill out the form correctly."
-msgstr ""
+msgstr "Kérjük, töltsd ki helyesen az űrlapot."
 
 #: views/list.py:571
 #, python-format
 msgid "The address %(address)s has been unsubscribed from %(list)s."
-msgstr ""
+msgstr "A címzettek %(address)s leiratkoztatva innen: %(list)s."
 
 #: views/list.py:600
 msgid "The selected messages were accepted"
-msgstr ""
+msgstr "A kiválasztott üzeneteket elfogadva"
 
 #: views/list.py:604
 msgid "The selected messages were rejected"
-msgstr ""
+msgstr "A kiválasztott üzenetek elutasítva"
 
 #: views/list.py:608
 msgid "The selected messages were discarded"
@@ -2880,23 +2881,23 @@ msgstr "A kijelölt üzenetek eldobásra kerültek"
 
 #: views/list.py:610
 msgid "Message could not be found"
-msgstr ""
+msgstr "Az üzenet nem található"
 
 #: views/list.py:639
 msgid "The message was accepted"
-msgstr ""
+msgstr "Az üzenetet elfogadták"
 
 #: views/list.py:642
 msgid "The message was rejected"
-msgstr ""
+msgstr "Az üzenetet elutasították"
 
 #: views/list.py:645
 msgid "The message was discarded"
-msgstr ""
+msgstr "Az üzenetet elvetették"
 
 #: views/list.py:650
 msgid "Held message was not found."
-msgstr ""
+msgstr "A tárolt üzenet nem található."
 
 #: views/list.py:663
 msgid "Moderation action for {} set to {}"
@@ -2904,61 +2905,61 @@ msgstr "Moderálási művelet {} beállításához {}"
 
 #: views/list.py:668
 msgid "Failed to set moderation action: {}"
-msgstr ""
+msgstr "Nem sikerült beállítani a moderálási műveletet: {}"
 
 #: views/list.py:720
 msgid "Choose a Domain"
-msgstr ""
+msgstr "Válassz egy domaint"
 
 #: views/list.py:741
 msgid "List created"
-msgstr ""
+msgstr "Lista létrehozva"
 
 #: views/list.py:753
 msgid "Mailing List already exists."
-msgstr ""
+msgstr "A levelezőlista már létezik."
 
 #: views/list.py:911
 msgid "Subscriptions pending user confirmation"
-msgstr ""
+msgstr "Előfizetések a felhasználó megerősítésére várnak"
 
 #: views/list.py:924
 msgid "Subscriptions pending approval"
-msgstr ""
+msgstr "Előfizetések jóváhagyásra várnak"
 
 #: views/list.py:956
 msgid "The request has been accepted."
-msgstr ""
+msgstr "A kérést elfogadták."
 
 #: views/list.py:957
 msgid "The request has been rejected."
-msgstr ""
+msgstr "A kérelmet elutasították."
 
 #: views/list.py:958
 msgid "The request has been discarded."
-msgstr ""
+msgstr "A kérést elvetették."
 
 #: views/list.py:959
 msgid "The request has been defered."
-msgstr ""
+msgstr "A kérést elhalasztották."
 
 #: views/list.py:970
 #, python-format
 msgid "The request was already moderated: %s"
-msgstr ""
+msgstr "A kérés már moderálva lett: %s"
 
 #: views/list.py:973
 #, python-format
 msgid "The request could not be moderated: %s"
-msgstr ""
+msgstr "A kérés nem volt moderálható: %s"
 
 #: views/list.py:979
 msgid "List Identity"
-msgstr ""
+msgstr "Identitás listázása"
 
 #: views/list.py:980
 msgid "Automatic Responses"
-msgstr ""
+msgstr "Automatikus válaszok"
 
 #: views/list.py:981
 msgid "Alter Messages"
@@ -2974,15 +2975,15 @@ msgstr "Kivonatok"
 
 #: views/list.py:984
 msgid "Message Acceptance"
-msgstr ""
+msgstr "Üzenet elfogadása"
 
 #: views/list.py:985
 msgid "Archiving"
-msgstr ""
+msgstr "Archiválás"
 
 #: views/list.py:986
 msgid "Member Policy"
-msgstr ""
+msgstr "Tagsági szabályzat"
 
 #: views/list.py:987
 msgid "Bounce Processing"
@@ -2990,38 +2991,38 @@ msgstr "Visszapattanás feldolgozása"
 
 #: views/list.py:1050
 msgid "The settings have been updated."
-msgstr ""
+msgstr "A beállítások frissítve lettek."
 
 #: views/list.py:1055
 msgid "An error occurred: "
-msgstr ""
+msgstr "Hiba történt: "
 
 #: views/list.py:1079
 #, python-format
 msgid "The user %(email)s is not in the %(role)s group"
-msgstr ""
+msgstr "A felhasználó %(email)s nincs benne a %(role)s csoportban"
 
 #: views/list.py:1085
 msgid "Removing the last owner is impossible"
-msgstr ""
+msgstr "Az utolsó tulajdonost nem lehet kitörölni"
 
 #: views/list.py:1099
 #, python-format
 msgid "The user could not be removed: %(msg)s"
-msgstr ""
+msgstr "A felhasználót nem lehetett törölni: %(msg)s"
 
 #: views/list.py:1102
 #, python-format
 msgid "The user %(address)s has been removed from the %(role)s group."
-msgstr ""
+msgstr "A felhasználó %(address)s ki lett szedve a %(role)s csoportból."
 
 #: views/list.py:1120
 msgid "No member is subscribed to the list currently."
-msgstr ""
+msgstr "Jelenleg senki sincs feliratkozva a listára."
 
 #: views/list.py:1130
 msgid "All members have been unsubscribed from the list."
-msgstr ""
+msgstr "Az összes tag leiratkoztatva a listáról."
 
 #: views/list.py:1195
 msgid "The header matches were successfully modified."
@@ -3029,28 +3030,28 @@ msgstr "A fejlécegyezések módosítása sikeresen megtörtént."
 
 #: views/list.py:1202
 msgid "New header"
-msgstr ""
+msgstr "Új fejléc"
 
 #: views/list.py:1203
 msgid "New pattern"
-msgstr ""
+msgstr "Új sablon"
 
 #: views/rest.py:60
 msgid "Message does not exist"
-msgstr ""
+msgstr "Az üzenet nem létezik"
 
 #: views/rest.py:97
 msgid "Attachment does not exist"
-msgstr ""
+msgstr "A csatolmány nem létezik"
 
 #: views/user.py:78
 msgid "Your preferences have been updated."
-msgstr ""
+msgstr "A tulajdonságaid frissítve lettek."
 
 #: views/user.py:80
 msgid "Your preferences did not change."
-msgstr ""
+msgstr "A tulajdonságaid nem változtak."
 
 #: views/user.py:196
 msgid "Subscription does not exist"
-msgstr ""
+msgstr "Az előfizetés nem létezik"
