@@ -63,6 +63,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   cases. (Closes #457)
 * Mass removal now accepts address formats with display names and/or angle
   brackets. (Closes #455)
+* Add support to override ``send_welcome_message`` when mass subscribing to
+  suppress welcome messages. (Closes #99)
 
 
 1.3.3

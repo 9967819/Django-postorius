@@ -1038,6 +1038,29 @@ class ListMassSubscription(forms.Form):
         widget=forms.CheckboxInput()
         )
 
+    send_welcome_message = forms.ChoiceField(
+        choices=((True, _('Yes')),
+                 (False, _('No')),
+                 ('default', _('List default'))),
+        widget=forms.RadioSelect,
+        initial='default',
+        required=False,
+        label=_('Send welcome message'),
+        help_text=_(
+            'If set to "Yes" or "No", List\'s default setting of '
+            'send_welcome_message will be ignored for these subscribers and a'
+            ' welcome message will be sent or not sent based on the choice.'),
+        )
+
+    def clean_send_welcome_message(self):
+        """Choose from True or False. Any other value is equivalent to None."""
+        data = self.cleaned_data['send_welcome_message']
+        if data in ('True', 'False'):
+            return data
+        # None implies this value is unset and isn't passed on to Core in API
+        # call.
+        return None
+
 
 class ListMassRemoval(forms.Form):
 
