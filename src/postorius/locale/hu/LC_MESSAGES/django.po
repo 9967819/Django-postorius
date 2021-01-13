@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-18 15:58+0530\n"
-"PO-Revision-Date: 2021-01-12 16:55+0000\n"
+"PO-Revision-Date: 2021-01-13 21:51+0000\n"
 "Last-Translator: Peter Donka <peter.donka@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/hu/>\n"
@@ -664,15 +664,15 @@ msgstr "A mailman küldjön ki időszakos kivonatokat?"
 
 #: forms/list_forms.py:539
 msgid "Digest Volume Frequency"
-msgstr "Kivonat mennyiség gyakorisága"
+msgstr "Kivonatok gyakorisága"
 
 #: forms/list_forms.py:540
 msgid ""
 "At what frequency should Mailman increment the digest volume number and "
 "reset the issue number?"
 msgstr ""
-"Milyen gyakorisággal növelje a Mailman az kivonatok számát és állítsa "
-"alaphelyzetbe a kiadás számát?"
+"Milyen gyakorisággal növelje a Mailman a kivonatok számát és állítsa "
+"alaphelyzetbe a kiadások számát?"
 
 #: forms/list_forms.py:544
 msgid "Digest size threshold"
@@ -684,7 +684,7 @@ msgstr "Milyen nagy legyen egy kivonat Kb-ban mielőtt kiküldésre kerül?"
 
 #: forms/list_forms.py:554
 msgid "DMARC mitigation action"
-msgstr "DMARC enyhítési művelet"
+msgstr "DMARC enyhítés"
 
 #: forms/list_forms.py:558
 msgid "Please choose a DMARC mitigation action."
@@ -1523,7 +1523,7 @@ msgstr "Szabályos"
 
 #: forms/user_forms.py:51
 msgid "Plain Text Digests"
-msgstr "Sima szöveg összefoglalása"
+msgstr "Szöveges kivonatok"
 
 #: forms/user_forms.py:52
 msgid "Mime Digests"
@@ -1531,7 +1531,7 @@ msgstr "Mime kivonatok"
 
 #: forms/user_forms.py:53
 msgid "Summary Digests"
-msgstr "Kivonatok összefoglaló"
+msgstr "Összefoglaló kivonatok"
 
 #: forms/user_forms.py:55
 msgid "Enabled"
@@ -1572,11 +1572,11 @@ msgid ""
 "text digests."
 msgstr ""
 "Ha az összefoglaló kivonatokat választja, akkor a bejegyzéseket "
-"összecsomagolják (általában naponta egyet, de valószínűleg többet a "
-"forgalmas listákon), ahelyett, hogy egyesével küldenék őket. A levélolvasója "
-"nem biztos, hogy támogatja a MIME kivonatolást. Általában a MIME kivonatok "
-"vannak előnyben részesítve, de ha problémája van ezek olvasásával akkor "
-"válassza a hagyományos szöveges kivonatolást."
+"összecsomagoljuk (általában naponta egyet, de valószínűleg többet a "
+"forgalmas listákon), ahelyett, hogy egyesével küldenénk őket. A "
+"levélolvasója nem biztos, hogy támogatja a MIME kivonatolást. Általában a "
+"MIME kivonatok vannak előnyben részesítve, de ha problémája van ezek "
+"olvasásával akkor válassza a hagyományos szöveges kivonatolást."
 
 #: forms/user_forms.py:83
 msgid "Receive own postings"
@@ -1761,7 +1761,8 @@ msgstr "A kivonatolt üzenet fejléce."
 msgid ""
 "The digest “masthead”; i.e. a common introduction for all digest messages."
 msgstr ""
-"Az kivonatolt \"fejléc\"; azaz az összes kivonatolt üzenet közös bevezetése."
+"Az kivonatolt \"csoportos fejléc\"; azaz az összes kivonatolt üzenet "
+"felvezetése."
 
 #: template_list.py:46
 msgid "The footer for a regular (non-digest) message."
@@ -2483,15 +2484,15 @@ msgstr ""
 
 #: templates/postorius/lists/summary.html:106
 msgid "List metrics"
-msgstr "Sorolja fel a mutatókat"
+msgstr "Lista metrikák"
 
 #: templates/postorius/lists/summary.html:108
 msgid "Created at"
-msgstr "Létrehozva itt"
+msgstr "Létrehozva ekkor"
 
 #: templates/postorius/lists/summary.html:110
 msgid "Last post at"
-msgstr "Utolsó hozzászólás a"
+msgstr "Utolsó hozzászólás"
 
 #: templates/postorius/lists/summary.html:112
 msgid "Digest last sent at"
@@ -2955,7 +2956,7 @@ msgstr "A kérés nem volt moderálható: %s"
 
 #: views/list.py:979
 msgid "List Identity"
-msgstr "Identitás listázása"
+msgstr "Lista identitás"
 
 #: views/list.py:980
 msgid "Automatic Responses"
@@ -2975,7 +2976,7 @@ msgstr "Kivonatok"
 
 #: views/list.py:984
 msgid "Message Acceptance"
-msgstr "Üzenet elfogadása"
+msgstr "Üzenet fogadási szabályok"
 
 #: views/list.py:985
 msgid "Archiving"
@@ -2987,7 +2988,7 @@ msgstr "Tagsági szabályzat"
 
 #: views/list.py:987
 msgid "Bounce Processing"
-msgstr "Visszapattanás feldolgozása"
+msgstr "Visszapattanások feldolgozása"
 
 #: views/list.py:1050
 msgid "The settings have been updated."
