@@ -181,7 +181,9 @@ class TestSubscription(ViewTestCase):
                         <test-5@example.org>\n"""
         self.client.post(
             reverse('mass_subscribe', args=('open_list.example.com',)),
-            {'emails': email_list, 'pre_verified': True})
+            {'emails': email_list,
+             'pre_verified': True,
+             'send_welcome_message': 'default'})
         self.assertEqual(len(self.open_list.members), 5)
         first = self.open_list.get_member('test-1@example.org')
         second = self.open_list.get_member('test-2@example.org')
@@ -193,6 +195,49 @@ class TestSubscription(ViewTestCase):
         self.assertEqual(third.address.display_name, 'Third Person')
         self.assertIsNone(fourth.address.display_name)
         self.assertIsNone(fifth.address.display_name)
+
+    def test_mass_subscribe_send_welcome_message(self):
+        owner = User.objects.create_user(
+            'testowner', 'owner@example.com', 'pwd')
+        EmailAddress.objects.create(
+            user=owner, email=owner.email, verified=True)
+        self.open_list.add_owner('owner@example.com')
+        self.client.login(username='testowner', password='pwd')
+        virgin_q = self.mm_client.queues['virgin']
+        initial_files = len(virgin_q.files)
+        email_list = """First Person <test-1@example.org>\n
+                        "Second Person" <test-2@example.org>\n"""
+        self.client.post(
+            reverse('mass_subscribe', args=('open_list.example.com',)),
+            {'emails': email_list,
+             'pre_verified': True, 'send_welcome_message': True})
+        self.assertEqual(len(self.open_list.members), 2)
+        virgin_q = self.mm_client.queues['virgin']
+        # There should be two more files in the queue.
+        self.assertEqual(len(virgin_q.files) - initial_files, 2)
+        initial_files += 2
+        # Now subscribe some users by changing it to No.
+        email_list = """test-3@example.org (Third Person)\n"""
+        self.client.post(
+            reverse('mass_subscribe', args=('open_list.example.com',)),
+            {'emails': email_list,
+             'pre_verified': True, 'send_welcome_message': False})
+        self.assertEqual(len(self.open_list.members), 3)
+        # There should be zero more messages in virgin queue because we set
+        # `sent_welcome_message` to False.
+        # There should be two more files in the queue.
+        virgin_q = self.mm_client.queues['virgin']
+        self.assertEqual(len(virgin_q.files) - initial_files, 0)
+        # If set to none, the default value of send_welcome_message works,
+        # which is True.
+        email_list = """test4@example.org (Third Person)\n"""
+        self.client.post(
+            reverse('mass_subscribe', args=('open_list.example.com',)),
+            {'emails': email_list,
+             'pre_verified': True, 'send_welcome_message': 'default'})
+        self.assertEqual(len(self.open_list.members), 4)
+        virgin_q = self.mm_client.queues['virgin']
+        self.assertEqual(len(virgin_q.files) - initial_files, 1)
 
     def test_change_subscription_open(self):
         # The subscription is changed from an address to another

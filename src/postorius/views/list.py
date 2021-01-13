@@ -529,7 +529,9 @@ def list_mass_subscribe(request, list_id):
                         pre_verified=form.cleaned_data['pre_verified'],
                         pre_confirmed=form.cleaned_data['pre_confirmed'],
                         pre_approved=form.cleaned_data['pre_approved'],
-                        invitation=form.cleaned_data['invitation'])
+                        invitation=form.cleaned_data['invitation'],
+                        send_welcome_message=form.cleaned_data[
+                            'send_welcome_message'])
                     messages.success(
                         request, _('The address %(address)s has been'
                                    ' subscribed to %(list)s.') %
