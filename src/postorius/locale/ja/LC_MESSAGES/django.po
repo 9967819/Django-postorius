@@ -1,15 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Shohei Kusakata <shohei@kusakata.com>, 2020.
+# Shohei Kusakata <shohei@kusakata.com>, 2020, 2021.
 # Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-18 15:58+0530\n"
-"PO-Revision-Date: 2020-09-24 02:39+0000\n"
-"Last-Translator: Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>\n"
+"PO-Revision-Date: 2021-01-13 21:51+0000\n"
+"Last-Translator: Shohei Kusakata <shohei@kusakata.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ja/>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.3-dev\n"
+"X-Generator: Weblate 4.4.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -202,7 +202,7 @@ msgstr ""
 
 #: forms/list_forms.py:149 forms/list_forms.py:178
 msgid "Your email address"
-msgstr ""
+msgstr "あなたのメールアドレス"
 
 #: forms/list_forms.py:153
 msgid ""
@@ -222,7 +222,7 @@ msgstr ""
 
 #: forms/list_forms.py:160 forms/list_forms.py:185
 msgid "Your name (optional)"
-msgstr ""
+msgstr "あなたの名前 (任意)"
 
 #: forms/list_forms.py:169 forms/list_forms.py:1145 views/list.py:411
 msgid "Primary Address ({})"
@@ -285,7 +285,7 @@ msgstr ""
 #: forms/list_forms.py:943 forms/list_forms.py:950 forms/list_forms.py:971
 #: forms/user_forms.py:48
 msgid "Yes"
-msgstr ""
+msgstr "はい"
 
 #: forms/list_forms.py:238 forms/list_forms.py:264 forms/list_forms.py:273
 #: forms/list_forms.py:359 forms/list_forms.py:367 forms/list_forms.py:408
@@ -297,7 +297,7 @@ msgstr ""
 #: forms/list_forms.py:943 forms/list_forms.py:950 forms/list_forms.py:971
 #: forms/user_forms.py:48
 msgid "No"
-msgstr ""
+msgstr "いいえ"
 
 #: forms/list_forms.py:240
 msgid "Process Bounces"
@@ -1071,7 +1071,7 @@ msgstr ""
 
 #: forms/list_forms.py:930
 msgid "Preferred Language"
-msgstr ""
+msgstr "推奨言語"
 
 #: forms/list_forms.py:936
 msgid "Members List Visibility"
@@ -1567,7 +1567,7 @@ msgstr ""
 
 #: templates/500.html:24
 msgid "Server error"
-msgstr ""
+msgstr "サーバーエラー"
 
 #: templates/500.html:25
 msgid "An error occurred while processing your request."
@@ -1914,7 +1914,7 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:38
 msgid "Subject"
-msgstr ""
+msgstr "題名"
 
 #: templates/postorius/lists/held_messages.html:39
 msgid "Sender"
@@ -1922,7 +1922,7 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:40
 msgid "Reason"
-msgstr ""
+msgstr "理由"
 
 #: templates/postorius/lists/held_messages.html:41
 msgid "Hold Date"
@@ -2040,7 +2040,7 @@ msgstr ""
 #: templates/postorius/lists/settings.html:7
 #: templates/postorius/menu/list_nav.html:46
 msgid "Settings"
-msgstr ""
+msgstr "設定"
 
 #: templates/postorius/lists/subscription_requests.html:7
 #: templates/postorius/menu/list_nav.html:14
@@ -2068,11 +2068,15 @@ msgid ""
 "\">Archives</a>\n"
 "          "
 msgstr ""
+"\n"
+"            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s\""
+">アーカイブ</a>\n"
+"          "
 
 #: templates/postorius/lists/summary.html:45
 #: templates/postorius/lists/summary.html:79
 msgid "Subscription / Unsubscription"
-msgstr ""
+msgstr "購読 / 購読解除"
 
 #: templates/postorius/lists/summary.html:47
 msgid "You are subscribed to this list with the following address:"
@@ -2090,7 +2094,7 @@ msgstr "購読"
 
 #: templates/postorius/lists/summary.html:60
 msgid "Unsubscribe"
-msgstr ""
+msgstr "購読解除"
 
 #: templates/postorius/lists/summary.html:63
 msgid ""
@@ -2113,6 +2117,12 @@ msgid ""
 "                  or use the form below:\n"
 "              "
 msgstr ""
+"\n"
+"                  リストを購読するには題名に 'subscribe' と書いたメールを\n"
+"                  <a href=\"mailto:%(address)s?subject=Subscribe\""
+">%(address)s</a>\n"
+"                  に送信するか、あるいは下のフォームを使ってください:\n"
+"              "
 
 #: templates/postorius/lists/summary.html:80
 msgid ""
@@ -2123,10 +2133,15 @@ msgid ""
 "        with the appropriate email address.\n"
 "        "
 msgstr ""
+"\n"
+"        リストを購読あるいは購読解除するにはまずログインしてください。\n"
+"        ログインしたことがない場合、適切なメールアドレス使って\n"
+"        アカウントをセットアップする必要があります。\n"
+"        "
 
 #: templates/postorius/lists/summary.html:85
 msgid "Log In"
-msgstr ""
+msgstr "ログイン"
 
 #: templates/postorius/lists/summary.html:90
 msgid ""
@@ -2135,6 +2150,10 @@ msgid ""
 "        If you wish to do so, please use the form below.\n"
 "        "
 msgstr ""
+"\n"
+"        アカウントを作成しなくてもリストを購読することができます。\n"
+"        そうしたい場合は、下のフォームを使ってください。\n"
+"        "
 
 #: templates/postorius/lists/summary.html:106
 msgid "List metrics"
@@ -2175,19 +2194,19 @@ msgstr ""
 
 #: templates/postorius/menu/list_nav.html:36
 msgid "Users"
-msgstr ""
+msgstr "ユーザー"
 
 #: templates/postorius/menu/list_nav.html:39
 msgid "Members"
-msgstr ""
+msgstr "メンバー"
 
 #: templates/postorius/menu/list_nav.html:40
 msgid "Non-Members"
-msgstr ""
+msgstr "非メンバー"
 
 #: templates/postorius/menu/list_nav.html:41
 msgid "Moderators"
-msgstr ""
+msgstr "モデレータ"
 
 #: templates/postorius/menu/list_nav.html:50
 msgid "Mass operations"
@@ -2263,7 +2282,7 @@ msgstr ""
 #: templates/postorius/user/address_preferences.html:62
 #: templates/postorius/user/subscription_preferences.html:68
 msgid "Save"
-msgstr ""
+msgstr "保存"
 
 #: templates/postorius/user/list_options.html:14
 msgid "Subscription options for"
@@ -2275,7 +2294,7 @@ msgstr ""
 
 #: templates/postorius/user/mailman_settings.html:7
 msgid "Subscription settings"
-msgstr ""
+msgstr "購読設定"
 
 #: templates/postorius/user/subscription_preferences.html:21
 msgid "Each list subscription can have specific Mailman preferences."
@@ -2289,7 +2308,7 @@ msgstr ""
 
 #: templates/postorius/user/subscription_preferences.html:32
 msgid "Subscription"
-msgstr ""
+msgstr "購読"
 
 #: templates/postorius/user/subscriptions.html:17
 msgid "You are subscribed to the following mailing lists:"
@@ -2341,7 +2360,7 @@ msgstr ""
 
 #: templatetags/nav_helpers.py:34
 msgid "List Settings"
-msgstr ""
+msgstr "リスト設定"
 
 #: templatetags/nav_helpers.py:35
 msgid "Summary"
@@ -2463,7 +2482,7 @@ msgstr ""
 
 #: views/list.py:403
 msgid "You are already subscribed"
-msgstr ""
+msgstr "すでに購読済みです"
 
 #: views/list.py:414
 #, python-format
@@ -2502,7 +2521,7 @@ msgstr ""
 #: views/list.py:541 views/list.py:578
 #, python-format
 msgid "The email address %s is not valid."
-msgstr ""
+msgstr "メールアドレス %s は正しくありません。"
 
 #: views/list.py:564
 msgid "Please fill out the form correctly."
@@ -2617,7 +2636,7 @@ msgstr ""
 
 #: views/list.py:983
 msgid "Digest"
-msgstr ""
+msgstr "ダイジェスト"
 
 #: views/list.py:984
 msgid "Message Acceptance"
@@ -2641,7 +2660,7 @@ msgstr ""
 
 #: views/list.py:1055
 msgid "An error occurred: "
-msgstr ""
+msgstr "エラーが発生しました: "
 
 #: views/list.py:1079
 #, python-format
@@ -2692,11 +2711,11 @@ msgstr ""
 
 #: views/user.py:78
 msgid "Your preferences have been updated."
-msgstr ""
+msgstr "設定が更新されました。"
 
 #: views/user.py:80
 msgid "Your preferences did not change."
-msgstr ""
+msgstr "設定は変更されませんでした。"
 
 #: views/user.py:196
 msgid "Subscription does not exist"
