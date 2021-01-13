@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-18 15:58+0530\n"
-"PO-Revision-Date: 2021-01-11 15:16+0000\n"
-"Last-Translator: -- <eneremen@gmail.com>\n"
+"PO-Revision-Date: 2021-01-12 16:55+0000\n"
+"Last-Translator: Peter Donka <peter.donka@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/hu/>\n"
 "Language: hu\n"
@@ -88,19 +88,19 @@ msgstr "Legalább egyet válasszon ki"
 
 #: forms/list_forms.py:36
 msgid "Hold for moderation"
-msgstr "Felfüggesztve, moderálandó"
+msgstr "Tartás"
 
 #: forms/list_forms.py:37
 msgid "Reject (with notification)"
-msgstr "Elutasít (üzenettel)"
+msgstr "Elutasítás (üzenettel)"
 
 #: forms/list_forms.py:38
 msgid "Discard (no notification)"
-msgstr "Elvet (nincs üzenet)"
+msgstr "Eldobás (nincs üzenet)"
 
 #: forms/list_forms.py:39
 msgid "Accept immediately (bypass other rules)"
-msgstr "Azonnal elfogad (további szabályok átugrása)"
+msgstr "Elfogad (további szabályok átugrása)"
 
 #: forms/list_forms.py:40
 msgid "Default processing"
@@ -124,7 +124,7 @@ msgstr "Havi"
 
 #: forms/list_forms.py:48
 msgid "Yearly"
-msgstr "Évi"
+msgstr "Éves"
 
 #: forms/list_forms.py:52
 msgid "Only mailinglist moderators"
@@ -247,7 +247,7 @@ msgstr "Moderál"
 
 #: forms/list_forms.py:203
 msgid "Confirm, then moderate"
-msgstr "Megerősít, majd moderál"
+msgstr "Megerősítés majd moderálás"
 
 #: forms/list_forms.py:212
 msgid "Subscription Policy"
@@ -465,7 +465,7 @@ msgstr ""
 
 #: forms/list_forms.py:369
 msgid "Administrivia"
-msgstr "Administrivia (Admin-Mód)"
+msgstr "Adminisztráció"
 
 #: forms/list_forms.py:371
 msgid ""
@@ -474,7 +474,7 @@ msgid ""
 "it to the the administrative requests queue, notifying the administrator of "
 "the new request, in the process."
 msgstr ""
-"Az administrivia teszt ellenőrzi a posztot, hogy valóban adminisztrációs "
+"Az adminisztrációs teszt ellenőrzi a posztot, hogy valóban adminisztrációs "
 "kérés e, és egy jóváhagyást küld az adminnak ellenőrzés céljából (pl. fel/"
 "leiratkozás, stb)."
 
@@ -824,10 +824,10 @@ msgid ""
 msgstr ""
 "A tartalom nélküli üzenetek végrehajtása\n"
 "szűrés után.\n"
-" Discard = eldobja az üzenetet.\n"
-" Reject = dobja el az üzenetet és értesítse a feladót.\n"
+" Elvetés = eldobja az üzenetet.\n"
+" Elutasítás = dobja el az üzenetet és értesítse a feladót.\n"
 " Továbbítás = továbbítja az üzenetet a lista tulajdonosának.\n"
-" Preserve = mentse az üzenetet a qfiles / bad fájlba.\n"
+" Megőrzés = mentse az üzenetet a qfiles / bad fájlba.\n"
 
 #: forms/list_forms.py:636
 msgid "Personalize"
@@ -999,7 +999,7 @@ msgstr "Válasszon válaszlehetőséget."
 
 #: forms/list_forms.py:751
 msgid "No Munging"
-msgstr "Nincs dünnyögés"
+msgstr "Válaszra válaszolni nincs mód"
 
 #: forms/list_forms.py:753
 msgid "Explicit Reply-to header set"
@@ -1037,31 +1037,32 @@ msgid ""
 "the Reply-To: address option to point to the parallel list."
 msgstr ""
 "Hová irányítják a listás üzenetekre adott válaszokat? A legtöbb "
-"levelezőlistához erősen ajánlott a No Munging használata.\n"
+"levelezőlistához erősen ajánlott a \"No Munging\" használata.\n"
 "Ez az opció szabályozza, hogy a Mailman mit csináljon a Reply-to: fejléccel "
-"a levelezőlistán átfolyó üzenetekben. Ha nincs dünnyögés, a Mailman nem ad "
-"Reply-to: fejlécet, bár ha van ilyen az eredeti üzenetben, akkor nem törli "
-"le. Ennek az értéknek a Válasz a listára, a Kifejezett válasz vagy a Válasz "
-"értékre állítása csak azt eredményezi, hogy a Mailman egy adott Reply-To: "
-"fejlécet illeszt be az összes üzenetbe, ha szükséges, felülírja az eredeti "
-"üzenet fejlécét (az Explicit Válasz beszúrja a answer_to_address értékét). "
-"Explicit Reply-to; a hozzá nem adott másolat csak a nem bejelentett "
-"listáknál hasznos, ahol el akarja kerülni, hogy valaki válaszoljon a lista "
-"címére. Sok oka van annak, hogy ne vezesse be vagy ne írja felül a Reply-to: "
-"fejlécet. Az egyik az, hogy egyes plakátok a saját Reply-To: beállításaitól "
-"függenek, hogy továbbítsák érvényes visszaküldési címüket. A másik az, hogy "
-"a Reply-to módosítása: sokkal nehezebbé teszi a privát válaszok küldését. "
-"Lásd a <a href=\"http://marc.merlins.org/netrants/reply-to-harmful.html\"> "
-"`Reply-to' dünnyögés ártalmasnak tartott </a> a kérdés általános "
-"megvitatásához. Különvéleményt lásd <a href=\"http://marc.merlins.org/"
-"netrants/reply-to-useful.html\"> `Reply-to' dünnyögés hasznosnak tartott </"
-"a>. Egyes levelezőlisták korlátozzák a kiküldés jogosultságait, párhuzamos "
-"listával foglalkoznak a megbeszélések. Ilyenek például a \"javítások\" vagy "
-"a \"bejelentkezési listák\", ahol a szoftver-módosításokat egy "
-"felülvizsgálat-ellenőrző rendszer teszi közzé, de a változásokról a "
-"fejlesztők levelezőlistáján folyik a vita. Az ilyen típusú levelezőlisták "
-"támogatásához válassza az explicit válasz lehetőséget, és állítsa a Reply-to:"
-" cím opciót a párhuzamos listára."
+"a levelezőlistán átfolyó üzenetekben. Ha a válasz a válaszra tiltott, a "
+"Mailman nem ad Reply-to: fejlécet, bár ha van ilyen az eredeti üzenetben, "
+"akkor nem törli le. Ennek az értéknek a Válasz a listára, a Kifejezett "
+"válasz vagy a Válasz értékre állítása csak azt eredményezi, hogy a Mailman "
+"egy adott Reply-To: fejlécet illeszt be az összes üzenetbe, ha szükséges, "
+"felülírja az eredeti üzenet fejlécét (az Explicit Válasz beszúrja a "
+"answer_to_address értékét). Explicit Reply-to; a hozzá nem adott másolat "
+"csak a nem bejelentett listáknál hasznos, ahol el akarja kerülni, hogy "
+"valaki válaszoljon a lista címére. Sok oka van annak, hogy ne vezesse be "
+"vagy ne írja felül a Reply-to: fejlécet. Az egyik az, hogy egyes plakátok a "
+"saját Reply-To: beállításaitól függenek, hogy továbbítsák érvényes "
+"visszaküldési címüket. A másik az, hogy a Reply-to módosítása: sokkal "
+"nehezebbé teszi a privát válaszok küldését. Lásd a <a href=\"http://marc."
+"merlins.org/netrants/reply-to-harmful.html\"> `Reply-to' No Munging "
+"ártalmasnak tartott </a> a kérdés általános megvitatásához. Különvéleményt "
+"lásd <a href=\"http://marc.merlins.org/netrants/reply-to-useful.html\"> "
+"`Reply-to' No Munging hasznosnak tartott </a>. Egyes levelezőlisták "
+"korlátozzák a kiküldés jogosultságait, párhuzamos listával foglalkoznak a "
+"megbeszélések. Ilyenek például a \"javítások\" vagy a \"bejelentkezési "
+"listák\", ahol a szoftver-módosításokat egy felülvizsgálat-ellenőrző "
+"rendszer teszi közzé, de a változásokról a fejlesztők levelezőlistáján "
+"folyik a vita. Az ilyen típusú levelezőlisták támogatásához válassza az "
+"explicit válasz lehetőséget, és állítsa a Reply-to: cím opciót a párhuzamos "
+"listára."
 
 #: forms/list_forms.py:788
 msgid "Pipeline"
@@ -1085,17 +1086,17 @@ msgstr "Nincs automatikus válasz"
 
 #: forms/list_forms.py:807
 msgid "Autorespond to list owner"
-msgstr "Automatikus válasz a lista tulajdonosának"
+msgstr "Automatikus válasz az -owner címére érkező emailekre"
 
 #: forms/list_forms.py:808
 msgid ""
 "Should Mailman send an auto-response to emails sent to the -owner address?"
 msgstr ""
-"A Mailman automatikus választ küldjön a tulajdonos címére küldött e-mailekre?"
+"A Mailman küldjön automatikus választ az -owner címére küldött e-mailekre?"
 
 #: forms/list_forms.py:811
 msgid "Autoresponse owner text"
-msgstr "A tulajdonos szövegének automatikus válasza"
+msgstr "Az -owner-nek küldött üzenetekre adott automatikus válasz"
 
 #: forms/list_forms.py:814
 msgid "Auto-response text to send to -owner emails."
@@ -1107,15 +1108,15 @@ msgstr "Automatikus válaszadás"
 
 #: forms/list_forms.py:819
 msgid "Should Mailman send an auto-response to mailing list posters?"
-msgstr "A Mailman automatikus választ küldjön a levelezőlista beküldőinek?"
+msgstr "A Mailman küldjön automatikus választ a levelezőlista szerzőinek?"
 
 #: forms/list_forms.py:822
 msgid "Autoresponse postings text"
-msgstr "Automatikus válasz szövege a beküldési üzenetekre"
+msgstr "A szerzői üzenetek automatikus válasz szövege"
 
 #: forms/list_forms.py:825
 msgid "Auto-response text to send to mailing list posters."
-msgstr "Automatikus válaszszöveg a levelezési lista beküldőinek."
+msgstr "A levelező lista szerzőinek küldött automatikus válasz."
 
 #: forms/list_forms.py:829
 msgid "Autorespond requests"
@@ -1241,9 +1242,8 @@ msgid ""
 "lists, or in headers, and so forth. It should be as succinct as you can get "
 "it, while still identifying what the list is."
 msgstr ""
-"Ez a leírás akkor használatos, ha a levelezési lista más levelezési "
-"listákkal van felsorolva, vagy fejlécekben stb. Ennek tömörnek kell lennie, "
-"de továbbra is azonosuljon a listával."
+"A levelezési lista rövid leírása. Törekedjen arra, hogy rövid tömör legyen, "
+"de jellemezze a listát."
 
 #: forms/list_forms.py:915
 msgid "Information"
@@ -1507,14 +1507,14 @@ msgstr "Kérjük, adjon meg egy megjelenítendő nevet."
 
 #: forms/system.py:31
 msgid "Add ban"
-msgstr "Kitiltás hozzáadása"
+msgstr "Új tiltás"
 
 #: forms/system.py:33
 msgid ""
 "You can ban a single email address or use a regular expression to match "
 "similar email addresses."
 msgstr ""
-"Kitilthat egyetlen e-mail címet, vagy reguláris kifejezést használhat a "
+"Kitilthat egyetlen e-mail címet, vagy használhat reguláris kifejezést a "
 "hasonló e-mail címek egyeztetéséhez."
 
 #: forms/user_forms.py:50
