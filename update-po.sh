@@ -2,7 +2,7 @@
 
 set -x
 
-# Copyright (C) 2019 by Mike Gabriel <mike.gabriel@das-netzwerkteam.de>
+# Copyright (C) 2019-2021 by Mike Gabriel <mike.gabriel@das-netzwerkteam.de>
 #
 # This package is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
