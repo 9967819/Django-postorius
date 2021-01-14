@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-18 15:57+0530\n"
+"POT-Creation-Date: 2021-01-13 17:25-0800\n"
 "PO-Revision-Date: 2020-12-16 22:44+0000\n"
 "Last-Translator: Michael Lorenzen <ml@m-lorenzen.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -234,7 +234,7 @@ msgstr "Bitte geben Sie eine gültige E-Mail-Adresse an."
 msgid "Your name (optional)"
 msgstr "Ihr Name (optional)"
 
-#: forms/list_forms.py:169 forms/list_forms.py:1145 views/list.py:411
+#: forms/list_forms.py:169 forms/list_forms.py:1168 views/list.py:411
 msgid "Primary Address ({})"
 msgstr "Primäre Adresse ({})"
 
@@ -304,7 +304,7 @@ msgstr ""
 #: forms/list_forms.py:737 forms/list_forms.py:848 forms/list_forms.py:857
 #: forms/list_forms.py:869 forms/list_forms.py:881 forms/list_forms.py:900
 #: forms/list_forms.py:943 forms/list_forms.py:950 forms/list_forms.py:971
-#: forms/user_forms.py:48
+#: forms/list_forms.py:1042 forms/user_forms.py:48
 msgid "Yes"
 msgstr "Ja"
 
@@ -316,7 +316,7 @@ msgstr "Ja"
 #: forms/list_forms.py:737 forms/list_forms.py:848 forms/list_forms.py:857
 #: forms/list_forms.py:869 forms/list_forms.py:881 forms/list_forms.py:900
 #: forms/list_forms.py:943 forms/list_forms.py:950 forms/list_forms.py:971
-#: forms/user_forms.py:48
+#: forms/list_forms.py:1043 forms/user_forms.py:48
 msgid "No"
 msgstr "Nein"
 
@@ -1199,7 +1199,7 @@ msgstr ""
 "zurückgehalten werden? Falls Sie 'Nein' auswählen, wird den Usern keine "
 "Benachrichtigung über ausstehende Freigaben ihrer Nachrichten zugesandt."
 
-#: forms/list_forms.py:860
+#: forms/list_forms.py:860 forms/list_forms.py:1048
 msgid "Send welcome message"
 msgstr "Willkommensnachricht senden"
 
@@ -1427,71 +1427,78 @@ msgstr ""
 "erhalten eine Einladung, der Liste beizutreten, und sie werden abonniert, "
 "sobald sie die Einladung annehmen."
 
-#: forms/list_forms.py:1047
-msgid "Emails to Unsubscribe"
-msgstr "E-Mail-Adresse zur Massenaustragung"
-
-#: forms/list_forms.py:1048
-msgid "Add one email address on each line"
-msgstr "Füge eine E-Mail-Adresse pro Zeile hinzu"
-
-#: forms/list_forms.py:1063
-msgid "Default antispam action"
-msgstr "Standard-Antispam-Aktion"
-
-#: forms/list_forms.py:1067
-msgid "Header"
-msgstr "Header"
-
-#: forms/list_forms.py:1068
-msgid "Email header to filter on (case-insensitive)."
-msgstr "E-Mail-Header zur Filterung (Groß-/Kleinschreibung ignorierend)."
-
-#: forms/list_forms.py:1070
-msgid "Please enter a header."
-msgstr "Bitte geben Sie einen Header an."
-
-#: forms/list_forms.py:1071
-msgid "Please enter a valid header."
-msgstr "Bitte geben Sie einen gültigen Header an."
-
-#: forms/list_forms.py:1073
-msgid "Pattern"
-msgstr "Muster"
-
-#: forms/list_forms.py:1074
-msgid "Regular expression matching the header's value."
-msgstr "Regulärer Ausdruck, der gegen den Header-Wert geprüft wird."
-
-#: forms/list_forms.py:1076
-msgid "Please enter a pattern."
-msgstr "Bitte geben Sie ein Muster an."
-
-#: forms/list_forms.py:1077
-msgid "Please enter a valid pattern."
-msgstr "Bitte geben Sie ein gültiges Muster an."
-
-#: forms/list_forms.py:1079 templates/postorius/domain/index.html:26
-msgid "Action"
-msgstr "Aktion"
-
-#: forms/list_forms.py:1080
-msgid "Please enter a valid action."
-msgstr "Bitte geben Sie eine gültige Aktion an."
-
-#: forms/list_forms.py:1083
-msgid "Action to take when a header matches"
-msgstr "Standard-Aktion, wenn ein Header auf ein Muster passt"
-
-#: forms/list_forms.py:1112
-msgid "Moderation"
-msgstr "Moderation"
-
-#: forms/list_forms.py:1114
+#: forms/list_forms.py:1044 forms/list_forms.py:1137
 msgid "List default"
 msgstr "Listenstandard"
 
-#: forms/list_forms.py:1116
+#: forms/list_forms.py:1050
+msgid ""
+"If set to \"Yes\" or \"No\", List's default setting of send_welcome_message "
+"will be ignored for these subscribers and a welcome message will be sent or "
+"not sent based on the choice."
+msgstr ""
+
+#: forms/list_forms.py:1070
+msgid "Emails to Unsubscribe"
+msgstr "E-Mail-Adresse zur Massenaustragung"
+
+#: forms/list_forms.py:1071
+msgid "Add one email address on each line"
+msgstr "Füge eine E-Mail-Adresse pro Zeile hinzu"
+
+#: forms/list_forms.py:1086
+msgid "Default antispam action"
+msgstr "Standard-Antispam-Aktion"
+
+#: forms/list_forms.py:1090
+msgid "Header"
+msgstr "Header"
+
+#: forms/list_forms.py:1091
+msgid "Email header to filter on (case-insensitive)."
+msgstr "E-Mail-Header zur Filterung (Groß-/Kleinschreibung ignorierend)."
+
+#: forms/list_forms.py:1093
+msgid "Please enter a header."
+msgstr "Bitte geben Sie einen Header an."
+
+#: forms/list_forms.py:1094
+msgid "Please enter a valid header."
+msgstr "Bitte geben Sie einen gültigen Header an."
+
+#: forms/list_forms.py:1096
+msgid "Pattern"
+msgstr "Muster"
+
+#: forms/list_forms.py:1097
+msgid "Regular expression matching the header's value."
+msgstr "Regulärer Ausdruck, der gegen den Header-Wert geprüft wird."
+
+#: forms/list_forms.py:1099
+msgid "Please enter a pattern."
+msgstr "Bitte geben Sie ein Muster an."
+
+#: forms/list_forms.py:1100
+msgid "Please enter a valid pattern."
+msgstr "Bitte geben Sie ein gültiges Muster an."
+
+#: forms/list_forms.py:1102 templates/postorius/domain/index.html:26
+msgid "Action"
+msgstr "Aktion"
+
+#: forms/list_forms.py:1103
+msgid "Please enter a valid action."
+msgstr "Bitte geben Sie eine gültige Aktion an."
+
+#: forms/list_forms.py:1106
+msgid "Action to take when a header matches"
+msgstr "Standard-Aktion, wenn ein Header auf ein Muster passt"
+
+#: forms/list_forms.py:1135
+msgid "Moderation"
+msgstr "Moderation"
+
+#: forms/list_forms.py:1139
 msgid ""
 "Default action to take when this member posts to the list. \n"
 "List default -- follow the list's default member action. \n"
@@ -1518,11 +1525,11 @@ msgstr ""
 "Standardverarbeitung -- zusätzliche Prüfungen durchführen und die Nachricht "
 "akzeptieren. \n"
 
-#: forms/list_forms.py:1133
+#: forms/list_forms.py:1156
 msgid "Select Email"
 msgstr "E-Mail auswählen"
 
-#: forms/list_forms.py:1151
+#: forms/list_forms.py:1174
 msgid "Data"
 msgstr "Daten"
 
@@ -2250,6 +2257,30 @@ msgstr ""
 msgid "Unsubscribe All"
 msgstr "Alle Mitglieder austragen"
 
+#: templates/postorius/lists/confirm_token.html:12
+#, python-format
+msgid ""
+"\n"
+"    Confirm subscription of %(addr)s to %(name)s(%(listid)s):\n"
+"    "
+msgstr ""
+
+#: templates/postorius/lists/confirm_token.html:16
+#, python-format
+msgid ""
+"\n"
+"    Confirm unsubscription of %(addr)s from %(name)s(%(listid)s):\n"
+"    "
+msgstr ""
+
+#: templates/postorius/lists/confirm_token.html:20
+#, python-format
+msgid ""
+"\n"
+"    Confirm token %(token)s:\n"
+"    "
+msgstr ""
+
 #: templates/postorius/lists/header_matches.html:7
 #: templates/postorius/menu/list_nav.html:58
 msgid "Header filters"
@@ -2780,7 +2811,7 @@ msgstr "Neue Domain registriert"
 msgid "Domain %s updated"
 msgstr "Domain %s wurde aktualisiert"
 
-#: views/domain.py:116 views/list.py:759
+#: views/domain.py:116 views/list.py:763
 msgid "Please check the errors below"
 msgstr "Bitte prüfen Sie die angezeigten Fehler"
 
@@ -2810,7 +2841,7 @@ msgstr "{} als Eigentümer von {} entfernt"
 msgid "The email {} has been banned."
 msgstr "Die E-Mail-Adresse {} wurde verbannt."
 
-#: views/generic.py:108 views/generic.py:119 views/list.py:1193
+#: views/generic.py:108 views/generic.py:119 views/list.py:1196
 #, python-format
 msgid "An error occurred: %s"
 msgstr "Ein Fehler trat auf: %s"
@@ -2900,195 +2931,207 @@ msgstr "Bitte prüfen Sie Ihr E-Mail-Postfach für weitere Anweisungen"
 msgid "%s has been unsubscribed from this list."
 msgstr "%s wurde von der Liste entfernt."
 
-#: views/list.py:534
+#: views/list.py:536
 #, python-format
 msgid "The address %(address)s has been subscribed to %(list)s."
 msgstr "Die Adresse %(address)s ist nun Mitglied von %(list)s."
 
-#: views/list.py:541 views/list.py:578
+#: views/list.py:543 views/list.py:582
 #, python-format
 msgid "The email address %s is not valid."
 msgstr "Die E-Mail-Adresse %s ist nicht gültig."
 
-#: views/list.py:564
+#: views/list.py:566
 msgid "Please fill out the form correctly."
 msgstr "Bitte füllen Sie das Formular korrekt aus."
 
-#: views/list.py:571
+#: views/list.py:575
 #, python-format
 msgid "The address %(address)s has been unsubscribed from %(list)s."
 msgstr ""
 "Die Mitgliedschaft der Adresse %(address)s bei der Liste %(list)s wurde "
 "beendet."
 
-#: views/list.py:600
+#: views/list.py:604
 msgid "The selected messages were accepted"
 msgstr "Die ausgewählten Nachrichten wurden akzeptiert"
 
-#: views/list.py:604
+#: views/list.py:608
 msgid "The selected messages were rejected"
 msgstr "Die ausgewählten Nachrichten wurden zurückgewiesen"
 
-#: views/list.py:608
+#: views/list.py:612
 msgid "The selected messages were discarded"
 msgstr "Die ausgewählten Nachrichten wurden verworfen"
 
-#: views/list.py:610
+#: views/list.py:614
 msgid "Message could not be found"
 msgstr "Die Nachricht wurde nicht gefunden"
 
-#: views/list.py:639
+#: views/list.py:643
 msgid "The message was accepted"
 msgstr "Die Nachricht wurde akzeptiert"
 
-#: views/list.py:642
+#: views/list.py:646
 msgid "The message was rejected"
 msgstr "Die Nachricht wurde zurückgewiesen"
 
-#: views/list.py:645
+#: views/list.py:649
 msgid "The message was discarded"
 msgstr "Die Nachricht wurde verworfen"
 
-#: views/list.py:650
+#: views/list.py:654
 msgid "Held message was not found."
 msgstr "Zurückgehaltene Nachricht wurde nicht gefunden."
 
-#: views/list.py:663
+#: views/list.py:667
 msgid "Moderation action for {} set to {}"
 msgstr "Moderationsaktion für {} auf {} gesetzt"
 
-#: views/list.py:668
-msgid "Failed to set moderation action: {}"
+#: views/list.py:672
+#, fuzzy
+#| msgid "Failed to set moderation action: {}"
+msgid "Failed to set moderation action for {}"
 msgstr "Fehler beim Festlegen der Moderationsaktion: {}"
 
-#: views/list.py:720
+#: views/list.py:724
 msgid "Choose a Domain"
 msgstr "Wählen Sie eine Domain"
 
-#: views/list.py:741
+#: views/list.py:745
 msgid "List created"
 msgstr "Liste erzeugt"
 
-#: views/list.py:753
+#: views/list.py:757
 msgid "Mailing List already exists."
 msgstr "Mailing-Liste existiert bereits."
 
-#: views/list.py:911
+#: views/list.py:915
 msgid "Subscriptions pending user confirmation"
 msgstr "Abonnements mit ausstehender Bestätigung durch den Nutzer"
 
-#: views/list.py:924
+#: views/list.py:928
 msgid "Subscriptions pending approval"
 msgstr "Ausstehende Mitgliedsbestätigungen"
 
-#: views/list.py:956
+#: views/list.py:959
 msgid "The request has been accepted."
 msgstr "Die Anfrage wurde akzeptiert."
 
-#: views/list.py:957
+#: views/list.py:960
 msgid "The request has been rejected."
 msgstr "Die Anfrage wurde abgelehnt."
 
-#: views/list.py:958
+#: views/list.py:961
 msgid "The request has been discarded."
 msgstr "Die Anfrage wurde verworfen."
 
-#: views/list.py:959
+#: views/list.py:962
 msgid "The request has been defered."
 msgstr "Die Anfrage wurde zurückgestellt."
 
-#: views/list.py:970
+#: views/list.py:973
 #, python-format
 msgid "The request was already moderated: %s"
 msgstr "Die Anfrage wurde bereits moderiert: %s"
 
-#: views/list.py:973
+#: views/list.py:976
 #, python-format
 msgid "The request could not be moderated: %s"
 msgstr "Die Anfrage konnte nicht moderiert werden: %s"
 
-#: views/list.py:979
+#: views/list.py:982
 msgid "List Identity"
 msgstr "Listen-Identität"
 
-#: views/list.py:980
+#: views/list.py:983
 msgid "Automatic Responses"
 msgstr "Automatische Antworten"
 
-#: views/list.py:981
+#: views/list.py:984
 msgid "Alter Messages"
 msgstr "Nachrichten verändern"
 
-#: views/list.py:982
+#: views/list.py:985
 msgid "DMARC Mitigations"
 msgstr "DMARC-Hilfsmaßnahmen"
 
-#: views/list.py:983
+#: views/list.py:986
 msgid "Digest"
 msgstr "Digests"
 
-#: views/list.py:984
+#: views/list.py:987
 msgid "Message Acceptance"
 msgstr "Nachrichten-Akzeptanz"
 
-#: views/list.py:985
+#: views/list.py:988
 msgid "Archiving"
 msgstr "Archivierung"
 
-#: views/list.py:986
+#: views/list.py:989
 msgid "Member Policy"
 msgstr "Mitgliederpolitik"
 
-#: views/list.py:987
+#: views/list.py:990
 msgid "Bounce Processing"
 msgstr "Bounce-Verarbeitung"
 
-#: views/list.py:1050
+#: views/list.py:1053
 msgid "The settings have been updated."
 msgstr "Die Einstellungen wurden aktualisiert."
 
-#: views/list.py:1055
+#: views/list.py:1058
 msgid "An error occurred: "
 msgstr "Ein Fehler trat auf: "
 
-#: views/list.py:1079
+#: views/list.py:1082
 #, python-format
 msgid "The user %(email)s is not in the %(role)s group"
 msgstr "Der Benutzer %(email)s ist nicht in der Gruppe %(role)s"
 
-#: views/list.py:1085
+#: views/list.py:1088
 msgid "Removing the last owner is impossible"
 msgstr "Es ist nicht möglich, den letzten Besitzer zu entfernen"
 
-#: views/list.py:1099
+#: views/list.py:1102
 #, python-format
 msgid "The user could not be removed: %(msg)s"
 msgstr "Der Benutzer konnte nicht gelöscht werden: %(msg)s"
 
-#: views/list.py:1102
+#: views/list.py:1105
 #, python-format
 msgid "The user %(address)s has been removed from the %(role)s group."
 msgstr "Benutzer %(address)s wurde von der Gruppe %(role)s entfernt."
 
-#: views/list.py:1120
+#: views/list.py:1123
 msgid "No member is subscribed to the list currently."
 msgstr "Derzeit gibt es keine Mitglieder der Liste."
 
-#: views/list.py:1130
+#: views/list.py:1133
 msgid "All members have been unsubscribed from the list."
 msgstr "Alle Mitglieder der Liste wurden entfernt."
 
-#: views/list.py:1195
+#: views/list.py:1198
 msgid "The header matches were successfully modified."
 msgstr "Die Header-Treffer wurden erfolgreich modifiziert."
 
-#: views/list.py:1202
+#: views/list.py:1205
 msgid "New header"
 msgstr "Neuer Header"
 
-#: views/list.py:1203
+#: views/list.py:1206
 msgid "New pattern"
 msgstr "Neues Muster"
+
+#: views/list.py:1233
+#, fuzzy
+#| msgid "Pending Confirmation"
+msgid "Invalid confirmation token"
+msgstr "Ausstehende Bestätigung"
+
+#: views/list.py:1241 views/list.py:1253
+msgid "Token expired or invalid."
+msgstr ""
 
 #: views/rest.py:60
 msgid "Message does not exist"
