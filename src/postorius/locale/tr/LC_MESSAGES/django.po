@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-13 17:25-0800\n"
-"PO-Revision-Date: 2021-01-04 02:52+0000\n"
+"PO-Revision-Date: 2021-01-14 14:38+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/tr/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.4.1-dev\n"
+"X-Generator: Weblate 4.5-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -1407,6 +1407,9 @@ msgid ""
 "will be ignored for these subscribers and a welcome message will be sent or "
 "not sent based on the choice."
 msgstr ""
+"\"Evet\" veya \"Hayır\" olarak ayarlanırsa, listenin öntanımlı "
+"send_welcome_message ayarı bu aboneler için yok sayılacak ve seçime bağlı "
+"olarak bir hoş geldiniz mesajı gönderilecek veya gönderilmeyecektir."
 
 #: forms/list_forms.py:1070
 msgid "Emails to Unsubscribe"
@@ -2217,6 +2220,9 @@ msgid ""
 "    Confirm subscription of %(addr)s to %(name)s(%(listid)s):\n"
 "    "
 msgstr ""
+"\n"
+"    %(addr)s için %(name)s(%(listid)s) aboneliğini doğrula:\n"
+"    "
 
 #: templates/postorius/lists/confirm_token.html:16
 #, python-format
@@ -2225,6 +2231,9 @@ msgid ""
 "    Confirm unsubscription of %(addr)s from %(name)s(%(listid)s):\n"
 "    "
 msgstr ""
+"\n"
+"    %(addr)s için %(name)s(%(listid)s) aboneliğinden çıkmayı doğrula:\n"
+"    "
 
 #: templates/postorius/lists/confirm_token.html:20
 #, python-format
@@ -2233,6 +2242,9 @@ msgid ""
 "    Confirm token %(token)s:\n"
 "    "
 msgstr ""
+"\n"
+"    %(token)s belirtecini doğrula:\n"
+"    "
 
 #: templates/postorius/lists/header_matches.html:7
 #: templates/postorius/menu/list_nav.html:58
@@ -2933,10 +2945,8 @@ msgid "Moderation action for {} set to {}"
 msgstr "{} için denetim eylemi {} olarak ayarlandı"
 
 #: views/list.py:672
-#, fuzzy
-#| msgid "Failed to set moderation action: {}"
 msgid "Failed to set moderation action for {}"
-msgstr "Denetim eylemi ayarlanamadı: {}"
+msgstr "{} için denetim eylemi ayarlanamadı"
 
 #: views/list.py:724
 msgid "Choose a Domain"
@@ -3068,14 +3078,12 @@ msgid "New pattern"
 msgstr "Yeni kalıp"
 
 #: views/list.py:1233
-#, fuzzy
-#| msgid "Pending Confirmation"
 msgid "Invalid confirmation token"
-msgstr "Doğrulama Bekliyor"
+msgstr "Geçersiz doğrulama belirteci"
 
 #: views/list.py:1241 views/list.py:1253
 msgid "Token expired or invalid."
-msgstr ""
+msgstr "Belirtecin süresi doldu veya geçersiz."
 
 #: views/rest.py:60
 msgid "Message does not exist"

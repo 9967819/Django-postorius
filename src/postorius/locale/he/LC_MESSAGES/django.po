@@ -1,13 +1,13 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Yaron Shahrabani <sh.yaron@gmail.com>, 2020.
+# Yaron Shahrabani <sh.yaron@gmail.com>, 2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-13 17:25-0800\n"
-"PO-Revision-Date: 2020-11-19 04:10+0000\n"
+"PO-Revision-Date: 2021-01-14 14:38+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/he/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.4-dev\n"
+"X-Generator: Weblate 4.5-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -1354,6 +1354,9 @@ msgid ""
 "will be ignored for these subscribers and a welcome message will be sent or "
 "not sent based on the choice."
 msgstr ""
+"אם ההגדרה היא „כן” או „לא”, הגדרת בררת המחדל של send_welcome_message (שליחת "
+"הודעת קבלת פנים) לא תהיה בתוקף עבור המנויים והודעת קבלת פנים לא תישלח או "
+"ששליחתה תבוטל בהתאם לבחירה."
 
 #: forms/list_forms.py:1070
 msgid "Emails to Unsubscribe"
@@ -2124,6 +2127,9 @@ msgid ""
 "    Confirm subscription of %(addr)s to %(name)s(%(listid)s):\n"
 "    "
 msgstr ""
+"\n"
+"    אישור הרישום של %(addr)s לרשימה %(name)s(%(listid)s):\n"
+"    "
 
 #: templates/postorius/lists/confirm_token.html:16
 #, python-format
@@ -2132,6 +2138,9 @@ msgid ""
 "    Confirm unsubscription of %(addr)s from %(name)s(%(listid)s):\n"
 "    "
 msgstr ""
+"\n"
+"    אישור ביטול המינוי של %(addr)s מהרשימה %(name)s(%(listid)s):\n"
+"    "
 
 #: templates/postorius/lists/confirm_token.html:20
 #, python-format
@@ -2140,6 +2149,9 @@ msgid ""
 "    Confirm token %(token)s:\n"
 "    "
 msgstr ""
+"\n"
+"    אישור האסימון %(token)s:\n"
+"    "
 
 #: templates/postorius/lists/header_matches.html:7
 #: templates/postorius/menu/list_nav.html:58
@@ -2832,10 +2844,8 @@ msgid "Moderation action for {} set to {}"
 msgstr "פעולת פיקוח עבור {} הוגדרה לכדי {}"
 
 #: views/list.py:672
-#, fuzzy
-#| msgid "Failed to set moderation action: {}"
 msgid "Failed to set moderation action for {}"
-msgstr "הגדרת פעולת הפיקוח נכשלה: {}"
+msgstr "הגדרת פעולת הפיקוח על {} נכשלה"
 
 #: views/list.py:724
 msgid "Choose a Domain"
@@ -2967,14 +2977,12 @@ msgid "New pattern"
 msgstr "תבנית חדשה"
 
 #: views/list.py:1233
-#, fuzzy
-#| msgid "Pending Confirmation"
 msgid "Invalid confirmation token"
-msgstr "בהמתנה לאימות"
+msgstr "אסימון אימות שגוי"
 
 #: views/list.py:1241 views/list.py:1253
 msgid "Token expired or invalid."
-msgstr ""
+msgstr "האסימון פג או שהוא שגוי."
 
 #: views/rest.py:60
 msgid "Message does not exist"
