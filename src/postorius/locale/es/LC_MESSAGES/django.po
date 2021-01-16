@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-13 17:25-0800\n"
-"PO-Revision-Date: 2021-01-08 19:15+0000\n"
+"PO-Revision-Date: 2021-01-16 01:19+0000\n"
 "Last-Translator: Guillermo Hernandez <guillermo@querysoft.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/es/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.1-dev\n"
+"X-Generator: Weblate 4.5-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -1426,6 +1426,10 @@ msgid ""
 "will be ignored for these subscribers and a welcome message will be sent or "
 "not sent based on the choice."
 msgstr ""
+"Si se asigna un valor de \"Si\" o \"No\", el valor configurado para \"enviar "
+"mensaje de bienvenida\" (send_welcome_message) será ignorado para esos "
+"suscriptores y les será enviado un mensaje de bienvenida basado en esta "
+"elección."
 
 #: forms/list_forms.py:1070
 msgid "Emails to Unsubscribe"
@@ -2250,6 +2254,9 @@ msgid ""
 "    Confirm subscription of %(addr)s to %(name)s(%(listid)s):\n"
 "    "
 msgstr ""
+"\n"
+"    Confirme la suscripción de %(addr)s a  %(name)s(%(listid)s):\n"
+"    "
 
 #: templates/postorius/lists/confirm_token.html:16
 #, python-format
@@ -2258,6 +2265,9 @@ msgid ""
 "    Confirm unsubscription of %(addr)s from %(name)s(%(listid)s):\n"
 "    "
 msgstr ""
+"\n"
+"    Confirme la desuscripción de %(addr)s de %(name)s(%(listid)s):\n"
+"    "
 
 #: templates/postorius/lists/confirm_token.html:20
 #, python-format
@@ -2266,6 +2276,9 @@ msgid ""
 "    Confirm token %(token)s:\n"
 "    "
 msgstr ""
+"\n"
+"    Confirme el \"token\"  %(token)s:\n"
+"    "
 
 #: templates/postorius/lists/header_matches.html:7
 #: templates/postorius/menu/list_nav.html:58
@@ -2975,10 +2988,8 @@ msgid "Moderation action for {} set to {}"
 msgstr "Acción de moderación para {} establecida a {}"
 
 #: views/list.py:672
-#, fuzzy
-#| msgid "Failed to set moderation action: {}"
 msgid "Failed to set moderation action for {}"
-msgstr "Error al establecer la acción de moderación: {}"
+msgstr "Error al establecer la acción de moderación para: {}"
 
 #: views/list.py:724
 msgid "Choose a Domain"
@@ -3110,14 +3121,12 @@ msgid "New pattern"
 msgstr "Nuevo patrón"
 
 #: views/list.py:1233
-#, fuzzy
-#| msgid "Pending Confirmation"
 msgid "Invalid confirmation token"
-msgstr "Pendiente de confirmación"
+msgstr "\"Token\" de confirmación inválido"
 
 #: views/list.py:1241 views/list.py:1253
 msgid "Token expired or invalid."
-msgstr ""
+msgstr "\"Token\" inválido o ya ha expirado."
 
 #: views/rest.py:60
 msgid "Message does not exist"
