@@ -65,6 +65,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   brackets. (Closes #455)
 * Add support to override ``send_welcome_message`` when mass subscribing to
   suppress welcome messages. (Closes #99)
+* Add support for Django 3.1.x. (See !574)
 
 
 1.3.3
