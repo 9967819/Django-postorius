@@ -66,6 +66,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * Add support to override ``send_welcome_message`` when mass subscribing to
   suppress welcome messages. (Closes #99)
 * Add support for Django 3.1.x. (See !574)
+* The list's ``send_goodbye_message`` is now settable on the Automatic
+  Responses view.  (Closes #466)
 
 
 1.3.3
