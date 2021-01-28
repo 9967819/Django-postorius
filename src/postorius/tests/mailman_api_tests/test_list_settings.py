@@ -180,6 +180,7 @@ class ListSettingsTest(ViewTestCase):
              'autorespond_postings': 'none',
              'autorespond_requests': 'none',
              'send_welcome_message': True,
+             'send_goodbye_message': True,
              'autoresponse_grace_period': '20d'})
         self.assertRedirects(response, url)
         self.assertHasSuccessMessage(response)

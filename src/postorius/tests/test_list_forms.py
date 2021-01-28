@@ -400,8 +400,9 @@ class TestListAutomaticResponsesForm(TestCase):
               'autorespond_postings', 'autoresponse_postings_text',
               'autorespond_requests', 'autoresponse_request_text',
               'autoresponse_grace_period', 'send_welcome_message',
-              'welcome_message_uri', 'goodbye_message_uri',
-              'admin_immed_notify', 'admin_notify_mchanges')
+              'welcome_message_uri', 'send_goodbye_message',
+              'goodbye_message_uri', 'admin_immed_notify',
+              'admin_notify_mchanges')
 
     def prepare_formdata(self, values):
         return dict(((key, val) for key, val in zip(self.fields, values) if val is not None))   # noqa
@@ -423,6 +424,7 @@ class TestListAutomaticResponsesForm(TestCase):
                   'respond_and_continue', 'Autorespond text',
                   '2', 'True',
                   'http://example.com/welcome_text',
+                  'True',
                   'http://example.com/goodbye_message',
                   'True', 'False')
         formdata = self.prepare_formdata(values)

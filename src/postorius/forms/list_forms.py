@@ -865,6 +865,16 @@ class ListAutomaticResponsesForm(ListSettingsForm):
             'is most useful for transparently migrating lists from some other '
             'mailing list manager to Mailman.\n'
             'The text of Welcome message can be set via the Templates tab.'))
+    send_goodbye_message = forms.ChoiceField(
+        choices=((True, _('Yes')), (False, _('No'))),
+        widget=forms.RadioSelect,
+        required=False,
+        label=_('Send goodbye message'),
+        help_text=_(
+            'Send goodbye message to newly unsubscribed members? '
+            'Turn this off only if you plan on unsubscribing people manually '
+            'and don\'t want them to know that you did so.\n'
+            'The text of Goodbye message can be set via the Templates tab.'))
     admin_immed_notify = forms.BooleanField(
         widget=forms.RadioSelect(choices=((True, _('Yes')), (False, _('No')))),
         required=False,
