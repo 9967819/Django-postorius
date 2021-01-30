@@ -18,10 +18,12 @@
 #
 
 import datetime
+from unittest.mock import patch
 
-from django.test import SimpleTestCase
+from django.test import SimpleTestCase, override_settings
 
 from postorius.templatetags.date_helpers import datetime_parse
+from postorius.templatetags.p_gravatar import gravatar
 
 
 class TestDatetimeParser(SimpleTestCase):
@@ -46,3 +48,28 @@ class TestDatetimeParser(SimpleTestCase):
         value = '2005-08-32T07:49:23'
         parsed_date = datetime_parse(value)
         self.assertTrue(parsed_date is value)
+
+
+class TestGravatar(SimpleTestCase):
+
+    def test_gravatar(self):
+        """Test that we call gravatar library."""
+        with patch('postorius''.templatetags.'
+                   'p_gravatar.gravatar_orig') as mock_grav:
+            gravatar('aperson@example.com')
+            self.assertTrue(mock_grav.called)
+            mock_grav.assert_called_with('aperson@example.com')
+        html = gravatar('bperson@example.com')
+        self.assertEqual(
+            html,
+            '<img class="gravatar" src="https://secure.gravatar.com/avatar/'
+            'a100672ae026b5b7a7fb2929ff533e1e.jpg?s=80&amp;d=mm&amp;r=g" '
+            'width="80" height="80" alt="" />')
+
+    @override_settings(HYPERKITTY_ENABLE_GRAVATAR=False)
+    def test_disabled_gravatar(self):
+        with patch('postorius''.templatetags.'
+                   'p_gravatar.gravatar_orig') as mock_grav:
+            resp = gravatar('aperson@example.com')
+            self.assertFalse(mock_grav.called)
+            self.assertEqual(resp, '')
