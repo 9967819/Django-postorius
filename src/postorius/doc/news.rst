@@ -68,6 +68,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * Add support for Django 3.1.x. (See !574)
 * The list's ``send_goodbye_message`` is now settable on the Automatic
   Responses view.  (Closes #466)
+* Support ``HYPERKITTY_ENABLE_GRAVATAR`` setting to control the user gravatar.
+  (Closes #467)
 
 
 1.3.3
