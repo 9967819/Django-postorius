@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-13 17:25-0800\n"
-"PO-Revision-Date: 2021-01-13 21:51+0000\n"
+"PO-Revision-Date: 2021-01-16 01:19+0000\n"
 "Last-Translator: Peter Donka <peter.donka@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/hu/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.1-dev\n"
+"X-Generator: Weblate 4.5-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -1403,6 +1403,9 @@ msgid ""
 "will be ignored for these subscribers and a welcome message will be sent or "
 "not sent based on the choice."
 msgstr ""
+"\"Igen\" vagy \"Nem\" érték esetén, a lista alapértelmezett "
+"send_welcome_message beállítását figyelmen kívül hagyja ezeknek a "
+"feliratkozóknak, és üdvözlő üzenetet küld ezen választás alapján."
 
 #: forms/list_forms.py:1070
 msgid "Emails to Unsubscribe"
@@ -2218,6 +2221,9 @@ msgid ""
 "    Confirm subscription of %(addr)s to %(name)s(%(listid)s):\n"
 "    "
 msgstr ""
+"\n"
+"    Erősítse meg a %(addr)s - %(name)s (%(listid)s) feliratkozását:\n"
+"    "
 
 #: templates/postorius/lists/confirm_token.html:16
 #, python-format
@@ -2226,6 +2232,9 @@ msgid ""
 "    Confirm unsubscription of %(addr)s from %(name)s(%(listid)s):\n"
 "    "
 msgstr ""
+"\n"
+"    Erősítse meg a %(addr)s - %(name)s (%(listid)s) leiratkozását:\n"
+"    "
 
 #: templates/postorius/lists/confirm_token.html:20
 #, python-format
@@ -2234,6 +2243,9 @@ msgid ""
 "    Confirm token %(token)s:\n"
 "    "
 msgstr ""
+"\n"
+"    Token megerősítése %(token)s:\n"
+"    "
 
 #: templates/postorius/lists/header_matches.html:7
 #: templates/postorius/menu/list_nav.html:58
@@ -2936,10 +2948,8 @@ msgid "Moderation action for {} set to {}"
 msgstr "Moderálási művelet {} beállításához {}"
 
 #: views/list.py:672
-#, fuzzy
-#| msgid "Failed to set moderation action: {}"
 msgid "Failed to set moderation action for {}"
-msgstr "Nem sikerült beállítani a moderálási műveletet: {}"
+msgstr "Nem sikerült beállítani a moderációs műveletet a következőnél: {}"
 
 #: views/list.py:724
 msgid "Choose a Domain"
@@ -3071,14 +3081,12 @@ msgid "New pattern"
 msgstr "Új sablon"
 
 #: views/list.py:1233
-#, fuzzy
-#| msgid "Pending Confirmation"
 msgid "Invalid confirmation token"
-msgstr "Megerősítésre vár"
+msgstr "Érvénytelen megerősítési token"
 
 #: views/list.py:1241 views/list.py:1253
 msgid "Token expired or invalid."
-msgstr ""
+msgstr "A token lejárt vagy érvénytelen."
 
 #: views/rest.py:60
 msgid "Message does not exist"
