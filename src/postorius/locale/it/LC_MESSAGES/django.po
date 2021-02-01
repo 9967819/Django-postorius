@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-13 17:25-0800\n"
+"POT-Creation-Date: 2021-01-31 19:24-0800\n"
 "PO-Revision-Date: 2020-12-16 22:44+0000\n"
 "Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -51,7 +51,7 @@ msgstr ""
 "Il dominio per la tua lista. Per esempio, se vuoi un indirizzo tipo "
 "testing@example.com, inserisci example.com."
 
-#: forms/domain_forms.py:54 forms/list_forms.py:89 forms/list_forms.py:906
+#: forms/domain_forms.py:54 forms/list_forms.py:89 forms/list_forms.py:916
 #: templates/postorius/domain/index.html:22 templates/postorius/index.html:56
 msgid "Description"
 msgstr "Descrizione"
@@ -226,7 +226,7 @@ msgstr "Inserisci un indirizzo e-mail valido."
 msgid "Your name (optional)"
 msgstr "Il tuo nome (opzionale)"
 
-#: forms/list_forms.py:169 forms/list_forms.py:1168 views/list.py:411
+#: forms/list_forms.py:169 forms/list_forms.py:1178 views/list.py:411
 msgid "Primary Address ({})"
 msgstr "Indirizzo principale ({})"
 
@@ -295,9 +295,9 @@ msgstr ""
 #: forms/list_forms.py:639 forms/list_forms.py:674 forms/list_forms.py:687
 #: forms/list_forms.py:695 forms/list_forms.py:703 forms/list_forms.py:721
 #: forms/list_forms.py:737 forms/list_forms.py:848 forms/list_forms.py:857
-#: forms/list_forms.py:869 forms/list_forms.py:881 forms/list_forms.py:900
-#: forms/list_forms.py:943 forms/list_forms.py:950 forms/list_forms.py:971
-#: forms/list_forms.py:1042 forms/user_forms.py:48
+#: forms/list_forms.py:869 forms/list_forms.py:879 forms/list_forms.py:891
+#: forms/list_forms.py:910 forms/list_forms.py:953 forms/list_forms.py:960
+#: forms/list_forms.py:981 forms/list_forms.py:1052 forms/user_forms.py:48
 msgid "Yes"
 msgstr "Sì"
 
@@ -307,9 +307,9 @@ msgstr "Sì"
 #: forms/list_forms.py:639 forms/list_forms.py:674 forms/list_forms.py:687
 #: forms/list_forms.py:695 forms/list_forms.py:703 forms/list_forms.py:721
 #: forms/list_forms.py:737 forms/list_forms.py:848 forms/list_forms.py:857
-#: forms/list_forms.py:869 forms/list_forms.py:881 forms/list_forms.py:900
-#: forms/list_forms.py:943 forms/list_forms.py:950 forms/list_forms.py:971
-#: forms/list_forms.py:1043 forms/user_forms.py:48
+#: forms/list_forms.py:869 forms/list_forms.py:879 forms/list_forms.py:891
+#: forms/list_forms.py:910 forms/list_forms.py:953 forms/list_forms.py:960
+#: forms/list_forms.py:981 forms/list_forms.py:1053 forms/user_forms.py:48
 msgid "No"
 msgstr "No"
 
@@ -1179,7 +1179,7 @@ msgstr ""
 "approvazione. Se no, nessuna notifica sarà inviata ai mittenti a riguardo "
 "della trattenuta per approvazione del messaggio."
 
-#: forms/list_forms.py:860 forms/list_forms.py:1048
+#: forms/list_forms.py:860 forms/list_forms.py:1058
 msgid "Send welcome message"
 msgstr "Spedisci un messaggio di benvenuto"
 
@@ -1197,11 +1197,37 @@ msgstr ""
 "lista esistente.\n"
 "Il testo del messaggio di benvenuto è modificabile nella scheda dei Modelli."
 
-#: forms/list_forms.py:871
+#: forms/list_forms.py:872
+#, fuzzy
+#| msgid "Send welcome message"
+msgid "Send goodbye message"
+msgstr "Spedisci un messaggio di benvenuto"
+
+#: forms/list_forms.py:874
+#, fuzzy
+#| msgid ""
+#| "Send welcome message to newly subscribed members? Turn this off only if "
+#| "you plan on subscribing people manually and don't want them to know that "
+#| "you did so. Setting this to No is most useful for transparently migrating "
+#| "lists from some other mailing list manager to Mailman.\n"
+#| "The text of Welcome message can be set via the Templates tab."
+msgid ""
+"Send goodbye message to newly unsubscribed members? Turn this off only if "
+"you plan on unsubscribing people manually and don't want them to know that "
+"you did so.\n"
+"The text of Goodbye message can be set via the Templates tab."
+msgstr ""
+"Inviare il messaggio di benvenuto a nuovi iscritti? Disabilita se vuoi "
+"iscrivere nuovi membri manualmente e non vuoi che ricevano il messaggio di "
+"benvenuto. Di solito quest'opzione è utile per importare nuovi membri da una "
+"lista esistente.\n"
+"Il testo del messaggio di benvenuto è modificabile nella scheda dei Modelli."
+
+#: forms/list_forms.py:881
 msgid "Admin immed notify"
 msgstr "Notifica immediata agli amministratori"
 
-#: forms/list_forms.py:873
+#: forms/list_forms.py:883
 msgid ""
 "Should the list moderators get immediate notice of new requests, as well as "
 "daily notices about collected ones? List moderators (and list "
@@ -1216,37 +1242,37 @@ msgstr ""
 "trattenute per qualche ragione. L'attivazione di questa opzione invia le "
 "notifiche immediatamente. "
 
-#: forms/list_forms.py:883
+#: forms/list_forms.py:893
 msgid "Notify admin of membership changes"
 msgstr "Notifica gli amministratori dei cambiamenti nei membri"
 
-#: forms/list_forms.py:884
+#: forms/list_forms.py:894
 msgid "Should administrator get notices of subscribes and unsubscribes?"
 msgstr ""
 "Gli amministratori devono ricevere le notifiche di richieste di iscrizione e "
 "disiscrizione?"
 
-#: forms/list_forms.py:889
+#: forms/list_forms.py:899
 msgid "Not Moderated"
 msgstr "Non moderata"
 
-#: forms/list_forms.py:890
+#: forms/list_forms.py:900
 msgid "Moderated but allows for open posting"
 msgstr "Moderata, ma permette spedizioni libere"
 
-#: forms/list_forms.py:891
+#: forms/list_forms.py:901
 msgid "Moderated"
 msgstr "Moderata"
 
-#: forms/list_forms.py:902
+#: forms/list_forms.py:912
 msgid "Show list on index page"
 msgstr "Mostra la lista nella pagina indice"
 
-#: forms/list_forms.py:903
+#: forms/list_forms.py:913
 msgid "Choose whether to include this list on the list of all lists"
 msgstr "Seleziona se includere questa lista nella lista di tutte le liste"
 
-#: forms/list_forms.py:909
+#: forms/list_forms.py:919
 msgid ""
 "This description is used when the mailing list is listed with other mailing "
 "lists, or in headers, and so forth. It should be as succinct as you can get "
@@ -1256,43 +1282,43 @@ msgstr ""
 "intestazioni e così via. Dovrebbe essere il più possibile succinta, ma anche "
 "permettere l'identificazione della lista."
 
-#: forms/list_forms.py:915
+#: forms/list_forms.py:925
 msgid "Information"
 msgstr "Informazioni"
 
-#: forms/list_forms.py:916
+#: forms/list_forms.py:926
 msgid "A longer description of this mailing list."
 msgstr "Una descrizione di questa lista."
 
-#: forms/list_forms.py:920
+#: forms/list_forms.py:930
 msgid "Display name"
 msgstr "Nome da mostrare"
 
-#: forms/list_forms.py:922
+#: forms/list_forms.py:932
 msgid "Display name is the name shown in the web interface."
 msgstr "Il nome da mostrare è mostrato nell'interfaccia web."
 
-#: forms/list_forms.py:925
+#: forms/list_forms.py:935
 msgid "Subject prefix"
 msgstr "Prefisso all'oggetto"
 
-#: forms/list_forms.py:930
+#: forms/list_forms.py:940
 msgid "Preferred Language"
 msgstr "Lingua preferita"
 
-#: forms/list_forms.py:936
+#: forms/list_forms.py:946
 msgid "Members List Visibility"
 msgstr "Visibilità dei membri della lista"
 
-#: forms/list_forms.py:940
+#: forms/list_forms.py:950
 msgid "Who is allowed to see members list for this MailingList?"
 msgstr "A chi è permesso di vedere i membri di questa lista?"
 
-#: forms/list_forms.py:945
+#: forms/list_forms.py:955
 msgid "Gateway to mail"
 msgstr "Gateway per le e-mail"
 
-#: forms/list_forms.py:946
+#: forms/list_forms.py:956
 msgid ""
 "Flag indicating that posts to the linked newsgroup should be gated to the "
 "list"
@@ -1300,11 +1326,11 @@ msgstr ""
 "Per indicare se i messaggi per i newsgroup collegati devono essere condotti "
 "alla lista"
 
-#: forms/list_forms.py:952
+#: forms/list_forms.py:962
 msgid "Gateway to news"
 msgstr "Gateway per le news"
 
-#: forms/list_forms.py:953
+#: forms/list_forms.py:963
 msgid ""
 "Flag indicating that posts to the list should be gated to the linked "
 "newsgroup."
@@ -1312,27 +1338,27 @@ msgstr ""
 "Per indicare che i messaggi per la lista devono essere condotti al newsgroup "
 "collegato."
 
-#: forms/list_forms.py:957
+#: forms/list_forms.py:967
 msgid "Linked Newsgroup"
 msgstr "Newsgroup collegato"
 
-#: forms/list_forms.py:960
+#: forms/list_forms.py:970
 msgid "The name of the linked newsgroup."
 msgstr "Il nome del newsgroup collegato."
 
-#: forms/list_forms.py:963
+#: forms/list_forms.py:973
 msgid "Newsgroup moderation"
 msgstr "Moderazione del newsgroup"
 
-#: forms/list_forms.py:967
+#: forms/list_forms.py:977
 msgid "The moderation policy for the linked newsgroup, if there is one."
 msgstr "La politica di moderazione per il newsgroup collegato, se presente."
 
-#: forms/list_forms.py:973
+#: forms/list_forms.py:983
 msgid "NNTP Include subject prefix "
 msgstr "NNTP Includi il prefisso dell'oggetto "
 
-#: forms/list_forms.py:974
+#: forms/list_forms.py:984
 msgid ""
 "Flag indicating whether the list's \"Subject Prefix\" should be included in "
 "posts gated to usenet."
@@ -1340,11 +1366,11 @@ msgstr ""
 "Per indicare se il prefisso all'oggetto della lista deve essere incluso per "
 "i messaggi condotti verso usenet."
 
-#: forms/list_forms.py:989
+#: forms/list_forms.py:999
 msgid "Emails to mass subscribe"
 msgstr "E-mail per l'iscrizione di massa"
 
-#: forms/list_forms.py:991
+#: forms/list_forms.py:1001
 msgid ""
 "The following formats are accepted:\n"
 "jdoe@example.com\n"
@@ -1362,40 +1388,40 @@ msgstr ""
 "arossi@example.com (Alberto Rossi)\n"
 "Gli ultimi tre associano il nome da mostrare con l'indirizzo\n"
 
-#: forms/list_forms.py:1002
+#: forms/list_forms.py:1012
 msgid "Pre confirm"
 msgstr "Pre conferma"
 
-#: forms/list_forms.py:1006
+#: forms/list_forms.py:1016
 msgid "If checked, users will not have to confirm their subscription."
 msgstr "Se attivo gli utenti non necessitano di confermare l'iscrizione."
 
-#: forms/list_forms.py:1011
+#: forms/list_forms.py:1021
 msgid "Pre approved"
 msgstr "Pre approvato"
 
-#: forms/list_forms.py:1015
+#: forms/list_forms.py:1025
 msgid ""
 "If checked, moderators will not have to approve the subscription request."
 msgstr ""
 "Se attivo, i moderatori non devono approvare le richieste di iscrizione."
 
-#: forms/list_forms.py:1021
+#: forms/list_forms.py:1031
 msgid "Pre Verified"
 msgstr "Pre verificato"
 
-#: forms/list_forms.py:1025
+#: forms/list_forms.py:1035
 msgid ""
 "If checked, users will not have to verify that their email address is valid."
 msgstr ""
 "Se attivo, gli utenti non devono verificare che il loro indirizzo e-mail sia "
 "valido."
 
-#: forms/list_forms.py:1031
+#: forms/list_forms.py:1041
 msgid "Invitation"
 msgstr "Invito"
 
-#: forms/list_forms.py:1035
+#: forms/list_forms.py:1045
 msgid ""
 "If checked, the other checkboxes are ignored and the users will be sent an "
 "invitation to join the list and will be subscribed upon acceptance thereof."
@@ -1404,80 +1430,80 @@ msgstr ""
 "utenti verrà inviato un invito ad iscriversi alla lista e saranno iscritti "
 "all'accettazione dello stesso."
 
-#: forms/list_forms.py:1044 forms/list_forms.py:1137
+#: forms/list_forms.py:1054 forms/list_forms.py:1147
 msgid "List default"
 msgstr "Lista predefinita"
 
-#: forms/list_forms.py:1050
+#: forms/list_forms.py:1060
 msgid ""
 "If set to \"Yes\" or \"No\", List's default setting of send_welcome_message "
 "will be ignored for these subscribers and a welcome message will be sent or "
 "not sent based on the choice."
 msgstr ""
 
-#: forms/list_forms.py:1070
+#: forms/list_forms.py:1080
 msgid "Emails to Unsubscribe"
 msgstr "Indirizzi e-mail da disiscrivere"
 
-#: forms/list_forms.py:1071
+#: forms/list_forms.py:1081
 msgid "Add one email address on each line"
 msgstr "Aggiungi un indirizzo e-mail per linea"
 
-#: forms/list_forms.py:1086
+#: forms/list_forms.py:1096
 msgid "Default antispam action"
 msgstr "Azione antispam predefinita"
 
-#: forms/list_forms.py:1090
+#: forms/list_forms.py:1100
 msgid "Header"
 msgstr "Intestazione"
 
-#: forms/list_forms.py:1091
+#: forms/list_forms.py:1101
 msgid "Email header to filter on (case-insensitive)."
 msgstr ""
 "Intestazione e-mail sulla quale applicare il filtro (indifferente fra "
 "minuscolo e maiuscolo)."
 
-#: forms/list_forms.py:1093
+#: forms/list_forms.py:1103
 msgid "Please enter a header."
 msgstr "Inserire un'intestazione."
 
-#: forms/list_forms.py:1094
+#: forms/list_forms.py:1104
 msgid "Please enter a valid header."
 msgstr "Inserire un'intestazione valida."
 
-#: forms/list_forms.py:1096
+#: forms/list_forms.py:1106
 msgid "Pattern"
 msgstr "Modello"
 
-#: forms/list_forms.py:1097
+#: forms/list_forms.py:1107
 msgid "Regular expression matching the header's value."
 msgstr "Espressione regolare per corrispondere al valore dell'intestazione."
 
-#: forms/list_forms.py:1099
+#: forms/list_forms.py:1109
 msgid "Please enter a pattern."
 msgstr "Inserisci un modello."
 
-#: forms/list_forms.py:1100
+#: forms/list_forms.py:1110
 msgid "Please enter a valid pattern."
 msgstr "Inserisci un modello valido."
 
-#: forms/list_forms.py:1102 templates/postorius/domain/index.html:26
+#: forms/list_forms.py:1112 templates/postorius/domain/index.html:26
 msgid "Action"
 msgstr "Azione"
 
-#: forms/list_forms.py:1103
+#: forms/list_forms.py:1113
 msgid "Please enter a valid action."
 msgstr "Inserire un'azione valida."
 
-#: forms/list_forms.py:1106
+#: forms/list_forms.py:1116
 msgid "Action to take when a header matches"
 msgstr "Azione da intraprendere quando un'intestazione corrisponde"
 
-#: forms/list_forms.py:1135
+#: forms/list_forms.py:1145
 msgid "Moderation"
 msgstr "Moderazione"
 
-#: forms/list_forms.py:1139
+#: forms/list_forms.py:1149
 msgid ""
 "Default action to take when this member posts to the list. \n"
 "List default -- follow the list's default member action. \n"
@@ -1503,11 +1529,11 @@ msgstr ""
 "Processamento predefinito: esegue controlli addizionali per accettare il "
 "messaggio.\n"
 
-#: forms/list_forms.py:1156
+#: forms/list_forms.py:1166
 msgid "Select Email"
 msgstr "Selezione e-mail"
 
-#: forms/list_forms.py:1174
+#: forms/list_forms.py:1184
 msgid "Data"
 msgstr "Dati"
 
