@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-31 19:24-0800\n"
-"PO-Revision-Date: 2021-01-14 14:38+0000\n"
+"PO-Revision-Date: 2021-02-02 02:46+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/he/>\n"
@@ -1149,30 +1149,19 @@ msgstr ""
 "את הטקסט שבהודעות קבלת הפנים ניתן לערוך דרך לשונית התבניות."
 
 #: forms/list_forms.py:872
-#, fuzzy
-#| msgid "Send welcome message"
 msgid "Send goodbye message"
-msgstr "שליחת הודעת קבלת פנים"
+msgstr "שליחת הודעת להתראות"
 
 #: forms/list_forms.py:874
-#, fuzzy
-#| msgid ""
-#| "Send welcome message to newly subscribed members? Turn this off only if "
-#| "you plan on subscribing people manually and don't want them to know that "
-#| "you did so. Setting this to No is most useful for transparently migrating "
-#| "lists from some other mailing list manager to Mailman.\n"
-#| "The text of Welcome message can be set via the Templates tab."
 msgid ""
 "Send goodbye message to newly unsubscribed members? Turn this off only if "
 "you plan on unsubscribing people manually and don't want them to know that "
 "you did so.\n"
 "The text of Goodbye message can be set via the Templates tab."
 msgstr ""
-"האם לשלוח הודעת קבלת פנים/ברוך בואך למשתמשים שנרשמו? יש לכבות זאת רק אם "
-"תכניתך היא לרשום אנשים ידנית ואין לך עניין שהם ידעו מכך. הגדרת אפשרות זאת "
-"ללא היא הדרך היעילה ביותר להעביר רשימות דיוור ממנהל רשימות דיוור אחרות אל "
-"Mailman.\n"
-"את הטקסט שבהודעות קבלת הפנים ניתן לערוך דרך לשונית התבניות."
+"האם לשלוח הודעת להתראות למשתמשים שביטלו הרשמה? יש לכבות זאת רק אם תכניתך היא "
+"לבטל רישום לאנשים ידנית ואין לך עניין שהם ידעו מכך.\n"
+"את הטקסט שבהודעות להתראות ניתן לערוך דרך לשונית התבניות."
 
 #: forms/list_forms.py:881
 msgid "Admin immed notify"
