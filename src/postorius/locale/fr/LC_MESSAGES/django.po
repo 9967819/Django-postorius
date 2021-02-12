@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # J. Lavoie <j.lavoie@net-c.ca>, 2020.
+# Yohann D'ANELLO <yohann.danello@animath.fr>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-31 19:24-0800\n"
-"PO-Revision-Date: 2020-12-16 22:44+0000\n"
-"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
+"PO-Revision-Date: 2021-02-07 00:50+0000\n"
+"Last-Translator: Yohann D'ANELLO <yohann.danello@animath.fr>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/fr/>\n"
 "Language: fr\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.4-dev\n"
+"X-Generator: Weblate 4.5-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -1224,31 +1225,20 @@ msgstr ""
 "Le texte du message d'accueil peut être déterminé par l'onglet « Modèles »."
 
 #: forms/list_forms.py:872
-#, fuzzy
-#| msgid "Send welcome message"
 msgid "Send goodbye message"
-msgstr "Envoyer un message d'accueil"
+msgstr "Envoyer un message d'au revoir"
 
 #: forms/list_forms.py:874
-#, fuzzy
-#| msgid ""
-#| "Send welcome message to newly subscribed members? Turn this off only if "
-#| "you plan on subscribing people manually and don't want them to know that "
-#| "you did so. Setting this to No is most useful for transparently migrating "
-#| "lists from some other mailing list manager to Mailman.\n"
-#| "The text of Welcome message can be set via the Templates tab."
 msgid ""
 "Send goodbye message to newly unsubscribed members? Turn this off only if "
 "you plan on unsubscribing people manually and don't want them to know that "
 "you did so.\n"
 "The text of Goodbye message can be set via the Templates tab."
 msgstr ""
-"Envoyer un message d'accueil aux nouveaux abonnés ? Désactivez cela si vous "
-"ne prévoyez que d'abonner des personnes à la main et ne voulez pas qu'elles "
-"sachent que vous l'avez fait ainsi. Positionner cela à « Non » est très "
-"utile pour les migrations transparentes depuis un autre gestionnaire de "
-"listes de diffusion vers Mailman.\n"
-"Le texte du message d'accueil peut être déterminé par l'onglet « Modèles »."
+"Envoyer un message d'au revoir aux récentes désinscriptions ? Désactivez "
+"cela si vous ne prévoyez que de désabonner des personnes à la main et ne "
+"voulez pas qu'elles sachent que vous l'avez fait ainsi.\n"
+"Le texte du message d'au revoir peut être déterminé par l'onglet « Modèles »."
 
 #: forms/list_forms.py:881
 msgid "Admin immed notify"
@@ -1478,6 +1468,9 @@ msgid ""
 "will be ignored for these subscribers and a welcome message will be sent or "
 "not sent based on the choice."
 msgstr ""
+"Si défini sur \"Oui\" ou \"Non\", le paramètre de la liste par défaut de "
+"send_welcome_message sera ignoré pour ces membres et un message d'accueil "
+"sera envoyé ou non selon le choix."
 
 #: forms/list_forms.py:1080
 msgid "Emails to Unsubscribe"
@@ -2299,6 +2292,9 @@ msgid ""
 "    Confirm subscription of %(addr)s to %(name)s(%(listid)s):\n"
 "    "
 msgstr ""
+"\n"
+"    Confirmer l'inscription de %(addr)s à %(name)s(%(listid)s) :\n"
+"    "
 
 #: templates/postorius/lists/confirm_token.html:16
 #, python-format
@@ -2307,6 +2303,9 @@ msgid ""
 "    Confirm unsubscription of %(addr)s from %(name)s(%(listid)s):\n"
 "    "
 msgstr ""
+"\n"
+"    Confirmer la désinscription de %(addr)s à %(name)s(%(listid)s) :\n"
+"    "
 
 #: templates/postorius/lists/confirm_token.html:20
 #, python-format
@@ -2315,6 +2314,9 @@ msgid ""
 "    Confirm token %(token)s:\n"
 "    "
 msgstr ""
+"\n"
+"    Confirmer le jeton %(token)s :\n"
+"    "
 
 #: templates/postorius/lists/header_matches.html:7
 #: templates/postorius/menu/list_nav.html:58
@@ -3024,8 +3026,6 @@ msgid "Moderation action for {} set to {}"
 msgstr "Action de modération pour {} fixée à {}"
 
 #: views/list.py:672
-#, fuzzy
-#| msgid "Failed to set moderation action: {}"
 msgid "Failed to set moderation action for {}"
 msgstr "Impossible de fixer l'action de modération : {}"
 
@@ -3159,14 +3159,12 @@ msgid "New pattern"
 msgstr "Nouveau motif"
 
 #: views/list.py:1233
-#, fuzzy
-#| msgid "Pending Confirmation"
 msgid "Invalid confirmation token"
-msgstr "Confirmation en attente"
+msgstr "Jeton de confirmation invalide"
 
 #: views/list.py:1241 views/list.py:1253
 msgid "Token expired or invalid."
-msgstr ""
+msgstr "Le jeton a expiré ou est invalide."
 
 #: views/rest.py:60
 msgid "Message does not exist"
