@@ -8,13 +8,14 @@
 # Michael Lorenzen <ml@m-lorenzen.de>, 2020.
 # J. Lavoie <j.lavoie@net-c.ca>, 2020.
 # Paul <paulwiesinger+weblate@gmail.com>, 2020.
+# Alex <alexandersimm2@googlemail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-31 19:24-0800\n"
-"PO-Revision-Date: 2020-12-16 22:44+0000\n"
-"Last-Translator: Michael Lorenzen <ml@m-lorenzen.de>\n"
+"PO-Revision-Date: 2021-02-12 23:52+0000\n"
+"Last-Translator: Alex <alexandersimm2@googlemail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/de/>\n"
 "Language: de\n"
@@ -22,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Weblate 4.4-dev\n"
+"X-Generator: Weblate 4.5-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -3159,7 +3160,7 @@ msgstr "Ausstehende Bestätigung"
 
 #: views/list.py:1241 views/list.py:1253
 msgid "Token expired or invalid."
-msgstr ""
+msgstr "Token abgelaufen oder ungültig."
 
 #: views/rest.py:60
 msgid "Message does not exist"
