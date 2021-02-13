@@ -23,6 +23,15 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 
 (2021-XX-XX)
 
+UI
+--
+
+* Add 'Delivery Mode' and 'Moderation Action' columns to List members
+  page. (See #471)
+
+Other
+-----
+
 * Use mass-subscription API in core for Mass Removal of Members. (Closes #464)
 
 1.3.4

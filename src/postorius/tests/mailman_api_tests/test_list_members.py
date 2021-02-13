@@ -223,6 +223,32 @@ class ListMembersTest(ViewTestCase):
         self.assertContains(response, member_2.email)
         self.assertContains(response, '<small>(2)</small>')
 
+    def test_show_members_details(self):
+        """Test that Members's delivery related settings/preferences."""
+        self.client.login(username='testsu', password='testpass')
+        member_1 = self.foo_list.subscribe(
+            'member-1@example.com', pre_verified=True, pre_confirmed=True,
+            pre_approved=True)
+        member_1.delivery_mode = 'plaintext_digests'
+        member_1.moderation_action = 'hold'
+        member_1.save()
+        member_2 = self.foo_list.subscribe(
+            'member-2@example.com', pre_verified=True, pre_confirmed=True,
+            pre_approved=True)
+        member_2.delivery_mode = 'summary_digests'
+        member_2.moderation_action = 'defer'
+        member_2.save()
+        response = self.client.get(reverse(
+            'list_members', args=['foo.example.com', 'member']))
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(response.context['members']), 2)
+        for each in (
+                # Delivery mode settings.
+                'Plain Text Digests', 'Summary Digests',
+                # Moderatation action settings.
+                'Hold for moderation', 'Default processing'):
+            self.assertContains(response, each)
+
     def test_search_members_1(self):
         self.client.login(username='testsu', password='testpass')
         member_1 = self.foo_list.subscribe(
