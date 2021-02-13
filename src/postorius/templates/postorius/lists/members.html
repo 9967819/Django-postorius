@@ -3,7 +3,7 @@
 {% load bootstrap_tags %}
 {% load nav_helpers %}
 {% load pagination %}
-
+{% load membership_helpers %}
 {% block head_title %}
 {% trans 'List members' %} | {{ list.fqdn_listname}} - {{ block.super }}
 {% endblock %}
@@ -67,12 +67,24 @@
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
-                            <th colspan="3">
+                          <th>
                               {% if role == 'member' %}
                                     <input type="checkbox" id="all-members-checkbox" aria-label="Select all members" />
                               {% endif %}
                               {% trans 'Address' %}
                             </th>
+                            {% if role == 'member' or role == 'nonmember' %}
+                            <th>
+                              {% trans 'Delivery Mode' %}
+                            </th>
+                            <th>
+                              {% trans 'Moderation Action' %}
+                            </th>
+                            {%  endif %}
+                            {# Extra column here for the "Delete" button of Non-members. #}
+                            {% if role == 'nonmember' %}
+                             <th></th>
+                            {% endif %}
                         </tr>
                     </thead>
                     <tbody>
@@ -82,29 +94,38 @@
                                   <td>
                                     <label class="checkbox-inline">
                                     <input type="checkbox" class="member-checkbox" name="choices" id="id_choices_{{ forloop.counter0 }}" value="{{ member.email }}" />
+                                    <a href="{% url 'list_member_options' list.list_id member.email %}?role=member">
                                         {% if member.display_name %}
                                             "{{ member.display_name }}" &lt;{{ member.email }}&gt;
                                         {% else %}
                                             {{ member.email }}
                                         {% endif %}
+                                    </a>
                                     </label>
                                   </td>
-                                  <td>
-                                    <a href="{% url 'list_member_options' list.list_id member.email %}?role=member">{% trans 'Member Options' %}</a>
-                                  </td>
+                                <td>
+                                  {{ member.delivery_mode | delivery_mode }}
+                                </td>
+                                <td>
+                                  {{ member.moderation_action | moderation_action }}
+                                </td>
                                 {% elif role == 'nonmember' %}
-                                  <td>
+                                <td>
+                                  <a href="{% url 'list_member_options' list.list_id member.email %}?role=nonmember">
                                         {% if member.display_name %}
                                             "{{ member.display_name }}" &lt;{{ member.email }}&gt;
                                         {% else %}
                                             {{ member.email }}
                                         {% endif %}
-                                    </label>
-                                  </td>
-                                  <td>
-                                    <a href="{% url 'list_member_options' list.list_id member.email %}?role=nonmember">{% trans 'Non-member Options' %}</a>
-                                  </td>
-                                  <td><a href="{% url 'remove_role' list.list_id role member.email %}" class="btn btn-xs btn-danger">{% trans 'Delete' %}</a></td>
+                                  </a>
+                                </td>
+                                <td>
+                                  {{ member.delivery_mode | delivery_mode }}
+                                </td>
+                                <td>
+                                  {{ member.moderation_action | moderation_action }}
+                                </td>
+                                <td><a href="{% url 'remove_role' list.list_id role member.email %}" class="btn btn-xs btn-danger">{% trans 'Delete' %}</a></td>
                                 {% else %}
                                     <td>
                                         {% if member.display_name %}

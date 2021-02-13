@@ -16,6 +16,7 @@
 # Postorius.  If not, see <http://www.gnu.org/licenses/>.
 
 import os
+import tempfile
 from unittest.mock import MagicMock
 
 from django.conf import settings
@@ -165,3 +166,11 @@ class ViewTestCase(TransactionTestCase):
         response = self.client.get(url)
         self.assertRedirects(response, '{}?next={}'.format(
             reverse(settings.LOGIN_URL), quote(url)))
+
+    @classmethod
+    def write_response(cls, response):
+        """Print the response in a tmp file and open it in browser."""
+        tmp = tempfile.NamedTemporaryFile(suffix='.html', delete=False)
+        tmp.write(response.content)
+        tmp.close()
+        print(f'Wrote response to  file://{tmp.name}')

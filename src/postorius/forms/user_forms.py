@@ -25,6 +25,20 @@ from postorius.forms.fields import NullBooleanRadioSelect
 from postorius.utils import LANGUAGES, with_empty_choice
 
 
+DELIVERY_MODE_CHOICES = (("regular", _('Regular')),
+                         ("plaintext_digests", _('Plain Text Digests')),
+                         ("mime_digests", _('Mime Digests')),
+                         ("summary_digests", _('Summary Digests')))
+
+DELIVERY_STATUS_CHOICES = (("enabled", _('Enabled')),
+                           ("by_user", _('Disabled')))
+
+DELIVERY_STATUS_ADMIN_CHOICES = (("enabled", _('Enabled')),
+                                 ("by_user", _('Disabled')),
+                                 ("by_admin", _('Disabled by Admin')),
+                                 ("by_bounces", _('Disabled by Bounces')))
+
+
 class UserPreferences(forms.Form):
 
     """
@@ -47,15 +61,9 @@ class UserPreferences(forms.Form):
 
     choices = ((True, _('Yes')), (False, _('No')))
 
-    delivery_mode_choices = (("regular", _('Regular')),
-                             ("plaintext_digests", _('Plain Text Digests')),
-                             ("mime_digests", _('Mime Digests')),
-                             ("summary_digests", _('Summary Digests')))
-    delivery_status_choices = (
-        ("enabled", _('Enabled')), ("by_user", _('Disabled')))
     delivery_status = forms.ChoiceField(
         widget=forms.RadioSelect,
-        choices=delivery_status_choices,
+        choices=DELIVERY_STATUS_CHOICES,
         required=False,
         label=_('Delivery status'),
         help_text=_(
@@ -67,7 +75,7 @@ class UserPreferences(forms.Form):
             're-enabled.'))
     delivery_mode = forms.ChoiceField(
         widget=forms.Select(),
-        choices=with_empty_choice(delivery_mode_choices),
+        choices=with_empty_choice(DELIVERY_MODE_CHOICES),
         required=False,
         label=_('Delivery mode'),
         help_text=_(

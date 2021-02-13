@@ -18,10 +18,13 @@
 
 
 from django import template
+from django.utils.translation import gettext_lazy as _
 
 from mailmanclient import MailingList
 
 from postorius.auth.utils import user_is_in_list_roster
+from postorius.forms.list_forms import ACTION_CHOICES
+from postorius.forms.user_forms import DELIVERY_MODE_CHOICES
 from postorius.models import List
 
 
@@ -67,3 +70,15 @@ def owner_repr(owner):
     name = owner.display_name or ''
     address = owner.addresses[0].original_email
     return '{} {}'.format(name, address)
+
+
+@register.filter
+def delivery_mode(value):
+    """Convert the delivery_mode value into translated value."""
+    return dict(DELIVERY_MODE_CHOICES).get(value, _("None"))
+
+
+@register.filter
+def moderation_action(value):
+    """Convert the moderation_action value into translated text."""
+    return dict(ACTION_CHOICES).get(value, _("None"))
