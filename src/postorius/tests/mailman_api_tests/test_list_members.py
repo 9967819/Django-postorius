@@ -365,3 +365,38 @@ class ListNonMembersTest(ViewTestCase):
         nonmember_emails = [nm.email for nm in self.foo_list.nonmembers]
         self.assertEqual(len(nonmember_emails), 2)
         self.assertFalse('nonmember-1@example.com' in nonmember_emails)
+
+
+class TestMassRemoval(ViewTestCase):
+
+    def setUp(self):
+        super().setUp()
+        self.domain = self.mm_client.create_domain('example.com')
+        self.foo_list = self.domain.create_list('foo')
+        self.superuser = User.objects.create_superuser(
+            'testsu', 'su@example.com', 'testpass')
+        EmailAddress.objects.create(
+            user=self.superuser, email=self.superuser.email, verified=True)
+        self.client.login(username='testsu', password='testpass')
+
+    def tearDown(self):
+        self.foo_list.delete()
+        self.superuser.delete()
+        self.domain.delete()
+
+    def test_mass_removal(self):
+        member_list = []
+        for count in range(100):
+            member = f'member-{count}@example.com'
+            member_list.append(member)
+            self.foo_list.subscribe(
+                member, pre_verified=True, pre_confirmed=True,
+                pre_approved=True)
+        # Also, add an invalid address.
+        member_list.append('member@member@example.com')
+        self.assertEqual(len(self.foo_list.members), 100)
+        response = self.client.post(
+            reverse('mass_removal', args=('foo.example.com', )),
+            data=dict(emails='\n'.join(member_list)))
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(len(self.foo_list.members), 0)

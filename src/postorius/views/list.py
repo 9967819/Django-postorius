@@ -549,7 +549,6 @@ def list_mass_subscribe(request, list_id):
 
 
 class ListMassRemovalView(MailingListView):
-
     """Class For Mass Removal"""
 
     @method_decorator(login_required)
@@ -565,22 +564,31 @@ class ListMassRemovalView(MailingListView):
         if not form.is_valid():
             messages.error(request, _('Please fill out the form correctly.'))
         else:
+            valid_emails = []
+            invalid_emails = []
             for data in form.cleaned_data['emails']:
                 try:
                     # Parse the data to get the address.
                     address = email.utils.parseaddr(data)[1]
                     validate_email(address)
-                    self.mailing_list.unsubscribe(address.lower())
-                    messages.success(
-                        request, _('The address %(address)s has been'
-                                   ' unsubscribed from %(list)s.') %
-                        {'address': data,
-                         'list': self.mailing_list.fqdn_listname})
-                except (HTTPError, ValueError) as e:
-                    messages.error(request, e)
+                    valid_emails.append(address)
                 except ValidationError:
-                    messages.error(request, _('The email address %s'
-                                              ' is not valid.') % data)
+                    invalid_emails.append(data)
+
+            try:
+                self.mailing_list.mass_unsubscribe(valid_emails)
+                messages.success(
+                    request, _('These addresses {address} have been'
+                               ' unsubscribed from {list}.'.format(
+                                   address=', '.join(valid_emails),
+                                   list=self.mailing_list.fqdn_listname)))
+            except (HTTPError, ValueError) as e:
+                messages.error(request, e)
+
+            if len(invalid_emails) > 0:
+                messages.error(
+                    request,
+                    _('The email address %s is not valid.') % invalid_emails)
         return redirect('mass_removal', self.mailing_list.list_id)
 
 
@@ -1114,7 +1122,6 @@ def remove_role(request, list_id=None, role=None, address=None,
 @login_required
 @list_owner_required
 def remove_all_subscribers(request, list_id):
-
     """Empty the list by unsubscribing all members."""
 
     mlist = List.objects.get_or_404(fqdn_listname=list_id)
