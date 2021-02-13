@@ -84,7 +84,7 @@ django-latest:
   stage: test
   allow_failure: true
   script:
-    - tox -e py36-django-latest
+    - tox -e py38-django-latest
 
 upstream-client:
   stage: test
