@@ -51,7 +51,7 @@
                   <em>{{ subscribed_address }}</em>
               {% endif %}
             </p>
-            {% url 'user_list_options' list.list_id as user_list_options_url %}
+            {% url 'user_list_options' subscriber as user_list_options_url %}
               <a class="btn btn-primary" href="{{ user_list_options_url }}">{% trans 'Manage Subscription' %}</a>
             <p></p>
               <form method="post" action="{% url 'list_unsubscribe' list.list_id %}" class="form-inline">

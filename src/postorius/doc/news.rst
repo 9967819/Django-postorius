@@ -34,6 +34,8 @@ Other
 -----
 
 * Use mass-subscription API in core for Mass Removal of Members. (Closes #464)
+* Fix a bug where users with multiple subscriptions to a List couldn't view
+  their Preferences for all addresses. (Closes #472)
 
 1.3.4
 =====
