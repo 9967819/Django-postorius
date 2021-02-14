@@ -145,10 +145,11 @@ class MailmanUserTest(ViewTestCase):
 
     def test_presence_of_form_in_user_list_options(self):
         self.client.login(username='user', password='testpass')
-        self.foo_list.subscribe(self.user.email, pre_verified=True,
-                                pre_confirmed=True, pre_approved=True)
+        member = self.foo_list.subscribe(
+            self.user.email,
+            pre_verified=True, pre_confirmed=True, pre_approved=True)
         response = self.client.get(reverse('user_list_options',
-                                           args=[self.foo_list.list_id]))
+                                           args=[member.member_id]))
         self.assertEqual(response.status_code, 200)
         self.assertIsInstance(response.context['form'],
                               UserPreferences)
@@ -157,8 +158,8 @@ class MailmanUserTest(ViewTestCase):
 
     def test_list_options_shows_all_addresses(self):
         self.client.login(username='user', password='testpass')
-        self.foo_list.subscribe(self.user.email, pre_verified=True,
-                                pre_confirmed=True, pre_approved=True)
+        member = self.foo_list.subscribe(self.user.email, pre_verified=True,
+                                         pre_confirmed=True, pre_approved=True)
         # Add another email
         EmailAddress.objects.create(
             user=self.user, email='anotheremail@example.com', verified=True)
@@ -167,7 +168,7 @@ class MailmanUserTest(ViewTestCase):
         address.verify()
         # Check response
         response = self.client.get(reverse('user_list_options',
-                                           args=[self.foo_list.list_id]))
+                                           args=[member.member_id]))
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'anotheremail@example.com')
 
@@ -184,13 +185,13 @@ class MailmanUserTest(ViewTestCase):
             user=self.user, email='anotheremail@example.com', verified=True)
         address = user.add_address('anotheremail@example.com')
         address.verify()
-        self.foo_list.subscribe(
+        member = self.foo_list.subscribe(
             self.user.email,
             pre_verified=True, pre_confirmed=True, pre_approved=True)
         # Now, first verify that the list_options page has all the emails.
         # Check response
         response = self.client.get(reverse('user_list_options',
-                                           args=[self.foo_list.list_id]))
+                                           args=[member.member_id]))
         self.assertContains(response, 'anotheremail@example.com')
         self.assertContains(
             response,
@@ -227,12 +228,12 @@ class MailmanUserTest(ViewTestCase):
         self.client.login(username='user', password='testpass')
         user = self.mm_client.get_user('user@example.com')
         self._set_primary(self.user, user)
-        self.foo_list.subscribe(
+        member = self.foo_list.subscribe(
             self.user.email,
             pre_verified=True, pre_confirmed=True, pre_approved=True)
         # Now, first verify that the list_options page has the primary address.
         response = self.client.get(reverse('user_list_options',
-                                           args=[self.foo_list.list_id]))
+                                           args=[member.member_id]))
         self.assertContains(response, 'Primary Address (user@example.com)')
         self.assertContains(
             response,
@@ -264,13 +265,13 @@ class MailmanUserTest(ViewTestCase):
     def test_already_subscribed(self):
         self.client.login(username='user', password='testpass')
 
-        self.foo_list.subscribe(
+        member = self.foo_list.subscribe(
             self.user.email,
             pre_verified=True, pre_confirmed=True, pre_approved=True)
         # Now, first verify that the list_options page has all the emails.
         # Check response
         response = self.client.get(reverse('user_list_options',
-                                           args=[self.foo_list.list_id]))
+                                           args=[member.member_id]))
         self.assertContains(
             response,
             '<option value="user@example.com" '
@@ -289,12 +290,12 @@ class MailmanUserTest(ViewTestCase):
         self.client.login(username='user', password='testpass')
         user = self.mm_client.get_user('user@example.com')
         self._set_primary(self.user, user)
-        self.foo_list.subscribe(
+        member = self.foo_list.subscribe(
             user.user_id,
             pre_verified=True, pre_confirmed=True, pre_approved=True)
         # Now, first verify that the list_options page has the primary address.
         response = self.client.get(reverse('user_list_options',
-                                           args=[self.foo_list.list_id]))
+                                           args=[member.member_id]))
         self.assertContains(
             response,
             ('<option value="{}" selected>Primary Address (user@example.com)'
@@ -312,10 +313,70 @@ class MailmanUserTest(ViewTestCase):
         # Test that preferred address is set.
         mm_user = get_mailman_user(self.user)
         self.assertIsNone(mm_user.preferred_address)
-        self.foo_list.subscribe(
+        member = self.foo_list.subscribe(
             self.user.email,
             pre_verified=True, pre_confirmed=True, pre_approved=True)
         self.client.login(username='user', password='testpass')
         self.client.get(reverse('user_list_options',
-                                args=[self.foo_list.list_id]))
+                                args=[member.member_id]))
         self.assertEqual(mm_user.preferred_address.email, self.user.email)
+
+    def test_access_list_options_multiple_subscriptions(self):
+        # Test that when multiple addresses of a single user are subscribed to
+        # the same list that they are able to access them.
+        mm_user = get_mailman_user(self.user)
+        self.assertIsNone(mm_user.preferred_address)
+        self._set_primary(self.user, mm_user)
+        # Subscribe the user twice, once with their address and then with their
+        # primary address.
+        member_primary = self.foo_list.subscribe(
+            mm_user.user_id,
+            pre_verified=True, pre_confirmed=True, pre_approved=True)
+        member_addr = self.foo_list.subscribe(
+            self.user.email,
+            pre_verified=True, pre_confirmed=True, pre_approved=True)
+        self.assertEqual(len(self.foo_list.members), 2)
+
+        self.client.login(username='user', password='testpass')
+        response = self.client.get(
+            reverse('user_subscription_preferences'))
+        self.assertEqual(response.status_code, 200)
+        # There should be list options for two users.
+        self.assertContains(response, 'Primary Address')
+        self.assertContains(response, 'user@example.com')
+        # Get the list options for both memberships and check subscriber ==
+        # address.
+        response = self.client.get(
+            reverse('user_list_options',
+                    args=[member_addr.member_id]))
+        self.assertEqual(response.status_code, 200)
+        subscriber = response.context.get(
+            'change_subscription_form').initial.get('subscriber')
+        self.assertEqual(subscriber, member_addr.address.email)
+        # Check subscriber == member_id
+        response = self.client.get(
+            reverse('user_list_options',
+                    args=[member_primary.member_id]))
+        self.assertEqual(response.status_code, 200)
+        subscriber = response.context.get(
+            'change_subscription_form').initial.get('subscriber')
+        self.assertEqual(subscriber, member_primary.user.user_id)
+
+    def test_access_list_options_other_member(self):
+        # Test that a user can't access member options for a different user.
+        member_addr = self.foo_list.subscribe(
+            self.user.email,
+            pre_verified=True, pre_confirmed=True, pre_approved=True)
+        another_member = self.foo_list.subscribe(
+            'anoter@example.com',
+            pre_verified=True, pre_confirmed=True, pre_approved=True)
+        self.client.login(username='user', password='testpass')
+        response = self.client.get(
+            reverse('user_list_options',
+                    args=[another_member.member_id]))
+        self.assertEqual(response.status_code, 404)
+        # But they can access their own.
+        response = self.client.get(
+            reverse('user_list_options',
+                    args=[member_addr.member_id]))
+        self.assertEqual(response.status_code, 200)

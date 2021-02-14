@@ -40,9 +40,14 @@
                         {% endif %}
                         <tr id="{{ form.list_id }}">
                             <td>
-                                <a href="{% url 'user_list_options' list_id=form.list_id %}">
+                                <a href="{% url 'user_list_options' member_id=form.member_id %}">
                                     {{ form.list_id }}
                                 </a>
+                                {% if form.subscription_mode == 'as_address'%}
+                                    ({{ form.address }})
+                                {% else %}
+                                    ({% trans 'Primary Address' %})
+                                {% endif %}
                             </td>
                             {% for field in form %}
                                 {% if field|fieldtype_is:'RadioSelect' %}

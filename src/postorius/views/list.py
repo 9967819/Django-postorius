@@ -291,6 +291,7 @@ class ListSummaryView(MailingListView):
                 else:
                     data['user_subscribed'] = True
                     data['subscribed_address'] = address
+                    data['subscriber'] = member.member_id
                     data['subscribed_preferred'] = bool(
                         member.subscription_mode ==
                         SubscriptionMode.as_user.name)

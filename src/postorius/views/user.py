@@ -186,10 +186,14 @@ class UserListOptionsView(UserPreferencesView):
     form_class = UserPreferences
     template_name = 'postorius/user/list_options.html'
 
-    def _get_subscription(self):
+    def _get_subscription(self, member_id):
         subscription = None
+        # We *could* use the find_members API, but then we'd have to
+        # authenticate that the found subscription belongs to the currently
+        # logged-in user otherwise. That might be a faster choice, but this
+        # page isn't that slow right now.
         for s in self.mm_user.subscriptions:
-            if s.role == 'member' and s.list_id == self.mlist.list_id:
+            if s.role == 'member' and s.member_id == member_id:
                 subscription = s
                 break
         if not subscription:
@@ -199,8 +203,10 @@ class UserListOptionsView(UserPreferencesView):
     def _set_view_attributes(self, request, *args, **kwargs):
         super(UserListOptionsView, self)._set_view_attributes(
             request, *args, **kwargs)
-        self.mlist = List.objects.get_or_404(fqdn_listname=kwargs['list_id'])
-        self.subscription = self._get_subscription()
+        self.member_id = kwargs.get('member_id')
+        self.subscription = self._get_subscription(self.member_id)
+        self.mlist = List.objects.get_or_404(
+            fqdn_listname=self.subscription.list_id)
         if (self.subscription.subscription_mode ==
                 SubscriptionMode.as_user.name):
             self.subscriber = self.subscription.user.user_id
@@ -229,7 +235,7 @@ class UserListOptionsView(UserPreferencesView):
 
     def get_success_url(self):
         return reverse(
-            'user_list_options', kwargs=dict(list_id=self.mlist.list_id))
+            'user_list_options', kwargs=dict(member_id=self.member_id))
 
 
 class UserSubscriptionPreferencesView(UserPreferencesView):
@@ -311,6 +317,10 @@ class UserSubscriptionPreferencesView(UserPreferencesView):
         for form, subscription in list(zip(
                 data['formset'].forms, self.subscriptions)):
             form.list_id = subscription.list_id
+            form.member_id = subscription.member_id
+            form.subscription_mode = subscription.subscription_mode
+            form.address = subscription.address
+
         return data
 
 

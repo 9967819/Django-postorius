@@ -102,7 +102,7 @@ urlpatterns = [
     url(r'^accounts/mailmansettings/$',
         user_views.UserMailmanSettingsView.as_view(),
         name='user_mailmansettings'),
-    url(r'^accounts/list-options/(?P<list_id>[^/]+)/$',
+    url(r'^accounts/list-options/(?P<member_id>[^/]+)/$',
         user_views.UserListOptionsView.as_view(),
         name='user_list_options'),
     # /domains/

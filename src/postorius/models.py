@@ -60,8 +60,8 @@ _email_template_help_text = _(
 class SubscriptionMode(Enum):
     """Valid values for Member.subscription_mode"""
 
-    as_address = 1
-    as_user = 2
+    as_address = 'as_address'
+    as_user = 'as_user'
 
 
 @receiver(post_save, sender=User)
