@@ -21,6 +21,9 @@
         <li><a href="{% url 'list_pending_confirmation' list.list_id %}" class="dropdown-item">
             {% trans 'Pending Confirmation' %}
         </a></li>
+        <li><a href="{% url 'list_unsubscription_requests' list.list_id %}" class="dropdown-item">
+            {% trans 'Unsubscription Requests' %}
+        </a></li>
       </ul>
     </li>
     <li role="tab" class="nav-item">

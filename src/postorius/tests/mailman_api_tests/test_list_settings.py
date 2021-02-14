@@ -238,9 +238,62 @@ class ListSettingsTest(ViewTestCase):
         response = self.client.get(url)
         # On success, user is redirected to list_subscription_requests page.
         self.assertTrue(response.status_code, 302)
-        self.assertTrue(response.url,
-                        '/postorius/lists/foo.example.com/subscription_requests')  # noqa
+        self.assertTrue(
+            response.url,
+            '/postorius/lists/foo.example.com/subscription_requests')
         self.assertEqual(len(self.foo_list.requests), 0)
+
+    def test_list_unsubscription_requests(self):
+        self.client.login(username='testowner', password='testpass')
+        url = reverse('list_unsubscription_requests',
+                      args=('foo.example.com',))
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.foo_list.subscribe(
+            'someone@example.com', pre_verified=True, pre_confirmed=True,
+            pre_approved=True)
+        # Since there are no pending usubscription requests, this page should
+        # be empty.
+        self.assertContains(response, '<small>(0)</small>')
+        self.assertTrue(
+            b'There are currently no subscription requests for this list.'
+            in response.content)
+        self.assertNotContains(response, '<div class="paginator">')
+        # We set subscription policy to 'confirm', which should wait for the
+        # user approval.
+        self.foo_list.settings['unsubscription_policy'] = 'moderate'
+        self.foo_list.settings.save()
+        self.foo_list.unsubscribe('someone@example.com', pre_approved=False)
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        # Check that the request is shown in pending subscription requests.
+        self.assertTrue('someone@example.com' in str(response.content))
+        self.assertContains(response, '<small>(1)</small>')
+        # Verify that the list is paginated
+        self.assertContains(response, '<div class="paginator">')
+
+    def test_handle_unsubscription_requests(self):
+        self.client.login(username='testowner', password='testpass')
+        self.foo_list.settings['unsubscription_policy'] = 'moderate'
+        self.foo_list.settings.save()
+        self.foo_list.subscribe(
+            'test@example.com', pre_verified=True, pre_approved=True,
+            pre_confirmed=True)
+        self.assertEqual(len(self.foo_list.members), 1)
+        self.foo_list.unsubscribe('test@example.com', pre_approved=False)
+        # There should be one pending unsubscription request.
+        self.assertEqual(len(self.foo_list.unsubscription_requests), 1)
+        token = self.foo_list.unsubscription_requests[0]['token']
+        url = reverse('handle_subscription_request',
+                      args=('foo.example.com', token, 'accept'))
+        response = self.client.get(url)
+        # On success, user is redirected to list_subscription_requests page.
+        self.assertTrue(response.status_code, 302)
+        self.assertTrue(
+            response.url,
+            '/postorius/lists/foo.example.com/subscription_requests')
+        self.assertEqual(len(self.foo_list.requests), 0)
+        self.assertEqual(len(self.foo_list.members), 0)
 
     def test_remove_all_subscribers(self):
         self.client.login(username='testowner', password='testpass')

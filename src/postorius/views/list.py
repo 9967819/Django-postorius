@@ -937,10 +937,27 @@ def list_subscription_requests(request, list_id):
         )
 
 
-def _list_subscriptions(request, list_id, token_owner, template, page_title):
+@login_required
+@list_moderator_required
+def list_unsubscription_requests(request, list_id):
+    """Shows a list of pending unsubscription requests."""
+    return _list_subscriptions(
+        request=request,
+        list_id=list_id,
+        token_owner=TokenOwner.moderator,
+        template='postorius/lists/subscription_requests.html',
+        page_title=_('Un-subscriptions pending approval'),
+        request_type='unsubscription'
+        )
+
+
+def _list_subscriptions(
+        request, list_id, token_owner, template, page_title,
+        request_type='subscription'):
     m_list = List.objects.get_or_404(fqdn_listname=list_id)
     requests = [req
-                for req in m_list.get_requests(token_owner=token_owner)]
+                for req in m_list.get_requests(
+                    token_owner=token_owner, request_type=request_type)]
     paginated_requests = paginate(
         requests,
         request.GET.get('page'),
