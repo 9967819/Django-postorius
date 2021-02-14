@@ -46,6 +46,8 @@ list_patterns = [
         name='list_unsubscribe'),
     url(r'^subscription_requests$', list_views.list_subscription_requests,
         name='list_subscription_requests'),
+    url(r'^unsubscription_requests$', list_views.list_unsubscription_requests,
+        name='list_unsubscription_requests'),
     url(r'^pending_confirmation$', list_views.list_pending_confirmations,
         name='list_pending_confirmation'),
     url(r'^handle_subscription_request/(?P<request_id>[^/]+)/'

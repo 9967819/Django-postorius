@@ -299,23 +299,3 @@ class TestConfirmToken(ViewTestCase):
         self.assertEqual(
             resp.url,
             '/postorius/lists/mylist.example.com/subscription_requests')
-
-    def test_subscribe_unsubscribe_token(self):
-        # TODO: This test requires the unsubscription requests to be exposed
-        # and hence next version of Mailman Core 3.3.3
-
-        # settings = self.mlist.settings
-        # settings['unsubscription_policy'] = 'moderate'
-        # settings.save()
-        # # Subscribe the address.
-        # self.mlist.subscribe(
-        #     'aperson@example.com', 'Anne Person',
-        #     pre_verified=True, pre_confirmed=True, pre_approved=True)
-        # member = self.mlist.get_member('aperson@example.com')
-        # self.assertIsNotNone(member)
-        # # Unsubscribe the user.
-        # self.mlist.unsubscribe('aperson@example.com')
-        # member = self.mlist.get_member('aperson@example.com')
-        # requests = self.mlist.get_requests(token_owner='moderator')
-        # self.assertEqual(len(requests), 1)
-        pass
