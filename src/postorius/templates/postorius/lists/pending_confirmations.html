@@ -30,9 +30,12 @@
                               {{ request.email }}
                           {% endif %}
                       </td>
-                        <td>
-                            <a href="{% url 'handle_subscription_request' list.list_id request.token 'discard' %}" class="btn btn-xs btn-danger">{% trans 'Discard' %}</a>
+                      <td>
+                        <form method="POST" action="{% url 'handle_subscription_request' list.list_id request.token %}">
+                          {% csrf_token %}
+                            <input type="submit" name='discard' class="btn btn-xs btn-danger" value="{% trans 'Discard' %}">
                             <a href="{% url 'list_bans' list.list_id %}?email={{ request.email }}" class="btn btn-xs btn-danger">{% trans 'Ban' %}</a>
+                        </form>
                         </td>
                     </tr>
                     {% endfor %}

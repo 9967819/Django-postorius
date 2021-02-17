@@ -30,11 +30,15 @@
                               {{ request.email }}
                           {% endif %}
                         </td>
-                        <td>
-                            <a href="{% url 'handle_subscription_request' list.list_id request.token 'accept' %}" class="btn btn-xs btn-success">{% trans 'Accept' %}</a>
-                            <a href="{% url 'handle_subscription_request' list.list_id request.token 'reject' %}" class="btn btn-xs btn-danger">{% trans 'Reject' %}</a>
-                            <a href="{% url 'handle_subscription_request' list.list_id request.token 'discard' %}" class="btn btn-xs btn-danger">{% trans 'Discard' %}</a>
+                      <td>
+                        <form action="{% url 'handle_subscription_request' list.list_id request.token %}" method="POST">
+                            {% csrf_token %}
+                            <input type="submit" class="btn btn-xs btn-success" name='accept' value="{% trans 'Accept' %}">
+                            <input type="submit" class="btn btn-xs btn-danger" name='discard' value="{% trans 'Discard' %}">
                             <a href="{% url 'list_bans' list.list_id %}?email={{ request.email }}" class="btn btn-xs btn-danger">{% trans 'Ban' %}</a>
+                            <textarea class="align-middle" rows="1" name="reason" placeholder="{% trans 'Rejection reason' %}"></textarea>
+                            <input type="submit" class="btn btn-xs btn-danger" name='reject' value="{% trans 'Reject' %}">
+                        </form>
                         </td>
                     </tr>
                     {% endfor %}

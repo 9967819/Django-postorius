@@ -973,7 +973,8 @@ def _list_subscriptions(
 
 @login_required
 @list_moderator_required
-def handle_subscription_request(request, list_id, request_id, action):
+@require_http_methods(['POST'])
+def handle_subscription_request(request, list_id, request_id):
     """
     Handle a subscription request. Possible actions:
         - accept
@@ -987,11 +988,19 @@ def handle_subscription_request(request, list_id, request_id, action):
         'discard': _('The request has been discarded.'),
         'defer': _('The request has been defered.'),
     }
-    assert action in confirmation_messages
+    # Get the action by the presence of one of the values in POST data.
+    for each in confirmation_messages:
+        if each in request.POST:
+            action = each
+    # If None of the actions were specified, just raise an error and return.
+    m_list = List.objects.get_or_404(fqdn_listname=list_id)
+    if action is None:
+        messages.error(f'Invalid or missing action {action!r}')
+        return redirect('list_subscription_requests', m_list.list_id)
+    reason = request.POST.get('reason')
     try:
-        m_list = List.objects.get_or_404(fqdn_listname=list_id)
         # Moderate request and add feedback message to session.
-        m_list.moderate_request(request_id, action)
+        m_list.moderate_request(request_id, action, reason)
         messages.success(request, confirmation_messages[action])
     except HTTPError as e:
         if e.code == 409:
