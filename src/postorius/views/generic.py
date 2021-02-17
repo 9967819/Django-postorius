@@ -73,6 +73,14 @@ class MailingListView(TemplateView, MailmanClientMixin):
             self.template = kwargs['template']
         return super(MailingListView, self).dispatch(request, *args, **kwargs)
 
+    def _has_pending_unsub_req(self, email):
+        """Check if there is a pending unsubscription request for email."""
+        for req in self.mailing_list.get_requests(
+                token_owner='moderator', request_type='unsubscription'):
+            if req.get('email') == email:
+                return req
+        return False
+
 
 def bans_view(request, template, list_id=None):
     """Ban or unban email addresses.

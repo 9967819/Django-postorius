@@ -503,10 +503,22 @@ class ListUnsubscribeView(MailingListView):
     @method_decorator(login_required)
     def post(self, request, *args, **kwargs):
         email = request.POST['email']
+        if self._has_pending_unsub_req(email):
+            messages.error(
+                request,
+                _('You have a pending unsubscription request waiting for'
+                  ' moderator approval.'))
+            return redirect('list_summary', self.mailing_list.list_id)
         try:
-            self.mailing_list.unsubscribe(email)
-            messages.success(request, _('%s has been unsubscribed'
-                                        ' from this list.') % email)
+            response = self.mailing_list.unsubscribe(email)
+            if response is not None and response.get('token') is not None:
+                messages.success(
+                    request, _('Your unsubscription request has been'
+                               ' submitted and is waiting for moderator'
+                               ' approval.'))
+            else:
+                messages.success(request, _('%s has been unsubscribed'
+                                            ' from this list.') % email)
         except ValueError as e:
             messages.error(request, e)
         return redirect('list_summary', self.mailing_list.list_id)
