@@ -50,8 +50,7 @@ list_patterns = [
         name='list_unsubscription_requests'),
     url(r'^pending_confirmation$', list_views.list_pending_confirmations,
         name='list_pending_confirmation'),
-    url(r'^handle_subscription_request/(?P<request_id>[^/]+)/'
-        '(?P<action>[accept|reject|discard|defer]+)$',
+    url(r'^handle_subscription_request/(?P<request_id>[^/]+)/$',
         list_views.handle_subscription_request,
         name='handle_subscription_request'),
     url(r'^mass_subscribe/$', list_views.list_mass_subscribe,

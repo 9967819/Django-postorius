@@ -226,6 +226,12 @@ class ListSettingsTest(ViewTestCase):
         self.assertContains(response, '<div class="paginator">')
 
     def test_handle_subscription_request(self):
+        self._test_handle_subscription('accept')
+
+    def test_handle_subscription_request_with_reason(self):
+        self._test_handle_subscription('reject', 'Private list')
+
+    def _test_handle_subscription(self, action, reason=None):
         self.client.login(username='testowner', password='testpass')
         self.foo_list.settings['subscription_policy'] = 'moderate'
         self.foo_list.settings.save()
@@ -234,8 +240,11 @@ class ListSettingsTest(ViewTestCase):
         self.assertEqual(len(self.foo_list.requests), 1)
         token = self.foo_list.requests[0]['token']
         url = reverse('handle_subscription_request',
-                      args=('foo.example.com', token, 'accept'))
-        response = self.client.get(url)
+                      args=('foo.example.com', token))
+        data = {action: True}
+        if reason:
+            data['reason'] = reason
+        response = self.client.post(url, data=data)
         # On success, user is redirected to list_subscription_requests page.
         self.assertTrue(response.status_code, 302)
         self.assertTrue(
@@ -285,8 +294,8 @@ class ListSettingsTest(ViewTestCase):
         self.assertEqual(len(self.foo_list.unsubscription_requests), 1)
         token = self.foo_list.unsubscription_requests[0]['token']
         url = reverse('handle_subscription_request',
-                      args=('foo.example.com', token, 'accept'))
-        response = self.client.get(url)
+                      args=('foo.example.com', token))
+        response = self.client.post(url, data={'accept': True})
         # On success, user is redirected to list_subscription_requests page.
         self.assertTrue(response.status_code, 302)
         self.assertTrue(

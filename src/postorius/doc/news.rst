@@ -28,7 +28,10 @@ UI
 
 * Add 'Delivery Mode' and 'Moderation Action' columns to List members
   page. (See #471)
-* Add support to list and handle pending un-subscription requests. (Closes #332)
+* Add support to list and handle pending un-subscription requests. (Closes
+  #332)
+* Add support to specify a reason when handling (un)subscription requests
+  (Closes #450)
 
 Other
 -----
