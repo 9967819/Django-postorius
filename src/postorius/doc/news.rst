@@ -36,6 +36,8 @@ Other
 * Use mass-subscription API in core for Mass Removal of Members. (Closes #464)
 * Fix a bug where users with multiple subscriptions to a List couldn't view
   their Preferences for all addresses. (Closes #472)
+* Check for pending unsubscription requests and notify user when the request is
+  pending approval. (Closes #473)
 
 1.3.4
 =====
