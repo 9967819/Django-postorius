@@ -63,6 +63,10 @@ from postorius.views.generic import MailingListView, bans_view
 logger = logging.getLogger(__name__)
 
 
+#: DeliveryStatus field values that an admin cannot set.
+DISABLED_DELIVERY_STATUS_CHOICES_ADMIN = ['by_bounces']
+
+
 class TokenOwner:
     """Who 'owns' the token returned from the registrar?"""
     subscriber = 'subscriber'
@@ -211,7 +215,8 @@ def list_member_options(request, list_id, email):
     if request.method == 'POST':
         if request.POST.get("formname") == 'preferences':
             preferences_form = UserPreferences(
-                request.POST, preferences=member_prefs)
+                request.POST, preferences=member_prefs,
+                disabled_delivery_choices=DISABLED_DELIVERY_STATUS_CHOICES_ADMIN)  # noqa:E501
             if preferences_form.is_valid():
                 try:
                     preferences_form.save()
@@ -243,7 +248,9 @@ def list_member_options(request, list_id, email):
                                                 "settings have been updated."))
                 return redirect('list_member_options', list_id, email)
     else:
-        preferences_form = UserPreferences(preferences=member_prefs)
+        preferences_form = UserPreferences(
+            preferences=member_prefs,
+            disabled_delivery_choices=DISABLED_DELIVERY_STATUS_CHOICES_ADMIN)
         moderation_form = MemberModeration(initial=initial_moderation)
     return render(request, template_name, {
         'mm_member': mm_member,

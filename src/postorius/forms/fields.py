@@ -59,6 +59,31 @@ class NullBooleanRadioSelect(forms.RadioSelect):
                 False: False}.get(value, None)
 
 
+class SelectWidget(forms.Select):
+    """
+    Subclass of Django's select widget that allows disabling options.
+    """
+
+    def __init__(self, *args, **kwargs):
+        self._disabled_choices = []
+        super().__init__(*args, **kwargs)
+
+    @property
+    def disabled_choices(self):
+        return self._disabled_choices
+
+    @disabled_choices.setter
+    def disabled_choices(self, other):
+        self._disabled_choices = other
+
+    def create_option(self, name, value, *args, **kwargs):
+        option_dict = super().create_option(name, value, *args, **kwargs)
+        if value in self.disabled_choices:
+            option_dict['attrs']['disabled'] = 'disabled'
+            return option_dict
+        return option_dict
+
+
 class SiteModelChoiceField(forms.ModelChoiceField):
 
     def label_from_instance(self, obj):
