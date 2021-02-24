@@ -379,6 +379,9 @@ class ListSettingsTest(ViewTestCase):
         response = self.client.post(url, updated_values)
 
         self.assertEqual(response.status_code, 200)
+        self.assertIn(
+            b'The address john3@example.com has been subscribed to'
+            b' foo@example.com.\n', response.content)
         self.assertEqual(len(mlist.members), 1)
 
         # Now, let's see if we can moderate.
@@ -395,8 +398,11 @@ class ListSettingsTest(ViewTestCase):
         self.assertEqual(len(mlist.members), 1)
         response = self.client.post(url, updated_values)
         self.assertEqual(response.status_code, 200)
+        self.assertIn(
+            b'The address john@example.com has been subscribed to'
+            b' foo@example.com.\n', response.content)
         self.assertEqual(len(mlist.members), 2)
-        # With pre_confirmed = False, there should be a pending subscription
+        # With pre_approved = False, there should be a pending subscription
         # event.
         updated_values = {
             'emails': 'john2@example.com',
@@ -405,6 +411,11 @@ class ListSettingsTest(ViewTestCase):
         }
         response = self.client.post(url, updated_values)
         self.assertEqual(response.status_code, 200)
+        self.assertIn(
+            b'The address john2@example.com has been subscribed to'
+            b' foo@example.com. Subscription may be pending address'
+            b' verification, confirmation or approval as appropriate.\n',
+            response.content)
         # Now, there should be a pending request to confirm.
         self.assertEqual(len(mlist.members), 2)
         self.assertEqual(len(mlist.requests), 1)
@@ -422,6 +433,11 @@ class ListSettingsTest(ViewTestCase):
 
         response = self.client.post(url, updated_values)
         self.assertEqual(response.status_code, 200)
+        self.assertIn(
+            b'The address john4@example.com has been subscribed to'
+            b' foo@example.com. Subscription may be pending address'
+            b' verification, confirmation or approval as appropriate.\n',
+            response.content)
         self.assertEqual(len(mlist.requests), 2)
         self.assertEqual(mlist.requests[1].get('token_owner'), 'subscriber')
 
@@ -433,6 +449,9 @@ class ListSettingsTest(ViewTestCase):
         }
         response = self.client.post(url, updated_values)
         self.assertEqual(response.status_code, 200)
+        self.assertIn(
+            b'The address john5@example.com has been invited to'
+            b' foo@example.com.\n', response.content)
         # And now there are 3 requests.
         self.assertEqual(len(mlist.requests), 3)
         self.assertEqual(mlist.requests[2].get('token_owner'), 'subscriber')
