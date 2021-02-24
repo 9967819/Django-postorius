@@ -32,6 +32,9 @@ UI
   #332)
 * Add support to specify a reason when handling (un)subscription requests
   (Closes #450)
+* Success messages to mass subscribes now properly distinguish subscription
+  from invitation and indicate possible pending confirmation or approval.
+  (Closes #481)
 
 Other
 -----

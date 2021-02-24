@@ -536,18 +536,31 @@ def list_mass_subscribe(request, list_id):
                     # Parse the data to get the address and the display name
                     display_name, address = email.utils.parseaddr(data)
                     validate_email(address)
+                    p_v = form.cleaned_data['pre_verified']
+                    p_c = form.cleaned_data['pre_confirmed']
+                    p_a = form.cleaned_data['pre_approved']
+                    inv = form.cleaned_data['invitation']
                     mailing_list.subscribe(
                         address=address,
                         display_name=display_name,
-                        pre_verified=form.cleaned_data['pre_verified'],
-                        pre_confirmed=form.cleaned_data['pre_confirmed'],
-                        pre_approved=form.cleaned_data['pre_approved'],
-                        invitation=form.cleaned_data['invitation'],
+                        pre_verified=p_v,
+                        pre_confirmed=p_c,
+                        pre_approved=p_a,
+                        invitation=inv,
                         send_welcome_message=form.cleaned_data[
                             'send_welcome_message'])
+                    if inv:
+                        message = _('The address %(address)s has been'
+                                    ' invited to %(list)s.')
+                    else:
+                        message = _('The address %(address)s has been'
+                                    ' subscribed to %(list)s.')
+                        if not (p_v and p_c and p_a):
+                            message += _(' Subscription may be pending address'
+                                         ' verification, confirmation or'
+                                         ' approval as appropriate.')
                     messages.success(
-                        request, _('The address %(address)s has been'
-                                   ' subscribed to %(list)s.') %
+                        request, message %
                         {'address': address,
                          'list': mailing_list.fqdn_listname})
                 except HTTPError as e:
