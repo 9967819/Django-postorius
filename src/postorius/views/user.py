@@ -48,6 +48,10 @@ class UserPreferencesView(FormView, MailmanClientMixin):
 
     form_class = UserPreferences
 
+    #: Disabled delivery_status choices that a subscriber cannot set. This is
+    #: different from what an admi is allowed to set.
+    delivery_status_disabled_fields = ['by_moderator', 'by_bounces']
+
     def get_context_data(self, **kwargs):
         data = super(UserPreferencesView, self).get_context_data(**kwargs)
         data['mm_user'] = self.mm_user
@@ -56,6 +60,9 @@ class UserPreferencesView(FormView, MailmanClientMixin):
     def get_form_kwargs(self):
         kwargs = super(UserPreferencesView, self).get_form_kwargs()
         kwargs['preferences'] = self._get_preferences()
+        # Disable the choice of by_admin and by_bounces for a user.
+        kwargs[
+            'disabled_delivery_choices'] = self.delivery_status_disabled_fields
         return kwargs
 
     def _set_view_attributes(self, request, *args, **kwargs):

@@ -19,9 +19,10 @@
 
 
 from django import forms
+from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
 
-from postorius.forms.fields import NullBooleanRadioSelect
+from postorius.forms.fields import NullBooleanRadioSelect, SelectWidget
 from postorius.utils import LANGUAGES, with_empty_choice
 
 
@@ -31,12 +32,9 @@ DELIVERY_MODE_CHOICES = (("regular", _('Regular')),
                          ("summary_digests", _('Summary Digests')))
 
 DELIVERY_STATUS_CHOICES = (("enabled", _('Enabled')),
-                           ("by_user", _('Disabled')))
-
-DELIVERY_STATUS_ADMIN_CHOICES = (("enabled", _('Enabled')),
-                                 ("by_user", _('Disabled')),
-                                 ("by_admin", _('Disabled by Admin')),
-                                 ("by_bounces", _('Disabled by Bounces')))
+                           ("by_user", _('Disabled')),
+                           ("by_moderator", _('Disabled by Owner')),
+                           ("by_bounces", _('Disabled by Bounces')))
 
 
 class UserPreferences(forms.Form):
@@ -47,7 +45,12 @@ class UserPreferences(forms.Form):
 
     def __init__(self, *args, **kwargs):
         self._preferences = kwargs.pop('preferences', None)
-        super(UserPreferences, self).__init__(*args, **kwargs)
+        self.disabled_delivery_choices = kwargs.pop(
+            'disabled_delivery_choices', [])
+        super().__init__(*args, **kwargs)
+        # Disable some options to be set.
+        self.fields['delivery_status'].widget.disabled_choices = (
+            self.disabled_delivery_choices)
 
     @property
     def initial(self):
@@ -62,8 +65,8 @@ class UserPreferences(forms.Form):
     choices = ((True, _('Yes')), (False, _('No')))
 
     delivery_status = forms.ChoiceField(
-        widget=forms.RadioSelect,
-        choices=DELIVERY_STATUS_CHOICES,
+        widget=SelectWidget(),
+        choices=with_empty_choice(DELIVERY_STATUS_CHOICES),
         required=False,
         label=_('Delivery status'),
         help_text=_(
@@ -142,6 +145,8 @@ class UserPreferences(forms.Form):
                    "delivery_mode", "delivery_status", "preferred_language"]]
 
     def save(self):
+        # Note (maxking): It is possible that delivery_status field will always
+        # be a part of changed_data because of how the SelectWidget() works.
         if not self.changed_data:
             return
         for key in self.changed_data:
@@ -152,17 +157,41 @@ class UserPreferences(forms.Form):
                 self._preferences[key] = self.cleaned_data[key]
         self._preferences.save()
 
+    def clean_delivery_status(self):
+        """Check that someone didn't pass the disabled value.
+
+        This is meant to enforce that certain values are RO and can be seen but
+        not set.
+        """
+        val = self.cleaned_data.get('delivery_status')
+        # When the options are disabled in the widget, the values returned are
+        # empty. Consider that as unchanged values and just return the initial
+        # value of the field.
+        if not val:
+            return self.initial.get('delivery_status')
+        # This means the value was changed, check if the change was allowed. If
+        # not, just raise a ValidationError.
+        if val in self.disabled_delivery_choices:
+            raise ValidationError(
+                _('Cannot set delivery_status to {}').format(val))
+        # The change seems correct, just return the value.
+        return val
+
 
 class UserPreferencesFormset(forms.BaseFormSet):
 
     def __init__(self, *args, **kwargs):
         self._preferences = kwargs.pop('preferences')
+        self._disabled_delivery_choices = kwargs.pop(
+            'disabled_delivery_choices', [])
         kwargs["initial"] = self._preferences
         super(UserPreferencesFormset, self).__init__(*args, **kwargs)
 
     def _construct_form(self, i, **kwargs):
         form = super(UserPreferencesFormset, self)._construct_form(i, **kwargs)
         form._preferences = self._preferences[i]
+        form.fields['delivery_status'].widget.disabled_choices = (
+            self._disabled_delivery_choices)
         return form
 
     def save(self):
