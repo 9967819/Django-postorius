@@ -17,7 +17,7 @@
 # Postorius.  If not, see <http://www.gnu.org/licenses/>.
 
 
-from django.conf.urls import include, url
+from django.urls import include, re_path
 from django.contrib import admin
 from django.http import Http404
 from django.urls import reverse_lazy
@@ -31,16 +31,16 @@ def not_found(request):
 
 
 urlpatterns = [
-    url(r'^$', RedirectView.as_view(
+    re_path(r'^$', RedirectView.as_view(
         url=reverse_lazy('list_index'),
         permanent=True)),
-    url(r'^postorius/', include('postorius.urls')),
-    url(r'', include('django_mailman3.urls')),
-    url(r'^accounts/', include('allauth.urls')),
+    re_path(r'^postorius/', include('postorius.urls')),
+    re_path(r'', include('django_mailman3.urls')),
+    re_path(r'^accounts/', include('allauth.urls')),
     # Add some testing routes to test 400/500 error pages without having to
     # introduce errors.
-    url(r'500/$', server_error),
-    url(r'400/$', not_found),
+    re_path(r'500/$', server_error),
+    re_path(r'400/$', not_found),
     # Django admin
-    url(r'^admin/', admin.site.urls),
+    re_path(r'^admin/', admin.site.urls),
 ]
