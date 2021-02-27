@@ -37,11 +37,11 @@ def list_owner_required(fn):
             raise PermissionDenied
         if user.is_superuser:
             return fn(*args, **kwargs)
-        set_list_access_props(user, list_id)
+        set_list_access_props(user, list_id, moderator=False)
         if user.is_list_owner:
             return fn(*args, **kwargs)
         else:
-            raise PermissionDenied
+            raise PermissionDenied(f'User {user} is not Owner of {list_id}')
     return wrapper
 
 
@@ -62,7 +62,8 @@ def list_moderator_required(fn):
         if user.is_list_owner or user.is_list_moderator:
             return fn(*args, **kwargs)
         else:
-            raise PermissionDenied
+            raise PermissionDenied(
+                f'User {user} is not Owner or Moderator of {list_id}')
     return wrapper
 
 

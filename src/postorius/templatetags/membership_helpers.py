@@ -53,7 +53,7 @@ def user_is_list_owner(user, mlist):
     Given a User object and a MailingList object/identifier, returns True if
     the user is an owner of the given MailingList False otherwise.
     """
-    return user_is_in_list_roster(user, get_list(mlist), 'owners')
+    return user_is_in_list_roster(user, get_list(mlist), 'owner')
 
 
 @register.simple_tag
@@ -62,7 +62,7 @@ def user_is_list_moderator(user, mlist):
     Given a User object and a MailingList object/identifier, return True if
     the user is one of the list moderators, False otherwise.
     """
-    return user_is_in_list_roster(user, get_list(mlist), 'moderators')
+    return user_is_in_list_roster(user, get_list(mlist), 'moderator')
 
 
 @register.filter
