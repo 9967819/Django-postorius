@@ -278,9 +278,10 @@ class ListSummaryView(MailingListView):
             # avoid systematic test failure when HyperKitty is installed
             # (missing VCR request, see below).
             list(self.mailing_list.archivers)
-        if ('hyperkitty' in settings.INSTALLED_APPS and           # noqa: W504
-                'hyperkitty' in self.mailing_list.archivers and   # noqa: W504
-                self.mailing_list.archivers['hyperkitty']):
+        archivers = self.mailing_list.archivers
+        if ('hyperkitty' in settings.INSTALLED_APPS and          # noqa: W504
+                'hyperkitty' in archivers and                    # noqa: W504
+                archivers['hyperkitty']):                       # noqa: W504
             data['hyperkitty_enabled'] = True
         if request.user.is_authenticated:
             user_emails = EmailAddress.objects.filter(
