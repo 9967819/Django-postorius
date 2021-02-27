@@ -19,12 +19,11 @@
 
 import logging
 
-from django.conf import settings
 from django.shortcuts import render
 from django.utils.translation import gettext as _
 
 from allauth.account.models import EmailAddress
-from mailmanclient import Client
+from django_mailman3.lib import mailman
 
 
 logger = logging.getLogger(__name__)
@@ -46,13 +45,8 @@ def render_client_error(request, error):
 
 
 def get_mailman_client():
-    # easier to patch during unit tests
-    client = Client(
-        '%s/3.1' %
-        settings.MAILMAN_REST_API_URL,
-        settings.MAILMAN_REST_API_USER,
-        settings.MAILMAN_REST_API_PASS)
-    return client
+    """A proxy for django_mailman3.lib.mailman.get_mailman_client."""
+    return mailman.get_mailman_client()
 
 
 def with_empty_choice(choices):
