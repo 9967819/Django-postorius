@@ -120,7 +120,7 @@ class ListMembersViews(ListOwnerMixin, MailingListView):
             request.GET.get('count', 25),
             paginator_class=MailmanPaginator)
         context['page_subtitle'] = '({})'.format(
-            context['members'].paginator.count)
+            context['members'].object_list.total_size)
         context['form_action'] = _('Add {}'.format(role))
         if context['query']:
             context['empty_error'] = _(
