@@ -62,7 +62,7 @@
                             <td>
                                 <a href="{% url 'list_summary' list_id=list.list_id %}">{{ list.display_name }}</a>
                                 {% if check_advertised %}
-                                  {% if user.is_superuser and not list.settings.advertised %}
+                                  {% if user.is_superuser and not list.advertised %}
                                     ({% trans 'unadvertised' %}*)
                                   {% endif %}
                                 {% endif %}

@@ -46,6 +46,7 @@ Other
   pending approval. (Closes #473)
 * Improve the performance of Members' page by skipping an API call. (Closes
   #483)
+* Improve the performance of List index page for Superuser. (See !599)
 
 1.3.4
 =====
