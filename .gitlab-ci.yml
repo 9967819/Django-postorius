@@ -1,61 +1,26 @@
 image: ghcr.io/maxking/mailman-ci-runner
 
-py37-django-20:
-  stage: test
-  script:
-    - tox -e py37-django20
-
-py36-django-20:
+Python3.7 Django-2.0:
   stage: test
   script:
     - tox -e py36-django20
 
-py36-django-21:
-  stage: test
-  script:
-    - tox -e py36-django21
-
-py37-django-21:
+Python 3.8 Django-2.1:
   stage: test
   script:
     - tox -e py37-django21
 
-py36-django-22:
-  stage: test
-  script:
-    - tox -e py36-django22
-
-py37-django-22:
-  stage: test
-  script:
-    - tox -e py37-django22
-
-py36-django-30:
-  stage: test
-  script:
-    - tox -e py36-django30
-
-py37-django-30:
-  stage: test
-  script:
-    - tox -e py37-django30
-
-py38-django-30:
-  stage: test
-  script:
-    - tox -e py38-django30
-
-py38-django-22:
+Python 3.8 Django-2.2:
   stage: test
   script:
     - tox -e py38-django22
 
-py38-django31:
+Django-3.0:
   stage: test
   script:
-    - tox -e py38-django31
+    - tox -e py39-django30
 
-py39-django31:
+Django-31:
   stage: test
   script:
     - tox -e py39-django31
@@ -73,12 +38,6 @@ pep8:
   stage: test
   script:
   - tox -e pep8
-
-git-heads:
-  stage: test
-  allow_failure: true
-  script:
-  - tox -e py36-head
 
 django-latest:
   stage: test
