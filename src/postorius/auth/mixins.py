@@ -21,6 +21,7 @@
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
 from postorius.auth.utils import set_domain_access_props, set_list_access_props
+from postorius.models import List
 
 
 class ListOwnerMixin(LoginRequiredMixin, UserPassesTestMixin):
@@ -31,9 +32,10 @@ class ListOwnerMixin(LoginRequiredMixin, UserPassesTestMixin):
     def test_func(self):
         user = self.request.user
         mlist_id = self.kwargs['list_id']
+        mlist = List.objects.get_or_404(mlist_id)
         if user.is_superuser:
             return True
-        set_list_access_props(user, mlist_id)
+        set_list_access_props(user, mlist, moderator=False)
         return user.is_list_owner
 
 

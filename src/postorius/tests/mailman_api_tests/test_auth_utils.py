@@ -53,7 +53,7 @@ class AuthTestCase(ViewTestCase):
         # Test that if Core stores the email adddress with Upper case letters
         # and Postorius stores it in lower case, the matching works.
         self.assertTrue(
-            user_is_in_list_roster(self.user1, self.mlist, 'members'))
+            user_is_in_list_roster(self.user1, self.mlist, 'member'))
 
         self.assertTrue(
-            user_is_in_list_roster(self.user2, self.mlist, 'members'))
+            user_is_in_list_roster(self.user2, self.mlist, 'member'))

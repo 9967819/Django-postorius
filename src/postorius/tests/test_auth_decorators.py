@@ -101,7 +101,7 @@ class ListOwnerRequiredTest(TestCase):
     def test_non_list_owner(self, mock_get_list):
         """Should raise PermissionDenied if user is not a list owner."""
         # prepare mock list object
-        self.mock_list.owners = [MockMember('geddy@rush.it')]
+        self.mock_list.get_roster.return_value = [MockMember('geddy@rush.it')]
         mock_get_list.return_value = self.mock_list
         # prepare request
         request = self.request_factory.get(
@@ -114,7 +114,8 @@ class ListOwnerRequiredTest(TestCase):
     def test_list_owner(self, mock_get_list):
         """Should return fn return value if user is the list owner."""
         # prepare mock list object
-        self.mock_list.owners = [MockMember('les@primus.org')]
+        # get_roster for owner return these Members.
+        self.mock_list.get_roster.return_value = [MockMember('les@primus.org')]
         mock_get_list.return_value = self.mock_list
         # prepare request
         request = self.request_factory.get(
@@ -166,7 +167,7 @@ class ListModeratorRequiredTest(TestCase):
     def test_non_list_moderator(self, mock_get_list):
         """Should raise PermissionDenied if user is not a list owner."""
         # prepare mock list object
-        self.mock_list.moderators = [MockMember('geddy@rush.it')]
+        self.mock_list.get_roster.return_value = [MockMember('geddy@rush.it')]
         mock_get_list.return_value = self.mock_list
         # prepare request
         request = self.request_factory.get(
@@ -179,7 +180,7 @@ class ListModeratorRequiredTest(TestCase):
     def test_list_owner(self, mock_get_list):
         """Should return fn return value if user is the list owner."""
         # prepare mock list object
-        self.mock_list.owners = [MockMember('les@primus.org')]
+        self.mock_list.get_roster.return_value = [MockMember('les@primus.org')]
         mock_get_list.return_value = self.mock_list
         # prepare request
         request = self.request_factory.get(
@@ -193,7 +194,7 @@ class ListModeratorRequiredTest(TestCase):
     def test_list_moderator(self, mock_get_list):
         """Should return fn return value if user is the list moderator."""
         # prepare mock list object
-        self.mock_list.moderators = [MockMember('les@primus.org')]
+        self.mock_list.get_roster.return_value = [MockMember('les@primus.org')]
         mock_get_list.return_value = self.mock_list
         # prepare request
         request = self.request_factory.get(

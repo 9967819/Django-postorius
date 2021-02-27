@@ -25,6 +25,9 @@ from allauth.account.models import EmailAddress
 from postorius.models import Domain, List
 
 
+ALL_ROSTER = ['owner', 'moderator', 'member', 'nomember']
+
+
 def user_is_in_list_roster(user, mailing_list, roster):
     """Checks if a user is in a MailingList roster.
 
@@ -41,30 +44,39 @@ def user_is_in_list_roster(user, mailing_list, roster):
                     EmailAddress.objects.filter(
                         user=user, verified=True).values_list(
                             "email", flat=True))
+    if roster not in ALL_ROSTER:
+        raise ValueError(f'{roster} is a valid List Roster.')
+
     roster_addresses = set(
-        [member.email.lower() for member in getattr(mailing_list, roster)]
-    )
+        [member.email.lower()
+         for member in mailing_list.get_roster(roster, fields=['email'])])
     if addresses & roster_addresses:
         return True  # At least one address is in the roster
     return False
 
 
-def set_list_access_props(user, mlist):
+def set_list_access_props(user, mlist, owner=True, moderator=True):
     """Update user's access permissions of a MailingList.
 
     :param user: The user to check permissions for.
     :type user: django.contrib.auth.model.User
     :param mlist: MailingList to check permissions for.
     :type mlist: postorius.models.List
+    :param owner: Set is_list_owner.
+    :type owner: bool
+    :param moderator: Set is_list_moderator.
+    :type moderator: bool
     """
+    # If given a mailinglist id, get the List object instead.
     if isinstance(mlist, str):
         mlist = List.objects.get_or_404(mlist)
-    if not hasattr(user, 'is_list_owner'):
-        user.is_list_owner = user_is_in_list_roster(
-            user, mlist, "owners")
-    if not hasattr(user, 'is_list_moderator'):
+    # If not already set, check if the user is in list ownership roster.
+    if (not hasattr(user, 'is_list_owner')) and owner:
+        user.is_list_owner = user_is_in_list_roster(user, mlist, 'owner')
+    # If not already set, check if the user is in list moderator roster.
+    if not hasattr(user, 'is_list_moderator') and moderator:
         user.is_list_moderator = user_is_in_list_roster(
-            user, mlist, "moderators")
+            user, mlist, 'moderator')
 
 
 def set_domain_access_props(user, domain):
