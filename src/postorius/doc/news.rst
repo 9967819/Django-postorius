@@ -44,6 +44,8 @@ Other
   their Preferences for all addresses. (Closes #472)
 * Check for pending unsubscription requests and notify user when the request is
   pending approval. (Closes #473)
+* Improve the performance of Members' page by skipping an API call. (Closes
+  #483)
 
 1.3.4
 =====
