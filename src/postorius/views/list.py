@@ -915,13 +915,21 @@ def list_index(request, template='postorius/index.html'):
         _get_list_page, request.GET.get('page'), request.GET.get('count'),
         paginator_class=MailmanPaginator)
 
-    choosable_domains = _get_choosable_domains(request)
+    # This is just an optimization to skip un-necessary API
+    # calls. postorius/index.html page shows the 'Create New Domain' button
+    # when the logged-in user is a super user. There is no point making those
+    # API calls if the user isn't a Superuser. So, just call the number 0 if
+    # the user isn't SU.
+    if request.user.is_superuser:
+        domain_count = len(_get_choosable_domains(request))
+    else:
+        domain_count = 0
 
     return render(request, template,
                   {'lists': lists,
                    'check_advertised': True,
                    'all_lists': True,
-                   'domain_count': len(choosable_domains)})
+                   'domain_count': domain_count})
 
 
 @login_required
