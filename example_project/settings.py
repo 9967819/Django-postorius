@@ -86,7 +86,7 @@ INSTALLED_APPS = (
 )
 
 
-MIDDLEWARE = (
+MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -97,7 +97,7 @@ MIDDLEWARE = (
     'django.middleware.security.SecurityMiddleware',
     'django_mailman3.middleware.TimezoneMiddleware',
     'postorius.middleware.PostoriusMiddleware',
-)
+]
 
 # Set `postorius.urls` as main url config if Postorius
 # is the only app you want to serve.
@@ -274,8 +274,8 @@ LOGGING = {
         },
         'postorius': {
             'handlers': ['console', 'file'],
-            'level': 'INFO',
-        },
+            'level': 'DEBUG',
+        }
     },
     'formatters': {
         'simple': {
@@ -291,6 +291,8 @@ LOGGING = {
 POSTORIUS_TEMPLATE_BASE_URL = "http://localhost:8000"
 
 
+if DEBUG:
+    MIDDLEWARE.append('postorius.middleware.APICountingMiddleware')
 
 try:
     from settings_local import *
