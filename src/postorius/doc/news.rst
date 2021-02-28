@@ -50,6 +50,8 @@ Other
 * Skip looking up choosable_domains for non-superuser to reduce API calls. (See
   !600)
 * Improve the performance of List owner access checks. (See !598)
+* Add a new ``APICountingMiddleware`` to performance testing purposes. (See
+  !604)
 
 
 1.3.4
