@@ -22,7 +22,9 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 
 from allauth.account.models import EmailAddress
+from django_mailman3.lib.mailman import get_mailman_user
 
+from postorius.models import SubscriptionMode
 from postorius.tests.utils import ViewTestCase
 
 
@@ -241,13 +243,14 @@ class TestSubscription(ViewTestCase):
 
     def test_change_subscription_open(self):
         # The subscription is changed from an address to another
-        self.open_list.subscribe('test@example.com')
+        member = self.open_list.subscribe('test@example.com')
         self.assertEqual(len(self.open_list.members), 1)
         self.assertEqual(len(self.open_list.requests), 0)
         self.client.login(username='testuser', password='pwd')
         response = self.client.post(
             reverse('change_subscription', args=['open_list.example.com']),
-            {'subscriber': 'fritz@example.org'})
+            {'subscriber': 'fritz@example.org',
+             'member_id': member.member_id})
         self.assertHasSuccessMessage(response)
         self.assertEqual(len(self.open_list.members), 1)
         self.assertEqual(len(self.open_list.requests), 0)
@@ -266,13 +269,14 @@ class TestSubscription(ViewTestCase):
         settings = confirm_list.settings
         settings['subscription_policy'] = 'confirm'
         settings.save()
-        confirm_list.subscribe('test@example.com', pre_confirmed=True)
+        member = confirm_list.subscribe('test@example.com', pre_confirmed=True)
         self.assertEqual(len(confirm_list.members), 1)
         self.assertEqual(len(confirm_list.requests), 0)
         self.client.login(username='testuser', password='pwd')
         response = self.client.post(
             reverse('change_subscription', args=['confirm_list.example.com']),
-            {'subscriber': 'fritz@example.org'})
+            {'subscriber': 'fritz@example.org',
+             'member_id': member.member_id})
         self.assertHasSuccessMessage(response)
         self.assertEqual(len(confirm_list.members), 1)
         self.assertEqual(len(confirm_list.requests), 0)
@@ -284,3 +288,44 @@ class TestSubscription(ViewTestCase):
         self.assertRedirects(
             response, reverse('list_summary',
                               args=('confirm_list.example.com', )))
+
+    def test_change_subscription_from_address_to_primary(self):
+        # Tes that can we can switch subscription between address and primary
+        # address (which happens to be same).
+        member = self.open_list.subscribe('test@example.com')
+        self.assertEqual(len(self.open_list.members), 1)
+        self.assertEqual(member.subscription_mode,
+                         SubscriptionMode.as_address.name)
+        self.assertEqual(len(self.open_list.requests), 0)
+        self.client.login(username='testuser', password='pwd')
+        mm_user = get_mailman_user(self.user)
+        mm_user.preferred_address = 'test@example.com'
+        # Switch subscription to primary address when the same address is
+        # subscribed.
+        response = self.client.post(
+            reverse('change_subscription', args=['open_list.example.com']),
+            {'subscriber': mm_user.user_id,
+             'member_id': member.member_id})
+        self.assertHasSuccessMessage(response)
+        self.assertEqual(len(self.open_list.members), 1)
+        self.assertEqual(len(self.open_list.requests), 0)
+        try:
+            member = self.open_list.get_member('test@example.com')
+        except ValueError:
+            self.fail('The subscription was not changed')
+        self.assertEqual(member.subscription_mode,
+                         SubscriptionMode.as_user.name)
+        self.assertRedirects(
+            response, reverse('list_summary',
+                              args=('open_list.example.com', )))
+        # Now, if the user_id and address both are subscribed.
+        addr_member = self.open_list.subscribe('test@example.com')
+        self.assertIsNotNone(addr_member)
+        self.assertEqual(len(self.open_list.members), 2)
+        # Now trying to switch subscription should say already subscribed.
+        response = self.client.post(
+            reverse('change_subscription', args=['open_list.example.com']),
+            {'subscriber': mm_user.user_id,
+             'member_id': addr_member.member_id})
+        self.assertEqual(response.status_code, 302)
+        self.assertHasErrorMessage(response)

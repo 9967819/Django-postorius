@@ -208,7 +208,8 @@ class MailmanUserTest(ViewTestCase):
         # now, let's switch the subscription to a new user.
         response = self.client.post(
             reverse('change_subscription', args=(self.foo_list.list_id, )),
-            {'subscriber': 'anotheremail@example.com'}
+            {'subscriber': 'anotheremail@example.com',
+             'member_id': member.member_id}
         )
         self.assertEqual(response.status_code, 302)
         self.assertHasSuccessMessage(response)
@@ -250,7 +251,7 @@ class MailmanUserTest(ViewTestCase):
         # now, let's switch the subscription to a new user.
         response = self.client.post(
             reverse('change_subscription', args=(self.foo_list.list_id, )),
-            {'subscriber': str(user.user_id)}
+            {'subscriber': str(user.user_id), 'member_id': member.member_id}
         )
         self.assertEqual(response.status_code, 302)
         self.assertHasSuccessMessage(response)
@@ -279,7 +280,7 @@ class MailmanUserTest(ViewTestCase):
         # now, let's switch the subscription to a new user.
         response = self.client.post(
             reverse('change_subscription', args=(self.foo_list.list_id, )),
-            {'subscriber': 'user@example.com'}
+            {'subscriber': 'user@example.com', 'member_id': member.member_id}
         )
         self.assertEqual(response.status_code, 302)
         error = self.assertHasErrorMessage(response)
@@ -303,7 +304,7 @@ class MailmanUserTest(ViewTestCase):
         # now, let's switch the subscription to a new user.
         response = self.client.post(
             reverse('change_subscription', args=(self.foo_list.list_id, )),
-            {'subscriber': str(user.user_id)}
+            {'subscriber': str(user.user_id), 'member_id': member.member_id}
         )
         self.assertEqual(response.status_code, 302)
         error = self.assertHasErrorMessage(response)

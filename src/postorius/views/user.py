@@ -237,7 +237,8 @@ class UserListOptionsView(UserPreferencesView):
             primary_email = mm_user.preferred_address.email
         data['change_subscription_form'] = ChangeSubscriptionForm(
             user_emails, mm_user.user_id, primary_email,
-            initial={'subscriber': self.subscriber})
+            initial={'subscriber': self.subscriber,
+                     'member_id': self.member_id})
         return data
 
     def get_success_url(self):
