@@ -102,7 +102,8 @@ class TestChangeSubscription(TestCase):
     def test_subscription_changes_only_to_user_addresses(self):
         user_emails = ['one@example.com', 'two@example.com']
         form = ChangeSubscriptionForm(user_emails, None, None,
-                                      {'subscriber': 'abcd@d.com'})
+                                      {'subscriber': 'abcd@d.com',
+                                       'member_id': '1235sdfsd314'})
         self.assertFalse(form.is_valid())
         self.assertTrue('subscriber' in form.errors.keys())
         self.assertEqual(form.errors['subscriber'][0],
@@ -112,12 +113,14 @@ class TestChangeSubscription(TestCase):
     def test_subscription_works(self):
         user_emails = ['one@example.com', 'two@example.com']
         form = ChangeSubscriptionForm(user_emails, None, None,
-                                      {'subscriber': 'two@example.com'})
+                                      {'subscriber': 'two@example.com',
+                                       'member_id': '1235sdfsd314'})
         self.assertTrue(form.is_valid())
 
     def test_subscription_form_labels(self):
         user_emails = ['one@example.com', 'two@example.com']
-        form = ChangeSubscriptionForm(user_emails, None, None, {})
+        form = ChangeSubscriptionForm(user_emails, None, None,
+                                      {'member_id': '1235sdfsd314'})
         self.assertTrue(form.is_valid())
         self.assertEqual(form.fields['subscriber'].label, 'Select Email')
 
@@ -125,15 +128,16 @@ class TestChangeSubscription(TestCase):
         form = ChangeSubscriptionForm(
             ['email@example.com', 'john@example.com', 'doe@example.com'],
             None, None,
-            {'subscriber': 'email@example.com'})
+            {'subscriber': 'email@example.com',
+             'member_id': '1235sdfsd314'})
         self.assertTrue(form.is_valid())
 
     def test_required_fields(self):
-        # There is no required fields, so empty form should be valid.
+        # There is only one required fields.
         form = ChangeSubscriptionForm(
             ['email@example.com', 'john@example.com', 'doe@example.com'],
             None, None,
-            {})
+            {'member_id': '1235sdfsd314'})
         self.assertTrue(form.is_valid())
 
     def test_change_subscription_with_user_uuid(self):
@@ -142,8 +146,8 @@ class TestChangeSubscription(TestCase):
             user_emails,
             '00000000000000000000000000000004',
             'aperson@example.com',
-            {'subscriber': '00000000000000000000000000000004'}
-        )
+            {'subscriber': '00000000000000000000000000000004',
+             'member_id': '1235sdfsd314'})
         self.assertEqual(form.is_valid(), True)
 
     def test_subscribe_with_invalid_uuid(self):

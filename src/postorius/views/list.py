@@ -48,11 +48,12 @@ from postorius.auth.decorators import (
 from postorius.auth.mixins import ListOwnerMixin
 from postorius.forms import (
     AlterMessagesForm, ArchiveSettingsForm, BounceProcessingForm,
-    DigestSettingsForm, DMARCMitigationsForm, ListAnonymousSubscribe,
-    ListAutomaticResponsesForm, ListHeaderMatchForm, ListHeaderMatchFormset,
-    ListIdentityForm, ListMassRemoval, ListMassSubscription, ListNew,
-    ListSubscribe, MemberForm, MemberModeration, MemberPolicyForm,
-    MessageAcceptanceForm, MultipleChoiceForm, UserPreferences)
+    ChangeSubscriptionForm, DigestSettingsForm, DMARCMitigationsForm,
+    ListAnonymousSubscribe, ListAutomaticResponsesForm, ListHeaderMatchForm,
+    ListHeaderMatchFormset, ListIdentityForm, ListMassRemoval,
+    ListMassSubscription, ListNew, ListSubscribe, MemberForm, MemberModeration,
+    MemberPolicyForm, MessageAcceptanceForm, MultipleChoiceForm,
+    UserPreferences)
 from postorius.forms.list_forms import ACTION_CHOICES, TokenConfirmForm
 from postorius.models import (
     Domain, List, Mailman404Error, Style, SubscriptionMode)
@@ -288,6 +289,7 @@ class ListSummaryView(MailingListView):
                 user=request.user, verified=True).order_by(
                 "email").values_list("email", flat=True)
             pending_requests = [r['email'] for r in self.mailing_list.requests]
+
             for address in user_emails:
                 if address in pending_requests:
                     data['user_request_pending'] = True
@@ -320,16 +322,7 @@ class ListSummaryView(MailingListView):
 
 
 class ChangeSubscriptionView(MailingListView):
-    """Change mailing list subscription
-    """
-
-    def _is_subscribed(self, member, subscriber):
-        """Check if the member is same as the subscriber."""
-        return (
-            (member.subscription_mode == SubscriptionMode.as_address.name and
-             member.email == subscriber) or
-            (member.subscription_mode == SubscriptionMode.as_user.name and
-             member.user.user_id == subscriber))
+    """Change mailing list subscription"""
 
     @staticmethod
     def _is_email(subscriber):
@@ -383,6 +376,28 @@ class ChangeSubscriptionView(MailingListView):
                 member_pref[prop] = val
         member_pref.save()
 
+    def _get_membership(self, mm_user, member_id):
+        """Get current memberships of the Mailman user."""
+        for sub in mm_user.subscriptions:
+            if sub.member_id == member_id:
+                return sub
+        return None
+
+    def _is_subscribed(self, member, subscriber, mm_user):
+        """Check if the member is same as the subscriber.
+
+        If they are not:
+        - If subscriber is 'user_id' check if member's user_id is same as
+           subscriber.
+        - if subscriber is address, check if member's address is same as
+           subscriber.
+        """
+        return (
+            (member.subscription_mode == SubscriptionMode.as_address.name and
+             member.email == subscriber) or
+            (member.subscription_mode == SubscriptionMode.as_user.name and
+             member.user.user_id == subscriber))
+
     @method_decorator(login_required)
     def post(self, request, list_id):
         try:
@@ -393,22 +408,29 @@ class ChangeSubscriptionView(MailingListView):
             primary_email = None
             if mm_user.preferred_address is not None:
                 primary_email = mm_user.preferred_address.email
-            form = ListSubscribe(
+            form = ChangeSubscriptionForm(
                 user_emails, mm_user.user_id, primary_email, request.POST)
-            # Find the currently subscribed email
-            old_email = None
-            for address in user_emails:
-                try:
-                    member = self.mailing_list.get_member(address)
-                except ValueError:
-                    pass
-                else:
-                    old_email = address
-                    break  # no need to test more addresses
-            assert old_email is not None
+
             if form.is_valid():
+                # Step 1: Get the source membership user wants to switch from.
+                member = self._get_membership(
+                    mm_user, form.cleaned_data['member_id'])
+                if member is None:
+                    # Source membership doesn't exist, use should use subscribe
+                    # form instead.
+                    messages.error(_('You are not subscribed to {}.').format(
+                        self.mailing_list.fqdn_listname))
+                    # Not sure what the right place to return to here, since
+                    # there is no on_get resource here. Return to
+                    # per-subscription-preferences where the user can choose
+                    # subscription to change.
+                    return redirect('user_subscription_preferences')
                 subscriber = form.cleaned_data['subscriber']
-                if self._is_subscribed(member, subscriber):
+                # Step 2: Check if the source and destination subscriber are
+                # the same. This means, if the subscriber is a user_id, check
+                # they match and if the subscriber is a email address, check if
+                # they match.
+                if self._is_subscribed(member, subscriber, mm_user):
                     messages.error(request, _('You are already subscribed'))
                 else:
                     self._change_subscription(member, subscriber)
@@ -420,10 +442,12 @@ class ChangeSubscriptionView(MailingListView):
                             'Primary Address ({})').format(primary_email)
                     messages.success(
                         request,
-                        _('Subscription changed to %s').format(subscriber))
+                        _('Subscription changed to {}').format(subscriber))
             else:
-                messages.error(request,
-                               _('Something went wrong. Please try again.'))
+                messages.error(
+                    request,
+                    _('Something went wrong. Please try again. {} {}').format(
+                        form.errors, form.fields['subscriber'].choices))
         except HTTPError as e:
             messages.error(request, e.msg)
         return redirect('list_summary', self.mailing_list.list_id)

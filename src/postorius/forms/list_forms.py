@@ -1168,7 +1168,13 @@ class ChangeSubscriptionForm(forms.Form):
         widget=forms.Select(),
         validators=[validate_uuid_or_email, ],)
 
-    def __init__(self, user_emails, user_id, primary_email, *args, **kwargs):
+    member_id = forms.CharField(
+        required=True,
+        label="",
+        widget=forms.TextInput(attrs={'readonly': True, 'hidden': True}))
+
+    def __init__(self, user_emails, user_id, primary_email,
+                 *args, **kwargs):
         super(ChangeSubscriptionForm, self).__init__(*args, **kwargs)
         choices = list((address, address)
                        for address in user_emails)
