@@ -36,7 +36,7 @@ should install Postorius using git:
 
     $ git clone https://gitlab.com/mailman/postorius.git
     $ cd postorius
-    $ python setup.py develop
+    $ pip install -e .
 
 .. note::
     This note only pertains to development installs and should not be used when 
