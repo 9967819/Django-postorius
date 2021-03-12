@@ -35,6 +35,7 @@ UI
 * Success messages to mass subscribes now properly distinguish subscription
   from invitation and indicate possible pending confirmation or approval.
   (Closes #481)
+* User profile dropdown no longer is too far right.  (Closes #486)
 
 Other
 -----
