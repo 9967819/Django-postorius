@@ -40,4 +40,4 @@ you should run:
 
 ::
 
-    $ python setup.py develop
+    $ pip install -e .
