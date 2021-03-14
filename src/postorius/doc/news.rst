@@ -36,6 +36,9 @@ UI
   from invitation and indicate possible pending confirmation or approval.
   (Closes #481)
 * User profile dropdown no longer is too far right.  (Closes #486)
+* Expose ``archive_rendering_mode`` in Archiver settings to choose between
+  plaintext and rich text rendering of emails in Hyperkitty. (Closes #487)
+
 
 Other
 -----
