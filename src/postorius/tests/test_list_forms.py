@@ -549,6 +549,26 @@ class TestArchiveSettingsForm(TestCase):
         self.assertEqual(form.initial['archivers'],
                          ['hyperkitty', 'pipermail'])
 
+    def test_optional_archive_rendering_field(self):
+        # Test that archive rendering mode is set only when Hyperkitty is
+        # installed.
+        formdata = dict(archive_policy='public',
+                        archivers=['pipermail'])
+        form = ArchiveSettingsForm(formdata, mlist=self.mlist,
+                                   initial={'archivers': None})
+        self.assertTrue(form.is_valid())
+        self.assertFalse('archive_rendering_mode' in form.fields)
+        # With Hyperkitty installed, the field should show up.
+        with unittest.mock.patch(
+                'postorius.forms.list_forms.apps.is_installed',
+                return_value=True):
+            formdata = dict(archive_policy='public',
+                            archivers=['pipermail'])
+            form = ArchiveSettingsForm(formdata, mlist=self.mlist,
+                                       initial={'archivers': None})
+            self.assertTrue(form.is_valid())
+            self.assertTrue('archive_rendering_mode' in form.fields)
+
 
 class TestMemberPolicyForm(TestCase):
 

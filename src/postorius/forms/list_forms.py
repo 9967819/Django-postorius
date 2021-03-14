@@ -20,6 +20,7 @@
 import re
 
 from django import forms
+from django.apps import apps
 from django.core.exceptions import ValidationError
 from django.core.validators import validate_email
 from django.utils.translation import gettext_lazy as _
@@ -310,6 +311,11 @@ class ArchiveSettingsForm(ListSettingsForm):
         ("never", _("Do not archive this list")),
     )
 
+    archive_rendering_mode_choices = (
+        ("text", _("Plain text")),
+        ("markdown", _("Markdown text")),
+    )
+
     archive_policy = forms.ChoiceField(
         choices=archive_policy_choices,
         widget=forms.RadioSelect,
@@ -322,6 +328,17 @@ class ArchiveSettingsForm(ListSettingsForm):
         label=_('Active archivers'),
         required=False)  # May be empty if no archivers are desired.
 
+    archive_rendering_mode = forms.ChoiceField(
+        choices=archive_rendering_mode_choices,
+        widget=forms.RadioSelect,
+        required=False,
+        label=_('Archive Rendering mode'),
+        help_text=_('This option enables rendering of emails in archiver as '
+                    'rich text with formatting based on markup in the email.'
+                    '\nCurrently, this option is only supported by Hyperkitty.'
+                    )
+    )
+
     def __init__(self, *args, **kwargs):
         super(ArchiveSettingsForm, self).__init__(*args, **kwargs)
         archiver_opts = sorted(self._mlist.archivers.keys())
@@ -330,6 +347,10 @@ class ArchiveSettingsForm(ListSettingsForm):
         if self.initial:
             self.initial['archivers'] = [
                 key for key in archiver_opts if self._mlist.archivers[key] is True]   # noqa
+        # If Hyperkitty isn't installed, do not show the archive_rendering_mode
+        # field since it doesn't apply to other archivers.
+        if not apps.is_installed('hyperkitty'):
+            del self.fields['archive_rendering_mode']
 
     def clean_archivers(self):
         result = {}
