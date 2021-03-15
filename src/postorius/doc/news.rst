@@ -40,6 +40,9 @@ UI
   plaintext and rich text rendering of emails in Hyperkitty. (Closes #487)
 * Allow choosing ``delivery_mode`` and ``delivery_status`` when subscribing to
   a List. (Closes #488)
+* Redirect to ``domain_index`` after ``domain_edit`` succeeds. (Closes
+  #428)
+
 
 Other
 -----

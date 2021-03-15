@@ -109,9 +109,10 @@ def domain_edit(request, domain):
                 domain_obj.save()
             except HTTPError as e:
                 messages.error(request, e)
+                return redirect("domain_edit", domain=domain)
             else:
                 messages.success(request, _("Domain %s updated") % domain)
-            return redirect("domain_edit", domain=domain)
+                return redirect("domain_index")
         else:
             messages.error(request, _('Please check the errors below'))
     else:
