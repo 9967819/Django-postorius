@@ -22,19 +22,9 @@ from django import forms
 from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
 
-from postorius.forms.fields import NullBooleanRadioSelect, SelectWidget
+from postorius.forms.fields import (
+    NullBooleanRadioSelect, delivery_mode_field, delivery_status_field)
 from postorius.utils import LANGUAGES, with_empty_choice
-
-
-DELIVERY_MODE_CHOICES = (("regular", _('Regular')),
-                         ("plaintext_digests", _('Plain Text Digests')),
-                         ("mime_digests", _('Mime Digests')),
-                         ("summary_digests", _('Summary Digests')))
-
-DELIVERY_STATUS_CHOICES = (("enabled", _('Enabled')),
-                           ("by_user", _('Disabled')),
-                           ("by_moderator", _('Disabled by Owner')),
-                           ("by_bounces", _('Disabled by Bounces')))
 
 
 class UserPreferences(forms.Form):
@@ -64,30 +54,8 @@ class UserPreferences(forms.Form):
 
     choices = ((True, _('Yes')), (False, _('No')))
 
-    delivery_status = forms.ChoiceField(
-        widget=SelectWidget(),
-        choices=with_empty_choice(DELIVERY_STATUS_CHOICES),
-        required=False,
-        label=_('Delivery status'),
-        help_text=_(
-            'Set this option to Enabled to receive messages posted to this '
-            'mailing list. Set it to Disabled if you want to stay subscribed, '
-            'but don\'t want mail delivered to you for a while (e.g. you\'re '
-            'going on vacation). If you disable mail delivery, don\'t forget '
-            'to re-enable it when you come back; it will not be automatically '
-            're-enabled.'))
-    delivery_mode = forms.ChoiceField(
-        widget=forms.Select(),
-        choices=with_empty_choice(DELIVERY_MODE_CHOICES),
-        required=False,
-        label=_('Delivery mode'),
-        help_text=_(
-            'If you select summary digests , you\'ll get posts bundled '
-            'together (usually one per day but possibly more on busy lists), '
-            'instead of singly when they\'re sent. Your mail reader may or '
-            'may not support MIME digests. In general MIME digests are '
-            'preferred, but if you have a problem reading them, select '
-            'plain text digests.'))
+    delivery_status = delivery_status_field()
+    delivery_mode = delivery_mode_field()
     receive_own_postings = forms.NullBooleanField(
         widget=NullBooleanRadioSelect(choices=choices),
         required=False,

@@ -23,8 +23,8 @@ from django.utils.translation import gettext_lazy as _
 from mailmanclient import MailingList
 
 from postorius.auth.utils import user_is_in_list_roster
+from postorius.forms.fields import DELIVERY_MODE_CHOICES
 from postorius.forms.list_forms import ACTION_CHOICES
-from postorius.forms.user_forms import DELIVERY_MODE_CHOICES
 from postorius.models import List
 
 

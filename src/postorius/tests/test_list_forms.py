@@ -96,6 +96,27 @@ class TestListSubscribe(TestCase):
         self.assertEqual(form.errors['subscriber'][0],
                          'Please enter a valid email address.')
 
+    def test_list_subscribe_with_delivery_mode(self):
+        user_emails = ['aperson@example.com']
+        form = ListSubscribe(user_emails,
+                             '00000000000000000000000000000004',
+                             'aperson@example.com',
+                             {'subscriber': '00000000000000000000000000000004',
+                              'delivery_mode': 'plaintext_digests',
+                              'delivery_status': 'by_user'})
+        self.assertTrue(form.is_valid())
+
+    def test_list_subscribe_with_invalid_delivery_status(self):
+        user_emails = ['aperson@example.com']
+        form = ListSubscribe(user_emails,
+                             '00000000000000000000000000000004',
+                             'aperson@example.com',
+                             {'subscriber': '00000000000000000000000000000004',
+                              'delivery_mode': 'plaintext_digest',
+                              'delivery_status': 'by_bounces'})
+        self.assertFalse(form.is_valid())
+        self.assertTrue('delivery_status' in form.errors)
+
 
 class TestChangeSubscription(TestCase):
 
