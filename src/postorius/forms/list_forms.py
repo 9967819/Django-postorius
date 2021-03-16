@@ -27,7 +27,8 @@ from django.utils.translation import gettext_lazy as _
 
 from django_mailman3.lib.mailman import get_mailman_client
 
-from postorius.forms.fields import ListOfStringsField
+from postorius.forms.fields import (
+    ListOfStringsField, delivery_mode_field, delivery_status_field)
 from postorius.forms.validators import validate_uuid_or_email
 from postorius.models import EmailTemplate, _email_template_help_text
 from postorius.utils import LANGUAGES
@@ -146,6 +147,9 @@ class ListSubscribe(forms.Form):
     """Form fields to join an existing list.
     """
 
+    DELIVERY_STATUS_CHOICES = (("enabled", _('Enabled')),
+                               ("by_user", _('Disabled')))
+
     subscriber = forms.ChoiceField(
         label=_('Your email address'),
         widget=forms.Select(),
@@ -159,6 +163,10 @@ class ListSubscribe(forms.Form):
 
     display_name = forms.CharField(
         label=_('Your name (optional)'), required=False)
+
+    delivery_mode = delivery_mode_field(default='regular')
+    delivery_status = delivery_status_field(choices=DELIVERY_STATUS_CHOICES,
+                                            widget=forms.RadioSelect)
 
     def __init__(self, user_emails, user_id, primary_email, *args, **kwargs):
         super(ListSubscribe, self).__init__(*args, **kwargs)

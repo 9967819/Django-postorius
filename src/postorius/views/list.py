@@ -475,11 +475,15 @@ class ListSubscribeView(MailingListView):
             form = ListSubscribe(
                 user_emails, mm_user.user_id, primary_email, request.POST)
             if form.is_valid():
-                subscriber = request.POST.get('subscriber')
-                display_name = request.POST.get('display_name')
+                subscriber = form.cleaned_data.get('subscriber')
+                display_name = form.cleaned_data.get('display_name')
+                delivery_mode = form.cleaned_data.get('delivery_mode')
+                delivery_status = form.cleaned_data.get('delivery_status')
                 response = self.mailing_list.subscribe(
                     subscriber, display_name,
-                    pre_verified=True, pre_confirmed=True)
+                    pre_verified=True, pre_confirmed=True,
+                    delivery_mode=delivery_mode,
+                    delivery_status=delivery_status)
                 if (type(response) == dict and                   # noqa: W504
                         response.get('token_owner') == TokenOwner.moderator):
                     messages.success(

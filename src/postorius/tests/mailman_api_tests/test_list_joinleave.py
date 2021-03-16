@@ -70,3 +70,16 @@ class TestListJoinLeave(ViewTestCase):
             response,
             'You have a pending unsubscription request waiting for'
             ' moderator approval.')
+
+    def test_subscribe_to_lists(self):
+        self.client.force_login(self.user)
+        res = self.client.post(reverse('list_subscribe',
+                                       args=[self.foo_list.list_id]),
+                               data={'subscriber': 'test@example.com',
+                                     'delivery_mode': 'plaintext_digests',
+                                     'delivery_status': 'by_user'})
+        self.assertEqual(res.status_code, 302)
+        self.assertHasSuccessMessage(res)
+        member = self.foo_list.get_member('test@example.com')
+        self.assertEqual(member.delivery_mode, 'plaintext_digests')
+        self.assertEqual(member.preferences['delivery_status'], 'by_user')

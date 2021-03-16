@@ -22,6 +22,20 @@ from django import forms
 from django.utils.encoding import smart_text
 from django.utils.translation import gettext_lazy as _
 
+from postorius.utils import with_empty_choice
+
+
+DELIVERY_MODE_CHOICES = (("regular", _('Regular')),
+                         ("plaintext_digests", _('Plain Text Digests')),
+                         ("mime_digests", _('Mime Digests')),
+                         ("summary_digests", _('Summary Digests')))
+
+
+DELIVERY_STATUS_CHOICES = (("enabled", _('Enabled')),
+                           ("by_user", _('Disabled')),
+                           ("by_moderator", _('Disabled by Owner')),
+                           ("by_bounces", _('Disabled by Bounces')))
+
 
 class ListOfStringsField(forms.Field):
     widget = forms.widgets.Textarea
@@ -105,3 +119,41 @@ class MultipleChoiceForm(forms.Form):
         if len(self.cleaned_data['choices']) < 1:
             raise forms.ValidationError(_('Make at least one selection'))
         return self.cleaned_data['choices']
+
+
+def delivery_mode_field(default=None):
+
+    return forms.ChoiceField(
+        widget=forms.Select(),
+        choices=with_empty_choice(DELIVERY_MODE_CHOICES),
+        required=False,
+        initial=default,
+        label=_('Delivery mode'),
+        help_text=_(
+            'If you select summary digests , you\'ll get posts bundled '
+            'together (usually one per day but possibly more on busy lists), '
+            'instead of singly when they\'re sent. Your mail reader may or '
+            'may not support MIME digests. In general MIME digests are '
+            'preferred, but if you have a problem reading them, select '
+            'plain text digests.'))
+
+
+def delivery_status_field(choices=None, widget=None):
+    if not choices:
+        choices = with_empty_choice(DELIVERY_STATUS_CHOICES)
+
+    if not widget:
+        widget = SelectWidget
+
+    return forms.ChoiceField(
+        widget=widget(),
+        choices=choices,
+        required=False,
+        label=_('Delivery status'),
+        help_text=_(
+            'Set this option to Enabled to receive messages posted to this '
+            'mailing list. Set it to Disabled if you want to stay subscribed, '
+            'but don\'t want mail delivered to you for a while (e.g. you\'re '
+            'going on vacation). If you disable mail delivery, don\'t forget '
+            'to re-enable it when you come back; it will not be automatically '
+            're-enabled.'))
