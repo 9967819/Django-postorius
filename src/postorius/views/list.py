@@ -37,7 +37,8 @@ from django.utils.translation import gettext as _
 from django.views.decorators.http import require_http_methods
 
 from allauth.account.models import EmailAddress
-from django_mailman3.lib.mailman import get_mailman_client, get_mailman_user
+from django_mailman3.lib.mailman import (
+    get_mailman_client, get_mailman_user, get_mailman_user_id)
 from django_mailman3.lib.paginator import MailmanPaginator, paginate
 from django_mailman3.models import MailDomain
 from django_mailman3.signals import (
@@ -884,24 +885,19 @@ def list_index_authenticated(request):
     client = get_mailman_client()
     choosable_domains = _get_choosable_domains(request)
 
-    # Get all the verified addresses of the user.
-    user_emails = EmailAddress.objects.filter(
-        user=request.user, verified=True).order_by(
-            "email").values_list("email", flat=True)
+    # Get the user_id of the current user
+    user_id = get_mailman_user_id(request.user)
 
-    # Get all the mailing lists for the current user.
-    all_lists = []
     mail_host = _get_mail_host(request.get_host().split(':')[0])
-    for user_email in user_emails:
-        try:
-            all_lists.extend(
-                client.find_lists(user_email,
-                                  role=role,
-                                  mail_host=mail_host,
-                                  count=sys.maxsize))
-        except HTTPError:
-            # No lists exist with the given role for the given user.
-            pass
+    # Get all the mailing lists for the current user.
+    try:
+        all_lists = client.find_lists(user_id,
+                                      role=role,
+                                      mail_host=mail_host,
+                                      count=sys.maxsize)
+    except HTTPError:
+        # No lists exist with the given role for the given user.
+        all_lists = []
     # If the user has no list that they are subscriber/owner/moderator of, we
     # just redirect them to the index page with all lists.
     if len(all_lists) == 0 and role is None:

@@ -60,6 +60,8 @@ Other
 * Improve the performance of List owner access checks. (See !598)
 * Add a new ``APICountingMiddleware`` to performance testing purposes. (See
   !604)
+* Use ``user_id`` as ``subscriber`` instead of addresses to improve the
+  efficiency of list index page. (Closes #419)
 
 
 1.3.4

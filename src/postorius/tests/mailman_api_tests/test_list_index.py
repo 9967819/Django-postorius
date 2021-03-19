@@ -24,6 +24,7 @@ from django.test import override_settings
 from django.urls import reverse
 
 from allauth.account.models import EmailAddress
+from django_mailman3.lib.mailman import sync_email_addresses
 from django_mailman3.models import MailDomain
 
 from postorius.tests.utils import ViewTestCase
@@ -185,6 +186,7 @@ class ListIndexPageTest(ViewTestCase):
     def test_list_index_multiple_addresses(self):
         EmailAddress.objects.create(
             user=self.user, email='test-email2@example.com', verified=True)
+        sync_email_addresses(self.user)
         self.foo_list.subscribe(
             'test-email2@example.com', pre_confirmed=True, pre_verified=True)
         self.client.login(username='user', password='pwd')
