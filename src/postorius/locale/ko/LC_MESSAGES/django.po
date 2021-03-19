@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-31 19:24-0800\n"
+"POT-Creation-Date: 2021-03-19 10:38-0700\n"
 "PO-Revision-Date: 2019-11-19 12:04+0000\n"
 "Last-Translator: ParkSeongSoo <syvf64@naver.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -29,7 +29,7 @@ msgstr ""
 "웹 UI를 제공할 도메인입니다. 이것은 메일 호스트와 같거나 다를 수 있습니다. 사"
 "용 가능한 웹 호스트 목록을 편집할 수 있습니다. <a href=\"%s\">here</a>."
 
-#: forms/domain_forms.py:45 forms/list_forms.py:96
+#: forms/domain_forms.py:45 forms/list_forms.py:98
 #: templates/postorius/domain/index.html:21
 msgid "Mail Host"
 msgstr "메일 사용자"
@@ -50,7 +50,7 @@ msgstr ""
 "당신의 메일링 목록을 위한 도메인입니다.  예를들어 testing@example.com와 같은 "
 "리스트를 원한다면 example.com이곳을 방문해주세요."
 
-#: forms/domain_forms.py:54 forms/list_forms.py:89 forms/list_forms.py:916
+#: forms/domain_forms.py:54 forms/list_forms.py:91 forms/list_forms.py:945
 #: templates/postorius/domain/index.html:22 templates/postorius/index.html:56
 msgid "Description"
 msgstr "설명"
@@ -79,178 +79,247 @@ msgstr "유효한 도메인명을 입력해주세요"
 msgid "Owner's Email"
 msgstr "소유자의 이메일"
 
-#: forms/fields.py:81
+#: forms/fields.py:28
+msgid "Regular"
+msgstr "규칙적인"
+
+#: forms/fields.py:29
+msgid "Plain Text Digests"
+msgstr "일반 텍스트 요약"
+
+#: forms/fields.py:30
+msgid "Mime Digests"
+msgstr "마임 다이제스트"
+
+#: forms/fields.py:31
+msgid "Summary Digests"
+msgstr "요약 다이제스트"
+
+#: forms/fields.py:34 forms/list_forms.py:150
+msgid "Enabled"
+msgstr "가능한"
+
+#: forms/fields.py:35 forms/list_forms.py:151
+msgid "Disabled"
+msgstr "장애를 가진"
+
+#: forms/fields.py:36
+#, fuzzy
+#| msgid "Disabled"
+msgid "Disabled by Owner"
+msgstr "장애를 가진"
+
+#: forms/fields.py:37
+msgid "Disabled by Bounces"
+msgstr ""
+
+#: forms/fields.py:120
 msgid "Make at least one selection"
 msgstr "최소한 하나를 선택해주세요"
 
-#: forms/list_forms.py:36
+#: forms/fields.py:131
+msgid "Delivery mode"
+msgstr "배달 모드"
+
+#: forms/fields.py:133
+msgid ""
+"If you select summary digests , you'll get posts bundled together (usually "
+"one per day but possibly more on busy lists), instead of singly when they're "
+"sent. Your mail reader may or may not support MIME digests. In general MIME "
+"digests are preferred, but if you have a problem reading them, select plain "
+"text digests."
+msgstr ""
+"요약 다이제스트를 선택하면, 발송할 때 단독으로 게시하는 대신, 게시물이 함께 "
+"묶이게 된다(대개 하루에 한 개씩 하지만 사용 빈도가 높은 목록에 더 있을 수 있"
+"음). 메일 리더는 MIME 다이제스트를 지원할 수도 있고 지원하지 않을 수도 있다. "
+"일반적으로 MIME 다이제스트는 선호되지만, 읽기에 문제가 있는 경우 일반 텍스트 "
+"다이제스트를 선택하십시오."
+
+#: forms/fields.py:152
+msgid "Delivery status"
+msgstr "납품여부"
+
+#: forms/fields.py:154
+msgid ""
+"Set this option to Enabled to receive messages posted to this mailing list. "
+"Set it to Disabled if you want to stay subscribed, but don't want mail "
+"delivered to you for a while (e.g. you're going on vacation). If you disable "
+"mail delivery, don't forget to re-enable it when you come back; it will not "
+"be automatically re-enabled."
+msgstr ""
+"이 메일링 목록에 게시된 메시지를 수신하려면 이 옵션을 사용으로 설정하십시오. "
+"구독 상태를 유지하려면 사용 안 함으로 설정하되, 잠시 동안(예: 휴가 중) 메일"
+"이 배달되는 것을 원하지 마십시오. 메일 배달이 비활성화된 경우, 돌아올 때 다"
+"시 활성화하는 것을 잊지 마십시오. 자동으로 다시 활성화되지는 않을 겁니다."
+
+#: forms/list_forms.py:38
 msgid "Hold for moderation"
 msgstr "절제함"
 
-#: forms/list_forms.py:37
+#: forms/list_forms.py:39
 msgid "Reject (with notification)"
 msgstr "거부(통보 포함)"
 
-#: forms/list_forms.py:38
+#: forms/list_forms.py:40
 msgid "Discard (no notification)"
 msgstr "폐기(알림 없음)"
 
-#: forms/list_forms.py:39
+#: forms/list_forms.py:41
 msgid "Accept immediately (bypass other rules)"
 msgstr "즉시 수락(다른 규칙 무시)"
 
-#: forms/list_forms.py:40
+#: forms/list_forms.py:42
 msgid "Default processing"
 msgstr "기본 처리"
 
-#: forms/list_forms.py:44
+#: forms/list_forms.py:46
 msgid "Daily"
 msgstr "일간"
 
-#: forms/list_forms.py:45
+#: forms/list_forms.py:47
 msgid "Weekly"
 msgstr "주간"
 
-#: forms/list_forms.py:46
+#: forms/list_forms.py:48
 msgid "Quarterly"
 msgstr "계간"
 
-#: forms/list_forms.py:47
+#: forms/list_forms.py:49
 msgid "Monthly"
 msgstr "매월의"
 
-#: forms/list_forms.py:48
+#: forms/list_forms.py:50
 msgid "Yearly"
 msgstr "연간"
 
-#: forms/list_forms.py:52
+#: forms/list_forms.py:54
 msgid "Only mailinglist moderators"
 msgstr "메일링리스트 진행자만"
 
-#: forms/list_forms.py:53
+#: forms/list_forms.py:55
 msgid "Only mailinglist members"
 msgstr "메일링리스트 진행자만"
 
-#: forms/list_forms.py:54
+#: forms/list_forms.py:56
 msgid "Anyone"
 msgstr "아무도"
 
-#: forms/list_forms.py:68 templates/postorius/user/subscriptions.html:22
+#: forms/list_forms.py:70 templates/postorius/user/subscriptions.html:22
 msgid "List Name"
 msgstr "목록 이름"
 
-#: forms/list_forms.py:70
+#: forms/list_forms.py:72
 msgid "Please enter a name for your list."
 msgstr "목록의 이름을 입력하십시오."
 
-#: forms/list_forms.py:71
+#: forms/list_forms.py:73
 msgid "Please enter a valid list name."
 msgstr "올바른 목록 이름을 입력하십시오."
 
-#: forms/list_forms.py:74
+#: forms/list_forms.py:76
 msgid "Initial list owner address"
 msgstr "초기 목록 소유자 주소"
 
-#: forms/list_forms.py:76
+#: forms/list_forms.py:78
 msgid "Please enter the list owner's email address."
 msgstr "목록 소유자의 이메일 주소를 입력하십시오."
 
-#: forms/list_forms.py:80
+#: forms/list_forms.py:82
 msgid "Advertise this list?"
 msgstr "이 목록을 광고하십니까?"
 
-#: forms/list_forms.py:82
+#: forms/list_forms.py:84
 msgid "Please choose a list type."
 msgstr "목록 유형을 선택해주십시오."
 
-#: forms/list_forms.py:85
+#: forms/list_forms.py:87
 msgid "Advertise this list in list index"
 msgstr "목록 색인에 이 목록 알림"
 
-#: forms/list_forms.py:86
+#: forms/list_forms.py:88
 msgid "Hide this list in list index"
 msgstr "목록 색인에 이 목록 숨기기"
 
-#: forms/list_forms.py:99
+#: forms/list_forms.py:101
 msgid "Choose an existing Domain."
 msgstr "기존 도메인을 선택하십시오."
 
-#: forms/list_forms.py:100
+#: forms/list_forms.py:102
 msgid "Choose a valid Mail Host"
 msgstr "올바른 메일 호스트 선택"
 
-#: forms/list_forms.py:103
+#: forms/list_forms.py:105
 msgid "List Style"
 msgstr "목록 스타일"
 
-#: forms/list_forms.py:106
+#: forms/list_forms.py:108
 msgid "Choose a List Style."
 msgstr "목록 스타일을 선택하십시오."
 
-#: forms/list_forms.py:107
+#: forms/list_forms.py:109
 msgid "Choose a valid List Style."
 msgstr "올바른 목록 스타일을 선택하십시오."
 
-#: forms/list_forms.py:110
+#: forms/list_forms.py:112
 msgid "Site admin has not created any domains"
 msgstr "사이트 관리자가 도메인을 생성하지 않음"
 
-#: forms/list_forms.py:123
+#: forms/list_forms.py:125
 msgid "Please enter a valid listname"
 msgstr "올바른 목록 이름을 입력하세요"
 
-#: forms/list_forms.py:149 forms/list_forms.py:178
+#: forms/list_forms.py:154 forms/list_forms.py:187
 msgid "Your email address"
 msgstr "당신의 이메일 주소"
 
-#: forms/list_forms.py:153
+#: forms/list_forms.py:158
 msgid ""
 "Subscribing via \"Primary Address\" will change subscription address when "
 "you change your primary address."
 msgstr ""
 
-#: forms/list_forms.py:156 forms/list_forms.py:181 forms/member_forms.py:29
+#: forms/list_forms.py:161 forms/list_forms.py:190 forms/member_forms.py:29
 #: forms/system.py:36
 msgid "Please enter an email address."
 msgstr "이메일 주소를 입력하십시오."
 
-#: forms/list_forms.py:157 forms/list_forms.py:182 forms/member_forms.py:30
+#: forms/list_forms.py:162 forms/list_forms.py:191 forms/member_forms.py:30
 #: forms/system.py:37
 msgid "Please enter a valid email address."
 msgstr "올바른 이메일 주소를 입력하십시오."
 
-#: forms/list_forms.py:160 forms/list_forms.py:185
+#: forms/list_forms.py:165 forms/list_forms.py:194
 msgid "Your name (optional)"
 msgstr "이름(선택 사항)"
 
-#: forms/list_forms.py:169 forms/list_forms.py:1178 views/list.py:411
+#: forms/list_forms.py:178 forms/list_forms.py:1213 views/list.py:442
 #, fuzzy
 #| msgid "Email Address"
 msgid "Primary Address ({})"
 msgstr "이메일주소"
 
-#: forms/list_forms.py:200
+#: forms/list_forms.py:209
 msgid "Open"
 msgstr "열다"
 
-#: forms/list_forms.py:201 templates/postorius/domain/template_delete.html:27
+#: forms/list_forms.py:210 templates/postorius/domain/template_delete.html:27
 #: templates/postorius/lists/template_delete.html:24
 msgid "Confirm"
 msgstr "확인"
 
-#: forms/list_forms.py:202
+#: forms/list_forms.py:211
 msgid "Moderate"
 msgstr "적당한"
 
-#: forms/list_forms.py:203
+#: forms/list_forms.py:212
 msgid "Confirm, then moderate"
 msgstr "확인 후 보통"
 
-#: forms/list_forms.py:212
+#: forms/list_forms.py:221
 msgid "Subscription Policy"
 msgstr "서브스크립션 정책"
 
-#: forms/list_forms.py:214
+#: forms/list_forms.py:223
 msgid ""
 "Open: Subscriptions are added automatically\n"
 "Confirm: Subscribers need to confirm the subscription using an email sent to "
@@ -265,13 +334,13 @@ msgstr ""
 "Moderate(중간값: 먼저 가입자들은 확인을 해야 하고, 그 다음 진행자는 승인을 받"
 "아야 합니다."
 
-#: forms/list_forms.py:223
+#: forms/list_forms.py:232
 #, fuzzy
 #| msgid "Subscription Policy"
 msgid "Un-Subscription Policy"
 msgstr "서브스크립션 정책"
 
-#: forms/list_forms.py:225
+#: forms/list_forms.py:234
 #, fuzzy
 #| msgid ""
 #| "Open: Subscriptions are added automatically\n"
@@ -294,102 +363,102 @@ msgstr ""
 "Moderate(중간값: 먼저 가입자들은 확인을 해야 하고, 그 다음 진행자는 승인을 받"
 "아야 합니다."
 
-#: forms/list_forms.py:238 forms/list_forms.py:264 forms/list_forms.py:273
-#: forms/list_forms.py:359 forms/list_forms.py:367 forms/list_forms.py:408
-#: forms/list_forms.py:522 forms/list_forms.py:529 forms/list_forms.py:571
-#: forms/list_forms.py:639 forms/list_forms.py:674 forms/list_forms.py:687
-#: forms/list_forms.py:695 forms/list_forms.py:703 forms/list_forms.py:721
-#: forms/list_forms.py:737 forms/list_forms.py:848 forms/list_forms.py:857
-#: forms/list_forms.py:869 forms/list_forms.py:879 forms/list_forms.py:891
-#: forms/list_forms.py:910 forms/list_forms.py:953 forms/list_forms.py:960
-#: forms/list_forms.py:981 forms/list_forms.py:1052 forms/user_forms.py:48
+#: forms/list_forms.py:247 forms/list_forms.py:273 forms/list_forms.py:282
+#: forms/list_forms.py:388 forms/list_forms.py:396 forms/list_forms.py:437
+#: forms/list_forms.py:551 forms/list_forms.py:558 forms/list_forms.py:600
+#: forms/list_forms.py:668 forms/list_forms.py:703 forms/list_forms.py:716
+#: forms/list_forms.py:724 forms/list_forms.py:732 forms/list_forms.py:750
+#: forms/list_forms.py:766 forms/list_forms.py:877 forms/list_forms.py:886
+#: forms/list_forms.py:898 forms/list_forms.py:908 forms/list_forms.py:920
+#: forms/list_forms.py:939 forms/list_forms.py:982 forms/list_forms.py:989
+#: forms/list_forms.py:1010 forms/list_forms.py:1081 forms/user_forms.py:55
 msgid "Yes"
 msgstr "그렇습니다."
 
-#: forms/list_forms.py:238 forms/list_forms.py:264 forms/list_forms.py:273
-#: forms/list_forms.py:359 forms/list_forms.py:367 forms/list_forms.py:408
-#: forms/list_forms.py:522 forms/list_forms.py:529 forms/list_forms.py:571
-#: forms/list_forms.py:639 forms/list_forms.py:674 forms/list_forms.py:687
-#: forms/list_forms.py:695 forms/list_forms.py:703 forms/list_forms.py:721
-#: forms/list_forms.py:737 forms/list_forms.py:848 forms/list_forms.py:857
-#: forms/list_forms.py:869 forms/list_forms.py:879 forms/list_forms.py:891
-#: forms/list_forms.py:910 forms/list_forms.py:953 forms/list_forms.py:960
-#: forms/list_forms.py:981 forms/list_forms.py:1053 forms/user_forms.py:48
+#: forms/list_forms.py:247 forms/list_forms.py:273 forms/list_forms.py:282
+#: forms/list_forms.py:388 forms/list_forms.py:396 forms/list_forms.py:437
+#: forms/list_forms.py:551 forms/list_forms.py:558 forms/list_forms.py:600
+#: forms/list_forms.py:668 forms/list_forms.py:703 forms/list_forms.py:716
+#: forms/list_forms.py:724 forms/list_forms.py:732 forms/list_forms.py:750
+#: forms/list_forms.py:766 forms/list_forms.py:877 forms/list_forms.py:886
+#: forms/list_forms.py:898 forms/list_forms.py:908 forms/list_forms.py:920
+#: forms/list_forms.py:939 forms/list_forms.py:982 forms/list_forms.py:989
+#: forms/list_forms.py:1010 forms/list_forms.py:1082 forms/user_forms.py:55
 msgid "No"
 msgstr "아닙니다"
 
-#: forms/list_forms.py:240
+#: forms/list_forms.py:249
 msgid "Process Bounces"
 msgstr ""
 
-#: forms/list_forms.py:242
+#: forms/list_forms.py:251
 msgid ""
 "Specifies whether or not this list should do automatic bounce processing."
 msgstr ""
 
-#: forms/list_forms.py:247
+#: forms/list_forms.py:256
 #, fuzzy
 #| msgid "Digest size threshold"
 msgid "Bounce score threshold"
 msgstr "다이제스트 크기 임계값"
 
-#: forms/list_forms.py:250
+#: forms/list_forms.py:259
 msgid ""
 "This is the bounce score above which a member's subscription  will be "
 "automatically disabled. When the subscription is  re-enabled, their bounce "
 "score will be reset to zero."
 msgstr ""
 
-#: forms/list_forms.py:255
+#: forms/list_forms.py:264
 msgid "Bounce info stale after"
 msgstr ""
 
-#: forms/list_forms.py:258
+#: forms/list_forms.py:267
 msgid ""
 "The number of days after which a member's bounce information is considered "
 "stale. If no new bounces have been received in the interim, the bounce score "
 "is reset to zero. This value must be an integer. "
 msgstr ""
 
-#: forms/list_forms.py:266
+#: forms/list_forms.py:275
 #, fuzzy
 #| msgid "Notify users of held messages"
 msgid "Notify owner on disable"
 msgstr "사용한 메시지의 사용자 확인"
 
-#: forms/list_forms.py:268
+#: forms/list_forms.py:277
 msgid ""
 "This option controls whether or not the list owner is notified when a "
 "member's subscription is automatically disabled due to their bounce "
 "threshold being reached. "
 msgstr ""
 
-#: forms/list_forms.py:275
+#: forms/list_forms.py:284
 #, fuzzy
 #| msgid "Confirm domain removal"
 msgid "Notify owner on removal"
 msgstr "도메인 제거 확인"
 
-#: forms/list_forms.py:277
+#: forms/list_forms.py:286
 msgid ""
 "This option controls whether or not the list owner is notified when a member "
 "is removed from the list after their disabled notifications have been "
 "exhausted. "
 msgstr ""
 
-#: forms/list_forms.py:284
+#: forms/list_forms.py:293
 msgid "Bounce disabled warnings interval"
 msgstr ""
 
-#: forms/list_forms.py:287
+#: forms/list_forms.py:296
 msgid "The number of days between each disabled notification."
 msgstr ""
 
-#: forms/list_forms.py:291
+#: forms/list_forms.py:300
 msgid "Bounce disable warnings"
 msgstr ""
 
-#: forms/list_forms.py:294
+#: forms/list_forms.py:303
 msgid ""
 "The number of notices a disabled member will receive before their address is "
 "removed from the mailing list's roster. Set this to 0 to immediately remove "
@@ -397,35 +466,56 @@ msgid ""
 "value must be an integer. "
 msgstr ""
 
-#: forms/list_forms.py:308
+#: forms/list_forms.py:317
 msgid "Public archives"
 msgstr "공개 아카이브"
 
-#: forms/list_forms.py:309
+#: forms/list_forms.py:318
 msgid "Private archives"
 msgstr "개인 아카이브"
 
-#: forms/list_forms.py:310
+#: forms/list_forms.py:319
 msgid "Do not archive this list"
 msgstr "이 목록을 보관하지 않음"
 
-#: forms/list_forms.py:316
+#: forms/list_forms.py:323
+#, fuzzy
+#| msgid "Plain Text Digests"
+msgid "Plain text"
+msgstr "일반 텍스트 요약"
+
+#: forms/list_forms.py:324
+msgid "Markdown text"
+msgstr ""
+
+#: forms/list_forms.py:330
 msgid "Archive policy"
 msgstr "보관 정책"
 
-#: forms/list_forms.py:317
+#: forms/list_forms.py:331
 msgid "Policy for archiving messages for this list"
 msgstr "이 목록에 대한 메시지 보관 정책"
 
-#: forms/list_forms.py:322
+#: forms/list_forms.py:336
 msgid "Active archivers"
 msgstr "능동아카이버"
 
-#: forms/list_forms.py:347
+#: forms/list_forms.py:343
+msgid "Archive Rendering mode"
+msgstr ""
+
+#: forms/list_forms.py:344
+msgid ""
+"This option enables rendering of emails in archiver as rich text with "
+"formatting based on markup in the email.\n"
+"Currently, this option is only supported by Hyperkitty."
+msgstr ""
+
+#: forms/list_forms.py:376
 msgid "Acceptable aliases"
 msgstr "허용되는 별칭"
 
-#: forms/list_forms.py:350
+#: forms/list_forms.py:379
 msgid ""
 "This is a list, one per line, of addresses and regexps matching addresses "
 "that are acceptable in To: or Cc: in lieu of the list posting address when "
@@ -442,11 +532,11 @@ msgstr ""
 "match() 함수로 수행되며, 이는 그들이 문자열의 시작 부분에 고정되어 있다는 것"
 "을 의미합니다."
 
-#: forms/list_forms.py:361
+#: forms/list_forms.py:390
 msgid "Require Explicit Destination"
 msgstr "명시적 목적지 필요"
 
-#: forms/list_forms.py:363
+#: forms/list_forms.py:392
 msgid ""
 "This checks to ensure that the list posting address or an acceptable alias "
 "explicitly appears in a To: or Cc: header in the post."
@@ -454,11 +544,11 @@ msgstr ""
 "이 확인은 목록 게시 주소 또는 허용 가능한 별칭이 게시물의 수신인: 또는 Cc: 헤"
 "더에 명시적으로 나타나는지 확인하십시오."
 
-#: forms/list_forms.py:369
+#: forms/list_forms.py:398
 msgid "Administrivia"
 msgstr "관리자"
 
-#: forms/list_forms.py:371
+#: forms/list_forms.py:400
 msgid ""
 "Administrivia tests will check postings to see whether it's really meant as "
 "an administrative request (like subscribe, unsubscribe, etc), and will add "
@@ -469,15 +559,15 @@ msgstr ""
 "지 여부를 확인하기 위해 게시물을 확인하고, 관리 요청 대기열에 추가하여 새로"
 "운 요청을 관리자에게 통지합니다."
 
-#: forms/list_forms.py:378
+#: forms/list_forms.py:407
 msgid "Default action to take when a member posts to the list"
 msgstr "구성원이 목록에 게시할 때 수행할 기본 작업"
 
-#: forms/list_forms.py:380
+#: forms/list_forms.py:409
 msgid "Please choose a default member action."
 msgstr "기본 구성원 작업을 선택하십시오."
 
-#: forms/list_forms.py:384
+#: forms/list_forms.py:413
 msgid ""
 "Default action to take when a member posts to the list.\n"
 "Hold: This holds the message for approval by the list moderators.\n"
@@ -496,15 +586,15 @@ msgstr ""
 "수락: 추가 확인 없이 모든 게시물을 수락하십시오.\n"
 "기본 처리: 추가 검사를 실행하고 메시지를 수락하십시오."
 
-#: forms/list_forms.py:397
+#: forms/list_forms.py:426
 msgid "Default action to take when a non-member posts to the list"
 msgstr "구성원이 아닌 사람이 목록에 게시할 때 수행할 기본 작업"
 
-#: forms/list_forms.py:399
+#: forms/list_forms.py:428
 msgid "Please choose a default non-member action."
 msgstr "기본 비회원 작업을 선택하십시오."
 
-#: forms/list_forms.py:403
+#: forms/list_forms.py:432
 msgid ""
 "When a post from a non-member is received, the message's sender is matched "
 "against the list of explicitly accepted, held, rejected (bounced), and "
@@ -514,24 +604,24 @@ msgstr ""
 "부(보류) 및 폐기된 주소 목록과 일치한다. 일치하는 항목이 없으면 이 조치를 취"
 "합니다."
 
-#: forms/list_forms.py:410
+#: forms/list_forms.py:439
 #, fuzzy
 #| msgid "Moderation"
 msgid "Emergency Moderation"
 msgstr "적당함"
 
-#: forms/list_forms.py:412
+#: forms/list_forms.py:441
 msgid ""
 "When this option is enabled, all list traffic is emergency moderated, i.e. "
 "held for moderation. Turn this option on when your list is experiencing a "
 "flamewar and you want a cooling off period. "
 msgstr ""
 
-#: forms/list_forms.py:419
+#: forms/list_forms.py:448
 msgid "Maximum message size"
 msgstr "메시지의 최대 크기"
 
-#: forms/list_forms.py:422
+#: forms/list_forms.py:451
 msgid ""
 "The maximum allowed message size in KB. This can be used to prevent emails "
 "with large attachments. A size of 0 disables the check."
@@ -539,11 +629,11 @@ msgstr ""
 "최대 허용 메시지 크기(KB) 이것은 첨부 파일이 큰 이메일을 예방하는 데 사용될 "
 "수 있다. 크기가 0이면 수표가 비활성화됩니다."
 
-#: forms/list_forms.py:427
+#: forms/list_forms.py:456
 msgid "Maximum number of recipients"
 msgstr "최대 수신인 수"
 
-#: forms/list_forms.py:430
+#: forms/list_forms.py:459
 msgid ""
 "The maximum number of recipients for a message. This can be used to prevent "
 "mass mailings from being accepted. A value of 0 disables the check."
@@ -551,11 +641,11 @@ msgstr ""
 "메시지의 최대 수신인 수입니다. 이것은 대량 우편물이 받아들여지지 않도록 하는 "
 "데 사용될 수 있습니다. 값이 0이면 체크를 비활성화됩니다."
 
-#: forms/list_forms.py:444
+#: forms/list_forms.py:473
 msgid "Accept these non-members"
 msgstr ""
 
-#: forms/list_forms.py:447
+#: forms/list_forms.py:476
 msgid ""
 "This is a list, one per line, of regexps matching addresses that are allowed "
 "to post to this mailing list without subscribing to the list. Entries are "
@@ -565,11 +655,11 @@ msgid ""
 "Default Processing."
 msgstr ""
 
-#: forms/list_forms.py:457
+#: forms/list_forms.py:486
 msgid "Hold these non-members"
 msgstr ""
 
-#: forms/list_forms.py:460
+#: forms/list_forms.py:489
 msgid ""
 "This is a list, one per line, of regexps matching nonmember addresses, posts "
 "from which are held automatically. Entries are regexps beginning with `^' "
@@ -578,13 +668,13 @@ msgid ""
 "a nonmember and set the nonmember's Moderation to Hold."
 msgstr ""
 
-#: forms/list_forms.py:469
+#: forms/list_forms.py:498
 #, fuzzy
 #| msgid "Reject the message"
 msgid "Reject these non-members"
 msgstr "메시지 거부"
 
-#: forms/list_forms.py:472
+#: forms/list_forms.py:501
 msgid ""
 "This is a list, one per line, of regexps matching nonmember addresses, posts "
 "from which are rejected with notice to the sender. Entries are regexps "
@@ -593,13 +683,13 @@ msgid ""
 "add the address as a nonmember and set the nonmember's Moderation to Reject."
 msgstr ""
 
-#: forms/list_forms.py:482
+#: forms/list_forms.py:511
 #, fuzzy
 #| msgid "Discard the message"
 msgid "Discard these non-members"
 msgstr "메시지를 무시"
 
-#: forms/list_forms.py:485
+#: forms/list_forms.py:514
 msgid ""
 "This is a list, one per line, of regexps matching nonmember addresses, posts "
 "from which are discarded automatically. Entries are regexps beginning with "
@@ -608,38 +698,38 @@ msgid ""
 "a nonmember and set the nonmember's Moderation to Discard."
 msgstr ""
 
-#: forms/list_forms.py:507
+#: forms/list_forms.py:536
 msgid "Invalid alias regexp: {}: {}"
 msgstr "잘못된 별칭 정규식: {}: {}"
 
-#: forms/list_forms.py:513
+#: forms/list_forms.py:542
 msgid "Invalid alias email: {}"
 msgstr "잘못된 별칭 regexp: {}: {}"
 
-#: forms/list_forms.py:525
+#: forms/list_forms.py:554
 msgid "Enable Digests"
 msgstr "다이제스트 사용"
 
-#: forms/list_forms.py:526
+#: forms/list_forms.py:555
 msgid "Should Mailman enable digests for this MailingList?"
 msgstr ""
 "메일 관리자가 이 메일 목록에 대해 다이제스트를 사용하도록 설정해야 하나요?"
 
-#: forms/list_forms.py:532
+#: forms/list_forms.py:561
 msgid "Send Digest Periodically"
 msgstr "주기적으로 다이제스트 보내기"
 
-#: forms/list_forms.py:533
+#: forms/list_forms.py:562
 msgid "Should Mailman send out digests periodically?"
 msgstr "메일맨이 주기적으로 다이제스트를 발송해야 하는가?"
 
-#: forms/list_forms.py:539
+#: forms/list_forms.py:568
 #, fuzzy
 #| msgid "Digest Frequency"
 msgid "Digest Volume Frequency"
 msgstr "다이제스트 주파수"
 
-#: forms/list_forms.py:540
+#: forms/list_forms.py:569
 #, fuzzy
 #| msgid "At what frequency should Mailman send out digests?"
 msgid ""
@@ -647,43 +737,43 @@ msgid ""
 "reset the issue number?"
 msgstr "메일맨이 다이제스트를 발송해야 하는 빈도는 어떻게 됩니까??"
 
-#: forms/list_forms.py:544
+#: forms/list_forms.py:573
 msgid "Digest size threshold"
 msgstr "다이제스트 크기 임계값"
 
-#: forms/list_forms.py:545
+#: forms/list_forms.py:574
 msgid "How big in Kb should a digest be before it gets sent out?"
 msgstr "소화가 발송되기 전에 Kb의 크기는 얼마나 커야 하는가?"
 
-#: forms/list_forms.py:554
+#: forms/list_forms.py:583
 msgid "DMARC mitigation action"
 msgstr "DMARC 완화 조치"
 
-#: forms/list_forms.py:558
+#: forms/list_forms.py:587
 msgid "Please choose a DMARC mitigation action."
 msgstr "DMARC 완화 작업을 선택하십시오."
 
-#: forms/list_forms.py:560
+#: forms/list_forms.py:589
 msgid "No DMARC mitigations"
 msgstr "DMARC 완화불가"
 
-#: forms/list_forms.py:561
+#: forms/list_forms.py:590
 msgid "Replace From: with list address"
 msgstr "시작: 목록 주소로 바꾸기"
 
-#: forms/list_forms.py:563
+#: forms/list_forms.py:592
 msgid "Wrap the message in an outer message From: the list."
 msgstr "목록의 외부 메시지로 포장하십시오: 리스트."
 
-#: forms/list_forms.py:564
+#: forms/list_forms.py:593
 msgid "Reject the message"
 msgstr "메시지 거부"
 
-#: forms/list_forms.py:565
+#: forms/list_forms.py:594
 msgid "Discard the message"
 msgstr "메시지를 무시"
 
-#: forms/list_forms.py:567
+#: forms/list_forms.py:596
 msgid ""
 "The action to apply to messages From: a domain publishing a DMARC policy of "
 "reject or quarantine or to all messages if DMARC Mitigate unconditionally is "
@@ -692,11 +782,11 @@ msgstr ""
 "메시지에 적용할 작업: DMARC 거부 또는 검역 정책을 게시하는 도메인 또는 DMARC"
 "가 무조건적으로 완화되는 경우 모든 메시지에 적용할 작업입니다."
 
-#: forms/list_forms.py:574
+#: forms/list_forms.py:603
 msgid "DMARC Mitigate unconditionally"
 msgstr "DMARC 무조건 완화"
 
-#: forms/list_forms.py:576
+#: forms/list_forms.py:605
 msgid ""
 "If DMARC mitigation action is munge_from or wrap_message, should it apply to "
 "all messages regardless of the DMARC policy of the From: domain."
@@ -704,11 +794,11 @@ msgstr ""
 "DMARC 완화 조치가 munge_from 또는 lap_message인 경우, 시작: 도메인의 DMARC 정"
 "책과 관계없이 모든 메시지에 적용해야 합니다."
 
-#: forms/list_forms.py:580
+#: forms/list_forms.py:609
 msgid "DMARC rejection notice"
 msgstr "DMARC 거부 통지"
 
-#: forms/list_forms.py:584
+#: forms/list_forms.py:613
 msgid ""
 "Text to replace the default reason in any rejection notice to be sent when "
 "DMARC mitigation action of reject applies."
@@ -716,11 +806,11 @@ msgstr ""
 "거부권의 DMARC 완화 조치가 적용될 때 발송될 거부 통지에서 기본 사유를 대체하"
 "기 위한 텍스트입니다."
 
-#: forms/list_forms.py:587
+#: forms/list_forms.py:616
 msgid "DMARC wrapped message text"
 msgstr "DMARC 포장 메시지 텍스트"
 
-#: forms/list_forms.py:591
+#: forms/list_forms.py:620
 msgid ""
 "Text to be added as a separate text/plain MIME part preceding the original "
 "message part in the wrapped message when DMARC mitigation action of wrap "
@@ -729,19 +819,20 @@ msgstr ""
 "랩 메시지의 DMARC 완화 조치가 적용될 때 포장 메시지의 원래 메시지 부분 앞에 "
 "별도의 텍스트/플레인 MIME 부분으로 추가해야 하는 텍스트입니다."
 
-#: forms/list_forms.py:597
+#: forms/list_forms.py:626 templatetags/membership_helpers.py:78
+#: templatetags/membership_helpers.py:84
 msgid "None"
 msgstr ""
 
-#: forms/list_forms.py:598
+#: forms/list_forms.py:627
 msgid "Individual"
 msgstr ""
 
-#: forms/list_forms.py:599
+#: forms/list_forms.py:628
 msgid "Full"
 msgstr ""
 
-#: forms/list_forms.py:603
+#: forms/list_forms.py:632
 msgid ""
 "\n"
 "    None: No personalization.\n"
@@ -753,28 +844,28 @@ msgid ""
 "header           modification. "
 msgstr ""
 
-#: forms/list_forms.py:613 templates/postorius/lists/held_messages.html:30
+#: forms/list_forms.py:642 templates/postorius/lists/held_messages.html:30
 #: templates/postorius/lists/held_messages.html:108
-#: templates/postorius/lists/pending_confirmations.html:34
-#: templates/postorius/lists/subscription_requests.html:36
+#: templates/postorius/lists/pending_confirmations.html:36
+#: templates/postorius/lists/subscription_requests.html:37
 msgid "Discard"
 msgstr "폐기하다"
 
-#: forms/list_forms.py:614 templates/postorius/lists/held_messages.html:29
+#: forms/list_forms.py:643 templates/postorius/lists/held_messages.html:29
 #: templates/postorius/lists/held_messages.html:107
-#: templates/postorius/lists/subscription_requests.html:35
+#: templates/postorius/lists/subscription_requests.html:40
 msgid "Reject"
 msgstr "거부하다"
 
-#: forms/list_forms.py:615
+#: forms/list_forms.py:644
 msgid "Forward"
 msgstr ""
 
-#: forms/list_forms.py:616
+#: forms/list_forms.py:645
 msgid "Preserve"
 msgstr ""
 
-#: forms/list_forms.py:619
+#: forms/list_forms.py:648
 msgid ""
 "Action to take on messages which have no content\n"
 "after filtering.\n"
@@ -784,85 +875,85 @@ msgid ""
 " Preserve = save the message in qfiles/bad.\n"
 msgstr ""
 
-#: forms/list_forms.py:636
+#: forms/list_forms.py:665
 msgid "Personalize"
 msgstr ""
 
-#: forms/list_forms.py:642
+#: forms/list_forms.py:671
 msgid "Filter content"
 msgstr "필터 내용"
 
-#: forms/list_forms.py:643
+#: forms/list_forms.py:672
 msgid ""
 "Should Mailman filter the content of list traffic according to the settings "
 "below?"
 msgstr "메일맨은 목록 트래픽의 내용을 아래 설정에 따라 필터링해야 하는가?"
 
-#: forms/list_forms.py:646
+#: forms/list_forms.py:675
 #, fuzzy
 #| msgid "Filter content"
 msgid "Filter types"
 msgstr "필터 내용"
 
-#: forms/list_forms.py:649
+#: forms/list_forms.py:678
 msgid ""
 "MimeTypes to filter from the incoming posts. A list of common types can be "
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
 
-#: forms/list_forms.py:654
+#: forms/list_forms.py:683
 #, fuzzy
 #| msgid "Filter content"
 msgid "Filter extensions"
 msgstr "필터 내용"
 
-#: forms/list_forms.py:657
+#: forms/list_forms.py:686
 msgid "Extensions to filter from the incoming posts."
 msgstr ""
 
-#: forms/list_forms.py:660
+#: forms/list_forms.py:689
 msgid "Pass types"
 msgstr ""
 
-#: forms/list_forms.py:663
+#: forms/list_forms.py:692
 msgid ""
 "MimeTypes to allow in the incoming posts. A list of common types can be "
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
 
-#: forms/list_forms.py:668
+#: forms/list_forms.py:697
 #, fuzzy
 #| msgid "Mass operations"
 msgid "Pass extensions"
 msgstr "대량 작전"
 
-#: forms/list_forms.py:671
+#: forms/list_forms.py:700
 msgid "Extensions to allow in the incoming posts."
 msgstr ""
 
-#: forms/list_forms.py:677
+#: forms/list_forms.py:706
 msgid "Collapse alternatives"
 msgstr "대체품 축소"
 
-#: forms/list_forms.py:678
+#: forms/list_forms.py:707
 msgid ""
 "Should Mailman collapse multipart/alternative to its first part content?"
 msgstr ""
 "메일맨이 그것의 첫 번째 부분 내용에 대한 다중/대체로 삭제되어야 하는가?"
 
-#: forms/list_forms.py:684
+#: forms/list_forms.py:713
 #, fuzzy
 #| msgid "Filter content"
 msgid "Filter Action"
 msgstr "필터 내용"
 
-#: forms/list_forms.py:690
+#: forms/list_forms.py:719
 msgid "Convert html to plaintext"
 msgstr "글레이너로 변환 html"
 
-#: forms/list_forms.py:691
+#: forms/list_forms.py:720
 msgid ""
 "Should Mailman convert text/html parts to plain text? This conversion "
 "happens after MIME attachments have been stripped."
@@ -870,22 +961,22 @@ msgstr ""
 "메일맨이 텍스트/html 부품을 일반 텍스트로 변환해야 하는가? 이러한 변환은 "
 "MIME 첨부 파일이 벗겨진 후에 이루어진다."
 
-#: forms/list_forms.py:698
+#: forms/list_forms.py:727
 msgid "Anonymous list"
 msgstr "익명 목록"
 
-#: forms/list_forms.py:699
+#: forms/list_forms.py:728
 msgid ""
 "Hide the sender of a message, replacing it with the list address (Removes "
 "From, Sender and Reply-To fields)"
 msgstr ""
 "메시지의 발신인 숨기기, 목록 주소(Remove From, Sender 및 Reply-To 필드)"
 
-#: forms/list_forms.py:706
+#: forms/list_forms.py:735
 msgid "Include RFC2369 headers"
 msgstr "RFC2369 헤더 포함"
 
-#: forms/list_forms.py:708
+#: forms/list_forms.py:737
 msgid ""
 "Yes is highly recommended. RFC 2369 defines a set of List-* headers that are "
 "normally added to every message sent to the list membership. These greatly "
@@ -909,11 +1000,11 @@ msgstr ""
 "것은 권장되지 않는다. (그리고 사실, 이러한 헤더를 비활성화하는 능력은 결국 사"
 "라질 수도 있다)."
 
-#: forms/list_forms.py:724
+#: forms/list_forms.py:753
 msgid "Include the list post header"
 msgstr "목록 포스트 헤더를 포함"
 
-#: forms/list_forms.py:726
+#: forms/list_forms.py:755
 msgid ""
 "This can be set to no for announce lists that do not wish to include the "
 "List-Post header because posting to the list is discouraged."
@@ -921,11 +1012,11 @@ msgstr ""
 "List-Post 헤더를 포함하지 않으려는 공지 목록의 경우 \"아니오\"로 설정할 수 있"
 "습니다."
 
-#: forms/list_forms.py:730
+#: forms/list_forms.py:759
 msgid "Explicit reply-to address"
 msgstr "명시적 회신 주소"
 
-#: forms/list_forms.py:733
+#: forms/list_forms.py:762
 msgid ""
 "This option allows admins to set an explicit Reply-to address. It is only "
 "used if the reply-to is set to use an explicitly set header"
@@ -933,7 +1024,7 @@ msgstr ""
 "이 옵션을 사용하면 관리자가 명시적인 회신 주소를 설정할 수 있습니다. 명시적으"
 "로 설정된 헤더를 사용하도록 응답자가 설정된 경우에만 사용됩니다"
 
-#: forms/list_forms.py:741
+#: forms/list_forms.py:770
 msgid ""
 "Should any existing Reply-To: header found in the original message be "
 "stripped? If so, this will be done regardless of whether an explict Reply-"
@@ -942,27 +1033,27 @@ msgstr ""
 "기존 회신 대상: 원래 메시지에서 발견된 헤더를 벗겨야 하는가? 만약 그렇다면, "
 "이것은 메일맨이 헤더를 추가했는지 여부에 관계없이 수행될 것입니다."
 
-#: forms/list_forms.py:745 forms/list_forms.py:752
+#: forms/list_forms.py:774 forms/list_forms.py:781
 msgid "Reply goes to list"
 msgstr "회신이 목록으로 이동함"
 
-#: forms/list_forms.py:749
+#: forms/list_forms.py:778
 msgid "Please choose a reply-to action."
 msgstr "회신 작업을 선택하십시오."
 
-#: forms/list_forms.py:751
+#: forms/list_forms.py:780
 msgid "No Munging"
 msgstr "노 멍징"
 
-#: forms/list_forms.py:753
+#: forms/list_forms.py:782
 msgid "Explicit Reply-to header set"
 msgstr "명시적 회신 헤더 세트"
 
-#: forms/list_forms.py:754
+#: forms/list_forms.py:783
 msgid "Explicit Reply-to set; no Cc added"
 msgstr "명시적 회신 설정, Cc 추가 안 함"
 
-#: forms/list_forms.py:756
+#: forms/list_forms.py:785
 #, fuzzy
 #| msgid ""
 #| "Where are replies to list messages directed? No Munging is strongly "
@@ -1034,64 +1125,64 @@ msgstr ""
 "을 지원하려면 명시적 회신을 선택하고 회신 대상: 주소 옵션을 병렬 목록을 가리"
 "키도록 설정하십시오."
 
-#: forms/list_forms.py:788
+#: forms/list_forms.py:817
 msgid "Pipeline"
 msgstr "파이프라인"
 
-#: forms/list_forms.py:793
+#: forms/list_forms.py:822
 msgid "Type of pipeline you want to use for this mailing list"
 msgstr "이 메일링 목록에 사용할 파이프라인 유형"
 
-#: forms/list_forms.py:801
+#: forms/list_forms.py:830
 msgid "Respond and continue processing"
 msgstr "응답 및 처리 계속"
 
-#: forms/list_forms.py:802
+#: forms/list_forms.py:831
 msgid "Respond and discard message"
 msgstr "응답 및 메시지 삭제"
 
-#: forms/list_forms.py:803
+#: forms/list_forms.py:832
 msgid "No automatic response"
 msgstr "자동 응답 없음"
 
-#: forms/list_forms.py:807
+#: forms/list_forms.py:836
 msgid "Autorespond to list owner"
 msgstr "자동 응답 - 목록 소유자"
 
-#: forms/list_forms.py:808
+#: forms/list_forms.py:837
 msgid ""
 "Should Mailman send an auto-response to emails sent to the -owner address?"
 msgstr "메일맨 주소로 발송된 이메일에 대해 메일맨이 자동 응답을 보내야 하는가?"
 
-#: forms/list_forms.py:811
+#: forms/list_forms.py:840
 msgid "Autoresponse owner text"
 msgstr "작성자 첨부 파일 Owner text"
 
-#: forms/list_forms.py:814
+#: forms/list_forms.py:843
 msgid "Auto-response text to send to -owner emails."
 msgstr "owner e-메일로 보낼 자동 응답 텍스트."
 
-#: forms/list_forms.py:818
+#: forms/list_forms.py:847
 msgid "Autorespond postings"
 msgstr "자동응답 게시물"
 
-#: forms/list_forms.py:819
+#: forms/list_forms.py:848
 msgid "Should Mailman send an auto-response to mailing list posters?"
 msgstr "메일맨이 우편물 배달 목록 포스터에 자동 응답을 보내야 하는가?"
 
-#: forms/list_forms.py:822
+#: forms/list_forms.py:851
 msgid "Autoresponse postings text"
 msgstr "게시물 자동 응답 텍스트"
 
-#: forms/list_forms.py:825
+#: forms/list_forms.py:854
 msgid "Auto-response text to send to mailing list posters."
 msgstr "메일링 리스트 포스터에 보낼 자동 응답 텍스트."
 
-#: forms/list_forms.py:829
+#: forms/list_forms.py:858
 msgid "Autorespond requests"
 msgstr "자동응답 요청"
 
-#: forms/list_forms.py:831
+#: forms/list_forms.py:860
 msgid ""
 "Should Mailman send an auto-response to emails sent to the -request address? "
 "If you choose yes, decide whether you want Mailman to discard the original "
@@ -1101,19 +1192,19 @@ msgstr ""
 "택한 경우, 메일맨이 원본 전자 메일을 삭제할지 아니면 일반 메일 명령으로 시스"
 "템에 전달할지 결정하십시오."
 
-#: forms/list_forms.py:836
+#: forms/list_forms.py:865
 msgid "Autoresponse request text"
 msgstr "자동응답 요청 텍스트"
 
-#: forms/list_forms.py:839
+#: forms/list_forms.py:868
 msgid "Auto-response text to send to -request emails."
 msgstr "요청메일로 보낼시 텍스트 자동 응답."
 
-#: forms/list_forms.py:841
+#: forms/list_forms.py:870
 msgid "Autoresponse grace period"
 msgstr "자동응답 유예기간"
 
-#: forms/list_forms.py:843
+#: forms/list_forms.py:872
 msgid ""
 "Number of days between auto-responses to either the mailing list or -"
 "request/-owner address from the same poster. Set to zero (or negative) for "
@@ -1122,11 +1213,11 @@ msgstr ""
 "메일링 리스트 또는 동일한 포스터의 -request/owner 주소와 자동 응답 사이의 일 "
 "수입니다. 유예 기간 없이 0(또는 음)으로 설정(즉, 모든 메시지에 자동 응답)."
 
-#: forms/list_forms.py:851
+#: forms/list_forms.py:880
 msgid "Notify users of held messages"
 msgstr "사용한 메시지의 사용자 확인"
 
-#: forms/list_forms.py:853
+#: forms/list_forms.py:882
 msgid ""
 "Should Mailman notify users about their messages held for approval. If you "
 "say 'No', no notifications will be sent to users about the pending approval "
@@ -1136,11 +1227,11 @@ msgstr ""
 "오'라고 말하면, 사용자의 메시지에 대한 보류 중인 승인에 대한 통지가 발송되지 "
 "않습니다."
 
-#: forms/list_forms.py:860 forms/list_forms.py:1058
+#: forms/list_forms.py:889 forms/list_forms.py:1087
 msgid "Send welcome message"
 msgstr "환영 메시지 보내기"
 
-#: forms/list_forms.py:862
+#: forms/list_forms.py:891
 msgid ""
 "Send welcome message to newly subscribed members? Turn this off only if you "
 "plan on subscribing people manually and don't want them to know that you did "
@@ -1154,13 +1245,13 @@ msgstr ""
 "을 투명하게 마이그레이션하는 데 가장 유용하다.\n"
 "시작 메시지의 텍스트는 템플릿 탭을 통해 설정할 수 있다."
 
-#: forms/list_forms.py:872
+#: forms/list_forms.py:901
 #, fuzzy
 #| msgid "Send welcome message"
 msgid "Send goodbye message"
 msgstr "환영 메시지 보내기"
 
-#: forms/list_forms.py:874
+#: forms/list_forms.py:903
 #, fuzzy
 #| msgid ""
 #| "Send welcome message to newly subscribed members? Turn this off only if "
@@ -1180,11 +1271,11 @@ msgstr ""
 "을 투명하게 마이그레이션하는 데 가장 유용하다.\n"
 "시작 메시지의 텍스트는 템플릿 탭을 통해 설정할 수 있다."
 
-#: forms/list_forms.py:881
+#: forms/list_forms.py:910
 msgid "Admin immed notify"
 msgstr "관리 이미지 통지"
 
-#: forms/list_forms.py:883
+#: forms/list_forms.py:912
 msgid ""
 "Should the list moderators get immediate notice of new requests, as well as "
 "daily notices about collected ones? List moderators (and list "
@@ -1198,39 +1289,39 @@ msgstr ""
 "독) 또는 이런저런 이유로 보류 중인 게시물)을 매일 상기시켜 보낸다. 이 옵션을 "
 "설정하면 새로운 요청이 도착하는 즉시 통지가 발송된다. "
 
-#: forms/list_forms.py:893
+#: forms/list_forms.py:922
 msgid "Notify admin of membership changes"
 msgstr "관리자(admin)에게 구성원 자격 변경 알림"
 
-#: forms/list_forms.py:894
+#: forms/list_forms.py:923
 msgid "Should administrator get notices of subscribes and unsubscribes?"
 msgstr "관리자가 구독 및 구독 취소 통지를 받아야 하는가?"
 
-#: forms/list_forms.py:899
+#: forms/list_forms.py:928
 #, fuzzy
 #| msgid "Moderate"
 msgid "Not Moderated"
 msgstr "적당한"
 
-#: forms/list_forms.py:900
+#: forms/list_forms.py:929
 msgid "Moderated but allows for open posting"
 msgstr ""
 
-#: forms/list_forms.py:901
+#: forms/list_forms.py:930
 #, fuzzy
 #| msgid "Moderate"
 msgid "Moderated"
 msgstr "적당한"
 
-#: forms/list_forms.py:912
+#: forms/list_forms.py:941
 msgid "Show list on index page"
 msgstr "인덱스 페이지에 목록 표시"
 
-#: forms/list_forms.py:913
+#: forms/list_forms.py:942
 msgid "Choose whether to include this list on the list of all lists"
 msgstr "모든 목록에 이 목록을 포함할지 선택"
 
-#: forms/list_forms.py:919
+#: forms/list_forms.py:948
 msgid ""
 "This description is used when the mailing list is listed with other mailing "
 "lists, or in headers, and so forth. It should be as succinct as you can get "
@@ -1240,93 +1331,93 @@ msgstr ""
 "용된다. 그것은 당신이 얻을 수 있는 한 간결해야 하며, 동시에 그 리스트가 무엇"
 "인지 알아내야 한다."
 
-#: forms/list_forms.py:925
+#: forms/list_forms.py:954
 msgid "Information"
 msgstr "정보"
 
-#: forms/list_forms.py:926
+#: forms/list_forms.py:955
 msgid "A longer description of this mailing list."
 msgstr "이 메일링 리스트에 대한 더 긴 설명."
 
-#: forms/list_forms.py:930
+#: forms/list_forms.py:959
 msgid "Display name"
 msgstr "표시 이름"
 
-#: forms/list_forms.py:932
+#: forms/list_forms.py:961
 msgid "Display name is the name shown in the web interface."
 msgstr "표시 이름은 웹 인터페이스에 표시된 이름이다."
 
-#: forms/list_forms.py:935
+#: forms/list_forms.py:964
 msgid "Subject prefix"
 msgstr "제목 접두사"
 
-#: forms/list_forms.py:940
+#: forms/list_forms.py:969
 msgid "Preferred Language"
 msgstr "선호 언어"
 
-#: forms/list_forms.py:946
+#: forms/list_forms.py:975
 msgid "Members List Visibility"
 msgstr "구성원 목록 가시성"
 
-#: forms/list_forms.py:950
+#: forms/list_forms.py:979
 msgid "Who is allowed to see members list for this MailingList?"
 msgstr "누가 이 메일링 리스트의 구성원 목록을 볼 수 있는가?"
 
-#: forms/list_forms.py:955
+#: forms/list_forms.py:984
 msgid "Gateway to mail"
 msgstr ""
 
-#: forms/list_forms.py:956
+#: forms/list_forms.py:985
 msgid ""
 "Flag indicating that posts to the linked newsgroup should be gated to the "
 "list"
 msgstr ""
 
-#: forms/list_forms.py:962
+#: forms/list_forms.py:991
 msgid "Gateway to news"
 msgstr ""
 
-#: forms/list_forms.py:963
+#: forms/list_forms.py:992
 msgid ""
 "Flag indicating that posts to the list should be gated to the linked "
 "newsgroup."
 msgstr ""
 
-#: forms/list_forms.py:967
+#: forms/list_forms.py:996
 msgid "Linked Newsgroup"
 msgstr ""
 
-#: forms/list_forms.py:970
+#: forms/list_forms.py:999
 msgid "The name of the linked newsgroup."
 msgstr ""
 
-#: forms/list_forms.py:973
+#: forms/list_forms.py:1002
 #, fuzzy
 #| msgid "Set member moderation"
 msgid "Newsgroup moderation"
 msgstr "멤버 절제 설정"
 
-#: forms/list_forms.py:977
+#: forms/list_forms.py:1006
 msgid "The moderation policy for the linked newsgroup, if there is one."
 msgstr ""
 
-#: forms/list_forms.py:983
+#: forms/list_forms.py:1012
 #, fuzzy
 #| msgid "Subject prefix"
 msgid "NNTP Include subject prefix "
 msgstr "제목 접두사"
 
-#: forms/list_forms.py:984
+#: forms/list_forms.py:1013
 msgid ""
 "Flag indicating whether the list's \"Subject Prefix\" should be included in "
 "posts gated to usenet."
 msgstr ""
 
-#: forms/list_forms.py:999
+#: forms/list_forms.py:1028
 msgid "Emails to mass subscribe"
 msgstr "대량 구독 이메일"
 
-#: forms/list_forms.py:1001
+#: forms/list_forms.py:1030
 msgid ""
 "The following formats are accepted:\n"
 "jdoe@example.com\n"
@@ -1344,118 +1435,118 @@ msgstr ""
 "jdoe@example.com (존도)\n"
 "마지막 세 개를 사용하여 표시 이름을 주소와 연결\n"
 
-#: forms/list_forms.py:1012
+#: forms/list_forms.py:1041
 #, fuzzy
 #| msgid "Confirm"
 msgid "Pre confirm"
 msgstr "확인"
 
-#: forms/list_forms.py:1016
+#: forms/list_forms.py:1045
 msgid "If checked, users will not have to confirm their subscription."
 msgstr ""
 
-#: forms/list_forms.py:1021
+#: forms/list_forms.py:1050
 msgid "Pre approved"
 msgstr ""
 
-#: forms/list_forms.py:1025
+#: forms/list_forms.py:1054
 msgid ""
 "If checked, moderators will not have to approve the subscription request."
 msgstr ""
 
-#: forms/list_forms.py:1031
+#: forms/list_forms.py:1060
 msgid "Pre Verified"
 msgstr ""
 
-#: forms/list_forms.py:1035
+#: forms/list_forms.py:1064
 msgid ""
 "If checked, users will not have to verify that their email address is valid."
 msgstr ""
 
-#: forms/list_forms.py:1041
+#: forms/list_forms.py:1070
 #, fuzzy
 #| msgid "Information"
 msgid "Invitation"
 msgstr "정보"
 
-#: forms/list_forms.py:1045
+#: forms/list_forms.py:1074
 msgid ""
 "If checked, the other checkboxes are ignored and the users will be sent an "
 "invitation to join the list and will be subscribed upon acceptance thereof."
 msgstr ""
 
-#: forms/list_forms.py:1054 forms/list_forms.py:1147
+#: forms/list_forms.py:1083 forms/list_forms.py:1176
 msgid "List default"
 msgstr "기본값 나열"
 
-#: forms/list_forms.py:1060
+#: forms/list_forms.py:1089
 msgid ""
 "If set to \"Yes\" or \"No\", List's default setting of send_welcome_message "
 "will be ignored for these subscribers and a welcome message will be sent or "
 "not sent based on the choice."
 msgstr ""
 
-#: forms/list_forms.py:1080
+#: forms/list_forms.py:1109
 msgid "Emails to Unsubscribe"
 msgstr "Emails 상세 내용에"
 
-#: forms/list_forms.py:1081
+#: forms/list_forms.py:1110
 msgid "Add one email address on each line"
 msgstr "각 줄에 하나의 이메일 주소 추가"
 
-#: forms/list_forms.py:1096
+#: forms/list_forms.py:1125
 msgid "Default antispam action"
 msgstr "기본 안티스팸 동작"
 
-#: forms/list_forms.py:1100
+#: forms/list_forms.py:1129
 msgid "Header"
 msgstr "헤더"
 
-#: forms/list_forms.py:1101
+#: forms/list_forms.py:1130
 msgid "Email header to filter on (case-insensitive)."
 msgstr "필터링할 이메일 헤더(대소문자 구분 안 함)."
 
-#: forms/list_forms.py:1103
+#: forms/list_forms.py:1132
 msgid "Please enter a header."
 msgstr "헤더를 입력하십시오."
 
-#: forms/list_forms.py:1104
+#: forms/list_forms.py:1133
 msgid "Please enter a valid header."
 msgstr "유효한 헤더를 입력합니다."
 
-#: forms/list_forms.py:1106
+#: forms/list_forms.py:1135
 msgid "Pattern"
 msgstr "양식"
 
-#: forms/list_forms.py:1107
+#: forms/list_forms.py:1136
 msgid "Regular expression matching the header's value."
 msgstr "헤더 값과 일치하는 정규식."
 
-#: forms/list_forms.py:1109
+#: forms/list_forms.py:1138
 msgid "Please enter a pattern."
 msgstr "패턴을 입력하십시오."
 
-#: forms/list_forms.py:1110
+#: forms/list_forms.py:1139
 msgid "Please enter a valid pattern."
 msgstr "올바른 패턴을 입력하십시오."
 
-#: forms/list_forms.py:1112 templates/postorius/domain/index.html:26
+#: forms/list_forms.py:1141 templates/postorius/domain/index.html:26
 msgid "Action"
 msgstr "액션"
 
-#: forms/list_forms.py:1113
+#: forms/list_forms.py:1142
 msgid "Please enter a valid action."
 msgstr "올바른 작업을 입력하십시오."
 
-#: forms/list_forms.py:1116
+#: forms/list_forms.py:1145
 msgid "Action to take when a header matches"
 msgstr "헤더가 일치할 때 수행할 작업"
 
-#: forms/list_forms.py:1145
+#: forms/list_forms.py:1174
 msgid "Moderation"
 msgstr "적당함"
 
-#: forms/list_forms.py:1149
+#: forms/list_forms.py:1178
 msgid ""
 "Default action to take when this member posts to the list. \n"
 "List default -- follow the list's default member action. \n"
@@ -1478,11 +1569,11 @@ msgstr ""
 "수락 - 추가 확인 없이 모든 게시물을 수락하십시오.\n"
 "기본 처리 - 추가 확인을 실행하고 메시지를 수락하십시오. \n"
 
-#: forms/list_forms.py:1166
+#: forms/list_forms.py:1195
 msgid "Select Email"
 msgstr "이메일 선택"
 
-#: forms/list_forms.py:1184
+#: forms/list_forms.py:1219
 msgid "Data"
 msgstr "데이터"
 
@@ -1510,70 +1601,11 @@ msgstr ""
 "단일 이메일 주소를 금지하거나 정규식을 사용하여 유사한 이메일 주소에 일치시"
 "킬 수 있습니다."
 
-#: forms/user_forms.py:50
-msgid "Regular"
-msgstr "규칙적인"
-
-#: forms/user_forms.py:51
-msgid "Plain Text Digests"
-msgstr "일반 텍스트 요약"
-
-#: forms/user_forms.py:52
-msgid "Mime Digests"
-msgstr "마임 다이제스트"
-
-#: forms/user_forms.py:53
-msgid "Summary Digests"
-msgstr "요약 다이제스트"
-
-#: forms/user_forms.py:55
-msgid "Enabled"
-msgstr "가능한"
-
-#: forms/user_forms.py:55
-msgid "Disabled"
-msgstr "장애를 가진"
-
-#: forms/user_forms.py:60
-msgid "Delivery status"
-msgstr "납품여부"
-
 #: forms/user_forms.py:62
-msgid ""
-"Set this option to Enabled to receive messages posted to this mailing list. "
-"Set it to Disabled if you want to stay subscribed, but don't want mail "
-"delivered to you for a while (e.g. you're going on vacation). If you disable "
-"mail delivery, don't forget to re-enable it when you come back; it will not "
-"be automatically re-enabled."
-msgstr ""
-"이 메일링 목록에 게시된 메시지를 수신하려면 이 옵션을 사용으로 설정하십시오. "
-"구독 상태를 유지하려면 사용 안 함으로 설정하되, 잠시 동안(예: 휴가 중) 메일"
-"이 배달되는 것을 원하지 마십시오. 메일 배달이 비활성화된 경우, 돌아올 때 다"
-"시 활성화하는 것을 잊지 마십시오. 자동으로 다시 활성화되지는 않을 겁니다."
-
-#: forms/user_forms.py:72
-msgid "Delivery mode"
-msgstr "배달 모드"
-
-#: forms/user_forms.py:74
-msgid ""
-"If you select summary digests , you'll get posts bundled together (usually "
-"one per day but possibly more on busy lists), instead of singly when they're "
-"sent. Your mail reader may or may not support MIME digests. In general MIME "
-"digests are preferred, but if you have a problem reading them, select plain "
-"text digests."
-msgstr ""
-"요약 다이제스트를 선택하면, 발송할 때 단독으로 게시하는 대신, 게시물이 함께 "
-"묶이게 된다(대개 하루에 한 개씩 하지만 사용 빈도가 높은 목록에 더 있을 수 있"
-"음). 메일 리더는 MIME 다이제스트를 지원할 수도 있고 지원하지 않을 수도 있다. "
-"일반적으로 MIME 다이제스트는 선호되지만, 읽기에 문제가 있는 경우 일반 텍스트 "
-"다이제스트를 선택하십시오."
-
-#: forms/user_forms.py:83
 msgid "Receive own postings"
 msgstr "자체 게시물 수신"
 
-#: forms/user_forms.py:85
+#: forms/user_forms.py:64
 msgid ""
 "Ordinarily, you will get a copy of every message you post to the list. If "
 "you don't want to receive this copy, set this option to No."
@@ -1581,19 +1613,19 @@ msgstr ""
 "보통, 당신은 목록에 올린 모든 메시지의 사본을 받게 될 것이다. 이 복사본을 수"
 "신하지 않으려면 이 옵션을 아니요로 설정하십시오."
 
-#: forms/user_forms.py:92
+#: forms/user_forms.py:71
 msgid "Acknowledge posts"
 msgstr "게시물 승인"
 
-#: forms/user_forms.py:94
+#: forms/user_forms.py:73
 msgid "Receive acknowledgement mail when you send mail to the list?"
 msgstr "목록으로 메일을 보낼 때 승인 메일을 받으시겠습니까?"
 
-#: forms/user_forms.py:98
+#: forms/user_forms.py:77
 msgid "Hide address"
 msgstr "주소 숨기기"
 
-#: forms/user_forms.py:100
+#: forms/user_forms.py:79
 msgid ""
 "When someone views the list membership, your email address is normally shown "
 "(in an obscured fashion to thwart spam harvesters). If you do not want your "
@@ -1604,11 +1636,11 @@ msgstr ""
 "기 위해 가려진 방식으로) 나타난다. 전자 메일 주소를 이 구성원 목록에 표시하"
 "지 않으려면 이 옵션에 대해 예를 선택하십시오."
 
-#: forms/user_forms.py:108
+#: forms/user_forms.py:87
 msgid "Receive list copies (possible duplicates)"
 msgstr "목록 복사본 수신(복제될 수 있음)"
 
-#: forms/user_forms.py:110
+#: forms/user_forms.py:89
 msgid ""
 "When you are listed explicitly in the To: or Cc: headers of a list message, "
 "you can opt to not receive another copy from the mailing list. Select Yes to "
@@ -1618,17 +1650,21 @@ msgstr ""
 "서 다른 복사본을 수신하지 않도록 선택할 수 있다. 사본을 받으려면 예를 선택하"
 "십시오. 메일 목록에서 사본을 수신하지 않으려면 아니요를 선택하십시오"
 
-#: forms/user_forms.py:119
+#: forms/user_forms.py:98
 #, fuzzy
 #| msgid "Preferred Language"
 msgid "Preferred language"
 msgstr "선호 언어"
 
-#: forms/user_forms.py:121
+#: forms/user_forms.py:100
 msgid ""
 "Preferred language for your interactions with Mailman. When this is set, it "
 "will override the MailingList's preferred language. This affects which "
 "language is used for your email notifications and such."
+msgstr ""
+
+#: forms/user_forms.py:144
+msgid "Cannot set delivery_status to {}"
 msgstr ""
 
 #: forms/validators.py:39
@@ -1947,10 +1983,10 @@ msgstr ""
 #: templates/postorius/domain/index.html:59
 #: templates/postorius/domain/template_index.html:34
 #: templates/postorius/lists/confirm_delete.html:5
-#: templates/postorius/lists/members.html:107
-#: templates/postorius/lists/members.html:116
+#: templates/postorius/lists/members.html:128
+#: templates/postorius/lists/members.html:137
 #: templates/postorius/lists/template_list.html:32
-#: templates/postorius/menu/list_nav.html:59
+#: templates/postorius/menu/list_nav.html:62
 msgid "Delete"
 msgstr "삭제"
 
@@ -1973,7 +2009,7 @@ msgid "Add Domain"
 msgstr "도메인 추가"
 
 #: templates/postorius/domain/index.html:25
-#: templates/postorius/menu/list_nav.html:42
+#: templates/postorius/menu/list_nav.html:45
 msgid "Owners"
 msgstr "오너"
 
@@ -2001,7 +2037,7 @@ msgstr "추가"
 #: templates/postorius/lists/template_delete.html:7
 #: templates/postorius/lists/template_list.html:7
 #: templates/postorius/lists/template_update.html:7
-#: templates/postorius/menu/list_nav.html:45 templatetags/nav_helpers.py:38
+#: templates/postorius/menu/list_nav.html:48 templatetags/nav_helpers.py:38
 msgid "Templates"
 msgstr "템플릿"
 
@@ -2204,7 +2240,7 @@ msgid ""
 msgstr ""
 
 #: templates/postorius/lists/header_matches.html:7
-#: templates/postorius/menu/list_nav.html:58
+#: templates/postorius/menu/list_nav.html:61
 msgid "Header filters"
 msgstr "헤더 필터"
 
@@ -2217,7 +2253,7 @@ msgid "Changes pending, click on the button to save them."
 msgstr "보류 중인 변경 사항을 저장하려면 버튼을 클릭하십시오."
 
 #: templates/postorius/lists/held_messages.html:10
-#: templates/postorius/menu/list_nav.html:28
+#: templates/postorius/menu/list_nav.html:31
 msgid "Held messages"
 msgstr "고정된 메시지"
 
@@ -2227,7 +2263,7 @@ msgstr "선택한 메시지에 대해 작업 수행"
 
 #: templates/postorius/lists/held_messages.html:28
 #: templates/postorius/lists/held_messages.html:106
-#: templates/postorius/lists/subscription_requests.html:34
+#: templates/postorius/lists/subscription_requests.html:36
 msgid "Accept"
 msgstr "받아들이세요"
 
@@ -2286,7 +2322,7 @@ msgid "Unsubscribe users"
 msgstr "구독 취소 사용자"
 
 #: templates/postorius/lists/mass_subscribe.html:7
-#: templates/postorius/menu/list_nav.html:53
+#: templates/postorius/menu/list_nav.html:56
 msgid "Mass subscribe"
 msgstr "매스 구독"
 
@@ -2320,13 +2356,16 @@ msgstr "CSV 내보내기"
 msgid "Address"
 msgstr "주소"
 
-#: templates/postorius/lists/members.html:93
-msgid "Member Options"
-msgstr "구성원 옵션"
+#: templates/postorius/lists/members.html:78
+#: templates/postorius/user/subscriptions.html:24
+msgid "Delivery Mode"
+msgstr "전송 모드"
 
-#: templates/postorius/lists/members.html:105
-msgid "Non-member Options"
-msgstr "비회원 옵션"
+#: templates/postorius/lists/members.html:81
+#, fuzzy
+#| msgid "Moderation"
+msgid "Moderation Action"
+msgstr "적당함"
 
 #: templates/postorius/lists/new.html:6
 msgid "Create list"
@@ -2346,25 +2385,24 @@ msgstr "전자 메일 주소"
 msgid "Actions"
 msgstr "행동들"
 
-#: templates/postorius/lists/pending_confirmations.html:35
-#: templates/postorius/lists/subscription_requests.html:37
+#: templates/postorius/lists/pending_confirmations.html:37
+#: templates/postorius/lists/subscription_requests.html:38
 msgid "Ban"
 msgstr "금지"
 
-#: templates/postorius/lists/pending_confirmations.html:44
-#: templates/postorius/lists/subscription_requests.html:46
+#: templates/postorius/lists/pending_confirmations.html:47
+#: templates/postorius/lists/subscription_requests.html:50
 msgid "There are currently no subscription requests for this list."
 msgstr "현재 이 목록에 대한 구독 요청이 없다."
 
 #: templates/postorius/lists/settings.html:7
-#: templates/postorius/menu/list_nav.html:46
+#: templates/postorius/menu/list_nav.html:49
 msgid "Settings"
 msgstr "설정"
 
-#: templates/postorius/lists/subscription_requests.html:7
-#: templates/postorius/menu/list_nav.html:14
-msgid "Subscription requests"
-msgstr "구독 요청"
+#: templates/postorius/lists/subscription_requests.html:39
+msgid "Rejection reason"
+msgstr ""
 
 #: templates/postorius/lists/summary.html:8
 #: templates/postorius/menu/list_nav.html:10
@@ -2407,6 +2445,7 @@ msgid "You are subscribed to this list with the following address:"
 msgstr "다음 주소로 이 목록에 가입하셨습니다:"
 
 #: templates/postorius/lists/summary.html:49
+#: templates/postorius/user/subscription_preferences.html:49
 #, fuzzy
 #| msgid "Email Address"
 msgid "Primary Address"
@@ -2512,6 +2551,10 @@ msgstr ""
 "     %(identifier)s로부터 %(name)s 템플릿 삭제하시겠습니까?\n"
 "     "
 
+#: templates/postorius/menu/list_nav.html:14
+msgid "Subscription requests"
+msgstr "구독 요청"
+
 #: templates/postorius/menu/list_nav.html:19
 msgid "Pending Approval"
 msgstr "승인 대기 중"
@@ -2520,31 +2563,37 @@ msgstr "승인 대기 중"
 msgid "Pending Confirmation"
 msgstr "확인 보류 중"
 
-#: templates/postorius/menu/list_nav.html:36
+#: templates/postorius/menu/list_nav.html:25
+#, fuzzy
+#| msgid "Subscription requests"
+msgid "Unsubscription Requests"
+msgstr "구독 요청"
+
+#: templates/postorius/menu/list_nav.html:39
 msgid "Users"
 msgstr "사용자들"
 
-#: templates/postorius/menu/list_nav.html:39
+#: templates/postorius/menu/list_nav.html:42
 msgid "Members"
 msgstr "회원들"
 
-#: templates/postorius/menu/list_nav.html:40
+#: templates/postorius/menu/list_nav.html:43
 msgid "Non-Members"
 msgstr "비회원들"
 
-#: templates/postorius/menu/list_nav.html:41
+#: templates/postorius/menu/list_nav.html:44
 msgid "Moderators"
 msgstr "의장"
 
-#: templates/postorius/menu/list_nav.html:50
+#: templates/postorius/menu/list_nav.html:53
 msgid "Mass operations"
 msgstr "대량 작전"
 
-#: templates/postorius/menu/list_nav.html:54
+#: templates/postorius/menu/list_nav.html:57
 msgid "Mass removal"
 msgstr "메스 제거"
 
-#: templates/postorius/menu/list_nav.html:57
+#: templates/postorius/menu/list_nav.html:60
 msgid "Ban List"
 msgstr "금지 리스트"
 
@@ -2610,7 +2659,7 @@ msgstr ""
 "인 가능)"
 
 #: templates/postorius/user/address_preferences.html:62
-#: templates/postorius/user/subscription_preferences.html:68
+#: templates/postorius/user/subscription_preferences.html:73
 msgid "Save"
 msgstr "지키다"
 
@@ -2649,10 +2698,6 @@ msgstr "귀하는 다음의 메일링 목록에 가입하고 있다:"
 #: templates/postorius/user/subscriptions.html:23
 msgid "Subscription Address"
 msgstr "구독 주소"
-
-#: templates/postorius/user/subscriptions.html:24
-msgid "Delivery Mode"
-msgstr "전송 모드"
 
 #: templates/postorius/user/subscriptions.html:25
 msgid "Role"
@@ -2714,7 +2759,7 @@ msgstr "구독 설정들"
 msgid "Global Settings"
 msgstr "글로벌 설정"
 
-#: utils.py:38
+#: utils.py:37
 msgid "Mailman REST API not available. Please start Mailman core."
 msgstr "메일맨 REST API를 사용할 수 없음. 메일맨 코어를 시작하십시오."
 
@@ -2722,330 +2767,381 @@ msgstr "메일맨 REST API를 사용할 수 없음. 메일맨 코어를 시작�
 msgid "New Domain registered"
 msgstr "새 도메인 등록"
 
-#: views/domain.py:113
+#: views/domain.py:114
 #, python-format
 msgid "Domain %s updated"
 msgstr "%s 도메인 업데이트"
 
-#: views/domain.py:116 views/list.py:763
+#: views/domain.py:117 views/list.py:833
 msgid "Please check the errors below"
 msgstr "아래의 오류를 확인하십시오"
 
-#: views/domain.py:140
+#: views/domain.py:141
 #, python-format
 msgid "The domain %s has been deleted."
 msgstr "%s 도메인이 삭제되었다."
 
-#: views/domain.py:145
+#: views/domain.py:146
 #, python-format
 msgid "The domain could not be deleted: %s"
 msgstr "도메인을 삭제할 수 없음: %s"
 
-#: views/domain.py:163
+#: views/domain.py:164
 msgid "Added {} as an owner for {}"
 msgstr "{}의 소유자로 {} 추가"
 
-#: views/domain.py:192
+#: views/domain.py:193
 msgid "{} is not an owner for {}"
 msgstr "{}이(가) {}의 소유자가 아님"
 
-#: views/domain.py:199
+#: views/domain.py:200
 msgid "Removed {} as an owner for {}"
 msgstr "{}이(가) {}의 소유자가 아님"
 
-#: views/generic.py:104
+#: views/generic.py:112
 msgid "The email {} has been banned."
 msgstr "이메일 {}이(가) 금지되었다."
 
-#: views/generic.py:108 views/generic.py:119 views/list.py:1196
+#: views/generic.py:116 views/generic.py:127 views/list.py:1299
 #, python-format
 msgid "An error occurred: %s"
 msgstr "오류 발생: %s"
 
-#: views/generic.py:110 views/generic.py:121
+#: views/generic.py:118 views/generic.py:129
 #, python-format
 msgid "Invalid data: %s"
 msgstr "잘못된 데이터: %s"
 
-#: views/generic.py:116
+#: views/generic.py:124
 msgid "The email {} has been un-banned"
 msgstr "이메일 {}이(가) 금지되지 않음"
 
-#: views/list.py:106
+#: views/list.py:111
 msgid "List {}s"
 msgstr "{} 목록"
 
-#: views/list.py:120
+#: views/list.py:125
 msgid "Add {}"
 msgstr "{} 추가"
 
-#: views/list.py:123
+#: views/list.py:128
 msgid "No {}s were found matching the search."
 msgstr "검색과 일치하는 {}이(가) 발견되지 않았다."
 
-#: views/list.py:125
+#: views/list.py:130
 msgid "List has no {}s"
 msgstr "목록에 {}개 없음"
 
-#: views/list.py:138
+#: views/list.py:143
 msgid "The selected members have been unsubscribed"
 msgstr "선택한 구성원은 구독이 취소됨"
 
-#: views/list.py:156
+#: views/list.py:161
 #, python-brace-format
 msgid "{email} has been added with the role {role}"
 msgstr "{email}이(가) {role} 역할과 함께 추가됨"
 
-#: views/list.py:203
+#: views/list.py:208
 msgid "Member does not exist"
 msgstr "구성원이 존재하지 않음"
 
-#: views/list.py:221
+#: views/list.py:227
 msgid "The member's preferences have been updated."
 msgstr "멤버의 기본 설정이 업데이트되었다."
 
-#: views/list.py:230
+#: views/list.py:236
 msgid "No change to the member's moderation."
 msgstr "멤버의 절제에는 변화가 없다."
 
-#: views/list.py:242
+#: views/list.py:248
 msgid "The member's moderation settings have been updated."
 msgstr "이 멤버들의 적당한 설정을 업데이트하고 있다."
 
-#: views/list.py:403
+#: views/list.py:421
+#, fuzzy
+#| msgid "You are subscribed to %s."
+msgid "You are not subscribed to {}."
+msgstr "%s에 가입하셨습니다."
+
+#: views/list.py:434
 msgid "You are already subscribed"
 msgstr "이미 가입하셨습니다"
 
-#: views/list.py:414
-#, python-format
-msgid "Subscription changed to %s"
+#: views/list.py:445
+#, fuzzy
+#| msgid "Subscription changed to %s"
+msgid "Subscription changed to {}"
 msgstr "%s(으)로 변경된 서브스크립션으로 변경됨"
 
-#: views/list.py:417 views/list.py:462 views/list.py:492
-msgid "Something went wrong. Please try again."
+#: views/list.py:449
+#, fuzzy
+#| msgid "Something went wrong. Please try again."
+msgid "Something went wrong. Please try again. {} {}"
 msgstr "뭔가 잘못됐다. 다시 시도해보십시오."
 
-#: views/list.py:453
+#: views/list.py:490
 msgid ""
 "Your subscription request has been submitted and is waiting for moderator "
 "approval."
 msgstr "구독 요청이 제출되었으며 진행자의 승인을 기다리고 있다."
 
-#: views/list.py:458
+#: views/list.py:495
 #, python-format
 msgid "You are subscribed to %s."
 msgstr "%s에 가입하셨습니다."
 
-#: views/list.py:488
+#: views/list.py:499 views/list.py:529
+msgid "Something went wrong. Please try again."
+msgstr "뭔가 잘못됐다. 다시 시도해보십시오."
+
+#: views/list.py:525
 msgid "Please check your inbox for further instructions"
 msgstr "제발 추가 지시를 받은 편지함을 확인한다"
 
-#: views/list.py:507
+#: views/list.py:545
+#, fuzzy
+#| msgid ""
+#| "Your subscription request has been submitted and is waiting for moderator "
+#| "approval."
+msgid ""
+"You have a pending unsubscription request waiting for moderator approval."
+msgstr "구독 요청이 제출되었으며 진행자의 승인을 기다리고 있다."
+
+#: views/list.py:552
+#, fuzzy
+#| msgid ""
+#| "Your subscription request has been submitted and is waiting for moderator "
+#| "approval."
+msgid ""
+"Your unsubscription request has been submitted and is waiting for moderator "
+"approval."
+msgstr "구독 요청이 제출되었으며 진행자의 승인을 기다리고 있다."
+
+#: views/list.py:556
 #, python-format
 msgid "%s has been unsubscribed from this list."
 msgstr "%s이(가) 이 목록에서 구독이 취소되었다."
 
-#: views/list.py:536
+#: views/list.py:589
+#, fuzzy, python-format
+#| msgid "The address %(address)s has been subscribed to %(list)s."
+msgid "The address %(address)s has been invited to %(list)s."
+msgstr "%(address)s 주소가 %(list)s에 가입되어 있음."
+
+#: views/list.py:592
 #, python-format
 msgid "The address %(address)s has been subscribed to %(list)s."
 msgstr "%(address)s 주소가 %(list)s에 가입되어 있음."
 
-#: views/list.py:543 views/list.py:582
+#: views/list.py:595
+msgid ""
+" Subscription may be pending address verification, confirmation or approval "
+"as appropriate."
+msgstr ""
+
+#: views/list.py:605 views/list.py:653
 #, python-format
 msgid "The email address %s is not valid."
 msgstr "%s 전자 메일 주소가 올바르지 않음."
 
-#: views/list.py:566
+#: views/list.py:627
 msgid "Please fill out the form correctly."
 msgstr "양식을 올바르게 작성하십시오."
 
-#: views/list.py:575
-#, python-format
-msgid "The address %(address)s has been unsubscribed from %(list)s."
+#: views/list.py:643
+#, fuzzy, python-brace-format
+#| msgid "The address %(address)s has been unsubscribed from %(list)s."
+msgid "These addresses {address} have been unsubscribed from {list}."
 msgstr "%(address)s 주소가 %(list)s에서 구독 취소됨."
 
-#: views/list.py:604
+#: views/list.py:674
 msgid "The selected messages were accepted"
 msgstr "선택한 메시지가 수락됨"
 
-#: views/list.py:608
+#: views/list.py:678
 msgid "The selected messages were rejected"
 msgstr "선택한 메시지를 거절했습니다"
 
-#: views/list.py:612
+#: views/list.py:682
 msgid "The selected messages were discarded"
 msgstr "선택한 메시지가 삭제됨"
 
-#: views/list.py:614
+#: views/list.py:684
 msgid "Message could not be found"
 msgstr "메시지를 찾을 수 없음"
 
-#: views/list.py:643
+#: views/list.py:713
 msgid "The message was accepted"
 msgstr "그 메시지는 받아들여졌다"
 
-#: views/list.py:646
+#: views/list.py:716
 msgid "The message was rejected"
 msgstr "그 메시지는 거절당했다"
 
-#: views/list.py:649
+#: views/list.py:719
 msgid "The message was discarded"
 msgstr "메시지는 폐기되었다"
 
-#: views/list.py:654
+#: views/list.py:724
 msgid "Held message was not found."
 msgstr "고정된 메시지를 찾을 수 없음."
 
-#: views/list.py:667
+#: views/list.py:737
 msgid "Moderation action for {} set to {}"
 msgstr "{}에 대한 수정 작업이 {}(으)로 설정됨"
 
-#: views/list.py:672
+#: views/list.py:742
 #, fuzzy
 #| msgid "Failed to set moderation action: {}"
 msgid "Failed to set moderation action for {}"
 msgstr "절제 작업을 설정하지 못함: {}"
 
-#: views/list.py:724
+#: views/list.py:794
 msgid "Choose a Domain"
 msgstr "도메인 선택"
 
-#: views/list.py:745
+#: views/list.py:815
 msgid "List created"
 msgstr "생성된 목록"
 
-#: views/list.py:757
+#: views/list.py:827
 msgid "Mailing List already exists."
 msgstr "메일링 리스트가 이미 존재한다."
 
-#: views/list.py:915
+#: views/list.py:993
 msgid "Subscriptions pending user confirmation"
 msgstr "사용자 확인 보류 중인 구독"
 
-#: views/list.py:928
+#: views/list.py:1006
 msgid "Subscriptions pending approval"
 msgstr "승인 보류 중인 구독"
 
-#: views/list.py:959
+#: views/list.py:1019
+#, fuzzy
+#| msgid "Subscriptions pending approval"
+msgid "Un-subscriptions pending approval"
+msgstr "승인 보류 중인 구독"
+
+#: views/list.py:1055
 msgid "The request has been accepted."
 msgstr "요청이 받아들여졌다."
 
-#: views/list.py:960
+#: views/list.py:1056
 msgid "The request has been rejected."
 msgstr "그 요청은 거절되었다."
 
-#: views/list.py:961
+#: views/list.py:1057
 msgid "The request has been discarded."
 msgstr "그 요청은 이미 폐기되었다."
 
-#: views/list.py:962
+#: views/list.py:1058
 msgid "The request has been defered."
 msgstr "요청이 되돌아 왔다."
 
-#: views/list.py:973
+#: views/list.py:1077
 #, python-format
 msgid "The request was already moderated: %s"
 msgstr "요청이 이미 진행 중: %s"
 
-#: views/list.py:976
+#: views/list.py:1080
 #, python-format
 msgid "The request could not be moderated: %s"
 msgstr "요청을 조정할 수 없음: %s"
 
-#: views/list.py:982
+#: views/list.py:1086
 msgid "List Identity"
 msgstr "목록 식별"
 
-#: views/list.py:983
+#: views/list.py:1087
 msgid "Automatic Responses"
 msgstr "자동 응답"
 
-#: views/list.py:984
+#: views/list.py:1088
 msgid "Alter Messages"
 msgstr "메시지 변경"
 
-#: views/list.py:985
+#: views/list.py:1089
 msgid "DMARC Mitigations"
 msgstr "DMARC 완화"
 
-#: views/list.py:986
+#: views/list.py:1090
 msgid "Digest"
 msgstr "소화하다"
 
-#: views/list.py:987
+#: views/list.py:1091
 msgid "Message Acceptance"
 msgstr "메시지 수락"
 
-#: views/list.py:988
+#: views/list.py:1092
 msgid "Archiving"
 msgstr "보관"
 
-#: views/list.py:989
+#: views/list.py:1093
 #, fuzzy
 #| msgid "Member options"
 msgid "Member Policy"
 msgstr "구성원 옵션"
 
-#: views/list.py:990
+#: views/list.py:1094
 #, fuzzy
 #| msgid "Default processing"
 msgid "Bounce Processing"
 msgstr "기본 처리"
 
-#: views/list.py:1053
+#: views/list.py:1157
 msgid "The settings have been updated."
 msgstr "설정이 업데이트되었다."
 
-#: views/list.py:1058
+#: views/list.py:1162
 msgid "An error occurred: "
 msgstr "오류가 발생함: "
 
-#: views/list.py:1082
+#: views/list.py:1186
 #, python-format
 msgid "The user %(email)s is not in the %(role)s group"
 msgstr "사용자 %(email)s이(가) %(role)s그룹에 없음"
 
-#: views/list.py:1088
+#: views/list.py:1192
 msgid "Removing the last owner is impossible"
 msgstr "그 마지막 소유자를 제거하면 불가능하다"
 
-#: views/list.py:1102
+#: views/list.py:1206
 #, python-format
 msgid "The user could not be removed: %(msg)s"
 msgstr "사용자를 제거할 수 없음: %(msg)s"
 
-#: views/list.py:1105
+#: views/list.py:1209
 #, python-format
 msgid "The user %(address)s has been removed from the %(role)s group."
 msgstr "사용자가 %(address)s 그룹%(role)s으로부터 제거됨."
 
-#: views/list.py:1123
+#: views/list.py:1226
 msgid "No member is subscribed to the list currently."
 msgstr "현재 그 리스트에 가입한 회원이 없다."
 
-#: views/list.py:1133
+#: views/list.py:1236
 msgid "All members have been unsubscribed from the list."
 msgstr "모든 회원들이 그 명단에서 제외되었다."
 
-#: views/list.py:1198
+#: views/list.py:1301
 msgid "The header matches were successfully modified."
 msgstr "헤더 매치가 성공적으로 수정되었다."
 
-#: views/list.py:1205
+#: views/list.py:1308
 msgid "New header"
 msgstr "새 헤더"
 
-#: views/list.py:1206
+#: views/list.py:1309
 msgid "New pattern"
 msgstr "새 패턴"
 
-#: views/list.py:1233
+#: views/list.py:1336
 #, fuzzy
 #| msgid "Pending Confirmation"
 msgid "Invalid confirmation token"
 msgstr "확인 보류 중"
 
-#: views/list.py:1241 views/list.py:1253
+#: views/list.py:1344 views/list.py:1356
 msgid "Token expired or invalid."
 msgstr ""
 
@@ -3057,17 +3153,23 @@ msgstr "메시지가 존재하지 않음"
 msgid "Attachment does not exist"
 msgstr "첨부 파일이 없음"
 
-#: views/user.py:78
+#: views/user.py:85
 msgid "Your preferences have been updated."
 msgstr "기본 설정이 업데이트됨."
 
-#: views/user.py:80
+#: views/user.py:87
 msgid "Your preferences did not change."
 msgstr "당신의 기본 설정을 바꾸지 않았다."
 
-#: views/user.py:196
+#: views/user.py:207
 msgid "Subscription does not exist"
 msgstr "구독이 존재하지 않음"
+
+#~ msgid "Member Options"
+#~ msgstr "구성원 옵션"
+
+#~ msgid "Non-member Options"
+#~ msgstr "비회원 옵션"
 
 #~ msgid ""
 #~ "\n"
