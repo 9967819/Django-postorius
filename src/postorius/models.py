@@ -22,7 +22,6 @@ from urllib.error import HTTPError
 from urllib.parse import urljoin
 
 from django.conf import settings
-from django.contrib.auth.models import User
 from django.core.exceptions import ImproperlyConfigured
 from django.db import models
 from django.db.models.signals import post_delete, post_save
@@ -62,18 +61,6 @@ class SubscriptionMode(Enum):
 
     as_address = 'as_address'
     as_user = 'as_user'
-
-
-@receiver(post_save, sender=User)
-def create_mailman_user(sender, **kwargs):
-    if kwargs.get('created'):
-        if getattr(settings, 'AUTOCREATE_MAILMAN_USER', False):
-            user = kwargs.get('instance')
-            try:
-                MailmanUser.objects.create_from_django(user)
-            except (MailmanApiError, HTTPError):
-                logger.error('Mailman user not created for {}'.format(user))
-                logger.error('Mailman Core API is not reachable.')
 
 
 class MailmanApiError(Exception):
@@ -178,16 +165,6 @@ class MailmanUserManager(MailmanRestManager):
 
     def __init__(self):
         super(MailmanUserManager, self).__init__('user', 'users')
-
-    def create_from_django(self, user):
-        return self.create(
-            email=user.email, password=None, display_name=user.get_full_name())
-
-    def get_or_create_from_django(self, user):
-        try:
-            return self.get(address=user.email)
-        except Mailman404Error:
-            return self.create_from_django(user)
 
 
 class MailmanRestModel(object):

@@ -62,6 +62,10 @@ Other
   !604)
 * Use ``user_id`` as ``subscriber`` instead of addresses to improve the
   efficiency of list index page. (Closes #419)
+* ``AUTOCREATE_MAILMAN_USER`` setting is now removed and a Mailman user is
+  always created when a User object in created in Django. Also remove duplicate
+  implementation of ``get_mailman_user`` from ``MailmanUserManager`` so that we
+  can use a single implementation that uses caching for efficient lookups.
 
 
 1.3.4
