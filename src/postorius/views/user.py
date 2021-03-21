@@ -35,7 +35,7 @@ from django_mailman3.lib.mailman import get_mailman_client, get_mailman_user
 
 from postorius.forms import (
     ChangeSubscriptionForm, UserPreferences, UserPreferencesFormset)
-from postorius.models import List, MailmanUser, SubscriptionMode
+from postorius.models import List, SubscriptionMode
 from postorius.utils import set_preferred
 from postorius.views.generic import MailmanClientMixin
 
@@ -66,8 +66,7 @@ class UserPreferencesView(FormView, MailmanClientMixin):
         return kwargs
 
     def _set_view_attributes(self, request, *args, **kwargs):
-        self.mm_user = MailmanUser.objects.get_or_create_from_django(
-            request.user)
+        self.mm_user = get_mailman_user(request.user)
 
     @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
@@ -335,7 +334,7 @@ class UserSubscriptionPreferencesView(UserPreferencesView):
 @login_required
 def user_subscriptions(request):
     """Shows the subscriptions of a user."""
-    mm_user = MailmanUser.objects.get_or_create_from_django(request.user)
+    mm_user = get_mailman_user(request.user)
     memberships = [m for m in mm_user.subscriptions]
     return render(request, 'postorius/user/subscriptions.html',
                   {'memberships': memberships})

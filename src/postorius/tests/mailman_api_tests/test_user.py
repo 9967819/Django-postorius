@@ -42,7 +42,7 @@ class MailmanUserTest(ViewTestCase):
             'user', 'user@example.com', 'testpass')
         EmailAddress.objects.create(
             user=self.user, email=self.user.email, verified=True, primary=True)
-        self.mm_user = MailmanUser.objects.create_from_django(self.user)
+        self.mm_user = get_mailman_user(self.user)
 
     def test_address_preferences_not_logged_in(self):
         self.assertRedirectsToLogin(reverse('user_address_preferences'))
