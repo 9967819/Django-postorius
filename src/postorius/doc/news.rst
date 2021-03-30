@@ -43,7 +43,7 @@ UI
 * Redirect to ``domain_index`` after ``domain_edit`` succeeds. (Closes
   #428)
 * Expose new ``bounce_notify_owner_on_bounce_increment`` list setting on
-  ``Bounce Processing`` settings.
+  ``Bounce Processing`` settings, and expose the corresponding template.
 
 
 Other
