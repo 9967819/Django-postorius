@@ -42,6 +42,8 @@ UI
   a List. (Closes #488)
 * Redirect to ``domain_index`` after ``domain_edit`` succeeds. (Closes
   #428)
+* Expose new ``bounce_notify_owner_on_bounce_increment`` list setting on
+  ``Bounce Processing`` settings.
 
 
 Other
