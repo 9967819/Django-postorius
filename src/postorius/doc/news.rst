@@ -44,6 +44,8 @@ UI
   #428)
 * Expose new ``bounce_notify_owner_on_bounce_increment`` list setting on
   ``Bounce Processing`` settings, and expose the corresponding template.
+* Expose the ``forward_unrecognized_bounces_to`` setting on
+  ``Bounce Processing`` settings.
 
 
 Other
