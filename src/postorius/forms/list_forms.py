@@ -269,6 +269,15 @@ class BounceProcessingForm(ListSettingsForm):
             ' the interim, the bounce score is reset to zero.'
             ' This value must be an integer. '))
 
+    bounce_notify_owner_on_bounce_increment = forms.BooleanField(
+        widget=forms.RadioSelect(choices=((True, _('Yes')), (False, _('No')))),
+        required=False,
+        label=_('Notify owner on bounce increment'),
+        help_text=_(
+            'This option controls whether or not the list owner is notified'
+            ' when a member\'s bounce score is incremented, but to a value'
+            ' less than their bounce threshold. '))
+
     bounce_notify_owner_on_disable = forms.BooleanField(
         widget=forms.RadioSelect(choices=((True, _('Yes')), (False, _('No')))),
         required=False,
