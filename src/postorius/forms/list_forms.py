@@ -243,6 +243,12 @@ class MemberPolicyForm(ListSettingsForm):
 class BounceProcessingForm(ListSettingsForm):
     """List's bounce processing settings."""
 
+    forward_unrecognized_choices = (
+        ('discard', _('Discard')),
+        ('administrators', _('List Admins')),
+        ('site_owner', _('Site Admin')),
+    )
+
     process_bounces = forms.BooleanField(
         widget=forms.RadioSelect(choices=((True, _('Yes')), (False, _('No')))),
         required=False,
@@ -296,7 +302,13 @@ class BounceProcessingForm(ListSettingsForm):
             'notified when a member is removed from the list after '
             'their disabled notifications have been exhausted. '))
 
-    # forward_unrecognized_bounces_to =
+    forward_unrecognized_bounces_to = forms.ChoiceField(
+        choices=forward_unrecognized_choices,
+        widget=forms.RadioSelect,
+        label=_('Forward unrecognized bounces'),
+        help_text=_('Discard: Unrecognized bounces will be discarded\n'
+                    'List Admins: Send to the list owners and moderators\n'
+                    'Site Admin: Send to the site\'s configured site_owner'))
 
     bounce_you_are_disabled_warnings_interval = forms.CharField(
         label=_('Bounce disabled warnings interval'),
