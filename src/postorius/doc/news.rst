@@ -46,6 +46,7 @@ UI
   ``Bounce Processing`` settings, and expose the corresponding template.
 * Expose the ``forward_unrecognized_bounces_to`` setting on
   ``Bounce Processing`` settings.
+* Clarified the description of ``Maximum number of recipients``.  (Closes #515)
 
 
 Other
