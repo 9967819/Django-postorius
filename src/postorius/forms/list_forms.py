@@ -477,7 +477,8 @@ class MessageAcceptanceForm(ListSettingsForm):
         label=_('Maximum number of recipients'),
         required=False,
         help_text=_(
-            'The maximum number of recipients for a message. '
+            'If a post has this many or more explicit recipients (To: and '
+            'Cc:), the post will be held for moderation. '
             'This can be used to prevent mass mailings from being accepted. '
             'A value of 0 disables the check.'))
 
