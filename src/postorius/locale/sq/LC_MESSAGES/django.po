@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-19 10:38-0700\n"
-"PO-Revision-Date: 2021-01-10 22:22+0000\n"
+"PO-Revision-Date: 2021-04-03 21:27+0000\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/sq/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.1-dev\n"
+"X-Generator: Weblate 4.6-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -105,14 +105,12 @@ msgid "Disabled"
 msgstr "E çaktivizuar"
 
 #: forms/fields.py:36
-#, fuzzy
-#| msgid "Disabled"
 msgid "Disabled by Owner"
-msgstr "E çaktivizuar"
+msgstr "E çaktivizuar nga i Zoti"
 
 #: forms/fields.py:37
 msgid "Disabled by Bounces"
-msgstr ""
+msgstr "Çaktivizuar nga Kthime"
 
 #: forms/fields.py:120
 msgid "Make at least one selection"
@@ -486,14 +484,12 @@ msgid "Do not archive this list"
 msgstr "Mos e arkivo këtë listë"
 
 #: forms/list_forms.py:323
-#, fuzzy
-#| msgid "Plain Text Digests"
 msgid "Plain text"
-msgstr "Përmbledhje si Tekst i Thjeshtë"
+msgstr "Tekst i thjeshtë"
 
 #: forms/list_forms.py:324
 msgid "Markdown text"
-msgstr ""
+msgstr "Tekst Markdown"
 
 #: forms/list_forms.py:330
 msgid "Archive policy"
@@ -509,7 +505,7 @@ msgstr "Arkivues aktivë"
 
 #: forms/list_forms.py:343
 msgid "Archive Rendering mode"
-msgstr ""
+msgstr "Mënyra Shfaqjeje Arkivi"
 
 #: forms/list_forms.py:344
 msgid ""
@@ -517,6 +513,9 @@ msgid ""
 "formatting based on markup in the email.\n"
 "Currently, this option is only supported by Hyperkitty."
 msgstr ""
+"Kjo mundë aktivizon shfaqjen e email-eve në arkivues si tekst i pasur, me "
+"formatime bazuar në markup-in e email-it.\n"
+"Aktualisht, kjo mundësi mbulohet vetëm nga Hyperkitty."
 
 #: forms/list_forms.py:376
 msgid "Acceptable aliases"
@@ -1297,31 +1296,20 @@ msgstr ""
 "Teksti i mesazhit të Mirëseardhjes mund të caktohet që nga skeda Gjedhe."
 
 #: forms/list_forms.py:901
-#, fuzzy
-#| msgid "Send welcome message"
 msgid "Send goodbye message"
-msgstr "Dërgo mesazh mirëseardhjeje"
+msgstr "Dërgo mesazh lamtumire"
 
 #: forms/list_forms.py:903
-#, fuzzy
-#| msgid ""
-#| "Send welcome message to newly subscribed members? Turn this off only if "
-#| "you plan on subscribing people manually and don't want them to know that "
-#| "you did so. Setting this to No is most useful for transparently migrating "
-#| "lists from some other mailing list manager to Mailman.\n"
-#| "The text of Welcome message can be set via the Templates tab."
 msgid ""
 "Send goodbye message to newly unsubscribed members? Turn this off only if "
 "you plan on unsubscribing people manually and don't want them to know that "
 "you did so.\n"
 "The text of Goodbye message can be set via the Templates tab."
 msgstr ""
-"Të dërgohet mesazh mirëseardhjeje te anëtarë të sapopajtuar? Çaktivizojeni "
-"këtë nëse planifikoni t’i pajtoni dorazi njerëzit dhe nuk dëshironi që ata "
-"ta dinë se bëni kështu. Caktimi i kësaj si Jo është gjëja më e dobishme për "
-"migrim transparent listash nga ca administrues të tjerë listash postimesh te "
-"Mailman-i.\n"
-"Teksti i mesazhit të Mirëseardhjes mund të caktohet që nga skeda Gjedhe."
+"Të dërgohet mesazh mirëseardhjeje te anëtarë të saposhpajtuar? Çaktivizojeni "
+"këtë nëse planifikoni t’i shpajtoni dorazi njerëzit dhe nuk dëshironi që ata "
+"ta dinë se bëni kështu.\n"
+"Teksti i mesazhit të Lamtumirës mund të caktohet që nga skeda Gjedhe."
 
 #: forms/list_forms.py:910
 msgid "Admin immed notify"
@@ -1544,6 +1532,9 @@ msgid ""
 "will be ignored for these subscribers and a welcome message will be sent or "
 "not sent based on the choice."
 msgstr ""
+"Nëse vihet “Po” ose “Jo”, rregullimi parazgjedhje i Listës për "
+"send_welcome_message do të shpërfillet për këta pajtimtarë dhe do të "
+"dërgohet ose jo një mesazh mirëseardhjeje, bazuar te zgjedhja."
 
 #: forms/list_forms.py:1109
 msgid "Emails to Unsubscribe"
@@ -1731,7 +1722,7 @@ msgstr ""
 
 #: forms/user_forms.py:144
 msgid "Cannot set delivery_status to {}"
-msgstr ""
+msgstr "S’caktohet dot delivery_status si {}"
 
 #: forms/validators.py:39
 #, python-brace-format
@@ -2295,6 +2286,9 @@ msgid ""
 "    Confirm subscription of %(addr)s to %(name)s(%(listid)s):\n"
 "    "
 msgstr ""
+"\n"
+"    Ripohoni pajtimin e %(addr)s te %(name)s(%(listid)s):\n"
+"    "
 
 #: templates/postorius/lists/confirm_token.html:16
 #, python-format
@@ -2303,6 +2297,9 @@ msgid ""
 "    Confirm unsubscription of %(addr)s from %(name)s(%(listid)s):\n"
 "    "
 msgstr ""
+"\n"
+"    Ripohoni shpajtimin e %(addr)s prej %(name)s(%(listid)s):\n"
+"    "
 
 #: templates/postorius/lists/confirm_token.html:20
 #, python-format
@@ -2311,6 +2308,9 @@ msgid ""
 "    Confirm token %(token)s:\n"
 "    "
 msgstr ""
+"\n"
+"    Ripohoni token %(token)s:\n"
+"    "
 
 #: templates/postorius/lists/header_matches.html:7
 #: templates/postorius/menu/list_nav.html:61
@@ -2437,10 +2437,8 @@ msgid "Delivery Mode"
 msgstr "Mënyrë Dërgimi"
 
 #: templates/postorius/lists/members.html:81
-#, fuzzy
-#| msgid "Moderation"
 msgid "Moderation Action"
-msgstr "Moderim"
+msgstr "Veprim Moderimi"
 
 #: templates/postorius/lists/new.html:6
 msgid "Create list"
@@ -2476,10 +2474,8 @@ msgid "Settings"
 msgstr "Rregullime"
 
 #: templates/postorius/lists/subscription_requests.html:39
-#, fuzzy
-#| msgid "Rejection reason:"
 msgid "Rejection reason"
-msgstr "Arsye hedhjeje tej:"
+msgstr "Arsye hedhjeje tej"
 
 #: templates/postorius/lists/summary.html:8
 #: templates/postorius/menu/list_nav.html:10
@@ -2638,10 +2634,8 @@ msgid "Pending Confirmation"
 msgstr "Në Pritje të Ripohimit"
 
 #: templates/postorius/menu/list_nav.html:25
-#, fuzzy
-#| msgid "Subscription requests"
 msgid "Unsubscription Requests"
-msgstr "Kërkesë pajtimi"
+msgstr "Kërkesa Shpajtimi"
 
 #: templates/postorius/menu/list_nav.html:39
 msgid "Users"
@@ -2933,33 +2927,27 @@ msgid "The member's moderation settings have been updated."
 msgstr "Rregullimet mbi moderimin e anëtarëve janë përditësuar."
 
 #: views/list.py:421
-#, fuzzy
-#| msgid "You are subscribed to %s."
 msgid "You are not subscribed to {}."
-msgstr "Jeni pajtuar te %s."
+msgstr "S’jeni i pajtuar te {}."
 
 #: views/list.py:434
 msgid "You are already subscribed"
 msgstr "Jeni i regjistruar tashmë"
 
 #: views/list.py:445
-#, fuzzy
-#| msgid "Subscription changed to %s"
 msgid "Subscription changed to {}"
-msgstr "Pajtimi u ndryshua në %s"
+msgstr "Pajtimi u ndryshua në {}"
 
 #: views/list.py:449
-#, fuzzy
-#| msgid "Something went wrong. Please try again."
 msgid "Something went wrong. Please try again. {} {}"
-msgstr "Diç shkoi ters. Ju lutemi, riprovoni."
+msgstr "Diç shkoi ters. Ju lutemi, riprovoni. {} {}"
 
 #: views/list.py:490
 msgid ""
 "Your subscription request has been submitted and is waiting for moderator "
 "approval."
 msgstr ""
-"Kërkesa juaj për pajtim u parashtrua dhe është në pritje të miratimin nga "
+"Kërkesa juaj për pajtim u parashtrua dhe është në pritje të miratimit nga "
 "moderatorë."
 
 #: views/list.py:495
@@ -2976,26 +2964,16 @@ msgid "Please check your inbox for further instructions"
 msgstr "Për udhëzime të mëtejshme kontrolloni mesazhet tuaj të marrë"
 
 #: views/list.py:545
-#, fuzzy
-#| msgid ""
-#| "Your subscription request has been submitted and is waiting for moderator "
-#| "approval."
 msgid ""
 "You have a pending unsubscription request waiting for moderator approval."
-msgstr ""
-"Kërkesa juaj për pajtim u parashtrua dhe është në pritje të miratimin nga "
-"moderatorë."
+msgstr "Keni një shpajtim pezull në pritje të miratimitn nga moderatorë."
 
 #: views/list.py:552
-#, fuzzy
-#| msgid ""
-#| "Your subscription request has been submitted and is waiting for moderator "
-#| "approval."
 msgid ""
 "Your unsubscription request has been submitted and is waiting for moderator "
 "approval."
 msgstr ""
-"Kërkesa juaj për pajtim u parashtrua dhe është në pritje të miratimin nga "
+"Kërkesa juaj për shpajtim u parashtrua dhe është në pritje të miratimit nga "
 "moderatorë."
 
 #: views/list.py:556
@@ -3004,10 +2982,9 @@ msgid "%s has been unsubscribed from this list."
 msgstr "%s është shpajtuar prej kësaj liste."
 
 #: views/list.py:589
-#, fuzzy, python-format
-#| msgid "The address %(address)s has been subscribed to %(list)s."
+#, python-format
 msgid "The address %(address)s has been invited to %(list)s."
-msgstr "Adresa %(address)s është pajtuar te %(list)s."
+msgstr "Adresa %(address)s është ftuar te %(list)s."
 
 #: views/list.py:592
 #, python-format
@@ -3019,6 +2996,8 @@ msgid ""
 " Subscription may be pending address verification, confirmation or approval "
 "as appropriate."
 msgstr ""
+" Pajtimi mund të jetë në pritje të verifikimit të adresës, ripohimit ose "
+"miratimit si i saktë."
 
 #: views/list.py:605 views/list.py:653
 #, python-format
@@ -3030,10 +3009,9 @@ msgid "Please fill out the form correctly."
 msgstr "Ju lutemi, plotësojeni saktë formularin."
 
 #: views/list.py:643
-#, fuzzy, python-brace-format
-#| msgid "The address %(address)s has been unsubscribed from %(list)s."
+#, python-brace-format
 msgid "These addresses {address} have been unsubscribed from {list}."
-msgstr "Adresa %(address)s është shpajtuar prej %(list)s."
+msgstr "Këto adresa {address} janë shpajtuar prej {list}."
 
 #: views/list.py:674
 msgid "The selected messages were accepted"
@@ -3072,10 +3050,8 @@ msgid "Moderation action for {} set to {}"
 msgstr "Veprim moderimi për {} u caktua si {}"
 
 #: views/list.py:742
-#, fuzzy
-#| msgid "Failed to set moderation action: {}"
 msgid "Failed to set moderation action for {}"
-msgstr "S’u arrit të caktohet veprim moderimi: {}"
+msgstr "S’u arrit të caktohet veprim moderimi për {}"
 
 #: views/list.py:794
 msgid "Choose a Domain"
@@ -3098,10 +3074,8 @@ msgid "Subscriptions pending approval"
 msgstr "Pajtime në pritje të miratimit"
 
 #: views/list.py:1019
-#, fuzzy
-#| msgid "Subscriptions pending approval"
 msgid "Un-subscriptions pending approval"
-msgstr "Pajtime në pritje të miratimit"
+msgstr "Shpajtime në pritje të miratimit"
 
 #: views/list.py:1055
 msgid "The request has been accepted."
@@ -3213,14 +3187,12 @@ msgid "New pattern"
 msgstr "Rregullsi e re"
 
 #: views/list.py:1336
-#, fuzzy
-#| msgid "Pending Confirmation"
 msgid "Invalid confirmation token"
-msgstr "Në Pritje të Ripohimit"
+msgstr "Token i pavlefshëm ripohimi"
 
 #: views/list.py:1344 views/list.py:1356
 msgid "Token expired or invalid."
-msgstr ""
+msgstr "Token i skaduar ose i pavlefshëm."
 
 #: views/rest.py:60
 msgid "Message does not exist"
