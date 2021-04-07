@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-19 10:38-0700\n"
-"PO-Revision-Date: 2021-02-10 13:24+0000\n"
+"PO-Revision-Date: 2021-03-24 12:09+0000\n"
 "Last-Translator: Peter Donka <peter.donka@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/hu/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.5-dev\n"
+"X-Generator: Weblate 4.5.2-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -107,14 +107,12 @@ msgid "Disabled"
 msgstr "Letiltva"
 
 #: forms/fields.py:36
-#, fuzzy
-#| msgid "Disabled"
 msgid "Disabled by Owner"
-msgstr "Letiltva"
+msgstr "Tulajdonos által letiltva"
 
 #: forms/fields.py:37
 msgid "Disabled by Bounces"
-msgstr ""
+msgstr "Visszapattanások miatt letiltva"
 
 #: forms/fields.py:120
 msgid "Make at least one selection"
@@ -489,14 +487,12 @@ msgid "Do not archive this list"
 msgstr "Ne archiválja a listát"
 
 #: forms/list_forms.py:323
-#, fuzzy
-#| msgid "Plain Text Digests"
 msgid "Plain text"
-msgstr "Szöveges kivonatok"
+msgstr "Egyszerű szöveg"
 
 #: forms/list_forms.py:324
 msgid "Markdown text"
-msgstr ""
+msgstr "Csökkentet szöveg"
 
 #: forms/list_forms.py:330
 msgid "Archive policy"
@@ -512,7 +508,7 @@ msgstr "Aktív archiválók"
 
 #: forms/list_forms.py:343
 msgid "Archive Rendering mode"
-msgstr ""
+msgstr "Archívum renderelési mód"
 
 #: forms/list_forms.py:344
 msgid ""
@@ -520,6 +516,9 @@ msgid ""
 "formatting based on markup in the email.\n"
 "Currently, this option is only supported by Hyperkitty."
 msgstr ""
+"Ez az opció lehetővé teszi az archiválóban lévő e-mailek richtext-ként "
+"történő formázását az e-mail jelölése alapján.\n"
+"Jelenleg ezt a lehetőséget csak a Hyperkitty támogatja."
 
 #: forms/list_forms.py:376
 msgid "Acceptable aliases"
@@ -1705,7 +1704,7 @@ msgstr ""
 
 #: forms/user_forms.py:144
 msgid "Cannot set delivery_status to {}"
-msgstr ""
+msgstr "A delivery_status nem állítható be {} értékre"
 
 #: forms/validators.py:39
 #, python-brace-format
@@ -2424,10 +2423,8 @@ msgid "Delivery Mode"
 msgstr "Kézbesítési mód"
 
 #: templates/postorius/lists/members.html:81
-#, fuzzy
-#| msgid "Moderation"
 msgid "Moderation Action"
-msgstr "Moderálás"
+msgstr "Moderálási művelet"
 
 #: templates/postorius/lists/new.html:6
 msgid "Create list"
@@ -2463,10 +2460,8 @@ msgid "Settings"
 msgstr "Beállítások"
 
 #: templates/postorius/lists/subscription_requests.html:39
-#, fuzzy
-#| msgid "Rejection reason:"
 msgid "Rejection reason"
-msgstr "Elutasítás oka:"
+msgstr "Elutasítás oka"
 
 #: templates/postorius/lists/summary.html:8
 #: templates/postorius/menu/list_nav.html:10
@@ -2628,10 +2623,8 @@ msgid "Pending Confirmation"
 msgstr "Megerősítésre vár"
 
 #: templates/postorius/menu/list_nav.html:25
-#, fuzzy
-#| msgid "Subscription requests"
 msgid "Unsubscription Requests"
-msgstr "Feliratkozási kérelmek"
+msgstr "Leiratkozási kérelmek"
 
 #: templates/postorius/menu/list_nav.html:39
 msgid "Users"
@@ -2923,26 +2916,20 @@ msgid "The member's moderation settings have been updated."
 msgstr "A tag moderálási beállításai frissültek."
 
 #: views/list.py:421
-#, fuzzy
-#| msgid "You are subscribed to %s."
 msgid "You are not subscribed to {}."
-msgstr "Feliratkozott a %s -ra."
+msgstr "Ön nincs feliratkozva {}."
 
 #: views/list.py:434
 msgid "You are already subscribed"
 msgstr "Már feliratkoztál"
 
 #: views/list.py:445
-#, fuzzy
-#| msgid "Subscription changed to %s"
 msgid "Subscription changed to {}"
-msgstr "Előfizetés módosítva erre: %s"
+msgstr "Az előfizetés módosítva erre: {}"
 
 #: views/list.py:449
-#, fuzzy
-#| msgid "Something went wrong. Please try again."
 msgid "Something went wrong. Please try again. {} {}"
-msgstr "Valami hiba történt. Próbálja meg újra később."
+msgstr "Valami hiba történt. Próbálja meg újra később. {} {}"
 
 #: views/list.py:490
 msgid ""
@@ -2964,23 +2951,15 @@ msgid "Please check your inbox for further instructions"
 msgstr "Kérjük, ellenőrizze a postaládáját további utasításokért"
 
 #: views/list.py:545
-#, fuzzy
-#| msgid ""
-#| "Your subscription request has been submitted and is waiting for moderator "
-#| "approval."
 msgid ""
 "You have a pending unsubscription request waiting for moderator approval."
-msgstr "Előfizetési kérelmét elküldtük, és a moderátor jóváhagyására vár."
+msgstr "Egy függőben lévő leiratkozási kérésed moderátori jóváhagyásra vár."
 
 #: views/list.py:552
-#, fuzzy
-#| msgid ""
-#| "Your subscription request has been submitted and is waiting for moderator "
-#| "approval."
 msgid ""
 "Your unsubscription request has been submitted and is waiting for moderator "
 "approval."
-msgstr "Előfizetési kérelmét elküldtük, és a moderátor jóváhagyására vár."
+msgstr "A leiratkozási kérelmedet elküldtük, és a moderátor jóváhagyására vár."
 
 #: views/list.py:556
 #, python-format
@@ -2988,10 +2967,9 @@ msgid "%s has been unsubscribed from this list."
 msgstr "%s leiratkoztatva a listáról."
 
 #: views/list.py:589
-#, fuzzy, python-format
-#| msgid "The address %(address)s has been subscribed to %(list)s."
+#, python-format
 msgid "The address %(address)s has been invited to %(list)s."
-msgstr "A cím %(address)s feliratkoztatva ide: %(list)s."
+msgstr "A %(address)s címet meghívták a %(list)s címre."
 
 #: views/list.py:592
 #, python-format
@@ -3003,6 +2981,8 @@ msgid ""
 " Subscription may be pending address verification, confirmation or approval "
 "as appropriate."
 msgstr ""
+" A feliratkozás a cím ellenőrzésére, megerősítésére vagy jóváhagyására "
+"várhat."
 
 #: views/list.py:605 views/list.py:653
 #, python-format
@@ -3014,10 +2994,9 @@ msgid "Please fill out the form correctly."
 msgstr "Kérjük, töltsd ki helyesen az űrlapot."
 
 #: views/list.py:643
-#, fuzzy, python-brace-format
-#| msgid "The address %(address)s has been unsubscribed from %(list)s."
+#, python-brace-format
 msgid "These addresses {address} have been unsubscribed from {list}."
-msgstr "A címzettek %(address)s leiratkoztatva innen: %(list)s."
+msgstr "Ezeket a címeket {address} a {list}-ből törölték."
 
 #: views/list.py:674
 msgid "The selected messages were accepted"
@@ -3080,10 +3059,8 @@ msgid "Subscriptions pending approval"
 msgstr "Előfizetések jóváhagyásra várnak"
 
 #: views/list.py:1019
-#, fuzzy
-#| msgid "Subscriptions pending approval"
 msgid "Un-subscriptions pending approval"
-msgstr "Előfizetések jóváhagyásra várnak"
+msgstr "Jóváhagyásra váró leiratkozások"
 
 #: views/list.py:1055
 msgid "The request has been accepted."
