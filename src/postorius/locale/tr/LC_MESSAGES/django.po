@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-19 10:38-0700\n"
-"PO-Revision-Date: 2021-02-02 02:46+0000\n"
+"PO-Revision-Date: 2021-03-19 23:47+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/tr/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.5-dev\n"
+"X-Generator: Weblate 4.5.2-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -105,14 +105,12 @@ msgid "Disabled"
 msgstr "Devre dışı"
 
 #: forms/fields.py:36
-#, fuzzy
-#| msgid "Disabled"
 msgid "Disabled by Owner"
-msgstr "Devre dışı"
+msgstr "Sahibi Tarafından Devre Dışı Bırakıldı"
 
 #: forms/fields.py:37
 msgid "Disabled by Bounces"
-msgstr ""
+msgstr "Geri Dönmeler Nedeniyle Devre Dışı Bırakıldı"
 
 #: forms/fields.py:120
 msgid "Make at least one selection"
@@ -487,14 +485,12 @@ msgid "Do not archive this list"
 msgstr "Bu listeyi arşivleme"
 
 #: forms/list_forms.py:323
-#, fuzzy
-#| msgid "Plain Text Digests"
 msgid "Plain text"
-msgstr "Düz Metin Özetleri"
+msgstr "Düz metin"
 
 #: forms/list_forms.py:324
 msgid "Markdown text"
-msgstr ""
+msgstr "Markdown metni"
 
 #: forms/list_forms.py:330
 msgid "Archive policy"
@@ -510,7 +506,7 @@ msgstr "Etkin arşivciler"
 
 #: forms/list_forms.py:343
 msgid "Archive Rendering mode"
-msgstr ""
+msgstr "Arşiv Görüntüleme modu"
 
 #: forms/list_forms.py:344
 msgid ""
@@ -518,6 +514,9 @@ msgid ""
 "formatting based on markup in the email.\n"
 "Currently, this option is only supported by Hyperkitty."
 msgstr ""
+"Bu seçenek, e-postadaki işaretlemeye dayalı biçimlendirmeyle e-postaların "
+"arşivleyicide zengin metin olarak görüntülenmesini sağlar.\n"
+"Şu anda bu seçenek yalnızca Hyperkitty tarafından desteklenmektedir."
 
 #: forms/list_forms.py:376
 msgid "Acceptable aliases"
@@ -1704,7 +1703,7 @@ msgstr ""
 
 #: forms/user_forms.py:144
 msgid "Cannot set delivery_status to {}"
-msgstr ""
+msgstr "delivery_status, {} olarak ayarlanamıyor"
 
 #: forms/validators.py:39
 #, python-brace-format
@@ -2423,10 +2422,8 @@ msgid "Delivery Mode"
 msgstr "Teslimat Modu"
 
 #: templates/postorius/lists/members.html:81
-#, fuzzy
-#| msgid "Moderation"
 msgid "Moderation Action"
-msgstr "Denetim"
+msgstr "Denetim Eylemi"
 
 #: templates/postorius/lists/new.html:6
 msgid "Create list"
@@ -2462,10 +2459,8 @@ msgid "Settings"
 msgstr "Ayarlar"
 
 #: templates/postorius/lists/subscription_requests.html:39
-#, fuzzy
-#| msgid "Rejection reason:"
 msgid "Rejection reason"
-msgstr "Reddetme nedeni:"
+msgstr "Reddetme nedeni"
 
 #: templates/postorius/lists/summary.html:8
 #: templates/postorius/menu/list_nav.html:10
@@ -2625,10 +2620,8 @@ msgid "Pending Confirmation"
 msgstr "Doğrulama Bekliyor"
 
 #: templates/postorius/menu/list_nav.html:25
-#, fuzzy
-#| msgid "Subscription requests"
 msgid "Unsubscription Requests"
-msgstr "Abonelik istekleri"
+msgstr "Abonelikten Çıkma İstekleri"
 
 #: templates/postorius/menu/list_nav.html:39
 msgid "Users"
@@ -2920,26 +2913,20 @@ msgid "The member's moderation settings have been updated."
 msgstr "Üyenin denetim ayarları güncellendi."
 
 #: views/list.py:421
-#, fuzzy
-#| msgid "You are subscribed to %s."
 msgid "You are not subscribed to {}."
-msgstr "%s'e abone oldunuz."
+msgstr "{} listesine abone değilsiniz."
 
 #: views/list.py:434
 msgid "You are already subscribed"
 msgstr "Zaten abonesiniz"
 
 #: views/list.py:445
-#, fuzzy
-#| msgid "Subscription changed to %s"
 msgid "Subscription changed to {}"
-msgstr "Abonelik %s olarak değiştirildi"
+msgstr "Abonelik {} olarak değiştirildi"
 
 #: views/list.py:449
-#, fuzzy
-#| msgid "Something went wrong. Please try again."
 msgid "Something went wrong. Please try again. {} {}"
-msgstr "Bir şeyler yanlış gitti. Lütfen tekrar deneyin."
+msgstr "Bir şeyler yanlış gitti. Lütfen tekrar deneyin. {} {}"
 
 #: views/list.py:490
 msgid ""
@@ -2961,23 +2948,15 @@ msgid "Please check your inbox for further instructions"
 msgstr "Lütfen sonraki talimatlar için gelen kutunuza bakın"
 
 #: views/list.py:545
-#, fuzzy
-#| msgid ""
-#| "Your subscription request has been submitted and is waiting for moderator "
-#| "approval."
 msgid ""
 "You have a pending unsubscription request waiting for moderator approval."
-msgstr "Abonelik isteğiniz gönderildi ve moderatör onayını bekliyor."
+msgstr "Moderatör onayını bekleyen bir abonelik iptali isteğiniz var."
 
 #: views/list.py:552
-#, fuzzy
-#| msgid ""
-#| "Your subscription request has been submitted and is waiting for moderator "
-#| "approval."
 msgid ""
 "Your unsubscription request has been submitted and is waiting for moderator "
 "approval."
-msgstr "Abonelik isteğiniz gönderildi ve moderatör onayını bekliyor."
+msgstr "Abonelikten çıkma isteğiniz gönderildi ve moderatör onayını bekliyor."
 
 #: views/list.py:556
 #, python-format
@@ -2985,10 +2964,9 @@ msgid "%s has been unsubscribed from this list."
 msgstr "%s bu liste aboneliğinden çıktı."
 
 #: views/list.py:589
-#, fuzzy, python-format
-#| msgid "The address %(address)s has been subscribed to %(list)s."
+#, python-format
 msgid "The address %(address)s has been invited to %(list)s."
-msgstr "%(address)s adresi %(list)s'e abone oldu."
+msgstr "%(address)s adresi %(list)s'e davet edildi."
 
 #: views/list.py:592
 #, python-format
@@ -3000,6 +2978,8 @@ msgid ""
 " Subscription may be pending address verification, confirmation or approval "
 "as appropriate."
 msgstr ""
+" Abonelik; adres doğrulama, doğrulama veya onay bekleme durumlarından "
+"birinde olabilir."
 
 #: views/list.py:605 views/list.py:653
 #, python-format
@@ -3011,10 +2991,9 @@ msgid "Please fill out the form correctly."
 msgstr "Lütfen formu doğru bir şekilde doldurun."
 
 #: views/list.py:643
-#, fuzzy, python-brace-format
-#| msgid "The address %(address)s has been unsubscribed from %(list)s."
+#, python-brace-format
 msgid "These addresses {address} have been unsubscribed from {list}."
-msgstr "%(address)s adresi %(list)s aboneliğinden çıktı."
+msgstr "Bu {address} adresleri, {list} aboneliğinden çıkarıldı."
 
 #: views/list.py:674
 msgid "The selected messages were accepted"
@@ -3077,10 +3056,8 @@ msgid "Subscriptions pending approval"
 msgstr "Onay bekleyen abonelikler"
 
 #: views/list.py:1019
-#, fuzzy
-#| msgid "Subscriptions pending approval"
 msgid "Un-subscriptions pending approval"
-msgstr "Onay bekleyen abonelikler"
+msgstr "Onay bekleyen abonelikten çıkmalar"
 
 #: views/list.py:1055
 msgid "The request has been accepted."
