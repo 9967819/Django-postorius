@@ -605,6 +605,9 @@ def list_mass_subscribe(request, list_id):
                 except ValidationError:
                     messages.error(request, _('The email address %s'
                                               ' is not valid.') % address)
+                    # When the email address is bad, set the focus back to the
+                    # email field after returning to the same page.
+                    form.fields['emails'].widget.attrs['autofocus'] = True
     else:
         form = ListMassSubscription()
     return render(request, 'postorius/lists/mass_subscribe.html',

@@ -73,6 +73,13 @@ Other
   can use a single implementation that uses caching for efficient lookups.
 
 
+Ascessibility
+-------------
+* Move the focus to the textarea in mass subscribe page if there are errors in
+  the form. (Closes #493)
+
+
+
 1.3.4
 =====
 
