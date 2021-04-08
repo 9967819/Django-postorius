@@ -20,7 +20,7 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 
 from allauth.account.models import EmailAddress
-from django_mailman3.lib.mailman import get_mailman_user
+from django_mailman3.lib.mailman import get_mailman_user, sync_email_addresses
 
 from postorius.forms import ListAnonymousSubscribe
 from postorius.tests.utils import ViewTestCase
@@ -76,8 +76,39 @@ class ListSummaryPageTest(ViewTestCase):
         self.assertContains(response, 'You have a subscription request '
                                       'pending. If you don\'t hear back soon, '
                                       'please contact the list owners.')
+        # When there is only one pending subscription, Unsubscribe/Subscribe
+        # section will not appear.
         self.assertNotContains(response, 'Unsubscribe')
         self.assertNotContains(response, 'Subscribe')
+
+    def test_pending_subscription_request_with_subscription(self):
+        EmailAddress.objects.create(
+            user=self.user, email='test-email2@example.com', verified=True)
+        sync_email_addresses(self.user)
+        mlist = self.mm_client.get_list('foo@example.com')
+        # Make a successful subscription
+        mlist.subscribe('test-email2@example.com',
+                        pre_verified=True,
+                        pre_confirmed=True)
+        mlist.settings['subscription_policy'] = 'moderate'
+        mlist.settings.save()
+        # Make a pending subscription
+        mlist.subscribe('test@example.com',
+                        pre_verified=True,
+                        pre_confirmed=True)
+        self.client.login(username='testuser', password='testpass')
+        response = self.client.get(reverse('list_summary',
+                                           args=('foo@example.com', )))
+        self.assertEqual(response.status_code, 200)
+        # Response must contain the pending notification.
+        self.assertContains(response, 'You have a subscription request '
+                                      'pending. If you don\'t hear back soon, '
+                                      'please contact the list owners.')
+        # Response must not contain pending address
+        self.assertNotContains(response, 'test@example.com')
+        # Response must contain successful subscription
+        self.assertContains(response, 'Unsubscribe')
+        self.assertContains(response, 'test-email2@example.com')
 
     def test_unsubscribe_button_is_available(self):
         mlist = self.mm_client.get_list('foo@example.com')
@@ -199,16 +230,15 @@ def function:
     def test_list_summary_already_subscribed(self):
         self.foo_list.subscribe(
             'test@example.com',
-            pre_verified=True, pre_confirmed=True, pre_approved=True)
+            pre_verified=True, pre_confirmed=True, pre_approved=True,
+            delivery_mode='summary_digests', delivery_status='by_user')
         self.client.login(username='testuser', password='testpass')
         response = self.client.get(reverse('list_summary',
                                            args=('foo@example.com', )))
-        # Assert two parts separately due to sometimes being newlines and stuff
-        # in the response HTML.
-        self.assertContains(response,
-                            'You are subscribed to this list with the '
-                            'following address:')
-        self.assertContains(response, ' <em>test@example.com</em>')
+        self.assertContains(response, 'test@example.com')
+        # Make sure delivery_mode and delivery_status show up.
+        self.assertContains(response, 'Summary Digests')
+        self.assertContains(response, 'Disabled')
 
     def test_list_summary_already_subscribed_user(self):
         mm_user = get_mailman_user(self.user)
@@ -216,17 +246,32 @@ def function:
         mm_user.preferred_address = self.user.email
         self.foo_list.subscribe(
             str(mm_user.user_id),
-            pre_verified=True, pre_confirmed=True, pre_approved=True)
+            pre_verified=True, pre_confirmed=True, pre_approved=True,
+            delivery_mode='plaintext_digests', delivery_status='enabled')
         self.client.login(username='testuser', password='testpass')
         response = self.client.get(reverse('list_summary',
                                            args=('foo@example.com', )))
-        # Assert two parts separately due to sometimes being newlines and stuff
-        # in the response HTML.
         self.assertContains(response,
-                            'You are subscribed to this list with the '
-                            'following address:')
-        self.assertContains(response,
-                            ' <em>Primary Address (test@example.com)</em>')
+                            'Primary Address (test@example.com)')
+        # Make sure delivery_mode and delivery_status show up.
+        self.assertContains(response, 'Plain Text Digests')
+        self.assertContains(response, 'Enabled')
+
+    def test_list_summary_multiple_addresses(self):
+        self.foo_list.subscribe(
+            'test@example.com',
+            pre_verified=True, pre_confirmed=True, pre_approved=True)
+        EmailAddress.objects.create(
+            user=self.user, email='test-email2@example.com', verified=True)
+        sync_email_addresses(self.user)
+        self.foo_list.subscribe(
+            'test-email2@example.com', pre_confirmed=True, pre_verified=True)
+        self.client.login(username='testuser', password='testpass')
+        response = self.client.get(reverse('list_summary',
+                                           args=('foo@example.com', )))
+        # Make sure that two addresses appear in the summary list
+        self.assertContains(response, 'test-email2@example.com')
+        self.assertContains(response, 'test@example.com')
 
     def test_list_summary_sets_preferred_address(self):
         # Test that preferred address is set.

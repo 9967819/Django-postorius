@@ -43,36 +43,58 @@
     {% if user.is_authenticated %}
         {% if user_subscribed %}
             <h2>{% trans 'Subscription / Unsubscription' %}</h2>
-            <p>
-              {% trans 'You are subscribed to this list with the following address:' %}
-              {% if subscribed_preferred %}
-                  <em>{% trans 'Primary Address' %} ({{ subscribed_address }})</em>
-              {% else %}
-                  <em>{{ subscribed_address }}</em>
-              {% endif %}
-            </p>
-            {% url 'user_list_options' subscriber as user_list_options_url %}
-              <a class="btn btn-primary" href="{{ user_list_options_url }}">{% trans 'Manage Subscription' %}</a>
-            <p></p>
-              <form method="post" action="{% url 'list_unsubscribe' list.list_id %}" class="form-inline">
-                    {% csrf_token %}
-                    <input type="hidden" name="email" value="{{ subscribed_address }}" />
-                    <button type="submit" class="btn btn-danger">{% trans 'Unsubscribe' %}</button>
-                </form>
-        {% elif user_request_pending %}
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped"> 
+                <thead>
+                  <tr>
+                    <th scope="col">{% trans 'Subscription Address' %}</th>
+                    <th scope="col">{% trans 'Delivery status' %}</th>
+                    <th scope="col">{% trans 'Delivery mode' %}</th>
+                    <th scope="col">{% trans 'Manage' %}</th>
+                    <th scope="col">{% trans 'Unsubscribe' %}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for subscription in user_subscriptions %}
+                  <tr>
+                    {% if subscription.subscribed_preferred %}
+                      <td>{% trans 'Primary Address' %} ({{ subscription.subscribed_address }})</td>
+                    {% else %}
+                      <td>{{ subscription.subscribed_address }}</td>
+                    {% endif %}
+                    <td>{{ subscription.delivery_status }}</td>
+                    <td>{{ subscription.delivery_mode }}</td>
+                    <td>
+                      {% url 'user_list_options' subscription.subscriber as user_list_options_url %}
+                      <a class="btn btn-primary" href="{{ user_list_options_url }}">{% trans 'Manage Subscription' %}</a>
+                    </td>
+                    <td>
+                      <form method="post" action="{% url 'list_unsubscribe' list.list_id %}" class="form-inline">
+                        {% csrf_token %}
+                        <input type="hidden" name="email" value="{{ subscription.subscribed_address }}" />
+                        <button type="submit" class="btn btn-danger">{% trans 'Unsubscribe' %}</button>
+                      </form>
+                    </td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+        {% elif not user_request_pending %}
+          <h2>{% trans 'Subscribe to this list' %}</h2>
+          <p>
+            {% blocktrans with address=list.settings.join_address %}
+                To subscribe you can send an email with 'subscribe' in the subject to
+                <a href="mailto:{{ address }}?subject=Subscribe">{{ address }}</a>
+                or use the form below:
+            {% endblocktrans %}
+          </p>
+          <form action="{% url 'list_subscribe' list.list_id %}" method="post" class="form-horizontal">
+              {% bootstrap_form_horizontal subscribe_form 2 8 'Subscribe' %}
+          </form>
+        {% endif %}
+        {% if user_request_pending %}
             <h4>{% trans "You have a subscription request pending. If you don't hear back soon, please contact the list owners." %}</h4>
-        {% else %}
-            <h2>{% trans 'Subscribe to this list' %}</h2>
-            <p>
-              {% blocktrans with address=list.settings.join_address %}
-                  To subscribe you can send an email with 'subscribe' in the subject to
-                  <a href="mailto:{{ address }}?subject=Subscribe">{{ address }}</a>
-                  or use the form below:
-              {% endblocktrans %}
-            </p>
-            <form action="{% url 'list_subscribe' list.list_id %}" method="post" class="form-horizontal">
-                {% bootstrap_form_horizontal subscribe_form 2 8 'Subscribe' %}
-            </form>
         {% endif %}
     {% else %}
       <div>
