@@ -55,6 +55,8 @@ from postorius.forms import (
     ListMassSubscription, ListNew, ListSubscribe, MemberForm, MemberModeration,
     MemberPolicyForm, MessageAcceptanceForm, MultipleChoiceForm,
     UserPreferences)
+from postorius.forms.fields import (
+    DELIVERY_MODE_CHOICES, DELIVERY_STATUS_CHOICES)
 from postorius.forms.list_forms import ACTION_CHOICES, TokenConfirmForm
 from postorius.models import (
     Domain, List, Mailman404Error, Style, SubscriptionMode)
@@ -67,6 +69,9 @@ logger = logging.getLogger(__name__)
 
 #: DeliveryStatus field values that an admin cannot set.
 DISABLED_DELIVERY_STATUS_CHOICES_ADMIN = ['by_bounces']
+
+DELIVERY_MODE_DICT = dict(DELIVERY_MODE_CHOICES)
+DELIVERY_STATUS_DICT = dict(DELIVERY_STATUS_CHOICES)
 
 
 class TokenOwner:
@@ -291,22 +296,30 @@ class ListSummaryView(MailingListView):
                 "email").values_list("email", flat=True)
             pending_requests = [r['email'] for r in self.mailing_list.requests]
 
+            subscriptions = []
             for address in user_emails:
                 if address in pending_requests:
                     data['user_request_pending'] = True
-                    break
+                    continue
                 try:
                     member = self.mailing_list.get_member(address)
                 except ValueError:
                     pass
                 else:
-                    data['user_subscribed'] = True
-                    data['subscribed_address'] = address
-                    data['subscriber'] = member.member_id
-                    data['subscribed_preferred'] = bool(
-                        member.subscription_mode ==
-                        SubscriptionMode.as_user.name)
-                    break  # no need to test more addresses
+                    subscriptions.append({
+                        'subscribed_address': address,
+                        'subscriber': member.member_id,
+                        'subscribed_preferred': bool(
+                            member.subscription_mode ==
+                            SubscriptionMode.as_user.name),
+                        'delivery_mode': DELIVERY_MODE_DICT.get(
+                            member.preferences.get('delivery_mode')),
+                        'delivery_status': DELIVERY_STATUS_DICT.get(
+                            member.preferences.get('delivery_status'))
+                    })
+            data['user_subscriptions'] = subscriptions
+            data['user_subscribed'] = bool(subscriptions)
+
             mm_user = get_mailman_user(request.user)
             primary_email = None
             if mm_user.preferred_address is None:

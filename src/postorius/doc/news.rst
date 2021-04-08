@@ -47,6 +47,8 @@ UI
 * Expose the ``forward_unrecognized_bounces_to`` setting on
   ``Bounce Processing`` settings.
 * Clarified the description of ``Maximum number of recipients``.  (Closes #515)
+* List summary view will now display a table for all subscriptions with
+  ``delivery_mode`` and ``delivery_status``. (Closes #470)
 
 
 Other
