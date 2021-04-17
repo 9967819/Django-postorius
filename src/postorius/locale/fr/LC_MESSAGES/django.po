@@ -1,15 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# J. Lavoie <j.lavoie@net-c.ca>, 2020.
+# J. Lavoie <j.lavoie@net-c.ca>, 2020, 2021.
 # Yohann D'ANELLO <yohann.danello@animath.fr>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-19 10:38-0700\n"
-"PO-Revision-Date: 2021-02-07 00:50+0000\n"
-"Last-Translator: Yohann D'ANELLO <yohann.danello@animath.fr>\n"
+"PO-Revision-Date: 2021-04-15 11:27+0000\n"
+"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/fr/>\n"
 "Language: fr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.5-dev\n"
+"X-Generator: Weblate 4.6-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -111,10 +111,8 @@ msgid "Disabled"
 msgstr "Désactivé"
 
 #: forms/fields.py:36
-#, fuzzy
-#| msgid "Disabled"
 msgid "Disabled by Owner"
-msgstr "Désactivé"
+msgstr "Désactivé par le propriétaire"
 
 #: forms/fields.py:37
 msgid "Disabled by Bounces"
@@ -495,14 +493,12 @@ msgid "Do not archive this list"
 msgstr "Ne pas archiver cette liste"
 
 #: forms/list_forms.py:323
-#, fuzzy
-#| msgid "Plain Text Digests"
 msgid "Plain text"
-msgstr "Condensés en texte brut"
+msgstr "Texte en clair"
 
 #: forms/list_forms.py:324
 msgid "Markdown text"
-msgstr ""
+msgstr "Texte markdown"
 
 #: forms/list_forms.py:330
 msgid "Archive policy"
@@ -517,8 +513,9 @@ msgid "Active archivers"
 msgstr "Archives actives"
 
 #: forms/list_forms.py:343
+#, fuzzy
 msgid "Archive Rendering mode"
-msgstr ""
+msgstr "Archives en mode de rendu"
 
 #: forms/list_forms.py:344
 msgid ""
@@ -526,6 +523,9 @@ msgid ""
 "formatting based on markup in the email.\n"
 "Currently, this option is only supported by Hyperkitty."
 msgstr ""
+"Cette option permet de rendre les courriels dans l'archiveur en tant que "
+"texte riche avec un formatage basé sur le balisage du courriel.\n"
+"Actuellement, cette option n'est prise en charge que par Hyperkitty."
 
 #: forms/list_forms.py:376
 msgid "Acceptable aliases"
@@ -544,9 +544,9 @@ msgstr ""
 "Ceci est une liste d'adresses et d'expressions régulières (une par ligne) "
 "correspondant aux adresses acceptables dans les champs To: ou Cc: à la place "
 "de l'adresse de la liste quand l'option `require_explicit_destination' est "
-"activée. Les entrées de la liste sont soit des adresses e-mail soit des "
-"expressions régulières correspondant à des adresses e-mail. Les expressions "
-"régulières commencent par `^' et sont testées sur chaque adresse "
+"activée. Les entrées de la liste sont soit des adresses courriel soit des "
+"expressions régulières correspondant à des adresses courriel. Les "
+"expressions régulières commencent par `^' et sont testées sur chaque adresse "
 "destinataire du message. La correspondance est effectuée à l'aide du module "
 "re.match() de Python, ce qui veut dire que les expressions régulières "
 "s'appliquent du début de la chaîne de caractères."
@@ -656,8 +656,9 @@ msgid ""
 "The maximum allowed message size in KB. This can be used to prevent emails "
 "with large attachments. A size of 0 disables the check."
 msgstr ""
-"La taille maximum d'un message en Ko. Cela peut servir à éviter les e-mails "
-"avec de grosses pièces-jointes. La taille 0 désactive la vérification."
+"La taille maximum d'un message en Ko. Cela peut servir à éviter les "
+"courriels avec de grosses pièces-jointes. La taille 0 désactive la "
+"vérification."
 
 #: forms/list_forms.py:456
 msgid "Maximum number of recipients"
@@ -768,7 +769,7 @@ msgstr "Activer les condensés"
 
 #: forms/list_forms.py:555
 msgid "Should Mailman enable digests for this MailingList?"
-msgstr "Mailman doit-il activer les condensés pour cette liste de diffusion ?"
+msgstr "Mailman doit-il activer les condensés pour cette liste de diffusion ?"
 
 #: forms/list_forms.py:561
 msgid "Send Digest Periodically"
@@ -1218,7 +1219,7 @@ msgstr "Réponse automatique au propriétaire de la liste"
 msgid ""
 "Should Mailman send an auto-response to emails sent to the -owner address?"
 msgstr ""
-"Mailman doit-il envoyer une réponse automatique aux messages envoyés à "
+"Mailman doit-il envoyer une réponse automatique aux courriels envoyés à "
 "l'adresse -owner du/des propriétaire(s) de la liste ?"
 
 #: forms/list_forms.py:840
@@ -3069,6 +3070,8 @@ msgid ""
 " Subscription may be pending address verification, confirmation or approval "
 "as appropriate."
 msgstr ""
+" L'abonnement peut être en attente de vérification, de confirmation ou de "
+"validation de l'adresse, selon le cas."
 
 #: views/list.py:605 views/list.py:653
 #, python-format
@@ -3077,13 +3080,12 @@ msgstr "L'adresse %s est invalide."
 
 #: views/list.py:627
 msgid "Please fill out the form correctly."
-msgstr "Merci de remplir le formulaire correctement."
+msgstr "Merci de compléter le formulaire correctement."
 
 #: views/list.py:643
-#, fuzzy, python-brace-format
-#| msgid "The address %(address)s has been unsubscribed from %(list)s."
+#, python-brace-format
 msgid "These addresses {address} have been unsubscribed from {list}."
-msgstr "L'adresse %(address)s a été désabonnée de %(list)s."
+msgstr "Ces adresses {address} ont été désabonnées de {list}."
 
 #: views/list.py:674
 msgid "The selected messages were accepted"
