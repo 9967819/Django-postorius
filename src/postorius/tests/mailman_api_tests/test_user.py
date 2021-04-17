@@ -387,9 +387,10 @@ class TestListAllUsers(ViewTestCase):
 
     def setUp(self):
         super().setUp()
-        for i in range(10):
+        for i in range(11):
             self.mm_client.create_user('user{}@example.com'.format(i),
-                                       'testpass')
+                                       'testpass',
+                                       'User {}'.format(i))
         self.su = User.objects.create_superuser('su', 'su@example.com', 'pass')
 
     def test_get_all_users_forbidden(self):
@@ -398,9 +399,36 @@ class TestListAllUsers(ViewTestCase):
 
     def test_get_all_users_as_superuser(self):
         self.client.force_login(self.su)
-        response = self.client.get(reverse('list_users'))
+        url = reverse('list_users')
+        response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
+        # default page size is 10, so we will get 10.
         self.assertEqual(len(response.context['all_users']), 10)
+        # lets get all users by setting count.
+        url += '?count=15'
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        # default page size is 10, so we will get 10.
+        self.assertEqual(len(response.context['all_users']), 11)
+
+    def test_search_user(self):
+        self.client.force_login(self.su)
+
+        def _get_url(query):
+            return reverse('list_users') + '?q={}'.format(query)
+
+        response = self.client.get(_get_url('0@e'))
+        self.assertEqual(response.status_code, 200)
+        # It should be two users, user0@example.com and user10@example.com
+        self.assertEqual(len(response.context['all_users']), 2)
+        # search with display name.
+        response = self.client.get(_get_url('User 7'))
+        self.assertEqual(response.status_code, 200)
+        # It should be one user, user7@example.com, but it should search with
+        # display name because of the space.
+        self.assertEqual(len(response.context['all_users']), 1)
+        self.assertEqual(response.context['all_users'][0].display_name,
+                         'User 7')
 
 
 class TestManageUser(ViewTestCase):
