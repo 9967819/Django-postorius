@@ -91,6 +91,40 @@ def get_member_or_nonmember(mlist, email):
     return member
 
 
+def get_django_user(mm_user, addresses=None):
+    """Given a Mailman user, return a Django User if One exists.
+
+    There is no direct way to fetch that, but we can iterate on Users's Email
+    Addresses and see if Django knows any one of them. If we find one, just
+    return the user associated with that Address.
+
+    Ideally, the email addresses should be *all* synchronized with Core, but
+    just in case they aren't, we iterate over all the addresses.
+
+    :param mm_user: Mailman User object.
+    :param addresses: user.addresses for the above mailman objects. It is
+        passed in just so that we can avoid an API call to Core to get them. It
+        is optional since we can just fetch them here if need be.
+    :returns: Django user if found, None otherwise.
+    """
+    if addresses is None:
+        addresses = mm_user.addresses or []
+    django_email = None
+    for addr in addresses:
+        try:
+            django_email = EmailAddress.objects.get(email=addr.email)
+        except EmailAddress.DoesNotExist:
+            continue
+        else:
+            break
+
+    if django_email is None:
+        # If none of the user's emails are registered in Django, that means
+        # they don't have a user account.
+        return None
+    return django_email.user
+
+
 LANGUAGES = (
     ('ar', 'Arabic'),
     ('ast', 'Asturian'),

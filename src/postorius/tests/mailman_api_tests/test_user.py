@@ -381,3 +381,143 @@ class MailmanUserTest(ViewTestCase):
             reverse('user_list_options',
                     args=[member_addr.member_id]))
         self.assertEqual(response.status_code, 200)
+
+
+class TestListAllUsers(ViewTestCase):
+
+    def setUp(self):
+        super().setUp()
+        for i in range(10):
+            self.mm_client.create_user('user{}@example.com'.format(i),
+                                       'testpass')
+        self.su = User.objects.create_superuser('su', 'su@example.com', 'pass')
+
+    def test_get_all_users_forbidden(self):
+        response = self.client.get(reverse('list_users'))
+        self.assertEqual(response.status_code, 403)
+
+    def test_get_all_users_as_superuser(self):
+        self.client.force_login(self.su)
+        response = self.client.get(reverse('list_users'))
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(response.context['all_users']), 10)
+
+
+class TestManageUser(ViewTestCase):
+
+    def setUp(self):
+        super().setUp()
+        self.user = self.mm_client.create_user('user@example.com',
+                                               'testpass')
+        self.su = User.objects.create_superuser('su', 'su@example.com', 'pass')
+        dom = self.mm_client.create_domain('example.com')
+        self.mlist = dom.create_list('test')
+        self.mlist.subscribe('user@example.com',
+                             pre_verified=True, pre_confirmed=True)
+
+    def test_get_all_users_forbidden(self):
+        response = self.client.get(
+            reverse('manage_user', args=[self.user.user_id]))
+        self.assertEqual(response.status_code, 403)
+
+    def test_get_manage_user(self):
+        self.client.force_login(self.su)
+        response = self.client.get(
+            reverse('manage_user', args=[self.user.user_id]))
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.context['auser'].user_id, self.user.user_id)
+        user_form = response.context['user_form']
+        self.assertEqual(user_form.user.user_id, self.user.user_id)
+        addr_forms = response.context['addresses']
+        self.assertEqual(len(addr_forms.forms), 1)
+        subform = response.context['subscriptions']
+        self.assertEqual(len(subform.forms), 1)
+        self.assertIsNone(response.context['django_user'])
+        self.assertIsNone(response.context['change_password'])
+
+    def test_get_manage_user_with_django_user(self):
+        user = User.objects.create_user(username='tester', password='test')
+        for addr in self.user.addresses:
+            EmailAddress.objects.create(
+                user=user, email=addr.email)
+        self.client.force_login(self.su)
+        response = self.client.get(
+            reverse('manage_user', args=[self.user.user_id]))
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.context['auser'].user_id, self.user.user_id)
+        user_form = response.context['user_form']
+        self.assertEqual(user_form.user.user_id, self.user.user_id)
+        addr_forms = response.context['addresses']
+        self.assertEqual(len(addr_forms.forms), 1)
+        subform = response.context['subscriptions']
+        self.assertEqual(len(subform.forms), 1)
+        self.assertEqual(response.context['django_user'], user)
+        self.assertIsNotNone(response.context['change_password'])
+
+    def test_update_display_name(self):
+        self.client.force_login(self.su)
+        response = self.client.post(
+            reverse('manage_user', args=[self.user.user_id]),
+            data={'display_name': 'My User', 'user_form': 'Update'})
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('Successfully updated user.', response.content.decode())
+
+    def test_update_user_address(self):
+        self.client.force_login(self.su)
+        addresses = self.user.addresses
+        addresses[0].unverify()
+        self.assertFalse(self.user.addresses[0].verified)
+        formdata = {
+            'form-TOTAL_FORMS': '1',
+            'form-INITIAL_FORMS': '1',
+            'form-MIN_NUM_FORMS': '1',
+            'form-MAX_NUM_FORMS': '1',
+            'form-0-verified': 'on',
+            'address_form': 'Update',
+        }
+        response = self.client.post(
+            reverse('manage_user', args=[self.user.user_id]),
+            data=formdata)
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue(self.user.addresses[0].verified)
+        self.assertIn('Successfully updated addresses user@example.com',
+                      response.content.decode())
+
+    def test_update_user_subscriptions(self):
+        self.client.force_login(self.su)
+        data = {
+            'form-TOTAL_FORMS': '1',
+            'form-INITIAL_FORMS': '1',
+            'form-MIN_NUM_FORMS': '0',
+            'form-MAX_NUM_FORMS': '1',
+
+            'form-0-moderation_action': 'discard',
+            'form-0-delivery_mode': 'mime_digests',
+            'subs_form': 'Update',
+        }
+        response = self.client.post(
+            reverse('manage_user', args=[self.user.user_id]),
+            data=data)
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('Successfully updated memberships for test.example.com',
+                      response.content.decode())
+
+    def test_update_user_password(self):
+        user = User.objects.create_user(
+            username='myuser', password='mypassword')
+        EmailAddress.objects.create(user=user, email='user@example.com')
+        self.assertTrue(
+            self.client.login(username='myuser', password='mypassword'))
+        self.client.force_login(self.su)
+        data = {
+            'change_password': 'Update',
+            'password1': 'newpsdsd1987',
+            'password2': 'newpsdsd1987',
+        }
+        response = self.client.post(
+            reverse('manage_user', args=[self.user.user_id]),
+            data=data)
+        self.assertEqual(response.status_code, 200)
+        # Verify by tring to login.
+        self.assertTrue(
+            self.client.login(username='myuser', password='newpsdsd1987'))

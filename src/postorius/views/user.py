@@ -22,21 +22,27 @@ from urllib.error import HTTPError
 
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import AdminPasswordChangeForm
 from django.forms import formset_factory
 from django.http import Http404
 from django.shortcuts import render
 from django.urls import reverse, reverse_lazy
 from django.utils.decorators import method_decorator
 from django.utils.translation import gettext as _
+from django.views.decorators.debug import sensitive_post_parameters
 from django.views.generic import FormView
 
 from allauth.account.models import EmailAddress
 from django_mailman3.lib.mailman import get_mailman_client, get_mailman_user
+from django_mailman3.lib.paginator import MailmanPaginator, paginate
 
+from postorius.auth.decorators import superuser_required
 from postorius.forms import (
-    ChangeSubscriptionForm, UserPreferences, UserPreferencesFormset)
+    ChangeSubscriptionForm, ManageAddressForm, ManageAddressFormSet,
+    ManageMemberForm, ManageMemberFormSet, ManageUserForm, UserPreferences,
+    UserPreferencesFormset)
 from postorius.models import List, SubscriptionMode
-from postorius.utils import set_preferred
+from postorius.utils import get_django_user, set_preferred
 from postorius.views.generic import MailmanClientMixin
 
 
@@ -327,7 +333,6 @@ class UserSubscriptionPreferencesView(UserPreferencesView):
             form.member_id = subscription.member_id
             form.subscription_mode = subscription.subscription_mode
             form.address = subscription.address
-
         return data
 
 
@@ -338,3 +343,90 @@ def user_subscriptions(request):
     memberships = [m for m in mm_user.subscriptions]
     return render(request, 'postorius/user/subscriptions.html',
                   {'memberships': memberships})
+
+
+@superuser_required
+def list_users(request):
+    """List of all users."""
+    client = get_mailman_client()
+    users = paginate(client.get_user_page,
+                     request.GET.get('page'),
+                     request.GET.get('count'),
+                     paginator_class=MailmanPaginator)
+    return render(request,
+                  'postorius/user/all.html',
+                  {'all_users': users})
+
+
+@superuser_required
+@sensitive_post_parameters('password1', 'password2')
+def manage_user(request, user_id):
+    """Manage a single Mailman user view."""
+    client = get_mailman_client()
+    user = client.get_user(user_id)
+    user_form = ManageUserForm(user=user)
+    addr_formset = formset_factory(
+        ManageAddressForm, formset=ManageAddressFormSet, extra=0)
+    sub_formset = formset_factory(
+        ManageMemberForm, formset=ManageMemberFormSet, extra=0)
+    django_user = get_django_user(user)
+    addresses = addr_formset(addresses=user.addresses)
+    subscriptions = sub_formset(members=user.subscriptions)
+
+    change_password = None
+    if django_user is not None:
+        change_password = AdminPasswordChangeForm(django_user)
+        # The form always grabs focus so stop it from doing that unless there
+        # is an error in the form submitted.
+        change_password.fields['password1'].widget.attrs['autofocus'] = False
+
+    if request.method == 'POST':
+        # There are 4 forms in this view page, which one was submitted is
+        # distinguished based on the name of the submit button.
+        if 'address_form' in request.POST:
+            # This is the 'addresses' form, built using addr_formset.
+            addresses = addr_formset(request.POST, addresses=user.addresses)
+            if addresses.is_valid():
+                updated = addresses.save()
+                if updated:
+                    messages.success(
+                        request,
+                        _('Successfully updated addresses {}').format(', '.join(updated)))     # noqa: E501
+        elif 'subs_form' in request.POST:
+            # This is the 'subscriptions' form, built using sub_formset.
+            subscriptions = sub_formset(
+                request.POST, members=user.subscriptions)
+            if subscriptions.is_valid():
+                updated = subscriptions.save()
+                if updated:
+                    messages.success(
+                        request,
+                        _('Successfully updated memberships for {}').format(', '.join(updated)))  # noqa: E501
+        elif 'user_form' in request.POST:
+            # This is the 'user' form, built using ManageUserForm.
+            user_form = ManageUserForm(request.POST, user=user)
+            if user_form.is_valid():
+                user_form.save()
+                messages.success(request, _('Successfully updated user.'))
+        elif 'change_password' in request.POST:
+            change_password = AdminPasswordChangeForm(
+                django_user, request.POST)
+            if change_password.is_valid():
+                change_password.save()
+                # This will log the user out, which we want because the admin
+                # is changing their password. In case of user changing their
+                # own passowrd, they can remain authenticated.
+                messages.success(request, _('Password updated successfully'))
+                # Stop the form from grabbing the passowrd if successfully
+                # updated.
+                change_password.fields[
+                    'password1'].widget.attrs['autofocus'] = False
+
+    return render(request,
+                  'postorius/user/manage.html',
+                  {'auser': user,
+                   'user_form': user_form,
+                   'change_password': change_password,
+                   'django_user': django_user,
+                   'addresses': addresses,
+                   'subscriptions': subscriptions})

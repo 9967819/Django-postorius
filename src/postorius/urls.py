@@ -169,4 +169,12 @@ urlpatterns = [
     re_path(r'^api/templates/(?P<context>[^/]+)/(?P<identifier>[^/]+)/(?P<name>[^/]+)',  # noqa: E501
             template_views.get_template_data,
             name='rest_template'),
+
+    # users.
+    re_path(r'users$',
+            user_views.list_users,
+            name='list_users'),
+    re_path(r'users/(?P<user_id>[^/]+)/manage$',
+            user_views.manage_user,
+            name='manage_user'),
 ]

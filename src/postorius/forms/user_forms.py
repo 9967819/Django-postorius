@@ -22,8 +22,11 @@ from django import forms
 from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
 
+from allauth.account.models import EmailAddress
+
 from postorius.forms.fields import (
-    NullBooleanRadioSelect, delivery_mode_field, delivery_status_field)
+    NullBooleanRadioSelect, delivery_mode_field, delivery_status_field,
+    moderation_action_field)
 from postorius.utils import LANGUAGES, with_empty_choice
 
 
@@ -165,3 +168,172 @@ class UserPreferencesFormset(forms.BaseFormSet):
     def save(self):
         for form in self.forms:
             form.save()
+
+
+class ManageMemberForm(forms.Form):
+
+    # RW fields.
+    moderation_action = moderation_action_field()
+    delivery_mode = delivery_mode_field()
+
+    # TODO: Maybe add Member's preferences here to set other things like
+    # delivery_mode and such?
+
+    def __init__(self, *args, **kw):
+        self.member = kw.pop('member')
+        super().__init__(*args, **kw)
+
+    @property
+    def initial(self):
+        return {'moderation_action': self.member.moderation_action,
+                'delivery_mode': self.member.delivery_mode}
+
+    @initial.setter
+    def initial(self, value):
+        pass
+
+    def save(self):
+        """Save the data to the Member object by calling into REST API.
+
+        Also, return True/False to determine if anything was updated or not.
+        """
+        if not self.changed_data:
+            return False
+        for each in self.changed_data:
+            updated = self.cleaned_data.get(each)
+            setattr(self.member, each, updated)
+        self.member.save()
+        return True
+
+
+class ManageMemberFormSet(forms.BaseFormSet):
+
+    def __init__(self, *args, **kw):
+        self._members = kw.pop('members')
+        kw['initial'] = self._members
+        super().__init__(*args, **kw)
+
+    def get_form_kwargs(self, index):
+        kwargs = super().get_form_kwargs(index)
+        kwargs['member'] = self._members[index]
+        return kwargs
+
+    def _construct_form(self, i, **kwargs):
+        form = super()._construct_form(i, **kwargs)
+        form.member = self._members[i]
+        return form
+
+    def save(self):
+        """Save and return the lists for which subs were updated"""
+        updated = []
+        for form in self.forms:
+            was_updated = form.save()
+            if was_updated:
+                updated.append(form.member.list_id)
+        return updated
+
+
+class ManageAddressForm(forms.Form):
+    # RW fields.
+    verified = forms.BooleanField(
+        widget=forms.CheckboxInput(),
+        required=False,
+        label=_('Verified'),
+        help_text=_(
+            'Specifies whether or not this email address is verified'))
+
+    # TODO: Primary/Preferred Address. Needs integration with EmailAddress
+    # model from Django/Allauth.
+
+    def __init__(self, *args, **kw):
+        self.address = kw.pop('address')
+        super().__init__(*args, **kw)
+
+    @property
+    def initial(self):
+        return {'verified': self.address.verified}
+
+    @initial.setter
+    def initial(self, value):
+        pass
+
+    def save(self):
+        """Save the data and return if there was anything changed."""
+        if not self.changed_data:
+            return False
+        # Since there is a single field, the below shouldn't raise KeyError. In
+        # future when more fields are added, it can raise KeyError so make sure
+        # to use .get() and not do anything if value is None.
+        verified = self.cleaned_data['verified']
+        if verified:
+            self.address.verify()
+            self._update_django_address(True)
+            return True
+        self.address.unverify()
+        self._update_django_address(False)
+        return True
+
+    def _update_django_address(self, value):
+        """Verify/Unverify the EmailAddress model in Allauth."""
+        try:
+            email = EmailAddress.objects.get(email=self.address.email)
+        except EmailAddress.DoesNotExist:
+            return
+        email.verified = value
+        email.save()
+
+
+class ManageAddressFormSet(forms.BaseFormSet):
+
+    def __init__(self, *args, **kw):
+        self._addresses = kw.pop('addresses')
+        kw['initial'] = self._addresses
+        super().__init__(*args, **kw)
+
+    def get_form_kwargs(self, index):
+        kwargs = super().get_form_kwargs(index)
+        kwargs['address'] = self._addresses[index]
+        return kwargs
+
+    def _construct_form(self, i, **kwargs):
+        form = super()._construct_form(i, **kwargs)
+        form.address = self._addresses[i]
+        return form
+
+    def save(self):
+        """Save and return which addresses were updated."""
+        updated = []
+        for form in self.forms:
+            was_updated = form.save()
+            if was_updated:
+                updated.append(form.address.email)
+        return updated
+
+
+class ManageUserForm(forms.Form):
+
+    display_name = forms.CharField(
+        label=_('Display Name'),
+        required=True)
+
+    def __init__(self, *args, **kw):
+        self.user = kw.pop('user')
+        super().__init__(*args, **kw)
+
+    @property
+    def initial(self):
+        return {'display_name': self.user.display_name}
+
+    @initial.setter
+    def initial(self, value):
+        pass
+
+    def save(self):
+        if not self.changed_data:
+            return
+        new_name = self.cleaned_data.get('display_name')
+        self.user.display_name = new_name
+        self.user.save()
+        for addr in self.user.addresses:
+            addr.display_name = new_name
+            addr.save()
