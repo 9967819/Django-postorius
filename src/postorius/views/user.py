@@ -30,6 +30,7 @@ from django.urls import reverse, reverse_lazy
 from django.utils.decorators import method_decorator
 from django.utils.translation import gettext as _
 from django.views.decorators.debug import sensitive_post_parameters
+from django.views.decorators.http import require_GET
 from django.views.generic import FormView
 
 from allauth.account.models import EmailAddress
@@ -345,17 +346,27 @@ def user_subscriptions(request):
                   {'memberships': memberships})
 
 
+@require_GET
 @superuser_required
 def list_users(request):
     """List of all users."""
     client = get_mailman_client()
-    users = paginate(client.get_user_page,
+    query = request.GET.get('q')
+
+    if query:
+        def _find_users(count, page):
+            return client.find_users_page(query, count, page)
+        find_method = _find_users
+    else:
+        find_method = client.get_user_page
+
+    users = paginate(find_method,
                      request.GET.get('page'),
                      request.GET.get('count'),
                      paginator_class=MailmanPaginator)
     return render(request,
                   'postorius/user/all.html',
-                  {'all_users': users})
+                  {'all_users': users, 'query': query})
 
 
 @superuser_required

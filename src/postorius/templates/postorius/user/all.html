@@ -13,6 +13,21 @@
   <h1>{% trans 'Users' %}</h1>
 </div>
 
+<div class="row mb-2">
+  <div class="col-3">
+  <form method="GET" action="{% url 'list_users' %}">
+    <div class="input-group rounded">
+      <input type="search" class="form-control rounded" placeholder="{% trans 'Search' %}" aria-label="Search"
+             {% if query %}value="{{query}}"{% endif %}
+             aria-describedby="search-addon" name="q" />
+      <span class="input-group-text border-0" id="search-addon">
+        <i class="fa fa-search"></i>
+      </span>
+    </div>
+  </form>
+  </div>
+</div>
+
 <div class="table-responsive">
   <table class="table table-bordered table-striped">
     <thead>
