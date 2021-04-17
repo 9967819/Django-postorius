@@ -56,6 +56,12 @@
                                 {% trans 'System Information' %}
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{% url 'list_users' %}" class="nav-link">
+                                <span class="fa fa-user"></span>
+                                {% trans 'Users' %}
+                            </a>
+                        </li>
                     {% endif %}
                     {% if 'hyperkitty' in INSTALLED_APPS %}
                         <li class="nav-item"><a href="{% url 'hk_root' %}" class="nav-link">

@@ -49,6 +49,7 @@ UI
 * Clarified the description of ``Maximum number of recipients``.  (Closes #515)
 * List summary view will now display a table for all subscriptions with
   ``delivery_mode`` and ``delivery_status``. (Closes #470)
+* Add a new user management interface for superusrs. (See #518)
 
 
 Other

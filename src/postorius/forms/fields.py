@@ -36,6 +36,14 @@ DELIVERY_STATUS_CHOICES = (("enabled", _('Enabled')),
                            ("by_moderator", _('Disabled by Owner')),
                            ("by_bounces", _('Disabled by Bounces')))
 
+ACTION_CHOICES = (
+    ("hold", _("Hold for moderation")),
+    ("reject", _("Reject (with notification)")),
+    ("discard", _("Discard (no notification)")),
+    ("accept", _("Accept immediately (bypass other rules)")),
+    ("defer", _("Default processing")),
+)
+
 
 class ListOfStringsField(forms.Field):
     widget = forms.widgets.Textarea
@@ -157,3 +165,24 @@ def delivery_status_field(choices=None, widget=None):
             'going on vacation). If you disable mail delivery, don\'t forget '
             'to re-enable it when you come back; it will not be automatically '
             're-enabled.'))
+
+
+def moderation_action_field():
+    return forms.ChoiceField(
+        widget=forms.Select(),
+        label=_('Moderation'),
+        required=False,
+        choices=[(None, _('List default'))] + list(ACTION_CHOICES),
+        help_text=_(
+            'Default action to take when this member posts to the list. \n'
+            'List default -- follow the list\'s default member action. \n'
+            'Hold -- This holds the message for approval by the list '
+            'moderators. \n'
+            'Reject -- this automatically rejects the message by sending a '
+            'bounce notice to the post\'s author. The text of the bounce '
+            'notice can be configured by you. \n'
+            'Discard -- this simply discards the message, with no notice '
+            'sent to the post\'s author. \n'
+            'Accept -- accepts any postings without any further checks. \n'
+            'Default Processing -- run additional checks and accept '
+            'the message. \n'))

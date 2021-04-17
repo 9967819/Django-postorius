@@ -1,0 +1,39 @@
+{% extends "postorius/base.html" %}
+{% load i18n %}
+{% load pagination %}
+{% load date_helpers %}
+{% load postorius_helpers %}
+
+{% block head_title %}
+{% trans 'Users' %} - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1>{% trans 'Users' %}</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>{% trans 'User' %}</th>
+        <th>{% trans 'Created' %}</th>
+        <th>{% trans 'Manage' %}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for auser in all_users %}
+      <tr>
+        <td> {{ auser|user_display }}</td>
+        <td> {{ auser.created_on|datetime_parse|date:"DATETIME_FORMAT" }}</td>
+        <td>
+          <a class="btn btn-primary btn-sm" href={% url 'manage_user' auser.user_id %}>Manage</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% paginator all_users %}
+{% endblock %}
