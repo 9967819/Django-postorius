@@ -20,9 +20,9 @@
       <input type="search" class="form-control rounded" placeholder="{% trans 'Search' %}" aria-label="Search"
              {% if query %}value="{{query}}"{% endif %}
              aria-describedby="search-addon" name="q" />
-      <span class="input-group-text border-0" id="search-addon">
+      <button type="submit" class="btn btn-primary">
         <i class="fa fa-search"></i>
-      </span>
+      </button>
     </div>
   </form>
   </div>
