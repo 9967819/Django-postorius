@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-19 10:38-0700\n"
-"PO-Revision-Date: 2021-01-13 21:51+0000\n"
+"PO-Revision-Date: 2021-04-22 15:32+0000\n"
 "Last-Translator: Shohei Kusakata <shohei@kusakata.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.4.1-dev\n"
+"X-Generator: Weblate 4.7-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -78,7 +78,7 @@ msgstr "正しいドメイン名を入力してください"
 
 #: forms/domain_forms.py:103
 msgid "Owner's Email"
-msgstr ""
+msgstr "オーナーのメール"
 
 #: forms/fields.py:28
 msgid "Regular"
@@ -98,23 +98,23 @@ msgstr ""
 
 #: forms/fields.py:34 forms/list_forms.py:150
 msgid "Enabled"
-msgstr ""
+msgstr "有効"
 
 #: forms/fields.py:35 forms/list_forms.py:151
 msgid "Disabled"
-msgstr ""
+msgstr "無効"
 
 #: forms/fields.py:36
 msgid "Disabled by Owner"
-msgstr ""
+msgstr "オーナーによって無効"
 
 #: forms/fields.py:37
 msgid "Disabled by Bounces"
-msgstr ""
+msgstr "バウンスによって無効"
 
 #: forms/fields.py:120
 msgid "Make at least one selection"
-msgstr ""
+msgstr "どれかひとつは選択してください"
 
 #: forms/fields.py:131
 msgid "Delivery mode"
@@ -148,11 +148,11 @@ msgstr ""
 
 #: forms/list_forms.py:39
 msgid "Reject (with notification)"
-msgstr ""
+msgstr "拒否 (通知あり)"
 
 #: forms/list_forms.py:40
 msgid "Discard (no notification)"
-msgstr ""
+msgstr "破棄 (通知なし)"
 
 #: forms/list_forms.py:41
 msgid "Accept immediately (bypass other rules)"
@@ -168,7 +168,7 @@ msgstr "毎日"
 
 #: forms/list_forms.py:47
 msgid "Weekly"
-msgstr ""
+msgstr "毎週"
 
 #: forms/list_forms.py:48
 msgid "Quarterly"
@@ -176,7 +176,7 @@ msgstr "3ヶ月毎"
 
 #: forms/list_forms.py:49
 msgid "Monthly"
-msgstr ""
+msgstr "毎月"
 
 #: forms/list_forms.py:50
 msgid "Yearly"
@@ -208,7 +208,7 @@ msgstr "正しいリスト名を入力してください。"
 
 #: forms/list_forms.py:76
 msgid "Initial list owner address"
-msgstr ""
+msgstr "最初のリストオーナーのアドレス"
 
 #: forms/list_forms.py:78
 msgid "Please enter the list owner's email address."
@@ -318,10 +318,8 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:232
-#, fuzzy
-#| msgid "Subscriptions"
 msgid "Un-Subscription Policy"
-msgstr "購読"
+msgstr "購読解除ポリシー"
 
 #: forms/list_forms.py:234
 msgid ""
@@ -444,11 +442,11 @@ msgstr ""
 
 #: forms/list_forms.py:323
 msgid "Plain text"
-msgstr ""
+msgstr "プレーンテキスト"
 
 #: forms/list_forms.py:324
 msgid "Markdown text"
-msgstr ""
+msgstr "Markdown テキスト"
 
 #: forms/list_forms.py:330
 msgid "Archive policy"
@@ -1849,7 +1847,7 @@ msgstr ""
 
 #: templates/postorius/index.html:12
 msgid "Mailing Lists"
-msgstr ""
+msgstr "メーリングリスト"
 
 #: templates/postorius/index.html:40
 msgid "Create New Domain"
@@ -1861,11 +1859,11 @@ msgstr ""
 
 #: templates/postorius/index.html:54
 msgid "List name"
-msgstr ""
+msgstr "リスト名"
 
 #: templates/postorius/index.html:55
 msgid "Post address"
-msgstr ""
+msgstr "投稿アドレス"
 
 #: templates/postorius/index.html:66
 msgid "unadvertised"
@@ -1882,7 +1880,7 @@ msgstr ""
 
 #: templates/postorius/index.html:88
 msgid "There are currently no mailing lists."
-msgstr ""
+msgstr "現在メーリングリストは存在しません。"
 
 #: templates/postorius/lists/bans.html:8
 msgid "Banned addresses"
@@ -2163,10 +2161,8 @@ msgid "Primary Address"
 msgstr ""
 
 #: templates/postorius/lists/summary.html:55
-#, fuzzy
-#| msgid "Subscriptions"
 msgid "Manage Subscription"
-msgstr "購読"
+msgstr "購読管理"
 
 #: templates/postorius/lists/summary.html:60
 msgid "Unsubscribe"
@@ -2273,10 +2269,8 @@ msgid "Pending Confirmation"
 msgstr ""
 
 #: templates/postorius/menu/list_nav.html:25
-#, fuzzy
-#| msgid "Subscription settings"
 msgid "Unsubscription Requests"
-msgstr "購読設定"
+msgstr "購読解除リクエスト"
 
 #: templates/postorius/menu/list_nav.html:39
 msgid "Users"
@@ -2332,10 +2326,8 @@ msgid "System Configuration"
 msgstr ""
 
 #: templates/postorius/system_information.html:11
-#, fuzzy
-#| msgid "Mailman settings"
 msgid "Mailman System"
-msgstr "Mailman 設定"
+msgstr "Mailman システム"
 
 #: templates/postorius/user/address_preferences.html:8
 #: templates/postorius/user/subscription_preferences.html:7
@@ -2398,7 +2390,7 @@ msgstr "購読"
 
 #: templates/postorius/user/subscriptions.html:17
 msgid "You are subscribed to the following mailing lists:"
-msgstr ""
+msgstr "以下のメーリングリストを購読しています:"
 
 #: templates/postorius/user/subscriptions.html:23
 msgid "Subscription Address"
@@ -2563,20 +2555,16 @@ msgid "The member's moderation settings have been updated."
 msgstr ""
 
 #: views/list.py:421
-#, fuzzy
-#| msgid "You are already subscribed"
 msgid "You are not subscribed to {}."
-msgstr "すでに購読済みです"
+msgstr "{} は購読していません。"
 
 #: views/list.py:434
 msgid "You are already subscribed"
 msgstr "すでに購読済みです"
 
 #: views/list.py:445
-#, fuzzy
-#| msgid "Subscription settings"
 msgid "Subscription changed to {}"
-msgstr "購読設定"
+msgstr "購読を {} に変更しました"
 
 #: views/list.py:449
 msgid "Something went wrong. Please try again. {} {}"
@@ -2708,10 +2696,8 @@ msgid "Subscriptions pending approval"
 msgstr ""
 
 #: views/list.py:1019
-#, fuzzy
-#| msgid "Subscriptions"
 msgid "Un-subscriptions pending approval"
-msgstr "購読"
+msgstr "承認待ちの購読解除"
 
 #: views/list.py:1055
 msgid "The request has been accepted."

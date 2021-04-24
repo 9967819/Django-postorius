@@ -1,21 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
+# HelaBasa <R45XvezA@protonmail.ch>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-19 10:38-0700\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2021-04-20 14:29+0000\n"
+"Last-Translator: HelaBasa <R45XvezA@protonmail.ch>\n"
+"Language-Team: Sinhala <https://hosted.weblate.org/projects/gnu-mailman/"
+"postorius/si/>\n"
+"Language: si\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.7-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -91,15 +92,15 @@ msgstr ""
 
 #: forms/fields.py:34 forms/list_forms.py:150
 msgid "Enabled"
-msgstr ""
+msgstr "සබල කර ඇත"
 
 #: forms/fields.py:35 forms/list_forms.py:151
 msgid "Disabled"
-msgstr ""
+msgstr "අබල කර ඇත"
 
 #: forms/fields.py:36
 msgid "Disabled by Owner"
-msgstr ""
+msgstr "හිමිකරු විසින් අබල කර ඇත"
 
 #: forms/fields.py:37
 msgid "Disabled by Bounces"
@@ -157,11 +158,11 @@ msgstr ""
 
 #: forms/list_forms.py:46
 msgid "Daily"
-msgstr ""
+msgstr "දිනපතා"
 
 #: forms/list_forms.py:47
 msgid "Weekly"
-msgstr ""
+msgstr "සතිපතා"
 
 #: forms/list_forms.py:48
 msgid "Quarterly"
@@ -253,7 +254,7 @@ msgstr ""
 
 #: forms/list_forms.py:154 forms/list_forms.py:187
 msgid "Your email address"
-msgstr ""
+msgstr "ඔබගේ වි-තැපැල් ලිපිනය"
 
 #: forms/list_forms.py:158
 msgid ""
@@ -334,7 +335,7 @@ msgstr ""
 #: forms/list_forms.py:939 forms/list_forms.py:982 forms/list_forms.py:989
 #: forms/list_forms.py:1010 forms/list_forms.py:1081 forms/user_forms.py:55
 msgid "Yes"
-msgstr ""
+msgstr "ඔව්"
 
 #: forms/list_forms.py:247 forms/list_forms.py:273 forms/list_forms.py:282
 #: forms/list_forms.py:388 forms/list_forms.py:396 forms/list_forms.py:437
@@ -346,7 +347,7 @@ msgstr ""
 #: forms/list_forms.py:939 forms/list_forms.py:982 forms/list_forms.py:989
 #: forms/list_forms.py:1010 forms/list_forms.py:1082 forms/user_forms.py:55
 msgid "No"
-msgstr ""
+msgstr "නැහැ"
 
 #: forms/list_forms.py:249
 msgid "Process Bounces"
@@ -423,11 +424,11 @@ msgstr ""
 
 #: forms/list_forms.py:317
 msgid "Public archives"
-msgstr ""
+msgstr "ප්‍රසිද්ධ සංරක්ෂිත"
 
 #: forms/list_forms.py:318
 msgid "Private archives"
-msgstr ""
+msgstr "පෞද්ගලික සංරක්ෂිත"
 
 #: forms/list_forms.py:319
 msgid "Do not archive this list"
@@ -1906,7 +1907,7 @@ msgstr ""
 
 #: templates/postorius/lists/confirm_remove_role.html:17
 msgid "Remove"
-msgstr ""
+msgstr "ඉවත් කරන්න"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 msgid "Unsubscribe all members"
