@@ -51,6 +51,8 @@ UI
   ``delivery_mode`` and ``delivery_status``. (Closes #470)
 * Add a new user management interface for superusrs. (See #518)
 * Allow searching for users in list user views. (See #518)
+* Show both display name and email in user management interface if available,
+  (See #518)
 
 Other
 -----

@@ -24,10 +24,17 @@ register = template.Library()
 
 @register.filter
 def user_display(user):
-    """Return a User's display_name or email if that is none."""
-    if user.display_name is not None and user.display_name != "":
-        return user.display_name
+    """Return a User's formatted display_name and email."""
     addresses = user.addresses
+    if user.display_name is not None and user.display_name != "":
+        if len(addresses) > 0:
+            # We can't use email.utils.formataddr because it will return an
+            # RFC2047 encoded display name part for non-ascii.  We don't need
+            # to decide about quoting the display name as we aren't using this
+            # as an RFC5322 address.
+            return '{} <{}>'.format(user.display_name, addresses[0].email)
+        else:
+            return user.display_name
     if len(addresses) > 0:
         return addresses[0].email
     return "None"
