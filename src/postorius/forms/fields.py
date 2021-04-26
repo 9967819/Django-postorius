@@ -138,12 +138,13 @@ def delivery_mode_field(default=None):
         initial=default,
         label=_('Delivery mode'),
         help_text=_(
-            'If you select summary digests , you\'ll get posts bundled '
+            'If you select digests , you\'ll get posts bundled '
             'together (usually one per day but possibly more on busy lists), '
             'instead of singly when they\'re sent. Your mail reader may or '
             'may not support MIME digests. In general MIME digests are '
             'preferred, but if you have a problem reading them, select '
-            'plain text digests.'))
+            'plain text digests. '
+            'Summary Digests are currently equivalent to Mime Digests'))
 
 
 def delivery_status_field(choices=None, widget=None):
