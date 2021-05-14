@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-19 10:37-0700\n"
-"PO-Revision-Date: 2021-04-23 18:39+0000\n"
+"PO-Revision-Date: 2021-05-09 22:46+0000\n"
 "Last-Translator: Aftabuzzaman <Leemon432@gmail.com>\n"
 "Language-Team: Bengali <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/bn/>\n"
@@ -2121,7 +2121,7 @@ msgstr ""
 
 #: templates/postorius/lists/summary.html:21
 msgid "To contact the list owners, use the following email address:"
-msgstr ""
+msgstr "তালিকার মালিকদের সাথে যোগাযোগ করতে, এই ইমেইল ঠিকানাটি ব্যবহার করুন:"
 
 #: templates/postorius/lists/summary.html:27
 msgid "You have to login to visit the archives of this list."
@@ -2413,7 +2413,7 @@ msgstr ""
 
 #: templatetags/nav_helpers.py:35
 msgid "Summary"
-msgstr ""
+msgstr "সারাংশ"
 
 #: templatetags/nav_helpers.py:37
 msgid "Confirm Removal of All Members"
