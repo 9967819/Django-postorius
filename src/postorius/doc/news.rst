@@ -18,6 +18,8 @@ You should have received a copy of the GNU Lesser General Public License
 along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 
 
+.. _news-1.3.5:
+
 1.3.5
 =====
 
@@ -84,6 +86,7 @@ Ascessibility
   the form. (Closes #493)
 
 
+.. _news-1.3.4:
 
 1.3.4
 =====
@@ -138,6 +141,7 @@ Ascessibility
 * Support ``HYPERKITTY_ENABLE_GRAVATAR`` setting to control the user gravatar.
   (Closes #467)
 
+.. _news-1.3.3:
 
 1.3.3
 =====
