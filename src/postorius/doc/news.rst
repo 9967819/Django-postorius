@@ -78,6 +78,7 @@ Other
   always created when a User object in created in Django. Also remove duplicate
   implementation of ``get_mailman_user`` from ``MailmanUserManager`` so that we
   can use a single implementation that uses caching for efficient lookups.
+* Bump bundled jQuery to 3.6.0.slim version. (See !637)
 
 
 Ascessibility
