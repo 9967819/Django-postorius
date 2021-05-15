@@ -9,13 +9,14 @@
 # J. Lavoie <j.lavoie@net-c.ca>, 2020.
 # Paul <paulwiesinger+weblate@gmail.com>, 2020.
 # Alex <alexandersimm2@googlemail.com>, 2021.
+# Tobias Wiese <tobias@tobiaswiese.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-19 10:37-0700\n"
-"PO-Revision-Date: 2021-02-12 23:52+0000\n"
-"Last-Translator: Alex <alexandersimm2@googlemail.com>\n"
+"PO-Revision-Date: 2021-05-02 22:45+0000\n"
+"Last-Translator: Tobias Wiese <tobias@tobiaswiese.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/de/>\n"
 "Language: de\n"
@@ -23,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Weblate 4.5-dev\n"
+"X-Generator: Weblate 4.7-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -114,14 +115,12 @@ msgid "Disabled"
 msgstr "Deaktiviert"
 
 #: forms/fields.py:36
-#, fuzzy
-#| msgid "Disabled"
 msgid "Disabled by Owner"
-msgstr "Deaktiviert"
+msgstr "Deaktiviert durch Listenbesitzer"
 
 #: forms/fields.py:37
 msgid "Disabled by Bounces"
-msgstr ""
+msgstr "Deaktiviert durch Unzustellbarkeitsnachrichten"
 
 #: forms/fields.py:120
 msgid "Make at least one selection"
@@ -404,6 +403,7 @@ msgstr ""
 "Gibt an, ob diese Liste unzustellbare Nachrichten automatisch verarbeitet."
 
 #: forms/list_forms.py:256
+#, fuzzy
 msgid "Bounce score threshold"
 msgstr "Schwellwert für Unzustellbarkeit"
 
@@ -463,16 +463,15 @@ msgstr ""
 
 #: forms/list_forms.py:293
 msgid "Bounce disabled warnings interval"
-msgstr "Warnungsintervall für Bounce-Deaktivierungen"
+msgstr "Zeitintervall für Bounce-Deaktivierungswarnungen"
 
 #: forms/list_forms.py:296
 msgid "The number of days between each disabled notification."
-msgstr ""
-"Die Anzahl der Tage zwischen den einzelnen deaktivierten Benachrichtigungen."
+msgstr "Anzahl der Tage zwischen einzelnen Deaktivierungs-Benachrichtigungen"
 
 #: forms/list_forms.py:300
 msgid "Bounce disable warnings"
-msgstr "Warnungen zu Bounce-Deaktivierungen"
+msgstr "Bounce-Deaktivierungswarnungen"
 
 #: forms/list_forms.py:303
 msgid ""
@@ -499,14 +498,12 @@ msgid "Do not archive this list"
 msgstr "Liste nicht archivieren"
 
 #: forms/list_forms.py:323
-#, fuzzy
-#| msgid "Plain Text Digests"
 msgid "Plain text"
-msgstr "Plan-Text-Digests"
+msgstr "Klartext"
 
 #: forms/list_forms.py:324
 msgid "Markdown text"
-msgstr ""
+msgstr "Markdown-Text"
 
 #: forms/list_forms.py:330
 msgid "Archive policy"
@@ -522,7 +519,7 @@ msgstr "Aktive Archivierer"
 
 #: forms/list_forms.py:343
 msgid "Archive Rendering mode"
-msgstr ""
+msgstr "Archiv Anzeigemodus"
 
 #: forms/list_forms.py:344
 msgid ""
@@ -530,6 +527,9 @@ msgid ""
 "formatting based on markup in the email.\n"
 "Currently, this option is only supported by Hyperkitty."
 msgstr ""
+"Diese Option aktiviert die Anzeige von E-Mails im Rich-Text-Format mit "
+"Markdown-Auszeichnungen. \n"
+"Bisher wird diese Option nur von Hyperkitty unterstützt."
 
 #: forms/list_forms.py:376
 msgid "Acceptable aliases"
@@ -1315,31 +1315,20 @@ msgstr ""
 "werden."
 
 #: forms/list_forms.py:901
-#, fuzzy
-#| msgid "Send welcome message"
 msgid "Send goodbye message"
-msgstr "Willkommensnachricht senden"
+msgstr "Abschiedsnachricht senden"
 
 #: forms/list_forms.py:903
-#, fuzzy
-#| msgid ""
-#| "Send welcome message to newly subscribed members? Turn this off only if "
-#| "you plan on subscribing people manually and don't want them to know that "
-#| "you did so. Setting this to No is most useful for transparently migrating "
-#| "lists from some other mailing list manager to Mailman.\n"
-#| "The text of Welcome message can be set via the Templates tab."
 msgid ""
 "Send goodbye message to newly unsubscribed members? Turn this off only if "
 "you plan on unsubscribing people manually and don't want them to know that "
 "you did so.\n"
 "The text of Goodbye message can be set via the Templates tab."
 msgstr ""
-"Willkommensnachrichten an neue Mitglieder senden? Deaktivieren Sie diese "
-"Option nur dann, wenn Sie Leute selbst als Mitglied zufügen wollen und "
-"wollen, dass diese das nicht mitbekommen. Dies auf Nein zu stellen, "
-"erscheint am meisten sinnvoll für transparente Migrationen von einem anderen "
-"Mailinglisten-Manager zu Mailman.\n"
-"Der Text der Wilkommensnachricht kann über den Vorlagen-Tab eingestellt "
+"Abschiedsnachrichten an sich frisch abgemeldete Mitglieder senden? "
+"Deaktivieren Sie diese Option nur dann, wenn Sie Leute manuell von der Liste "
+"abmelden und wollen, dass diese das nicht mitbekommen.\n"
+"Der Text der Abschiedsnachricht kann über den Vorlagen-Tab eingestellt "
 "werden."
 
 #: forms/list_forms.py:910
@@ -1560,6 +1549,9 @@ msgid ""
 "will be ignored for these subscribers and a welcome message will be sent or "
 "not sent based on the choice."
 msgstr ""
+"Wenn auf \"Ja\" oder \"Nein\" gesetzt, werden für diese Abonnenten die "
+"Standardeinstellungen der Liste ignoriert und es wird eine "
+"Willkommensnachricht gesendet oder nicht gesendet."
 
 #: forms/list_forms.py:1109
 msgid "Emails to Unsubscribe"
@@ -1749,7 +1741,7 @@ msgstr ""
 
 #: forms/user_forms.py:144
 msgid "Cannot set delivery_status to {}"
-msgstr ""
+msgstr "delivery_status kann nicht auf {} gesetzt werden"
 
 #: forms/validators.py:39
 #, python-brace-format
@@ -2329,6 +2321,10 @@ msgid ""
 "    Confirm subscription of %(addr)s to %(name)s(%(listid)s):\n"
 "    "
 msgstr ""
+"\n"
+"    Bestätigen Sie die Anmeldung von %(addr)s zur Liste %(name)s(%(listid)s:"
+"\n"
+"    "
 
 #: templates/postorius/lists/confirm_token.html:16
 #, python-format
@@ -2337,6 +2333,10 @@ msgid ""
 "    Confirm unsubscription of %(addr)s from %(name)s(%(listid)s):\n"
 "    "
 msgstr ""
+"\n"
+"    Bestätigen Sie die Abmeldung von %(addr)s von der Liste "
+"%(name)s(%(listid)s):\n"
+"    "
 
 #: templates/postorius/lists/confirm_token.html:20
 #, python-format
@@ -2472,10 +2472,8 @@ msgid "Delivery Mode"
 msgstr "Zustellmodus"
 
 #: templates/postorius/lists/members.html:81
-#, fuzzy
-#| msgid "Moderation"
 msgid "Moderation Action"
-msgstr "Moderation"
+msgstr "Moderations Aktion"
 
 #: templates/postorius/lists/new.html:6
 msgid "Create list"
@@ -2511,10 +2509,8 @@ msgid "Settings"
 msgstr "Einstellungen"
 
 #: templates/postorius/lists/subscription_requests.html:39
-#, fuzzy
-#| msgid "Rejection reason:"
 msgid "Rejection reason"
-msgstr "Grund der Zurückweisung:"
+msgstr "Grund der Zurückweisung"
 
 #: templates/postorius/lists/summary.html:8
 #: templates/postorius/menu/list_nav.html:10
@@ -2658,8 +2654,8 @@ msgid ""
 "     "
 msgstr ""
 "\n"
-"     Möchten Sie die Vorlage \"%(name)s\" wirklich \n"
-"…aus der Liste \"%(identifier)s\" löschen?\n"
+"     Möchten Sie die Vorlage \"%(name)s\" wirklich\n"
+"     aus der Liste \"%(identifier)s\" löschen?\n"
 "     "
 
 #: templates/postorius/menu/list_nav.html:14
@@ -2675,10 +2671,8 @@ msgid "Pending Confirmation"
 msgstr "Ausstehende Bestätigung"
 
 #: templates/postorius/menu/list_nav.html:25
-#, fuzzy
-#| msgid "Subscription requests"
 msgid "Unsubscription Requests"
-msgstr "Mitgliedschaftsanfragen"
+msgstr "Abmeldeanfragen"
 
 #: templates/postorius/menu/list_nav.html:39
 msgid "Users"
@@ -2973,26 +2967,20 @@ msgid "The member's moderation settings have been updated."
 msgstr "Die Moderations-Einstellungen für das Mitglied wurden aktualisiert."
 
 #: views/list.py:421
-#, fuzzy
-#| msgid "You are subscribed to %s."
 msgid "You are not subscribed to {}."
-msgstr "Sie sind Mitglied folgender Listen: %s."
+msgstr "Du bist nicht auf {} eingetragen."
 
 #: views/list.py:434
 msgid "You are already subscribed"
 msgstr "Sie sind schon Mitglied"
 
 #: views/list.py:445
-#, fuzzy
-#| msgid "Subscription changed to %s"
 msgid "Subscription changed to {}"
-msgstr "Mitgliedschaft geändert zu %s"
+msgstr "Mitgliedschaft geändert zu {}"
 
 #: views/list.py:449
-#, fuzzy
-#| msgid "Something went wrong. Please try again."
 msgid "Something went wrong. Please try again. {} {}"
-msgstr "Etwas ging schief, bitte versuchen Sie es erneut."
+msgstr "Etwas ging schief, bitte versuche es erneut. {} {}"
 
 #: views/list.py:490
 msgid ""
@@ -3016,27 +3004,17 @@ msgid "Please check your inbox for further instructions"
 msgstr "Bitte prüfen Sie Ihr E-Mail-Postfach für weitere Anweisungen"
 
 #: views/list.py:545
-#, fuzzy
-#| msgid ""
-#| "Your subscription request has been submitted and is waiting for moderator "
-#| "approval."
 msgid ""
 "You have a pending unsubscription request waiting for moderator approval."
-msgstr ""
-"Ihr Mitgliedschaftsantrag wurde eingestellt und wartet auf die Bestätigung "
-"durch einen Moderator."
+msgstr "Eine Abmeldung wartet auf die Bestätigung durch einen Moderator."
 
 #: views/list.py:552
-#, fuzzy
-#| msgid ""
-#| "Your subscription request has been submitted and is waiting for moderator "
-#| "approval."
 msgid ""
 "Your unsubscription request has been submitted and is waiting for moderator "
 "approval."
 msgstr ""
-"Ihr Mitgliedschaftsantrag wurde eingestellt und wartet auf die Bestätigung "
-"durch einen Moderator."
+"Ihre Abmeldung wurde übermittelt und wartet auf die Bestätigung durch einen "
+"Moderator."
 
 #: views/list.py:556
 #, python-format
@@ -3044,10 +3022,9 @@ msgid "%s has been unsubscribed from this list."
 msgstr "%s wurde von der Liste entfernt."
 
 #: views/list.py:589
-#, fuzzy, python-format
-#| msgid "The address %(address)s has been subscribed to %(list)s."
+#, python-format
 msgid "The address %(address)s has been invited to %(list)s."
-msgstr "Die Adresse %(address)s ist nun Mitglied von %(list)s."
+msgstr "Die Adresse %(address)s wurde auf die Liste %(list)s eingeladen."
 
 #: views/list.py:592
 #, python-format
@@ -3059,6 +3036,8 @@ msgid ""
 " Subscription may be pending address verification, confirmation or approval "
 "as appropriate."
 msgstr ""
+" Die Anmeldung wartet möglicherweise auf die Bestätigung der E-Mail-Adresse, "
+"Bestätigung des Nutzers oder Bestätigung durch einen Moderator."
 
 #: views/list.py:605 views/list.py:653
 #, python-format
@@ -3070,12 +3049,9 @@ msgid "Please fill out the form correctly."
 msgstr "Bitte füllen Sie das Formular korrekt aus."
 
 #: views/list.py:643
-#, fuzzy, python-brace-format
-#| msgid "The address %(address)s has been unsubscribed from %(list)s."
+#, python-brace-format
 msgid "These addresses {address} have been unsubscribed from {list}."
-msgstr ""
-"Die Mitgliedschaft der Adresse %(address)s bei der Liste %(list)s wurde "
-"beendet."
+msgstr "Die Adresse {address} wurde von der Liste {list} abgemeldet."
 
 #: views/list.py:674
 msgid "The selected messages were accepted"
@@ -3114,10 +3090,8 @@ msgid "Moderation action for {} set to {}"
 msgstr "Moderationsaktion für {} auf {} gesetzt"
 
 #: views/list.py:742
-#, fuzzy
-#| msgid "Failed to set moderation action: {}"
 msgid "Failed to set moderation action for {}"
-msgstr "Fehler beim Festlegen der Moderationsaktion: {}"
+msgstr "Fehler beim Festlegen der Moderationsaktion für {}"
 
 #: views/list.py:794
 msgid "Choose a Domain"
@@ -3140,10 +3114,8 @@ msgid "Subscriptions pending approval"
 msgstr "Ausstehende Mitgliedsbestätigungen"
 
 #: views/list.py:1019
-#, fuzzy
-#| msgid "Subscriptions pending approval"
 msgid "Un-subscriptions pending approval"
-msgstr "Ausstehende Mitgliedsbestätigungen"
+msgstr "Ausstehende Abmeldeanfragen"
 
 #: views/list.py:1055
 msgid "The request has been accepted."
@@ -3255,10 +3227,8 @@ msgid "New pattern"
 msgstr "Neues Muster"
 
 #: views/list.py:1336
-#, fuzzy
-#| msgid "Pending Confirmation"
 msgid "Invalid confirmation token"
-msgstr "Ausstehende Bestätigung"
+msgstr "Ungültiges Bestätigungs Token"
 
 #: views/list.py:1344 views/list.py:1356
 msgid "Token expired or invalid."

@@ -1,22 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
+# వీవెన్ <veeven@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-19 10:38-0700\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2021-05-09 22:46+0000\n"
+"Last-Translator: వీవెన్ <veeven@gmail.com>\n"
+"Language-Team: Telugu <https://hosted.weblate.org/projects/gnu-mailman/"
+"postorius/te/>\n"
+"Language: te\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.7-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -29,7 +29,7 @@ msgstr ""
 #: forms/domain_forms.py:45 forms/list_forms.py:98
 #: templates/postorius/domain/index.html:21
 msgid "Mail Host"
-msgstr ""
+msgstr "మెయిల్ హోస్ట్"
 
 #: forms/domain_forms.py:46 forms/domain_forms.py:65
 msgid "Please enter a domain name"
@@ -37,7 +37,7 @@ msgstr ""
 
 #: forms/domain_forms.py:47 forms/domain_forms.py:66
 msgid "Please enter a valid domain name."
-msgstr ""
+msgstr "దయచేసి సరైన డొమైను పేరును ఇవ్వండి."
 
 #: forms/domain_forms.py:50
 msgid ""
@@ -48,7 +48,7 @@ msgstr ""
 #: forms/domain_forms.py:54 forms/list_forms.py:91 forms/list_forms.py:945
 #: templates/postorius/domain/index.html:22 templates/postorius/index.html:56
 msgid "Description"
-msgstr ""
+msgstr "వివరణ"
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:23
 msgid "Alias Domain"
@@ -72,7 +72,7 @@ msgstr ""
 
 #: forms/domain_forms.py:103
 msgid "Owner's Email"
-msgstr ""
+msgstr "యజమాని ఈమెయిలు"
 
 #: forms/fields.py:28
 msgid "Regular"
@@ -186,15 +186,15 @@ msgstr ""
 
 #: forms/list_forms.py:56
 msgid "Anyone"
-msgstr ""
+msgstr "ఎవరైనా"
 
 #: forms/list_forms.py:70 templates/postorius/user/subscriptions.html:22
 msgid "List Name"
-msgstr ""
+msgstr "జాబితా పేరు"
 
 #: forms/list_forms.py:72
 msgid "Please enter a name for your list."
-msgstr ""
+msgstr "మీ జాబితాకి ఒక పేరు పెట్టండి."
 
 #: forms/list_forms.py:73
 msgid "Please enter a valid list name."
@@ -254,7 +254,7 @@ msgstr ""
 
 #: forms/list_forms.py:154 forms/list_forms.py:187
 msgid "Your email address"
-msgstr ""
+msgstr "మీ ఈమెయిలు చిరునామా"
 
 #: forms/list_forms.py:158
 msgid ""
@@ -274,11 +274,11 @@ msgstr ""
 
 #: forms/list_forms.py:165 forms/list_forms.py:194
 msgid "Your name (optional)"
-msgstr ""
+msgstr "మీ పేరు (ఐచ్చికం)"
 
 #: forms/list_forms.py:178 forms/list_forms.py:1213 views/list.py:442
 msgid "Primary Address ({})"
-msgstr ""
+msgstr "ప్రధాన చిరునామా ({})"
 
 #: forms/list_forms.py:209
 msgid "Open"
@@ -1997,11 +1997,11 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:53
 msgid "No Subject"
-msgstr ""
+msgstr "విషయం లేదు"
 
 #: templates/postorius/lists/held_messages.html:81
 msgid "Attachments"
-msgstr ""
+msgstr "జోడింపులు"
 
 #: templates/postorius/lists/held_messages.html:92
 msgid "Set member moderation"
@@ -2009,7 +2009,7 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:98
 msgid "Rejection reason:"
-msgstr ""
+msgstr "తిరస్కరణ కారణం:"
 
 #: templates/postorius/lists/held_messages.html:101
 msgid ""
