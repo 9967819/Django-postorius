@@ -79,7 +79,7 @@ Other
   implementation of ``get_mailman_user`` from ``MailmanUserManager`` so that we
   can use a single implementation that uses caching for efficient lookups.
 * Bump bundled jQuery to 3.6.0.slim version. (See !637)
-
+* Use the full jQuery not the slim version. (Closes #523)
 
 Ascessibility
 -------------
