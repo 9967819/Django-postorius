@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Jan Ainali <ainali.jan@gmail.com>, 2020.
+# Jonas B <joonas-b@hotmail.se>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-19 10:38-0700\n"
-"PO-Revision-Date: 2020-07-29 21:25+0000\n"
-"Last-Translator: Jan Ainali <ainali.jan@gmail.com>\n"
+"PO-Revision-Date: 2021-05-30 22:30+0000\n"
+"Last-Translator: Jonas B <joonas-b@hotmail.se>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/sv/>\n"
 "Language: sv\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.2-dev\n"
+"X-Generator: Weblate 4.7-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -315,10 +316,8 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:232
-#, fuzzy
-#| msgid "Description"
 msgid "Un-Subscription Policy"
-msgstr "Beskrivning"
+msgstr "Avprenumereringspolicy"
 
 #: forms/list_forms.py:234
 msgid ""
@@ -1672,7 +1671,7 @@ msgstr ""
 
 #: templates/postorius/base.html:105
 msgid "Sign Up"
-msgstr ""
+msgstr "Registrera"
 
 #: templates/postorius/base.html:128
 msgid "Postorius Documentation"
@@ -2156,10 +2155,8 @@ msgid "Primary Address"
 msgstr ""
 
 #: templates/postorius/lists/summary.html:55
-#, fuzzy
-#| msgid "Description"
 msgid "Manage Subscription"
-msgstr "Beskrivning"
+msgstr "Hantera prenumeration"
 
 #: templates/postorius/lists/summary.html:60
 msgid "Unsubscribe"
@@ -2251,10 +2248,8 @@ msgid "Pending Confirmation"
 msgstr ""
 
 #: templates/postorius/menu/list_nav.html:25
-#, fuzzy
-#| msgid "Subscription settings"
 msgid "Unsubscription Requests"
-msgstr "Prenumerationsinställningar"
+msgstr "Avprenumereringsbegäran"
 
 #: templates/postorius/menu/list_nav.html:39
 msgid "Users"
@@ -2411,10 +2406,8 @@ msgid "Mass Removal"
 msgstr ""
 
 #: templatetags/nav_helpers.py:32
-#, fuzzy
-#| msgid "Description"
 msgid "Mass Subscription"
-msgstr "Beskrivning"
+msgstr "Massprenumeration"
 
 #: templatetags/nav_helpers.py:33
 msgid "Subscription Options"
@@ -2551,10 +2544,8 @@ msgid "You are already subscribed"
 msgstr ""
 
 #: views/list.py:445
-#, fuzzy
-#| msgid "Subscription options for"
 msgid "Subscription changed to {}"
-msgstr "Prenumerationsval för"
+msgstr "Prenumeration ändrades till {}"
 
 #: views/list.py:449
 msgid "Something went wrong. Please try again. {} {}"
@@ -2686,10 +2677,8 @@ msgid "Subscriptions pending approval"
 msgstr ""
 
 #: views/list.py:1019
-#, fuzzy
-#| msgid "Description"
 msgid "Un-subscriptions pending approval"
-msgstr "Beskrivning"
+msgstr "Avprenumereringar som väntar godkännande"
 
 #: views/list.py:1055
 msgid "The request has been accepted."
