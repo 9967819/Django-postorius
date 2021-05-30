@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-19 10:37-0700\n"
-"PO-Revision-Date: 2021-05-02 22:45+0000\n"
+"PO-Revision-Date: 2021-05-23 22:31+0000\n"
 "Last-Translator: Tobias Wiese <tobias@tobiaswiese.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/de/>\n"
@@ -463,7 +463,7 @@ msgstr ""
 
 #: forms/list_forms.py:293
 msgid "Bounce disabled warnings interval"
-msgstr "Zeitintervall für Bounce-Deaktivierungswarnungen"
+msgstr "Zeitintervall für Unzustellbarkeits-Deaktivierungswarnungen"
 
 #: forms/list_forms.py:296
 msgid "The number of days between each disabled notification."
