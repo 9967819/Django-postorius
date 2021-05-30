@@ -1,23 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
+# AtaZh <ipomoea@hilarious.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-19 10:38-0700\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2021-05-30 22:30+0000\n"
+"Last-Translator: AtaZh <ipomoea@hilarious.com>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/gnu-mailman/"
+"postorius/uk/>\n"
+"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.7-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -34,22 +34,24 @@ msgstr ""
 
 #: forms/domain_forms.py:46 forms/domain_forms.py:65
 msgid "Please enter a domain name"
-msgstr ""
+msgstr "Будь ласка, введіть доменне ім'я"
 
 #: forms/domain_forms.py:47 forms/domain_forms.py:66
 msgid "Please enter a valid domain name."
-msgstr ""
+msgstr "Будь ласка, введіть дійсне доменне ім'я."
 
 #: forms/domain_forms.py:50
 msgid ""
 "The domain for your mailing lists. For example when you want lists like "
 "testing@example.com, enter example.com here."
 msgstr ""
+"Домен для ваших списків розсилки. Наприклад, коли ви хочете списки на зразок "
+"testing@example.com, уведіть тут example.com."
 
 #: forms/domain_forms.py:54 forms/list_forms.py:91 forms/list_forms.py:945
 #: templates/postorius/domain/index.html:22 templates/postorius/index.html:56
 msgid "Description"
-msgstr ""
+msgstr "Опис"
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:23
 msgid "Alias Domain"
@@ -57,7 +59,7 @@ msgstr ""
 
 #: forms/domain_forms.py:59 forms/domain_forms.py:88
 msgid "Please enter a valid domain name or nothing."
-msgstr ""
+msgstr "Будь ласка, введіть дійсне доменне ім'я або залиште порожнім."
 
 #: forms/domain_forms.py:61
 msgid "Normally empty.  Used only for unusual Postfix configs."
@@ -69,11 +71,11 @@ msgstr ""
 
 #: forms/domain_forms.py:78
 msgid "Please enter a valid domain name"
-msgstr ""
+msgstr "Будь ласка, введіть дійсне доменне ім'я"
 
 #: forms/domain_forms.py:103
 msgid "Owner's Email"
-msgstr ""
+msgstr "Електронна пошта власника"
 
 #: forms/fields.py:28
 msgid "Regular"
@@ -93,15 +95,15 @@ msgstr ""
 
 #: forms/fields.py:34 forms/list_forms.py:150
 msgid "Enabled"
-msgstr ""
+msgstr "Увімкнено"
 
 #: forms/fields.py:35 forms/list_forms.py:151
 msgid "Disabled"
-msgstr ""
+msgstr "Вимкнено"
 
 #: forms/fields.py:36
 msgid "Disabled by Owner"
-msgstr ""
+msgstr "Вимкнено власником"
 
 #: forms/fields.py:37
 msgid "Disabled by Bounces"
@@ -109,11 +111,11 @@ msgstr ""
 
 #: forms/fields.py:120
 msgid "Make at least one selection"
-msgstr ""
+msgstr "Оберіть хоча б одне"
 
 #: forms/fields.py:131
 msgid "Delivery mode"
-msgstr ""
+msgstr "Режим доставки"
 
 #: forms/fields.py:133
 msgid ""
@@ -126,7 +128,7 @@ msgstr ""
 
 #: forms/fields.py:152
 msgid "Delivery status"
-msgstr ""
+msgstr "Статус доставки"
 
 #: forms/fields.py:154
 msgid ""
@@ -437,7 +439,7 @@ msgstr ""
 
 #: forms/list_forms.py:323
 msgid "Plain text"
-msgstr ""
+msgstr "Неформатований текст"
 
 #: forms/list_forms.py:324
 msgid "Markdown text"
@@ -1648,19 +1650,19 @@ msgstr ""
 
 #: templates/postorius/base.html:79
 msgid "Account"
-msgstr ""
+msgstr "Обліковий запис"
 
 #: templates/postorius/base.html:83
 msgid "Mailman settings"
-msgstr ""
+msgstr "Налаштування Mailman"
 
 #: templates/postorius/base.html:88
 msgid "Posting activity"
-msgstr ""
+msgstr "Активність"
 
 #: templates/postorius/base.html:94
 msgid "Logout"
-msgstr ""
+msgstr "Вийти"
 
 #: templates/postorius/base.html:101
 msgid "Login"
@@ -1668,7 +1670,7 @@ msgstr ""
 
 #: templates/postorius/base.html:105
 msgid "Sign Up"
-msgstr ""
+msgstr "Зареєструватися"
 
 #: templates/postorius/base.html:128
 msgid "Postorius Documentation"
@@ -1711,7 +1713,7 @@ msgstr ""
 #: templates/postorius/lists/template_list.html:32
 #: templates/postorius/menu/list_nav.html:62
 msgid "Delete"
-msgstr ""
+msgstr "Вилучити"
 
 #: templates/postorius/domain/confirm_delete.html:34
 #: templates/postorius/domain/template_delete.html:28
@@ -1908,7 +1910,7 @@ msgstr ""
 
 #: templates/postorius/lists/confirm_remove_role.html:17
 msgid "Remove"
-msgstr ""
+msgstr "Вилучити"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 msgid "Unsubscribe all members"
@@ -1982,7 +1984,7 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:38
 msgid "Subject"
-msgstr ""
+msgstr "Тема"
 
 #: templates/postorius/lists/held_messages.html:39
 msgid "Sender"
@@ -2283,7 +2285,7 @@ msgstr ""
 #: templates/postorius/menu/user_nav.html:7
 #: templates/postorius/user/subscriptions.html:8 templatetags/nav_helpers.py:42
 msgid "Subscriptions"
-msgstr ""
+msgstr "Підписки"
 
 #: templates/postorius/menu/user_nav.html:8
 msgid "Global Mailman preferences"
