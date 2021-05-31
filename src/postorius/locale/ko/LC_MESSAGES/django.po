@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-19 10:38-0700\n"
-"PO-Revision-Date: 2021-05-14 13:34+0000\n"
+"PO-Revision-Date: 2021-05-19 11:33+0000\n"
 "Last-Translator: Lens0021 <lorentz0021@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ko/>\n"
@@ -302,7 +302,7 @@ msgstr "확인"
 
 #: forms/list_forms.py:211
 msgid "Moderate"
-msgstr "관리"
+msgstr "관리 조정"
 
 #: forms/list_forms.py:212
 msgid "Confirm, then moderate"
@@ -342,7 +342,7 @@ msgstr ""
 "열기: 구독 해지는 자동으로 일어납니다.\n"
 "확인: 가입자는 구독 해지를 위해 자신에게 발송된 이메일을 확인해야 합니다.\n"
 "승인: 모더레이터는 각 구독 해지를 수동으로 승인해야 합니다.\n"
-"확인 후 승인: 먼저 가입자들은 확인을 해야 하고, 그 다음 모더레이터의 승인을 받아야 합니다."
+"확인 후 관리: 먼저 가입자들은 확인을 해야 하고, 그 다음 모더레이터의 승인을 받아야 합니다."
 
 #: forms/list_forms.py:247 forms/list_forms.py:273 forms/list_forms.py:282
 #: forms/list_forms.py:388 forms/list_forms.py:396 forms/list_forms.py:437
@@ -591,8 +591,8 @@ msgid ""
 "held for moderation. Turn this option on when your list is experiencing a "
 "flamewar and you want a cooling off period. "
 msgstr ""
-"이 옵션이 활성화되면 모든 목록 사용이 긴급 조정됩니다. 즉, 조정을 위해 보류됩니다. 목록에 다툼이 발생해 숙고 기간을 원할 때 이 "
-"옵션을 켜십시오. "
+"이 옵션이 활성화되면 모든 목록 사용이 긴급 조정되어 조정을 위해 보류됩니다. 목록에 다툼이 발생해 숙고 기간을 원할 때 이 옵션을 "
+"켜십시오. "
 
 #: forms/list_forms.py:448
 msgid "Maximum message size"
@@ -638,7 +638,7 @@ msgstr ""
 
 #: forms/list_forms.py:486
 msgid "Hold these non-members"
-msgstr ""
+msgstr "멤버가 아닌 다음 사용자 보류"
 
 #: forms/list_forms.py:489
 msgid ""
@@ -648,12 +648,13 @@ msgid ""
 "regexp addresses can be entered here, it is preferred to add the address as "
 "a nonmember and set the nonmember's Moderation to Hold."
 msgstr ""
+"이것은 한 줄에 하나씩 회원이 아닌 사람의 주소와 일치하는 정규표현식의 목록이며, 해당 주소에서 보내진 게시물은 자동으로 보류됩니다. "
+"항목은 `^' 로 시작하는 정규표현식이며 메시지의 보낸 주소와 일치합니다. 여기에 정규표현식이 아닌 주소를 입력할 수 있지만 주소를 "
+"비멤버로 추가하고 그 Moderation을 보류로 설정하는 것이 좋습니다."
 
 #: forms/list_forms.py:498
-#, fuzzy
-#| msgid "Reject the message"
 msgid "Reject these non-members"
-msgstr "메시지 거부"
+msgstr "멤버가 아닌 다음 사용자 거부"
 
 #: forms/list_forms.py:501
 msgid ""
@@ -663,6 +664,9 @@ msgid ""
 "message. While non-regexp addresses can be entered here, it is preferred to "
 "add the address as a nonmember and set the nonmember's Moderation to Reject."
 msgstr ""
+"이것은 비회원 주소와 일치하는 정규표현식의 목록으로, 이 주소에서 보내진 게시물은 발신자에게 보내는 알림과 함께 거부됩니다. 항목은`^ "
+"'로 시작하는 정규표현식이며 메시지의 보낸 사람 주소와 일치합니다. 정규식이 아닌 주소를 여기에 입력 할 수 있지만 주소를 비멤버으로 "
+"추가하고 비멤버의 Moderation을 거부로 설정하는 것이 좋습니다."
 
 #: forms/list_forms.py:511
 #, fuzzy
@@ -678,6 +682,9 @@ msgid ""
 "regexp addresses can be entered here, it is preferred to add the address as "
 "a nonmember and set the nonmember's Moderation to Discard."
 msgstr ""
+"이것은 한 줄에 하나 씩 비멤버의 주소와 일치하는 정규표현식 목록이며, 이 주소에서 보내진 게시물은 자동으로 삭제됩니다. 항목은 `^'로 "
+"시작하는 정규표현식이며 메시지의 보낸 주소와 일치합니다. 여기에 정규표현식이 아닌 주소를 입력할 수 있지만 주소를 비멤버로 추가하고 "
+"비회원의 Moderation을 삭제로 설정하는 것이 좋습니다."
 
 #: forms/list_forms.py:536
 msgid "Invalid alias regexp: {}: {}"
@@ -803,15 +810,15 @@ msgstr ""
 #: forms/list_forms.py:626 templatetags/membership_helpers.py:78
 #: templatetags/membership_helpers.py:84
 msgid "None"
-msgstr ""
+msgstr "선택 안 함"
 
 #: forms/list_forms.py:627
 msgid "Individual"
-msgstr ""
+msgstr "개별"
 
 #: forms/list_forms.py:628
 msgid "Full"
-msgstr ""
+msgstr "전체"
 
 #: forms/list_forms.py:632
 msgid ""
@@ -824,6 +831,12 @@ msgid ""
 "    Full: All of the 'individual' personalization plus recipient "
 "header           modification. "
 msgstr ""
+"\n"
+"    선택 안 함: 개인화 없음.\n"
+"\n"
+"    개별: 모든 사용자가 헤더는 같지만 몇 가지 대체 변수가 있는 메시지의 고유한 복사본을 얻습니다.\n"
+"\n"
+"    전체: 모든 '개별' 개인화에 더불어 수신자 헤더도 수정. "
 
 #: forms/list_forms.py:642 templates/postorius/lists/held_messages.html:30
 #: templates/postorius/lists/held_messages.html:108
@@ -840,11 +853,11 @@ msgstr "거부하다"
 
 #: forms/list_forms.py:644
 msgid "Forward"
-msgstr ""
+msgstr "전달"
 
 #: forms/list_forms.py:645
 msgid "Preserve"
-msgstr ""
+msgstr "저장"
 
 #: forms/list_forms.py:648
 msgid ""
@@ -855,10 +868,15 @@ msgid ""
 " Forward = forward the message to the list owner(s).\n"
 " Preserve = save the message in qfiles/bad.\n"
 msgstr ""
+"필터링 후 콘텐츠가 없는 메시지에 대한 조치.\n"
+" 삭제 = 조용히 메시지를 삭제합니다.\n"
+" 거부 = 메시지를 거부하고 보낸이에게 알립니다.\n"
+" 전달 = 목록 소유자에게 메시지를 전달합니다.\n"
+" 저장 = qfiles/bad에 메시지를 저장합니다.\n"
 
 #: forms/list_forms.py:665
 msgid "Personalize"
-msgstr ""
+msgstr "개인화"
 
 #: forms/list_forms.py:671
 msgid "Filter content"
@@ -882,6 +900,9 @@ msgid ""
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
+"보내온 게시물에서 필터링할 Mime타입. 일반적인 타입 목록은 <a href=\"https://developer.mozilla.org/"
+"en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types\">여기</a>에서 찾을 수 "
+"있습니다"
 
 #: forms/list_forms.py:683
 #, fuzzy
@@ -891,11 +912,11 @@ msgstr "필터 내용"
 
 #: forms/list_forms.py:686
 msgid "Extensions to filter from the incoming posts."
-msgstr ""
+msgstr "보내오는 게시물에서 필터링할 확장자."
 
 #: forms/list_forms.py:689
 msgid "Pass types"
-msgstr ""
+msgstr "허용할 타입"
 
 #: forms/list_forms.py:692
 msgid ""
@@ -903,32 +924,30 @@ msgid ""
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
+"보내오는 것을 허용할 Mime 타입. 일반적인 타입 목록은 <a href=\"https://developer.mozilla.org/"
+"en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types\">여기</a>에서 찾을 수 "
+"있습니다"
 
 #: forms/list_forms.py:697
-#, fuzzy
-#| msgid "Mass operations"
 msgid "Pass extensions"
-msgstr "대량 작전"
+msgstr "허용할 확장자"
 
 #: forms/list_forms.py:700
 msgid "Extensions to allow in the incoming posts."
-msgstr ""
+msgstr "보내오는 게시물에서 허용할 확장자."
 
 #: forms/list_forms.py:706
 msgid "Collapse alternatives"
-msgstr "대체품 축소"
+msgstr "대체 MIME 컨텐츠 접기"
 
 #: forms/list_forms.py:707
 msgid ""
 "Should Mailman collapse multipart/alternative to its first part content?"
-msgstr ""
-"메일맨이 그것의 첫 번째 부분 내용에 대한 다중/대체로 삭제되어야 하는가?"
+msgstr "메일맨이 다중/대체 MIME 컨텐츠를 그 첫 번째 부분만 표시하도록 합니까?"
 
 #: forms/list_forms.py:713
-#, fuzzy
-#| msgid "Filter content"
 msgid "Filter Action"
-msgstr "필터 내용"
+msgstr "필터 조치"
 
 #: forms/list_forms.py:719
 msgid "Convert html to plaintext"
@@ -1265,10 +1284,9 @@ msgid ""
 "reason or another. Setting this option causes notices to be sent immediately "
 "on the arrival of new requests as well. "
 msgstr ""
-"목록 진행자는 새로운 요청과 수집된 요청에 대한 일일 통지를 즉시 받아야 하는"
-"가? 목록 진행자(및 목록 관리자)는 승인 보류 중인 요청(예: 중간 목록에 대한 구"
-"독) 또는 이런저런 이유로 보류 중인 게시물)을 매일 상기시켜 보낸다. 이 옵션을 "
-"설정하면 새로운 요청이 도착하는 즉시 통지가 발송된다. "
+"목록 관리자는 수집된 요청에 대한 일일 알림뿐만 아니라 새로운 요청의 알림도 즉시 받아야 합니까? 목록 관리 조정자(및 목록 관리자)는 "
+"승인 보류 중인 요청(예: 조정된 목록에 대한 구독 또는 이런저런 이유로 보류 중인 게시물)을 매일 알림으로 받습니다. 이 옵션을 "
+"설정하면 새로운 요청이 도착하는 즉시 알림가 발송됩니다. "
 
 #: forms/list_forms.py:922
 msgid "Notify admin of membership changes"
@@ -1525,7 +1543,7 @@ msgstr "헤더가 일치할 때 수행할 작업"
 
 #: forms/list_forms.py:1174
 msgid "Moderation"
-msgstr "적당함"
+msgstr "관리 조정"
 
 #: forms/list_forms.py:1178
 msgid ""
