@@ -32,6 +32,8 @@ TEMPLATES_LIST = (
      _('Sent to the list administrators to notify them when a new member has been subscribed.')),
     ('list:admin:notice:unrecognized',
      _('Sent to the list administrators when a bounce message in an unrecognized format has been received.')),
+    ('list:admin:notice:pending',
+     _('Sent to the list administrators from the \`mailman notify\` command.')),
     ('list:admin:notice:increment',
      _('Sent to the list administrators to notify them when a member\'s bounce score is incremented.')),
     ('list:admin:notice:disable',
