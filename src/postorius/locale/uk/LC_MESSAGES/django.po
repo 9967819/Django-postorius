@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-19 10:38-0700\n"
-"PO-Revision-Date: 2021-05-30 22:30+0000\n"
+"PO-Revision-Date: 2021-06-09 18:32+0000\n"
 "Last-Translator: AtaZh <ipomoea@hilarious.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/uk/>\n"
@@ -26,11 +26,14 @@ msgid ""
 "same or different from the Mail Host. You can edit the list of available web "
 "hosts <a href=\"%s\">here</a>."
 msgstr ""
+"Домен, на якому має бути користувацький інтерфейс. Може бути таким же, як "
+"хост пошти, або іншим. Ви можете редагувати список доступних вебхостів <a "
+"href=\"%s\">тут</a>."
 
 #: forms/domain_forms.py:45 forms/list_forms.py:98
 #: templates/postorius/domain/index.html:21
 msgid "Mail Host"
-msgstr ""
+msgstr "Хост пошти"
 
 #: forms/domain_forms.py:46 forms/domain_forms.py:65
 msgid "Please enter a domain name"
@@ -55,7 +58,7 @@ msgstr "Опис"
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:23
 msgid "Alias Domain"
-msgstr ""
+msgstr "Домен-синонім"
 
 #: forms/domain_forms.py:59 forms/domain_forms.py:88
 msgid "Please enter a valid domain name or nothing."
@@ -64,10 +67,12 @@ msgstr "Будь ласка, введіть дійсне доменне ім'я 
 #: forms/domain_forms.py:61
 msgid "Normally empty.  Used only for unusual Postfix configs."
 msgstr ""
+"Зазвичай порожнє поле.  Використовується лише для незвичних конфігурацій "
+"Postfix."
 
 #: forms/domain_forms.py:64 templates/postorius/domain/index.html:24
 msgid "Web Host"
-msgstr ""
+msgstr "Вебхост"
 
 #: forms/domain_forms.py:78
 msgid "Please enter a valid domain name"
@@ -79,19 +84,19 @@ msgstr "Електронна пошта власника"
 
 #: forms/fields.py:28
 msgid "Regular"
-msgstr ""
+msgstr "Регулярно"
 
 #: forms/fields.py:29
 msgid "Plain Text Digests"
-msgstr ""
+msgstr "Дайджести звичайним текстом"
 
 #: forms/fields.py:30
 msgid "Mime Digests"
-msgstr ""
+msgstr "Mime-дайджести"
 
 #: forms/fields.py:31
 msgid "Summary Digests"
-msgstr ""
+msgstr "Підсумкові дайджести"
 
 #: forms/fields.py:34 forms/list_forms.py:150
 msgid "Enabled"
@@ -107,7 +112,7 @@ msgstr "Вимкнено власником"
 
 #: forms/fields.py:37
 msgid "Disabled by Bounces"
-msgstr ""
+msgstr "Вимкнено поверненнями"
 
 #: forms/fields.py:120
 msgid "Make at least one selection"
@@ -125,6 +130,11 @@ msgid ""
 "digests are preferred, but if you have a problem reading them, select plain "
 "text digests."
 msgstr ""
+"Якщо ви обираєте підсумкові дайджести, то отримуватимете дописи, об'єднані в "
+"зв'язку (зазвичай, одну на день, але в активних списках може бути більше) "
+"замість по одному одразу після їх надсилання. Ваш поштовик може підтримувати "
+"чи не підтримувати MIME-дайджести. Зазвичай, бажані MIME-дайджести, але якщо "
+"у вас виникають проблеми з їх читанням, оберіть дайджести простим текстом."
 
 #: forms/fields.py:152
 msgid "Delivery status"
@@ -138,171 +148,178 @@ msgid ""
 "mail delivery, don't forget to re-enable it when you come back; it will not "
 "be automatically re-enabled."
 msgstr ""
+"Оберіть тут «Увімкнено», щоб отримувати повідомлення, надіслані у список "
+"розсилки. Оберіть «Вимкнено», якщо ви хочете залишитися підписаними, але не "
+"хочете отримувати пошту якийсь час (наприклад, ви у відпустці). Якщо ви "
+"вимикаєте доставку листів, не забудьте увімкнути її знову, коли повернетеся; "
+"вона не вмикається автоматично."
 
 #: forms/list_forms.py:38
 msgid "Hold for moderation"
-msgstr ""
+msgstr "Затримати на модерацію"
 
 #: forms/list_forms.py:39
 msgid "Reject (with notification)"
-msgstr ""
+msgstr "Відхилити (зі сповіщенням)"
 
 #: forms/list_forms.py:40
 msgid "Discard (no notification)"
-msgstr ""
+msgstr "Відкинути (без сповіщення)"
 
 #: forms/list_forms.py:41
 msgid "Accept immediately (bypass other rules)"
-msgstr ""
+msgstr "Прийняти негайно (обійти інші правила)"
 
 #: forms/list_forms.py:42
 msgid "Default processing"
-msgstr ""
+msgstr "Обробка за замовчуванням"
 
 #: forms/list_forms.py:46
 msgid "Daily"
-msgstr ""
+msgstr "Щодня"
 
 #: forms/list_forms.py:47
 msgid "Weekly"
-msgstr ""
+msgstr "Щотижня"
 
 #: forms/list_forms.py:48
 msgid "Quarterly"
-msgstr ""
+msgstr "Щокварталу"
 
 #: forms/list_forms.py:49
 msgid "Monthly"
-msgstr ""
+msgstr "Щомісяця"
 
 #: forms/list_forms.py:50
 msgid "Yearly"
-msgstr ""
+msgstr "Щороку"
 
 #: forms/list_forms.py:54
 msgid "Only mailinglist moderators"
-msgstr ""
+msgstr "Лише модератори списку розсилки"
 
 #: forms/list_forms.py:55
 msgid "Only mailinglist members"
-msgstr ""
+msgstr "Лише члени списку розсилки"
 
 #: forms/list_forms.py:56
 msgid "Anyone"
-msgstr ""
+msgstr "Будь-хто"
 
 #: forms/list_forms.py:70 templates/postorius/user/subscriptions.html:22
 msgid "List Name"
-msgstr ""
+msgstr "Назва списку"
 
 #: forms/list_forms.py:72
 msgid "Please enter a name for your list."
-msgstr ""
+msgstr "Будь ласка, введіть назву свого списку."
 
 #: forms/list_forms.py:73
 msgid "Please enter a valid list name."
-msgstr ""
+msgstr "Будь ласка, введіть дійсну назву списку."
 
 #: forms/list_forms.py:76
 msgid "Initial list owner address"
-msgstr ""
+msgstr "Початкова адреса власника списку"
 
 #: forms/list_forms.py:78
 msgid "Please enter the list owner's email address."
-msgstr ""
+msgstr "Будь ласка, введіть електронну пошту власника списку."
 
 #: forms/list_forms.py:82
 msgid "Advertise this list?"
-msgstr ""
+msgstr "Рекламувати цей список?"
 
 #: forms/list_forms.py:84
 msgid "Please choose a list type."
-msgstr ""
+msgstr "Будь ласка, оберіть тип списку."
 
 #: forms/list_forms.py:87
 msgid "Advertise this list in list index"
-msgstr ""
+msgstr "Рекламувати цей список у перелікові списків"
 
 #: forms/list_forms.py:88
 msgid "Hide this list in list index"
-msgstr ""
+msgstr "Приховати цей список із переліку списків"
 
 #: forms/list_forms.py:101
 msgid "Choose an existing Domain."
-msgstr ""
+msgstr "Оберіть наявний домен."
 
 #: forms/list_forms.py:102
 msgid "Choose a valid Mail Host"
-msgstr ""
+msgstr "Оберіть дійсний хост пошти"
 
 #: forms/list_forms.py:105
 msgid "List Style"
-msgstr ""
+msgstr "Стиль списку"
 
 #: forms/list_forms.py:108
 msgid "Choose a List Style."
-msgstr ""
+msgstr "Оберіть стиль списку."
 
 #: forms/list_forms.py:109
 msgid "Choose a valid List Style."
-msgstr ""
+msgstr "Оберіть дійсний стиль списку."
 
 #: forms/list_forms.py:112
 msgid "Site admin has not created any domains"
-msgstr ""
+msgstr "Адміном сайту не створено жодних доменів"
 
 #: forms/list_forms.py:125
 msgid "Please enter a valid listname"
-msgstr ""
+msgstr "Будь ласка, введіть дійсну назву списку"
 
 #: forms/list_forms.py:154 forms/list_forms.py:187
 msgid "Your email address"
-msgstr ""
+msgstr "Ваша електронна пошта"
 
 #: forms/list_forms.py:158
 msgid ""
 "Subscribing via \"Primary Address\" will change subscription address when "
 "you change your primary address."
 msgstr ""
+"Підписка через «Основну адресу» змінить адресу підписки при зміні основної "
+"адреси."
 
 #: forms/list_forms.py:161 forms/list_forms.py:190 forms/member_forms.py:29
 #: forms/system.py:36
 msgid "Please enter an email address."
-msgstr ""
+msgstr "Будь ласка, введіть адресу електронної пошти."
 
 #: forms/list_forms.py:162 forms/list_forms.py:191 forms/member_forms.py:30
 #: forms/system.py:37
 msgid "Please enter a valid email address."
-msgstr ""
+msgstr "Будь ласка, введіть дійсну електронну пошту."
 
 #: forms/list_forms.py:165 forms/list_forms.py:194
 msgid "Your name (optional)"
-msgstr ""
+msgstr "Ваше ім'я (за бажанням)"
 
 #: forms/list_forms.py:178 forms/list_forms.py:1213 views/list.py:442
 msgid "Primary Address ({})"
-msgstr ""
+msgstr "Основна адреса ({})"
 
 #: forms/list_forms.py:209
 msgid "Open"
-msgstr ""
+msgstr "Відкрита"
 
 #: forms/list_forms.py:210 templates/postorius/domain/template_delete.html:27
 #: templates/postorius/lists/template_delete.html:24
 msgid "Confirm"
-msgstr ""
+msgstr "Підтвердження"
 
 #: forms/list_forms.py:211
 msgid "Moderate"
-msgstr ""
+msgstr "Модерування"
 
 #: forms/list_forms.py:212
 msgid "Confirm, then moderate"
-msgstr ""
+msgstr "Підтвердження, тоді модерування"
 
 #: forms/list_forms.py:221
 msgid "Subscription Policy"
-msgstr ""
+msgstr "Політика підписки"
 
 #: forms/list_forms.py:223
 msgid ""
@@ -313,10 +330,16 @@ msgid ""
 "Confirm then Moderate: First subscribers have to confirm, then a moderator "
 "needs to authorize."
 msgstr ""
+"Відкрита: Підписки додаються автоматично\n"
+"Підтвердження: Підписники мають підтвердити факт підписки, скориставшись "
+"надісланим їм листом\n"
+"Модерування: Модератори матимуть вручну авторизувати кожну підписку.\n"
+"Підтвердження, тоді модерування: Спочатку підписники мають підтвердити, тоді "
+"модератор має авторизувати."
 
 #: forms/list_forms.py:232
 msgid "Un-Subscription Policy"
-msgstr ""
+msgstr "Політика відписки"
 
 #: forms/list_forms.py:234
 msgid ""
@@ -327,6 +350,12 @@ msgid ""
 "Confirm then Moderate: First subscribers have to confirm, then a moderator "
 "needs to authorize."
 msgstr ""
+"Відкрита: Відписки стаються автоматично\n"
+"Підтвердження: Підписники мають підтвердити факт відписки, скориставшись "
+"надісланим їм листом\n"
+"Модерування: Модератори матимуть вручну авторизувати кожну відписку.\n"
+"Підтвердження, тоді модерування: Спочатку підписники мають підтвердити, тоді "
+"модератор має авторизувати."
 
 #: forms/list_forms.py:247 forms/list_forms.py:273 forms/list_forms.py:282
 #: forms/list_forms.py:388 forms/list_forms.py:396 forms/list_forms.py:437
@@ -338,7 +367,7 @@ msgstr ""
 #: forms/list_forms.py:939 forms/list_forms.py:982 forms/list_forms.py:989
 #: forms/list_forms.py:1010 forms/list_forms.py:1081 forms/user_forms.py:55
 msgid "Yes"
-msgstr ""
+msgstr "Так"
 
 #: forms/list_forms.py:247 forms/list_forms.py:273 forms/list_forms.py:282
 #: forms/list_forms.py:388 forms/list_forms.py:396 forms/list_forms.py:437
@@ -350,20 +379,21 @@ msgstr ""
 #: forms/list_forms.py:939 forms/list_forms.py:982 forms/list_forms.py:989
 #: forms/list_forms.py:1010 forms/list_forms.py:1082 forms/user_forms.py:55
 msgid "No"
-msgstr ""
+msgstr "Ні"
 
 #: forms/list_forms.py:249
 msgid "Process Bounces"
-msgstr ""
+msgstr "Обробка повернень"
 
 #: forms/list_forms.py:251
 msgid ""
 "Specifies whether or not this list should do automatic bounce processing."
 msgstr ""
+"Визначає, чи має цей список проводити автоматичну обробку повернень листів."
 
 #: forms/list_forms.py:256
 msgid "Bounce score threshold"
-msgstr ""
+msgstr "Поріг кількості повернень"
 
 #: forms/list_forms.py:259
 msgid ""
@@ -371,10 +401,13 @@ msgid ""
 "automatically disabled. When the subscription is  re-enabled, their bounce "
 "score will be reset to zero."
 msgstr ""
+"Це поріг кількості повернень, вище якого підписка учасника   буде "
+"автоматично вимкнена. Коли підписку буде  поновлено, кількість повернень "
+"скинеться до нуля."
 
 #: forms/list_forms.py:264
 msgid "Bounce info stale after"
-msgstr ""
+msgstr "Інформація про повернення застаріває через"
 
 #: forms/list_forms.py:267
 msgid ""
@@ -382,10 +415,13 @@ msgid ""
 "stale. If no new bounces have been received in the interim, the bounce score "
 "is reset to zero. This value must be an integer. "
 msgstr ""
+"Кількість днів, після якої інформація про повернення листів від учасника "
+"вважатиметься застарілою. Якщо за цей час не ставалося нових повернень, "
+"кількість повернень скидатиметься до нуля. Має бути цілим числом. "
 
 #: forms/list_forms.py:275
 msgid "Notify owner on disable"
-msgstr ""
+msgstr "Сповістити власника про вимкнення"
 
 #: forms/list_forms.py:277
 msgid ""
@@ -393,10 +429,13 @@ msgid ""
 "member's subscription is automatically disabled due to their bounce "
 "threshold being reached. "
 msgstr ""
+"Це налаштування визначає, чи власника списку буде сповіщено при "
+"автоматичному вимкненні підписки учасника внаслідок досягнення порогу "
+"повернень. "
 
 #: forms/list_forms.py:284
 msgid "Notify owner on removal"
-msgstr ""
+msgstr "Сповіщати власника про вилучення"
 
 #: forms/list_forms.py:286
 msgid ""
@@ -404,18 +443,20 @@ msgid ""
 "is removed from the list after their disabled notifications have been "
 "exhausted. "
 msgstr ""
+"Це налаштування визначає, чи власника списку буде сповіщено при вилученні "
+"учасника зі списку внаслідок досягнення ліміту повідомлень про вимкнення. "
 
 #: forms/list_forms.py:293
 msgid "Bounce disabled warnings interval"
-msgstr ""
+msgstr "Інтервал попереджень щодо вимкнення через повернення"
 
 #: forms/list_forms.py:296
 msgid "The number of days between each disabled notification."
-msgstr ""
+msgstr "Кількість днів між кожним сповіщенням про вимкнення."
 
 #: forms/list_forms.py:300
 msgid "Bounce disable warnings"
-msgstr ""
+msgstr "Попередження щодо вимкнення через повернення"
 
 #: forms/list_forms.py:303
 msgid ""
@@ -424,18 +465,22 @@ msgid ""
 "an address from the list once their bounce score exceeds the threshold. This "
 "value must be an integer. "
 msgstr ""
+"Кількість сповіщень, які отримає вимкнений учасник перед тим, як їхню адресу "
+"буде вилучено з реєстру списку розсилки. Встановіть значення 0, щоб адресу "
+"було автоматично вилучено зі списку, як тільки кількість повернень перетне "
+"поріг. Це значення має бути цілим числом. "
 
 #: forms/list_forms.py:317
 msgid "Public archives"
-msgstr ""
+msgstr "Публічні архіви"
 
 #: forms/list_forms.py:318
 msgid "Private archives"
-msgstr ""
+msgstr "Приватні архіви"
 
 #: forms/list_forms.py:319
 msgid "Do not archive this list"
-msgstr ""
+msgstr "Не архівувати цей список"
 
 #: forms/list_forms.py:323
 msgid "Plain text"
@@ -443,23 +488,23 @@ msgstr "Неформатований текст"
 
 #: forms/list_forms.py:324
 msgid "Markdown text"
-msgstr ""
+msgstr "Текст у Markdown"
 
 #: forms/list_forms.py:330
 msgid "Archive policy"
-msgstr ""
+msgstr "Політика архівування"
 
 #: forms/list_forms.py:331
 msgid "Policy for archiving messages for this list"
-msgstr ""
+msgstr "Правила архівування повідомлень у цьому списку"
 
 #: forms/list_forms.py:336
 msgid "Active archivers"
-msgstr ""
+msgstr "Активні архіватори"
 
 #: forms/list_forms.py:343
 msgid "Archive Rendering mode"
-msgstr ""
+msgstr "Режим показу архіву"
 
 #: forms/list_forms.py:344
 msgid ""
@@ -467,10 +512,13 @@ msgid ""
 "formatting based on markup in the email.\n"
 "Currently, this option is only supported by Hyperkitty."
 msgstr ""
+"Це налаштування вмикає показ листів в архіваторі у вигляді форматованого "
+"тексту, з форматуванням згідно з розмітки в листі.\n"
+"Наразі цю опцію підтримує лише Hyperkitty."
 
 #: forms/list_forms.py:376
 msgid "Acceptable aliases"
-msgstr ""
+msgstr "Прийнятні синоніми"
 
 #: forms/list_forms.py:379
 msgid ""
@@ -482,20 +530,29 @@ msgid ""
 "message. The matching is performed with Python's re.match() function, "
 "meaning they are anchored to the start of the string."
 msgstr ""
+"Це список (по одному в рядку) адрес та регулярних виразів, що відповідають "
+"адресам, які прийнятні для написання у полях Кому: або Копія:  замість "
+"повної адреси списку, за умови увімкнення `require_explicit_destination'.  "
+"Елементи мають бути або електронними адресами, або регулярними виразами, що "
+"відповідають електронним адресам.  Регулярні вирази починаються з `^' і "
+"порівнюються з кожною адресою отримувача у повідомленні.  Порівняння виконує "
+"функція Python re.match(), тобто вони прикріплені до початку рядка."
 
 #: forms/list_forms.py:390
 msgid "Require Explicit Destination"
-msgstr ""
+msgstr "Вимагати явного місця призначення"
 
 #: forms/list_forms.py:392
 msgid ""
 "This checks to ensure that the list posting address or an acceptable alias "
 "explicitly appears in a To: or Cc: header in the post."
 msgstr ""
+"Ця перевірка переконується, що адреса списку або прийнятний синонім точно "
+"вказано у шапці допису Кому: або Копія:."
 
 #: forms/list_forms.py:398
 msgid "Administrivia"
-msgstr ""
+msgstr "Адміністративщина"
 
 #: forms/list_forms.py:400
 msgid ""
@@ -504,14 +561,17 @@ msgid ""
 "it to the the administrative requests queue, notifying the administrator of "
 "the new request, in the process."
 msgstr ""
+"Адмінтести перевірять допис, чи він є насправді адміністративним запитом (як-"
+"то підписка, відписка тощо), і додадуть його до черги адміністративних "
+"запитів, сповістивши адміністратора про новий запит."
 
 #: forms/list_forms.py:407
 msgid "Default action to take when a member posts to the list"
-msgstr ""
+msgstr "Дія за замовчуванням при надсиланні учасником допису в список"
 
 #: forms/list_forms.py:409
 msgid "Please choose a default member action."
-msgstr ""
+msgstr "Будь ласка, оберіть дію за замовчуванням для учасника."
 
 #: forms/list_forms.py:413
 msgid ""
@@ -524,14 +584,24 @@ msgid ""
 "Accept: accepts any postings without any further checks.\n"
 "Default Processing: run additional checks and accept the message."
 msgstr ""
+"Дія за замовчуванням при надсиланні учасником допису в список.\n"
+"Затримати: це затримує повідомлення для схвалення модераторами списку.\n"
+"Відхилити: це автоматично відхиляє повідомлення, з надсиланням сповіщення "
+"про повернення авторові допису. Ви можете налаштувати текст сповіщення про "
+"повернення.\n"
+"Відкинути: це просто відкидає повідомлення, без надсилання сповіщення "
+"авторові допису.\n"
+"Схвалити: схвалює будь-які дописи без подальших перевірок.\n"
+"Обробка за замовчуванням: запустити додаткові перевірки і схвалити "
+"повідомлення."
 
 #: forms/list_forms.py:426
 msgid "Default action to take when a non-member posts to the list"
-msgstr ""
+msgstr "Дія за замовчуванням при надсиланні не-учасником допису в список"
 
 #: forms/list_forms.py:428
 msgid "Please choose a default non-member action."
-msgstr ""
+msgstr "Будь ласка, оберіть дію за замовчуванням для не-учасника."
 
 #: forms/list_forms.py:432
 msgid ""
@@ -539,10 +609,14 @@ msgid ""
 "against the list of explicitly accepted, held, rejected (bounced), and "
 "discarded addresses. If no match is found, then this action is taken."
 msgstr ""
+"Коли приходить допис від не-учансика, адреса відправника повідомлення "
+"порівнюється зі списком адрес, явно зазначених для схвалення, затримання, "
+"відхилення (повернення) та відкидання. Якщо співпадінь не виявлено, то "
+"виконується ця дія."
 
 #: forms/list_forms.py:439
 msgid "Emergency Moderation"
-msgstr ""
+msgstr "Надзвичайна ситуація модерування"
 
 #: forms/list_forms.py:441
 msgid ""
@@ -550,30 +624,38 @@ msgid ""
 "held for moderation. Turn this option on when your list is experiencing a "
 "flamewar and you want a cooling off period. "
 msgstr ""
+"Коли увімкнена ця опція, увесь трафік затримується на модерацію. Увімкніть "
+"цю опцію, якщо у вашому списку почалася флейм-війна і ви хочете його "
+"охолодити. "
 
 #: forms/list_forms.py:448
 msgid "Maximum message size"
-msgstr ""
+msgstr "Максимальний розмір повідомлення"
 
 #: forms/list_forms.py:451
 msgid ""
 "The maximum allowed message size in KB. This can be used to prevent emails "
 "with large attachments. A size of 0 disables the check."
 msgstr ""
+"Максимально дозволений розмір повідомлення у КБ. Це можна використовувати "
+"для уникнення листів із великими прикріпленнями. Розмір 0 вимикає цю "
+"перевірку."
 
 #: forms/list_forms.py:456
 msgid "Maximum number of recipients"
-msgstr ""
+msgstr "Максимальна кількість одержувачів"
 
 #: forms/list_forms.py:459
 msgid ""
 "The maximum number of recipients for a message. This can be used to prevent "
 "mass mailings from being accepted. A value of 0 disables the check."
 msgstr ""
+"Максимальна кількість одержувачів повідомлення. Це можна використовувати для "
+"уникнення прийняття масових листів. Значення 0 вимикає перевірку."
 
 #: forms/list_forms.py:473
 msgid "Accept these non-members"
-msgstr ""
+msgstr "Приймати цих не-членів"
 
 #: forms/list_forms.py:476
 msgid ""
@@ -584,10 +666,16 @@ msgid ""
 "to add the address as a nonmember and set the nonmember's Moderation to "
 "Default Processing."
 msgstr ""
+"Це список (по одному на рядок) регулярних виразів, що відповідають адресам, "
+"яким дозволено писати у цей список розсилки без підписки на нього. Записи є "
+"регулярними виразами, що починаються з `^' і порівнюються з адресами "
+"відправників у повідомленні. Хоча тут можна вводити адреси і не у вигляді "
+"регулярних виразів, бажано додавати адресу як не-члена і виставити "
+"модерування не-членів на «Обробку за замовчуванням»."
 
 #: forms/list_forms.py:486
 msgid "Hold these non-members"
-msgstr ""
+msgstr "Затримати цих не-членів"
 
 #: forms/list_forms.py:489
 msgid ""
@@ -597,10 +685,15 @@ msgid ""
 "regexp addresses can be entered here, it is preferred to add the address as "
 "a nonmember and set the nonmember's Moderation to Hold."
 msgstr ""
+"Це список (по одному на рядок) регулярних виразів, що відповідають адресам, "
+"дописи від яких автоматично затримуються. Записи є регулярними виразами, що "
+"починаються з `^' і порівнюються з адресами відправників у повідомленні. "
+"Хоча тут можна вводити адреси і не у вигляді регулярних виразів, бажано "
+"додавати адресу як не-члена і виставити модерування не-членів на «Затримати»."
 
 #: forms/list_forms.py:498
 msgid "Reject these non-members"
-msgstr ""
+msgstr "Відхилити цих не-членів"
 
 #: forms/list_forms.py:501
 msgid ""
@@ -610,10 +703,16 @@ msgid ""
 "message. While non-regexp addresses can be entered here, it is preferred to "
 "add the address as a nonmember and set the nonmember's Moderation to Reject."
 msgstr ""
+"Це список (по одному на рядок) регулярних виразів, що відповідають адресам, "
+"дописи від яких буде відхилено зі сповіщенням відправнику. Записи є "
+"регулярними виразами, що починаються з `^' і порівнюються з адресами "
+"відправників у повідомленні. Хоча тут можна вводити адреси і не у вигляді "
+"регулярних виразів, бажано додавати адресу як не-члена і виставити "
+"модерування не-членів на «Відхилити»."
 
 #: forms/list_forms.py:511
 msgid "Discard these non-members"
-msgstr ""
+msgstr "Відкидати цих не-членів"
 
 #: forms/list_forms.py:514
 msgid ""
@@ -623,48 +722,55 @@ msgid ""
 "regexp addresses can be entered here, it is preferred to add the address as "
 "a nonmember and set the nonmember's Moderation to Discard."
 msgstr ""
+"Це список (по одному на рядок) регулярних виразів, що відповідають адресам, "
+"дописи від яких буде автоматично відкинуто. Записи є регулярними виразами, "
+"що починаються з `^' і порівнюються з адресами відправників у повідомленні. "
+"Хоча тут можна вводити адреси і не у вигляді регулярних виразів, бажано "
+"додавати адресу як не-члена і виставити модерування не-членів на «Відкинути»."
 
 #: forms/list_forms.py:536
 msgid "Invalid alias regexp: {}: {}"
-msgstr ""
+msgstr "Недійсний регулярний вираз синоніма: {}: {}"
 
 #: forms/list_forms.py:542
 msgid "Invalid alias email: {}"
-msgstr ""
+msgstr "Недійсна електронна пошта синоніма: {}"
 
 #: forms/list_forms.py:554
 msgid "Enable Digests"
-msgstr ""
+msgstr "Увімкнути дайджести"
 
 #: forms/list_forms.py:555
 msgid "Should Mailman enable digests for this MailingList?"
-msgstr ""
+msgstr "Чи має Mailman увімкнути дайджести для цього списку розсилки?"
 
 #: forms/list_forms.py:561
 msgid "Send Digest Periodically"
-msgstr ""
+msgstr "Надсилати дайджести періодично"
 
 #: forms/list_forms.py:562
 msgid "Should Mailman send out digests periodically?"
-msgstr ""
+msgstr "Чи має Mailman надсилати дайджести періодично?"
 
 #: forms/list_forms.py:568
 msgid "Digest Volume Frequency"
-msgstr ""
+msgstr "Частота томів дайджестів"
 
 #: forms/list_forms.py:569
 msgid ""
 "At what frequency should Mailman increment the digest volume number and "
 "reset the issue number?"
 msgstr ""
+"З якою частотою Mailman має збільшувати номер тому дайджесту і скидати номер "
+"випуску?"
 
 #: forms/list_forms.py:573
 msgid "Digest size threshold"
-msgstr ""
+msgstr "Поріг розміру дайджесту"
 
 #: forms/list_forms.py:574
 msgid "How big in Kb should a digest be before it gets sent out?"
-msgstr ""
+msgstr "Якого розміру у Кб має досягти дайджест, перш ніж його буде надіслано?"
 
 #: forms/list_forms.py:583
 msgid "DMARC mitigation action"
