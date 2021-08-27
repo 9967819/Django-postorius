@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-19 10:38-0700\n"
-"PO-Revision-Date: 2021-08-27 01:09+0000\n"
-"Last-Translator: Luiz Angelo Daros de Luca <luizluca@gmail.com>\n"
+"PO-Revision-Date: 2021-08-27 01:10+0000\n"
+"Last-Translator: Claudio Mossmann <claudio.mossmann@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "gnu-mailman/postorius/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -1338,6 +1338,13 @@ msgid ""
 "reason or another. Setting this option causes notices to be sent immediately "
 "on the arrival of new requests as well. "
 msgstr ""
+"Os moderadores da lista devem receber notificações imediatas de novos "
+"pedidos, bem como notificações diárias sobre os coletados? Os moderadores de "
+"lista (e administradores de lista) recebem lembretes diários de solicitações "
+"com aprovação pendente, como inscrições em uma lista moderada ou postagens "
+"que estão sendo retidas por um motivo ou outro. A configuração desta opção "
+"faz com que os avisos sejam enviados imediatamente na chegada de novas "
+"solicitações. "
 
 #: forms/list_forms.py:922
 msgid "Notify admin of membership changes"
@@ -1457,7 +1464,7 @@ msgstr ""
 
 #: forms/list_forms.py:1028
 msgid "Emails to mass subscribe"
-msgstr ""
+msgstr "Endereços de e-mail para inscrição em lote"
 
 #: forms/list_forms.py:1030
 msgid ""
@@ -1469,46 +1476,59 @@ msgid ""
 "jdoe@example.com (John Doe)\n"
 "Use the last three to associate a display name with the address\n"
 msgstr ""
+"Os seguintes formatos são aceitos:\n"
+"jdoe@example.com\n"
+"&lt;jdoe@example.com&gt;\n"
+"John Doe &lt;jdoe@example.com&gt;\n"
+"\"John Doe\" &lt;jdoe@example.com&gt;\n"
+"jdoe@example.com (John Doe)\n"
+"Use os últimos três para associar um nome de exibição ao endereço\n"
 
 #: forms/list_forms.py:1041
 msgid "Pre confirm"
-msgstr ""
+msgstr "Pré-confirmar"
 
 #: forms/list_forms.py:1045
 msgid "If checked, users will not have to confirm their subscription."
-msgstr ""
+msgstr "Se marcada, os usuários não terão que confirmar sua inscrição."
 
 #: forms/list_forms.py:1050
 msgid "Pre approved"
-msgstr ""
+msgstr "Pré-aprovar"
 
 #: forms/list_forms.py:1054
 msgid ""
 "If checked, moderators will not have to approve the subscription request."
 msgstr ""
+"Se marcada, os moderadores não terão que aprovar a solicitação de inscrição."
 
 #: forms/list_forms.py:1060
 msgid "Pre Verified"
-msgstr ""
+msgstr "Pré-verificar"
 
 #: forms/list_forms.py:1064
 msgid ""
 "If checked, users will not have to verify that their email address is valid."
 msgstr ""
+"Se marcada, os usuários não terão que verificar se seu endereço de e-mail é "
+"válido."
 
 #: forms/list_forms.py:1070
 msgid "Invitation"
-msgstr ""
+msgstr "Convite"
 
 #: forms/list_forms.py:1074
 msgid ""
 "If checked, the other checkboxes are ignored and the users will be sent an "
 "invitation to join the list and will be subscribed upon acceptance thereof."
 msgstr ""
+"Se marcada, as outras caixas de seleção são ignoradas e os usuários "
+"receberão um convite para ingressar na lista e serão inscritos ao aceitar o "
+"mesmo."
 
 #: forms/list_forms.py:1083 forms/list_forms.py:1176
 msgid "List default"
-msgstr ""
+msgstr "Ação Default da Lista"
 
 #: forms/list_forms.py:1089
 msgid ""
@@ -1516,66 +1536,70 @@ msgid ""
 "will be ignored for these subscribers and a welcome message will be sent or "
 "not sent based on the choice."
 msgstr ""
+"Se definido como \"Sim\" ou \"Não\", a configuração padrão da Lista de "
+"send_welcome_message será ignorada para esses assinantes e uma mensagem de "
+"boas-vindas será enviada ou não com base na escolha."
 
 #: forms/list_forms.py:1109
 msgid "Emails to Unsubscribe"
-msgstr ""
+msgstr "Endereços para ter a inscrição cancelada"
 
 #: forms/list_forms.py:1110
 msgid "Add one email address on each line"
-msgstr ""
+msgstr "Adicione um endereço por linha"
 
 #: forms/list_forms.py:1125
 msgid "Default antispam action"
-msgstr ""
+msgstr "Ação anti spam default"
 
 #: forms/list_forms.py:1129
 msgid "Header"
-msgstr ""
+msgstr "Cabeçalho"
 
 #: forms/list_forms.py:1130
 msgid "Email header to filter on (case-insensitive)."
 msgstr ""
+"Cabeçalho de e-mail para filtrar (não diferencia maiúsculas de minúsculas)."
 
 #: forms/list_forms.py:1132
 msgid "Please enter a header."
-msgstr ""
+msgstr "Informe qual cabeçalho."
 
 #: forms/list_forms.py:1133
 msgid "Please enter a valid header."
-msgstr ""
+msgstr "Informe um cabeçalho válido."
 
 #: forms/list_forms.py:1135
 msgid "Pattern"
-msgstr ""
+msgstr "Expressão Regular"
 
 #: forms/list_forms.py:1136
 msgid "Regular expression matching the header's value."
-msgstr ""
+msgstr "Expressão regular correspondente ao valor do cabeçalho."
 
 #: forms/list_forms.py:1138
 msgid "Please enter a pattern."
-msgstr ""
+msgstr "Informe a Expressão Regular (regexp)."
 
 #: forms/list_forms.py:1139
 msgid "Please enter a valid pattern."
-msgstr ""
+msgstr "Informe uma Expressão Regular válida."
 
 #: forms/list_forms.py:1141 templates/postorius/domain/index.html:26
 msgid "Action"
-msgstr ""
+msgstr "Ação"
 
 #: forms/list_forms.py:1142
 msgid "Please enter a valid action."
-msgstr ""
+msgstr "Informe uma Ação válida."
 
 #: forms/list_forms.py:1145
 msgid "Action to take when a header matches"
-msgstr ""
+msgstr "Ação a ser executada quando um cabeçalho corresponder"
 
 #: forms/list_forms.py:1174
 msgid "Moderation"
-msgstr ""
+msgstr "Moderação"
 
 #: forms/list_forms.py:1178
 msgid ""
@@ -1590,58 +1614,73 @@ msgid ""
 "Accept -- accepts any postings without any further checks. \n"
 "Default Processing -- run additional checks and accept the message. \n"
 msgstr ""
+"Ação padrão a ser executada quando este membro postar na lista. \n"
+"Padrão da Lista - siga a ação padrão para membro da lista. \n"
+"Segurar - Reter a mensagem para aprovação dos moderadores da lista. \n"
+"Rejeitar - Rejeitar automaticamente a mensagem, enviando um aviso de "
+"devolução ao autor da postagem. O texto do aviso de rejeição pode ser "
+"configurado por você. \n"
+"Descartar - Simplesmente descarta a mensagem, sem nenhum aviso enviado ao "
+"autor da postagem. \n"
+"Aceitar - Aceitar qualquer postagem sem qualquer verificação adicional. \n"
+"Processamento padrão - Executar as verificações adicionais e aceitar a "
+"mensagem. \n"
 
 #: forms/list_forms.py:1195
 msgid "Select Email"
-msgstr ""
+msgstr "Selecionar e-mail"
 
 #: forms/list_forms.py:1219
 msgid "Data"
-msgstr ""
+msgstr "Dados"
 
 #: forms/member_forms.py:27
 msgid "Email Address"
-msgstr ""
+msgstr "Endereço de E-mail"
 
 #: forms/member_forms.py:32
 msgid "Display Name"
-msgstr ""
+msgstr "Nome para Exibição"
 
 #: forms/member_forms.py:35
 msgid "Please enter an display name."
-msgstr ""
+msgstr "Informe um Nome para Exibição."
 
 #: forms/system.py:31
 msgid "Add ban"
-msgstr ""
+msgstr "Banir endereço de e-mail"
 
 #: forms/system.py:33
 msgid ""
 "You can ban a single email address or use a regular expression to match "
 "similar email addresses."
 msgstr ""
+"Você pode banir um único endereço de e-mail ou usar uma expressão regular "
+"para corresponder a endereços de e-mail similares."
 
 #: forms/user_forms.py:62
 msgid "Receive own postings"
-msgstr ""
+msgstr "Receber suas próprias postagens"
 
 #: forms/user_forms.py:64
 msgid ""
 "Ordinarily, you will get a copy of every message you post to the list. If "
 "you don't want to receive this copy, set this option to No."
 msgstr ""
+"Normalmente, você receberá uma cópia de cada mensagem que postar na lista. "
+"Se você não deseja receber esta cópia, defina esta opção como Não."
 
 #: forms/user_forms.py:71
 msgid "Acknowledge posts"
-msgstr ""
+msgstr "Mensagens de Confirmação"
 
 #: forms/user_forms.py:73
 msgid "Receive acknowledgement mail when you send mail to the list?"
-msgstr ""
+msgstr "Receber mensagens de confirmação ao enviar e-mail para a lista?"
 
 #: forms/user_forms.py:77
 msgid "Hide address"
-msgstr ""
+msgstr "Ocultar Endereço"
 
 #: forms/user_forms.py:79
 msgid ""
@@ -1650,10 +1689,14 @@ msgid ""
 "email address to show up on this membership roster at all, select Yes for "
 "this option."
 msgstr ""
+"Quando alguém visualiza a inscrição na lista, o seu endereço de e-mail "
+"normalmente é mostrado (de forma obscura para impedir os coletores de spam). "
+"Se você não deseja que seu endereço de e-mail apareça nesta lista de "
+"membros, selecione Sim para esta opção."
 
 #: forms/user_forms.py:87
 msgid "Receive list copies (possible duplicates)"
-msgstr ""
+msgstr "Receber cópias da lista (possíveis duplicatas)"
 
 #: forms/user_forms.py:89
 msgid ""
@@ -1661,10 +1704,14 @@ msgid ""
 "you can opt to not receive another copy from the mailing list. Select Yes to "
 "receive copies. Select No to avoid receiving copies from the mailing list"
 msgstr ""
+"Quando você está listado explicitamente nos cabeçalhos Para: ou Cc: de uma "
+"mensagem da lista, você pode optar por não receber outra cópia da lista de "
+"distribuição. Selecione Sim para receber cópias. Selecione Não para evitar o "
+"recebimento de cópias da lista de distribuição"
 
 #: forms/user_forms.py:98
 msgid "Preferred language"
-msgstr ""
+msgstr "Idioma preferido"
 
 #: forms/user_forms.py:100
 msgid ""
@@ -1672,15 +1719,18 @@ msgid ""
 "will override the MailingList's preferred language. This affects which "
 "language is used for your email notifications and such."
 msgstr ""
+"Idioma preferido para suas interações com o Mailman. Quando definido, "
+"substituirá o idioma preferido da Lista. Isso afeta o idioma usado para suas "
+"notificações por e-mail e outros."
 
 #: forms/user_forms.py:144
 msgid "Cannot set delivery_status to {}"
-msgstr ""
+msgstr "Não é possível definir delivery_status para {}"
 
 #: forms/validators.py:39
 #, python-brace-format
 msgid "Invalid: \"{0}\" should be either email or UUID"
-msgstr ""
+msgstr "Inválido: \"{0}\" deve ser e-mail ou UUID"
 
 #: models.py:43
 msgid ""
@@ -1700,143 +1750,197 @@ msgid ""
 "$language: The two letter language code for list's preferred language e.g. "
 "fr, en, de \n"
 msgstr ""
+"Nota: Não adicione nenhum conteúdo secreto aos modelos, pois eles são "
+"acessíveis ao público.\n"
+"Você pode usar essas variáveis nos modelos.\n"
+"$hyperkitty_url: Link permanente para mensagem arquivada no Hyperkitty\n"
+"$listname: Nome da lista de discussão, por exemplo formiga@example.com\n"
+"$list_id: o cabeçalho List-ID, por exemplo formiga.example.com\n"
+"$display_name: Nome de exibição da lista de discussão, por exemplo Formiga\n"
+"$short_listname: parte local do nome da lista, por exemplo formiga\n"
+"$domain: a parte do domínio do nome da lista, por exemplo example.com\n"
+"$info: o texto descritivo da lista de e-mails\n"
+"$request_email: O endereço de e-mail para solicitações automáticas\n"
+"$owner_email: O endereço de e-mail do proprietário da lista\n"
+"$site_email: o endereço de e-mail para entrar em contato com os "
+"proprietários do site\n"
+"$language: o código de duas letras do idioma preferido da lista, por exemplo "
+"fr, en, de, pt \n"
 
 #: models.py:263
 msgid "Choose the template you want to customize."
-msgstr ""
+msgstr "Escolha o Modelo que deseja personalizar."
 
 #: models.py:270
 msgid ""
 "Language for the template, this should be the list's preferred language."
-msgstr ""
+msgstr "Idioma do modelo, deve ser o idioma preferido da lista."
 
 #: template_list.py:26
 msgid ""
 "Sent to the list administrators when moderator approval for a posting is "
 "required."
 msgstr ""
+"Enviado para os administradores da lista quando é necessária a aprovação do "
+"moderador para uma postagem."
 
 #: template_list.py:28
 msgid ""
 "Sent to the list administrators when moderator approval for a subscription "
 "request is required."
 msgstr ""
+"Enviado para os administradores da lista quando é necessária a aprovação do "
+"moderador para uma solicitação de inscrição."
 
 #: template_list.py:30
 msgid ""
 "Sent to the list administrators when moderator approval for an "
 "unsubscription request is required."
 msgstr ""
+"Enviado para os administradores da lista quando é necessária a aprovação do "
+"moderador para uma solicitação de cancelamento de inscrição."
 
 #: template_list.py:32
 msgid ""
 "Sent to the list administrators to notify them when a new member has been "
 "subscribed."
 msgstr ""
+"Enviado aos administradores da lista para notificá-los quando um novo membro "
+"for inscrito."
 
 #: template_list.py:34
 msgid ""
 "Sent to the list administrators when a bounce message in an unrecognized "
 "format has been received."
 msgstr ""
+"Enviado para os administradores da lista quando uma mensagem devolvida em um "
+"formato não reconhecido foi recebida."
 
 #: template_list.py:36
 msgid ""
 "Sent to the list administrators to notify them when a member's delivery is "
 "disabled due to excessive bounces."
 msgstr ""
+"Enviado aos administradores da lista para notificá-los quando a entrega de "
+"um membro é desabilitada devido a rejeições excessivas."
 
 #: template_list.py:38
 msgid ""
 "Sent to the list administrators to notify them when a member has been "
 "unsubscribed."
 msgstr ""
+"Enviado aos administradores da lista para notificá-los quando a inscrição de "
+"um membro foi cancelada."
 
 #: template_list.py:40
 msgid "The footer for a digest message."
-msgstr ""
+msgstr "O rodapé de uma mensagem de resumo."
 
 #: template_list.py:42
 msgid "The header for a digest message."
-msgstr ""
+msgstr "O cabeçalho para uma mensagem de resumo."
 
 #: template_list.py:44
 msgid ""
 "The digest “masthead”; i.e. a common introduction for all digest messages."
 msgstr ""
+"O resumo “masthead”; ou seja, uma introdução comum para todas as mensagens "
+"de resumo."
 
 #: template_list.py:46
 msgid "The footer for a regular (non-digest) message."
-msgstr ""
+msgstr "O rodapé de uma mensagem regular (não resumida)."
 
 #: template_list.py:48
 msgid "The header for a regular (non-digest) message."
-msgstr ""
+msgstr "O cabeçalho para uma mensagem regular (não resumida)."
 
 #: template_list.py:50
 msgid ""
 "The message sent to subscribers when a subscription confirmation is required."
 msgstr ""
+"A mensagem enviada aos assinantes quando é necessária uma confirmação de "
+"inscrição."
 
 #: template_list.py:52
 msgid ""
 "The message sent to subscribers when an unsubscription confirmation is "
 "required."
 msgstr ""
+"A mensagem enviada aos assinantes quando é necessária uma confirmação "
+"cancelamento de inscrição."
 
 #: template_list.py:54
 msgid "The message sent to subscribers when they are invited to join a list."
 msgstr ""
+"A mensagem enviada aos assinantes quando são convidados a entrar em uma "
+"lista."
 
 #: template_list.py:56
 msgid "The notice sent to a member when they unsubscribe from a mailing list."
 msgstr ""
+"O aviso enviado a um membro quando ele cancela a inscrição em uma lista de "
+"e-mails."
 
 #: template_list.py:58
 msgid ""
 "The notice sent to a poster when their message is being held for moderator "
 "approval."
 msgstr ""
+"O aviso enviado a um remetente quando sua mensagem está sendo retida para "
+"aprovação do moderador."
 
 #: template_list.py:60
 msgid ""
 "Sent to a user when the maximum number of autoresponses has been reached for "
 "that day."
 msgstr ""
+"Enviado a um usuário quando o número máximo de respostas automáticas é "
+"atingido naquele dia."
 
 #: template_list.py:62
 msgid ""
 "Notice sent to a poster when their message has been received by the mailing "
 "list."
 msgstr ""
+"Aviso enviado a um remetente quando sua mensagem for recebida pela lista de "
+"e-mails."
 
 #: template_list.py:64
 msgid ""
 "A bounce probe sent to a member when their subscription has been disabled "
 "due to bounces."
 msgstr ""
+"Um teste de rejeição enviada a um membro quando sua assinatura foi "
+"desativada devido a rejeições."
 
 #: template_list.py:66
 msgid ""
 "Notice sent to a poster when their message has been rejected by the list’s "
 "moderator."
 msgstr ""
+"Aviso enviado a um remetente quando sua mensagem foi rejeitada pelo "
+"moderador da lista."
 
 #: template_list.py:68
 msgid ""
 "Notice sent to a poster when their message has been rejected automatically."
 msgstr ""
+"Aviso enviado a um remetente quando sua mensagem foi rejeitada "
+"automaticamente."
 
 #: template_list.py:70
 msgid ""
 "The notice sent to a member when they are subscribed to the mailing list."
-msgstr ""
+msgstr "O aviso enviado a um membro quando ele se inscreve na lista de e-mail."
 
 #: template_list.py:72
 msgid ""
 "The notice sent to a member when their membership has been disabled due to "
 "excessive bounces."
 msgstr ""
+"O aviso enviado a um membro quando sua associação foi desativada devido a "
+"rejeições excessivas."
 
 #: templates/403.html:5
 msgid "Forbidden"
