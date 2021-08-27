@@ -1,23 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# Eric <spice2wolf@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-19 10:38-0700\n"
-"PO-Revision-Date: 2020-04-01 03:42+0000\n"
-"Last-Translator: Derek Zhou <derek@3qin.us>\n"
-"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/gnu-"
-"mailman/postorius/zh_Hans/>\n"
+"PO-Revision-Date: 2021-08-26 12:09+0000\n"
+"Last-Translator: Eric <spice2wolf@gmail.com>\n"
+"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
+"gnu-mailman/postorius/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.0-dev\n"
+"X-Generator: Weblate 4.8.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -437,7 +436,7 @@ msgstr ""
 
 #: forms/list_forms.py:323
 msgid "Plain text"
-msgstr ""
+msgstr "纯文本"
 
 #: forms/list_forms.py:324
 msgid "Markdown text"
