@@ -4,13 +4,14 @@
 # Wellington Terumi Uemura <wellingtonuemura@gmail.com>, 2020.
 # Rafael Fontenelle <rafaelff@gnome.org>, 2021.
 # Claudio Mossmann <claudio.mossmann@gmail.com>, 2021.
+# Luiz Angelo Daros de Luca <luizluca@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-19 10:38-0700\n"
-"PO-Revision-Date: 2021-08-26 12:09+0000\n"
-"Last-Translator: Claudio Mossmann <claudio.mossmann@gmail.com>\n"
+"PO-Revision-Date: 2021-08-27 01:09+0000\n"
+"Last-Translator: Luiz Angelo Daros de Luca <luizluca@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "gnu-mailman/postorius/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -84,35 +85,35 @@ msgstr "E-mail do dono"
 
 #: forms/fields.py:28
 msgid "Regular"
-msgstr ""
+msgstr "Normal"
 
 #: forms/fields.py:29
 msgid "Plain Text Digests"
-msgstr ""
+msgstr "Resumos em Texto Simples"
 
 #: forms/fields.py:30
 msgid "Mime Digests"
-msgstr ""
+msgstr "Resumos em MIME"
 
 #: forms/fields.py:31
 msgid "Summary Digests"
-msgstr ""
+msgstr "Resumo dos Resumos"
 
 #: forms/fields.py:34 forms/list_forms.py:150
 msgid "Enabled"
-msgstr ""
+msgstr "Habilitado"
 
 #: forms/fields.py:35 forms/list_forms.py:151
 msgid "Disabled"
-msgstr ""
+msgstr "Desabilitado"
 
 #: forms/fields.py:36
 msgid "Disabled by Owner"
-msgstr ""
+msgstr "Desabilitado pelo Proprietário"
 
 #: forms/fields.py:37
 msgid "Disabled by Bounces"
-msgstr ""
+msgstr "Desabilitado por Devoluções"
 
 #: forms/fields.py:120
 msgid "Make at least one selection"
@@ -120,7 +121,7 @@ msgstr "Faça pelo menos uma seleção"
 
 #: forms/fields.py:131
 msgid "Delivery mode"
-msgstr ""
+msgstr "Modo de entrega"
 
 #: forms/fields.py:133
 msgid ""
@@ -130,10 +131,16 @@ msgid ""
 "digests are preferred, but if you have a problem reading them, select plain "
 "text digests."
 msgstr ""
+"Se você selecionar resumos, você receberá as postagens agrupadas ("
+"normalmente uma por dia mas possivelmente mais em lista mais movimentadas), "
+"ao invés de recebê-las individualmente quando são enviadas. Seu cliente de e-"
+"mail pode ou não suportar resumos MIME. Geralmente os resumos MIME são "
+"melhores mas, se você tiver problemas ao lê-los, selecione resumos em texto "
+"simples."
 
 #: forms/fields.py:152
 msgid "Delivery status"
-msgstr ""
+msgstr "Estado da entrega"
 
 #: forms/fields.py:154
 msgid ""
@@ -143,6 +150,11 @@ msgid ""
 "mail delivery, don't forget to re-enable it when you come back; it will not "
 "be automatically re-enabled."
 msgstr ""
+"Habilite esta opção para receber mensagens postadas para esta lista de "
+"discussão. Desabilite se quiser se manter inscrito mas não quer receber as "
+"mensagens por um tempo (ex: se estiver em férias). Se desabilitar a entrega "
+"de mensagens, não esqueça de reabilitá-la quando voltar; ela não será "
+"automaticamente reabilitada."
 
 #: forms/list_forms.py:38
 msgid "Hold for moderation"
@@ -482,7 +494,7 @@ msgstr "Texto simples"
 
 #: forms/list_forms.py:324
 msgid "Markdown text"
-msgstr ""
+msgstr "Texto em formato Markdown"
 
 #: forms/list_forms.py:330
 msgid "Archive policy"
@@ -498,7 +510,7 @@ msgstr "Arquivadores ativos"
 
 #: forms/list_forms.py:343
 msgid "Archive Rendering mode"
-msgstr ""
+msgstr "Modo de renderização do arquivo"
 
 #: forms/list_forms.py:344
 msgid ""
@@ -506,6 +518,9 @@ msgid ""
 "formatting based on markup in the email.\n"
 "Currently, this option is only supported by Hyperkitty."
 msgstr ""
+"Esta opção habilita a renderização dos emails no arquivador como textos "
+"formatados baseados nas marcações do e-mail.\n"
+"Atualmente esta opção é suportada apenas pelo Hypperkitty."
 
 #: forms/list_forms.py:376
 msgid "Acceptable aliases"
@@ -1064,7 +1079,7 @@ msgstr ""
 
 #: forms/list_forms.py:759
 msgid "Explicit reply-to address"
-msgstr "Endereço reply-to explícito"
+msgstr "Endereço de resposta (Reply-to) explícito"
 
 #: forms/list_forms.py:762
 msgid ""
@@ -1072,8 +1087,8 @@ msgid ""
 "used if the reply-to is set to use an explicitly set header"
 msgstr ""
 "Essa opção permite que os administradores definam um endereço explícito de "
-"\"resposta para\". Ele só é usado se a resposta for definida para usar um "
-"cabeçalho explicitamente definido"
+"resposta (\"Reply-To\"). Ele só é usado se a resposta for definida para usar "
+"um cabeçalho explicitamente definido"
 
 #: forms/list_forms.py:770
 msgid ""
@@ -1095,15 +1110,15 @@ msgstr "Escolha uma ação de reply-to."
 
 #: forms/list_forms.py:780
 msgid "No Munging"
-msgstr ""
+msgstr "Não mascare o endereço de e-mail"
 
 #: forms/list_forms.py:782
 msgid "Explicit Reply-to header set"
-msgstr ""
+msgstr "Adicione explicitamente o cabeçalho Reply-to"
 
 #: forms/list_forms.py:783
 msgid "Explicit Reply-to set; no Cc added"
-msgstr ""
+msgstr "Reply-to Explicitamente adicionado; nenhum CC adicionado"
 
 #: forms/list_forms.py:785
 msgid ""
@@ -1132,63 +1147,99 @@ msgid ""
 "list. To support these types of mailing lists, select Explicit Reply and set "
 "the Reply-To: address option to point to the parallel list."
 msgstr ""
+"Para onde as respostas para a lista são direcionadas? Não usar o "
+"mascaramento é recomendado para maioria das listas.\n"
+"Esta opção controla o que o Mailman faz com o cabeçalho Reply-To: nas "
+"mensagens que fluem pela lista de discussão. Quando se usa o \"Não mascare o "
+"endereço de e-mail\", o cabeçalho Reply-To: não será adicionado pelo "
+"Mailman. Contudo, se um estiver presente na mensagem original, ele será "
+"mantido. Usando tanto a opção \"Responder para a Lista\", \"Endereço de "
+"resposta explícito\" ou \"Somente Responder\", fará o Mailman adicionar um "
+"cabeçalho Reply-To: específico em todas as mensagens, sobrescrevendo, se "
+"necessário, o mesmo campo na mensagem original (\"Responder Explicitamente\" "
+"vai usar o endereço definido em reply_to_address). Na opção \"Responder "
+"Explicitamente\", nenhum Cc será adicionado e é útil para listas exclusivas "
+"para anúncios onde você quer evitar que as pessoas respondam para a lista. "
+"Existem muitas razões para não adicionar ou sobrescrever o cabeçalho Reply-"
+"To:. Uma delas é que alguns remetentes dependem deste campo para informar o "
+"endereço de resposta válido. Uma outra razão é que ao modificar o \"Reply-To:"
+"\", fica muito mais difícil enviar respostas privadas. Veja <a href=\"http"
+"://marc.merlins.org/netrants/reply-to-harmful.html\">`Reply-To' Munging "
+"Considered Harmful</a> para uma discussão deste problema. Veja <a href=\"http"
+"://marc.merlins.org/netrants/reply-to-useful.html\">`Reply-To' Munging "
+"Considered Useful</a> para uma opinião a favor deste recurso. Algumas lista "
+"de discussão possuem restrições das postagens, com uma lista em paralelo "
+"dedicada para discussões. Alguns exemplos são listas `patches' ou `checkin', "
+"onde as mudanças nos códigos são enviadas por um sistema de controle de "
+"versão mas a discussão sobre as mudanças ocorre em uma lista de "
+"desenvolvimento. Para permitir este tipo de lista, selecione \"Responder "
+"Explicitamente\" e ajuste o endereço do campo Reply-To: para a lista em "
+"paralelo."
 
 #: forms/list_forms.py:817
 msgid "Pipeline"
-msgstr ""
+msgstr "Cadeia de processamento"
 
 #: forms/list_forms.py:822
 msgid "Type of pipeline you want to use for this mailing list"
-msgstr ""
+msgstr "Tipo de cadeira de processamento que você que para esta lista"
 
 #: forms/list_forms.py:830
 msgid "Respond and continue processing"
-msgstr ""
+msgstr "Responder e continuar processando"
 
 #: forms/list_forms.py:831
 msgid "Respond and discard message"
-msgstr ""
+msgstr "Responder e descartar a mensagem"
 
 #: forms/list_forms.py:832
 msgid "No automatic response"
-msgstr ""
+msgstr "Sem resposta automática"
 
 #: forms/list_forms.py:836
 msgid "Autorespond to list owner"
-msgstr ""
+msgstr "Responder automaticamente para o dono da lista"
 
 #: forms/list_forms.py:837
 msgid ""
 "Should Mailman send an auto-response to emails sent to the -owner address?"
 msgstr ""
+"O Mailman deve enviar uma resposta automática para mensagens enviadas para o "
+"endereço <lista>-owner?"
 
 #: forms/list_forms.py:840
 msgid "Autoresponse owner text"
-msgstr ""
+msgstr "Texto da resposta automática ao dono"
 
 #: forms/list_forms.py:843
 msgid "Auto-response text to send to -owner emails."
 msgstr ""
+"Texto da resposta automática ao dono enviado para mensagens ao endereço "
+"<lista>-owner."
 
 #: forms/list_forms.py:847
 msgid "Autorespond postings"
-msgstr ""
+msgstr "Responder automaticamente as postagens"
 
 #: forms/list_forms.py:848
 msgid "Should Mailman send an auto-response to mailing list posters?"
 msgstr ""
+"O Mailman deveria enviar uma resposta automática para os remetentes da lista "
+"de discussão?"
 
 #: forms/list_forms.py:851
 msgid "Autoresponse postings text"
-msgstr ""
+msgstr "Texto da resposta automática das postagens"
 
 #: forms/list_forms.py:854
 msgid "Auto-response text to send to mailing list posters."
 msgstr ""
+"Texto da resposta automática a ser enviada para o remetente da lista de "
+"discussão."
 
 #: forms/list_forms.py:858
 msgid "Autorespond requests"
-msgstr ""
+msgstr "Responder automaticamente às solicitações"
 
 #: forms/list_forms.py:860
 msgid ""
@@ -1196,18 +1247,23 @@ msgid ""
 "If you choose yes, decide whether you want Mailman to discard the original "
 "email, or forward it on to the system as a normal mail command."
 msgstr ""
+"O Mailman deveria enviar uma resposta automática para mensagens enviados "
+"para o endereço \"lista\"-request? Se sim, decida se você quer que o Mailman "
+"descarte a mensagem original ou encaminhe para o sistema como uma mensagem "
+"de comando normal."
 
 #: forms/list_forms.py:865
 msgid "Autoresponse request text"
-msgstr ""
+msgstr "Texto da resposta automática da solicitação"
 
 #: forms/list_forms.py:868
 msgid "Auto-response text to send to -request emails."
 msgstr ""
+"Texto da resposta automática enviada para mensagens à \"lista\"-request."
 
 #: forms/list_forms.py:870
 msgid "Autoresponse grace period"
-msgstr ""
+msgstr "Período de carência de resposta automática"
 
 #: forms/list_forms.py:872
 msgid ""
@@ -1215,10 +1271,14 @@ msgid ""
 "request/-owner address from the same poster. Set to zero (or negative) for "
 "no grace period (i.e. auto-respond to every message)."
 msgstr ""
+"Número de dias entre as respostas automáticas tanto para a lista de "
+"discussão ou os endereços \"lista\"-request/-owner de um mesmo remetente. "
+"Para não ter período de carência (ex: todas as mensagens receberão uma nova "
+"resposta automática), defina como zero (ou negativo)."
 
 #: forms/list_forms.py:880
 msgid "Notify users of held messages"
-msgstr ""
+msgstr "Notificar os usuários da retenção de mensagens"
 
 #: forms/list_forms.py:882
 msgid ""
@@ -1226,10 +1286,14 @@ msgid ""
 "say 'No', no notifications will be sent to users about the pending approval "
 "on their messages."
 msgstr ""
+"O Mailman deveria notificar os usuários quando suas mensagens forem retidas "
+"para aprovação? Se for definido como \"Não\", nenhuma notificação será "
+"enviada para os usuários quando suas mensagens estiverem aguardando "
+"aprovação."
 
 #: forms/list_forms.py:889 forms/list_forms.py:1087
 msgid "Send welcome message"
-msgstr ""
+msgstr "Enviar mensagens de boas-vindas"
 
 #: forms/list_forms.py:891
 msgid ""
@@ -1239,10 +1303,15 @@ msgid ""
 "some other mailing list manager to Mailman.\n"
 "The text of Welcome message can be set via the Templates tab."
 msgstr ""
+"Deve ser enviada uma mensagem de boas-vindas para membros recém inscritos? "
+"Desligue esta opção se você planeja inscrever os membros manualmente e não "
+"quer avisá-los. Desativá-la é útil em especial para uma migração "
+"transparente de um outro serviço de gestão de listas para o Mailman.\n"
+"O texto da mensagem de Boas-Vindas pode ser configurado pela aba de Modelos."
 
 #: forms/list_forms.py:901
 msgid "Send goodbye message"
-msgstr ""
+msgstr "Envie mensagem de despedida"
 
 #: forms/list_forms.py:903
 msgid ""
@@ -1251,10 +1320,14 @@ msgid ""
 "you did so.\n"
 "The text of Goodbye message can be set via the Templates tab."
 msgstr ""
+"Deve ser enviada uma mensagem de despedida para membros recém removidos? "
+"Desligue esta opção se você planeja remover os membros manualmente e não "
+"quer avisá-los.\n"
+"O texto da mensagem de Despedida pode ser configurado pela aba de Modelos."
 
 #: forms/list_forms.py:910
 msgid "Admin immed notify"
-msgstr ""
+msgstr "Notificação imediata do administrador"
 
 #: forms/list_forms.py:912
 msgid ""
@@ -1338,7 +1411,7 @@ msgstr "Quem tem permissão para ver a lista de membros desta Lista?"
 
 #: forms/list_forms.py:984
 msgid "Gateway to mail"
-msgstr ""
+msgstr "Gateway para e-mail"
 
 #: forms/list_forms.py:985
 msgid ""
