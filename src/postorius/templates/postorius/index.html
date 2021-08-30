@@ -16,15 +16,15 @@
     {% if user.is_authenticated %}
         <div class="dropdown page-left col-md-4">
           <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            Filter by Role
+            {% trans 'Filter by Role' %}
             <span class="caret"></span>
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li><a href="?role=owner" class="dropdown-item">Owner</a></li>
-            <li><a href="?role=moderator" class="dropdown-item">Moderator</a></li>
-            <li><a href="?role=member" class="dropdown-item">Member</a></li>
-            <li><a href="?role=nonmember" class="dropdown-item">Non-member</a></li>
-            <li><a href="?all-lists" class="dropdown-item">All</a></li>
+            <li><a href="?role=owner" class="dropdown-item">{% trans 'Owner' %}</a></li>
+            <li><a href="?role=moderator" class="dropdown-item">{% trans 'Moderator' %}</a></li>
+            <li><a href="?role=member" class="dropdown-item">{% trans 'Member' %}</a></li>
+            <li><a href="?role=nonmember" class="dropdown-item">{% trans 'Non-member' %}</a></li>
+            <li><a href="?all-lists" class="dropdown-item">{% trans 'All' %}</a></li>
           </ul>
         </div>
         <div class="col-md-4">
@@ -75,7 +75,7 @@
             </table>
         </div>
         {% if not all_lists and not role %}
-            <small>* {% trans 'Only lists that you are owner, moderator or subscriber for are shown here.' %} Click to <a href="?all-lists"> see all lists</a>.</small>
+            <small>* {% trans 'Only lists that you are owner, moderator or subscriber for are shown here. Click to <a href="?all-lists"> see all lists</a>.' %}</small>
             <br/>
         {% endif %}
         {% if user.is_superuser %}
