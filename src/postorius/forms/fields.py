@@ -27,7 +27,7 @@ from postorius.utils import with_empty_choice
 
 DELIVERY_MODE_CHOICES = (("regular", _('Regular')),
                          ("plaintext_digests", _('Plain Text Digests')),
-                         ("mime_digests", _('Mime Digests')),
+                         ("mime_digests", _('MIME Digests')),
                          ("summary_digests", _('Summary Digests')))
 
 
@@ -144,7 +144,7 @@ def delivery_mode_field(default=None):
             'may not support MIME digests. In general MIME digests are '
             'preferred, but if you have a problem reading them, select '
             'plain text digests. '
-            'Summary Digests are currently equivalent to Mime Digests'))
+            'Summary Digests are currently equivalent to MIME Digests.'))
 
 
 def delivery_status_field(choices=None, widget=None):

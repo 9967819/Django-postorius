@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-30 00:53-0700\n"
+"POT-Creation-Date: 2021-08-30 14:55+0300\n"
 "PO-Revision-Date: 2021-08-30 05:58+0000\n"
 "Last-Translator: Cube Kassaki <2524737581@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/gnu-"
@@ -88,7 +88,9 @@ msgid "Plain Text Digests"
 msgstr "纯文本摘要"
 
 #: forms/fields.py:30
-msgid "Mime Digests"
+#, fuzzy
+#| msgid "Mime Digests"
+msgid "MIME Digests"
 msgstr "Mime摘要"
 
 #: forms/fields.py:31
@@ -152,7 +154,7 @@ msgid ""
 "day but possibly more on busy lists), instead of singly when they're sent. "
 "Your mail reader may or may not support MIME digests. In general MIME "
 "digests are preferred, but if you have a problem reading them, select plain "
-"text digests. Summary Digests are currently equivalent to Mime Digests"
+"text digests. Summary Digests are currently equivalent to MIME Digests."
 msgstr ""
 "如果您选择综述摘要，您将收到捆绑在一起的帖子（通常每天一个，但在忙碌列表中可"
 "能更多），而不是在发送时单独发送。 您的邮件阅读器可能支持也可能不支持 MIME 摘"
@@ -881,7 +883,7 @@ msgstr ""
 
 #: forms/list_forms.py:693
 msgid ""
-"MimeTypes to filter from the incoming posts. A list of common types can be "
+"MIME types to filter from the incoming posts. A list of common types can be "
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
@@ -900,7 +902,7 @@ msgstr ""
 
 #: forms/list_forms.py:707
 msgid ""
-"MimeTypes to allow in the incoming posts. A list of common types can be "
+"MIME types to allow in the incoming posts. A list of common types can be "
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
