@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-19 10:38-0700\n"
-"PO-Revision-Date: 2021-08-27 11:48+0000\n"
+"PO-Revision-Date: 2021-08-30 05:58+0000\n"
 "Last-Translator: Cube Kassaki <2524737581@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "gnu-mailman/postorius/zh_Hans/>\n"
@@ -199,95 +199,95 @@ msgstr "列表名称"
 
 #: forms/list_forms.py:72
 msgid "Please enter a name for your list."
-msgstr ""
+msgstr "请为您的列表输入名称。"
 
 #: forms/list_forms.py:73
 msgid "Please enter a valid list name."
-msgstr ""
+msgstr "请输入有效的列表名称。"
 
 #: forms/list_forms.py:76
 msgid "Initial list owner address"
-msgstr ""
+msgstr "初始的列表所有者地址"
 
 #: forms/list_forms.py:78
 msgid "Please enter the list owner's email address."
-msgstr ""
+msgstr "请输入列表所有者的电子邮件地址。"
 
 #: forms/list_forms.py:82
 msgid "Advertise this list?"
-msgstr ""
+msgstr "为这个列表做广播？"
 
 #: forms/list_forms.py:84
 msgid "Please choose a list type."
-msgstr ""
+msgstr "请选择列表类型。"
 
 #: forms/list_forms.py:87
 msgid "Advertise this list in list index"
-msgstr ""
+msgstr "在列表索引中宣传此列表"
 
 #: forms/list_forms.py:88
 msgid "Hide this list in list index"
-msgstr ""
+msgstr "在列表索引中隐藏此列表"
 
 #: forms/list_forms.py:101
 msgid "Choose an existing Domain."
-msgstr ""
+msgstr "选择一个现有域。"
 
 #: forms/list_forms.py:102
 msgid "Choose a valid Mail Host"
-msgstr ""
+msgstr "选择一个有效的邮件主机"
 
 #: forms/list_forms.py:105
 msgid "List Style"
-msgstr ""
+msgstr "列表样式"
 
 #: forms/list_forms.py:108
 msgid "Choose a List Style."
-msgstr ""
+msgstr "选择列表样式。"
 
 #: forms/list_forms.py:109
 msgid "Choose a valid List Style."
-msgstr ""
+msgstr "选择有效的列表样式。"
 
 #: forms/list_forms.py:112
 msgid "Site admin has not created any domains"
-msgstr ""
+msgstr "站点管理员尚未创建任何域"
 
 #: forms/list_forms.py:125
 msgid "Please enter a valid listname"
-msgstr ""
+msgstr "请输入有效的列表名称"
 
 #: forms/list_forms.py:154 forms/list_forms.py:187
 msgid "Your email address"
-msgstr ""
+msgstr "您的电子邮件地址"
 
 #: forms/list_forms.py:158
 msgid ""
 "Subscribing via \"Primary Address\" will change subscription address when "
 "you change your primary address."
-msgstr ""
+msgstr "通过“主要地址”订阅将在您更改主要地址时更改订阅地址。"
 
 #: forms/list_forms.py:161 forms/list_forms.py:190 forms/member_forms.py:29
 #: forms/system.py:36
 msgid "Please enter an email address."
-msgstr ""
+msgstr "请输入电子邮件地址。"
 
 #: forms/list_forms.py:162 forms/list_forms.py:191 forms/member_forms.py:30
 #: forms/system.py:37
 msgid "Please enter a valid email address."
-msgstr ""
+msgstr "请输入有效的电子邮件地址。"
 
 #: forms/list_forms.py:165 forms/list_forms.py:194
 msgid "Your name (optional)"
-msgstr ""
+msgstr "您的姓名（可选）"
 
 #: forms/list_forms.py:178 forms/list_forms.py:1213 views/list.py:442
 msgid "Primary Address ({})"
-msgstr ""
+msgstr "主要地址 （{}）"
 
 #: forms/list_forms.py:209
 msgid "Open"
-msgstr ""
+msgstr "打开"
 
 #: forms/list_forms.py:210 templates/postorius/domain/template_delete.html:27
 #: templates/postorius/lists/template_delete.html:24
