@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-30 00:53-0700\n"
+"POT-Creation-Date: 2021-08-30 14:55+0300\n"
 "PO-Revision-Date: 2021-04-07 00:27+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -87,7 +87,9 @@ msgid "Plain Text Digests"
 msgstr "תקצירים בטקסט פשוט"
 
 #: forms/fields.py:30
-msgid "Mime Digests"
+#, fuzzy
+#| msgid "Mime Digests"
+msgid "MIME Digests"
 msgstr "תקצירים עם מדיה"
 
 #: forms/fields.py:31
@@ -151,7 +153,7 @@ msgid ""
 "day but possibly more on busy lists), instead of singly when they're sent. "
 "Your mail reader may or may not support MIME digests. In general MIME "
 "digests are preferred, but if you have a problem reading them, select plain "
-"text digests. Summary Digests are currently equivalent to Mime Digests"
+"text digests. Summary Digests are currently equivalent to MIME Digests."
 msgstr ""
 "אם בחרת בתקצירי סיכום, יגיע אליך מאגד של כמה פרסומים יחד (בדרך כלל פעם ביום "
 "אבל יכול להיות גם יותר כתלות בעומס הרשימה), במקום הודעה על כל פרסום כאשר הוא "
@@ -998,8 +1000,13 @@ msgid "Filter types"
 msgstr "סוגי מסנן"
 
 #: forms/list_forms.py:693
+#, fuzzy
+#| msgid ""
+#| "MimeTypes to filter from the incoming posts. A list of common types can "
+#| "be found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
+#| "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgid ""
-"MimeTypes to filter from the incoming posts. A list of common types can be "
+"MIME types to filter from the incoming posts. A list of common types can be "
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
@@ -1020,8 +1027,13 @@ msgid "Pass types"
 msgstr "סוגי העברה"
 
 #: forms/list_forms.py:707
+#, fuzzy
+#| msgid ""
+#| "MimeTypes to allow in the incoming posts. A list of common types can be "
+#| "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
+#| "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgid ""
-"MimeTypes to allow in the incoming posts. A list of common types can be "
+"MIME types to allow in the incoming posts. A list of common types can be "
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""

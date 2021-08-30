@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-30 00:53-0700\n"
+"POT-Creation-Date: 2021-08-30 14:55+0300\n"
 "PO-Revision-Date: 2021-05-19 11:33+0000\n"
 "Last-Translator: Lens0021 <lorentz0021@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -87,7 +87,9 @@ msgid "Plain Text Digests"
 msgstr "일반 텍스트 요약"
 
 #: forms/fields.py:30
-msgid "Mime Digests"
+#, fuzzy
+#| msgid "Mime Digests"
+msgid "MIME Digests"
 msgstr "MIME 다이제스트"
 
 #: forms/fields.py:31
@@ -151,7 +153,7 @@ msgid ""
 "day but possibly more on busy lists), instead of singly when they're sent. "
 "Your mail reader may or may not support MIME digests. In general MIME "
 "digests are preferred, but if you have a problem reading them, select plain "
-"text digests. Summary Digests are currently equivalent to Mime Digests"
+"text digests. Summary Digests are currently equivalent to MIME Digests."
 msgstr ""
 "요약 다이제스트를 선택하면, 발송할 때 단독으로 게시하는 대신 게시물이 함께 묶"
 "이게 됩니다(대개 하루에 한 개씩이지만 사용 빈도가 높은 목록이 더 있을 수 있습"
@@ -1007,8 +1009,13 @@ msgid "Filter types"
 msgstr "필터 내용"
 
 #: forms/list_forms.py:693
+#, fuzzy
+#| msgid ""
+#| "MimeTypes to filter from the incoming posts. A list of common types can "
+#| "be found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
+#| "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgid ""
-"MimeTypes to filter from the incoming posts. A list of common types can be "
+"MIME types to filter from the incoming posts. A list of common types can be "
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
@@ -1031,8 +1038,13 @@ msgid "Pass types"
 msgstr "허용할 타입"
 
 #: forms/list_forms.py:707
+#, fuzzy
+#| msgid ""
+#| "MimeTypes to allow in the incoming posts. A list of common types can be "
+#| "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
+#| "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgid ""
-"MimeTypes to allow in the incoming posts. A list of common types can be "
+"MIME types to allow in the incoming posts. A list of common types can be "
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""

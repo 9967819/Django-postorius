@@ -690,7 +690,7 @@ class AlterMessagesForm(ListSettingsForm):
         label=_('Filter types'),
         required=False,
         help_text=_(
-            'MimeTypes to filter from the incoming posts. A list of common '
+            'MIME types to filter from the incoming posts. A list of common '
             'types can be found '
             '<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">here </a>'  # noqa# E501
             ))
@@ -704,7 +704,7 @@ class AlterMessagesForm(ListSettingsForm):
         label=_('Pass types'),
         required=False,
         help_text=_(
-            'MimeTypes to allow in the incoming posts. A list of common '
+            'MIME types to allow in the incoming posts. A list of common '
             'types can be found '
             '<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">here </a>'  # noqa# E501
             ))
