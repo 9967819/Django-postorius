@@ -1,23 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# Eric <spice2wolf@gmail.com>, 2021.
+# Cube Kassaki <2524737581@qq.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-19 10:38-0700\n"
-"PO-Revision-Date: 2020-04-01 03:42+0000\n"
-"Last-Translator: Derek Zhou <derek@3qin.us>\n"
-"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/gnu-"
-"mailman/postorius/zh_Hans/>\n"
+"PO-Revision-Date: 2021-08-30 05:58+0000\n"
+"Last-Translator: Cube Kassaki <2524737581@qq.com>\n"
+"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
+"gnu-mailman/postorius/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.0-dev\n"
+"X-Generator: Weblate 4.8.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -25,26 +25,26 @@ msgid ""
 "The domain from which you want the web UI to be served from. This can be "
 "same or different from the Mail Host. You can edit the list of available web "
 "hosts <a href=\"%s\">here</a>."
-msgstr ""
+msgstr "您希望从中提供 Web UI 的域。 这可以与邮件主机相同或不同。 您可以在<a href=\"%s\">此处</a>编辑可用网络主机列表。"
 
 #: forms/domain_forms.py:45 forms/list_forms.py:98
 #: templates/postorius/domain/index.html:21
 msgid "Mail Host"
-msgstr ""
+msgstr "邮件主机"
 
 #: forms/domain_forms.py:46 forms/domain_forms.py:65
 msgid "Please enter a domain name"
-msgstr ""
+msgstr "请输入域名"
 
 #: forms/domain_forms.py:47 forms/domain_forms.py:66
 msgid "Please enter a valid domain name."
-msgstr ""
+msgstr "请输入有效的域名。"
 
 #: forms/domain_forms.py:50
 msgid ""
 "The domain for your mailing lists. For example when you want lists like "
 "testing@example.com, enter example.com here."
-msgstr ""
+msgstr "您的邮件列表的域。 例如，当您需要 testing@example.com 之类的列表时，请在此处输入 example.com。"
 
 #: forms/domain_forms.py:54 forms/list_forms.py:91 forms/list_forms.py:945
 #: templates/postorius/domain/index.html:22 templates/postorius/index.html:56
@@ -53,67 +53,67 @@ msgstr "描述"
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:23
 msgid "Alias Domain"
-msgstr ""
+msgstr "域别名"
 
 #: forms/domain_forms.py:59 forms/domain_forms.py:88
 msgid "Please enter a valid domain name or nothing."
-msgstr ""
+msgstr "请输入有效的域名或不输入任何内容。"
 
 #: forms/domain_forms.py:61
 msgid "Normally empty.  Used only for unusual Postfix configs."
-msgstr ""
+msgstr "通常为空。 仅用于不寻常的 Postfix 配置。"
 
 #: forms/domain_forms.py:64 templates/postorius/domain/index.html:24
 msgid "Web Host"
-msgstr ""
+msgstr "虚拟主机"
 
 #: forms/domain_forms.py:78
 msgid "Please enter a valid domain name"
-msgstr ""
+msgstr "请输入有效的域名"
 
 #: forms/domain_forms.py:103
 msgid "Owner's Email"
-msgstr ""
+msgstr "所有者的电子邮件"
 
 #: forms/fields.py:28
 msgid "Regular"
-msgstr ""
+msgstr "常规"
 
 #: forms/fields.py:29
 msgid "Plain Text Digests"
-msgstr ""
+msgstr "纯文本摘要"
 
 #: forms/fields.py:30
 msgid "Mime Digests"
-msgstr ""
+msgstr "Mime摘要"
 
 #: forms/fields.py:31
 msgid "Summary Digests"
-msgstr ""
+msgstr "综述摘要"
 
 #: forms/fields.py:34 forms/list_forms.py:150
 msgid "Enabled"
-msgstr ""
+msgstr "启用"
 
 #: forms/fields.py:35 forms/list_forms.py:151
 msgid "Disabled"
-msgstr ""
+msgstr "禁用"
 
 #: forms/fields.py:36
 msgid "Disabled by Owner"
-msgstr ""
+msgstr "被所有者禁用"
 
 #: forms/fields.py:37
 msgid "Disabled by Bounces"
-msgstr ""
+msgstr "被退回地址禁用"
 
 #: forms/fields.py:120
 msgid "Make at least one selection"
-msgstr ""
+msgstr "至少选择一项"
 
 #: forms/fields.py:131
 msgid "Delivery mode"
-msgstr ""
+msgstr "投递方式"
 
 #: forms/fields.py:133
 msgid ""
@@ -123,10 +123,12 @@ msgid ""
 "digests are preferred, but if you have a problem reading them, select plain "
 "text digests."
 msgstr ""
+"如果您选择综述摘要，您将收到捆绑在一起的帖子（通常每天一个，但在忙碌列表中可能更多），而不是在发送时单独发送。 您的邮件阅读器可能支持也可能不支持 "
+"MIME 摘要。 通常首选 MIME 摘要，但如果您在阅读它们时遇到问题，请选择纯文本摘要。"
 
 #: forms/fields.py:152
 msgid "Delivery status"
-msgstr ""
+msgstr "投递状态"
 
 #: forms/fields.py:154
 msgid ""
@@ -136,154 +138,156 @@ msgid ""
 "mail delivery, don't forget to re-enable it when you come back; it will not "
 "be automatically re-enabled."
 msgstr ""
+"将此选项设置为“已启用”以接收发布到此邮件列表的邮件。 如果您想保持订阅状态，但暂时不想将邮件发送给您（例如您要去度假），请将其设置为“禁用”。 "
+"如果您禁用邮件传递，请不要忘记在您回来时重新启用它； 它不会自动重新启用。"
 
 #: forms/list_forms.py:38
 msgid "Hold for moderation"
-msgstr ""
+msgstr "暂停等待修改"
 
 #: forms/list_forms.py:39
 msgid "Reject (with notification)"
-msgstr ""
+msgstr "拒绝（带通知）"
 
 #: forms/list_forms.py:40
 msgid "Discard (no notification)"
-msgstr ""
+msgstr "丢弃（无通知）"
 
 #: forms/list_forms.py:41
 msgid "Accept immediately (bypass other rules)"
-msgstr ""
+msgstr "立即接受（无视其他规则）"
 
 #: forms/list_forms.py:42
 msgid "Default processing"
-msgstr ""
+msgstr "默认处理"
 
 #: forms/list_forms.py:46
 msgid "Daily"
-msgstr ""
+msgstr "日报"
 
 #: forms/list_forms.py:47
 msgid "Weekly"
-msgstr ""
+msgstr "周报"
 
 #: forms/list_forms.py:48
 msgid "Quarterly"
-msgstr ""
+msgstr "季报"
 
 #: forms/list_forms.py:49
 msgid "Monthly"
-msgstr ""
+msgstr "月报"
 
 #: forms/list_forms.py:50
 msgid "Yearly"
-msgstr ""
+msgstr "年报"
 
 #: forms/list_forms.py:54
 msgid "Only mailinglist moderators"
-msgstr ""
+msgstr "只看邮件列表版主"
 
 #: forms/list_forms.py:55
 msgid "Only mailinglist members"
-msgstr ""
+msgstr "仅限邮件列表成员"
 
 #: forms/list_forms.py:56
 msgid "Anyone"
-msgstr ""
+msgstr "任何人"
 
 #: forms/list_forms.py:70 templates/postorius/user/subscriptions.html:22
 msgid "List Name"
-msgstr ""
+msgstr "列表名称"
 
 #: forms/list_forms.py:72
 msgid "Please enter a name for your list."
-msgstr ""
+msgstr "请为您的列表输入名称。"
 
 #: forms/list_forms.py:73
 msgid "Please enter a valid list name."
-msgstr ""
+msgstr "请输入有效的列表名称。"
 
 #: forms/list_forms.py:76
 msgid "Initial list owner address"
-msgstr ""
+msgstr "初始的列表所有者地址"
 
 #: forms/list_forms.py:78
 msgid "Please enter the list owner's email address."
-msgstr ""
+msgstr "请输入列表所有者的电子邮件地址。"
 
 #: forms/list_forms.py:82
 msgid "Advertise this list?"
-msgstr ""
+msgstr "为这个列表做广播？"
 
 #: forms/list_forms.py:84
 msgid "Please choose a list type."
-msgstr ""
+msgstr "请选择列表类型。"
 
 #: forms/list_forms.py:87
 msgid "Advertise this list in list index"
-msgstr ""
+msgstr "在列表索引中宣传此列表"
 
 #: forms/list_forms.py:88
 msgid "Hide this list in list index"
-msgstr ""
+msgstr "在列表索引中隐藏此列表"
 
 #: forms/list_forms.py:101
 msgid "Choose an existing Domain."
-msgstr ""
+msgstr "选择一个现有域。"
 
 #: forms/list_forms.py:102
 msgid "Choose a valid Mail Host"
-msgstr ""
+msgstr "选择一个有效的邮件主机"
 
 #: forms/list_forms.py:105
 msgid "List Style"
-msgstr ""
+msgstr "列表样式"
 
 #: forms/list_forms.py:108
 msgid "Choose a List Style."
-msgstr ""
+msgstr "选择列表样式。"
 
 #: forms/list_forms.py:109
 msgid "Choose a valid List Style."
-msgstr ""
+msgstr "选择有效的列表样式。"
 
 #: forms/list_forms.py:112
 msgid "Site admin has not created any domains"
-msgstr ""
+msgstr "站点管理员尚未创建任何域"
 
 #: forms/list_forms.py:125
 msgid "Please enter a valid listname"
-msgstr ""
+msgstr "请输入有效的列表名称"
 
 #: forms/list_forms.py:154 forms/list_forms.py:187
 msgid "Your email address"
-msgstr ""
+msgstr "您的电子邮件地址"
 
 #: forms/list_forms.py:158
 msgid ""
 "Subscribing via \"Primary Address\" will change subscription address when "
 "you change your primary address."
-msgstr ""
+msgstr "通过“主要地址”订阅将在您更改主要地址时更改订阅地址。"
 
 #: forms/list_forms.py:161 forms/list_forms.py:190 forms/member_forms.py:29
 #: forms/system.py:36
 msgid "Please enter an email address."
-msgstr ""
+msgstr "请输入电子邮件地址。"
 
 #: forms/list_forms.py:162 forms/list_forms.py:191 forms/member_forms.py:30
 #: forms/system.py:37
 msgid "Please enter a valid email address."
-msgstr ""
+msgstr "请输入有效的电子邮件地址。"
 
 #: forms/list_forms.py:165 forms/list_forms.py:194
 msgid "Your name (optional)"
-msgstr ""
+msgstr "您的姓名（可选）"
 
 #: forms/list_forms.py:178 forms/list_forms.py:1213 views/list.py:442
 msgid "Primary Address ({})"
-msgstr ""
+msgstr "主要地址 （{}）"
 
 #: forms/list_forms.py:209
 msgid "Open"
-msgstr ""
+msgstr "打开"
 
 #: forms/list_forms.py:210 templates/postorius/domain/template_delete.html:27
 #: templates/postorius/lists/template_delete.html:24
@@ -437,7 +441,7 @@ msgstr ""
 
 #: forms/list_forms.py:323
 msgid "Plain text"
-msgstr ""
+msgstr "纯文本"
 
 #: forms/list_forms.py:324
 msgid "Markdown text"
