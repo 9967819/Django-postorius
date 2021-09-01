@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-30 14:55+0300\n"
-"PO-Revision-Date: 2021-03-19 23:47+0000\n"
+"POT-Creation-Date: 2021-08-30 00:53-0700\n"
+"PO-Revision-Date: 2021-08-31 16:39+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/tr/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.5.2-dev\n"
+"X-Generator: Weblate 4.8.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -89,10 +89,8 @@ msgid "Plain Text Digests"
 msgstr "Düz Metin Özetleri"
 
 #: forms/fields.py:30
-#, fuzzy
-#| msgid "Mime Digests"
 msgid "MIME Digests"
-msgstr "Mime Özetleri"
+msgstr "MIME Özetleri"
 
 #: forms/fields.py:31
 msgid "Summary Digests"
@@ -143,13 +141,6 @@ msgid "Delivery mode"
 msgstr "Teslimat modu"
 
 #: forms/fields.py:141
-#, fuzzy
-#| msgid ""
-#| "If you select summary digests , you'll get posts bundled together "
-#| "(usually one per day but possibly more on busy lists), instead of singly "
-#| "when they're sent. Your mail reader may or may not support MIME digests. "
-#| "In general MIME digests are preferred, but if you have a problem reading "
-#| "them, select plain text digests."
 msgid ""
 "If you select digests , you'll get posts bundled together (usually one per "
 "day but possibly more on busy lists), instead of singly when they're sent. "
@@ -157,11 +148,12 @@ msgid ""
 "digests are preferred, but if you have a problem reading them, select plain "
 "text digests. Summary Digests are currently equivalent to MIME Digests."
 msgstr ""
-"Genel özetleri seçerseniz, gönderileri tek tek almak yerine bir araya "
-"toplanmış (genellikle günde bir tane, ancak yoğun listelerde daha fazla "
-"olur) şekilde alırsınız. Posta okuyucunuz MIME özetlerini destekleyebilir "
-"veya desteklemeyebilir. Genelde MIME özetler tercih edilir, ancak bunları "
-"okumakta sorun yaşıyorsanız düz metin özetleri seçin."
+"Özetleri seçerseniz, gönderileri tek tek almak yerine bir araya toplanmış ("
+"genellikle günde bir tane, ancak yoğun listelerde muhtemelen daha fazla olur)"
+" şekilde alırsınız. Posta okuyucunuz MIME özetlerini destekleyebilir veya "
+"desteklemeyebilir. Genelde MIME özetler tercih edilir, ancak bunları "
+"okumakta sorun yaşıyorsanız düz metin özetleri seçin. Genel Özetler şu anda "
+"MIME Özetlerine eş değerdir."
 
 #: forms/fields.py:161 templates/postorius/lists/summary.html:51
 msgid "Delivery status"
@@ -407,14 +399,12 @@ msgid "Discard"
 msgstr "At"
 
 #: forms/list_forms.py:241
-#, fuzzy
-#| msgid "List metrics"
 msgid "List Admins"
-msgstr "Liste metrikleri"
+msgstr "Liste Yöneticileri"
 
 #: forms/list_forms.py:242
 msgid "Site Admin"
-msgstr ""
+msgstr "Site Yöneticisi"
 
 #: forms/list_forms.py:246 forms/list_forms.py:272 forms/list_forms.py:281
 #: forms/list_forms.py:290 forms/list_forms.py:402 forms/list_forms.py:410
@@ -482,25 +472,18 @@ msgstr ""
 "sıfırlanır. Bu değer bir tam sayı olmalıdır. "
 
 #: forms/list_forms.py:274
-#, fuzzy
-#| msgid "Notify owner on removal"
 msgid "Notify owner on bounce increment"
-msgstr "Kaldırma işleminde sahibine bildir"
+msgstr "Geri dönme artırıldığında sahibine bildir"
 
 #: forms/list_forms.py:276
-#, fuzzy
-#| msgid ""
-#| "This option controls whether or not the list owner is notified when a "
-#| "member's subscription is automatically disabled due to their bounce "
-#| "threshold being reached. "
 msgid ""
 "This option controls whether or not the list owner is notified when a "
 "member's bounce score is incremented, but to a value less than their bounce "
 "threshold. "
 msgstr ""
-"Bu seçenek, bir üyenin aboneliği geri dönme eşiğine ulaşıldığı için otomatik "
-"olarak devre dışı bırakıldığında liste sahibinin bilgilendirilip "
-"bildirilmeyeceğini denetler. "
+"Bu seçenek, bir üyenin geri dönme puanı artırıldığında ve geri dönme "
+"eşiğinden daha düşük bir değere yükseltildiğinde liste sahibinin "
+"bilgilendirilip bilgilendirilmeyeceğini denetler. "
 
 #: forms/list_forms.py:283
 msgid "Notify owner on disable"
@@ -532,7 +515,7 @@ msgstr ""
 
 #: forms/list_forms.py:301
 msgid "Forward unrecognized bounces"
-msgstr ""
+msgstr "Tanınmayan geri dönmeleri ilet"
 
 #: forms/list_forms.py:302
 msgid ""
@@ -540,6 +523,9 @@ msgid ""
 "List Admins: Send to the list owners and moderators\n"
 "Site Admin: Send to the site's configured site_owner"
 msgstr ""
+"At: Tanınmayan geri dönmeler atılacak\n"
+"Liste Yöneticileri: Liste sahiplerine ve moderatörlere gönder\n"
+"Site Yöneticisi: Sitenin yapılandırılan site_owner'ına gönder"
 
 #: forms/list_forms.py:307
 msgid "Bounce disabled warnings interval"
@@ -741,18 +727,15 @@ msgid "Maximum number of recipients"
 msgstr "Azami alıcı sayısı"
 
 #: forms/list_forms.py:473
-#, fuzzy
-#| msgid ""
-#| "The maximum number of recipients for a message. This can be used to "
-#| "prevent mass mailings from being accepted. A value of 0 disables the "
-#| "check."
 msgid ""
 "If a post has this many or more explicit recipients (To: and Cc:), the post "
 "will be held for moderation. This can be used to prevent mass mailings from "
 "being accepted. A value of 0 disables the check."
 msgstr ""
-"Bir mesaj için azami alıcı sayısı. Bu, toplu postaların kabul edilmesini "
-"önlemek için kullanılabilir. 0 değeri denetimi devre dışı bırakır."
+"Bir gönderi bu kadar çok veya daha fazla açık alıcıya sahipse (Kime: ve "
+"Bilgi:), gönderi denetlenmek için bekletilecektir. Bu, toplu postaların "
+"kabul edilmesini önlemek için kullanılabilir. 0 değeri denetimi devre dışı "
+"bırakır."
 
 #: forms/list_forms.py:488
 msgid "Accept these non-members"
@@ -849,7 +832,7 @@ msgstr "Mailman bu posta listesi için özetleri etkinleştirmeli mi?"
 
 #: forms/list_forms.py:576
 msgid "Send Digest Periodically"
-msgstr "Özeti Periyodik Olarak Gönder"
+msgstr "Özeti Düzenli Aralıklarla Gönder"
 
 #: forms/list_forms.py:577
 msgid "Should Mailman send out digests periodically?"
@@ -1033,11 +1016,6 @@ msgid "Filter types"
 msgstr "Filtrelenecek türler"
 
 #: forms/list_forms.py:693
-#, fuzzy
-#| msgid ""
-#| "MimeTypes to filter from the incoming posts. A list of common types can "
-#| "be found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
-#| "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgid ""
 "MIME types to filter from the incoming posts. A list of common types can be "
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
@@ -1060,11 +1038,6 @@ msgid "Pass types"
 msgstr "İzin verilecek türler"
 
 #: forms/list_forms.py:707
-#, fuzzy
-#| msgid ""
-#| "MimeTypes to allow in the incoming posts. A list of common types can be "
-#| "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
-#| "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgid ""
 "MIME types to allow in the incoming posts. A list of common types can be "
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
@@ -1776,19 +1749,12 @@ msgid "Cannot set delivery_status to {}"
 msgstr "delivery_status, {} olarak ayarlanamıyor"
 
 #: forms/user_forms.py:241
-#, fuzzy
-#| msgid "Pre Verified"
 msgid "Verified"
-msgstr "Önden Doğrulanmış"
+msgstr "Doğrulandı"
 
 #: forms/user_forms.py:243
-#, fuzzy
-#| msgid ""
-#| "Specifies whether or not this list should do automatic bounce processing."
 msgid "Specifies whether or not this email address is verified"
-msgstr ""
-"Bu listenin geri dönmeleri otomatik olarak işlemesi gerekip gerekmediğini "
-"belirtir."
+msgstr "Bu e-posta adresinin doğrulanıp doğrulanmadığını belirtir"
 
 #: forms/validators.py:39
 #, python-brace-format
@@ -1879,26 +1845,16 @@ msgstr ""
 "yöneticilerine gönderilir."
 
 #: template_list.py:36
-#, fuzzy
-#| msgid ""
-#| "Sent to the list administrators to notify them when a new member has been "
-#| "subscribed."
 msgid "Sent to the list administrators from the 'mailman notify' command."
-msgstr ""
-"Yeni bir üye abone olduğunda bilgilendirmek için liste yöneticilerine "
-"gönderilir."
+msgstr "'mailman notify' komutundan liste yöneticilerine gönderilir."
 
 #: template_list.py:38
-#, fuzzy
-#| msgid ""
-#| "Sent to the list administrators to notify them when a member has been "
-#| "unsubscribed."
 msgid ""
 "Sent to the list administrators to notify them when a member's bounce score "
 "is incremented."
 msgstr ""
-"Bir üye abonelikten çıktığında bilgilendirmek için liste yöneticilerine "
-"gönderilir."
+"Bir üyenin geri dönme puanı artırıldığında bilgilendirmek için liste "
+"yöneticilerine gönderilir."
 
 #: template_list.py:40
 msgid ""
@@ -2615,7 +2571,7 @@ msgstr "Abonelik Adresi"
 #: templates/postorius/lists/summary.html:53
 #: templates/postorius/user/all.html:37
 msgid "Manage"
-msgstr ""
+msgstr "Yönet"
 
 #: templates/postorius/lists/summary.html:54
 #: templates/postorius/lists/summary.html:75
@@ -2636,15 +2592,7 @@ msgid "Subscribe to this list"
 msgstr "Bu listeye abone ol"
 
 #: templates/postorius/lists/summary.html:86
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                  To subscribe you can send an email with 'subscribe' in "
-#| "the subject to\n"
-#| "                  <a href=\"mailto:%(address)s?subject=Subscribe\">"
-#| "%(address)s</a>\n"
-#| "                  or use the form below:\n"
-#| "              "
+#, python-format
 msgid ""
 "\n"
 "                To subscribe you can send an email with 'subscribe' in the "
@@ -2655,12 +2603,11 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"                  Abone olmak için, <a href=\"mailto:%(address)s?"
-"subject=Subscribe\">%(address)s</a>\n"
-"                  adresine konusunda 'abone ol' olan bir eposta "
-"gönderebilir\n"
-"                  veya aşağıdaki formu kullanabilirsiniz:\n"
-"              "
+"                Abone olmak için, <a href=\"mailto:%(address)s?subject="
+"Subscribe\">%(address)s</a>\n"
+"                adresine konusunda 'abone ol' olan bir eposta gönderebilir\n"
+"                veya aşağıdaki formu kullanabilirsiniz:\n"
+"            "
 
 #: templates/postorius/lists/summary.html:97
 msgid ""
@@ -2844,19 +2791,15 @@ msgstr "Kaydet"
 
 #: templates/postorius/user/all.html:20
 msgid "Search"
-msgstr ""
+msgstr "Ara"
 
 #: templates/postorius/user/all.html:35
-#, fuzzy
-#| msgid "Users"
 msgid "User"
-msgstr "Kullanıcılar"
+msgstr "Kullanıcı"
 
 #: templates/postorius/user/all.html:36
-#, fuzzy
-#| msgid "Created at"
 msgid "Created"
-msgstr "Oluşturulma zamanı"
+msgstr "Oluşturuldu"
 
 #: templates/postorius/user/list_options.html:14
 msgid "Subscription options for"
@@ -2872,32 +2815,26 @@ msgid "Subscription settings"
 msgstr "Abonelik ayarları"
 
 #: templates/postorius/user/manage.html:8
-#, fuzzy
-#| msgid "Manage Subscription"
 msgid "Manage user"
-msgstr "Aboneliği Yönet"
+msgstr "Kullanıcıyı yönet"
 
 #: templates/postorius/user/manage.html:16
 #: templates/postorius/user/manage.html:48
 #: templates/postorius/user/manage.html:86
 msgid "Update"
-msgstr ""
+msgstr "Güncelle"
 
 #: templates/postorius/user/manage.html:18
-#, fuzzy
-#| msgid "Address"
 msgid "Addresses"
-msgstr "Adres"
+msgstr "Adresler"
 
 #: templates/postorius/user/manage.html:28
 msgid "Email"
-msgstr ""
+msgstr "E-posta"
 
 #: templates/postorius/user/manage.html:62
-#, fuzzy
-#| msgid "Lists"
 msgid "List"
-msgstr "Listeler"
+msgstr "Liste"
 
 #: templates/postorius/user/manage.html:64
 #: templates/postorius/user/subscriptions.html:25
@@ -2905,41 +2842,33 @@ msgid "Role"
 msgstr "Rol"
 
 #: templates/postorius/user/manage.html:89
-#, fuzzy
-#| msgid "Mass Subscription"
 msgid "User has no subscriptions."
-msgstr "Toplu Abonelik"
+msgstr "Kullanıcının aboneliği yok."
 
 #: templates/postorius/user/manage.html:93
-#, fuzzy
-#| msgid "Account"
 msgid "Web Account"
-msgstr "Hesap"
+msgstr "Web Hesabı"
 
 #: templates/postorius/user/manage.html:96
-#, fuzzy
-#| msgid "Users"
 msgid "Username"
-msgstr "Kullanıcılar"
+msgstr "Kullanıcı adı"
 
 #: templates/postorius/user/manage.html:100
 msgid "Superuser"
-msgstr ""
+msgstr "Yetkili kullanıcı"
 
 #: templates/postorius/user/manage.html:104
-#, fuzzy
-#| msgid "Login"
 msgid "Last login"
-msgstr "Oturum aç"
+msgstr "Son oturum açma"
 
 #: templates/postorius/user/manage.html:108
 msgid "Date joined"
-msgstr ""
+msgstr "Katılma tarihi"
 
 #: templates/postorius/user/manage.html:113
 #: templates/postorius/user/manage.html:116
 msgid "Change password"
-msgstr ""
+msgstr "Parola değiştir"
 
 #: templates/postorius/user/subscription_preferences.html:21
 msgid "Each list subscription can have specific Mailman preferences."
@@ -3400,22 +3329,20 @@ msgid "Subscription does not exist"
 msgstr "Abonelik mevcut değil"
 
 #: views/user.py:405
-#, fuzzy
-#| msgid "Currently banned addresses"
 msgid "Successfully updated addresses {}"
-msgstr "Şu anda yasaklanmış adresler"
+msgstr "{} adresleri başarıyla güncellendi"
 
 #: views/user.py:415
 msgid "Successfully updated memberships for {}"
-msgstr ""
+msgstr "{} için üyelikler başarıyla güncellendi"
 
 #: views/user.py:421
 msgid "Successfully updated user."
-msgstr ""
+msgstr "Kullanıcı başarıyla güncellendi."
 
 #: views/user.py:430
 msgid "Password updated successfully"
-msgstr ""
+msgstr "Parola başarıyla güncellendi"
 
 #~ msgid "You are subscribed to this list with the following address:"
 #~ msgstr "Bu listeye aşağıdaki adresle abone oldunuz:"
