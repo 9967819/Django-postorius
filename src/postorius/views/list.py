@@ -553,6 +553,15 @@ class ListUnsubscribeView(MailingListView):
     @method_decorator(login_required)
     def post(self, request, *args, **kwargs):
         email = request.POST['email']
+        # Verify the user actually controls this email, should
+        # return 1 if the user owns the email, 0 otherwise.
+        found_email = EmailAddress.objects.filter(
+            user=request.user, email=email, verified=True).count()
+        if found_email == 0:
+            messages.error(
+                request,
+                _('You can only unsubscribe yourself.'))
+            return redirect('list_summary', self.mailing_list.list_id)
         if self._has_pending_unsub_req(email):
             messages.error(
                 request,

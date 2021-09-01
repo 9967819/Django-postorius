@@ -88,6 +88,12 @@ Ascessibility
 * Move the focus to the textarea in mass subscribe page if there are errors in
   the form. (Closes #493)
 
+Security
+--------
+* Check that a user owns the email address they are trying to unsubscribe. This
+  fixes a bug in which any logged-in user could unsubscribe any email address
+  from any mailing list, leaking whether that address was subscribed originally.
+  (CVE-2021-40347, Closes #531)
 
 .. _news-1.3.4:
 
