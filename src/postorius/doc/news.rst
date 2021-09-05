@@ -18,9 +18,9 @@ You should have received a copy of the GNU Lesser General Public License
 along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 
 
-.. _news-1.3.5:
+.. _news-1.3.6:
 
-1.3.5
+1.3.6
 =====
 
 (2021-XX-XX)
@@ -88,6 +88,19 @@ Ascessibility
 * Move the focus to the textarea in mass subscribe page if there are errors in
   the form. (Closes #493)
 
+
+.. _news-1.3.5:
+
+1.3.5
+=====
+
+(2021-09-05)
+
+* ``AUTOCREATE_MAILMAN_USER`` setting is now removed and a Mailman user is
+  always created when a User object in created in Django. Also remove duplicate
+  implementation of ``get_mailman_user`` from ``MailmanUserManager`` so that we
+  can use a single implementation that uses caching for efficient lookups.
+
 Security
 --------
 * Check that a user owns the email address they are trying to unsubscribe. This
@@ -95,6 +108,7 @@ Security
   from any mailing list, leaking whether that address was subscribed originally.
   (CVE-2021-40347, Closes #531)
 
+  
 .. _news-1.3.4:
 
 1.3.4
