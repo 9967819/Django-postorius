@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-30 14:55+0300\n"
-"PO-Revision-Date: 2021-04-07 00:27+0000\n"
+"POT-Creation-Date: 2021-08-30 00:53-0700\n"
+"PO-Revision-Date: 2021-09-01 03:49+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/he/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.6-dev\n"
+"X-Generator: Weblate 4.8.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -87,10 +87,8 @@ msgid "Plain Text Digests"
 msgstr "תקצירים בטקסט פשוט"
 
 #: forms/fields.py:30
-#, fuzzy
-#| msgid "Mime Digests"
 msgid "MIME Digests"
-msgstr "תקצירים עם מדיה"
+msgstr "תקצירים עם MIME"
 
 #: forms/fields.py:31
 msgid "Summary Digests"
@@ -141,13 +139,6 @@ msgid "Delivery mode"
 msgstr "תצורת שליחה"
 
 #: forms/fields.py:141
-#, fuzzy
-#| msgid ""
-#| "If you select summary digests , you'll get posts bundled together "
-#| "(usually one per day but possibly more on busy lists), instead of singly "
-#| "when they're sent. Your mail reader may or may not support MIME digests. "
-#| "In general MIME digests are preferred, but if you have a problem reading "
-#| "them, select plain text digests."
 msgid ""
 "If you select digests , you'll get posts bundled together (usually one per "
 "day but possibly more on busy lists), instead of singly when they're sent. "
@@ -155,11 +146,11 @@ msgid ""
 "digests are preferred, but if you have a problem reading them, select plain "
 "text digests. Summary Digests are currently equivalent to MIME Digests."
 msgstr ""
-"אם בחרת בתקצירי סיכום, יגיע אליך מאגד של כמה פרסומים יחד (בדרך כלל פעם ביום "
-"אבל יכול להיות גם יותר כתלות בעומס הרשימה), במקום הודעה על כל פרסום כאשר הוא "
+"אם בחרת בתקצירים, יגיע אליך מאגד של כמה פרסומים יחד (בדרך כלל פעם ביום אבל "
+"יכול להיות גם יותר כתלות בעומס הרשימה), במקום הודעה על כל פרסום כאשר הוא "
 "נשלח. יכול להיות שקורא הודעות הדוא״ל שלך תומך בתקצירים עם מדיה (MIME). בדרך "
 "כלל עדיף להשתמש בתקצירים עם מדיה אבל אם יש לך קושי בקריאתם מוטב לבחור "
-"בתקצירים בטקסט פשוט."
+"בתקצירים בטקסט פשוט. סיכומי תקצירים הם שווי ערך לתקצירי MIME כרגע."
 
 #: forms/fields.py:161 templates/postorius/lists/summary.html:51
 msgid "Delivery status"
@@ -396,14 +387,12 @@ msgid "Discard"
 msgstr "השלכה"
 
 #: forms/list_forms.py:241
-#, fuzzy
-#| msgid "List metrics"
 msgid "List Admins"
-msgstr "מדדי הרשימה"
+msgstr "מנהלי הרשימה"
 
 #: forms/list_forms.py:242
 msgid "Site Admin"
-msgstr ""
+msgstr "הנהלת האתר"
 
 #: forms/list_forms.py:246 forms/list_forms.py:272 forms/list_forms.py:281
 #: forms/list_forms.py:290 forms/list_forms.py:402 forms/list_forms.py:410
@@ -467,24 +456,17 @@ msgstr ""
 "חדשות בזמן הזה, ניקוד ההחזרה מאופס. ערך זה חייב להיות מספר שלם וחיובי. "
 
 #: forms/list_forms.py:274
-#, fuzzy
-#| msgid "Notify owner on removal"
 msgid "Notify owner on bounce increment"
-msgstr "להודיע לבעלים על הסרה"
+msgstr "להודיע לבעלים על הגדלה במדד ההחזרה"
 
 #: forms/list_forms.py:276
-#, fuzzy
-#| msgid ""
-#| "This option controls whether or not the list owner is notified when a "
-#| "member's subscription is automatically disabled due to their bounce "
-#| "threshold being reached. "
 msgid ""
 "This option controls whether or not the list owner is notified when a "
 "member's bounce score is incremented, but to a value less than their bounce "
 "threshold. "
 msgstr ""
-"אפשרות זו שולטת האם בעלי הרשימה יקבלו הודעה או לא כאשר מינוי של חבר מושבת "
-"אוטומטית עקב הגעה לסף החזרה. "
+"אפשרות זו שולטת האם בעלי הרשימה יקבלו הודעה או לא כאשר ניקוד החזרה של חבר "
+"גדל אך לערך קטן מסף החזרה שלו. "
 
 #: forms/list_forms.py:283
 msgid "Notify owner on disable"
@@ -514,7 +496,7 @@ msgstr ""
 
 #: forms/list_forms.py:301
 msgid "Forward unrecognized bounces"
-msgstr ""
+msgstr "העברת החזרות בלתי מזוהות"
 
 #: forms/list_forms.py:302
 msgid ""
@@ -522,6 +504,9 @@ msgid ""
 "List Admins: Send to the list owners and moderators\n"
 "Site Admin: Send to the site's configured site_owner"
 msgstr ""
+"השלכה: החזרות בלתי מזוהות יושלכו\n"
+"מנהלי רשימה: שליחה לבעלי ומפקחי הרשימה\n"
+"הנהלת אתר: שליחה למי שהוגדר בתור site_owner (בעלי האתר)"
 
 #: forms/list_forms.py:307
 msgid "Bounce disabled warnings interval"
@@ -716,18 +701,14 @@ msgid "Maximum number of recipients"
 msgstr "מספר הנמענים המרבי"
 
 #: forms/list_forms.py:473
-#, fuzzy
-#| msgid ""
-#| "The maximum number of recipients for a message. This can be used to "
-#| "prevent mass mailings from being accepted. A value of 0 disables the "
-#| "check."
 msgid ""
 "If a post has this many or more explicit recipients (To: and Cc:), the post "
 "will be held for moderation. This can be used to prevent mass mailings from "
 "being accepted. A value of 0 disables the check."
 msgstr ""
-"מספר הנמענים המרבי להודעה. ניתן להשתמש בזה כדי למנוע קבלה של הודעות שמופצות "
-"להמונים. ערך של 0 משבית את הבדיקה."
+"אם לפרסום יש כמות כזאת של נמענים מפורשים (אל: ועותק:), הפרסום יוחזק למטרות "
+"פיקוח. ניתן להשתמש בזה כדי למנוע קבלה של הודעות שמופצות להמונים. ערך של 0 "
+"משבית את הבדיקה."
 
 #: forms/list_forms.py:488
 msgid "Accept these non-members"
@@ -1000,11 +981,6 @@ msgid "Filter types"
 msgstr "סוגי מסנן"
 
 #: forms/list_forms.py:693
-#, fuzzy
-#| msgid ""
-#| "MimeTypes to filter from the incoming posts. A list of common types can "
-#| "be found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
-#| "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgid ""
 "MIME types to filter from the incoming posts. A list of common types can be "
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
@@ -1027,11 +1003,6 @@ msgid "Pass types"
 msgstr "סוגי העברה"
 
 #: forms/list_forms.py:707
-#, fuzzy
-#| msgid ""
-#| "MimeTypes to allow in the incoming posts. A list of common types can be "
-#| "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
-#| "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgid ""
 "MIME types to allow in the incoming posts. A list of common types can be "
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
@@ -1714,17 +1685,12 @@ msgid "Cannot set delivery_status to {}"
 msgstr "לא ניתן להגדיר את delivery_status לכדי {}"
 
 #: forms/user_forms.py:241
-#, fuzzy
-#| msgid "Pre Verified"
 msgid "Verified"
-msgstr "טרום תיקוף"
+msgstr "תקף"
 
 #: forms/user_forms.py:243
-#, fuzzy
-#| msgid ""
-#| "Specifies whether or not this list should do automatic bounce processing."
 msgid "Specifies whether or not this email address is verified"
-msgstr "מציין האם הרשימה הזאת אמורה או לא אמורה לעבד החזרות אוטומטית."
+msgstr "מציין האם הכתובת הזאת מתוקפת או לאו"
 
 #: forms/validators.py:39
 #, python-brace-format
@@ -1804,22 +1770,14 @@ msgid ""
 msgstr "נשלחת למנהלי הרשימה כאשר מתקבלת הודעת החזרה בתסדיר לא מוכר."
 
 #: template_list.py:36
-#, fuzzy
-#| msgid ""
-#| "Sent to the list administrators to notify them when a new member has been "
-#| "subscribed."
 msgid "Sent to the list administrators from the 'mailman notify' command."
-msgstr "נשלחת למנהלי הרשימה כדי להודיע להם על הרשמת חבר חדש."
+msgstr "נשלח למנהלי הרשימה מהפקודה ‚mailman notify’."
 
 #: template_list.py:38
-#, fuzzy
-#| msgid ""
-#| "Sent to the list administrators to notify them when a member has been "
-#| "unsubscribed."
 msgid ""
 "Sent to the list administrators to notify them when a member's bounce score "
 "is incremented."
-msgstr "נשלחת למנהלי הרשימה כדי להודיע להם על ביטול מינוי של חבר."
+msgstr "נשלחת למנהלי הרשימה כדי להודיע להם על הגדלת ניקוד ההחזרה של חבר."
 
 #: template_list.py:40
 msgid ""
@@ -2511,7 +2469,7 @@ msgstr "כתובת מינוי"
 #: templates/postorius/lists/summary.html:53
 #: templates/postorius/user/all.html:37
 msgid "Manage"
-msgstr ""
+msgstr "ניהול"
 
 #: templates/postorius/lists/summary.html:54
 #: templates/postorius/lists/summary.html:75
@@ -2532,15 +2490,7 @@ msgid "Subscribe to this list"
 msgstr "מינוי לרשימה הזו"
 
 #: templates/postorius/lists/summary.html:86
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                  To subscribe you can send an email with 'subscribe' in "
-#| "the subject to\n"
-#| "                  <a href=\"mailto:%(address)s?subject=Subscribe\">"
-#| "%(address)s</a>\n"
-#| "                  or use the form below:\n"
-#| "              "
+#, python-format
 msgid ""
 "\n"
 "                To subscribe you can send an email with 'subscribe' in the "
@@ -2551,11 +2501,11 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"                  כדי להירשם ניתן לשלוח הודעה עם הנושא ‚subscribe’ אל\n"
-"                  <a href=\"mailto:%(address)s?subject=Subscribe\">"
-"%(address)s</a>\n"
-"                  או להשתמש בטופס שלהלן:\n"
-"              "
+"                כדי להירשם ניתן לשלוח הודעה עם הנושא ‚subscribe’ אל\n"
+"                  <a href=\"mailto:%(address)s?subject=Subscribe\""
+">%(address)s</a>\n"
+"                 או להשתמש בטופס שלהלן:\n"
+"            "
 
 #: templates/postorius/lists/summary.html:97
 msgid ""
@@ -2736,19 +2686,15 @@ msgstr "שמירה"
 
 #: templates/postorius/user/all.html:20
 msgid "Search"
-msgstr ""
+msgstr "חיפוש"
 
 #: templates/postorius/user/all.html:35
-#, fuzzy
-#| msgid "Users"
 msgid "User"
-msgstr "משתמשים"
+msgstr "משתמש"
 
 #: templates/postorius/user/all.html:36
-#, fuzzy
-#| msgid "Created at"
 msgid "Created"
-msgstr "נוצרה במועד"
+msgstr "נוצר"
 
 #: templates/postorius/user/list_options.html:14
 msgid "Subscription options for"
@@ -2763,32 +2709,26 @@ msgid "Subscription settings"
 msgstr "הגדרות מינוי"
 
 #: templates/postorius/user/manage.html:8
-#, fuzzy
-#| msgid "Manage Subscription"
 msgid "Manage user"
-msgstr "ניהול מינוי"
+msgstr "ניהול משתמש"
 
 #: templates/postorius/user/manage.html:16
 #: templates/postorius/user/manage.html:48
 #: templates/postorius/user/manage.html:86
 msgid "Update"
-msgstr ""
+msgstr "עדכון"
 
 #: templates/postorius/user/manage.html:18
-#, fuzzy
-#| msgid "Address"
 msgid "Addresses"
-msgstr "כתובת"
+msgstr "כתובות"
 
 #: templates/postorius/user/manage.html:28
 msgid "Email"
-msgstr ""
+msgstr "דוא״ל"
 
 #: templates/postorius/user/manage.html:62
-#, fuzzy
-#| msgid "Lists"
 msgid "List"
-msgstr "רשימות"
+msgstr "רשימה"
 
 #: templates/postorius/user/manage.html:64
 #: templates/postorius/user/subscriptions.html:25
@@ -2796,41 +2736,33 @@ msgid "Role"
 msgstr "תפקיד"
 
 #: templates/postorius/user/manage.html:89
-#, fuzzy
-#| msgid "Mass Subscription"
 msgid "User has no subscriptions."
-msgstr "רישום כמותי"
+msgstr "למשתמש אין מינויים."
 
 #: templates/postorius/user/manage.html:93
-#, fuzzy
-#| msgid "Account"
 msgid "Web Account"
-msgstr "חשבון"
+msgstr "חשבון מקוון"
 
 #: templates/postorius/user/manage.html:96
-#, fuzzy
-#| msgid "Users"
 msgid "Username"
-msgstr "משתמשים"
+msgstr "שם משתמש"
 
 #: templates/postorius/user/manage.html:100
 msgid "Superuser"
-msgstr ""
+msgstr "משתמש על"
 
 #: templates/postorius/user/manage.html:104
-#, fuzzy
-#| msgid "Login"
 msgid "Last login"
-msgstr "כניסה"
+msgstr "כניסה אחרונה"
 
 #: templates/postorius/user/manage.html:108
 msgid "Date joined"
-msgstr ""
+msgstr "מועד הצטרפות"
 
 #: templates/postorius/user/manage.html:113
 #: templates/postorius/user/manage.html:116
 msgid "Change password"
-msgstr ""
+msgstr "החלפת ססמה"
 
 #: templates/postorius/user/subscription_preferences.html:21
 msgid "Each list subscription can have specific Mailman preferences."
@@ -3289,22 +3221,20 @@ msgid "Subscription does not exist"
 msgstr "המינוי אינו קיים"
 
 #: views/user.py:405
-#, fuzzy
-#| msgid "Currently banned addresses"
 msgid "Successfully updated addresses {}"
-msgstr "כתובות שחסומות כרגע"
+msgstr "הכתובות עודכנו בהצלחה {}"
 
 #: views/user.py:415
 msgid "Successfully updated memberships for {}"
-msgstr ""
+msgstr "המינויים של {} עודכנו בהצלחה"
 
 #: views/user.py:421
 msgid "Successfully updated user."
-msgstr ""
+msgstr "המשתמש עודכן בהצלחה."
 
 #: views/user.py:430
 msgid "Password updated successfully"
-msgstr ""
+msgstr "הססמה עודכנה בהצלחה"
 
 #~ msgid "You are subscribed to this list with the following address:"
 #~ msgstr "נרשמת לרשימה הזו עם הכתובת הבאה:"

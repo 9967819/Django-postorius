@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-30 14:55+0300\n"
-"PO-Revision-Date: 2021-08-30 05:58+0000\n"
-"Last-Translator: Cube Kassaki <2524737581@qq.com>\n"
-"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/gnu-"
-"mailman/postorius/zh_Hans/>\n"
+"POT-Creation-Date: 2021-08-30 00:53-0700\n"
+"PO-Revision-Date: 2021-08-31 16:39+0000\n"
+"Last-Translator: Eric <spice2wolf@gmail.com>\n"
+"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
+"gnu-mailman/postorius/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -88,10 +88,8 @@ msgid "Plain Text Digests"
 msgstr "纯文本摘要"
 
 #: forms/fields.py:30
-#, fuzzy
-#| msgid "Mime Digests"
 msgid "MIME Digests"
-msgstr "Mime摘要"
+msgstr "MIME 摘要"
 
 #: forms/fields.py:31
 msgid "Summary Digests"
@@ -142,13 +140,6 @@ msgid "Delivery mode"
 msgstr "投递方式"
 
 #: forms/fields.py:141
-#, fuzzy
-#| msgid ""
-#| "If you select summary digests , you'll get posts bundled together "
-#| "(usually one per day but possibly more on busy lists), instead of singly "
-#| "when they're sent. Your mail reader may or may not support MIME digests. "
-#| "In general MIME digests are preferred, but if you have a problem reading "
-#| "them, select plain text digests."
 msgid ""
 "If you select digests , you'll get posts bundled together (usually one per "
 "day but possibly more on busy lists), instead of singly when they're sent. "
@@ -156,9 +147,8 @@ msgid ""
 "digests are preferred, but if you have a problem reading them, select plain "
 "text digests. Summary Digests are currently equivalent to MIME Digests."
 msgstr ""
-"如果您选择综述摘要，您将收到捆绑在一起的帖子（通常每天一个，但在忙碌列表中可"
-"能更多），而不是在发送时单独发送。 您的邮件阅读器可能支持也可能不支持 MIME 摘"
-"要。 通常首选 MIME 摘要，但如果您在阅读它们时遇到问题，请选择纯文本摘要。"
+"如果您选择文摘，您将收到捆绑在一起的帖子（通常每天一个，但在忙碌列表中可能更多），而不是在发送时单独发送。 您的邮件阅读器可能支持也可能不支持 MIME "
+"摘要。 通常首选 MIME 摘要，但如果您在阅读它们时遇到问题，请选择纯文本摘要。概要文摘目前等同于Mime摘要"
 
 #: forms/fields.py:161 templates/postorius/lists/summary.html:51
 msgid "Delivery status"
@@ -376,10 +366,8 @@ msgid "Discard"
 msgstr ""
 
 #: forms/list_forms.py:241
-#, fuzzy
-#| msgid "List Name"
 msgid "List Admins"
-msgstr "列表名称"
+msgstr "列表管理员"
 
 #: forms/list_forms.py:242
 msgid "Site Admin"
@@ -1489,7 +1477,7 @@ msgstr ""
 
 #: forms/user_forms.py:241
 msgid "Verified"
-msgstr ""
+msgstr "已验证"
 
 #: forms/user_forms.py:243
 msgid "Specifies whether or not this email address is verified"
@@ -2242,10 +2230,8 @@ msgid "Primary Address"
 msgstr ""
 
 #: templates/postorius/lists/summary.html:69
-#, fuzzy
-#| msgid "Subscriptions"
 msgid "Manage Subscription"
-msgstr "订阅"
+msgstr "管理订阅"
 
 #: templates/postorius/lists/summary.html:84
 msgid "Subscribe to this list"
@@ -2333,10 +2319,8 @@ msgid "Pending Confirmation"
 msgstr ""
 
 #: templates/postorius/menu/list_nav.html:25
-#, fuzzy
-#| msgid "Subscriptions"
 msgid "Unsubscription Requests"
-msgstr "订阅"
+msgstr "取消订阅请求"
 
 #: templates/postorius/menu/list_nav.html:42
 msgid "Members"
@@ -2389,10 +2373,8 @@ msgid "System Configuration"
 msgstr ""
 
 #: templates/postorius/system_information.html:11
-#, fuzzy
-#| msgid "Mailman settings"
 msgid "Mailman System"
-msgstr "Mailman的设定"
+msgstr "Mailman 系统"
 
 #: templates/postorius/user/address_preferences.html:8
 #: templates/postorius/user/subscription_preferences.html:7
@@ -2429,7 +2411,7 @@ msgstr ""
 
 #: templates/postorius/user/all.html:20
 msgid "Search"
-msgstr ""
+msgstr "搜索"
 
 #: templates/postorius/user/all.html:35
 msgid "User"
@@ -2452,16 +2434,14 @@ msgid "Subscription settings"
 msgstr ""
 
 #: templates/postorius/user/manage.html:8
-#, fuzzy
-#| msgid "Subscriptions"
 msgid "Manage user"
-msgstr "订阅"
+msgstr "管理用户"
 
 #: templates/postorius/user/manage.html:16
 #: templates/postorius/user/manage.html:48
 #: templates/postorius/user/manage.html:86
 msgid "Update"
-msgstr ""
+msgstr "更新"
 
 #: templates/postorius/user/manage.html:18
 msgid "Addresses"
@@ -2472,10 +2452,8 @@ msgid "Email"
 msgstr ""
 
 #: templates/postorius/user/manage.html:62
-#, fuzzy
-#| msgid "List Name"
 msgid "List"
-msgstr "列表名称"
+msgstr "列表"
 
 #: templates/postorius/user/manage.html:64
 #: templates/postorius/user/subscriptions.html:25
@@ -2483,20 +2461,16 @@ msgid "Role"
 msgstr ""
 
 #: templates/postorius/user/manage.html:89
-#, fuzzy
-#| msgid "Subscriptions"
 msgid "User has no subscriptions."
-msgstr "订阅"
+msgstr "用户无订阅。"
 
 #: templates/postorius/user/manage.html:93
-#, fuzzy
-#| msgid "Account"
 msgid "Web Account"
-msgstr "账户"
+msgstr "Web 账户"
 
 #: templates/postorius/user/manage.html:96
 msgid "Username"
-msgstr ""
+msgstr "用户名"
 
 #: templates/postorius/user/manage.html:100
 msgid "Superuser"
@@ -2696,10 +2670,8 @@ msgid "You are already subscribed"
 msgstr ""
 
 #: views/list.py:459
-#, fuzzy
-#| msgid "Subscriptions"
 msgid "Subscription changed to {}"
-msgstr "订阅"
+msgstr "订阅已更改至 {}"
 
 #: views/list.py:463
 msgid "Something went wrong. Please try again. {} {}"
