@@ -82,6 +82,8 @@ Other
   can use a single implementation that uses caching for efficient lookups.
 * Bump bundled jQuery to 3.6.0.slim version. (See !637)
 * Use the full jQuery not the slim version. (Closes #523)
+* Do not show Ownerships and Moderator roles in the 'Subscriptions' page
+  under mange new user interface. (Closes #534)
 
 Ascessibility
 -------------

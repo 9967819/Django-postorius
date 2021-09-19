@@ -125,6 +125,23 @@ def get_django_user(mm_user, addresses=None):
     return django_email.user
 
 
+def filter_memberships_by_roles(memberships, roles):
+    """Given a list of roles, filter the memberships with those roles.
+
+    :param memberships: A list of Member objects.
+    :type memberships: List[mailmanclient.restobjects.Member]
+    :param roles: A list of roles.
+    :type roles: List[str]
+    :returns: A list of memberships filtered by roles.
+    :rtype: List[mailmanclient.restobjects.Member]
+    """
+    return [
+        member
+        for member in memberships
+        if member.role in roles
+        ]
+
+
 LANGUAGES = (
     ('ar', 'Arabic'),
     ('ast', 'Asturian'),
