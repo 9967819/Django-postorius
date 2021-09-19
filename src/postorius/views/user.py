@@ -43,7 +43,8 @@ from postorius.forms import (
     ManageMemberForm, ManageMemberFormSet, ManageUserForm, UserPreferences,
     UserPreferencesFormset)
 from postorius.models import List, SubscriptionMode
-from postorius.utils import get_django_user, set_preferred
+from postorius.utils import (
+    filter_memberships_by_roles, get_django_user, set_preferred)
 from postorius.views.generic import MailmanClientMixin
 
 
@@ -382,7 +383,8 @@ def manage_user(request, user_id):
         ManageMemberForm, formset=ManageMemberFormSet, extra=0)
     django_user = get_django_user(user)
     addresses = addr_formset(addresses=user.addresses)
-    subscriptions = sub_formset(members=user.subscriptions)
+    subscriptions = sub_formset(members=filter_memberships_by_roles(
+        user.subscriptions, roles=['member', 'nonmember']))
 
     change_password = None
     if django_user is not None:
