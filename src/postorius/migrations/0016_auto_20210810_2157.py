@@ -2,6 +2,7 @@
 
 from django.db import migrations, models
 
+
 # flake8: noqa
 
 class Migration(migrations.Migration):

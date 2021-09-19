@@ -20,10 +20,10 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 
 .. _news-1.3.6:
 
-1.3.6
-=====
+1.3.6b1
+=======
 
-(2021-XX-XX)
+(2021-09-18)
 
 UI
 --

@@ -77,16 +77,16 @@ py39-django-latest:
 coverage:
   stage: test
   script:
-    - tox -e coverage
+    - tox -e cov
   artifacts:
     paths:
       - coverage
     expire_in: 5 days
 
-pep8:
+qa:
   stage: test
   script:
-    - tox -e pep8
+    - tox -e qa
 
 upstream-client:
   stage: test
