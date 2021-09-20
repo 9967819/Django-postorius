@@ -18,10 +18,10 @@ You should have received a copy of the GNU Lesser General Public License
 along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 
 
-.. _news-1.3.6:
+.. _NEWS-1.3.6:
 
-1.3.6b1
-=======
+1.3.6
+=====
 
 (2021-09-19)
 
