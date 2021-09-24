@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # J. Lavoie <j.lavoie@net-c.ca>, 2020, 2021.
 # Yohann D'ANELLO <yohann.danello@animath.fr>, 2021.
+# Sébastien Villemot <sebastien@debian.org>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-30 14:55+0300\n"
-"PO-Revision-Date: 2021-05-10 15:28+0000\n"
-"Last-Translator: Yohann D'ANELLO <yohann.danello@animath.fr>\n"
+"PO-Revision-Date: 2021-09-22 22:07+0000\n"
+"Last-Translator: Sébastien Villemot <sebastien@debian.org>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/fr/>\n"
 "Language: fr\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.7-dev\n"
+"X-Generator: Weblate 4.9-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -678,8 +679,7 @@ msgstr ""
 #: forms/list_forms.py:421
 msgid "Default action to take when a member posts to the list"
 msgstr ""
-"Action par défaut à prendre lorsqu'une personne non abonnée envoie sur la "
-"liste"
+"Action par défaut à prendre lorsqu'une personne abonnée envoie sur la liste"
 
 #: forms/list_forms.py:423
 msgid "Please choose a default member action."
