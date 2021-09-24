@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-30 14:55+0300\n"
-"PO-Revision-Date: 2021-04-03 21:27+0000\n"
+"PO-Revision-Date: 2021-09-21 09:36+0000\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/sq/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.6-dev\n"
+"X-Generator: Weblate 4.9-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -89,10 +89,8 @@ msgid "Plain Text Digests"
 msgstr "Përmbledhje si Tekst i Thjeshtë"
 
 #: forms/fields.py:30
-#, fuzzy
-#| msgid "Mime Digests"
 msgid "MIME Digests"
-msgstr "Përmbledhje Mime"
+msgstr "Përmbledhje MIME"
 
 #: forms/fields.py:31
 msgid "Summary Digests"
@@ -143,13 +141,6 @@ msgid "Delivery mode"
 msgstr "Mënyrë dërgimi"
 
 #: forms/fields.py:141
-#, fuzzy
-#| msgid ""
-#| "If you select summary digests , you'll get posts bundled together "
-#| "(usually one per day but possibly more on busy lists), instead of singly "
-#| "when they're sent. Your mail reader may or may not support MIME digests. "
-#| "In general MIME digests are preferred, but if you have a problem reading "
-#| "them, select plain text digests."
 msgid ""
 "If you select digests , you'll get posts bundled together (usually one per "
 "day but possibly more on busy lists), instead of singly when they're sent. "
@@ -157,12 +148,13 @@ msgid ""
 "digests are preferred, but if you have a problem reading them, select plain "
 "text digests. Summary Digests are currently equivalent to MIME Digests."
 msgstr ""
-"Nëse përzgjidhni përmbledhje përmbledhëse, do të merrni postime të bëra tok "
-"(zakonisht një në ditë, por mundet edhe më shumë se kaq në lista me shumë "
-"trafik), në vend se tek e tek kur dërgohen. Lexuesi juaj i email-eve mund të "
-"mbulojë ose jo përmbledhje MIME. Në përgjithësi parapëlqehen përmbledhjet "
-"MIME, por nëse keni problem me leximin e tyre, përzgjidhni përmbledhje tekst "
-"i thjeshtë."
+"Nëse përzgjidhni përmbledhje, do të merrni postime të bëra tok (zakonisht "
+"një në ditë, por mundet edhe më shumë se kaq në lista me shumë trafik), në "
+"vend se tek e tek kur dërgohen. Lexuesi juaj i email-eve mund të mbulojë ose "
+"jo përmbledhje MIME. Në përgjithësi parapëlqehen përmbledhjet MIME, por nëse "
+"keni problem me leximin e tyre, përzgjidhni përmbledhje tekst i thjeshtë. "
+"Përmbledhjet Përmbledhëse janë aktualisht të barasvlershme me Përmbledhje "
+"MIME."
 
 #: forms/fields.py:161 templates/postorius/lists/summary.html:51
 msgid "Delivery status"
@@ -407,14 +399,12 @@ msgid "Discard"
 msgstr "Hidhe tej"
 
 #: forms/list_forms.py:241
-#, fuzzy
-#| msgid "List metrics"
 msgid "List Admins"
-msgstr "Numra rreth listës"
+msgstr "Përgjegjës Liste"
 
 #: forms/list_forms.py:242
 msgid "Site Admin"
-msgstr ""
+msgstr "Përgjegjës Sajti"
 
 #: forms/list_forms.py:246 forms/list_forms.py:272 forms/list_forms.py:281
 #: forms/list_forms.py:290 forms/list_forms.py:402 forms/list_forms.py:410
@@ -482,25 +472,18 @@ msgstr ""
 "mbrapsht vendoset zero. Kjo vlerë duhet të jetë numër i plotë. "
 
 #: forms/list_forms.py:274
-#, fuzzy
-#| msgid "Notify owner on removal"
 msgid "Notify owner on bounce increment"
-msgstr "Njoftoje të zotin gjatë heqjesh"
+msgstr "Njoftoje të zotin për shtim kthimesh"
 
 #: forms/list_forms.py:276
-#, fuzzy
-#| msgid ""
-#| "This option controls whether or not the list owner is notified when a "
-#| "member's subscription is automatically disabled due to their bounce "
-#| "threshold being reached. "
 msgid ""
 "This option controls whether or not the list owner is notified when a "
 "member's bounce score is incremented, but to a value less than their bounce "
 "threshold. "
 msgstr ""
-"Kjo mundësi kontrollon nëse njoftohet ose jo i zoti i listës, kur pajtimi i "
-"një anëtari çaktivizohet automatikisht, për shkak se ka mbërritur në tavanin "
-"për kthime mbrapsht. "
+"Kjo mundësi kontrollon nëse njoftohet ose jo i zoti i listës, kur vlera e "
+"kthimeve për një anëtar rritet, por me një vlerë më pak se pragu i tij i "
+"kthimeve. "
 
 #: forms/list_forms.py:283
 msgid "Notify owner on disable"
@@ -532,7 +515,7 @@ msgstr ""
 
 #: forms/list_forms.py:301
 msgid "Forward unrecognized bounces"
-msgstr ""
+msgstr "Përcill kthime të panjohura"
 
 #: forms/list_forms.py:302
 msgid ""
@@ -540,6 +523,9 @@ msgid ""
 "List Admins: Send to the list owners and moderators\n"
 "Site Admin: Send to the site's configured site_owner"
 msgstr ""
+"Hidhi tej: Kthime të panjohura do të hidhen tej\n"
+"Përgjegjës Liste: Dërgojua të zotëve dhe moderatorëve të listës\n"
+"Përgjegjës Sajti: Dërgoja site_owner të formësuar për sajtin"
 
 #: forms/list_forms.py:307
 msgid "Bounce disabled warnings interval"
@@ -743,18 +729,14 @@ msgid "Maximum number of recipients"
 msgstr "Numër maksimum marrësish"
 
 #: forms/list_forms.py:473
-#, fuzzy
-#| msgid ""
-#| "The maximum number of recipients for a message. This can be used to "
-#| "prevent mass mailings from being accepted. A value of 0 disables the "
-#| "check."
 msgid ""
 "If a post has this many or more explicit recipients (To: and Cc:), the post "
 "will be held for moderation. This can be used to prevent mass mailings from "
 "being accepted. A value of 0 disables the check."
 msgstr ""
-"Numri maksimum i marrësve për një mesazh. Kjo mund të përdoret për të "
-"penguar pranim postimesh në masë.Vlera 0 e çaktivizon kontrollin përkatës."
+"Nëse një postim ka kaq, ose më tepër klientë shprehimisht (Për: dhe Cc:), "
+"postimi do të mbahet për moderim. Kjo mund të përdoret për të penguar pranim "
+"postimesh në masë.Vlera 0 e çaktivizon kontrollin përkatës."
 
 #: forms/list_forms.py:488
 msgid "Accept these non-members"
@@ -1042,17 +1024,12 @@ msgid "Filter types"
 msgstr "Lloje filtrash"
 
 #: forms/list_forms.py:693
-#, fuzzy
-#| msgid ""
-#| "MimeTypes to filter from the incoming posts. A list of common types can "
-#| "be found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
-#| "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgid ""
 "MIME types to filter from the incoming posts. A list of common types can be "
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
-"LLoje Mime për t’u filtruar nga postime ardhëse. Një listë e llojeve të "
+"Lloje MiMe për t’u filtruar nga postime ardhëse. Një listë e llojeve të "
 "zakonshëm mund të gjendet <a href=\"https://developer.mozilla.org/en-US/docs/"
 "Web/HTTP/Basics_of_HTTP/MIME_types/Common_types\">këtu </a>"
 
@@ -1069,17 +1046,12 @@ msgid "Pass types"
 msgstr "Lloje kalimi"
 
 #: forms/list_forms.py:707
-#, fuzzy
-#| msgid ""
-#| "MimeTypes to allow in the incoming posts. A list of common types can be "
-#| "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
-#| "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgid ""
 "MIME types to allow in the incoming posts. A list of common types can be "
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
-"LLoje Mime për t’u lejuar te postimet ardhëse. Një listë e llojeve të "
+"Lloje MIME për t’u lejuar te postimet ardhëse. Një listë e llojeve të "
 "zakonshëm mund të gjendet <a href=\"https://developer.mozilla.org/en-US/docs/"
 "Web/HTTP/Basics_of_HTTP/MIME_types/Common_types\">këtu </a>"
 
@@ -1795,19 +1767,12 @@ msgid "Cannot set delivery_status to {}"
 msgstr "S’caktohet dot delivery_status si {}"
 
 #: forms/user_forms.py:241
-#, fuzzy
-#| msgid "Pre Verified"
 msgid "Verified"
 msgstr "E paraverifikuar"
 
 #: forms/user_forms.py:243
-#, fuzzy
-#| msgid ""
-#| "Specifies whether or not this list should do automatic bounce processing."
 msgid "Specifies whether or not this email address is verified"
-msgstr ""
-"Specifikon nëse kjo listë duhet të kryejë apo jo përpunim të automatizuar "
-"kthimesh mbrapsht."
+msgstr "Specifikon nëse kjo email adresë është e verifikuar apo jo"
 
 #: forms/validators.py:39
 #, python-brace-format
@@ -1897,26 +1862,16 @@ msgstr ""
 "një format të panjohur."
 
 #: template_list.py:36
-#, fuzzy
-#| msgid ""
-#| "Sent to the list administrators to notify them when a new member has been "
-#| "subscribed."
 msgid "Sent to the list administrators from the 'mailman notify' command."
-msgstr ""
-"Dërguar përgjegjësve të listës për t’i njoftuar kur është pajtuar një anëtar "
-"i ri."
+msgstr "Dërguar përgjegjësve të listës prej urdhrit 'mailman notify'."
 
 #: template_list.py:38
-#, fuzzy
-#| msgid ""
-#| "Sent to the list administrators to notify them when a member has been "
-#| "unsubscribed."
 msgid ""
 "Sent to the list administrators to notify them when a member's bounce score "
 "is incremented."
 msgstr ""
-"Dërguar përgjegjësve të listës për t’i njoftuar kur është shpajtuar një "
-"anëtar."
+"Dërguar përgjegjësve të listës për t’i njoftuar kur është rritur vlera e "
+"kthimeve për një anëtar."
 
 #: template_list.py:40
 msgid ""
@@ -2629,7 +2584,7 @@ msgstr "Adresë Pajtimi"
 #: templates/postorius/lists/summary.html:53
 #: templates/postorius/user/all.html:37
 msgid "Manage"
-msgstr ""
+msgstr "Administroni"
 
 #: templates/postorius/lists/summary.html:54
 #: templates/postorius/lists/summary.html:75
@@ -2650,15 +2605,7 @@ msgid "Subscribe to this list"
 msgstr "Pajtohuni te kjo listë"
 
 #: templates/postorius/lists/summary.html:86
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                  To subscribe you can send an email with 'subscribe' in "
-#| "the subject to\n"
-#| "                  <a href=\"mailto:%(address)s?subject=Subscribe\">"
-#| "%(address)s</a>\n"
-#| "                  or use the form below:\n"
-#| "              "
+#, python-format
 msgid ""
 "\n"
 "                To subscribe you can send an email with 'subscribe' in the "
@@ -2669,12 +2616,12 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"                  Për t’u pajtuar mund të dërgoni një email, me 'subscribe' "
-"si subjekt, te\n"
-"                  <a href=\"mailto:%(address)s?subject=Subscribe\">"
-"%(address)s</a>\n"
-"                  ose përdorni formularin më poshtë:\n"
-"              "
+"                Për t’u pajtuar, mund të dërgoni një email me 'subscribe' te "
+"subjekti, për\n"
+"                <a href=\"mailto:%(address)s?subject=Subscribe\""
+">%(address)s</a>,\n"
+"                ose të përdorni formularin më poshtë:\n"
+"            "
 
 #: templates/postorius/lists/summary.html:97
 msgid ""
@@ -2857,17 +2804,13 @@ msgstr "Ruaje"
 
 #: templates/postorius/user/all.html:20
 msgid "Search"
-msgstr ""
+msgstr "Kërko"
 
 #: templates/postorius/user/all.html:35
-#, fuzzy
-#| msgid "Users"
 msgid "User"
 msgstr "Përdorues"
 
 #: templates/postorius/user/all.html:36
-#, fuzzy
-#| msgid "Created at"
 msgid "Created"
 msgstr "Krijuar më"
 
@@ -2885,32 +2828,26 @@ msgid "Subscription settings"
 msgstr "Rregullime mbi pajtimet"
 
 #: templates/postorius/user/manage.html:8
-#, fuzzy
-#| msgid "Manage Subscription"
 msgid "Manage user"
-msgstr "Administroni Pajtim"
+msgstr "Administroni përdorues"
 
 #: templates/postorius/user/manage.html:16
 #: templates/postorius/user/manage.html:48
 #: templates/postorius/user/manage.html:86
 msgid "Update"
-msgstr ""
+msgstr "Përditësoje"
 
 #: templates/postorius/user/manage.html:18
-#, fuzzy
-#| msgid "Address"
 msgid "Addresses"
-msgstr "Adresë"
+msgstr "Adresa"
 
 #: templates/postorius/user/manage.html:28
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: templates/postorius/user/manage.html:62
-#, fuzzy
-#| msgid "Lists"
 msgid "List"
-msgstr "Lista"
+msgstr "Listë"
 
 #: templates/postorius/user/manage.html:64
 #: templates/postorius/user/subscriptions.html:25
@@ -2918,41 +2855,33 @@ msgid "Role"
 msgstr "Rol"
 
 #: templates/postorius/user/manage.html:89
-#, fuzzy
-#| msgid "Mass Subscription"
 msgid "User has no subscriptions."
-msgstr "Pajtime Në Masë"
+msgstr "Përdoruesi s’ka pajtime."
 
 #: templates/postorius/user/manage.html:93
-#, fuzzy
-#| msgid "Account"
 msgid "Web Account"
-msgstr "Llogari"
+msgstr "Llogari Web"
 
 #: templates/postorius/user/manage.html:96
-#, fuzzy
-#| msgid "Users"
 msgid "Username"
-msgstr "Përdorues"
+msgstr "Emër përdoruesi"
 
 #: templates/postorius/user/manage.html:100
 msgid "Superuser"
-msgstr ""
+msgstr "Superpërdorues"
 
 #: templates/postorius/user/manage.html:104
-#, fuzzy
-#| msgid "Login"
 msgid "Last login"
-msgstr "Hyrje"
+msgstr "Hyrja e fundit"
 
 #: templates/postorius/user/manage.html:108
 msgid "Date joined"
-msgstr ""
+msgstr "Datë kur u bë pjesë"
 
 #: templates/postorius/user/manage.html:113
 #: templates/postorius/user/manage.html:116
 msgid "Change password"
-msgstr ""
+msgstr "Ndryshoni fjalëkalimin"
 
 #: templates/postorius/user/subscription_preferences.html:21
 msgid "Each list subscription can have specific Mailman preferences."
@@ -3418,22 +3347,20 @@ msgid "Subscription does not exist"
 msgstr "Pajtimi s’ekziston"
 
 #: views/user.py:405
-#, fuzzy
-#| msgid "Currently banned addresses"
 msgid "Successfully updated addresses {}"
-msgstr "Adresa të dëbuara"
+msgstr "Adresa të përditësuara me sukses {}"
 
 #: views/user.py:415
 msgid "Successfully updated memberships for {}"
-msgstr ""
+msgstr "Anëtarësime të përditësuara me sukses për {}"
 
 #: views/user.py:421
 msgid "Successfully updated user."
-msgstr ""
+msgstr "Përdoruesi u përditësua me sukses."
 
 #: views/user.py:430
 msgid "Password updated successfully"
-msgstr ""
+msgstr "Fjalëkalimi u përditësua me sukses"
 
 #~ msgid "You are subscribed to this list with the following address:"
 #~ msgstr "Jeni i pajtuar te kjo listë me adresën vijuese:"
