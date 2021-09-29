@@ -4,13 +4,14 @@
 # Massimo Zappalà <maszap@tin.it>, 2020.
 # J. Lavoie <j.lavoie@net-c.ca>, 2020.
 # Massimo Zappalà <blackout69@catania.linux.it>, 2021.
+# Leonardo Robol <leo@robol.it>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-30 14:55+0300\n"
-"PO-Revision-Date: 2021-04-07 00:27+0000\n"
-"Last-Translator: Massimo Zappalà <blackout69@catania.linux.it>\n"
+"PO-Revision-Date: 2021-09-24 14:39+0000\n"
+"Last-Translator: Leonardo Robol <leo@robol.it>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/it/>\n"
 "Language: it\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.6-dev\n"
+"X-Generator: Weblate 4.9-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -2934,10 +2935,8 @@ msgid "Web Account"
 msgstr "Account"
 
 #: templates/postorius/user/manage.html:96
-#, fuzzy
-#| msgid "Users"
 msgid "Username"
-msgstr "Utenti"
+msgstr "Nome utente"
 
 #: templates/postorius/user/manage.html:100
 msgid "Superuser"
