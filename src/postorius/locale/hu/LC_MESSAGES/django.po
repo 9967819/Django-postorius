@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-30 14:55+0300\n"
-"PO-Revision-Date: 2021-05-04 23:44+0000\n"
+"PO-Revision-Date: 2021-10-20 00:02+0000\n"
 "Last-Translator: Peter Donka <peter.donka@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/hu/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.7-dev\n"
+"X-Generator: Weblate 4.9-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -91,8 +91,6 @@ msgid "Plain Text Digests"
 msgstr "Szöveges kivonatok"
 
 #: forms/fields.py:30
-#, fuzzy
-#| msgid "Mime Digests"
 msgid "MIME Digests"
 msgstr "Mime kivonatok"
 
@@ -145,13 +143,6 @@ msgid "Delivery mode"
 msgstr "Kézbesítési mód"
 
 #: forms/fields.py:141
-#, fuzzy
-#| msgid ""
-#| "If you select summary digests , you'll get posts bundled together "
-#| "(usually one per day but possibly more on busy lists), instead of singly "
-#| "when they're sent. Your mail reader may or may not support MIME digests. "
-#| "In general MIME digests are preferred, but if you have a problem reading "
-#| "them, select plain text digests."
 msgid ""
 "If you select digests , you'll get posts bundled together (usually one per "
 "day but possibly more on busy lists), instead of singly when they're sent. "
@@ -159,12 +150,13 @@ msgid ""
 "digests are preferred, but if you have a problem reading them, select plain "
 "text digests. Summary Digests are currently equivalent to MIME Digests."
 msgstr ""
-"Ha az összefoglaló kivonatokat választja, akkor a bejegyzéseket "
-"összecsomagoljuk (általában naponta egyet, de valószínűleg többet a "
-"forgalmas listákon), ahelyett, hogy egyesével küldenénk őket. A "
-"levélolvasója nem biztos, hogy támogatja a MIME kivonatolást. Általában a "
-"MIME kivonatok vannak előnyben részesítve, de ha problémája van ezek "
-"olvasásával akkor válassza a hagyományos szöveges kivonatolást."
+"Ha a kivonatokat választja, akkor a bejegyzéseket összecsomagoljuk ("
+"általában naponta egyet, de valószínűleg többet a forgalmas listákon), "
+"ahelyett, hogy egyesével küldenénk őket. A levélolvasója nem biztos, hogy "
+"támogatja a MIME kivonatolást. Általában a MIME kivonatok vannak előnyben "
+"részesítve, de ha problémája van ezek olvasásával akkor válassza a "
+"hagyományos szöveges kivonatolást. Összesített kivonatok egyenértékűek a "
+"MIME kivonatokkal."
 
 #: forms/fields.py:161 templates/postorius/lists/summary.html:51
 msgid "Delivery status"
@@ -413,14 +405,12 @@ msgid "Discard"
 msgstr "Elvetés"
 
 #: forms/list_forms.py:241
-#, fuzzy
-#| msgid "List metrics"
 msgid "List Admins"
-msgstr "Lista metrikák"
+msgstr "Lista adminok"
 
 #: forms/list_forms.py:242
 msgid "Site Admin"
-msgstr ""
+msgstr "Oldal adminisztrátor"
 
 #: forms/list_forms.py:246 forms/list_forms.py:272 forms/list_forms.py:281
 #: forms/list_forms.py:290 forms/list_forms.py:402 forms/list_forms.py:410
@@ -488,25 +478,17 @@ msgstr ""
 "nullára áll vissza. Ez az érték egész szám kell legyen. "
 
 #: forms/list_forms.py:274
-#, fuzzy
-#| msgid "Notify owner on removal"
 msgid "Notify owner on bounce increment"
-msgstr "A tulajdonos értesítése a törlésről"
+msgstr "A tulajdonos értesítése a többszörös visszapattanásokról"
 
 #: forms/list_forms.py:276
-#, fuzzy
-#| msgid ""
-#| "This option controls whether or not the list owner is notified when a "
-#| "member's subscription is automatically disabled due to their bounce "
-#| "threshold being reached. "
 msgid ""
 "This option controls whether or not the list owner is notified when a "
 "member's bounce score is incremented, but to a value less than their bounce "
 "threshold. "
 msgstr ""
-"Ez az opció megadja, hogy a lista tulajdonosa értesítve legyen e ha egy tag "
-"feliratkozása automatikusan letiltásra került a visszapattanási ponthatár "
-"elérése miatt. "
+"Ez az opció szabályozza, hogy a lista tulajdonosa értesítve legyen e ha egy "
+"tag pontszáma emelkedett de kevesebb mint a visszapattanási ponthatár. "
 
 #: forms/list_forms.py:283
 msgid "Notify owner on disable"
@@ -538,7 +520,7 @@ msgstr ""
 
 #: forms/list_forms.py:301
 msgid "Forward unrecognized bounces"
-msgstr ""
+msgstr "Ismeretlen visszapattanások továbbítása"
 
 #: forms/list_forms.py:302
 msgid ""
@@ -546,6 +528,9 @@ msgid ""
 "List Admins: Send to the list owners and moderators\n"
 "Site Admin: Send to the site's configured site_owner"
 msgstr ""
+"Elvetés: Ismeretlen visszapattanások eldobódnak\n"
+"Lista Adminok: Küldés a lista tulajdonosoknak és moderátoroknak\n"
+"Oldal Admin: Küldés a beállított oldal adminnak"
 
 #: forms/list_forms.py:307
 msgid "Bounce disabled warnings interval"
@@ -742,18 +727,14 @@ msgid "Maximum number of recipients"
 msgstr "A címzettek maximális száma"
 
 #: forms/list_forms.py:473
-#, fuzzy
-#| msgid ""
-#| "The maximum number of recipients for a message. This can be used to "
-#| "prevent mass mailings from being accepted. A value of 0 disables the "
-#| "check."
 msgid ""
 "If a post has this many or more explicit recipients (To: and Cc:), the post "
 "will be held for moderation. This can be used to prevent mass mailings from "
 "being accepted. A value of 0 disables the check."
 msgstr ""
-"Egy üzenetben maximálisan megengedett címzettek száma. Ezzel elkerülhető a "
-"tömeges emailek elfogadása. A 0 érték kikapcsolja ezt az ellenőrzést."
+"Ha egy hozzászólásnak ennyi vagy több egyértelmű címzettje van (Címzett: és "
+"Cc:), a hozzászólás moderálásra kerül. Ezzel elkerülhető a tömeges emailek "
+"elfogadása. A 0 érték kikapcsolja ezt az ellenőrzést."
 
 #: forms/list_forms.py:488
 msgid "Accept these non-members"
@@ -1036,17 +1017,12 @@ msgid "Filter types"
 msgstr "Szűrőtípusok"
 
 #: forms/list_forms.py:693
-#, fuzzy
-#| msgid ""
-#| "MimeTypes to filter from the incoming posts. A list of common types can "
-#| "be found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
-#| "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgid ""
 "MIME types to filter from the incoming posts. A list of common types can be "
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
-"MimeTypes a bejövő bejegyzések szűréséhez. A gyakori típusok listája itt "
+"MIMETypes a bejövő bejegyzések szűréséhez. A gyakori típusok listája itt "
 "található <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\"></a>"
 
@@ -1063,17 +1039,12 @@ msgid "Pass types"
 msgstr "Pass típusok"
 
 #: forms/list_forms.py:707
-#, fuzzy
-#| msgid ""
-#| "MimeTypes to allow in the incoming posts. A list of common types can be "
-#| "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
-#| "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgid ""
 "MIME types to allow in the incoming posts. A list of common types can be "
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
-"MimeTypes a bejövő posztok engedélyezéséhez. A gyakori típusok listája itt "
+"MIMETypes a bejövő posztok engedélyezéséhez. A gyakori típusok listája itt "
 "található <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\"></a>"
 
@@ -1777,19 +1748,12 @@ msgid "Cannot set delivery_status to {}"
 msgstr "A delivery_status nem állítható be {} értékre"
 
 #: forms/user_forms.py:241
-#, fuzzy
-#| msgid "Pre Verified"
 msgid "Verified"
-msgstr "Előzetesen ellenőrizve"
+msgstr "Ellenőrzött"
 
 #: forms/user_forms.py:243
-#, fuzzy
-#| msgid ""
-#| "Specifies whether or not this list should do automatic bounce processing."
 msgid "Specifies whether or not this email address is verified"
-msgstr ""
-"Megadja, hogy ennek a listának el kell-e végeznie az automatikus "
-"visszapattanás feldolgozást."
+msgstr "Meghatározza, hogy ez az e-mail cím ellenőrzött-e vagy sem."
 
 #: forms/validators.py:39
 #, python-brace-format
@@ -1880,14 +1844,9 @@ msgstr ""
 "rendszergazdáinak."
 
 #: template_list.py:36
-#, fuzzy
-#| msgid ""
-#| "Sent to the list administrators to notify them when a new member has been "
-#| "subscribed."
 msgid "Sent to the list administrators from the 'mailman notify' command."
 msgstr ""
-"Elküldve a lista rendszergazdáinak, hogy értesítsék őket, ha egy új tag "
-"előfizetett."
+"A 'mailman notify' parancs által a lista adminisztrátorainak küldött üzenet."
 
 #: template_list.py:38
 #, fuzzy
@@ -1898,8 +1857,8 @@ msgid ""
 "Sent to the list administrators to notify them when a member's bounce score "
 "is incremented."
 msgstr ""
-"Elküldve a lista adminisztrátorainak, hogy értesítsék őket, ha egy tag "
-"leiratkozott."
+"A lista adminisztrátorainak küldött értesítés, amikor egy tag "
+"visszapattanási pontszáma növekszik."
 
 #: template_list.py:40
 msgid ""
@@ -2617,7 +2576,7 @@ msgstr "Feliratkozási cím"
 #: templates/postorius/lists/summary.html:53
 #: templates/postorius/user/all.html:37
 msgid "Manage"
-msgstr ""
+msgstr "Kezelés"
 
 #: templates/postorius/lists/summary.html:54
 #: templates/postorius/lists/summary.html:75
@@ -2638,15 +2597,7 @@ msgid "Subscribe to this list"
 msgstr "Feliratkozás erre a listára"
 
 #: templates/postorius/lists/summary.html:86
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                  To subscribe you can send an email with 'subscribe' in "
-#| "the subject to\n"
-#| "                  <a href=\"mailto:%(address)s?subject=Subscribe\">"
-#| "%(address)s</a>\n"
-#| "                  or use the form below:\n"
-#| "              "
+#, python-format
 msgid ""
 "\n"
 "                To subscribe you can send an email with 'subscribe' in the "
@@ -2657,12 +2608,12 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"                  A feliratkozáshoz küldhet egy e-mailt \"Subscribe\" "
-"tárggyal a\n"
+"                A feliratkozáshoz küldhet egy e-mailt \"Subscribe\" tárggyal "
+"a\n"
 "                  <a href=\"mailto:%(address)s?subject=Subscribe\"> "
 "%(address)s </a>\n"
 "                  címre vagy használja az alábbi űrlapot:\n"
-"              "
+"            "
 
 #: templates/postorius/lists/summary.html:97
 msgid ""
@@ -2847,19 +2798,15 @@ msgstr "Mentés"
 
 #: templates/postorius/user/all.html:20
 msgid "Search"
-msgstr ""
+msgstr "Keresés"
 
 #: templates/postorius/user/all.html:35
-#, fuzzy
-#| msgid "Users"
 msgid "User"
-msgstr "Felhasználók"
+msgstr "Felhasználó"
 
 #: templates/postorius/user/all.html:36
-#, fuzzy
-#| msgid "Created at"
 msgid "Created"
-msgstr "Létrehozva ekkor"
+msgstr "Létrehozva"
 
 #: templates/postorius/user/list_options.html:14
 msgid "Subscription options for"
@@ -2874,32 +2821,26 @@ msgid "Subscription settings"
 msgstr "Feliratkozás beállításai"
 
 #: templates/postorius/user/manage.html:8
-#, fuzzy
-#| msgid "Manage Subscription"
 msgid "Manage user"
-msgstr "Feliratkozás kezelése"
+msgstr "Felhasználó kezelése"
 
 #: templates/postorius/user/manage.html:16
 #: templates/postorius/user/manage.html:48
 #: templates/postorius/user/manage.html:86
 msgid "Update"
-msgstr ""
+msgstr "Frissítés"
 
 #: templates/postorius/user/manage.html:18
-#, fuzzy
-#| msgid "Address"
 msgid "Addresses"
-msgstr "Cím"
+msgstr "Címek"
 
 #: templates/postorius/user/manage.html:28
 msgid "Email"
-msgstr ""
+msgstr "E-mail"
 
 #: templates/postorius/user/manage.html:62
-#, fuzzy
-#| msgid "Lists"
 msgid "List"
-msgstr "Listák"
+msgstr "Lista"
 
 #: templates/postorius/user/manage.html:64
 #: templates/postorius/user/subscriptions.html:25
@@ -2907,41 +2848,33 @@ msgid "Role"
 msgstr "Szerepkör"
 
 #: templates/postorius/user/manage.html:89
-#, fuzzy
-#| msgid "Mass Subscription"
 msgid "User has no subscriptions."
-msgstr "Tömeges feliratkozás"
+msgstr "A felhasználónak nincs feliratkozása."
 
 #: templates/postorius/user/manage.html:93
-#, fuzzy
-#| msgid "Account"
 msgid "Web Account"
-msgstr "Fiók"
+msgstr "Web Fiók"
 
 #: templates/postorius/user/manage.html:96
-#, fuzzy
-#| msgid "Users"
 msgid "Username"
-msgstr "Felhasználók"
+msgstr "Felhasználónév"
 
 #: templates/postorius/user/manage.html:100
 msgid "Superuser"
-msgstr ""
+msgstr "Szuperfelhasználó"
 
 #: templates/postorius/user/manage.html:104
-#, fuzzy
-#| msgid "Login"
 msgid "Last login"
-msgstr "Bejelentkezés"
+msgstr "Utolsó bejelentkezés"
 
 #: templates/postorius/user/manage.html:108
 msgid "Date joined"
-msgstr ""
+msgstr "Csatlakozás dátuma"
 
 #: templates/postorius/user/manage.html:113
 #: templates/postorius/user/manage.html:116
 msgid "Change password"
-msgstr ""
+msgstr "Jelszó módosítása"
 
 #: templates/postorius/user/subscription_preferences.html:21
 msgid "Each list subscription can have specific Mailman preferences."
@@ -3403,22 +3336,21 @@ msgid "Subscription does not exist"
 msgstr "Az előfizetés nem létezik"
 
 #: views/user.py:405
-#, fuzzy
-#| msgid "Currently banned addresses"
 msgid "Successfully updated addresses {}"
-msgstr "Jelenleg tiltott címek"
+msgstr "Sikeresen frissített címek {}"
 
 #: views/user.py:415
+#, fuzzy
 msgid "Successfully updated memberships for {}"
-msgstr ""
+msgstr "A (z) {} tagságok sikeresen frissítve"
 
 #: views/user.py:421
 msgid "Successfully updated user."
-msgstr ""
+msgstr "A felhasználó sikeresen frissítve."
 
 #: views/user.py:430
 msgid "Password updated successfully"
-msgstr ""
+msgstr "A jelszó sikeresen frissítve"
 
 #~ msgid "You are subscribed to this list with the following address:"
 #~ msgstr "Ön feliratkozott erre a listára a következő címmel:"
