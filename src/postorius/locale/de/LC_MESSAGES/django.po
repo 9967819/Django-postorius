@@ -7,17 +7,18 @@
 # Claas Augner <github@caugner.de>, 2020.
 # Michael Lorenzen <ml@m-lorenzen.de>, 2020.
 # J. Lavoie <j.lavoie@net-c.ca>, 2020.
-# Paul <paulwiesinger+weblate@gmail.com>, 2020.
+# Paul <paulwiesinger+weblate@gmail.com>, 2020, 2021.
 # Alex <alexandersimm2@googlemail.com>, 2021.
 # Tobias Wiese <tobias@tobiaswiese.com>, 2021.
 # Markus Schaaf <markuschaaf@gmail.com>, 2021.
+# Thorgrimsson <shop.news@posteo.de>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-30 14:54+0300\n"
-"PO-Revision-Date: 2021-09-19 21:37+0000\n"
-"Last-Translator: Markus Schaaf <markuschaaf@gmail.com>\n"
+"PO-Revision-Date: 2021-10-28 18:04+0000\n"
+"Last-Translator: Thorgrimsson <shop.news@posteo.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/de/>\n"
 "Language: de\n"
@@ -515,7 +516,7 @@ msgstr ""
 
 #: forms/list_forms.py:292
 msgid "Notify owner on removal"
-msgstr "Benachrichtige den Besitzer beim Entfernen"
+msgstr "Benachrichtigen des Besitzers bei Entfernung"
 
 #: forms/list_forms.py:294
 msgid ""
@@ -537,6 +538,9 @@ msgid ""
 "List Admins: Send to the list owners and moderators\n"
 "Site Admin: Send to the site's configured site_owner"
 msgstr ""
+"Verwerfen: Nicht erkannte Bounces werden verworfen\n"
+"Listen-Administrator: Senden an die Listen Eigentümer und Moderatoren\n"
+"Seiten-Admin: Senden an den von der Seite konfigurierten Seiten-Eigentümer"
 
 #: forms/list_forms.py:307
 msgid "Bounce disabled warnings interval"
@@ -548,7 +552,7 @@ msgstr "Anzahl der Tage zwischen einzelnen Deaktivierungs-Benachrichtigungen"
 
 #: forms/list_forms.py:314
 msgid "Bounce disable warnings"
-msgstr "Bounce-Deaktivierungswarnungen"
+msgstr "Unzustellbarkeits-Deaktivierungswarnungen"
 
 #: forms/list_forms.py:317
 msgid ""
@@ -2407,6 +2411,9 @@ msgid ""
 "    Confirm token %(token)s:\n"
 "    "
 msgstr ""
+"\n"
+"    Bestätige token %(token)s:\n"
+"    "
 
 #: templates/postorius/lists/header_matches.html:7
 #: templates/postorius/menu/list_nav.html:61
@@ -2635,15 +2642,7 @@ msgid "Subscribe to this list"
 msgstr "Mitglied dieser Liste werden"
 
 #: templates/postorius/lists/summary.html:86
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                  To subscribe you can send an email with 'subscribe' in "
-#| "the subject to\n"
-#| "                  <a href=\"mailto:%(address)s?subject=Subscribe\">"
-#| "%(address)s</a>\n"
-#| "                  or use the form below:\n"
-#| "              "
+#, python-format
 msgid ""
 "\n"
 "                To subscribe you can send an email with 'subscribe' in the "
@@ -2654,12 +2653,12 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"                  Um Mitglied zu werden, senden Sie bitte eine E-Mail mit "
+"                Um Mitglied zu werden, senden Sie bitte eine E-Mail mit "
 "'subscribe' im Betreff an\n"
-"                  <a href=\"mailto:%(address)s?subject=Subscribe\">"
-"%(address)s</a>\n"
+"                  <a href=\"mailto:%(address)s?subject=Subscribe\""
+">%(address)s</a>\n"
 "                  oder benutzen Sie das Formular unterhalb:\n"
-"              "
+"            "
 
 #: templates/postorius/lists/summary.html:97
 msgid ""
@@ -2870,16 +2869,14 @@ msgid "Subscription settings"
 msgstr "Mitgliedschaftseinstellungen"
 
 #: templates/postorius/user/manage.html:8
-#, fuzzy
-#| msgid "Manage Subscription"
 msgid "Manage user"
-msgstr "Abo verwalten"
+msgstr "Benutzer verwalten"
 
 #: templates/postorius/user/manage.html:16
 #: templates/postorius/user/manage.html:48
 #: templates/postorius/user/manage.html:86
 msgid "Update"
-msgstr ""
+msgstr "Aktualisierung"
 
 #: templates/postorius/user/manage.html:18
 msgid "Addresses"
@@ -2903,10 +2900,8 @@ msgid "User has no subscriptions."
 msgstr "Benutzer hat keine Abonnements."
 
 #: templates/postorius/user/manage.html:93
-#, fuzzy
-#| msgid "Account"
 msgid "Web Account"
-msgstr "Konto"
+msgstr "Internetkonto"
 
 #: templates/postorius/user/manage.html:96
 msgid "Username"
@@ -2914,7 +2909,7 @@ msgstr "Benutzername"
 
 #: templates/postorius/user/manage.html:100
 msgid "Superuser"
-msgstr ""
+msgstr "Superuser"
 
 #: templates/postorius/user/manage.html:104
 msgid "Last login"
@@ -3115,7 +3110,7 @@ msgstr "Sie sind schon Mitglied"
 
 #: views/list.py:459
 msgid "Subscription changed to {}"
-msgstr "Mitgliedschaft geändert zu {}"
+msgstr "Mitgliedschaft zu {} geändert"
 
 #: views/list.py:463
 msgid "Something went wrong. Please try again. {} {}"
@@ -3407,7 +3402,7 @@ msgstr "Benutzerkonto erfolgreich geändert."
 
 #: views/user.py:430
 msgid "Password updated successfully"
-msgstr "Passwort erfolgreich geändert."
+msgstr "Passwort erfolgreich geändert"
 
 #~ msgid "You are subscribed to this list with the following address:"
 #~ msgstr "Sie sind der Liste mit folgender E-Mail-Adresse beigetreten:"
