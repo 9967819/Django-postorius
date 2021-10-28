@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-30 14:55+0300\n"
-"PO-Revision-Date: 2021-10-20 00:02+0000\n"
+"PO-Revision-Date: 2021-10-27 11:49+0000\n"
 "Last-Translator: Peter Donka <peter.donka@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/hu/>\n"
@@ -1849,10 +1849,6 @@ msgstr ""
 "A 'mailman notify' parancs által a lista adminisztrátorainak küldött üzenet."
 
 #: template_list.py:38
-#, fuzzy
-#| msgid ""
-#| "Sent to the list administrators to notify them when a member has been "
-#| "unsubscribed."
 msgid ""
 "Sent to the list administrators to notify them when a member's bounce score "
 "is incremented."
@@ -3340,7 +3336,6 @@ msgid "Successfully updated addresses {}"
 msgstr "Sikeresen frissített címek {}"
 
 #: views/user.py:415
-#, fuzzy
 msgid "Successfully updated memberships for {}"
 msgstr "A (z) {} tagságok sikeresen frissítve"
 
