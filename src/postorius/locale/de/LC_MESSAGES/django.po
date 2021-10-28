@@ -7,7 +7,7 @@
 # Claas Augner <github@caugner.de>, 2020.
 # Michael Lorenzen <ml@m-lorenzen.de>, 2020.
 # J. Lavoie <j.lavoie@net-c.ca>, 2020.
-# Paul <paulwiesinger+weblate@gmail.com>, 2020.
+# Paul <paulwiesinger+weblate@gmail.com>, 2020, 2021.
 # Alex <alexandersimm2@googlemail.com>, 2021.
 # Tobias Wiese <tobias@tobiaswiese.com>, 2021.
 # Markus Schaaf <markuschaaf@gmail.com>, 2021.
@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-30 14:54+0300\n"
 "PO-Revision-Date: 2021-10-27 17:33+0000\n"
-"Last-Translator: Thorgrimsson <shop.news@posteo.de>\n"
+"Last-Translator: Paul <paulwiesinger+weblate@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/de/>\n"
 "Language: de\n"
@@ -516,7 +516,7 @@ msgstr ""
 
 #: forms/list_forms.py:292
 msgid "Notify owner on removal"
-msgstr "Benachrichtige den Besitzer beim Entfernen"
+msgstr "Benachrichtigen des Besitzers bei Entfernen"
 
 #: forms/list_forms.py:294
 msgid ""
