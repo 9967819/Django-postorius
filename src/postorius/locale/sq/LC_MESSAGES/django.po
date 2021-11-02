@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-30 14:55+0300\n"
-"PO-Revision-Date: 2021-09-21 09:36+0000\n"
+"PO-Revision-Date: 2021-11-02 08:37+0000\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/sq/>\n"
@@ -2155,7 +2155,7 @@ msgstr "hiqe"
 
 #: templates/postorius/domain/index.html:54
 msgid "Add"
-msgstr "Shto"
+msgstr "Shtoje"
 
 #: templates/postorius/domain/index.html:57
 #: templates/postorius/domain/template_add.html:6
