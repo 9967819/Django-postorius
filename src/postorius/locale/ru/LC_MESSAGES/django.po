@@ -4,13 +4,14 @@
 # Margo Radzivilava <Margoihnid@gmail.com>, 2020.
 # Juri Grabowski <hosted-weblate@jugra.de>, 2020.
 # Artem <KovalevArtem.ru@gmail.com>, 2020.
+# Ivan Kuznetsov <kia@solvo.ru>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-30 14:55+0300\n"
-"PO-Revision-Date: 2020-07-04 04:25+0000\n"
-"Last-Translator: Artem <KovalevArtem.ru@gmail.com>\n"
+"PO-Revision-Date: 2021-12-11 17:53+0000\n"
+"Last-Translator: Ivan Kuznetsov <kia@solvo.ru>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ru/>\n"
 "Language: ru\n"
@@ -20,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
-"X-Generator: Weblate 4.2-dev\n"
+"X-Generator: Weblate 4.10-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -29,25 +30,30 @@ msgid ""
 "same or different from the Mail Host. You can edit the list of available web "
 "hosts <a href=\"%s\">here</a>."
 msgstr ""
+"Домен web-интерфеса. Может совпадать или отличаться от имени почтового "
+"домена выше. Вы можете изменить список доступных доменов <a href=\"%s\""
+">здесь</a>."
 
 #: forms/domain_forms.py:45 forms/list_forms.py:91
 #: templates/postorius/domain/index.html:21
 msgid "Mail Host"
-msgstr "Почтовый хост"
+msgstr "Почтовый домен"
 
 #: forms/domain_forms.py:46 forms/domain_forms.py:65
 msgid "Please enter a domain name"
-msgstr "Пожалуйста, введите доменное имя"
+msgstr "Пожалуйста, введите имя домена"
 
 #: forms/domain_forms.py:47 forms/domain_forms.py:66
 msgid "Please enter a valid domain name."
-msgstr "Пожалуйста, введите действительное доменное имя."
+msgstr "Пожалуйста, введите корректное имя домена."
 
 #: forms/domain_forms.py:50
 msgid ""
 "The domain for your mailing lists. For example when you want lists like "
 "testing@example.com, enter example.com here."
 msgstr ""
+"Почтовый домен. Например, если вы хотите создать рассылку testing@"
+"example.com, укажите example.com."
 
 #: forms/domain_forms.py:54 forms/list_forms.py:84 forms/list_forms.py:960
 #: templates/postorius/domain/index.html:22 templates/postorius/index.html:56
@@ -56,41 +62,39 @@ msgstr "Описание"
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:23
 msgid "Alias Domain"
-msgstr "Псевдоним Домена"
+msgstr "Синоним домена"
 
 #: forms/domain_forms.py:59 forms/domain_forms.py:88
 msgid "Please enter a valid domain name or nothing."
-msgstr ""
+msgstr "Пожалуйста, укажите корректное имя домена или оставьте поле пустым."
 
 #: forms/domain_forms.py:61
 msgid "Normally empty.  Used only for unusual Postfix configs."
-msgstr "Обычно пусто. Используется только для необычных конфигов Postfix."
+msgstr "Обычно пусто. Используется только для необычных конфигураций Postfix."
 
 #: forms/domain_forms.py:64 templates/postorius/domain/index.html:24
 msgid "Web Host"
-msgstr "Веб-Узел"
+msgstr "Web-домен"
 
 #: forms/domain_forms.py:78
 msgid "Please enter a valid domain name"
-msgstr "Пожалуйста, введите действительное имя домена"
+msgstr "Пожалуйста, введите корректное имя домена"
 
 #: forms/domain_forms.py:103
 msgid "Owner's Email"
-msgstr ""
+msgstr "Адрес почты владельца"
 
 #: forms/fields.py:28
 msgid "Regular"
-msgstr "Регулярные"
+msgstr "Обычный"
 
 #: forms/fields.py:29
 msgid "Plain Text Digests"
-msgstr ""
+msgstr "Текстовые обзоры"
 
 #: forms/fields.py:30
-#, fuzzy
-#| msgid "Digest"
 msgid "MIME Digests"
-msgstr "Дайджест"
+msgstr "MIME обзоры"
 
 #: forms/fields.py:31
 msgid "Summary Digests"
@@ -98,25 +102,23 @@ msgstr "Краткие обзоры"
 
 #: forms/fields.py:34 forms/list_forms.py:143
 msgid "Enabled"
-msgstr ""
+msgstr "Разрешен"
 
 #: forms/fields.py:35 forms/list_forms.py:144
 msgid "Disabled"
-msgstr "Отключен"
+msgstr "Запрещен"
 
 #: forms/fields.py:36
-#, fuzzy
-#| msgid "Disabled"
 msgid "Disabled by Owner"
-msgstr "Отключен"
+msgstr "Запрещен владельцем"
 
 #: forms/fields.py:37
 msgid "Disabled by Bounces"
-msgstr ""
+msgstr "Запрещен из-за сбоев доставки"
 
 #: forms/fields.py:40
 msgid "Hold for moderation"
-msgstr ""
+msgstr "Задержать для модерирования"
 
 #: forms/fields.py:41
 msgid "Reject (with notification)"
@@ -124,7 +126,7 @@ msgstr "Отклонить (с уведомлением)"
 
 #: forms/fields.py:42
 msgid "Discard (no notification)"
-msgstr ""
+msgstr "Удалить (без уведомления)"
 
 #: forms/fields.py:43
 msgid "Accept immediately (bypass other rules)"
@@ -132,11 +134,11 @@ msgstr "Немедленно принять (в обход других прав
 
 #: forms/fields.py:44
 msgid "Default processing"
-msgstr "Обработки по умолчанию"
+msgstr "Обработка по умолчанию"
 
 #: forms/fields.py:128
 msgid "Make at least one selection"
-msgstr "Сделать как минимум один выбор"
+msgstr "Выберите, как минимум, один вариант"
 
 #: forms/fields.py:139 templates/postorius/lists/summary.html:52
 msgid "Delivery mode"
@@ -150,10 +152,15 @@ msgid ""
 "digests are preferred, but if you have a problem reading them, select plain "
 "text digests. Summary Digests are currently equivalent to MIME Digests."
 msgstr ""
+"Если вы выберите \"обзор\", вы будете получать сообщения, объединенные "
+"вместе в одном письме, обычно раз в день. MIME-обзоры предпочтительнее. Но "
+"ваша программа чтения почты может их поддерживать или не поддерживать. Если "
+"у вас возникают проблемы с MIME-обзорами, выберите \"текстовые обзоры\". "
+"\"Краткие обзоры\" сейчас то же самое, что и \"MIME-обзоры\"."
 
 #: forms/fields.py:161 templates/postorius/lists/summary.html:51
 msgid "Delivery status"
-msgstr ""
+msgstr "Состояние доставки"
 
 #: forms/fields.py:163
 msgid ""
@@ -163,14 +170,19 @@ msgid ""
 "mail delivery, don't forget to re-enable it when you come back; it will not "
 "be automatically re-enabled."
 msgstr ""
+"Установите этот параметр в \"разрешено\", чтобы получать сообщения из этой "
+"рассылки. Установите в \"запрещено\", если хотите временно отключить "
+"доставку, сохранив при этом подписку (например, на время отпуска). Обратите "
+"внимание: когда вы вернетесь, автоматически подписка обратно не включится; "
+"ее нужно будет разрешить вручную."
 
 #: forms/fields.py:174
 msgid "Moderation"
-msgstr "Модерация"
+msgstr "Модерирование"
 
 #: forms/fields.py:176 forms/list_forms.py:1098
 msgid "List default"
-msgstr ""
+msgstr "По умолчанию рассылки"
 
 #: forms/fields.py:178
 msgid ""
@@ -185,6 +197,17 @@ msgid ""
 "Accept -- accepts any postings without any further checks. \n"
 "Default Processing -- run additional checks and accept the message. \n"
 msgstr ""
+"Действие по умолчанию, когда подписчик отправляет сообщение в рассылку:\n"
+"По умолчанию рассылки - использовать действие по умолчанию для этой рассылки."
+"\n"
+"Задержать - задержать сообщение для одобрения модератором рассылки.\n"
+"Отклонить - автоматически отклонить сообщение, отправив уведомление автору "
+"сообщения. Вы можете настроить текст уведомления.\n"
+"Удалить - автоматически отбросить сообщение без отправки каких-либо "
+"уведомлений.\n"
+"Принять - принять любое сообщение без дополнительных проверок.\n"
+"Обработка по умолчанию - провести дополнительные проверки и принять "
+"сообщение, если они будут успешными. \n"
 
 #: forms/list_forms.py:39
 msgid "Daily"
@@ -192,11 +215,11 @@ msgstr "Ежедневно"
 
 #: forms/list_forms.py:40
 msgid "Weekly"
-msgstr ""
+msgstr "Каждую неделю"
 
 #: forms/list_forms.py:41
 msgid "Quarterly"
-msgstr "Ежеквартально"
+msgstr "Каждые 3 месяца"
 
 #: forms/list_forms.py:42
 msgid "Monthly"
@@ -208,124 +231,126 @@ msgstr "Ежегодно"
 
 #: forms/list_forms.py:47
 msgid "Only mailinglist moderators"
-msgstr ""
+msgstr "Только модераторам рассылки"
 
 #: forms/list_forms.py:48
 msgid "Only mailinglist members"
-msgstr "Только члены рассылки"
+msgstr "Только подписчикам рассылки"
 
 #: forms/list_forms.py:49
 msgid "Anyone"
-msgstr "Любой"
+msgstr "Всем"
 
 #: forms/list_forms.py:63 templates/postorius/user/subscriptions.html:22
 msgid "List Name"
-msgstr ""
+msgstr "Имя списка рассылки"
 
 #: forms/list_forms.py:65
 msgid "Please enter a name for your list."
-msgstr ""
+msgstr "Пожалуйста, укажите имя рассылки."
 
 #: forms/list_forms.py:66
 msgid "Please enter a valid list name."
-msgstr ""
+msgstr "Пожалуйста, укажите правильное имя рассылки."
 
 #: forms/list_forms.py:69
 msgid "Initial list owner address"
-msgstr ""
+msgstr "Почтовый адрес владельца рассылки"
 
 #: forms/list_forms.py:71
 msgid "Please enter the list owner's email address."
-msgstr ""
+msgstr "Пожалуйста, укажите адрес E-mail владельца рассылки."
 
 #: forms/list_forms.py:75
 msgid "Advertise this list?"
-msgstr ""
+msgstr "Публичная рассылка?"
 
 #: forms/list_forms.py:77
 msgid "Please choose a list type."
-msgstr ""
+msgstr "Пожалуйста, выберите тип рассылки."
 
 #: forms/list_forms.py:80
 msgid "Advertise this list in list index"
-msgstr ""
+msgstr "Публичная - показывать рассылку в общем списке"
 
 #: forms/list_forms.py:81
 msgid "Hide this list in list index"
-msgstr ""
+msgstr "Приватная - скрывать рассылку в общем списке"
 
 #: forms/list_forms.py:94
 msgid "Choose an existing Domain."
-msgstr "Выберите существующий домен."
+msgstr "Выберите существующий почтовый домен."
 
 #: forms/list_forms.py:95
 msgid "Choose a valid Mail Host"
-msgstr ""
+msgstr "Выберите корректный почтовый домен"
 
 #: forms/list_forms.py:98
 msgid "List Style"
-msgstr "Стиль списка"
+msgstr "Стиль рассылки"
 
 #: forms/list_forms.py:101
 msgid "Choose a List Style."
-msgstr ""
+msgstr "Выберите стиль рассылки."
 
 #: forms/list_forms.py:102
 msgid "Choose a valid List Style."
-msgstr ""
+msgstr "Выберите корректный стиль рассылки."
 
 #: forms/list_forms.py:105
 msgid "Site admin has not created any domains"
-msgstr "Админ не создал каких-либо доменов"
+msgstr "Администратор сервиса не создал каких-либо доменов"
 
 #: forms/list_forms.py:118
 msgid "Please enter a valid listname"
-msgstr ""
+msgstr "Пожалуйста, укажите корректное имя списка рассылки"
 
 #: forms/list_forms.py:147 forms/list_forms.py:180
 msgid "Your email address"
-msgstr ""
+msgstr "Ваш адрес E-Mail"
 
 #: forms/list_forms.py:151
 msgid ""
 "Subscribing via \"Primary Address\" will change subscription address when "
 "you change your primary address."
 msgstr ""
+"Если вы подпишите \"основной адрес\", адрес подписки изменится, если вы "
+"потом измените ваш основной адрес."
 
 #: forms/list_forms.py:154 forms/list_forms.py:183 forms/member_forms.py:29
 #: forms/system.py:36
 msgid "Please enter an email address."
-msgstr ""
+msgstr "Пожалуйста, укажите адрес E-Mail."
 
 #: forms/list_forms.py:155 forms/list_forms.py:184 forms/member_forms.py:30
 #: forms/system.py:37
 msgid "Please enter a valid email address."
-msgstr ""
+msgstr "Пожалуйста, укажите корректный адрес E-Mail."
 
 #: forms/list_forms.py:158 forms/list_forms.py:187
 msgid "Your name (optional)"
-msgstr ""
+msgstr "Ваше имя (необязательно)"
 
 #: forms/list_forms.py:171 forms/list_forms.py:1211 views/list.py:456
 msgid "Primary Address ({})"
-msgstr ""
+msgstr "Основной адрес ({})"
 
 #: forms/list_forms.py:202
 msgid "Open"
-msgstr "Открыть"
+msgstr "Открытая"
 
 #: forms/list_forms.py:203 templates/postorius/domain/template_delete.html:27
 #: templates/postorius/lists/template_delete.html:24
 msgid "Confirm"
-msgstr "Подтвердить"
+msgstr "Требует подтверждения"
 
 #: forms/list_forms.py:204
 msgid "Moderate"
-msgstr "Модерируемый"
+msgstr "Требует одобрения"
 
 #: forms/list_forms.py:205
 msgid "Confirm, then moderate"
-msgstr ""
+msgstr "Требует подтверждения и одобрения"
 
 #: forms/list_forms.py:214
 msgid "Subscription Policy"
@@ -340,10 +365,16 @@ msgid ""
 "Confirm then Moderate: First subscribers have to confirm, then a moderator "
 "needs to authorize."
 msgstr ""
+"Открытая: подписка добавляется автоматически\n"
+"Требует подтверждения: подписчик должен подтвердить свой адрес, запрос будет "
+"отправлен в письме\n"
+"Требует одобрения: модератор должен одобрить подписчика вручную\n"
+"Требует подтверждения и одобрения: сперва подписчик должен подтвердить свой "
+"адрес, далее его должен одобрить модератор."
 
 #: forms/list_forms.py:225
 msgid "Un-Subscription Policy"
-msgstr ""
+msgstr "Политика отписки"
 
 #: forms/list_forms.py:227
 msgid ""
@@ -354,6 +385,12 @@ msgid ""
 "Confirm then Moderate: First subscribers have to confirm, then a moderator "
 "needs to authorize."
 msgstr ""
+"Открытая: отписка производится автоматически\n"
+"Требует подтверждения: подписчик должен подтвердить отписку, запрос будет "
+"отправлен в письме\n"
+"Требует одобрения: модератор должен одобрить отписку вручную\n"
+"Требует подтверждения и одобрения: сперва подписчик должен подтвердить "
+"отписку, далее ее должен одобрить модератор."
 
 #: forms/list_forms.py:240 forms/list_forms.py:657
 #: templates/postorius/lists/held_messages.html:30
@@ -361,15 +398,15 @@ msgstr ""
 #: templates/postorius/lists/pending_confirmations.html:36
 #: templates/postorius/lists/subscription_requests.html:37
 msgid "Discard"
-msgstr "Отменить"
+msgstr "Удалить"
 
 #: forms/list_forms.py:241
 msgid "List Admins"
-msgstr ""
+msgstr "Администраторы рассылки"
 
 #: forms/list_forms.py:242
 msgid "Site Admin"
-msgstr ""
+msgstr "Администратор сервиса"
 
 #: forms/list_forms.py:246 forms/list_forms.py:272 forms/list_forms.py:281
 #: forms/list_forms.py:290 forms/list_forms.py:402 forms/list_forms.py:410
@@ -399,16 +436,18 @@ msgstr "Нет"
 
 #: forms/list_forms.py:248
 msgid "Process Bounces"
-msgstr ""
+msgstr "Обработка сбоев доставки"
 
 #: forms/list_forms.py:250
 msgid ""
 "Specifies whether or not this list should do automatic bounce processing."
 msgstr ""
+"Позволяет задать, должна ли для этой рассылки выполняться автоматическая "
+"обработка сбоев доставки."
 
 #: forms/list_forms.py:255
 msgid "Bounce score threshold"
-msgstr ""
+msgstr "Порог счетчика сбоев"
 
 #: forms/list_forms.py:258
 msgid ""
@@ -416,10 +455,13 @@ msgid ""
 "automatically disabled. When the subscription is  re-enabled, their bounce "
 "score will be reset to zero."
 msgstr ""
+"Пороговое значение счетчика ошибок, при превышении которого подписка будет "
+"автоматически приостановлена. Счетчик сбрасывается в ноль, когда подписка "
+"вновь будет разрешена."
 
 #: forms/list_forms.py:263
 msgid "Bounce info stale after"
-msgstr ""
+msgstr "Срок устаревания ошибок"
 
 #: forms/list_forms.py:266
 msgid ""
@@ -427,10 +469,13 @@ msgid ""
 "stale. If no new bounces have been received in the interim, the bounce score "
 "is reset to zero. This value must be an integer. "
 msgstr ""
+"Число дней (целое число), после которого ошибки доставки у подписчика "
+"считаются устаревшими. Если за это время не произойдет новых ошибок, счетчик "
+"сбрасывается в ноль. "
 
 #: forms/list_forms.py:274
 msgid "Notify owner on bounce increment"
-msgstr ""
+msgstr "Уведомлять владельца рассылки об увеличении счетчика ошибок"
 
 #: forms/list_forms.py:276
 msgid ""
@@ -438,10 +483,13 @@ msgid ""
 "member's bounce score is incremented, but to a value less than their bounce "
 "threshold. "
 msgstr ""
+"Этот параметр указывает, будет ли владелец рассылки получать уведомления, "
+"если счетчик ошибок доставки у подписчика увеличился, но пока не превысил "
+"пороговое значение. "
 
 #: forms/list_forms.py:283
 msgid "Notify owner on disable"
-msgstr ""
+msgstr "Уведомлять владельца рассылки о приостановке подписки"
 
 #: forms/list_forms.py:285
 msgid ""
@@ -449,21 +497,28 @@ msgid ""
 "member's subscription is automatically disabled due to their bounce "
 "threshold being reached. "
 msgstr ""
+"Этот параметр указывает, будет ли владелец рассылки получать уведомления, "
+"если подписка автоматически приостановлена, т.к. счетчик ошибок подписчика "
+"превысил пороговое значение. "
 
 #: forms/list_forms.py:292
 msgid "Notify owner on removal"
-msgstr ""
+msgstr "Уведомлять владельца рассылки об удалении подписки"
 
 #: forms/list_forms.py:294
+#, fuzzy
 msgid ""
 "This option controls whether or not the list owner is notified when a member "
 "is removed from the list after their disabled notifications have been "
 "exhausted. "
 msgstr ""
+"Этот параметр указывает, будет ли владелец рассылки получать уведомления, "
+"если подписчик удален из рассылки после того, как его подписка была "
+"приостановлена, и на это не последовало реакции за установленный период. "
 
 #: forms/list_forms.py:301
 msgid "Forward unrecognized bounces"
-msgstr ""
+msgstr "Перенаправление неопознанных уведомлений о недоставке"
 
 #: forms/list_forms.py:302
 msgid ""
@@ -471,18 +526,23 @@ msgid ""
 "List Admins: Send to the list owners and moderators\n"
 "Site Admin: Send to the site's configured site_owner"
 msgstr ""
+"Удалить: неопознанные уведомления будут отброшены\n"
+"Администраторам рассылки: перенаправить владельцам и модераторам рассылки\n"
+"Администратору сервиса: перенаправить на адрес владельца сервиса"
 
 #: forms/list_forms.py:307
 msgid "Bounce disabled warnings interval"
-msgstr ""
+msgstr "Интервал отправки предупреждений о приостановке"
 
 #: forms/list_forms.py:310
 msgid "The number of days between each disabled notification."
 msgstr ""
+"Интервал (дни) отправки подписчику уведомлений о приостановке подписки из-за "
+"повторяющихся ошибок."
 
 #: forms/list_forms.py:314
 msgid "Bounce disable warnings"
-msgstr ""
+msgstr "Количество предупреждений"
 
 #: forms/list_forms.py:317
 msgid ""
@@ -491,42 +551,46 @@ msgid ""
 "an address from the list once their bounce score exceeds the threshold. This "
 "value must be an integer. "
 msgstr ""
+"Число уведомлений подписчика о приостановке подписки из-за повторяющихся "
+"ошибок. После превышения этого значения, подписчик будет удален из рассылки. "
+"Укажите целое число. При задании 0, подписчик будет удален сразу же после "
+"превышения порога его счетчиком ошибок. "
 
 #: forms/list_forms.py:331
 msgid "Public archives"
-msgstr ""
+msgstr "Публичные архивы"
 
 #: forms/list_forms.py:332
 msgid "Private archives"
-msgstr "Частные архивы"
+msgstr "Приватные архивы"
 
 #: forms/list_forms.py:333
 msgid "Do not archive this list"
-msgstr ""
+msgstr "Не архивировать"
 
 #: forms/list_forms.py:337
 msgid "Plain text"
-msgstr ""
+msgstr "Простой текст"
 
 #: forms/list_forms.py:338
 msgid "Markdown text"
-msgstr ""
+msgstr "Текст с разметкой"
 
 #: forms/list_forms.py:344
 msgid "Archive policy"
-msgstr "Политика архива"
+msgstr "Политика архивирования"
 
 #: forms/list_forms.py:345
 msgid "Policy for archiving messages for this list"
-msgstr ""
+msgstr "Политика архивирования сообщений в этой рассылке"
 
 #: forms/list_forms.py:350
 msgid "Active archivers"
-msgstr "Активный архиваторы"
+msgstr "Активные архиваторы"
 
 #: forms/list_forms.py:357
 msgid "Archive Rendering mode"
-msgstr ""
+msgstr "Режим архивирования"
 
 #: forms/list_forms.py:358
 msgid ""
@@ -534,10 +598,13 @@ msgid ""
 "formatting based on markup in the email.\n"
 "Currently, this option is only supported by Hyperkitty."
 msgstr ""
+"Этот параметр задает обработку сообщений при архивации с сохранением "
+"исходного форматирования.\n"
+"Пока этот режим поддерживается только архиватором Hyperkitty&"
 
 #: forms/list_forms.py:390
 msgid "Acceptable aliases"
-msgstr "Допустимые псевдонимы"
+msgstr "Допустимые синонимы"
 
 #: forms/list_forms.py:393
 msgid ""
@@ -549,16 +616,24 @@ msgid ""
 "message. The matching is performed with Python's re.match() function, "
 "meaning they are anchored to the start of the string."
 msgstr ""
+"Список альтернативных адресов, нужных при включенном параметре \"требуется "
+"явный адрес назначения\". Укажите по одному адресу или регулярному выражению "
+"Python на строке. Регулярные выражения начинаются с символа '^'. Со списком "
+"будут сопоставляться все адреса из заголовков To: или CC: сообщения. Если "
+"сопоставление пройдет хотя бы по одному адресу, сообщение будет принято к "
+"дальнейшей обработке в соответствии с политикой и правилами этой рассылки."
 
 #: forms/list_forms.py:404
 msgid "Require Explicit Destination"
-msgstr ""
+msgstr "Требуется явный адрес назначения"
 
 #: forms/list_forms.py:406
 msgid ""
 "This checks to ensure that the list posting address or an acceptable alias "
 "explicitly appears in a To: or Cc: header in the post."
 msgstr ""
+"Параметр включает проверку, что адрес рассылки или его синоним явно указан в "
+"заголовках To: или CC: сообщения."
 
 #: forms/list_forms.py:412
 msgid "Administrivia"
@@ -1481,7 +1556,7 @@ msgstr ""
 
 #: forms/user_forms.py:241
 msgid "Verified"
-msgstr ""
+msgstr "Подтверждён"
 
 #: forms/user_forms.py:243
 msgid "Specifies whether or not this email address is verified"
@@ -1718,7 +1793,7 @@ msgstr "Архивы"
 
 #: templates/postorius/base.html:85
 msgid "Account"
-msgstr "Аккаунт"
+msgstr "Учетная запись"
 
 #: templates/postorius/base.html:89
 msgid "Mailman settings"
@@ -2458,7 +2533,7 @@ msgstr "Подписки"
 #: templates/postorius/user/manage.html:48
 #: templates/postorius/user/manage.html:86
 msgid "Update"
-msgstr ""
+msgstr "Обновление"
 
 #: templates/postorius/user/manage.html:18
 msgid "Addresses"
@@ -2490,10 +2565,8 @@ msgid "Web Account"
 msgstr "Аккаунт"
 
 #: templates/postorius/user/manage.html:96
-#, fuzzy
-#| msgid "Users"
 msgid "Username"
-msgstr "Пользователи"
+msgstr "Имя пользователя"
 
 #: templates/postorius/user/manage.html:100
 msgid "Superuser"
