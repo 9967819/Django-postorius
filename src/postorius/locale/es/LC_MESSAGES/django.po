@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-30 14:55+0300\n"
-"PO-Revision-Date: 2021-03-28 09:29+0000\n"
+"PO-Revision-Date: 2021-12-04 12:51+0000\n"
 "Last-Translator: Guillermo Hernandez <guillermo@querysoft.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/es/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.6-dev\n"
+"X-Generator: Weblate 4.10-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -91,10 +91,8 @@ msgid "Plain Text Digests"
 msgstr "Resúmenes de texto sin formato"
 
 #: forms/fields.py:30
-#, fuzzy
-#| msgid "Mime Digests"
 msgid "MIME Digests"
-msgstr "Resúmenes Mime"
+msgstr "Resúmenes MIME"
 
 #: forms/fields.py:31
 msgid "Summary Digests"
@@ -145,13 +143,6 @@ msgid "Delivery mode"
 msgstr "Modo de entrega"
 
 #: forms/fields.py:141
-#, fuzzy
-#| msgid ""
-#| "If you select summary digests , you'll get posts bundled together "
-#| "(usually one per day but possibly more on busy lists), instead of singly "
-#| "when they're sent. Your mail reader may or may not support MIME digests. "
-#| "In general MIME digests are preferred, but if you have a problem reading "
-#| "them, select plain text digests."
 msgid ""
 "If you select digests , you'll get posts bundled together (usually one per "
 "day but possibly more on busy lists), instead of singly when they're sent. "
@@ -163,7 +154,8 @@ msgstr ""
 "pero posiblemente más en listas con mucho tráfico), en lugar de uno a uno "
 "tal como se envíen. Su lector de correo puede o no admitir tratar resúmenes "
 "MIME. En general, los resúmenes MIME son preferibles, pero si tiene "
-"problemas para leerlos, seleccionar resúmenes en texto sin formato."
+"problemas para leerlos, seleccionar resúmenes en texto sin formato. Ahora "
+"mismo, los resúmenes recopilados son equivalentes a los resúmenes MIME."
 
 #: forms/fields.py:161 templates/postorius/lists/summary.html:51
 msgid "Delivery status"
@@ -411,14 +403,12 @@ msgid "Discard"
 msgstr "Descartar"
 
 #: forms/list_forms.py:241
-#, fuzzy
-#| msgid "List metrics"
 msgid "List Admins"
-msgstr "Métricas de la lista"
+msgstr "Administradores de la lista"
 
 #: forms/list_forms.py:242
 msgid "Site Admin"
-msgstr ""
+msgstr "Administrador del sitio"
 
 #: forms/list_forms.py:246 forms/list_forms.py:272 forms/list_forms.py:281
 #: forms/list_forms.py:290 forms/list_forms.py:402 forms/list_forms.py:410
@@ -485,25 +475,18 @@ msgstr ""
 "entero. "
 
 #: forms/list_forms.py:274
-#, fuzzy
-#| msgid "Notify owner on removal"
 msgid "Notify owner on bounce increment"
-msgstr "Notificar propietario al quitar"
+msgstr "Notificar al propietario del incremento de rechazos"
 
 #: forms/list_forms.py:276
-#, fuzzy
-#| msgid ""
-#| "This option controls whether or not the list owner is notified when a "
-#| "member's subscription is automatically disabled due to their bounce "
-#| "threshold being reached. "
 msgid ""
 "This option controls whether or not the list owner is notified when a "
 "member's bounce score is incremented, but to a value less than their bounce "
 "threshold. "
 msgstr ""
 "Esta opción controla si se notificará o no al propietario de una lista "
-"cuando la suscripción de un miembro sea automáticamente desactivada debido a "
-"haber alcoanzado el umbral de rebote. "
+"cuando el cómputo de rechazos de un miembro se ve incrementado, pero sin "
+"llegar a alcanzar el umbral máximo. "
 
 #: forms/list_forms.py:283
 msgid "Notify owner on disable"
@@ -535,7 +518,7 @@ msgstr ""
 
 #: forms/list_forms.py:301
 msgid "Forward unrecognized bounces"
-msgstr ""
+msgstr "Reenviar rechazos de tipo desconocido"
 
 #: forms/list_forms.py:302
 msgid ""
@@ -543,6 +526,10 @@ msgid ""
 "List Admins: Send to the list owners and moderators\n"
 "Site Admin: Send to the site's configured site_owner"
 msgstr ""
+"Descartar: Rechazos de tipo desconocido se descartarán\n"
+"Administradores de la lista: Enviar a los propietarios y moderadores de la "
+"lista\n"
+"Administrador del sitio: Enviar al propietario del sitio"
 
 #: forms/list_forms.py:307
 msgid "Bounce disabled warnings interval"
@@ -749,18 +736,14 @@ msgid "Maximum number of recipients"
 msgstr "Número máximo de receptores"
 
 #: forms/list_forms.py:473
-#, fuzzy
-#| msgid ""
-#| "The maximum number of recipients for a message. This can be used to "
-#| "prevent mass mailings from being accepted. A value of 0 disables the "
-#| "check."
 msgid ""
 "If a post has this many or more explicit recipients (To: and Cc:), the post "
 "will be held for moderation. This can be used to prevent mass mailings from "
 "being accepted. A value of 0 disables the check."
 msgstr ""
-"El número máximo de receptores para un mensaje. Se puede usar para evitar "
-"que se acepten correos masivos. Un valor de 0 deshabilita la verificación."
+"Si un mensaje contiene estos o mas destinatarios explícitos (Para: y Cc:), "
+"el envío se retendrá para su moderación. Se puede usar para evitar que se "
+"acepten correos masivos. Un valor de 0 deshabilita la verificación."
 
 #: forms/list_forms.py:488
 msgid "Accept these non-members"
@@ -1049,17 +1032,12 @@ msgid "Filter types"
 msgstr "Filtrar tipos"
 
 #: forms/list_forms.py:693
-#, fuzzy
-#| msgid ""
-#| "MimeTypes to filter from the incoming posts. A list of common types can "
-#| "be found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
-#| "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgid ""
 "MIME types to filter from the incoming posts. A list of common types can be "
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
-"Filtrar MimeTypes en los mensajes entrantes. Puede encontrar una lista de "
+"Filtrar tipos MIME en los mensajes entrantes. Puede encontrar una lista de "
 "tipos comunes <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">aquí</a>"
 
@@ -1076,18 +1054,13 @@ msgid "Pass types"
 msgstr "Tipos habilitados"
 
 #: forms/list_forms.py:707
-#, fuzzy
-#| msgid ""
-#| "MimeTypes to allow in the incoming posts. A list of common types can be "
-#| "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
-#| "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgid ""
 "MIME types to allow in the incoming posts. A list of common types can be "
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
-"Tipos habilitados en los mensajes entrantes. Puede encontrar una lista de "
-"tipos comunes <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
+"Tipos MIME habilitados en los mensajes entrantes. Puede encontrar una lista "
+"de tipos comunes <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">aquí</a>"
 
 #: forms/list_forms.py:712
@@ -1798,17 +1771,12 @@ msgid "Cannot set delivery_status to {}"
 msgstr "No se puede establecer delivery_status a {}"
 
 #: forms/user_forms.py:241
-#, fuzzy
-#| msgid "Pre Verified"
 msgid "Verified"
-msgstr "Pre-verificar"
+msgstr "Verificado/a"
 
 #: forms/user_forms.py:243
-#, fuzzy
-#| msgid ""
-#| "Specifies whether or not this list should do automatic bounce processing."
 msgid "Specifies whether or not this email address is verified"
-msgstr "Indica si esta lista debe o no procesar automáticamente los rechazos."
+msgstr "Indica si esta dirección de correo está verficada"
 
 #: forms/validators.py:39
 #, python-brace-format
@@ -1904,26 +1872,17 @@ msgstr ""
 "rebote en un formato desconocido."
 
 #: template_list.py:36
-#, fuzzy
-#| msgid ""
-#| "Sent to the list administrators to notify them when a new member has been "
-#| "subscribed."
 msgid "Sent to the list administrators from the 'mailman notify' command."
 msgstr ""
-"Enviado a los administradores de la lista para notificarles cuando se ha "
-"suscrito un nuevo miembro."
+"Enviado a los administradores de la lista desde el comando 'mailman notify'."
 
 #: template_list.py:38
-#, fuzzy
-#| msgid ""
-#| "Sent to the list administrators to notify them when a member has been "
-#| "unsubscribed."
 msgid ""
 "Sent to the list administrators to notify them when a member's bounce score "
 "is incremented."
 msgstr ""
 "Enviado a los administradores de la lista para notificarles cuando un "
-"miembro se ha dado de baja."
+"miembro ha incrementado su cómputo de rechazos."
 
 #: template_list.py:40
 msgid ""
@@ -2215,7 +2174,7 @@ msgstr "quitar"
 
 #: templates/postorius/domain/index.html:54
 msgid "Add"
-msgstr "Agregar"
+msgstr "Añadir"
 
 #: templates/postorius/domain/index.html:57
 #: templates/postorius/domain/template_add.html:6
@@ -2649,7 +2608,7 @@ msgstr "Dirección de suscripción"
 #: templates/postorius/lists/summary.html:53
 #: templates/postorius/user/all.html:37
 msgid "Manage"
-msgstr ""
+msgstr "Gestionar"
 
 #: templates/postorius/lists/summary.html:54
 #: templates/postorius/lists/summary.html:75
@@ -2670,15 +2629,7 @@ msgid "Subscribe to this list"
 msgstr "Suscribirse a esta lista"
 
 #: templates/postorius/lists/summary.html:86
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                  To subscribe you can send an email with 'subscribe' in "
-#| "the subject to\n"
-#| "                  <a href=\"mailto:%(address)s?subject=Subscribe\">"
-#| "%(address)s</a>\n"
-#| "                  or use the form below:\n"
-#| "              "
+#, python-format
 msgid ""
 "\n"
 "                To subscribe you can send an email with 'subscribe' in the "
@@ -2689,12 +2640,12 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"                  Para suscribirse, enviar un mensaje con 'subscribe' en el "
+"                Para suscribirse, enviar un mensaje con 'subscribe' en el "
 "asunto a\n"
-"                  <a href=\"mailto:%(address)s?subject=Subscribe\">"
-"%(address)s</a>\n"
+"                  <a href=\"mailto:%(address)s?subject=Subscribe\""
+">%(address)s</a>\n"
 "                  o usar el siguiente formulario:\n"
-"              "
+"            "
 
 #: templates/postorius/lists/summary.html:97
 msgid ""
@@ -2881,19 +2832,15 @@ msgstr "Guardar"
 
 #: templates/postorius/user/all.html:20
 msgid "Search"
-msgstr ""
+msgstr "Buscar"
 
 #: templates/postorius/user/all.html:35
-#, fuzzy
-#| msgid "Users"
 msgid "User"
-msgstr "Usuarios"
+msgstr "Usuario"
 
 #: templates/postorius/user/all.html:36
-#, fuzzy
-#| msgid "Created at"
 msgid "Created"
-msgstr "Creado el"
+msgstr "Creado"
 
 #: templates/postorius/user/list_options.html:14
 msgid "Subscription options for"
@@ -2910,32 +2857,26 @@ msgid "Subscription settings"
 msgstr "Ajustes de suscripción"
 
 #: templates/postorius/user/manage.html:8
-#, fuzzy
-#| msgid "Manage Subscription"
 msgid "Manage user"
-msgstr "Gestionar suscripción"
+msgstr "Gestionar usuario"
 
 #: templates/postorius/user/manage.html:16
 #: templates/postorius/user/manage.html:48
 #: templates/postorius/user/manage.html:86
 msgid "Update"
-msgstr ""
+msgstr "Actualiza"
 
 #: templates/postorius/user/manage.html:18
-#, fuzzy
-#| msgid "Address"
 msgid "Addresses"
-msgstr "Dirección"
+msgstr "Direcciones"
 
 #: templates/postorius/user/manage.html:28
 msgid "Email"
-msgstr ""
+msgstr "Correo electrónico"
 
 #: templates/postorius/user/manage.html:62
-#, fuzzy
-#| msgid "Lists"
 msgid "List"
-msgstr "Listas"
+msgstr "Lista"
 
 #: templates/postorius/user/manage.html:64
 #: templates/postorius/user/subscriptions.html:25
@@ -2943,41 +2884,33 @@ msgid "Role"
 msgstr "Rol"
 
 #: templates/postorius/user/manage.html:89
-#, fuzzy
-#| msgid "Mass Subscription"
 msgid "User has no subscriptions."
-msgstr "Suscripción en bloque"
+msgstr "El usuario no tiene suscripciones."
 
 #: templates/postorius/user/manage.html:93
-#, fuzzy
-#| msgid "Account"
 msgid "Web Account"
-msgstr "Cuenta"
+msgstr "Cuenta Web"
 
 #: templates/postorius/user/manage.html:96
-#, fuzzy
-#| msgid "Users"
 msgid "Username"
-msgstr "Usuarios"
+msgstr "Nombre del usuario"
 
 #: templates/postorius/user/manage.html:100
 msgid "Superuser"
-msgstr ""
+msgstr "Superusuario"
 
 #: templates/postorius/user/manage.html:104
-#, fuzzy
-#| msgid "Login"
 msgid "Last login"
-msgstr "Iniciar sesión"
+msgstr "Último acceso"
 
 #: templates/postorius/user/manage.html:108
 msgid "Date joined"
-msgstr ""
+msgstr "Fecha de alta"
 
 #: templates/postorius/user/manage.html:113
 #: templates/postorius/user/manage.html:116
 msgid "Change password"
-msgstr ""
+msgstr "Cambie la contraseña"
 
 #: templates/postorius/user/subscription_preferences.html:21
 msgid "Each list subscription can have specific Mailman preferences."
@@ -3446,22 +3379,20 @@ msgid "Subscription does not exist"
 msgstr "La suscripción no existe"
 
 #: views/user.py:405
-#, fuzzy
-#| msgid "Currently banned addresses"
 msgid "Successfully updated addresses {}"
-msgstr "Direcciones actualmente vetadas"
+msgstr "Direcciones modificadas satisfactoriamente"
 
 #: views/user.py:415
 msgid "Successfully updated memberships for {}"
-msgstr ""
+msgstr "Membresías modificadas satisfactoriamente para {}"
 
 #: views/user.py:421
 msgid "Successfully updated user."
-msgstr ""
+msgstr "Usuario modificado satisfactoriamente."
 
 #: views/user.py:430
 msgid "Password updated successfully"
-msgstr ""
+msgstr "Contraseña modificada satisfactoriamente"
 
 #~ msgid "You are subscribed to this list with the following address:"
 #~ msgstr "Está suscrito a esta lista con la siguiente dirección:"
