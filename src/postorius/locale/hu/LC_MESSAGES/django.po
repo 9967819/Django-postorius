@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-30 14:55+0300\n"
-"PO-Revision-Date: 2021-10-27 11:49+0000\n"
+"PO-Revision-Date: 2021-11-05 02:19+0000\n"
 "Last-Translator: Peter Donka <peter.donka@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/hu/>\n"
@@ -1753,7 +1753,7 @@ msgstr "Ellenőrzött"
 
 #: forms/user_forms.py:243
 msgid "Specifies whether or not this email address is verified"
-msgstr "Meghatározza, hogy ez az e-mail cím ellenőrzött-e vagy sem."
+msgstr "Meghatározza, hogy ez az e-mail cím ellenőrzött-e vagy sem"
 
 #: forms/validators.py:39
 #, python-brace-format
