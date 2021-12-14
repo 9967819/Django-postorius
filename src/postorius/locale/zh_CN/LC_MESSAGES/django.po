@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Eric <spice2wolf@gmail.com>, 2021.
 # Cube Kassaki <2524737581@qq.com>, 2021.
+# Dingzhong Chen <wsxy162@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-30 00:53-0700\n"
-"PO-Revision-Date: 2021-11-18 00:52+0000\n"
-"Last-Translator: Eric <spice2wolf@gmail.com>\n"
+"PO-Revision-Date: 2021-11-19 15:50+0000\n"
+"Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "gnu-mailman/postorius/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.9.1-dev\n"
+"X-Generator: Weblate 4.9.1\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -1714,7 +1715,7 @@ msgstr ""
 
 #: templates/postorius/base.html:85
 msgid "Account"
-msgstr "账户"
+msgstr "帐户"
 
 #: templates/postorius/base.html:89
 msgid "Mailman settings"
@@ -1974,7 +1975,7 @@ msgstr ""
 
 #: templates/postorius/lists/confirm_remove_role.html:17
 msgid "Remove"
-msgstr "去掉"
+msgstr "移除"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 msgid "Unsubscribe all members"
