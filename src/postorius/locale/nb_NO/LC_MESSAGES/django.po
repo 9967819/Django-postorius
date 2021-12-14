@@ -7,16 +7,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-30 14:55+0300\n"
-"PO-Revision-Date: 2021-05-04 23:44+0000\n"
+"PO-Revision-Date: 2021-11-05 02:19+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
-"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/gnu-"
-"mailman/postorius/nb_NO/>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
+"gnu-mailman/postorius/nb_NO/>\n"
 "Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.7-dev\n"
+"X-Generator: Weblate 4.9-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -365,14 +365,12 @@ msgid "Discard"
 msgstr ""
 
 #: forms/list_forms.py:241
-#, fuzzy
-#| msgid "Settings"
 msgid "List Admins"
-msgstr "Innstillinger"
+msgstr "Listeadministratorer"
 
 #: forms/list_forms.py:242
 msgid "Site Admin"
-msgstr ""
+msgstr "Sideadministratorer"
 
 #: forms/list_forms.py:246 forms/list_forms.py:272 forms/list_forms.py:281
 #: forms/list_forms.py:290 forms/list_forms.py:402 forms/list_forms.py:410
@@ -456,10 +454,8 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:292
-#, fuzzy
-#| msgid "Confirm domain removal"
 msgid "Notify owner on removal"
-msgstr "Bekreft domenefjerning"
+msgstr "Varsle eier ved fjerning"
 
 #: forms/list_forms.py:294
 msgid ""
@@ -512,14 +508,12 @@ msgid "Do not archive this list"
 msgstr "Ikke arkiver denne listen"
 
 #: forms/list_forms.py:337
-#, fuzzy
-#| msgid "Plain Text Digests"
 msgid "Plain text"
-msgstr "Klartekstsføljetonger"
+msgstr "Klartekst"
 
 #: forms/list_forms.py:338
 msgid "Markdown text"
-msgstr ""
+msgstr "Markdown-tekst"
 
 #: forms/list_forms.py:344
 msgid "Archive policy"
@@ -1170,10 +1164,8 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:916
-#, fuzzy
-#| msgid "Send welcome message"
 msgid "Send goodbye message"
-msgstr "Send velkomstmelding"
+msgstr "Send avskjedsmelding"
 
 #: forms/list_forms.py:918
 msgid ""
@@ -1871,10 +1863,8 @@ msgid "remove"
 msgstr "Fjern"
 
 #: templates/postorius/domain/index.html:54
-#, fuzzy
-#| msgid "Add {}"
 msgid "Add"
-msgstr "Legg til {}"
+msgstr "Legg til"
 
 #: templates/postorius/domain/index.html:57
 #: templates/postorius/domain/template_add.html:6
@@ -2565,10 +2555,8 @@ msgid "Web Account"
 msgstr "Konto"
 
 #: templates/postorius/user/manage.html:96
-#, fuzzy
-#| msgid "Users"
 msgid "Username"
-msgstr "Bruker"
+msgstr "Brukernavn"
 
 #: templates/postorius/user/manage.html:100
 msgid "Superuser"
@@ -2865,7 +2853,7 @@ msgstr "Fyll ut skjemaet rett."
 #, fuzzy, python-brace-format
 #| msgid "The selected members have been unsubscribed"
 msgid "These addresses {address} have been unsubscribed from {list}."
-msgstr "Valgte medlemmer har fått sitt abonnement opphevet"
+msgstr "Disse adressene {address} har fått sitt abonnement opphevet fra {list}."
 
 #: views/list.py:691
 msgid "The selected messages were accepted"
