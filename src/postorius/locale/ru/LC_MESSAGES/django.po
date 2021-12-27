@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-30 14:55+0300\n"
-"PO-Revision-Date: 2021-12-11 17:53+0000\n"
+"PO-Revision-Date: 2021-12-27 22:24+0000\n"
 "Last-Translator: Ivan Kuznetsov <kia@solvo.ru>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ru/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
-"X-Generator: Weblate 4.10-dev\n"
+"X-Generator: Weblate 4.10.1\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -506,7 +506,6 @@ msgid "Notify owner on removal"
 msgstr "Уведомлять владельца рассылки об удалении подписки"
 
 #: forms/list_forms.py:294
-#, fuzzy
 msgid ""
 "This option controls whether or not the list owner is notified when a member "
 "is removed from the list after their disabled notifications have been "
