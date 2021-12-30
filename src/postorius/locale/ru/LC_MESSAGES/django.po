@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-30 14:55+0300\n"
-"PO-Revision-Date: 2021-12-30 16:21+0000\n"
+"PO-Revision-Date: 2021-12-31 16:53+0000\n"
 "Last-Translator: Ivan Kuznetsov <kia@solvo.ru>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ru/>\n"
@@ -1436,7 +1436,7 @@ msgstr "Показывать рассылку в общем списке"
 
 #: forms/list_forms.py:957
 msgid "Choose whether to include this list on the list of all lists"
-msgstr ""
+msgstr "Следует ли показывать рассылку в списке всех рассылок?"
 
 #: forms/list_forms.py:963
 msgid ""
