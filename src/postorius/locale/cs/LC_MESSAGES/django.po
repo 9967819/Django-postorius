@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Jiří Morariu <jirkamorariu@gmail.com>, 2021.
+# Sebastian Machat <sebi@outlook.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-30 14:54+0300\n"
-"PO-Revision-Date: 2021-12-14 12:57+0000\n"
-"Last-Translator: Jiří Morariu <jirkamorariu@gmail.com>\n"
+"PO-Revision-Date: 2022-01-12 22:42+0000\n"
+"Last-Translator: Sebastian Machat <sebi@outlook.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/cs/>\n"
 "Language: cs\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.10-dev\n"
+"X-Generator: Weblate 4.10.1\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -25,114 +26,119 @@ msgid ""
 "same or different from the Mail Host. You can edit the list of available web "
 "hosts <a href=\"%s\">here</a>."
 msgstr ""
+"Doména na které chcete provozovat webové prostředí. Ta může být shodná, ale "
+"i rozdílná, od Mail Host. Seznam dostupných web hostů můžete upravit <a href="
+"\"%s\">zde</a>."
 
 #: forms/domain_forms.py:45 forms/list_forms.py:91
 #: templates/postorius/domain/index.html:21
 msgid "Mail Host"
-msgstr ""
+msgstr "Mail Host"
 
 #: forms/domain_forms.py:46 forms/domain_forms.py:65
 msgid "Please enter a domain name"
-msgstr ""
+msgstr "Zadejte doménové jméno, prosím"
 
 #: forms/domain_forms.py:47 forms/domain_forms.py:66
 msgid "Please enter a valid domain name."
-msgstr ""
+msgstr "Vložte platné doménové jméno, prosím."
 
 #: forms/domain_forms.py:50
 msgid ""
 "The domain for your mailing lists. For example when you want lists like "
 "testing@example.com, enter example.com here."
 msgstr ""
+"Doména pro Vaše mailing-listy. Kupříkladu pokud chcete listy jako testing@"
+"example.com, zadejte sem example.com."
 
 #: forms/domain_forms.py:54 forms/list_forms.py:84 forms/list_forms.py:960
 #: templates/postorius/domain/index.html:22 templates/postorius/index.html:56
 msgid "Description"
-msgstr ""
+msgstr "Popis"
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:23
 msgid "Alias Domain"
-msgstr ""
+msgstr "Aliasová doména"
 
 #: forms/domain_forms.py:59 forms/domain_forms.py:88
 msgid "Please enter a valid domain name or nothing."
-msgstr ""
+msgstr "Vložte, prosím, platné doménové jméno nebo ponechte pole prázdné."
 
 #: forms/domain_forms.py:61
 msgid "Normally empty.  Used only for unusual Postfix configs."
-msgstr ""
+msgstr "Obvykle prázdné.  Používá se pouze pro neobvyklou konfiguraci Postfixu."
 
 #: forms/domain_forms.py:64 templates/postorius/domain/index.html:24
 msgid "Web Host"
-msgstr ""
+msgstr "Web Host"
 
 #: forms/domain_forms.py:78
 msgid "Please enter a valid domain name"
-msgstr ""
+msgstr "Vložte platné doménové jméno, prosím"
 
 #: forms/domain_forms.py:103
 msgid "Owner's Email"
-msgstr ""
+msgstr "Email vlastníka"
 
 #: forms/fields.py:28
 msgid "Regular"
-msgstr ""
+msgstr "Normální"
 
 #: forms/fields.py:29
 msgid "Plain Text Digests"
-msgstr ""
+msgstr "Digesty Plain Textu"
 
 #: forms/fields.py:30
 msgid "MIME Digests"
-msgstr ""
+msgstr "Digesty MIME"
 
 #: forms/fields.py:31
 msgid "Summary Digests"
-msgstr ""
+msgstr "Digesty shrnutí"
 
 #: forms/fields.py:34 forms/list_forms.py:143
 msgid "Enabled"
-msgstr ""
+msgstr "Zapnuto"
 
 #: forms/fields.py:35 forms/list_forms.py:144
 msgid "Disabled"
-msgstr ""
+msgstr "Vypnuto"
 
 #: forms/fields.py:36
 msgid "Disabled by Owner"
-msgstr ""
+msgstr "Vypnuto vlastníkem"
 
 #: forms/fields.py:37
 msgid "Disabled by Bounces"
-msgstr ""
+msgstr "Vypnuto kvůli nedoručenkám"
 
 #: forms/fields.py:40
 msgid "Hold for moderation"
-msgstr ""
+msgstr "Čeká na moderátora"
 
 #: forms/fields.py:41
 msgid "Reject (with notification)"
-msgstr ""
+msgstr "Odmítnout (s notifikací)"
 
 #: forms/fields.py:42
 msgid "Discard (no notification)"
-msgstr ""
+msgstr "Zahodit (bez notifikace)"
 
 #: forms/fields.py:43
 msgid "Accept immediately (bypass other rules)"
-msgstr ""
+msgstr "Okamžitě přijmout (a přeskočit další pravidla)"
 
 #: forms/fields.py:44
 msgid "Default processing"
-msgstr ""
+msgstr "Výchozí zpracování"
 
 #: forms/fields.py:128
 msgid "Make at least one selection"
-msgstr ""
+msgstr "Vyberte alespoň jednu možnost"
 
 #: forms/fields.py:139 templates/postorius/lists/summary.html:52
 msgid "Delivery mode"
-msgstr ""
+msgstr "Režim doručení"
 
 #: forms/fields.py:141
 msgid ""
@@ -142,10 +148,16 @@ msgid ""
 "digests are preferred, but if you have a problem reading them, select plain "
 "text digests. Summary Digests are currently equivalent to MIME Digests."
 msgstr ""
+"Pokud si vyberete digesty, budete příspěvky dostávat spojené do jednoho ("
+"obvykle jednou denně, na živějších listech i častěji), namísto jednotlivých "
+"emailů s každou zprávou. Váš emailový klient může a nemusí podporovat "
+"digesty MIME. Obecně vzato jsou MIME digesty preferované, ale pokud je "
+"nejste schopni přečíst, vyberte si digesty v plain textu. Souhrnné digesty "
+"jsou v současnosti stejné, jako MIME digesty."
 
 #: forms/fields.py:161 templates/postorius/lists/summary.html:51
 msgid "Delivery status"
-msgstr ""
+msgstr "Status dodání"
 
 #: forms/fields.py:163
 msgid ""
@@ -155,14 +167,20 @@ msgid ""
 "mail delivery, don't forget to re-enable it when you come back; it will not "
 "be automatically re-enabled."
 msgstr ""
+"Pokud je nastaveno na Zapnuto, budete zprávy poslané do tohoto mailing-listu "
+"automaticky dostávat. Pokud vyberete Vypnuto, zůstanete sice nadále "
+"odběratelem tohoto mailing-listu, ale dočasně Vám nebudou odesílány žádné "
+"zprávy (užitečně například pokud nechcete být zprávami obtěžování během "
+"dovolené). Pokud si doručování emailů vypnete, nezapomeňte si jej po návratu "
+"opět zapnout - automaticky se tak nestane."
 
 #: forms/fields.py:174
 msgid "Moderation"
-msgstr ""
+msgstr "Moderování"
 
 #: forms/fields.py:176 forms/list_forms.py:1098
 msgid "List default"
-msgstr ""
+msgstr "Výchozí tohoto listu"
 
 #: forms/fields.py:178
 msgid ""
@@ -177,151 +195,164 @@ msgid ""
 "Accept -- accepts any postings without any further checks. \n"
 "Default Processing -- run additional checks and accept the message. \n"
 msgstr ""
+"Výchozí akce, kterou systém provede když do listu přispěje tento člen. \n"
+"Výchozí tohoto listu -- použije se výchozí chování nastavené pro tento list. "
+"\n"
+"Přidržet -- zpráva bude systémem přidržena pro kontrolu moderátory. \n"
+"Odmítnout -- tato možnost zprávu automaticky zamítne a odešle o tom "
+"odesílateli informační bounce email. Text tohoto informačního emailu můžete "
+"upravit. \n"
+"Zahodit -- zpráva bude zamítnuta a to bez notifikace autorovi. \n"
+"Přijmout -- přijme všechny zprávy ke zpracování bez jakýchkoliv kontrol. \n"
+"Výchozí zpracování -- spustí se dodatečné kontroly a zpráva je následně "
+"přijata ke zpracování. \n"
 
 #: forms/list_forms.py:39
 msgid "Daily"
-msgstr ""
+msgstr "Denně"
 
 #: forms/list_forms.py:40
 msgid "Weekly"
-msgstr ""
+msgstr "Týdně"
 
 #: forms/list_forms.py:41
 msgid "Quarterly"
-msgstr ""
+msgstr "Kvartálně"
 
 #: forms/list_forms.py:42
 msgid "Monthly"
-msgstr ""
+msgstr "Měsíčně"
 
 #: forms/list_forms.py:43
 msgid "Yearly"
-msgstr ""
+msgstr "Ročně"
 
 #: forms/list_forms.py:47
 msgid "Only mailinglist moderators"
-msgstr ""
+msgstr "Jen moderátoři mailing-listu"
 
 #: forms/list_forms.py:48
 msgid "Only mailinglist members"
-msgstr ""
+msgstr "Jen členové mailing-listu"
 
 #: forms/list_forms.py:49
 msgid "Anyone"
-msgstr ""
+msgstr "Kdokoliv"
 
 #: forms/list_forms.py:63 templates/postorius/user/subscriptions.html:22
 msgid "List Name"
-msgstr ""
+msgstr "Název listu"
 
 #: forms/list_forms.py:65
 msgid "Please enter a name for your list."
-msgstr ""
+msgstr "Prosím zadejte název Vašeho listu."
 
 #: forms/list_forms.py:66
 msgid "Please enter a valid list name."
-msgstr ""
+msgstr "Prosím zadejte platný název listu."
 
 #: forms/list_forms.py:69
 msgid "Initial list owner address"
-msgstr ""
+msgstr "Adresa výchozího vlastníka listu"
 
 #: forms/list_forms.py:71
 msgid "Please enter the list owner's email address."
-msgstr ""
+msgstr "Zadejte emailovou adresu vlastníka listu, prosím."
 
 #: forms/list_forms.py:75
 msgid "Advertise this list?"
-msgstr ""
+msgstr "Má být list zveřejněn?"
 
 #: forms/list_forms.py:77
 msgid "Please choose a list type."
-msgstr ""
+msgstr "Prosím vyberte typ listu."
 
 #: forms/list_forms.py:80
 msgid "Advertise this list in list index"
-msgstr ""
+msgstr "Zveřejnit tento list v seznamu listů"
 
 #: forms/list_forms.py:81
 msgid "Hide this list in list index"
-msgstr ""
+msgstr "Schovat tento list ze seznamu listů"
 
 #: forms/list_forms.py:94
 msgid "Choose an existing Domain."
-msgstr ""
+msgstr "Vyberte existující doménu."
 
 #: forms/list_forms.py:95
 msgid "Choose a valid Mail Host"
-msgstr ""
+msgstr "Vyberte platný Mail Host"
 
 #: forms/list_forms.py:98
 msgid "List Style"
-msgstr ""
+msgstr "Typ listu"
 
 #: forms/list_forms.py:101
 msgid "Choose a List Style."
-msgstr ""
+msgstr "Vyberte typ listu."
 
 #: forms/list_forms.py:102
 msgid "Choose a valid List Style."
-msgstr ""
+msgstr "Vyberte platný typ listu."
 
 #: forms/list_forms.py:105
 msgid "Site admin has not created any domains"
-msgstr ""
+msgstr "Správce systému nevytvořil žádné domény"
 
 #: forms/list_forms.py:118
 msgid "Please enter a valid listname"
-msgstr ""
+msgstr "Zadejte, prosím, platný název listu"
 
 #: forms/list_forms.py:147 forms/list_forms.py:180
 msgid "Your email address"
-msgstr ""
+msgstr "Vaše emailová adresa"
 
 #: forms/list_forms.py:151
 msgid ""
 "Subscribing via \"Primary Address\" will change subscription address when "
 "you change your primary address."
 msgstr ""
+"Když se přihlásíte k odběru pomocí \"Primární adresy\" bude adresa odběru "
+"automaticky upravena pokud si v profilu změníte svojí výchozí adresu."
 
 #: forms/list_forms.py:154 forms/list_forms.py:183 forms/member_forms.py:29
 #: forms/system.py:36
 msgid "Please enter an email address."
-msgstr ""
+msgstr "Prosím zadejte emailovou adresu."
 
 #: forms/list_forms.py:155 forms/list_forms.py:184 forms/member_forms.py:30
 #: forms/system.py:37
 msgid "Please enter a valid email address."
-msgstr ""
+msgstr "Prosím zadejte platnou emailovou adresu."
 
 #: forms/list_forms.py:158 forms/list_forms.py:187
 msgid "Your name (optional)"
-msgstr ""
+msgstr "Vaše jméno (volitelně)"
 
 #: forms/list_forms.py:171 forms/list_forms.py:1211 views/list.py:456
 msgid "Primary Address ({})"
-msgstr ""
+msgstr "Primární adresa ({})"
 
 #: forms/list_forms.py:202
 msgid "Open"
-msgstr ""
+msgstr "Otevřený"
 
 #: forms/list_forms.py:203 templates/postorius/domain/template_delete.html:27
 #: templates/postorius/lists/template_delete.html:24
 msgid "Confirm"
-msgstr "Potvrdit"
+msgstr "S potvrzením"
 
 #: forms/list_forms.py:204
 msgid "Moderate"
-msgstr ""
+msgstr "S moderováním"
 
 #: forms/list_forms.py:205
 msgid "Confirm, then moderate"
-msgstr ""
+msgstr "S potvrzením a moderováním"
 
 #: forms/list_forms.py:214
 msgid "Subscription Policy"
-msgstr ""
+msgstr "Pravidla pro přihlášení odběru"
 
 #: forms/list_forms.py:216
 msgid ""
@@ -332,10 +363,16 @@ msgid ""
 "Confirm then Moderate: First subscribers have to confirm, then a moderator "
 "needs to authorize."
 msgstr ""
+"Otevřený : Odběratel je přidán automaticky.\n"
+"S potvrzením: Odběratel musí nejdříve potvrdit odběr odpovědí na "
+"vygenerovaný potvrzovací email.\n"
+"S moderováním: Moderátor musí každého odběratele nejdříve schválit.\n"
+"S potvrzením a moderováním: Nejdřív musí odběratel potrdit zájem a následně "
+"jej moderátor schválit."
 
 #: forms/list_forms.py:225
 msgid "Un-Subscription Policy"
-msgstr ""
+msgstr "Pravidla pro zrušení odběru"
 
 #: forms/list_forms.py:227
 msgid ""
@@ -346,6 +383,13 @@ msgid ""
 "Confirm then Moderate: First subscribers have to confirm, then a moderator "
 "needs to authorize."
 msgstr ""
+"Otevřený : Odběratel je odebrán automaticky.\n"
+"S potvrzením: Odběratel musí nejdříve potvrdit zrušení odběru odpovědí na "
+"vygenerovaný potvrzovací email.\n"
+"S moderováním: Moderátor musí odebrání každého odběratele nejdříve schválit."
+"\n"
+"S potvrzením a moderováním: Nejdřív musí odcházející odběratel potrdit zájem "
+"a následně jej moderátor schválit."
 
 #: forms/list_forms.py:240 forms/list_forms.py:657
 #: templates/postorius/lists/held_messages.html:30
@@ -353,15 +397,15 @@ msgstr ""
 #: templates/postorius/lists/pending_confirmations.html:36
 #: templates/postorius/lists/subscription_requests.html:37
 msgid "Discard"
-msgstr ""
+msgstr "Zahodit"
 
 #: forms/list_forms.py:241
 msgid "List Admins"
-msgstr ""
+msgstr "Správci listu"
 
 #: forms/list_forms.py:242
 msgid "Site Admin"
-msgstr ""
+msgstr "Správce site"
 
 #: forms/list_forms.py:246 forms/list_forms.py:272 forms/list_forms.py:281
 #: forms/list_forms.py:290 forms/list_forms.py:402 forms/list_forms.py:410
@@ -374,7 +418,7 @@ msgstr ""
 #: forms/list_forms.py:1004 forms/list_forms.py:1025 forms/list_forms.py:1096
 #: forms/user_forms.py:58
 msgid "Yes"
-msgstr ""
+msgstr "Ano"
 
 #: forms/list_forms.py:246 forms/list_forms.py:272 forms/list_forms.py:281
 #: forms/list_forms.py:290 forms/list_forms.py:402 forms/list_forms.py:410
@@ -387,20 +431,22 @@ msgstr ""
 #: forms/list_forms.py:1004 forms/list_forms.py:1025 forms/list_forms.py:1097
 #: forms/user_forms.py:58
 msgid "No"
-msgstr ""
+msgstr "Ne"
 
 #: forms/list_forms.py:248
 msgid "Process Bounces"
-msgstr ""
+msgstr "Zpracovat automatické odpovědi (Bounces)"
 
 #: forms/list_forms.py:250
 msgid ""
 "Specifies whether or not this list should do automatic bounce processing."
 msgstr ""
+"Specifikuje, jestli tento list bude zpracovávat automatické odpovědi "
+"(bounces)."
 
 #: forms/list_forms.py:255
 msgid "Bounce score threshold"
-msgstr ""
+msgstr "Limit Bounce skóre"
 
 #: forms/list_forms.py:258
 msgid ""
@@ -408,6 +454,8 @@ msgid ""
 "automatically disabled. When the subscription is  re-enabled, their bounce "
 "score will be reset to zero."
 msgstr ""
+"Při překročení tohoto Bounce skóre bude uživatelův odběr automaticky "
+"zakázán. Při znovupovolení odběru bude toto skóre resetnuto na nulu."
 
 #: forms/list_forms.py:263
 msgid "Bounce info stale after"
