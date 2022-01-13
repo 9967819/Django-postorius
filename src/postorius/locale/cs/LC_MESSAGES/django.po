@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-30 14:54+0300\n"
-"PO-Revision-Date: 2022-01-12 22:42+0000\n"
+"PO-Revision-Date: 2022-01-15 14:53+0000\n"
 "Last-Translator: Sebastian Machat <sebi@outlook.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/cs/>\n"
@@ -459,7 +459,7 @@ msgstr ""
 
 #: forms/list_forms.py:263
 msgid "Bounce info stale after"
-msgstr ""
+msgstr "Kdy resetovat počítadlo autoodpovědí (bounce)"
 
 #: forms/list_forms.py:266
 msgid ""
@@ -467,10 +467,13 @@ msgid ""
 "stale. If no new bounces have been received in the interim, the bounce score "
 "is reset to zero. This value must be an integer. "
 msgstr ""
+"Počet dní, po kterém se považuje informace z autoodpovědi (bounce) za "
+"resetované. Pokud v průběhu tohoto času žádné další bounce zprávy nedorazí, "
+"je skóre resetované na nulu. Hodnota musí být int. "
 
 #: forms/list_forms.py:274
 msgid "Notify owner on bounce increment"
-msgstr ""
+msgstr "Upozornit vlastníka na zvýšení skóre bounce"
 
 #: forms/list_forms.py:276
 msgid ""
@@ -478,10 +481,13 @@ msgid ""
 "member's bounce score is incremented, but to a value less than their bounce "
 "threshold. "
 msgstr ""
+"Vlastník listu bude, nebo nebude v závislosti na nastavení této možnosti "
+"notifikován v případě, že se členovo bounce skóre změní a to v případě, že "
+"zatím nebylo dosaženou bounce limitu. "
 
 #: forms/list_forms.py:283
 msgid "Notify owner on disable"
-msgstr ""
+msgstr "Upozornit vlastníka při deaktivaci"
 
 #: forms/list_forms.py:285
 msgid ""
@@ -489,10 +495,12 @@ msgid ""
 "member's subscription is automatically disabled due to their bounce "
 "threshold being reached. "
 msgstr ""
+"Tato možnost určuje, jestli má být vlastník notifikován v případě, že je "
+"členův odběr automaticky deaktivován z důvodu dosažení limitu bounce skóre. "
 
 #: forms/list_forms.py:292
 msgid "Notify owner on removal"
-msgstr ""
+msgstr "Upozornit majitele při odstranění"
 
 #: forms/list_forms.py:294
 msgid ""
@@ -500,10 +508,13 @@ msgid ""
 "is removed from the list after their disabled notifications have been "
 "exhausted. "
 msgstr ""
+"Tento přepínač určuje, jestli má být vlasník listu upozorněn v případě, že "
+"je odběratel z listu odstraněn po vyčerpání limitu deaktivovaných "
+"notifikací. "
 
 #: forms/list_forms.py:301
 msgid "Forward unrecognized bounces"
-msgstr ""
+msgstr "Přeposlat nerozpoznané automatické odpovědi (bounce)"
 
 #: forms/list_forms.py:302
 msgid ""
@@ -511,18 +522,21 @@ msgid ""
 "List Admins: Send to the list owners and moderators\n"
 "Site Admin: Send to the site's configured site_owner"
 msgstr ""
+"Zahodit: Nerozpoznané automatické odpovědi budou zahozeny\n"
+"Správci listu: Odeslat vlastníkům a moderátorům listu\n"
+"Správce systému: Odeslat nastavenému správci systému"
 
 #: forms/list_forms.py:307
 msgid "Bounce disabled warnings interval"
-msgstr ""
+msgstr "Interval pro deaktivaci upozornění na bounce"
 
 #: forms/list_forms.py:310
 msgid "The number of days between each disabled notification."
-msgstr ""
+msgstr "Počet dní mezi jednotlivými notifikacemi o deaktivaci."
 
 #: forms/list_forms.py:314
 msgid "Bounce disable warnings"
-msgstr ""
+msgstr "Upozornění na deaktivaci po bounce"
 
 #: forms/list_forms.py:317
 msgid ""
@@ -531,6 +545,9 @@ msgid ""
 "an address from the list once their bounce score exceeds the threshold. This "
 "value must be an integer. "
 msgstr ""
+"Počet notifikací které budou deaktivovanému členovi odeslané předtím, než je "
+"jejich emailová adresa z mailing-listu odstraněna. Pro odstranění adresy "
+"okamžitě po dosažení bounce skóre zde nastavte 0. Hodnota musí být int. "
 
 #: forms/list_forms.py:331
 msgid "Public archives"
