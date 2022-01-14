@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Eric <spice2wolf@gmail.com>, 2021.
 # Cube Kassaki <2524737581@qq.com>, 2021.
-# Dingzhong Chen <wsxy162@gmail.com>, 2021.
+# Dingzhong Chen <wsxy162@gmail.com>, 2021, 2022.
 # poi <erbaotao@outlook.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-30 00:53-0700\n"
-"PO-Revision-Date: 2021-12-27 22:24+0000\n"
+"PO-Revision-Date: 2022-01-15 14:53+0000\n"
 "Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "gnu-mailman/postorius/zh_Hans/>\n"
@@ -895,10 +895,10 @@ msgid ""
 " Preserve = save the message in qfiles/bad.\n"
 msgstr ""
 "过滤之后没有内容的消息所采用的动作。\n"
-"丢弃 = 默默地丢弃消息。\n"
-"拒绝 = 丢弃消息并通知发件人。\n"
-"转发 = 转发消息至列表所有者。\n"
-"保留 = 保存消息到 qfiles/bad。\n"
+" 丢弃 = 默默地丢弃消息。\n"
+" 拒绝 = 丢弃消息并通知发件人。\n"
+" 转发 = 转发消息至列表所有者。\n"
+" 保留 = 保存消息到 qfiles/bad。\n"
 
 #: forms/list_forms.py:680
 msgid "Personalize"
