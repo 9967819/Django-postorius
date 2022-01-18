@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-30 14:54+0300\n"
-"PO-Revision-Date: 2022-01-15 14:53+0000\n"
+"PO-Revision-Date: 2022-01-19 13:17+0000\n"
 "Last-Translator: Sebastian Machat <sebi@outlook.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/cs/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.10.1\n"
+"X-Generator: Weblate 4.11-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -551,15 +551,15 @@ msgstr ""
 
 #: forms/list_forms.py:331
 msgid "Public archives"
-msgstr ""
+msgstr "Veřejné archivy"
 
 #: forms/list_forms.py:332
 msgid "Private archives"
-msgstr ""
+msgstr "Soukromé archivy"
 
 #: forms/list_forms.py:333
 msgid "Do not archive this list"
-msgstr ""
+msgstr "Tento list nearchivovat"
 
 #: forms/list_forms.py:337
 msgid "Plain text"
