@@ -568,11 +568,11 @@ msgstr ""
 
 #: forms/list_forms.py:331
 msgid "Public archives"
-msgstr "Öffentliche Archive"
+msgstr "Öffentliches Archiv"
 
 #: forms/list_forms.py:332
 msgid "Private archives"
-msgstr "Private Archive"
+msgstr "Privates Archiv"
 
 #: forms/list_forms.py:333
 msgid "Do not archive this list"
@@ -608,8 +608,8 @@ msgid ""
 "formatting based on markup in the email.\n"
 "Currently, this option is only supported by Hyperkitty."
 msgstr ""
-"Diese Option aktiviert die Anzeige von E-Mails im Rich-Text-Format mit "
-"Markdown-Auszeichnungen. \n"
+"Diese Option aktiviert die Anzeige von E-Mails im Archivierer als Rich-Text-"
+"Format mit Markdown-Auszeichnungen. \n"
 "Bisher wird diese Option nur von Hyperkitty unterstützt."
 
 #: forms/list_forms.py:390
@@ -2080,7 +2080,7 @@ msgstr "Benutzer"
 
 #: templates/postorius/base.html:69 templates/postorius/lists/summary.html:31
 msgid "Archives"
-msgstr "Archive"
+msgstr "Archiv"
 
 #: templates/postorius/base.html:85
 msgid "Account"
@@ -2605,7 +2605,7 @@ msgid ""
 msgstr ""
 "\n"
 "            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s"
-"\">Archive</a>\n"
+"\">Archiv</a>\n"
 "          "
 
 #: templates/postorius/lists/summary.html:45
@@ -2655,8 +2655,8 @@ msgstr ""
 "\n"
 "                Um Mitglied zu werden, senden Sie bitte eine E-Mail mit "
 "'subscribe' im Betreff an\n"
-"                  <a href=\"mailto:%(address)s?subject=Subscribe\""
-">%(address)s</a>\n"
+"                  <a href=\"mailto:%(address)s?subject=Subscribe\">"
+"%(address)s</a>\n"
 "                  oder benutzen Sie das Formular unterhalb:\n"
 "            "
 

@@ -4,13 +4,14 @@
 # balping <balping314@gmail.com>, 2020.
 # Peter Donka <peter.donka@gmail.com>, 2021.
 # -- <eneremen@gmail.com>, 2021.
+# f3rr31 <5920873@disroot.org>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-30 14:55+0300\n"
-"PO-Revision-Date: 2021-10-27 11:49+0000\n"
-"Last-Translator: Peter Donka <peter.donka@gmail.com>\n"
+"PO-Revision-Date: 2021-12-27 22:24+0000\n"
+"Last-Translator: f3rr31 <5920873@disroot.org>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/hu/>\n"
 "Language: hu\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.9-dev\n"
+"X-Generator: Weblate 4.10.1\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -1654,7 +1655,7 @@ msgstr "Adat"
 
 #: forms/member_forms.py:27
 msgid "Email Address"
-msgstr "E-mail cím"
+msgstr "E-mail-cím"
 
 #: forms/member_forms.py:32 forms/user_forms.py:316
 msgid "Display Name"
@@ -1753,7 +1754,7 @@ msgstr "Ellenőrzött"
 
 #: forms/user_forms.py:243
 msgid "Specifies whether or not this email address is verified"
-msgstr "Meghatározza, hogy ez az e-mail cím ellenőrzött-e vagy sem."
+msgstr "Meghatározza, hogy ez az e-mail cím ellenőrzött-e vagy sem"
 
 #: forms/validators.py:39
 #, python-brace-format
@@ -2505,7 +2506,7 @@ msgstr "Új lista létrehozása"
 #: templates/postorius/lists/pending_confirmations.html:19
 #: templates/postorius/lists/subscription_requests.html:19
 msgid "E-Mail Address"
-msgstr "E-mail cím"
+msgstr "E-mail-cím"
 
 #: templates/postorius/lists/pending_confirmations.html:20
 #: templates/postorius/lists/subscription_requests.html:20

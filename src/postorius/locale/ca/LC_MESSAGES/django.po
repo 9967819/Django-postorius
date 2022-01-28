@@ -1,15 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# Ecron <ecron_89@hotmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-30 14:54+0300\n"
-"PO-Revision-Date: 2020-03-30 18:31+0000\n"
-"Last-Translator: Jaume Ortolà i Font <jaumeortola@gmail.com>\n"
+"PO-Revision-Date: 2021-11-24 21:51+0000\n"
+"Last-Translator: Ecron <ecron_89@hotmail.com>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ca/>\n"
 "Language: ca\n"
@@ -17,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.0-dev\n"
+"X-Generator: Weblate 4.10-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -90,10 +89,8 @@ msgid "Plain Text Digests"
 msgstr "Resums de text sense format"
 
 #: forms/fields.py:30
-#, fuzzy
-#| msgid "Mime Digests"
 msgid "MIME Digests"
-msgstr "Resums MIme"
+msgstr "Resums MIME"
 
 #: forms/fields.py:31
 msgid "Summary Digests"
@@ -108,14 +105,12 @@ msgid "Disabled"
 msgstr "Desactivat"
 
 #: forms/fields.py:36
-#, fuzzy
-#| msgid "Disabled"
 msgid "Disabled by Owner"
-msgstr "Desactivat"
+msgstr "Desactivat pel propietari"
 
 #: forms/fields.py:37
 msgid "Disabled by Bounces"
-msgstr ""
+msgstr "Desactivat pels rebots"
 
 #: forms/fields.py:40
 msgid "Hold for moderation"
@@ -559,10 +554,8 @@ msgid "Do not archive this list"
 msgstr "No arxivar aquesta llista"
 
 #: forms/list_forms.py:337
-#, fuzzy
-#| msgid "Plain Text Digests"
 msgid "Plain text"
-msgstr "Resums de text sense format"
+msgstr "Text sense format"
 
 #: forms/list_forms.py:338
 msgid "Markdown text"
@@ -1758,7 +1751,7 @@ msgstr ""
 
 #: forms/user_forms.py:241
 msgid "Verified"
-msgstr ""
+msgstr "Verificada"
 
 #: forms/user_forms.py:243
 #, fuzzy
@@ -2086,7 +2079,7 @@ msgstr "Compte"
 
 #: templates/postorius/base.html:89
 msgid "Mailman settings"
-msgstr "Configuració de Mailman"
+msgstr "Configuració del Mailman"
 
 #: templates/postorius/base.html:94
 msgid "Posting activity"
@@ -2102,7 +2095,7 @@ msgstr "Inici de sessió"
 
 #: templates/postorius/base.html:111
 msgid "Sign Up"
-msgstr "Inscriure's"
+msgstr "Registreu-vos"
 
 #: templates/postorius/base.html:134
 msgid "Postorius Documentation"
@@ -2148,7 +2141,7 @@ msgstr ""
 #: templates/postorius/lists/template_list.html:32
 #: templates/postorius/menu/list_nav.html:62
 msgid "Delete"
-msgstr "Suprimir"
+msgstr "Suprimeix"
 
 #: templates/postorius/domain/confirm_delete.html:34
 #: templates/postorius/domain/template_delete.html:28
@@ -2186,7 +2179,7 @@ msgstr "suprimir"
 
 #: templates/postorius/domain/index.html:54
 msgid "Add"
-msgstr "Afegir"
+msgstr "Afegeix"
 
 #: templates/postorius/domain/index.html:57
 #: templates/postorius/domain/template_add.html:6
@@ -2853,7 +2846,7 @@ msgstr "Desar"
 
 #: templates/postorius/user/all.html:20
 msgid "Search"
-msgstr ""
+msgstr "Cerca"
 
 #: templates/postorius/user/all.html:35
 #, fuzzy
@@ -2891,7 +2884,7 @@ msgstr "Subscripció en bloc"
 #: templates/postorius/user/manage.html:48
 #: templates/postorius/user/manage.html:86
 msgid "Update"
-msgstr ""
+msgstr "Actualitza"
 
 #: templates/postorius/user/manage.html:18
 #, fuzzy
@@ -2904,10 +2897,8 @@ msgid "Email"
 msgstr ""
 
 #: templates/postorius/user/manage.html:62
-#, fuzzy
-#| msgid "Lists"
 msgid "List"
-msgstr "Llistes"
+msgstr "Llista"
 
 #: templates/postorius/user/manage.html:64
 #: templates/postorius/user/subscriptions.html:25
@@ -2927,10 +2918,8 @@ msgid "Web Account"
 msgstr "Compte"
 
 #: templates/postorius/user/manage.html:96
-#, fuzzy
-#| msgid "Users"
 msgid "Username"
-msgstr "Usuaris"
+msgstr "Nom d'usuari"
 
 #: templates/postorius/user/manage.html:100
 msgid "Superuser"
