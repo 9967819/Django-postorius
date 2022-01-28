@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-30 14:54+0300\n"
-"PO-Revision-Date: 2022-01-19 13:17+0000\n"
+"PO-Revision-Date: 2022-01-28 20:32+0000\n"
 "Last-Translator: Sebastian Machat <sebi@outlook.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/cs/>\n"
@@ -563,27 +563,27 @@ msgstr "Tento list nearchivovat"
 
 #: forms/list_forms.py:337
 msgid "Plain text"
-msgstr ""
+msgstr "Obyčejný text"
 
 #: forms/list_forms.py:338
 msgid "Markdown text"
-msgstr ""
+msgstr "Text v notaci Markdown"
 
 #: forms/list_forms.py:344
 msgid "Archive policy"
-msgstr ""
+msgstr "Politika archivování"
 
 #: forms/list_forms.py:345
 msgid "Policy for archiving messages for this list"
-msgstr ""
+msgstr "Politika pro archivování zpráv v tomto listu"
 
 #: forms/list_forms.py:350
 msgid "Active archivers"
-msgstr ""
+msgstr "Aktivní pravidla archivování"
 
 #: forms/list_forms.py:357
 msgid "Archive Rendering mode"
-msgstr ""
+msgstr "Režim generování archivu"
 
 #: forms/list_forms.py:358
 msgid ""
@@ -591,10 +591,13 @@ msgid ""
 "formatting based on markup in the email.\n"
 "Currently, this option is only supported by Hyperkitty."
 msgstr ""
+"Tato možnost zapne generování emailů v archiveru jako rich-text s "
+"formátováním dle notace použité v emailu.\n"
+"V současnosti je tato možnost podporovaná pouze v Hyperkitty."
 
 #: forms/list_forms.py:390
 msgid "Acceptable aliases"
-msgstr ""
+msgstr "Akceptované aliasy"
 
 #: forms/list_forms.py:393
 msgid ""
@@ -606,20 +609,29 @@ msgid ""
 "message. The matching is performed with Python's re.match() function, "
 "meaning they are anchored to the start of the string."
 msgstr ""
+"Toto je seznam adres a regexpů, které budou povoleny v polích \"Příjemce\" a "
+"\"Kopie\" v případě, že je aktivní možnost `require_explicit_destination' is "
+"enabled. Jedna adresa/regexp vždy na nový řádek.  Záznamy jsou buď "
+"emailovými adresami, nebo regexpy, které se na emailovou adresu namapují.  K "
+"mapování regexpů se používá funkce re.match() v Pythonu - to znamená že jsou "
+"ukotveny k počátku stringu."
 
 #: forms/list_forms.py:404
 msgid "Require Explicit Destination"
-msgstr ""
+msgstr "Požadovat explicitní destinaci"
 
 #: forms/list_forms.py:406
 msgid ""
 "This checks to ensure that the list posting address or an acceptable alias "
 "explicitly appears in a To: or Cc: header in the post."
 msgstr ""
+"Tato kontrola zabezpečí, že se v hlavičce \"Příjemce\" (To:) nebo \"Kopie\" "
+"(Cc:) příspěvku vyskytuje buď adresa listu, nebo jeden z akceptovaných "
+"aliasů."
 
 #: forms/list_forms.py:412
 msgid "Administrivia"
-msgstr ""
+msgstr "Administrivia"
 
 #: forms/list_forms.py:414
 msgid ""
@@ -628,14 +640,20 @@ msgid ""
 "it to the the administrative requests queue, notifying the administrator of "
 "the new request, in the process."
 msgstr ""
+"Testy Administrivia zkontrolují příchozí příspěvky, zdali byly skutečně "
+"míněné jako požadavek na administraci (například přihlásit nebo odhlásit "
+"odběr, atd.) a pokud kontroly projdou, jsou tyto požadavky přidány do fronty "
+"administrativních požadavků. Administrátor bude o těchto požadavcích "
+"notifikován."
 
 #: forms/list_forms.py:421
 msgid "Default action to take when a member posts to the list"
 msgstr ""
+"Výchozí akce, která se provede v případě přijetí příspěvku od člena listu"
 
 #: forms/list_forms.py:423
 msgid "Please choose a default member action."
-msgstr ""
+msgstr "Vyberte výchozí členskou akci."
 
 #: forms/list_forms.py:427
 msgid ""
@@ -648,14 +666,21 @@ msgid ""
 "Accept: accepts any postings without any further checks.\n"
 "Default Processing: run additional checks and accept the message."
 msgstr ""
+"Výchozí akce, která se provede v případě přijetí příspěvku od člena listu.\n"
+"Přidržet: Tato možnost zprávu pozdrží pro schválení moderátorem listu.\n"
+"Odmítnout: Tato možnost automaticky zprávu zamítne. Autorovi příspěvku je "
+"odeslána notifikace o bounce. Text notifikace je nastavitelný.\n"
+"Zahodit: Zpráva se zahodí bez jakékoliv notifikace.\n"
+"Přijmout: Zpráva je zpracována a přijata bez dalších kontrol.\n"
+"Výchozí zpracování: jsou provedeny dodatečné kontroly a zpráva bude přijata."
 
 #: forms/list_forms.py:440
 msgid "Default action to take when a non-member posts to the list"
-msgstr ""
+msgstr "Výchozí akce, která se provede v případě přijetí příspěvku od nečlena"
 
 #: forms/list_forms.py:442
 msgid "Please choose a default non-member action."
-msgstr ""
+msgstr "Prosím vyberte výchozí akci pro nečleny."
 
 #: forms/list_forms.py:446
 msgid ""
@@ -663,10 +688,13 @@ msgid ""
 "against the list of explicitly accepted, held, rejected (bounced), and "
 "discarded addresses. If no match is found, then this action is taken."
 msgstr ""
+"Po přijetí příspěvku od nečlena listu proběhne porovnání jeho adresy se "
+"seznamem výslovně povolených, přidržených, odmítnutých a zahozených adres. "
+"Pokud se nenalezne odpovídající záznam, provede se tato akce."
 
 #: forms/list_forms.py:453
 msgid "Emergency Moderation"
-msgstr ""
+msgstr "Nouzové moderování"
 
 #: forms/list_forms.py:455
 msgid ""
@@ -674,20 +702,25 @@ msgid ""
 "held for moderation. Turn this option on when your list is experiencing a "
 "flamewar and you want a cooling off period. "
 msgstr ""
+"Po výběru této možnosti je všechen provoz v listu nouzově moderován - např. "
+"pozdržen pro moderování. Tuto možnost zapněte, pokud se v listu rozjede "
+"nevhodná diskuze a vy si ji přejete \"zchladit\". "
 
 #: forms/list_forms.py:462
 msgid "Maximum message size"
-msgstr ""
+msgstr "Maximální velikost zprávy"
 
 #: forms/list_forms.py:465
 msgid ""
 "The maximum allowed message size in KB. This can be used to prevent emails "
 "with large attachments. A size of 0 disables the check."
 msgstr ""
+"Maximální velikost zprávy v kB. Tuto možnost využijte pro zablokování emailů "
+"s velkými přílohami. Pokud je nastaveno na 0, kontrola je vypnuta."
 
 #: forms/list_forms.py:470
 msgid "Maximum number of recipients"
-msgstr ""
+msgstr "Maximální počet příjemců"
 
 #: forms/list_forms.py:473
 msgid ""
@@ -695,10 +728,13 @@ msgid ""
 "will be held for moderation. This can be used to prevent mass mailings from "
 "being accepted. A value of 0 disables the check."
 msgstr ""
+"Příspěvek s více příjemci (To: a Cc:) bude automaticky přidržen k "
+"moderování. Jedná se o kontrolu proti masovému mailingu. Hodnota 0 tuto "
+"kontrolu vypíná."
 
 #: forms/list_forms.py:488
 msgid "Accept these non-members"
-msgstr ""
+msgstr "Příjímat od těchto nečlenů"
 
 #: forms/list_forms.py:491
 msgid ""
@@ -709,10 +745,15 @@ msgid ""
 "to add the address as a nonmember and set the nonmember's Moderation to "
 "Default Processing."
 msgstr ""
+"V případě, že nový příspěvek dorazí od odesílatele který sice není přihlášen "
+"k odběru, ale jeho adresa bude odpovídat následujícímu regexpu, bude "
+"automaticky přijat. Každý záznam patří na nový řádek. Záznamy jsou regexpy "
+"začínající na `^'. Lze sem zadat i jednotlivé adresy, ale procesně je "
+"vhodnější pro \"známé\" nečleny využít seznam nečlenů."
 
 #: forms/list_forms.py:501
 msgid "Hold these non-members"
-msgstr ""
+msgstr "Přidržet od těchto nečlenů"
 
 #: forms/list_forms.py:504
 msgid ""
@@ -722,10 +763,15 @@ msgid ""
 "regexp addresses can be entered here, it is preferred to add the address as "
 "a nonmember and set the nonmember's Moderation to Hold."
 msgstr ""
+"V případě, že nový příspěvek dorazí od odesílatele který sice není přihlášen "
+"k odběru, ale jeho adresa bude odpovídat následujícímu regexpu, bude přijat "
+"k moderování. Každý záznam patří na nový řádek. Záznamy jsou regexpy "
+"začínající na `^'. Lze sem zadat i jednotlivé adresy, ale procesně je "
+"vhodnější pro \"známé\" nečleny využít seznam nečlenů."
 
 #: forms/list_forms.py:513
 msgid "Reject these non-members"
-msgstr ""
+msgstr "Zamítnout od těchto nečlenů"
 
 #: forms/list_forms.py:516
 msgid ""
@@ -735,10 +781,15 @@ msgid ""
 "message. While non-regexp addresses can be entered here, it is preferred to "
 "add the address as a nonmember and set the nonmember's Moderation to Reject."
 msgstr ""
+"V případě, že nový příspěvek dorazí od odesílatele který sice není přihlášen "
+"k odběru, ale jeho adresa bude odpovídat následujícímu regexpu, bude "
+"automaticky zamítnut. Každý záznam patří na nový řádek. Záznamy jsou regexpy "
+"začínající na `^'. Lze sem zadat i jednotlivé adresy, ale procesně je "
+"vhodnější pro \"známé\" nečleny využít seznam nečlenů."
 
 #: forms/list_forms.py:526
 msgid "Discard these non-members"
-msgstr ""
+msgstr "Zahodit od těchto nečlenů"
 
 #: forms/list_forms.py:529
 msgid ""
@@ -748,76 +799,84 @@ msgid ""
 "regexp addresses can be entered here, it is preferred to add the address as "
 "a nonmember and set the nonmember's Moderation to Discard."
 msgstr ""
+"V případě, že nový příspěvek dorazí od odesílatele který sice není přihlášen "
+"k odběru, ale jeho adresa bude odpovídat následujícímu regexpu, bude "
+"automaticky zahozen. Každý záznam patří na nový řádek. Záznamy jsou regexpy "
+"začínající na `^'. Lze sem zadat i jednotlivé adresy, ale procesně je "
+"vhodnější pro \"známé\" nečleny využít seznam nečlenů."
 
 #: forms/list_forms.py:551
 msgid "Invalid alias regexp: {}: {}"
-msgstr ""
+msgstr "Neplatný regexp pro alias: {}: {}"
 
 #: forms/list_forms.py:557
 msgid "Invalid alias email: {}"
-msgstr ""
+msgstr "Neplatný alias emailu: {}"
 
 #: forms/list_forms.py:569
 msgid "Enable Digests"
-msgstr ""
+msgstr "Povolit Shrnutí"
 
 #: forms/list_forms.py:570
 msgid "Should Mailman enable digests for this MailingList?"
-msgstr ""
+msgstr "Má Mailman v tomto mailing-listu povolit Shrnutí (digest)?"
 
 #: forms/list_forms.py:576
 msgid "Send Digest Periodically"
-msgstr ""
+msgstr "Pravidelně odesílat Shrnutí"
 
 #: forms/list_forms.py:577
 msgid "Should Mailman send out digests periodically?"
-msgstr ""
+msgstr "Má Mailman Shrnutí rozesílat v pravidelných intervalech?"
 
 #: forms/list_forms.py:583
 msgid "Digest Volume Frequency"
-msgstr ""
+msgstr "Frekvence odesílání Shrnutí"
 
 #: forms/list_forms.py:584
 msgid ""
 "At what frequency should Mailman increment the digest volume number and "
 "reset the issue number?"
 msgstr ""
+"S jakou frekvencí by měl Mailman navýšit číslo Shrnutí a vynulovat číslo "
+"vydání?"
 
 #: forms/list_forms.py:588
 msgid "Digest size threshold"
-msgstr ""
+msgstr "Hranice velikosti pro odeslání Shrnutí"
 
 #: forms/list_forms.py:589
 msgid "How big in Kb should a digest be before it gets sent out?"
-msgstr ""
+msgstr "Jak velké (v kB) by mělo Shrnutí být, než smí být zpráva odeslána?"
 
 #: forms/list_forms.py:598
 msgid "DMARC mitigation action"
-msgstr ""
+msgstr "Akce pro zamezení DMARC"
 
 #: forms/list_forms.py:602
 msgid "Please choose a DMARC mitigation action."
-msgstr ""
+msgstr "Prosím vyberte akci pro zamezení DMARC."
 
 #: forms/list_forms.py:604
 msgid "No DMARC mitigations"
-msgstr ""
+msgstr "Žádná zamezení DMARC"
 
 #: forms/list_forms.py:605
 msgid "Replace From: with list address"
-msgstr ""
+msgstr "Nahradit Odesílatele emailu (From:) adresou listu"
 
 #: forms/list_forms.py:607
 msgid "Wrap the message in an outer message From: the list."
 msgstr ""
+"Obalit původní zprávu vnější obálkou s adresou odesílatele mailing-listu."
 
 #: forms/list_forms.py:608
 msgid "Reject the message"
-msgstr ""
+msgstr "Zamítnout zprávu"
 
 #: forms/list_forms.py:609
 msgid "Discard the message"
-msgstr ""
+msgstr "Zahodit zprávu"
 
 #: forms/list_forms.py:611
 msgid ""
