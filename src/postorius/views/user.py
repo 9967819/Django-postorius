@@ -25,7 +25,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AdminPasswordChangeForm
 from django.forms import formset_factory
 from django.http import Http404
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.urls import reverse, reverse_lazy
 from django.utils.decorators import method_decorator
 from django.utils.translation import gettext as _
@@ -435,6 +435,9 @@ def manage_user(request, user_id):
                 change_password.fields[
                     'password1'].widget.attrs['autofocus'] = False
 
+        return redirect(reverse('manage_user', args=(user_id,)))
+
+    # In case of GET request, return the formsets with initial data.
     return render(request,
                   'postorius/user/manage.html',
                   {'auser': user,

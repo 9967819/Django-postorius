@@ -8,3 +8,4 @@ coverage
 dist
 .idea
 _build
+.venv
