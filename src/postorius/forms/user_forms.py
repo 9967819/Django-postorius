@@ -121,7 +121,7 @@ class UserPreferences(forms.Form):
         if not self.changed_data:
             return
         for key in self.changed_data:
-            if self.cleaned_data[key] is not None:
+            if self.cleaned_data[key] not in (None, ""):
                 # None: nothing set yet. Remember to remove this test
                 # when Mailman accepts None as a "reset to default"
                 # value.
@@ -201,7 +201,8 @@ class ManageMemberForm(forms.Form):
             return False
         for each in self.changed_data:
             updated = self.cleaned_data.get(each)
-            setattr(self.member, each, updated)
+            if updated not in (None, ""):
+                setattr(self.member, each, updated)
         self.member.save()
         return True
 

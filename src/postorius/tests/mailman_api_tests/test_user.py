@@ -486,7 +486,8 @@ class TestManageUser(ViewTestCase):
         self.client.force_login(self.su)
         response = self.client.post(
             reverse('manage_user', args=[self.user.user_id]),
-            data={'display_name': 'My User', 'user_form': 'Update'})
+            data={'display_name': 'My User', 'user_form': 'Update'},
+            follow=True)
         self.assertEqual(response.status_code, 200)
         self.assertIn('Successfully updated user.', response.content.decode())
 
@@ -505,7 +506,8 @@ class TestManageUser(ViewTestCase):
         }
         response = self.client.post(
             reverse('manage_user', args=[self.user.user_id]),
-            data=formdata)
+            data=formdata,
+            follow=True)
         self.assertEqual(response.status_code, 200)
         self.assertTrue(self.user.addresses[0].verified)
         self.assertIn('Successfully updated addresses user@example.com',
@@ -525,7 +527,8 @@ class TestManageUser(ViewTestCase):
         }
         response = self.client.post(
             reverse('manage_user', args=[self.user.user_id]),
-            data=data)
+            data=data,
+            follow=True)
         self.assertEqual(response.status_code, 200)
         self.assertIn('Successfully updated memberships for test.example.com',
                       response.content.decode())
@@ -545,7 +548,7 @@ class TestManageUser(ViewTestCase):
         response = self.client.post(
             reverse('manage_user', args=[self.user.user_id]),
             data=data)
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 302)
         # Verify by tring to login.
         self.assertTrue(
             self.client.login(username='myuser', password='newpsdsd1987'))
