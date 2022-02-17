@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-30 14:55+0300\n"
-"PO-Revision-Date: 2022-02-12 14:49+0000\n"
+"PO-Revision-Date: 2022-02-17 06:39+0000\n"
 "Last-Translator: Piotr Frankowski <piotr@ten.net.pl>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/pl/>\n"
@@ -537,7 +537,7 @@ msgstr "Nie archiwizuj tej listy"
 
 #: forms/list_forms.py:337
 msgid "Plain text"
-msgstr ""
+msgstr "Zwykły tekst"
 
 #: forms/list_forms.py:338
 msgid "Markdown text"
