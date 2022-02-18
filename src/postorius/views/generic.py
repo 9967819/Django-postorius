@@ -109,8 +109,8 @@ def bans_view(request, template, list_id=None):
                 try:
                     ban_list.add(addban_form.cleaned_data['email'])
                     messages.success(request, _(
-                        'The email {} has been banned.'.format(
-                            addban_form.cleaned_data['email'])))
+                        'The email {} has been banned.').format(
+                            addban_form.cleaned_data['email']))
                 except HTTPError as e:
                     messages.error(
                         request, _('An error occurred: %s') % e.reason)
@@ -121,8 +121,8 @@ def bans_view(request, template, list_id=None):
             try:
                 ban_list.remove(request.POST['email'])
                 messages.success(request, _(
-                    'The email {} has been un-banned'.format(
-                        request.POST['email'])))
+                    'The email {} has been un-banned').format(
+                        request.POST['email']))
             except HTTPError as e:
                 messages.error(request, _('An error occurred: %s') % e.reason)
             except ValueError as e:
