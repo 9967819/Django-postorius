@@ -27,7 +27,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 
 * Fix a bug where various form(s) allowed setting empty values for
   ``delivery_mode`` and ``language``. (Fixes #540, #522)
-
+* Rename labels description and info fields as 'Short Description'
+  and 'Long Description' to signify what they mean. (Fixes #510)
 
 
 .. _NEWS-1.3.6:

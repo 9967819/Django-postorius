@@ -81,7 +81,7 @@ class ListNew(forms.Form):
             (False, _("Hide this list in list index"))))
     list_style = forms.ChoiceField()
     description = forms.CharField(
-        label=_('Description'),
+        label=_('Short Description'),
         required=False)
 
     def __init__(self, domain_choices, style_choices, *args, **kwargs):
@@ -957,7 +957,7 @@ class ListIdentityForm(ListSettingsForm):
         help_text=_('Choose whether to include this list '
                     'on the list of all lists'))
     description = forms.CharField(
-        label=_('Description'),
+        label=_('Short Description'),
         required=False,
         help_text=_(
             'This description is used when the mailing list is listed with '
@@ -966,7 +966,7 @@ class ListIdentityForm(ListSettingsForm):
             'list is.'),
     )
     info = forms.CharField(
-        label=_('Information'),
+        label=_('Long Description'),
         help_text=_('A longer description of this mailing list.'),
         required=False,
         widget=forms.Textarea())
