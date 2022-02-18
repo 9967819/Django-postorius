@@ -9,11 +9,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-30 00:53-0700\n"
+"POT-Creation-Date: 2022-02-17 23:23-0800\n"
 "PO-Revision-Date: 2022-01-15 14:53+0000\n"
 "Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
-"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
-"gnu-mailman/postorius/zh_Hans/>\n"
+"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/gnu-"
+"mailman/postorius/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,7 +28,8 @@ msgid ""
 "same or different from the Mail Host. You can edit the list of available web "
 "hosts <a href=\"%s\">here</a>."
 msgstr ""
-"你希望从中提供 Web UI 的域。 与邮件主机相同或不同都可以。 你可以在<a href=\"%s\">此处</a>编辑可用的 Web 主机列表。"
+"你希望从中提供 Web UI 的域。 与邮件主机相同或不同都可以。 你可以在<a href="
+"\"%s\">此处</a>编辑可用的 Web 主机列表。"
 
 #: forms/domain_forms.py:45 forms/list_forms.py:91
 #: templates/postorius/domain/index.html:21
@@ -47,10 +48,12 @@ msgstr "请输入有效的域名。"
 msgid ""
 "The domain for your mailing lists. For example when you want lists like "
 "testing@example.com, enter example.com here."
-msgstr "你的邮件列表的域。 例如，当你需要 testing@example.com 之类的列表时，请在此处输入 example.com。"
+msgstr ""
+"你的邮件列表的域。 例如，当你需要 testing@example.com 之类的列表时，请在此处"
+"输入 example.com。"
 
 #: forms/domain_forms.py:54 forms/list_forms.py:84 forms/list_forms.py:960
-#: templates/postorius/domain/index.html:22 templates/postorius/index.html:56
+#: templates/postorius/domain/index.html:22 templates/postorius/index.html:62
 msgid "Description"
 msgstr "描述"
 
@@ -146,8 +149,10 @@ msgid ""
 "digests are preferred, but if you have a problem reading them, select plain "
 "text digests. Summary Digests are currently equivalent to MIME Digests."
 msgstr ""
-"如果您选择摘要 ，您将收到聚合到一起的帖子（通常每天一封，但在活跃列表中可能更多），而不是每个帖子单独发送一封邮件。你的邮件阅读器可能支持也可能不支持 "
-"MIME 摘要。通常首选 MIME 摘要，但如果你在阅读它们时遇到问题，请选择纯文本摘要。概略摘要目前等同于 MIME 摘要。"
+"如果您选择摘要 ，您将收到聚合到一起的帖子（通常每天一封，但在活跃列表中可能更"
+"多），而不是每个帖子单独发送一封邮件。你的邮件阅读器可能支持也可能不支持 "
+"MIME 摘要。通常首选 MIME 摘要，但如果你在阅读它们时遇到问题，请选择纯文本摘"
+"要。概略摘要目前等同于 MIME 摘要。"
 
 #: forms/fields.py:161 templates/postorius/lists/summary.html:51
 msgid "Delivery status"
@@ -161,8 +166,9 @@ msgid ""
 "mail delivery, don't forget to re-enable it when you come back; it will not "
 "be automatically re-enabled."
 msgstr ""
-"将此选项设为“启用”以接收发表到此邮件列表的邮件。如果你想保持订阅状态，但暂时不想要邮件发送给你（例如你要去度假），请将其设为“禁用”。 "
-"如果你禁用邮件寄送，请不要忘记在你回来时重新启用它；它不会自动重新启用。"
+"将此选项设为“启用”以接收发表到此邮件列表的邮件。如果你想保持订阅状态，但暂时"
+"不想要邮件发送给你（例如你要去度假），请将其设为“禁用”。 如果你禁用邮件寄送，"
+"请不要忘记在你回来时重新启用它；它不会自动重新启用。"
 
 #: forms/fields.py:174
 msgid "Moderation"
@@ -188,7 +194,8 @@ msgstr ""
 "当此成员在列表上发帖时采用的默认动作。\n"
 "列表默认——跟随列表的默认成员动作。\n"
 "搁置——此动作搁置消息以待列表版主批准。\n"
-"拒绝——此动作会通过发送退信通知至发帖作者来自动拒绝消息。退信通知的文本由你配置。\n"
+"拒绝——此动作会通过发送退信通知至发帖作者来自动拒绝消息。退信通知的文本由你配"
+"置。\n"
 "丢弃——此动作直接丢弃消息，不向发送发帖作者发送通知。\n"
 "接收——接收任意发帖，无需任何进一步的检查。\n"
 "默认处理——运行额外检查然后接收消息。 \n"
@@ -313,7 +320,7 @@ msgstr "请输入有效的电子邮件地址。"
 msgid "Your name (optional)"
 msgstr "你的名称（可选）"
 
-#: forms/list_forms.py:171 forms/list_forms.py:1211 views/list.py:456
+#: forms/list_forms.py:171 forms/list_forms.py:1211 views/list.py:457
 msgid "Primary Address ({})"
 msgstr "主要地址（{}）"
 
@@ -430,7 +437,9 @@ msgid ""
 "This is the bounce score above which a member's subscription  will be "
 "automatically disabled. When the subscription is  re-enabled, their bounce "
 "score will be reset to zero."
-msgstr "此数值是退信分数，高过这个分数的成员订阅将被自动禁用。当订阅重新启用后，他们的退信分数将重置为零。"
+msgstr ""
+"此数值是退信分数，高过这个分数的成员订阅将被自动禁用。当订阅重新启用后，他们"
+"的退信分数将重置为零。"
 
 #: forms/list_forms.py:263
 msgid "Bounce info stale after"
@@ -441,7 +450,9 @@ msgid ""
 "The number of days after which a member's bounce information is considered "
 "stale. If no new bounces have been received in the interim, the bounce score "
 "is reset to zero. This value must be an integer. "
-msgstr "成员退信信息被视作过时要经过的天数。如果在此期间没有收到退信，退信分数就将重置为零。此数值必须为整数。 "
+msgstr ""
+"成员退信信息被视作过时要经过的天数。如果在此期间没有收到退信，退信分数就将重"
+"置为零。此数值必须为整数。 "
 
 #: forms/list_forms.py:274
 msgid "Notify owner on bounce increment"
@@ -452,7 +463,9 @@ msgid ""
 "This option controls whether or not the list owner is notified when a "
 "member's bounce score is incremented, but to a value less than their bounce "
 "threshold. "
-msgstr "当成员退信分数增加但仍小于退信阈值时，此选项控制这种情况下是否通知列表所有者。 "
+msgstr ""
+"当成员退信分数增加但仍小于退信阈值时，此选项控制这种情况下是否通知列表所有"
+"者。 "
 
 #: forms/list_forms.py:283
 msgid "Notify owner on disable"
@@ -463,7 +476,9 @@ msgid ""
 "This option controls whether or not the list owner is notified when a "
 "member's subscription is automatically disabled due to their bounce "
 "threshold being reached. "
-msgstr "当成员的订阅由于达到退信阈值被自动禁用时，此选项控制这种情况下是否通知列表所有者。 "
+msgstr ""
+"当成员的订阅由于达到退信阈值被自动禁用时，此选项控制这种情况下是否通知列表所"
+"有者。 "
 
 #: forms/list_forms.py:292
 msgid "Notify owner on removal"
@@ -474,7 +489,9 @@ msgid ""
 "This option controls whether or not the list owner is notified when a member "
 "is removed from the list after their disabled notifications have been "
 "exhausted. "
-msgstr "当成员在他们的禁用通知数用尽后从列表移除时，此选项控制这种情况下是否通知列表所有者。 "
+msgstr ""
+"当成员在他们的禁用通知数用尽后从列表移除时，此选项控制这种情况下是否通知列表"
+"所有者。 "
 
 #: forms/list_forms.py:301
 msgid "Forward unrecognized bounces"
@@ -509,7 +526,8 @@ msgid ""
 "an address from the list once their bounce score exceeds the threshold. This "
 "value must be an integer. "
 msgstr ""
-"被禁用成员在他们的地址从邮件列表名册移除前将接收到通知数量。此值设为 0 表示立即从列表中移除地址一旦他们的退信分数超过阈值。此值必须为整数。 "
+"被禁用成员在他们的地址从邮件列表名册移除前将接收到通知数量。此值设为 0 表示立"
+"即从列表中移除地址一旦他们的退信分数超过阈值。此值必须为整数。 "
 
 #: forms/list_forms.py:331
 msgid "Public archives"
@@ -570,9 +588,11 @@ msgid ""
 "message. The matching is performed with Python's re.match() function, "
 "meaning they are anchored to the start of the string."
 msgstr ""
-"这是一个地址和正则表达式的列表，每个条目占一行，当启用“require_explicit_destination”时，匹配 To: 或 Cc: "
-"中收件人地址然后替换为邮寄地址。条目是电子邮件地址或者正则表达式匹配的电子邮件地址。正则表达式是以“^”开头的条目，并与消息中每个收件人地址匹配。"
-"匹配使用 Python 的 re.match() 函数执行，意味着它们定位到字符串的开头。"
+"这是一个地址和正则表达式的列表，每个条目占一行，当启"
+"用“require_explicit_destination”时，匹配 To: 或 Cc: 中收件人地址然后替换为邮"
+"寄地址。条目是电子邮件地址或者正则表达式匹配的电子邮件地址。正则表达式是"
+"以“^”开头的条目，并与消息中每个收件人地址匹配。匹配使用 Python 的 re.match() "
+"函数执行，意味着它们定位到字符串的开头。"
 
 #: forms/list_forms.py:404
 msgid "Require Explicit Destination"
@@ -582,7 +602,8 @@ msgstr "需要明确的目的地"
 msgid ""
 "This checks to ensure that the list posting address or an acceptable alias "
 "explicitly appears in a To: or Cc: header in the post."
-msgstr "此勾选项可以确保列表发表地址或收件人别名在发帖中的 To: 或 Cc: 首部明确出现。"
+msgstr ""
+"此勾选项可以确保列表发表地址或收件人别名在发帖中的 To: 或 Cc: 首部明确出现。"
 
 #: forms/list_forms.py:412
 msgid "Administrivia"
@@ -594,7 +615,9 @@ msgid ""
 "an administrative request (like subscribe, unsubscribe, etc), and will add "
 "it to the the administrative requests queue, notifying the administrator of "
 "the new request, in the process."
-msgstr "管理事务测试将检查发帖以查看它是否为管理事务请求（如订阅、退订等），然后将它添加到管理事务请求队列，通知管理员新请求等待处理。"
+msgstr ""
+"管理事务测试将检查发帖以查看它是否为管理事务请求（如订阅、退订等），然后将它"
+"添加到管理事务请求队列，通知管理员新请求等待处理。"
 
 #: forms/list_forms.py:421
 msgid "Default action to take when a member posts to the list"
@@ -617,7 +640,8 @@ msgid ""
 msgstr ""
 "当成员发帖到该列表时默认采用的动作。\n"
 "搁置：此动作会搁置消息等待列表版主的批准。\n"
-"拒绝：此动作会通过发送退信通知至发帖作者来自动拒绝消息。退信通知的文本由你配置。\n"
+"拒绝：此动作会通过发送退信通知至发帖作者来自动拒绝消息。退信通知的文本由你配"
+"置。\n"
 "丢弃：此动作直接丢弃消息，不向发送发帖作者发送通知。\n"
 "接收：接收任意发帖，无需任何进一步的检查。\n"
 "默认处理——运行额外检查然后接收消息。"
@@ -635,7 +659,9 @@ msgid ""
 "When a post from a non-member is received, the message's sender is matched "
 "against the list of explicitly accepted, held, rejected (bounced), and "
 "discarded addresses. If no match is found, then this action is taken."
-msgstr "当收到非成员的发帖时，消息的发件人跟明确接受、搁置、拒绝（退信）和丢弃地址列表进行匹配。如果未找到匹配，则执行此动作。"
+msgstr ""
+"当收到非成员的发帖时，消息的发件人跟明确接受、搁置、拒绝（退信）和丢弃地址列"
+"表进行匹配。如果未找到匹配，则执行此动作。"
 
 #: forms/list_forms.py:453
 msgid "Emergency Moderation"
@@ -646,7 +672,9 @@ msgid ""
 "When this option is enabled, all list traffic is emergency moderated, i.e. "
 "held for moderation. Turn this option on when your list is experiencing a "
 "flamewar and you want a cooling off period. "
-msgstr "启用此选项时，所有列表流量进入紧急审核状态，即搁置等待审核。当你的列表正进行口水战而你想要冷静期时就可以打开这个选项。 "
+msgstr ""
+"启用此选项时，所有列表流量进入紧急审核状态，即搁置等待审核。当你的列表正进行"
+"口水战而你想要冷静期时就可以打开这个选项。 "
 
 #: forms/list_forms.py:462
 msgid "Maximum message size"
@@ -656,7 +684,9 @@ msgstr "最大消息大小"
 msgid ""
 "The maximum allowed message size in KB. This can be used to prevent emails "
 "with large attachments. A size of 0 disables the check."
-msgstr "消息允许的最大大小，以 KB 计算。此值可以用来阻止带有较大附件的电子邮件。大小设为 0 则禁用该检查。"
+msgstr ""
+"消息允许的最大大小，以 KB 计算。此值可以用来阻止带有较大附件的电子邮件。大小"
+"设为 0 则禁用该检查。"
 
 #: forms/list_forms.py:470
 msgid "Maximum number of recipients"
@@ -667,7 +697,9 @@ msgid ""
 "If a post has this many or more explicit recipients (To: and Cc:), the post "
 "will be held for moderation. This can be used to prevent mass mailings from "
 "being accepted. A value of 0 disables the check."
-msgstr "如果发帖有超过或等于这个数量的收件人（To: 和 Cc:），发帖将被搁置等待审核。此选项可用于阻止群发邮件被接受。值设为 0 则禁用该检查。"
+msgstr ""
+"如果发帖有超过或等于这个数量的收件人（To: 和 Cc:），发帖将被搁置等待审核。此"
+"选项可用于阻止群发邮件被接受。值设为 0 则禁用该检查。"
 
 #: forms/list_forms.py:488
 msgid "Accept these non-members"
@@ -682,8 +714,10 @@ msgid ""
 "to add the address as a nonmember and set the nonmember's Moderation to "
 "Default Processing."
 msgstr ""
-"这是一个正则表达式的列表，每个条目占一行，匹配的地址允许发帖至此列表而无需订阅。条目是以“^”开头的正则表达式，并与消息中每个发件人地址匹配。也可以在这里"
-"输入非正则表达式的地址，这时这些地址会被添加为非成员，并设定这些非成员的审核动作为默认处理。"
+"这是一个正则表达式的列表，每个条目占一行，匹配的地址允许发帖至此列表而无需订"
+"阅。条目是以“^”开头的正则表达式，并与消息中每个发件人地址匹配。也可以在这里输"
+"入非正则表达式的地址，这时这些地址会被添加为非成员，并设定这些非成员的审核动"
+"作为默认处理。"
 
 #: forms/list_forms.py:501
 msgid "Hold these non-members"
@@ -697,8 +731,10 @@ msgid ""
 "regexp addresses can be entered here, it is preferred to add the address as "
 "a nonmember and set the nonmember's Moderation to Hold."
 msgstr ""
-"这是一个正则表达式的列表，每个条目占一行，匹配非成员的地址，来自他们的发帖将被自动搁置。条目是以“^”开头的正则表达式，并与消息中每个发件人地址匹配。也可"
-"以在这里输入非正则表达式的地址，这时这些地址会被添加为非成员，并设定这些非成员的审核动作为搁置。"
+"这是一个正则表达式的列表，每个条目占一行，匹配非成员的地址，来自他们的发帖将"
+"被自动搁置。条目是以“^”开头的正则表达式，并与消息中每个发件人地址匹配。也可以"
+"在这里输入非正则表达式的地址，这时这些地址会被添加为非成员，并设定这些非成员"
+"的审核动作为搁置。"
 
 #: forms/list_forms.py:513
 msgid "Reject these non-members"
@@ -712,8 +748,10 @@ msgid ""
 "message. While non-regexp addresses can be entered here, it is preferred to "
 "add the address as a nonmember and set the nonmember's Moderation to Reject."
 msgstr ""
-"这是一个正则表达式的列表，每个条目占一行，匹配非成员的地址，他们的发帖会被拒绝并通知发件人。条目是以“^”开头的正则表达式，并与消息中每个发件人地址匹配。"
-"也可以在这里输入非正则表达式的地址，这时这些地址会被添加为非成员，并设定这些非成员的审核动作为拒绝。"
+"这是一个正则表达式的列表，每个条目占一行，匹配非成员的地址，他们的发帖会被拒"
+"绝并通知发件人。条目是以“^”开头的正则表达式，并与消息中每个发件人地址匹配。也"
+"可以在这里输入非正则表达式的地址，这时这些地址会被添加为非成员，并设定这些非"
+"成员的审核动作为拒绝。"
 
 #: forms/list_forms.py:526
 msgid "Discard these non-members"
@@ -727,8 +765,10 @@ msgid ""
 "regexp addresses can be entered here, it is preferred to add the address as "
 "a nonmember and set the nonmember's Moderation to Discard."
 msgstr ""
-"这是一个正则表达式的列表，每个条目占一行，匹配非成员的地址，他们的发帖会被自动丢弃。条目是以“^”开头的正则表达式，并与消息中每个发件人地址匹配。也可以在"
-"这里输入非正则表达式的地址，这时这些地址会被添加为非成员，并设定这些非成员的审核动作为丢弃。"
+"这是一个正则表达式的列表，每个条目占一行，匹配非成员的地址，他们的发帖会被自"
+"动丢弃。条目是以“^”开头的正则表达式，并与消息中每个发件人地址匹配。也可以在这"
+"里输入非正则表达式的地址，这时这些地址会被添加为非成员，并设定这些非成员的审"
+"核动作为丢弃。"
 
 #: forms/list_forms.py:551
 msgid "Invalid alias regexp: {}: {}"
@@ -805,7 +845,9 @@ msgid ""
 "The action to apply to messages From: a domain publishing a DMARC policy of "
 "reject or quarantine or to all messages if DMARC Mitigate unconditionally is "
 "True."
-msgstr "发件人（From:）为发布了拒绝或隔离 DMARC 策略的域的消息，或者 DMARC 缓解措施设为无条件启用时的所有消息，将会应用的动作。"
+msgstr ""
+"发件人（From:）为发布了拒绝或隔离 DMARC 策略的域的消息，或者 DMARC 缓解措施设"
+"为无条件启用时的所有消息，将会应用的动作。"
 
 #: forms/list_forms.py:618
 msgid "DMARC Mitigate unconditionally"
@@ -816,8 +858,8 @@ msgid ""
 "If DMARC mitigation action is munge_from or wrap_message, should it apply to "
 "all messages regardless of the DMARC policy of the From: domain."
 msgstr ""
-"如果 DMARC 缓解动作是 munge_from 或 wrap_message，它是否要应用于所有消息，而不管发件人（From:）域的 DMARC "
-"策略如何。"
+"如果 DMARC 缓解动作是 munge_from 或 wrap_message，它是否要应用于所有消息，而"
+"不管发件人（From:）域的 DMARC 策略如何。"
 
 #: forms/list_forms.py:624
 msgid "DMARC rejection notice"
@@ -827,7 +869,9 @@ msgstr "DMARC 拒绝通知"
 msgid ""
 "Text to replace the default reason in any rejection notice to be sent when "
 "DMARC mitigation action of reject applies."
-msgstr "当应用了拒绝的 DMARC 缓解动作时，用于替换要发送的任何拒绝通知中的默认原因的文本。"
+msgstr ""
+"当应用了拒绝的 DMARC 缓解动作时，用于替换要发送的任何拒绝通知中的默认原因的文"
+"本。"
 
 #: forms/list_forms.py:631
 msgid "DMARC wrapped message text"
@@ -838,7 +882,9 @@ msgid ""
 "Text to be added as a separate text/plain MIME part preceding the original "
 "message part in the wrapped message when DMARC mitigation action of wrap "
 "message applies."
-msgstr "当应用了包装消息的 DMARC 缓解动作时，包装消息中前插到原始消息前作为单独的纯文本（text/plain）MIME 部分添加的文本。"
+msgstr ""
+"当应用了包装消息的 DMARC 缓解动作时，包装消息中前插到原始消息前作为单独的纯文"
+"本（text/plain）MIME 部分添加的文本。"
 
 #: forms/list_forms.py:641 templatetags/membership_helpers.py:78
 #: templatetags/membership_helpers.py:84
@@ -924,8 +970,9 @@ msgid ""
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
-"要从传来的帖子中过滤的 MIME 类型。常见类型的列表可以在<a href=\"https://developer.mozilla.org/zh-CN/"
-"docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types\">这里</a>找到。"
+"要从传来的帖子中过滤的 MIME 类型。常见类型的列表可以在<a href=\"https://"
+"developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/"
+"Common_types\">这里</a>找到。"
 
 #: forms/list_forms.py:698
 msgid "Filter extensions"
@@ -945,8 +992,9 @@ msgid ""
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
-"在来信中允许 MIME 类型。常见类型的列表可以在<a href=\"https://developer.mozilla.org/zh-CN/docs/"
-"Web/HTTP/Basics_of_HTTP/MIME_types/Common_types\">这里</a>找到"
+"在来信中允许 MIME 类型。常见类型的列表可以在<a href=\"https://developer."
+"mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types\">这里"
+"</a>找到"
 
 #: forms/list_forms.py:712
 msgid "Pass extensions"
@@ -977,7 +1025,8 @@ msgstr "转换 HTML 为纯文本"
 msgid ""
 "Should Mailman convert text/html parts to plain text? This conversion "
 "happens after MIME attachments have been stripped."
-msgstr "Mailman 是否要转换 text/html 部分为纯文本？此转换在 MIME 附件剥离后进行。"
+msgstr ""
+"Mailman 是否要转换 text/html 部分为纯文本？此转换在 MIME 附件剥离后进行。"
 
 #: forms/list_forms.py:742
 msgid "Anonymous list"
@@ -1006,10 +1055,12 @@ msgid ""
 "headers, but this is not recommended (and in fact, your ability to disable "
 "these headers may eventually go away)."
 msgstr ""
-"强烈建议选是。RFC 2369 定义了一套 List-* 首部，这些首部通常添加到发给列表成员的每一条消息中。这极大地帮助了那些使用符合标准的邮件阅读器的"
-"最终用户。它们通常应始终启用。但是，并不是所有邮件阅读器都符合标准，如果你有大量成员使用不符合标准的邮件阅读器，他们可能会被这些首部烦到。你首先应尝试教教"
-"你的成员为什么这些首部存在，以及如何将它们隐藏在他们的邮件客户端中。你最后的手段才是禁用这些首部，但不建议这样做（事实上，禁用这些首部的功能最终也可能消失"
-"）。"
+"强烈建议选是。RFC 2369 定义了一套 List-* 首部，这些首部通常添加到发给列表成员"
+"的每一条消息中。这极大地帮助了那些使用符合标准的邮件阅读器的最终用户。它们通"
+"常应始终启用。但是，并不是所有邮件阅读器都符合标准，如果你有大量成员使用不符"
+"合标准的邮件阅读器，他们可能会被这些首部烦到。你首先应尝试教教你的成员为什么"
+"这些首部存在，以及如何将它们隐藏在他们的邮件客户端中。你最后的手段才是禁用这"
+"些首部，但不建议这样做（事实上，禁用这些首部的功能最终也可能消失）。"
 
 #: forms/list_forms.py:768
 msgid "Include the list post header"
@@ -1019,7 +1070,9 @@ msgstr "包含列表邮寄首部"
 msgid ""
 "This can be set to no for announce lists that do not wish to include the "
 "List-Post header because posting to the list is discouraged."
-msgstr "对于不想包含 List-Post 首部的通知列表，此选项可以设为否，因为不鼓励往这些列表发帖。"
+msgstr ""
+"对于不想包含 List-Post 首部的通知列表，此选项可以设为否，因为不鼓励往这些列表"
+"发帖。"
 
 #: forms/list_forms.py:774
 msgid "Explicit reply-to address"
@@ -1029,7 +1082,8 @@ msgstr "指定回复地址"
 msgid ""
 "This option allows admins to set an explicit Reply-to address. It is only "
 "used if the reply-to is set to use an explicitly set header"
-msgstr "此选项允许管理员设定一个明确的回复地址。它只用于回复设为使用明确设定首部时。"
+msgstr ""
+"此选项允许管理员设定一个明确的回复地址。它只用于回复设为使用明确设定首部时。"
 
 #: forms/list_forms.py:785
 msgid ""
@@ -1037,8 +1091,8 @@ msgid ""
 "stripped? If so, this will be done regardless of whether an explict Reply-"
 "To: header is added by Mailman or not."
 msgstr ""
-"是否剥除在原始消息中找到的任何已有的 Reply-To: 首部？如果是这样，无论 Mailman 是否添加了明确的 Reply-To: "
-"首部，此操作都将进行。"
+"是否剥除在原始消息中找到的任何已有的 Reply-To: 首部？如果是这样，无论 "
+"Mailman 是否添加了明确的 Reply-To: 首部，此操作都将进行。"
 
 #: forms/list_forms.py:789 forms/list_forms.py:796
 msgid "Reply goes to list"
@@ -1087,18 +1141,23 @@ msgid ""
 "list. To support these types of mailing lists, select Explicit Reply and set "
 "the Reply-To: address option to point to the parallel list."
 msgstr ""
-"回复列表的消息定向到哪里？对于大多数邮件列表，强烈建议不使用伪装（Munging）。\n"
-"此选项控制 Mailman 如何处理流经此邮件列表的消息中的 Reply-To: 首部。当设置为不伪装时，Mailman 不会添加 Reply-To: "
-"首部，但如果原始邮件中存在首部，则不会剥除它。将此值设为对列表的回复、明确回复或仅回复，会使 Mailman 在所有消息中插入特定的 Reply-To: "
-"首部，必要时覆盖原始消息中的首部（明确回复会插入 reply_to_address "
-"的值）。设定明确回复；不添加抄送选项对于仅通知列表很有用，你会希望避免有人回复该列表地址。不引入或覆盖 Reply-To: 首部的原因有很多。"
-"一个原因是有些发帖人依赖于他们自己的 Reply-To: 设置来传达他们的有效回信地址。另一个是修改 Reply-To: "
-"使得发送私人回复变得更加困难。有关此问题的一般性讨论，请参阅 <a href=\"http://marc.merlins.org/netrants/"
-"reply-to-harmful.html\">`Reply-To' Munging Considered Harmful</a>。反对意见请参阅 <a "
-"href=\"http://marc.merlins.org/netrants/reply-to-useful.html\">`Reply-To' "
-"Munging Considered Useful</a>。一些邮件列表限制了发帖权限，并有一个专门用于讨论的并行列表。例如“补丁”或“签入”列表，软件更"
-"改由修订控制系统发布在其中，但有关更改的讨论发生在开发人员邮件列表中。要支持这些类型的邮件列表，请选择“明确回复”并将 Reply-To: "
-"地址选项设置为指向并行列表。"
+"回复列表的消息定向到哪里？对于大多数邮件列表，强烈建议不使用伪装"
+"（Munging）。\n"
+"此选项控制 Mailman 如何处理流经此邮件列表的消息中的 Reply-To: 首部。当设置为"
+"不伪装时，Mailman 不会添加 Reply-To: 首部，但如果原始邮件中存在首部，则不会剥"
+"除它。将此值设为对列表的回复、明确回复或仅回复，会使 Mailman 在所有消息中插入"
+"特定的 Reply-To: 首部，必要时覆盖原始消息中的首部（明确回复会插入 "
+"reply_to_address 的值）。设定明确回复；不添加抄送选项对于仅通知列表很有用，你"
+"会希望避免有人回复该列表地址。不引入或覆盖 Reply-To: 首部的原因有很多。一个原"
+"因是有些发帖人依赖于他们自己的 Reply-To: 设置来传达他们的有效回信地址。另一个"
+"是修改 Reply-To: 使得发送私人回复变得更加困难。有关此问题的一般性讨论，请参"
+"阅 <a href=\"http://marc.merlins.org/netrants/reply-to-harmful.html\">`Reply-"
+"To' Munging Considered Harmful</a>。反对意见请参阅 <a href=\"http://marc."
+"merlins.org/netrants/reply-to-useful.html\">`Reply-To' Munging Considered "
+"Useful</a>。一些邮件列表限制了发帖权限，并有一个专门用于讨论的并行列表。例"
+"如“补丁”或“签入”列表，软件更改由修订控制系统发布在其中，但有关更改的讨论发生"
+"在开发人员邮件列表中。要支持这些类型的邮件列表，请选择“明确回复”并将 Reply-"
+"To: 地址选项设置为指向并行列表。"
 
 #: forms/list_forms.py:832
 msgid "Pipeline"
@@ -1163,8 +1222,8 @@ msgid ""
 "If you choose yes, decide whether you want Mailman to discard the original "
 "email, or forward it on to the system as a normal mail command."
 msgstr ""
-"Mailman 是否对发至 -request 地址的电子邮件发送自动响应？如果你选择是，你需要确定要 Mailman "
-"丢弃原始电子邮件，还是将其作为普通的邮件命令转发到系统。"
+"Mailman 是否对发至 -request 地址的电子邮件发送自动响应？如果你选择是，你需要"
+"确定要 Mailman 丢弃原始电子邮件，还是将其作为普通的邮件命令转发到系统。"
 
 #: forms/list_forms.py:880
 msgid "Autoresponse request text"
@@ -1183,7 +1242,9 @@ msgid ""
 "Number of days between auto-responses to either the mailing list or -"
 "request/-owner address from the same poster. Set to zero (or negative) for "
 "no grace period (i.e. auto-respond to every message)."
-msgstr "发至邮件列表或同个发帖人的 -request/-owner 地址的自动响应之间的天数。设为 0（或负值）则无宽限期（即对每条消息都自动响应）。"
+msgstr ""
+"发至邮件列表或同个发帖人的 -request/-owner 地址的自动响应之间的天数。设为 "
+"0（或负值）则无宽限期（即对每条消息都自动响应）。"
 
 #: forms/list_forms.py:895
 msgid "Notify users of held messages"
@@ -1194,7 +1255,9 @@ msgid ""
 "Should Mailman notify users about their messages held for approval. If you "
 "say 'No', no notifications will be sent to users about the pending approval "
 "on their messages."
-msgstr "Mailman 是否要通知用户他们的消息被搁置等待批准。如果选择“否”，则不会向用户发送有关其消息待批准的通知。"
+msgstr ""
+"Mailman 是否要通知用户他们的消息被搁置等待批准。如果选择“否”，则不会向用户发"
+"送有关其消息待批准的通知。"
 
 #: forms/list_forms.py:904 forms/list_forms.py:1102
 msgid "Send welcome message"
@@ -1208,8 +1271,9 @@ msgid ""
 "some other mailing list manager to Mailman.\n"
 "The text of Welcome message can be set via the Templates tab."
 msgstr ""
-"是否要给新订阅的成员发送欢迎消息？如果你计划手动添加人员的订阅而且不想让他们知道，才需要关闭此选项。将此选项设为否，"
-"对于将一些其他的邮件列表管理器的列表透明地迁移到 Mailman 很有用。\n"
+"是否要给新订阅的成员发送欢迎消息？如果你计划手动添加人员的订阅而且不想让他们"
+"知道，才需要关闭此选项。将此选项设为否，对于将一些其他的邮件列表管理器的列表"
+"透明地迁移到 Mailman 很有用。\n"
 "欢迎消息的文本可以通过模板标签页设定。"
 
 #: forms/list_forms.py:916
@@ -1223,7 +1287,8 @@ msgid ""
 "you did so.\n"
 "The text of Goodbye message can be set via the Templates tab."
 msgstr ""
-"是否要给新退订的成员发送告别消息？如果你计划手动取消人员的订阅而且不想让他们知道，才需要关闭此选项。\n"
+"是否要给新退订的成员发送告别消息？如果你计划手动取消人员的订阅而且不想让他们"
+"知道，才需要关闭此选项。\n"
 "告别消息的文本可以通过模板标签页设定。"
 
 #: forms/list_forms.py:925
@@ -1239,8 +1304,9 @@ msgid ""
 "reason or another. Setting this option causes notices to be sent immediately "
 "on the arrival of new requests as well. "
 msgstr ""
-"列表版主是否要即时获得新请求的通知以及所收集请求的每日通知。列表版主（和列表管理员）会每天收到待批准请求的提醒，比如对受审核列表的订阅，或者由于某种原因搁"
-"置的发帖。设置此选项会导致新请求到达时立即发送通知。 "
+"列表版主是否要即时获得新请求的通知以及所收集请求的每日通知。列表版主（和列表"
+"管理员）会每天收到待批准请求的提醒，比如对受审核列表的订阅，或者由于某种原因"
+"搁置的发帖。设置此选项会导致新请求到达时立即发送通知。 "
 
 #: forms/list_forms.py:937
 msgid "Notify admin of membership changes"
@@ -1275,7 +1341,9 @@ msgid ""
 "This description is used when the mailing list is listed with other mailing "
 "lists, or in headers, and so forth. It should be as succinct as you can get "
 "it, while still identifying what the list is."
-msgstr "此描述用于邮件列表与其他邮件列表一起列出，或者在标题中，等等的场景。它应该尽可能的简洁，同时也要写明白它是什么列表。"
+msgstr ""
+"此描述用于邮件列表与其他邮件列表一起列出，或者在标题中，等等的场景。它应该尽"
+"可能的简洁，同时也要写明白它是什么列表。"
 
 #: forms/list_forms.py:969
 msgid "Information"
@@ -1411,14 +1479,18 @@ msgstr "邀请"
 msgid ""
 "If checked, the other checkboxes are ignored and the users will be sent an "
 "invitation to join the list and will be subscribed upon acceptance thereof."
-msgstr "如果勾选，将忽略其他复选框并且用户将被发送邀请以加入列表，然后在接受后完成订阅。"
+msgstr ""
+"如果勾选，将忽略其他复选框并且用户将被发送邀请以加入列表，然后在接受后完成订"
+"阅。"
 
 #: forms/list_forms.py:1104
 msgid ""
 "If set to \"Yes\" or \"No\", List's default setting of send_welcome_message "
 "will be ignored for these subscribers and a welcome message will be sent or "
 "not sent based on the choice."
-msgstr "如果设为“是”或“否”，将对这些订阅者忽略列表的 send_welcome_message 默认设置，并且根据选择发送或不发送欢迎消息。"
+msgstr ""
+"如果设为“是”或“否”，将对这些订阅者忽略列表的 send_welcome_message 默认设置，"
+"并且根据选择发送或不发送欢迎消息。"
 
 #: forms/list_forms.py:1124
 msgid "Emails to Unsubscribe"
@@ -1488,7 +1560,7 @@ msgstr "数据"
 msgid "Email Address"
 msgstr "电子邮件地址"
 
-#: forms/member_forms.py:32 forms/user_forms.py:316
+#: forms/member_forms.py:32 forms/user_forms.py:317
 msgid "Display Name"
 msgstr "显示名称"
 
@@ -1514,7 +1586,8 @@ msgstr "接收自己的发帖"
 msgid ""
 "Ordinarily, you will get a copy of every message you post to the list. If "
 "you don't want to receive this copy, set this option to No."
-msgstr "通常，你将获得你发至列表的每个副本。如果你不想收到这个副本，设定此选项为否。"
+msgstr ""
+"通常，你将获得你发至列表的每个副本。如果你不想收到这个副本，设定此选项为否。"
 
 #: forms/user_forms.py:74
 msgid "Acknowledge posts"
@@ -1535,8 +1608,9 @@ msgid ""
 "email address to show up on this membership roster at all, select Yes for "
 "this option."
 msgstr ""
-"当有人查看列表的成员关系，你的电子邮件地址通常会显示（为模糊形式以阻止垃圾邮件收集）。如果你完全不想你的电子邮件地址显示在此成员关系名册上，此选项应选为是"
-"。"
+"当有人查看列表的成员关系，你的电子邮件地址通常会显示（为模糊形式以阻止垃圾邮"
+"件收集）。如果你完全不想你的电子邮件地址显示在此成员关系名册上，此选项应选为"
+"是。"
 
 #: forms/user_forms.py:90
 msgid "Receive list copies (possible duplicates)"
@@ -1548,7 +1622,8 @@ msgid ""
 "you can opt to not receive another copy from the mailing list. Select Yes to "
 "receive copies. Select No to avoid receiving copies from the mailing list"
 msgstr ""
-"当你被列表消息的 To: 或 Cc: 首部中明确列出时，你可以选择不从邮件列表接收另一份副本。选择是则接收副本。选择否可以避免从邮件列表接收副本。"
+"当你被列表消息的 To: 或 Cc: 首部中明确列出时，你可以选择不从邮件列表接收另一"
+"份副本。选择是则接收副本。选择否可以避免从邮件列表接收副本。"
 
 #: forms/user_forms.py:101
 msgid "Preferred language"
@@ -1559,17 +1634,19 @@ msgid ""
 "Preferred language for your interactions with Mailman. When this is set, it "
 "will override the MailingList's preferred language. This affects which "
 "language is used for your email notifications and such."
-msgstr "你与 Mailman 交互时首选的语言。当设定此选项时，它将覆盖邮件列表的首选语言。这会影响你的电子邮件通知等使用的语言。"
+msgstr ""
+"你与 Mailman 交互时首选的语言。当设定此选项时，它将覆盖邮件列表的首选语言。这"
+"会影响你的电子邮件通知等使用的语言。"
 
 #: forms/user_forms.py:147
 msgid "Cannot set delivery_status to {}"
 msgstr "无法设定 delivery_status 为 {}"
 
-#: forms/user_forms.py:241
+#: forms/user_forms.py:242
 msgid "Verified"
 msgstr "已验证"
 
-#: forms/user_forms.py:243
+#: forms/user_forms.py:244
 msgid "Specifies whether or not this email address is verified"
 msgstr "指定此电子邮件是否已验证"
 
@@ -1878,8 +1955,8 @@ msgstr ""
 #: templates/postorius/domain/index.html:59
 #: templates/postorius/domain/template_index.html:34
 #: templates/postorius/lists/confirm_delete.html:5
-#: templates/postorius/lists/members.html:128
-#: templates/postorius/lists/members.html:137
+#: templates/postorius/lists/members.html:132
+#: templates/postorius/lists/members.html:141
 #: templates/postorius/lists/template_list.html:32
 #: templates/postorius/menu/list_nav.html:62
 msgid "Delete"
@@ -1898,6 +1975,14 @@ msgstr "取消"
 #: templates/postorius/domain/edit.html:12
 msgid "Edit domain"
 msgstr "编辑域"
+
+#: templates/postorius/domain/edit.html:17
+#: templates/postorius/lists/template_update.html:20
+#: templates/postorius/user/manage.html:16
+#: templates/postorius/user/manage.html:48
+#: templates/postorius/user/manage.html:86
+msgid "Update"
+msgstr "更新"
 
 #: templates/postorius/domain/index.html:14
 msgid "Add Domain"
@@ -1936,6 +2021,10 @@ msgstr "添加"
 msgid "Templates"
 msgstr "模板"
 
+#: templates/postorius/domain/index.html:67
+msgid "No domains yet."
+msgstr ""
+
 #: templates/postorius/domain/new.html:6
 msgid "Add domain"
 msgstr "添加域"
@@ -1943,6 +2032,12 @@ msgstr "添加域"
 #: templates/postorius/domain/new.html:12
 msgid "Add a new domain"
 msgstr "新增域"
+
+#: templates/postorius/domain/new.html:17
+#, fuzzy
+#| msgid "Create New Domain"
+msgid "Create domain"
+msgstr "新建域"
 
 #: templates/postorius/domain/owners.html:6
 msgid "Add domain owner "
@@ -1959,6 +2054,13 @@ msgstr "新增所有者至"
 #, python-format
 msgid "Template '%(name)s'"
 msgstr "模板“%(name)s”"
+
+#: templates/postorius/domain/template_add.html:25
+#: templates/postorius/lists/template_add.html:16
+#: templates/postorius/user/address_preferences.html:62
+#: templates/postorius/user/subscription_preferences.html:73
+msgid "Save"
+msgstr "保存"
 
 #: templates/postorius/domain/template_delete.html:11
 msgid "Delete Template"
@@ -2020,36 +2122,104 @@ msgstr "列表索引"
 msgid "Mailing Lists"
 msgstr "邮件列表"
 
-#: templates/postorius/index.html:40
+#: templates/postorius/index.html:19
+#, fuzzy
+#| msgid "Filter types"
+msgid "Filter by Role"
+msgstr "过滤类型"
+
+#: templates/postorius/index.html:23
+#, fuzzy
+#| msgid "Owners"
+msgid "Owner"
+msgstr "所有者"
+
+#: templates/postorius/index.html:24
+#, fuzzy
+#| msgid "Moderators"
+msgid "Moderator"
+msgstr "版主"
+
+#: templates/postorius/index.html:25
+#, fuzzy
+#| msgid "Members"
+msgid "Member"
+msgstr "成员"
+
+#: templates/postorius/index.html:26
+#, fuzzy
+#| msgid "Non-Members"
+msgid "Non-member"
+msgstr "非成员"
+
+#: templates/postorius/index.html:27
+msgid "All"
+msgstr ""
+
+#: templates/postorius/index.html:32
+#, fuzzy
+#| msgid "Role"
+msgid "Role: "
+msgstr "角色"
+
+#: templates/postorius/index.html:33
+#, fuzzy
+#| msgid "Owners"
+msgid "owner"
+msgstr "所有者"
+
+#: templates/postorius/index.html:34
+#, fuzzy
+#| msgid "Moderators"
+msgid "moderator"
+msgstr "版主"
+
+#: templates/postorius/index.html:35
+#, fuzzy
+#| msgid "Members"
+msgid "member"
+msgstr "成员"
+
+#: templates/postorius/index.html:36
+#, fuzzy
+#| msgid "Non-Members"
+msgid "non-member"
+msgstr "非成员"
+
+#: templates/postorius/index.html:46
 msgid "Create New Domain"
 msgstr "新建域"
 
-#: templates/postorius/index.html:42
+#: templates/postorius/index.html:48
 msgid "Create New List"
 msgstr "新建列表"
 
-#: templates/postorius/index.html:54
+#: templates/postorius/index.html:60
 msgid "List name"
 msgstr "列表名称"
 
-#: templates/postorius/index.html:55
+#: templates/postorius/index.html:61
 msgid "Post address"
 msgstr "邮送地址"
 
-#: templates/postorius/index.html:66
+#: templates/postorius/index.html:72
 msgid "unadvertised"
 msgstr "不公布"
 
-#: templates/postorius/index.html:78
+#: templates/postorius/index.html:84
+#, fuzzy
+#| msgid ""
+#| "Only lists that you are owner, moderator or subscriber for are shown here."
 msgid ""
-"Only lists that you are owner, moderator or subscriber for are shown here."
+"Only lists that you are owner, moderator or subscriber for are shown here. "
+"Click to <a href=\"?all-lists\"> see all lists</a>."
 msgstr "只有你是所有者、版主或订阅者的列表会显示在这里。"
 
-#: templates/postorius/index.html:82
+#: templates/postorius/index.html:88
 msgid "Only admins see unadvertised lists in the list index."
 msgstr "只有管理员能在此列表索引中看到未公布的列表。"
 
-#: templates/postorius/index.html:88
+#: templates/postorius/index.html:94
 msgid "There are currently no mailing lists."
 msgstr "当前没有邮件列表。"
 
@@ -2149,6 +2319,11 @@ msgid "Header filters"
 msgstr "首部过滤器"
 
 #: templates/postorius/lists/header_matches.html:58
+#: templates/postorius/lists/memberoptions.html:20
+#: templates/postorius/lists/memberoptions.html:28
+#: templates/postorius/lists/settings.html:30
+#: templates/postorius/user/list_options.html:27
+#: templates/postorius/user/mailman_settings.html:23
 msgid "Save changes"
 msgstr "保存更改"
 
@@ -2230,6 +2405,12 @@ msgstr "退订用户"
 msgid "Mass subscribe"
 msgstr "批量订阅"
 
+#: templates/postorius/lists/mass_subscribe.html:16
+#, fuzzy
+#| msgid "Unsubscribe users"
+msgid "Subscribe users"
+msgstr "退订用户"
+
 #: templates/postorius/lists/memberoptions.html:7
 #: templates/postorius/user/list_options.html:7
 msgid "Member options"
@@ -2255,22 +2436,28 @@ msgstr "搜索成员…"
 msgid "CSV Export"
 msgstr "CSV 导出"
 
-#: templates/postorius/lists/members.html:74
+#: templates/postorius/lists/members.html:62
+#, fuzzy
+#| msgid "Unsubscribe All"
+msgid "Unsubscribe Selected"
+msgstr "退订全部"
+
+#: templates/postorius/lists/members.html:76
 #: templates/postorius/user/address_preferences.html:32
 #: templates/postorius/user/manage.html:63
 msgid "Address"
 msgstr "地址"
 
-#: templates/postorius/lists/members.html:78
+#: templates/postorius/lists/members.html:80
 #: templates/postorius/user/subscriptions.html:24
 msgid "Delivery Mode"
 msgstr "寄送模式"
 
-#: templates/postorius/lists/members.html:81
+#: templates/postorius/lists/members.html:83
 msgid "Moderation Action"
 msgstr "审核动作"
 
-#: templates/postorius/lists/new.html:6
+#: templates/postorius/lists/new.html:6 templates/postorius/lists/new.html:17
 msgid "Create list"
 msgstr "创建列表"
 
@@ -2329,12 +2516,12 @@ msgid ""
 "          "
 msgstr ""
 "\n"
-"            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s\""
-">存档</a>\n"
+"            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s\">存"
+"档</a>\n"
 "          "
 
 #: templates/postorius/lists/summary.html:45
-#: templates/postorius/lists/summary.html:101
+#: templates/postorius/lists/summary.html:102
 msgid "Subscription / Unsubscription"
 msgstr "订阅 / 退订"
 
@@ -2379,18 +2566,25 @@ msgid ""
 msgstr ""
 "\n"
 "                要进行订阅，你可以发送带有“subscribe”主题的电子邮件至\n"
-"                <a href=\"mailto:%(address)s?subject=Subscribe\""
-">%(address)s</a>\n"
+"                <a href=\"mailto:%(address)s?subject=Subscribe\">"
+"%(address)s</a>\n"
 "                或者使用下面的表格：\n"
 "            "
 
-#: templates/postorius/lists/summary.html:97
+#: templates/postorius/lists/summary.html:94
+#: templates/postorius/lists/summary.html:121
+#, fuzzy
+#| msgid "Unsubscribe"
+msgid "Subscribe"
+msgstr "退订"
+
+#: templates/postorius/lists/summary.html:98
 msgid ""
 "You have a subscription request pending. If you don't hear back soon, please "
 "contact the list owners."
 msgstr "你有待处理的订阅请求。如果你没有很快收到回复，请联系列表的所有者。"
 
-#: templates/postorius/lists/summary.html:102
+#: templates/postorius/lists/summary.html:103
 msgid ""
 "\n"
 "        To subscribe or unsubscribe from this list, please log in first.\n"
@@ -2404,11 +2598,11 @@ msgstr ""
 "        电子邮件地址建立一个帐户。\n"
 "        "
 
-#: templates/postorius/lists/summary.html:107
+#: templates/postorius/lists/summary.html:108
 msgid "Log In"
 msgstr "登入"
 
-#: templates/postorius/lists/summary.html:112
+#: templates/postorius/lists/summary.html:113
 msgid ""
 "\n"
 "        You can also subscribe without creating an account.\n"
@@ -2420,23 +2614,23 @@ msgstr ""
 "        如果你想要这么做，请填写下面的表格。\n"
 "        "
 
-#: templates/postorius/lists/summary.html:128
+#: templates/postorius/lists/summary.html:130
 msgid "List metrics"
 msgstr "列表指标"
 
-#: templates/postorius/lists/summary.html:130
+#: templates/postorius/lists/summary.html:132
 msgid "Created at"
 msgstr "创建于"
 
-#: templates/postorius/lists/summary.html:132
+#: templates/postorius/lists/summary.html:134
 msgid "Last post at"
 msgstr "最后发帖于"
 
-#: templates/postorius/lists/summary.html:134
+#: templates/postorius/lists/summary.html:136
 msgid "Digest last sent at"
 msgstr "摘要最后发送于"
 
-#: templates/postorius/lists/summary.html:136
+#: templates/postorius/lists/summary.html:138
 msgid "Volume"
 msgstr "卷号"
 
@@ -2549,12 +2743,9 @@ msgstr "每个电子邮件地址可以有特定的 Mailman 首选项。"
 msgid ""
 "Any options showing as not set here have inherit at runtime from your global "
 "preferences (viewable on other tab)"
-msgstr "此处显示为未设定的任何选项会从你的全局首选项（可在其他标签页中查看）的运行时中继承"
-
-#: templates/postorius/user/address_preferences.html:62
-#: templates/postorius/user/subscription_preferences.html:73
-msgid "Save"
-msgstr "保存"
+msgstr ""
+"此处显示为未设定的任何选项会从你的全局首选项（可在其他标签页中查看）的运行时"
+"中继承"
 
 #: templates/postorius/user/all.html:20
 msgid "Search"
@@ -2576,6 +2767,12 @@ msgstr "订阅选项 —"
 msgid "Use this form to change the email used for this subscription"
 msgstr "使用此表格更改用于此订阅的电子邮件"
 
+#: templates/postorius/user/list_options.html:22
+#, fuzzy
+#| msgid "Use this form to change the email used for this subscription"
+msgid "Change email used for subscription"
+msgstr "使用此表格更改用于此订阅的电子邮件"
+
 #: templates/postorius/user/mailman_settings.html:7
 msgid "Subscription settings"
 msgstr "订阅设置"
@@ -2583,12 +2780,6 @@ msgstr "订阅设置"
 #: templates/postorius/user/manage.html:8
 msgid "Manage user"
 msgstr "管理用户"
-
-#: templates/postorius/user/manage.html:16
-#: templates/postorius/user/manage.html:48
-#: templates/postorius/user/manage.html:86
-msgid "Update"
-msgstr "更新"
 
 #: templates/postorius/user/manage.html:18
 msgid "Addresses"
@@ -2644,7 +2835,9 @@ msgstr "每个列表订阅都可以有特定的 Mailman 首选项。"
 msgid ""
 "Any options showing as not set inherit at runtime from your global or "
 "address specific preferences (viewable on other tabs)"
-msgstr "任何显示为未设定的选项会从你的全局或地址特定首选项（可在其他标签页中查看）的运行时中继承"
+msgstr ""
+"任何显示为未设定的选项会从你的全局或地址特定首选项（可在其他标签页中查看）的"
+"运行时中继承"
 
 #: templates/postorius/user/subscription_preferences.html:32
 msgid "Subscription"
@@ -2723,7 +2916,7 @@ msgstr "已注册新域"
 msgid "Domain %s updated"
 msgstr "已更新域 %s"
 
-#: views/domain.py:117 views/list.py:850
+#: views/domain.py:117 views/list.py:860
 msgid "Please check the errors below"
 msgstr "请检查下面的错误"
 
@@ -2753,7 +2946,7 @@ msgstr "{} 作为 {} 的所有者已被移除"
 msgid "The email {} has been banned."
 msgstr "电子邮件 {} 已被封禁。"
 
-#: views/generic.py:116 views/generic.py:127 views/list.py:1311
+#: views/generic.py:116 views/generic.py:127 views/list.py:1321
 #, python-format
 msgid "An error occurred: %s"
 msgstr "发生错误：%s"
@@ -2767,306 +2960,312 @@ msgstr "无效的数据：%s"
 msgid "The email {} has been un-banned"
 msgstr "电子邮件 {} 已被取消封禁"
 
-#: views/list.py:117
+#: views/list.py:118
 msgid "List {}s"
 msgstr "{} 列表"
 
-#: views/list.py:131
+#: views/list.py:132
 msgid "Add {}"
 msgstr "添加 {}"
 
-#: views/list.py:134
+#: views/list.py:135
 msgid "No {}s were found matching the search."
 msgstr "未找到符合搜索的 {}。"
 
-#: views/list.py:136
+#: views/list.py:137
 msgid "List has no {}s"
 msgstr "列表没有 {}"
 
-#: views/list.py:149
+#: views/list.py:150
 msgid "The selected members have been unsubscribed"
 msgstr "所选成员已被退订"
 
-#: views/list.py:167
+#: views/list.py:168
 #, python-brace-format
 msgid "{email} has been added with the role {role}"
 msgstr "{email} 已被添加为角色 {role}"
 
-#: views/list.py:214
+#: views/list.py:215
 msgid "Member does not exist"
 msgstr "成员不存在"
 
-#: views/list.py:233
+#: views/list.py:234
 msgid "The member's preferences have been updated."
 msgstr "成员的首选项已被更新。"
 
-#: views/list.py:242
+#: views/list.py:243
 msgid "No change to the member's moderation."
 msgstr "成员的审核设置未作更改。"
 
-#: views/list.py:254
+#: views/list.py:255
 msgid "The member's moderation settings have been updated."
 msgstr "成员的审核设置已被更新。"
 
-#: views/list.py:435
+#: views/list.py:436
 msgid "You are not subscribed to {}."
 msgstr "你没有订阅 {}。"
 
-#: views/list.py:448
+#: views/list.py:449
 msgid "You are already subscribed"
 msgstr "你已经订阅"
 
-#: views/list.py:459
+#: views/list.py:460
 msgid "Subscription changed to {}"
 msgstr "订阅已更改至 {}"
 
-#: views/list.py:463
+#: views/list.py:464
 msgid "Something went wrong. Please try again. {} {}"
 msgstr "发生了错误。请重试。{} {}"
 
-#: views/list.py:504
+#: views/list.py:505
 msgid ""
 "Your subscription request has been submitted and is waiting for moderator "
 "approval."
 msgstr "你的订阅请求已被提交并等待版主批准。"
 
-#: views/list.py:509
+#: views/list.py:510
 #, python-format
 msgid "You are subscribed to %s."
 msgstr "你已经订阅 %s。"
 
-#: views/list.py:513 views/list.py:543
+#: views/list.py:514 views/list.py:544
 msgid "Something went wrong. Please try again."
 msgstr "发生了错误。请重试。"
 
-#: views/list.py:539
+#: views/list.py:540
 msgid "Please check your inbox for further instructions"
 msgstr "请检查你的收件箱以获取更多说明"
 
-#: views/list.py:559
+#: views/list.py:564
+#, fuzzy
+#| msgid "You are subscribed to %s."
+msgid "You can only unsubscribe yourself."
+msgstr "你已经订阅 %s。"
+
+#: views/list.py:569
 msgid ""
 "You have a pending unsubscription request waiting for moderator approval."
 msgstr "你有待定的退订请求正等待版主批准。"
 
-#: views/list.py:566
+#: views/list.py:576
 msgid ""
 "Your unsubscription request has been submitted and is waiting for moderator "
 "approval."
 msgstr "你的退订请求已被提交并等待版主批准。"
 
-#: views/list.py:570
+#: views/list.py:580
 #, python-format
 msgid "%s has been unsubscribed from this list."
 msgstr "%s 已从此列表退订。"
 
-#: views/list.py:603
+#: views/list.py:613
 #, python-format
 msgid "The address %(address)s has been invited to %(list)s."
 msgstr "地址 %(address)s 已被邀请至 %(list)s。"
 
-#: views/list.py:606
+#: views/list.py:616
 #, python-format
 msgid "The address %(address)s has been subscribed to %(list)s."
 msgstr "地址 %(address)s 已经订阅至 %(list)s。"
 
-#: views/list.py:609
+#: views/list.py:619
 msgid ""
 " Subscription may be pending address verification, confirmation or approval "
 "as appropriate."
 msgstr " 订阅可能正在等待正确的地址验证、确认或者批准。"
 
-#: views/list.py:619 views/list.py:670
+#: views/list.py:629 views/list.py:680
 #, python-format
 msgid "The email address %s is not valid."
 msgstr "电子邮件地址 %s 无效。"
 
-#: views/list.py:644
+#: views/list.py:654
 msgid "Please fill out the form correctly."
 msgstr "请正确填写表格。"
 
-#: views/list.py:660
+#: views/list.py:670
 #, python-brace-format
 msgid "These addresses {address} have been unsubscribed from {list}."
 msgstr "这些地址 {address} 已经从 {list} 退订。"
 
-#: views/list.py:691
+#: views/list.py:701
 msgid "The selected messages were accepted"
 msgstr "所选消息已被接受"
 
-#: views/list.py:695
+#: views/list.py:705
 msgid "The selected messages were rejected"
 msgstr "所选消息已被拒绝"
 
-#: views/list.py:699
+#: views/list.py:709
 msgid "The selected messages were discarded"
 msgstr "所选消息已被丢弃"
 
-#: views/list.py:701
+#: views/list.py:711
 msgid "Message could not be found"
 msgstr "消息未找到"
 
-#: views/list.py:730
+#: views/list.py:740
 msgid "The message was accepted"
 msgstr "此消息已被接受"
 
-#: views/list.py:733
+#: views/list.py:743
 msgid "The message was rejected"
 msgstr "此消息已被拒绝"
 
-#: views/list.py:736
+#: views/list.py:746
 msgid "The message was discarded"
 msgstr "此消息已被丢弃"
 
-#: views/list.py:741
+#: views/list.py:751
 msgid "Held message was not found."
 msgstr "未找到搁置的消息。"
 
-#: views/list.py:754
+#: views/list.py:764
 msgid "Moderation action for {} set to {}"
 msgstr "{} 的审核动作已设为 {}"
 
-#: views/list.py:759
+#: views/list.py:769
 msgid "Failed to set moderation action for {}"
 msgstr "设定 {} 的审核动作失败"
 
-#: views/list.py:811
+#: views/list.py:821
 msgid "Choose a Domain"
 msgstr "选择域"
 
-#: views/list.py:832
+#: views/list.py:842
 msgid "List created"
 msgstr "列表已创建"
 
-#: views/list.py:844
+#: views/list.py:854
 msgid "Mailing List already exists."
 msgstr "邮件列表已存在。"
 
-#: views/list.py:1005
+#: views/list.py:1015
 msgid "Subscriptions pending user confirmation"
 msgstr "订阅等待用户确认"
 
-#: views/list.py:1018
+#: views/list.py:1028
 msgid "Subscriptions pending approval"
 msgstr "订阅等待批准"
 
-#: views/list.py:1031
+#: views/list.py:1041
 msgid "Un-subscriptions pending approval"
 msgstr "退订等待批准"
 
-#: views/list.py:1067
+#: views/list.py:1077
 msgid "The request has been accepted."
 msgstr "此请求已被接受。"
 
-#: views/list.py:1068
+#: views/list.py:1078
 msgid "The request has been rejected."
 msgstr "此请求已被拒绝。"
 
-#: views/list.py:1069
+#: views/list.py:1079
 msgid "The request has been discarded."
 msgstr "此请求已被丢弃。"
 
-#: views/list.py:1070
+#: views/list.py:1080
 msgid "The request has been defered."
 msgstr "此请求已被延迟。"
 
-#: views/list.py:1089
+#: views/list.py:1099
 #, python-format
 msgid "The request was already moderated: %s"
 msgstr "此请求已被审核：%s"
 
-#: views/list.py:1092
+#: views/list.py:1102
 #, python-format
 msgid "The request could not be moderated: %s"
 msgstr "此请求无法审核：%s"
 
-#: views/list.py:1098
+#: views/list.py:1108
 msgid "List Identity"
 msgstr "列表标识"
 
-#: views/list.py:1099
+#: views/list.py:1109
 msgid "Automatic Responses"
 msgstr "自动回复"
 
-#: views/list.py:1100
+#: views/list.py:1110
 msgid "Alter Messages"
 msgstr "更改消息"
 
-#: views/list.py:1101
+#: views/list.py:1111
 msgid "DMARC Mitigations"
 msgstr "DMARC 缓解措施"
 
-#: views/list.py:1102
+#: views/list.py:1112
 msgid "Digest"
 msgstr "摘要"
 
-#: views/list.py:1103
+#: views/list.py:1113
 msgid "Message Acceptance"
 msgstr "消息接受"
 
-#: views/list.py:1104
+#: views/list.py:1114
 msgid "Archiving"
 msgstr "存档"
 
-#: views/list.py:1105
+#: views/list.py:1115
 msgid "Member Policy"
 msgstr "成员策略"
 
-#: views/list.py:1106
+#: views/list.py:1116
 msgid "Bounce Processing"
 msgstr "退信处理"
 
-#: views/list.py:1169
+#: views/list.py:1179
 msgid "The settings have been updated."
 msgstr "设置已更新。"
 
-#: views/list.py:1174
+#: views/list.py:1184
 msgid "An error occurred: "
 msgstr "发生错误： "
 
-#: views/list.py:1198
+#: views/list.py:1208
 #, python-format
 msgid "The user %(email)s is not in the %(role)s group"
 msgstr "用户 %(email)s 不在 %(role)s 组内"
 
-#: views/list.py:1204
+#: views/list.py:1214
 msgid "Removing the last owner is impossible"
 msgstr "无法移除最后一个的所有者"
 
-#: views/list.py:1218
+#: views/list.py:1228
 #, python-format
 msgid "The user could not be removed: %(msg)s"
 msgstr "用户无法被移除：%(msg)s"
 
-#: views/list.py:1221
+#: views/list.py:1231
 #, python-format
 msgid "The user %(address)s has been removed from the %(role)s group."
 msgstr "用户 %(address)s 已从 %(role)s 组移除。"
 
-#: views/list.py:1238
+#: views/list.py:1248
 msgid "No member is subscribed to the list currently."
 msgstr "当前没有成员订阅此列表。"
 
-#: views/list.py:1248
+#: views/list.py:1258
 msgid "All members have been unsubscribed from the list."
 msgstr "所有成员都已从此列表退订。"
 
-#: views/list.py:1313
+#: views/list.py:1323
 msgid "The header matches were successfully modified."
 msgstr "首部匹配项都已成功修改。"
 
-#: views/list.py:1320
+#: views/list.py:1330
 msgid "New header"
 msgstr "新首部"
 
-#: views/list.py:1321
+#: views/list.py:1331
 msgid "New pattern"
 msgstr "新模式"
 
-#: views/list.py:1348
+#: views/list.py:1358
 msgid "Invalid confirmation token"
 msgstr "无效的确认令牌"
 
-#: views/list.py:1356 views/list.py:1368
+#: views/list.py:1366 views/list.py:1378
 msgid "Token expired or invalid."
 msgstr "令牌过期或无效。"
 
@@ -3078,30 +3277,30 @@ msgstr "消息不存在"
 msgid "Attachment does not exist"
 msgstr "附件不存在"
 
-#: views/user.py:91
+#: views/user.py:92
 msgid "Your preferences have been updated."
 msgstr "你的首选项已更新。"
 
-#: views/user.py:93
+#: views/user.py:94
 msgid "Your preferences did not change."
 msgstr "你的首选项未更改。"
 
-#: views/user.py:213
+#: views/user.py:214
 msgid "Subscription does not exist"
 msgstr "订阅不存在"
 
-#: views/user.py:405
+#: views/user.py:407
 msgid "Successfully updated addresses {}"
 msgstr "成功更新地址 {}"
 
-#: views/user.py:415
+#: views/user.py:417
 msgid "Successfully updated memberships for {}"
 msgstr "成功更新 {} 的成员关系"
 
-#: views/user.py:421
+#: views/user.py:423
 msgid "Successfully updated user."
 msgstr "成功更新用户。"
 
-#: views/user.py:430
+#: views/user.py:432
 msgid "Password updated successfully"
 msgstr "密码更新成功"
