@@ -96,6 +96,7 @@ class APICountingMiddleware:
             logger.debug('[%s] %s with %s',
                          each.get('method'), each.get('url'), each.get('data'))
         logger.debug('=======================')
+        self.api_call_counter = []
         return response
 
     def _trace_api_calls(self, params):
