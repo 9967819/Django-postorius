@@ -90,24 +90,12 @@
             {% endblocktrans %}
           </p>
           <form action="{% url 'list_subscribe' list.list_id %}" method="post" class="form-horizontal">
-              {% bootstrap_form_horizontal subscribe_form 2 8 'Subscribe' %}
+            {% bootstrap_form_horizontal subscribe_form 2 8 'Subscribe' %}
+            <p hidden>{% trans 'Subscribe' %}</p>
           </form>
         {% endif %}
         {% if user_request_pending %}
             <h4>{% trans "You have a subscription request pending. If you don't hear back soon, please contact the list owners." %}</h4>
-        {% else %}
-            <h2>{% trans 'Subscribe to this list' %}</h2>
-            <p>
-              {% blocktrans with address=list.settings.join_address %}
-                  To subscribe you can send an email with 'subscribe' in the subject to
-                  <a href="mailto:{{ address }}?subject=Subscribe">{{ address }}</a>
-                  or use the form below:
-              {% endblocktrans %}
-            </p>
-            <form action="{% url 'list_subscribe' list.list_id %}" method="post" class="form-horizontal">
-                {% bootstrap_form_horizontal subscribe_form 2 8 'Subscribe' %}
-                <p hidden>{% trans 'Subscribe' %}</p>
-            </form>
         {% endif %}
     {% else %}
       <div>
