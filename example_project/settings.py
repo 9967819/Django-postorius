@@ -294,8 +294,10 @@ LOGGING = {
 
 POSTORIUS_TEMPLATE_BASE_URL = "http://localhost:8000"
 
+#: Debug the API calls made by Postorius.
+POSTORIUS_API_DEBUG = False
 
-if DEBUG:
+if DEBUG and POSTORIUS_API_DEBUG:
     MIDDLEWARE.append('postorius.middleware.APICountingMiddleware')
 
 try:
