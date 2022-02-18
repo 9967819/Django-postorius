@@ -13,6 +13,7 @@
 
     <form action="{% url 'mass_subscribe' list.list_id %}" method="post" class="form-horizontal">
         {% bootstrap_form_horizontal form 2 8 'Subscribe users' %}
+        <p hidden>{% trans 'Subscribe users' %}</p>
     </form>
 
 {% endblock content %}

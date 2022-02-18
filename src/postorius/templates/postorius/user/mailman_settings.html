@@ -20,6 +20,7 @@
     {% else %}
         <form action="{% url 'user_mailmansettings' %}" method="post" class="form-horizontal">
             {% bootstrap_form_horizontal form 3 8 'Save changes' %}
+            <p hidden>{% trans 'Save changes' %}</p>
         </form>
     {% endif %}
 </div>

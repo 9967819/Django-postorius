@@ -112,6 +112,7 @@ class ListMembersViews(ListOwnerMixin, MailingListView):
             return redirect('list_members', list_id, 'member')
         context = dict()
         context['list'] = self.mailing_list
+        # Warning: role not translatable
         context['role'] = role
         context['member_form'] = member_form
         context['page_title'] = _('List {}s'.format(role.capitalize()))

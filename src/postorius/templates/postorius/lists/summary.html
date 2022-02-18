@@ -90,7 +90,8 @@
             {% endblocktrans %}
           </p>
           <form action="{% url 'list_subscribe' list.list_id %}" method="post" class="form-horizontal">
-              {% bootstrap_form_horizontal subscribe_form 2 8 'Subscribe' %}
+            {% bootstrap_form_horizontal subscribe_form 2 8 'Subscribe' %}
+            <p hidden>{% trans 'Subscribe' %}</p>
           </form>
         {% endif %}
         {% if user_request_pending %}
@@ -117,6 +118,7 @@
         <form action="{% url 'list_anonymous_subscribe' list.list_id %}"
               method="post" class="form-horizontal">
           {% bootstrap_form_horizontal anonymous_subscription_form 2 8 'Subscribe' %}
+          <p hidden>{% trans 'Subscribe' %}</p>
         </form>
       </div>
     {% endif %}

@@ -14,6 +14,7 @@
 
     <form action="{% url 'domain_new' %}" method="post" class="form-horizontal">
         {% bootstrap_form_horizontal form 2 8 'Create domain' %}
+        <p hidden>{% trans 'Create domain' %}</p>
     </form>
 
 {% endblock content %}
