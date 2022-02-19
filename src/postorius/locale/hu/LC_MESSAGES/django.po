@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-17 23:23-0800\n"
+"POT-Creation-Date: 2022-02-18 23:31-0800\n"
 "PO-Revision-Date: 2021-12-27 22:24+0000\n"
 "Last-Translator: f3rr31 <5920873@disroot.org>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -53,8 +53,8 @@ msgstr ""
 "A levelezőlista domainje. Például ha egy teszt@példa.hu levelezőlistát "
 "szeretne, a példa.hu-t kell beírnia."
 
-#: forms/domain_forms.py:54 forms/list_forms.py:84 forms/list_forms.py:960
-#: templates/postorius/domain/index.html:22 templates/postorius/index.html:62
+#: forms/domain_forms.py:54 templates/postorius/domain/index.html:22
+#: templates/postorius/index.html:56
 msgid "Description"
 msgstr "Leírás"
 
@@ -139,7 +139,7 @@ msgstr "Alapértelmezett feldolgozás"
 msgid "Make at least one selection"
 msgstr "Legalább egyet válasszon ki"
 
-#: forms/fields.py:139 templates/postorius/lists/summary.html:52
+#: forms/fields.py:139 templates/postorius/lists/summary.html:54
 msgid "Delivery mode"
 msgstr "Kézbesítési mód"
 
@@ -159,7 +159,7 @@ msgstr ""
 "hagyományos szöveges kivonatolást. Összesített kivonatok egyenértékűek a "
 "MIME kivonatokkal."
 
-#: forms/fields.py:161 templates/postorius/lists/summary.html:51
+#: forms/fields.py:161 templates/postorius/lists/summary.html:53
 msgid "Delivery status"
 msgstr "Kézbesítés állapota"
 
@@ -279,6 +279,12 @@ msgstr "Hirdesse a listát a listaindexben"
 #: forms/list_forms.py:81
 msgid "Hide this list in list index"
 msgstr "Rejtse el a listát a listaindexben"
+
+#: forms/list_forms.py:84 forms/list_forms.py:960
+#, fuzzy
+#| msgid "Description"
+msgid "Short Description"
+msgstr "Leírás"
 
 #: forms/list_forms.py:94
 msgid "Choose an existing Domain."
@@ -935,8 +941,9 @@ msgstr ""
 "MIME-részként hozzáadandó szöveg, amikor a DMARC-féle művelet a burkolt "
 "üzenetre vonatkozik."
 
-#: forms/list_forms.py:641 templatetags/membership_helpers.py:78
-#: templatetags/membership_helpers.py:84
+#: forms/list_forms.py:641 templates/postorius/lists/summary.html:144
+#: templates/postorius/lists/summary.html:153
+#: templatetags/membership_helpers.py:78 templatetags/membership_helpers.py:84
 msgid "None"
 msgstr "Egyik sem"
 
@@ -1430,8 +1437,10 @@ msgstr ""
 "de jellemezze a listát."
 
 #: forms/list_forms.py:969
-msgid "Information"
-msgstr "Információ"
+#, fuzzy
+#| msgid "Description"
+msgid "Long Description"
+msgstr "Leírás"
 
 #: forms/list_forms.py:970
 msgid "A longer description of this mailing list."
@@ -1795,11 +1804,35 @@ msgstr ""
 "$language: A lista által előnyben részesített nyelv kétbetűs nyelvkódja, pl. "
 "fr, en, de \n"
 
-#: models.py:240
+#: models.py:73
+#, fuzzy
+#| msgid "Owners"
+msgid "owner"
+msgstr "Tulajdonosok"
+
+#: models.py:74
+#, fuzzy
+#| msgid "Members"
+msgid "member"
+msgstr "Tagok"
+
+#: models.py:75
+#, fuzzy
+#| msgid "Non-Members"
+msgid "nonmember"
+msgstr "Nem tagok"
+
+#: models.py:76
+#, fuzzy
+#| msgid "Moderators"
+msgid "moderator"
+msgstr "Moderátorok"
+
+#: models.py:253
 msgid "Choose the template you want to customize."
 msgstr "Válassza ki a testreszabni kívánt sablont."
 
-#: models.py:247
+#: models.py:260
 msgid ""
 "Language for the template, this should be the list's preferred language."
 msgstr "A sablon nyelve, ez lehetőleg a lista által preferált nyelv legyen."
@@ -2031,7 +2064,7 @@ msgstr "Rendszerinformáció"
 msgid "Users"
 msgstr "Felhasználók"
 
-#: templates/postorius/base.html:69 templates/postorius/lists/summary.html:31
+#: templates/postorius/base.html:69 templates/postorius/lists/summary.html:33
 msgid "Archives"
 msgstr "Archívumok"
 
@@ -2109,7 +2142,7 @@ msgstr "Törlés"
 #: templates/postorius/domain/confirm_delete.html:34
 #: templates/postorius/domain/template_delete.html:28
 #: templates/postorius/lists/confirm_delete.html:25
-#: templates/postorius/lists/confirm_remove_role.html:18
+#: templates/postorius/lists/confirm_remove_role.html:24
 #: templates/postorius/lists/confirm_removeall_subscribers.html:22
 #: templates/postorius/lists/template_delete.html:25
 msgid "Cancel"
@@ -2306,51 +2339,27 @@ msgstr ""
 msgid "Role: "
 msgstr "Szerepkör"
 
-#: templates/postorius/index.html:33
-#, fuzzy
-#| msgid "Owners"
-msgid "owner"
-msgstr "Tulajdonosok"
-
-#: templates/postorius/index.html:34
-#, fuzzy
-#| msgid "Moderators"
-msgid "moderator"
-msgstr "Moderátorok"
-
-#: templates/postorius/index.html:35
-#, fuzzy
-#| msgid "Members"
-msgid "member"
-msgstr "Tagok"
-
-#: templates/postorius/index.html:36
-#, fuzzy
-#| msgid "Non-Members"
-msgid "non-member"
-msgstr "Nem tagok"
-
-#: templates/postorius/index.html:46
+#: templates/postorius/index.html:40
 msgid "Create New Domain"
 msgstr "Új domain létrehozása"
 
-#: templates/postorius/index.html:48
+#: templates/postorius/index.html:42
 msgid "Create New List"
 msgstr "Új lista létrehozása"
 
-#: templates/postorius/index.html:60
+#: templates/postorius/index.html:54
 msgid "List name"
 msgstr "Lista neve"
 
-#: templates/postorius/index.html:61
+#: templates/postorius/index.html:55
 msgid "Post address"
 msgstr "Posta cím"
 
-#: templates/postorius/index.html:72
+#: templates/postorius/index.html:66
 msgid "unadvertised"
 msgstr "hirdetetlenül"
 
-#: templates/postorius/index.html:84
+#: templates/postorius/index.html:78
 #, fuzzy
 #| msgid ""
 #| "Only lists that you are owner, moderator or subscriber for are shown here."
@@ -2361,11 +2370,11 @@ msgstr ""
 "Csak azok a listák jelennek meg itt, amelyeknek Ön tulajdonosa, moderátora "
 "vagy előfizetője."
 
-#: templates/postorius/index.html:88
+#: templates/postorius/index.html:82
 msgid "Only admins see unadvertised lists in the list index."
 msgstr "Csak a rendszergazdák látják a nem indexelt listákat a listaindexben."
 
-#: templates/postorius/index.html:94
+#: templates/postorius/index.html:88
 msgid "There are currently no mailing lists."
 msgstr "Jelenleg nincsenek levelezőlisták."
 
@@ -2393,17 +2402,29 @@ msgstr ""
 "                "
 
 #: templates/postorius/lists/confirm_remove_role.html:5
-#: templates/postorius/lists/confirm_remove_role.html:12
 msgid "Confirm remove role"
 msgstr "Erősítse meg a szerepkör eltávolítását"
 
-#: templates/postorius/lists/confirm_remove_role.html:14
+#: templates/postorius/lists/confirm_remove_role.html:15
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "                Delete %(listname)s\n"
+#| "                "
+msgid "Remove %(address)s as %(role_translated)s?"
+msgstr ""
+"\n"
+"                Törlés %(listname)s\n"
+"                "
+
+#: templates/postorius/lists/confirm_remove_role.html:20
 msgid "Are you sure?"
 msgstr "Biztos vagy benne?"
 
-#: templates/postorius/lists/confirm_remove_role.html:17
-msgid "Remove"
-msgstr "Töröl"
+#: templates/postorius/lists/confirm_remove_role.html:23
+#, python-format
+msgid " Remove %(role_translated)s"
+msgstr ""
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 msgid "Unsubscribe all members"
@@ -2642,22 +2663,22 @@ msgstr "Beállítások"
 msgid "Rejection reason"
 msgstr "Elutasítás oka"
 
-#: templates/postorius/lists/summary.html:8
+#: templates/postorius/lists/summary.html:10
 #: templates/postorius/menu/list_nav.html:10
 msgid "Info"
 msgstr "Információ"
 
-#: templates/postorius/lists/summary.html:21
+#: templates/postorius/lists/summary.html:23
 msgid "To contact the list owners, use the following email address:"
 msgstr ""
 "A listatulajdonosokkal való kapcsolatfelvételhez használja az alábbi e-mail "
 "címet:"
 
-#: templates/postorius/lists/summary.html:27
+#: templates/postorius/lists/summary.html:29
 msgid "You have to login to visit the archives of this list."
 msgstr "A lista archívumának megtekintéséhez be kell jelentkeznie."
 
-#: templates/postorius/lists/summary.html:33
+#: templates/postorius/lists/summary.html:35
 #, python-format
 msgid ""
 "\n"
@@ -2670,40 +2691,40 @@ msgstr ""
 "\">Archívum</a>\n"
 "          "
 
-#: templates/postorius/lists/summary.html:45
-#: templates/postorius/lists/summary.html:102
+#: templates/postorius/lists/summary.html:47
+#: templates/postorius/lists/summary.html:104
 msgid "Subscription / Unsubscription"
 msgstr "Feliratkozás / Leiratkozás"
 
-#: templates/postorius/lists/summary.html:50
+#: templates/postorius/lists/summary.html:52
 #: templates/postorius/user/subscriptions.html:23
 msgid "Subscription Address"
 msgstr "Feliratkozási cím"
 
-#: templates/postorius/lists/summary.html:53
+#: templates/postorius/lists/summary.html:55
 #: templates/postorius/user/all.html:37
 msgid "Manage"
 msgstr "Kezelés"
 
-#: templates/postorius/lists/summary.html:54
-#: templates/postorius/lists/summary.html:75
+#: templates/postorius/lists/summary.html:56
+#: templates/postorius/lists/summary.html:77
 msgid "Unsubscribe"
 msgstr "Leiratkozás"
 
-#: templates/postorius/lists/summary.html:61
+#: templates/postorius/lists/summary.html:63
 #: templates/postorius/user/subscription_preferences.html:49
 msgid "Primary Address"
 msgstr "Elsődleges cím"
 
-#: templates/postorius/lists/summary.html:69
+#: templates/postorius/lists/summary.html:71
 msgid "Manage Subscription"
 msgstr "Feliratkozás kezelése"
 
-#: templates/postorius/lists/summary.html:84
+#: templates/postorius/lists/summary.html:86
 msgid "Subscribe to this list"
 msgstr "Feliratkozás erre a listára"
 
-#: templates/postorius/lists/summary.html:86
+#: templates/postorius/lists/summary.html:88
 #, python-format
 msgid ""
 "\n"
@@ -2722,14 +2743,14 @@ msgstr ""
 "                  címre vagy használja az alábbi űrlapot:\n"
 "            "
 
-#: templates/postorius/lists/summary.html:94
-#: templates/postorius/lists/summary.html:121
+#: templates/postorius/lists/summary.html:96
+#: templates/postorius/lists/summary.html:123
 #, fuzzy
 #| msgid "Unsubscribe"
 msgid "Subscribe"
 msgstr "Leiratkozás"
 
-#: templates/postorius/lists/summary.html:98
+#: templates/postorius/lists/summary.html:100
 msgid ""
 "You have a subscription request pending. If you don't hear back soon, please "
 "contact the list owners."
@@ -2737,7 +2758,7 @@ msgstr ""
 "Előfizetési kérelme függőben van. Ha hamarosan nem érkezik visszajelzés, "
 "kérjük, lépjen kapcsolatba a lista tulajdonosával."
 
-#: templates/postorius/lists/summary.html:103
+#: templates/postorius/lists/summary.html:105
 msgid ""
 "\n"
 "        To subscribe or unsubscribe from this list, please log in first.\n"
@@ -2754,11 +2775,11 @@ msgstr ""
 "        a megfelelő e-mail címmel.\n"
 "        "
 
-#: templates/postorius/lists/summary.html:108
+#: templates/postorius/lists/summary.html:110
 msgid "Log In"
 msgstr "Belépés"
 
-#: templates/postorius/lists/summary.html:113
+#: templates/postorius/lists/summary.html:115
 msgid ""
 "\n"
 "        You can also subscribe without creating an account.\n"
@@ -2770,23 +2791,23 @@ msgstr ""
 "        Ha ezt szeretné, kérjük, használja az alábbi űrlapot.\n"
 "        "
 
-#: templates/postorius/lists/summary.html:130
+#: templates/postorius/lists/summary.html:132
 msgid "List metrics"
 msgstr "Lista metrikák"
 
-#: templates/postorius/lists/summary.html:132
+#: templates/postorius/lists/summary.html:134
 msgid "Created at"
 msgstr "Létrehozva ekkor"
 
-#: templates/postorius/lists/summary.html:134
+#: templates/postorius/lists/summary.html:139
 msgid "Last post at"
 msgstr "Utolsó hozzászólás"
 
-#: templates/postorius/lists/summary.html:136
+#: templates/postorius/lists/summary.html:148
 msgid "Digest last sent at"
 msgstr "Utoljára küldött kivonat"
 
-#: templates/postorius/lists/summary.html:138
+#: templates/postorius/lists/summary.html:157
 msgid "Volume"
 msgstr "Kötet"
 
@@ -3465,6 +3486,12 @@ msgstr "A felhasználó sikeresen frissítve."
 #: views/user.py:432
 msgid "Password updated successfully"
 msgstr "A jelszó sikeresen frissítve"
+
+#~ msgid "Remove"
+#~ msgstr "Töröl"
+
+#~ msgid "Information"
+#~ msgstr "Információ"
 
 #~ msgid "You are subscribed to this list with the following address:"
 #~ msgstr "Ön feliratkozott erre a listára a következő címmel:"

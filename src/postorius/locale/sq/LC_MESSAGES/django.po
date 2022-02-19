@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-17 23:23-0800\n"
+"POT-Creation-Date: 2022-02-18 23:31-0800\n"
 "PO-Revision-Date: 2021-11-02 08:37+0000\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -50,8 +50,8 @@ msgstr ""
 "Përkatësia për listat tuaja të postimeve. Për shembull, kur doni lista të "
 "tilla si testing@example.com, jepni këtu example.com."
 
-#: forms/domain_forms.py:54 forms/list_forms.py:84 forms/list_forms.py:960
-#: templates/postorius/domain/index.html:22 templates/postorius/index.html:62
+#: forms/domain_forms.py:54 templates/postorius/domain/index.html:22
+#: templates/postorius/index.html:56
 msgid "Description"
 msgstr "Përshkrim"
 
@@ -136,7 +136,7 @@ msgstr "Përpunim parazgjedhje"
 msgid "Make at least one selection"
 msgstr "Bëni të paktën një përzgjedhje"
 
-#: forms/fields.py:139 templates/postorius/lists/summary.html:52
+#: forms/fields.py:139 templates/postorius/lists/summary.html:54
 msgid "Delivery mode"
 msgstr "Mënyrë dërgimi"
 
@@ -156,7 +156,7 @@ msgstr ""
 "Përmbledhjet Përmbledhëse janë aktualisht të barasvlershme me Përmbledhje "
 "MIME."
 
-#: forms/fields.py:161 templates/postorius/lists/summary.html:51
+#: forms/fields.py:161 templates/postorius/lists/summary.html:53
 msgid "Delivery status"
 msgstr "Gjendje dërgimi"
 
@@ -274,6 +274,12 @@ msgstr "Reklamoje këtë listë te treguesi i listave"
 #: forms/list_forms.py:81
 msgid "Hide this list in list index"
 msgstr "Fshihe këtë listë te treguesi i listave"
+
+#: forms/list_forms.py:84 forms/list_forms.py:960
+#, fuzzy
+#| msgid "Description"
+msgid "Short Description"
+msgstr "Përshkrim"
 
 #: forms/list_forms.py:94
 msgid "Choose an existing Domain."
@@ -940,8 +946,9 @@ msgstr ""
 "paraprin pjesës së mesazhit origjinal në mesazhin e mbështjellë kur për "
 "zbutje efektesh DMARC aplikohet veprimi i mbështjelljes së mesazheve."
 
-#: forms/list_forms.py:641 templatetags/membership_helpers.py:78
-#: templatetags/membership_helpers.py:84
+#: forms/list_forms.py:641 templates/postorius/lists/summary.html:144
+#: templates/postorius/lists/summary.html:153
+#: templatetags/membership_helpers.py:78 templatetags/membership_helpers.py:84
 msgid "None"
 msgstr "Asnjë"
 
@@ -1446,8 +1453,10 @@ msgstr ""
 "mundeni, teksa prapë tregon qartë se për çfarë është lista."
 
 #: forms/list_forms.py:969
-msgid "Information"
-msgstr "Informacion"
+#, fuzzy
+#| msgid "Description"
+msgid "Long Description"
+msgstr "Përshkrim"
 
 #: forms/list_forms.py:970
 msgid "A longer description of this mailing list."
@@ -1813,11 +1822,35 @@ msgstr ""
 "$language: Kodi me dy shkronja i gjuhës për gjuhën e parapëlqyer të listës, "
 "për shembull, sq, fr, it \n"
 
-#: models.py:240
+#: models.py:73
+#, fuzzy
+#| msgid "Owners"
+msgid "owner"
+msgstr "Pronarë"
+
+#: models.py:74
+#, fuzzy
+#| msgid "Members"
+msgid "member"
+msgstr "Anëtarë"
+
+#: models.py:75
+#, fuzzy
+#| msgid "Non-Members"
+msgid "nonmember"
+msgstr "Jo-Anëtarë"
+
+#: models.py:76
+#, fuzzy
+#| msgid "Moderators"
+msgid "moderator"
+msgstr "Moderatorë"
+
+#: models.py:253
 msgid "Choose the template you want to customize."
 msgstr "Zgjidhni gjedhen që doni të përshtatni."
 
-#: models.py:247
+#: models.py:260
 msgid ""
 "Language for the template, this should be the list's preferred language."
 msgstr "Gjuhë për gjedhen, kjo duhet të jetë gjuha e parapëlqyer e listës."
@@ -2045,7 +2078,7 @@ msgstr "Të dhëna Mbi Sistemin"
 msgid "Users"
 msgstr "Përdorues"
 
-#: templates/postorius/base.html:69 templates/postorius/lists/summary.html:31
+#: templates/postorius/base.html:69 templates/postorius/lists/summary.html:33
 msgid "Archives"
 msgstr "Arkiva"
 
@@ -2122,7 +2155,7 @@ msgstr "Fshije"
 #: templates/postorius/domain/confirm_delete.html:34
 #: templates/postorius/domain/template_delete.html:28
 #: templates/postorius/lists/confirm_delete.html:25
-#: templates/postorius/lists/confirm_remove_role.html:18
+#: templates/postorius/lists/confirm_remove_role.html:24
 #: templates/postorius/lists/confirm_removeall_subscribers.html:22
 #: templates/postorius/lists/template_delete.html:25
 msgid "Cancel"
@@ -2319,51 +2352,27 @@ msgstr ""
 msgid "Role: "
 msgstr "Rol"
 
-#: templates/postorius/index.html:33
-#, fuzzy
-#| msgid "Owners"
-msgid "owner"
-msgstr "Pronarë"
-
-#: templates/postorius/index.html:34
-#, fuzzy
-#| msgid "Moderators"
-msgid "moderator"
-msgstr "Moderatorë"
-
-#: templates/postorius/index.html:35
-#, fuzzy
-#| msgid "Members"
-msgid "member"
-msgstr "Anëtarë"
-
-#: templates/postorius/index.html:36
-#, fuzzy
-#| msgid "Non-Members"
-msgid "non-member"
-msgstr "Jo-Anëtarë"
-
-#: templates/postorius/index.html:46
+#: templates/postorius/index.html:40
 msgid "Create New Domain"
 msgstr "Krijoni Përkatësi të Re"
 
-#: templates/postorius/index.html:48
+#: templates/postorius/index.html:42
 msgid "Create New List"
 msgstr "Krijoni Listë të Re"
 
-#: templates/postorius/index.html:60
+#: templates/postorius/index.html:54
 msgid "List name"
 msgstr "Emër liste"
 
-#: templates/postorius/index.html:61
+#: templates/postorius/index.html:55
 msgid "Post address"
 msgstr "Adresë Postimi"
 
-#: templates/postorius/index.html:72
+#: templates/postorius/index.html:66
 msgid "unadvertised"
 msgstr "e pareklamuar"
 
-#: templates/postorius/index.html:84
+#: templates/postorius/index.html:78
 #, fuzzy
 #| msgid ""
 #| "Only lists that you are owner, moderator or subscriber for are shown here."
@@ -2373,11 +2382,11 @@ msgid ""
 msgstr ""
 "Këtu shfaqen vetëm lista për të cilat jeni i zoti, moderator ose pajtimtar."
 
-#: templates/postorius/index.html:88
+#: templates/postorius/index.html:82
 msgid "Only admins see unadvertised lists in the list index."
 msgstr "Vetëm përgjegjësit shohin lista të pareklamuara te treguesi i listave."
 
-#: templates/postorius/index.html:94
+#: templates/postorius/index.html:88
 msgid "There are currently no mailing lists."
 msgstr "Hëpërhë s’ka lista postimesh."
 
@@ -2405,17 +2414,29 @@ msgstr ""
 "                "
 
 #: templates/postorius/lists/confirm_remove_role.html:5
-#: templates/postorius/lists/confirm_remove_role.html:12
 msgid "Confirm remove role"
 msgstr "Ripohoni heqje roli"
 
-#: templates/postorius/lists/confirm_remove_role.html:14
+#: templates/postorius/lists/confirm_remove_role.html:15
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "                Delete %(listname)s\n"
+#| "                "
+msgid "Remove %(address)s as %(role_translated)s?"
+msgstr ""
+"\n"
+"                Fshije %(listname)s\n"
+"                "
+
+#: templates/postorius/lists/confirm_remove_role.html:20
 msgid "Are you sure?"
 msgstr "A jeni i sigurt?"
 
-#: templates/postorius/lists/confirm_remove_role.html:17
-msgid "Remove"
-msgstr "Hiqe"
+#: templates/postorius/lists/confirm_remove_role.html:23
+#, python-format
+msgid " Remove %(role_translated)s"
+msgstr ""
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 msgid "Unsubscribe all members"
@@ -2655,20 +2676,20 @@ msgstr "Rregullime"
 msgid "Rejection reason"
 msgstr "Arsye hedhjeje tej"
 
-#: templates/postorius/lists/summary.html:8
+#: templates/postorius/lists/summary.html:10
 #: templates/postorius/menu/list_nav.html:10
 msgid "Info"
 msgstr "Info"
 
-#: templates/postorius/lists/summary.html:21
+#: templates/postorius/lists/summary.html:23
 msgid "To contact the list owners, use the following email address:"
 msgstr "Për t’u lidhur me të zotët e listës, përdorni adresën email vijuese:"
 
-#: templates/postorius/lists/summary.html:27
+#: templates/postorius/lists/summary.html:29
 msgid "You have to login to visit the archives of this list."
 msgstr "Që të vizitoni arkivat e kësaj liste, duhet të bëni hyrjen."
 
-#: templates/postorius/lists/summary.html:33
+#: templates/postorius/lists/summary.html:35
 #, python-format
 msgid ""
 "\n"
@@ -2681,40 +2702,40 @@ msgstr ""
 "\">Arkiva</a>\n"
 "          "
 
-#: templates/postorius/lists/summary.html:45
-#: templates/postorius/lists/summary.html:102
+#: templates/postorius/lists/summary.html:47
+#: templates/postorius/lists/summary.html:104
 msgid "Subscription / Unsubscription"
 msgstr "Pajtim / Shpajtim"
 
-#: templates/postorius/lists/summary.html:50
+#: templates/postorius/lists/summary.html:52
 #: templates/postorius/user/subscriptions.html:23
 msgid "Subscription Address"
 msgstr "Adresë Pajtimi"
 
-#: templates/postorius/lists/summary.html:53
+#: templates/postorius/lists/summary.html:55
 #: templates/postorius/user/all.html:37
 msgid "Manage"
 msgstr "Administroni"
 
-#: templates/postorius/lists/summary.html:54
-#: templates/postorius/lists/summary.html:75
+#: templates/postorius/lists/summary.html:56
+#: templates/postorius/lists/summary.html:77
 msgid "Unsubscribe"
 msgstr "Shpajtohuni"
 
-#: templates/postorius/lists/summary.html:61
+#: templates/postorius/lists/summary.html:63
 #: templates/postorius/user/subscription_preferences.html:49
 msgid "Primary Address"
 msgstr "Adresë Parësore"
 
-#: templates/postorius/lists/summary.html:69
+#: templates/postorius/lists/summary.html:71
 msgid "Manage Subscription"
 msgstr "Administroni Pajtim"
 
-#: templates/postorius/lists/summary.html:84
+#: templates/postorius/lists/summary.html:86
 msgid "Subscribe to this list"
 msgstr "Pajtohuni te kjo listë"
 
-#: templates/postorius/lists/summary.html:86
+#: templates/postorius/lists/summary.html:88
 #, python-format
 msgid ""
 "\n"
@@ -2733,14 +2754,14 @@ msgstr ""
 "                ose të përdorni formularin më poshtë:\n"
 "            "
 
-#: templates/postorius/lists/summary.html:94
-#: templates/postorius/lists/summary.html:121
+#: templates/postorius/lists/summary.html:96
+#: templates/postorius/lists/summary.html:123
 #, fuzzy
 #| msgid "Unsubscribe"
 msgid "Subscribe"
 msgstr "Shpajtohuni"
 
-#: templates/postorius/lists/summary.html:98
+#: templates/postorius/lists/summary.html:100
 msgid ""
 "You have a subscription request pending. If you don't hear back soon, please "
 "contact the list owners."
@@ -2748,7 +2769,7 @@ msgstr ""
 "Keni pezul një kërkesë pajtimi. Nëse s’merrni përgjigje afër, ju lutemi, "
 "lidhuni me të zotët e listës."
 
-#: templates/postorius/lists/summary.html:103
+#: templates/postorius/lists/summary.html:105
 msgid ""
 "\n"
 "        To subscribe or unsubscribe from this list, please log in first.\n"
@@ -2763,11 +2784,11 @@ msgstr ""
 "        me adresën e duhur email.\n"
 "        "
 
-#: templates/postorius/lists/summary.html:108
+#: templates/postorius/lists/summary.html:110
 msgid "Log In"
 msgstr "Hyni"
 
-#: templates/postorius/lists/summary.html:113
+#: templates/postorius/lists/summary.html:115
 msgid ""
 "\n"
 "        You can also subscribe without creating an account.\n"
@@ -2780,23 +2801,23 @@ msgstr ""
 "poshtë.\n"
 "        "
 
-#: templates/postorius/lists/summary.html:130
+#: templates/postorius/lists/summary.html:132
 msgid "List metrics"
 msgstr "Numra rreth listës"
 
-#: templates/postorius/lists/summary.html:132
+#: templates/postorius/lists/summary.html:134
 msgid "Created at"
 msgstr "Krijuar më"
 
-#: templates/postorius/lists/summary.html:134
+#: templates/postorius/lists/summary.html:139
 msgid "Last post at"
 msgstr "Postimi i fundit më"
 
-#: templates/postorius/lists/summary.html:136
+#: templates/postorius/lists/summary.html:148
 msgid "Digest last sent at"
 msgstr "Përmbledhje dërguar për herë të fundit më"
 
-#: templates/postorius/lists/summary.html:138
+#: templates/postorius/lists/summary.html:157
 msgid "Volume"
 msgstr "Vëllim"
 
@@ -3480,6 +3501,12 @@ msgstr "Përdoruesi u përditësua me sukses."
 #: views/user.py:432
 msgid "Password updated successfully"
 msgstr "Fjalëkalimi u përditësua me sukses"
+
+#~ msgid "Remove"
+#~ msgstr "Hiqe"
+
+#~ msgid "Information"
+#~ msgstr "Informacion"
 
 #~ msgid "You are subscribed to this list with the following address:"
 #~ msgstr "Jeni i pajtuar te kjo listë me adresën vijuese:"

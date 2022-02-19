@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-17 23:23-0800\n"
+"POT-Creation-Date: 2022-02-18 23:31-0800\n"
 "PO-Revision-Date: 2021-11-05 02:19+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/gnu-"
@@ -47,8 +47,8 @@ msgstr ""
 "Domenet for dine e-postlister. For eksempel når du ønsker lister ala "
 "testing@eksempel.no, skriv inn eksempel.no her."
 
-#: forms/domain_forms.py:54 forms/list_forms.py:84 forms/list_forms.py:960
-#: templates/postorius/domain/index.html:22 templates/postorius/index.html:62
+#: forms/domain_forms.py:54 templates/postorius/domain/index.html:22
+#: templates/postorius/index.html:56
 msgid "Description"
 msgstr "Beskrivelse"
 
@@ -134,7 +134,7 @@ msgstr "Forvalgt behandling"
 msgid "Make at least one selection"
 msgstr "Gjør minst ett valg"
 
-#: forms/fields.py:139 templates/postorius/lists/summary.html:52
+#: forms/fields.py:139 templates/postorius/lists/summary.html:54
 msgid "Delivery mode"
 msgstr "Leveringsmodus"
 
@@ -147,7 +147,7 @@ msgid ""
 "text digests. Summary Digests are currently equivalent to MIME Digests."
 msgstr ""
 
-#: forms/fields.py:161 templates/postorius/lists/summary.html:51
+#: forms/fields.py:161 templates/postorius/lists/summary.html:53
 msgid "Delivery status"
 msgstr "Leveringsstatus"
 
@@ -249,6 +249,12 @@ msgstr "Offentliggjør denne listen i listeindeksen"
 #: forms/list_forms.py:81
 msgid "Hide this list in list index"
 msgstr "Skjul denne listen fra listeindeksen"
+
+#: forms/list_forms.py:84 forms/list_forms.py:960
+#, fuzzy
+#| msgid "Description"
+msgid "Short Description"
+msgstr "Beskrivelse"
 
 #: forms/list_forms.py:94
 #, fuzzy
@@ -820,8 +826,9 @@ msgid ""
 "message applies."
 msgstr ""
 
-#: forms/list_forms.py:641 templatetags/membership_helpers.py:78
-#: templatetags/membership_helpers.py:84
+#: forms/list_forms.py:641 templates/postorius/lists/summary.html:144
+#: templates/postorius/lists/summary.html:153
+#: templatetags/membership_helpers.py:78 templatetags/membership_helpers.py:84
 msgid "None"
 msgstr "Ingen"
 
@@ -1229,8 +1236,10 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:969
-msgid "Information"
-msgstr "Informasjon"
+#, fuzzy
+#| msgid "Description"
+msgid "Long Description"
+msgstr "Beskrivelse"
 
 #: forms/list_forms.py:970
 msgid "A longer description of this mailing list."
@@ -1550,11 +1559,35 @@ msgid ""
 "fr, en, de \n"
 msgstr ""
 
-#: models.py:240
+#: models.py:73
+#, fuzzy
+#| msgid "Owners"
+msgid "owner"
+msgstr "Eiere"
+
+#: models.py:74
+#, fuzzy
+#| msgid "Members"
+msgid "member"
+msgstr "Medlemmer"
+
+#: models.py:75
+#, fuzzy
+#| msgid "Non-Members"
+msgid "nonmember"
+msgstr "Ikke-medlemmer"
+
+#: models.py:76
+#, fuzzy
+#| msgid "Moderators"
+msgid "moderator"
+msgstr "Moderatorer"
+
+#: models.py:253
 msgid "Choose the template you want to customize."
 msgstr ""
 
-#: models.py:247
+#: models.py:260
 msgid ""
 "Language for the template, this should be the list's preferred language."
 msgstr ""
@@ -1753,7 +1786,7 @@ msgstr "Systeminformasjon"
 msgid "Users"
 msgstr "Bruker"
 
-#: templates/postorius/base.html:69 templates/postorius/lists/summary.html:31
+#: templates/postorius/base.html:69 templates/postorius/lists/summary.html:33
 msgid "Archives"
 msgstr "Arkiv"
 
@@ -1829,7 +1862,7 @@ msgstr "Slett"
 #: templates/postorius/domain/confirm_delete.html:34
 #: templates/postorius/domain/template_delete.html:28
 #: templates/postorius/lists/confirm_delete.html:25
-#: templates/postorius/lists/confirm_remove_role.html:18
+#: templates/postorius/lists/confirm_remove_role.html:24
 #: templates/postorius/lists/confirm_removeall_subscribers.html:22
 #: templates/postorius/lists/template_delete.html:25
 msgid "Cancel"
@@ -2031,61 +2064,37 @@ msgstr ""
 msgid "Role: "
 msgstr "Rolle"
 
-#: templates/postorius/index.html:33
-#, fuzzy
-#| msgid "Owners"
-msgid "owner"
-msgstr "Eiere"
-
-#: templates/postorius/index.html:34
-#, fuzzy
-#| msgid "Moderators"
-msgid "moderator"
-msgstr "Moderatorer"
-
-#: templates/postorius/index.html:35
-#, fuzzy
-#| msgid "Members"
-msgid "member"
-msgstr "Medlemmer"
-
-#: templates/postorius/index.html:36
-#, fuzzy
-#| msgid "Non-Members"
-msgid "non-member"
-msgstr "Ikke-medlemmer"
-
-#: templates/postorius/index.html:46
+#: templates/postorius/index.html:40
 msgid "Create New Domain"
 msgstr "Opprett nytt domene"
 
-#: templates/postorius/index.html:48
+#: templates/postorius/index.html:42
 msgid "Create New List"
 msgstr "Opprett ny liste"
 
-#: templates/postorius/index.html:60
+#: templates/postorius/index.html:54
 msgid "List name"
 msgstr "Listenavn"
 
-#: templates/postorius/index.html:61
+#: templates/postorius/index.html:55
 msgid "Post address"
 msgstr "Postadresse"
 
-#: templates/postorius/index.html:72
+#: templates/postorius/index.html:66
 msgid "unadvertised"
 msgstr ""
 
-#: templates/postorius/index.html:84
+#: templates/postorius/index.html:78
 msgid ""
 "Only lists that you are owner, moderator or subscriber for are shown here. "
 "Click to <a href=\"?all-lists\"> see all lists</a>."
 msgstr ""
 
-#: templates/postorius/index.html:88
+#: templates/postorius/index.html:82
 msgid "Only admins see unadvertised lists in the list index."
 msgstr ""
 
-#: templates/postorius/index.html:94
+#: templates/postorius/index.html:88
 msgid "There are currently no mailing lists."
 msgstr ""
 
@@ -2110,18 +2119,23 @@ msgid ""
 msgstr ""
 
 #: templates/postorius/lists/confirm_remove_role.html:5
-#: templates/postorius/lists/confirm_remove_role.html:12
 #, fuzzy
 msgid "Confirm remove role"
 msgstr "Bekreft fjerning av rolle"
 
-#: templates/postorius/lists/confirm_remove_role.html:14
+#: templates/postorius/lists/confirm_remove_role.html:15
+#, python-format
+msgid "Remove %(address)s as %(role_translated)s?"
+msgstr ""
+
+#: templates/postorius/lists/confirm_remove_role.html:20
 msgid "Are you sure?"
 msgstr "Er du sikker?"
 
-#: templates/postorius/lists/confirm_remove_role.html:17
-msgid "Remove"
-msgstr "Fjern"
+#: templates/postorius/lists/confirm_remove_role.html:23
+#, python-format
+msgid " Remove %(role_translated)s"
+msgstr ""
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 msgid "Unsubscribe all members"
@@ -2348,20 +2362,20 @@ msgstr "Innstillinger"
 msgid "Rejection reason"
 msgstr ""
 
-#: templates/postorius/lists/summary.html:8
+#: templates/postorius/lists/summary.html:10
 #: templates/postorius/menu/list_nav.html:10
 msgid "Info"
 msgstr "Info"
 
-#: templates/postorius/lists/summary.html:21
+#: templates/postorius/lists/summary.html:23
 msgid "To contact the list owners, use the following email address:"
 msgstr "For å kontakte listeeierne, bruk følgende e-postadresse:"
 
-#: templates/postorius/lists/summary.html:27
+#: templates/postorius/lists/summary.html:29
 msgid "You have to login to visit the archives of this list."
 msgstr ""
 
-#: templates/postorius/lists/summary.html:33
+#: templates/postorius/lists/summary.html:35
 #, python-format
 msgid ""
 "\n"
@@ -2370,44 +2384,44 @@ msgid ""
 "          "
 msgstr ""
 
-#: templates/postorius/lists/summary.html:45
-#: templates/postorius/lists/summary.html:102
+#: templates/postorius/lists/summary.html:47
+#: templates/postorius/lists/summary.html:104
 msgid "Subscription / Unsubscription"
 msgstr "Abonnering / opphevelse av abonnement"
 
-#: templates/postorius/lists/summary.html:50
+#: templates/postorius/lists/summary.html:52
 #: templates/postorius/user/subscriptions.html:23
 msgid "Subscription Address"
 msgstr ""
 
-#: templates/postorius/lists/summary.html:53
+#: templates/postorius/lists/summary.html:55
 #: templates/postorius/user/all.html:37
 msgid "Manage"
 msgstr ""
 
-#: templates/postorius/lists/summary.html:54
-#: templates/postorius/lists/summary.html:75
+#: templates/postorius/lists/summary.html:56
+#: templates/postorius/lists/summary.html:77
 msgid "Unsubscribe"
 msgstr "Opphev abonnement"
 
-#: templates/postorius/lists/summary.html:61
+#: templates/postorius/lists/summary.html:63
 #: templates/postorius/user/subscription_preferences.html:49
 #, fuzzy
 #| msgid "Email Address"
 msgid "Primary Address"
 msgstr "E-postadresse"
 
-#: templates/postorius/lists/summary.html:69
+#: templates/postorius/lists/summary.html:71
 #, fuzzy
 #| msgid "Subscriptions"
 msgid "Manage Subscription"
 msgstr "Abonnementer"
 
-#: templates/postorius/lists/summary.html:84
+#: templates/postorius/lists/summary.html:86
 msgid "Subscribe to this list"
 msgstr "Abonner på denne listen"
 
-#: templates/postorius/lists/summary.html:86
+#: templates/postorius/lists/summary.html:88
 #, python-format
 msgid ""
 "\n"
@@ -2419,20 +2433,20 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/postorius/lists/summary.html:94
-#: templates/postorius/lists/summary.html:121
+#: templates/postorius/lists/summary.html:96
+#: templates/postorius/lists/summary.html:123
 #, fuzzy
 #| msgid "Unsubscribe"
 msgid "Subscribe"
 msgstr "Opphev abonnement"
 
-#: templates/postorius/lists/summary.html:98
+#: templates/postorius/lists/summary.html:100
 msgid ""
 "You have a subscription request pending. If you don't hear back soon, please "
 "contact the list owners."
 msgstr ""
 
-#: templates/postorius/lists/summary.html:103
+#: templates/postorius/lists/summary.html:105
 msgid ""
 "\n"
 "        To subscribe or unsubscribe from this list, please log in first.\n"
@@ -2442,11 +2456,11 @@ msgid ""
 "        "
 msgstr ""
 
-#: templates/postorius/lists/summary.html:108
+#: templates/postorius/lists/summary.html:110
 msgid "Log In"
 msgstr "Logg inn"
 
-#: templates/postorius/lists/summary.html:113
+#: templates/postorius/lists/summary.html:115
 msgid ""
 "\n"
 "        You can also subscribe without creating an account.\n"
@@ -2454,23 +2468,23 @@ msgid ""
 "        "
 msgstr ""
 
-#: templates/postorius/lists/summary.html:130
+#: templates/postorius/lists/summary.html:132
 msgid "List metrics"
 msgstr ""
 
-#: templates/postorius/lists/summary.html:132
+#: templates/postorius/lists/summary.html:134
 msgid "Created at"
 msgstr "Opprettet den"
 
-#: templates/postorius/lists/summary.html:134
+#: templates/postorius/lists/summary.html:139
 msgid "Last post at"
 msgstr "Siste post"
 
-#: templates/postorius/lists/summary.html:136
+#: templates/postorius/lists/summary.html:148
 msgid "Digest last sent at"
 msgstr "Føljetong sist sendt"
 
-#: templates/postorius/lists/summary.html:138
+#: templates/postorius/lists/summary.html:157
 msgid "Volume"
 msgstr "Lydstyrke"
 
@@ -3204,6 +3218,12 @@ msgstr ""
 #: views/user.py:432
 msgid "Password updated successfully"
 msgstr ""
+
+#~ msgid "Remove"
+#~ msgstr "Fjern"
+
+#~ msgid "Information"
+#~ msgstr "Informasjon"
 
 #~ msgid "Member Options"
 #~ msgstr "Medlemsvalg"

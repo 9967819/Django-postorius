@@ -12,9 +12,7 @@
         <div class="panel-heading">
             <h1 class="panel-title">
                 {% trans role as role_translated %}
-                {% blocktrans %}
-                    Remove {{ address }} as {{ role_translated }}?
-                {% endblocktrans %}
+                {% blocktrans %}Remove {{ address }} as {{ role_translated }}?{% endblocktrans %}
             </h1>
         </div>
         <div class="panel-body">
