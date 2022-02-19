@@ -17,7 +17,8 @@
 # Postorius.  If not, see <http://www.gnu.org/licenses/>.
 
 
-from django.urls import include, re_path
+from django.conf import settings
+from django.urls import include, path, re_path
 from django.contrib import admin
 from django.http import Http404
 from django.urls import reverse_lazy
@@ -44,3 +45,10 @@ urlpatterns = [
     # Django admin
     re_path(r'^admin/', admin.site.urls),
 ]
+
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        path('__debug__/', include(debug_toolbar.urls)),
+    ] + urlpatterns

@@ -83,11 +83,16 @@ INSTALLED_APPS = (
     # 'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.twitter',
     'allauth.socialaccount.providers.stackexchange',
+
+    # Dev only dependencies. Do not include in any production site.
+    'debug_toolbar',
 )
 
 
 MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
+    # NOTE: Do not include DebugToolbarMiddleware in any production site.
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.locale.LocaleMiddleware',
@@ -299,6 +304,10 @@ POSTORIUS_API_DEBUG = False
 
 if DEBUG and POSTORIUS_API_DEBUG:
     MIDDLEWARE.append('postorius.middleware.APICountingMiddleware')
+
+
+# Needed for django debug toolbar to show up.
+INTERNAL_IPS = ('127.0.0.1',)
 
 try:
     from settings_local import *
