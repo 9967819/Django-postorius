@@ -29,7 +29,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   ``delivery_mode`` and ``language``. (Fixes #540, #522)
 * Rename labels description and info fields as 'Short Description'
   and 'Long Description' to signify what they mean. (Fixes #510)
-
+* Use ``date`` to format the dates in 'List Metrics' section in the
+  List summary page. (Fixes #508)
 
 .. _NEWS-1.3.6:
 
