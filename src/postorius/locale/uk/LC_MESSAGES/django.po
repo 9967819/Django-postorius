@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-17 23:23-0800\n"
+"POT-Creation-Date: 2022-02-18 23:31-0800\n"
 "PO-Revision-Date: 2021-06-09 18:32+0000\n"
 "Last-Translator: AtaZh <ipomoea@hilarious.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -51,8 +51,8 @@ msgstr ""
 "Домен для ваших списків розсилки. Наприклад, коли ви хочете списки на зразок "
 "testing@example.com, уведіть тут example.com."
 
-#: forms/domain_forms.py:54 forms/list_forms.py:84 forms/list_forms.py:960
-#: templates/postorius/domain/index.html:22 templates/postorius/index.html:62
+#: forms/domain_forms.py:54 templates/postorius/domain/index.html:22
+#: templates/postorius/index.html:56
 msgid "Description"
 msgstr "Опис"
 
@@ -140,7 +140,7 @@ msgstr "Обробка за замовчуванням"
 msgid "Make at least one selection"
 msgstr "Оберіть хоча б одне"
 
-#: forms/fields.py:139 templates/postorius/lists/summary.html:52
+#: forms/fields.py:139 templates/postorius/lists/summary.html:54
 msgid "Delivery mode"
 msgstr "Режим доставки"
 
@@ -165,7 +165,7 @@ msgstr ""
 "чи не підтримувати MIME-дайджести. Зазвичай, бажані MIME-дайджести, але якщо "
 "у вас виникають проблеми з їх читанням, оберіть дайджести простим текстом."
 
-#: forms/fields.py:161 templates/postorius/lists/summary.html:51
+#: forms/fields.py:161 templates/postorius/lists/summary.html:53
 msgid "Delivery status"
 msgstr "Статус доставки"
 
@@ -272,6 +272,12 @@ msgstr "Рекламувати цей список у перелікові сп�
 #: forms/list_forms.py:81
 msgid "Hide this list in list index"
 msgstr "Приховати цей список із переліку списків"
+
+#: forms/list_forms.py:84 forms/list_forms.py:960
+#, fuzzy
+#| msgid "Description"
+msgid "Short Description"
+msgstr "Опис"
 
 #: forms/list_forms.py:94
 msgid "Choose an existing Domain."
@@ -927,8 +933,9 @@ msgid ""
 "message applies."
 msgstr ""
 
-#: forms/list_forms.py:641 templatetags/membership_helpers.py:78
-#: templatetags/membership_helpers.py:84
+#: forms/list_forms.py:641 templates/postorius/lists/summary.html:144
+#: templates/postorius/lists/summary.html:153
+#: templatetags/membership_helpers.py:78 templatetags/membership_helpers.py:84
 msgid "None"
 msgstr ""
 
@@ -1323,8 +1330,10 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:969
-msgid "Information"
-msgstr ""
+#, fuzzy
+#| msgid "Description"
+msgid "Long Description"
+msgstr "Опис"
 
 #: forms/list_forms.py:970
 msgid "A longer description of this mailing list."
@@ -1636,11 +1645,31 @@ msgid ""
 "fr, en, de \n"
 msgstr ""
 
-#: models.py:240
+#: models.py:73
+msgid "owner"
+msgstr ""
+
+#: models.py:74
+msgid "member"
+msgstr ""
+
+#: models.py:75
+#, fuzzy
+#| msgid "Hold these non-members"
+msgid "nonmember"
+msgstr "Затримати цих не-членів"
+
+#: models.py:76
+#, fuzzy
+#| msgid "Moderate"
+msgid "moderator"
+msgstr "Модерування"
+
+#: models.py:253
 msgid "Choose the template you want to customize."
 msgstr ""
 
-#: models.py:247
+#: models.py:260
 msgid ""
 "Language for the template, this should be the list's preferred language."
 msgstr ""
@@ -1837,7 +1866,7 @@ msgstr ""
 msgid "Users"
 msgstr ""
 
-#: templates/postorius/base.html:69 templates/postorius/lists/summary.html:31
+#: templates/postorius/base.html:69 templates/postorius/lists/summary.html:33
 msgid "Archives"
 msgstr ""
 
@@ -1911,7 +1940,7 @@ msgstr "Вилучити"
 #: templates/postorius/domain/confirm_delete.html:34
 #: templates/postorius/domain/template_delete.html:28
 #: templates/postorius/lists/confirm_delete.html:25
-#: templates/postorius/lists/confirm_remove_role.html:18
+#: templates/postorius/lists/confirm_remove_role.html:24
 #: templates/postorius/lists/confirm_removeall_subscribers.html:22
 #: templates/postorius/lists/template_delete.html:25
 msgid "Cancel"
@@ -2092,57 +2121,37 @@ msgstr ""
 msgid "Role: "
 msgstr ""
 
-#: templates/postorius/index.html:33
-msgid "owner"
-msgstr ""
-
-#: templates/postorius/index.html:34
-#, fuzzy
-#| msgid "Moderate"
-msgid "moderator"
-msgstr "Модерування"
-
-#: templates/postorius/index.html:35
-msgid "member"
-msgstr ""
-
-#: templates/postorius/index.html:36
-#, fuzzy
-#| msgid "Hold these non-members"
-msgid "non-member"
-msgstr "Затримати цих не-членів"
-
-#: templates/postorius/index.html:46
+#: templates/postorius/index.html:40
 msgid "Create New Domain"
 msgstr ""
 
-#: templates/postorius/index.html:48
+#: templates/postorius/index.html:42
 msgid "Create New List"
 msgstr ""
 
-#: templates/postorius/index.html:60
+#: templates/postorius/index.html:54
 msgid "List name"
 msgstr ""
 
-#: templates/postorius/index.html:61
+#: templates/postorius/index.html:55
 msgid "Post address"
 msgstr ""
 
-#: templates/postorius/index.html:72
+#: templates/postorius/index.html:66
 msgid "unadvertised"
 msgstr ""
 
-#: templates/postorius/index.html:84
+#: templates/postorius/index.html:78
 msgid ""
 "Only lists that you are owner, moderator or subscriber for are shown here. "
 "Click to <a href=\"?all-lists\"> see all lists</a>."
 msgstr ""
 
-#: templates/postorius/index.html:88
+#: templates/postorius/index.html:82
 msgid "Only admins see unadvertised lists in the list index."
 msgstr ""
 
-#: templates/postorius/index.html:94
+#: templates/postorius/index.html:88
 msgid "There are currently no mailing lists."
 msgstr ""
 
@@ -2167,17 +2176,22 @@ msgid ""
 msgstr ""
 
 #: templates/postorius/lists/confirm_remove_role.html:5
-#: templates/postorius/lists/confirm_remove_role.html:12
 msgid "Confirm remove role"
 msgstr ""
 
-#: templates/postorius/lists/confirm_remove_role.html:14
+#: templates/postorius/lists/confirm_remove_role.html:15
+#, python-format
+msgid "Remove %(address)s as %(role_translated)s?"
+msgstr ""
+
+#: templates/postorius/lists/confirm_remove_role.html:20
 msgid "Are you sure?"
 msgstr ""
 
-#: templates/postorius/lists/confirm_remove_role.html:17
-msgid "Remove"
-msgstr "Вилучити"
+#: templates/postorius/lists/confirm_remove_role.html:23
+#, python-format
+msgid " Remove %(role_translated)s"
+msgstr ""
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 msgid "Unsubscribe all members"
@@ -2398,20 +2412,20 @@ msgstr ""
 msgid "Rejection reason"
 msgstr ""
 
-#: templates/postorius/lists/summary.html:8
+#: templates/postorius/lists/summary.html:10
 #: templates/postorius/menu/list_nav.html:10
 msgid "Info"
 msgstr ""
 
-#: templates/postorius/lists/summary.html:21
+#: templates/postorius/lists/summary.html:23
 msgid "To contact the list owners, use the following email address:"
 msgstr ""
 
-#: templates/postorius/lists/summary.html:27
+#: templates/postorius/lists/summary.html:29
 msgid "You have to login to visit the archives of this list."
 msgstr ""
 
-#: templates/postorius/lists/summary.html:33
+#: templates/postorius/lists/summary.html:35
 #, python-format
 msgid ""
 "\n"
@@ -2420,40 +2434,40 @@ msgid ""
 "          "
 msgstr ""
 
-#: templates/postorius/lists/summary.html:45
-#: templates/postorius/lists/summary.html:102
+#: templates/postorius/lists/summary.html:47
+#: templates/postorius/lists/summary.html:104
 msgid "Subscription / Unsubscription"
 msgstr ""
 
-#: templates/postorius/lists/summary.html:50
+#: templates/postorius/lists/summary.html:52
 #: templates/postorius/user/subscriptions.html:23
 msgid "Subscription Address"
 msgstr ""
 
-#: templates/postorius/lists/summary.html:53
+#: templates/postorius/lists/summary.html:55
 #: templates/postorius/user/all.html:37
 msgid "Manage"
 msgstr ""
 
-#: templates/postorius/lists/summary.html:54
-#: templates/postorius/lists/summary.html:75
+#: templates/postorius/lists/summary.html:56
+#: templates/postorius/lists/summary.html:77
 msgid "Unsubscribe"
 msgstr ""
 
-#: templates/postorius/lists/summary.html:61
+#: templates/postorius/lists/summary.html:63
 #: templates/postorius/user/subscription_preferences.html:49
 msgid "Primary Address"
 msgstr ""
 
-#: templates/postorius/lists/summary.html:69
+#: templates/postorius/lists/summary.html:71
 msgid "Manage Subscription"
 msgstr ""
 
-#: templates/postorius/lists/summary.html:84
+#: templates/postorius/lists/summary.html:86
 msgid "Subscribe to this list"
 msgstr ""
 
-#: templates/postorius/lists/summary.html:86
+#: templates/postorius/lists/summary.html:88
 #, python-format
 msgid ""
 "\n"
@@ -2465,20 +2479,20 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/postorius/lists/summary.html:94
-#: templates/postorius/lists/summary.html:121
+#: templates/postorius/lists/summary.html:96
+#: templates/postorius/lists/summary.html:123
 #, fuzzy
 #| msgid "Subscriptions"
 msgid "Subscribe"
 msgstr "Підписки"
 
-#: templates/postorius/lists/summary.html:98
+#: templates/postorius/lists/summary.html:100
 msgid ""
 "You have a subscription request pending. If you don't hear back soon, please "
 "contact the list owners."
 msgstr ""
 
-#: templates/postorius/lists/summary.html:103
+#: templates/postorius/lists/summary.html:105
 msgid ""
 "\n"
 "        To subscribe or unsubscribe from this list, please log in first.\n"
@@ -2488,11 +2502,11 @@ msgid ""
 "        "
 msgstr ""
 
-#: templates/postorius/lists/summary.html:108
+#: templates/postorius/lists/summary.html:110
 msgid "Log In"
 msgstr ""
 
-#: templates/postorius/lists/summary.html:113
+#: templates/postorius/lists/summary.html:115
 msgid ""
 "\n"
 "        You can also subscribe without creating an account.\n"
@@ -2500,23 +2514,23 @@ msgid ""
 "        "
 msgstr ""
 
-#: templates/postorius/lists/summary.html:130
+#: templates/postorius/lists/summary.html:132
 msgid "List metrics"
 msgstr ""
 
-#: templates/postorius/lists/summary.html:132
+#: templates/postorius/lists/summary.html:134
 msgid "Created at"
 msgstr ""
 
-#: templates/postorius/lists/summary.html:134
+#: templates/postorius/lists/summary.html:139
 msgid "Last post at"
 msgstr ""
 
-#: templates/postorius/lists/summary.html:136
+#: templates/postorius/lists/summary.html:148
 msgid "Digest last sent at"
 msgstr ""
 
-#: templates/postorius/lists/summary.html:138
+#: templates/postorius/lists/summary.html:157
 msgid "Volume"
 msgstr ""
 
@@ -3186,3 +3200,6 @@ msgstr ""
 #: views/user.py:432
 msgid "Password updated successfully"
 msgstr ""
+
+#~ msgid "Remove"
+#~ msgstr "Вилучити"

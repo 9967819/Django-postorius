@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-17 23:23-0800\n"
+"POT-Creation-Date: 2022-02-18 23:31-0800\n"
 "PO-Revision-Date: 2021-05-19 11:33+0000\n"
 "Last-Translator: Lens0021 <lorentz0021@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -49,8 +49,8 @@ msgstr ""
 "당신의 메일링 목록을 위한 도메인입니다. 예를들어 testing@example.com와 같은 "
 "리스트를 원한다면 example.com를 이곳에 입력해주세요."
 
-#: forms/domain_forms.py:54 forms/list_forms.py:84 forms/list_forms.py:960
-#: templates/postorius/domain/index.html:22 templates/postorius/index.html:62
+#: forms/domain_forms.py:54 templates/postorius/domain/index.html:22
+#: templates/postorius/index.html:56
 msgid "Description"
 msgstr "설명"
 
@@ -136,7 +136,7 @@ msgstr "기본 처리"
 msgid "Make at least one selection"
 msgstr "최소한 하나를 선택해주세요"
 
-#: forms/fields.py:139 templates/postorius/lists/summary.html:52
+#: forms/fields.py:139 templates/postorius/lists/summary.html:54
 msgid "Delivery mode"
 msgstr "배달 모드"
 
@@ -161,7 +161,7 @@ msgstr ""
 "니다. 일반적으로 MIME 다이제스트가 선호되지만, 읽기에 문제가 있는 경우 일반 "
 "텍스트 다이제스트를 선택하십시오."
 
-#: forms/fields.py:161 templates/postorius/lists/summary.html:51
+#: forms/fields.py:161 templates/postorius/lists/summary.html:53
 msgid "Delivery status"
 msgstr "수신 여부"
 
@@ -276,6 +276,12 @@ msgstr "목록 색인에 이 목록 알림"
 #: forms/list_forms.py:81
 msgid "Hide this list in list index"
 msgstr "목록 색인에 이 목록 숨기기"
+
+#: forms/list_forms.py:84 forms/list_forms.py:960
+#, fuzzy
+#| msgid "Description"
+msgid "Short Description"
+msgstr "설명"
 
 #: forms/list_forms.py:94
 msgid "Choose an existing Domain."
@@ -927,8 +933,9 @@ msgstr ""
 "랩 메시지의 DMARC 완화 조치가 적용될 때 포장 메시지의 원래 메시지 부분 앞에 "
 "별도의 텍스트/플레인 MIME 부분으로 추가해야 하는 텍스트입니다."
 
-#: forms/list_forms.py:641 templatetags/membership_helpers.py:78
-#: templatetags/membership_helpers.py:84
+#: forms/list_forms.py:641 templates/postorius/lists/summary.html:144
+#: templates/postorius/lists/summary.html:153
+#: templatetags/membership_helpers.py:78 templatetags/membership_helpers.py:84
 msgid "None"
 msgstr "선택 안 함"
 
@@ -1457,8 +1464,10 @@ msgstr ""
 "인지 알아내야 한다."
 
 #: forms/list_forms.py:969
-msgid "Information"
-msgstr "정보"
+#, fuzzy
+#| msgid "Description"
+msgid "Long Description"
+msgstr "설명"
 
 #: forms/list_forms.py:970
 msgid "A longer description of this mailing list."
@@ -1811,11 +1820,35 @@ msgstr ""
 "$language: 목록의 선호하는 언어에 대한 두 개의 문자 언어 코드(예: fr, en, "
 "en) \n"
 
-#: models.py:240
+#: models.py:73
+#, fuzzy
+#| msgid "Owners"
+msgid "owner"
+msgstr "오너"
+
+#: models.py:74
+#, fuzzy
+#| msgid "Members"
+msgid "member"
+msgstr "회원들"
+
+#: models.py:75
+#, fuzzy
+#| msgid "Non-Members"
+msgid "nonmember"
+msgstr "비회원들"
+
+#: models.py:76
+#, fuzzy
+#| msgid "Moderators"
+msgid "moderator"
+msgstr "의장"
+
+#: models.py:253
 msgid "Choose the template you want to customize."
 msgstr "사용자 지정할 템플릿을 선택하십시오."
 
-#: models.py:247
+#: models.py:260
 msgid ""
 "Language for the template, this should be the list's preferred language."
 msgstr "템플릿에 대한 언어, 이 언어가 목록의 선호 언어여야 한다."
@@ -2044,7 +2077,7 @@ msgstr "시스템 정보"
 msgid "Users"
 msgstr "사용자들"
 
-#: templates/postorius/base.html:69 templates/postorius/lists/summary.html:31
+#: templates/postorius/base.html:69 templates/postorius/lists/summary.html:33
 msgid "Archives"
 msgstr "기록 보관소"
 
@@ -2121,7 +2154,7 @@ msgstr "삭제"
 #: templates/postorius/domain/confirm_delete.html:34
 #: templates/postorius/domain/template_delete.html:28
 #: templates/postorius/lists/confirm_delete.html:25
-#: templates/postorius/lists/confirm_remove_role.html:18
+#: templates/postorius/lists/confirm_remove_role.html:24
 #: templates/postorius/lists/confirm_removeall_subscribers.html:22
 #: templates/postorius/lists/template_delete.html:25
 msgid "Cancel"
@@ -2318,51 +2351,27 @@ msgstr ""
 msgid "Role: "
 msgstr "역할"
 
-#: templates/postorius/index.html:33
-#, fuzzy
-#| msgid "Owners"
-msgid "owner"
-msgstr "오너"
-
-#: templates/postorius/index.html:34
-#, fuzzy
-#| msgid "Moderators"
-msgid "moderator"
-msgstr "의장"
-
-#: templates/postorius/index.html:35
-#, fuzzy
-#| msgid "Members"
-msgid "member"
-msgstr "회원들"
-
-#: templates/postorius/index.html:36
-#, fuzzy
-#| msgid "Non-Members"
-msgid "non-member"
-msgstr "비회원들"
-
-#: templates/postorius/index.html:46
+#: templates/postorius/index.html:40
 msgid "Create New Domain"
 msgstr "새로운 도메인 만들기"
 
-#: templates/postorius/index.html:48
+#: templates/postorius/index.html:42
 msgid "Create New List"
 msgstr "새로운 리스트 만들기"
 
-#: templates/postorius/index.html:60
+#: templates/postorius/index.html:54
 msgid "List name"
 msgstr "리스트 이름"
 
-#: templates/postorius/index.html:61
+#: templates/postorius/index.html:55
 msgid "Post address"
 msgstr "우편 주소"
 
-#: templates/postorius/index.html:72
+#: templates/postorius/index.html:66
 msgid "unadvertised"
 msgstr "광고가 없는"
 
-#: templates/postorius/index.html:84
+#: templates/postorius/index.html:78
 #, fuzzy
 #| msgid ""
 #| "Only lists that you are owner, moderator or subscriber for are shown here."
@@ -2371,11 +2380,11 @@ msgid ""
 "Click to <a href=\"?all-lists\"> see all lists</a>."
 msgstr "사용자가 소유자, 모더레이터 또는 구독자인 목록만 여기에 표시됩니다."
 
-#: templates/postorius/index.html:88
+#: templates/postorius/index.html:82
 msgid "Only admins see unadvertised lists in the list index."
 msgstr "관리자만 목록 색인에서 광고되지 않은 목록을 볼 수 있다."
 
-#: templates/postorius/index.html:94
+#: templates/postorius/index.html:88
 msgid "There are currently no mailing lists."
 msgstr "현재 우편물 발송 목록이 없다."
 
@@ -2403,17 +2412,29 @@ msgstr ""
 "                "
 
 #: templates/postorius/lists/confirm_remove_role.html:5
-#: templates/postorius/lists/confirm_remove_role.html:12
 msgid "Confirm remove role"
 msgstr "제거 역할 확인"
 
-#: templates/postorius/lists/confirm_remove_role.html:14
+#: templates/postorius/lists/confirm_remove_role.html:15
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "                Delete %(listname)s\n"
+#| "                "
+msgid "Remove %(address)s as %(role_translated)s?"
+msgstr ""
+"\n"
+"                %(listname)s 삭제\n"
+"                "
+
+#: templates/postorius/lists/confirm_remove_role.html:20
 msgid "Are you sure?"
 msgstr "확실합니까?"
 
-#: templates/postorius/lists/confirm_remove_role.html:17
-msgid "Remove"
-msgstr "제거"
+#: templates/postorius/lists/confirm_remove_role.html:23
+#, python-format
+msgid " Remove %(role_translated)s"
+msgstr ""
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 msgid "Unsubscribe all members"
@@ -2643,20 +2664,20 @@ msgstr "설정"
 msgid "Rejection reason"
 msgstr ""
 
-#: templates/postorius/lists/summary.html:8
+#: templates/postorius/lists/summary.html:10
 #: templates/postorius/menu/list_nav.html:10
 msgid "Info"
 msgstr "정보"
 
-#: templates/postorius/lists/summary.html:21
+#: templates/postorius/lists/summary.html:23
 msgid "To contact the list owners, use the following email address:"
 msgstr "목록 소유자에게 연락하려면, 다음 전자 메일 주소를 사용하십시오:"
 
-#: templates/postorius/lists/summary.html:27
+#: templates/postorius/lists/summary.html:29
 msgid "You have to login to visit the archives of this list."
 msgstr "이 목록의 보관소를 방문하려면 로그인해야 한다."
 
-#: templates/postorius/lists/summary.html:33
+#: templates/postorius/lists/summary.html:35
 #, fuzzy, python-format
 #| msgid ""
 #| "\n"
@@ -2674,44 +2695,44 @@ msgstr ""
 "한 이전 게시물을 보려면 다음을 방문하십시오\n"
 "          "
 
-#: templates/postorius/lists/summary.html:45
-#: templates/postorius/lists/summary.html:102
+#: templates/postorius/lists/summary.html:47
+#: templates/postorius/lists/summary.html:104
 msgid "Subscription / Unsubscription"
 msgstr "구독 / 구독 취소"
 
-#: templates/postorius/lists/summary.html:50
+#: templates/postorius/lists/summary.html:52
 #: templates/postorius/user/subscriptions.html:23
 msgid "Subscription Address"
 msgstr "구독 주소"
 
-#: templates/postorius/lists/summary.html:53
+#: templates/postorius/lists/summary.html:55
 #: templates/postorius/user/all.html:37
 msgid "Manage"
 msgstr ""
 
-#: templates/postorius/lists/summary.html:54
-#: templates/postorius/lists/summary.html:75
+#: templates/postorius/lists/summary.html:56
+#: templates/postorius/lists/summary.html:77
 msgid "Unsubscribe"
 msgstr "구독하지 않음"
 
-#: templates/postorius/lists/summary.html:61
+#: templates/postorius/lists/summary.html:63
 #: templates/postorius/user/subscription_preferences.html:49
 #, fuzzy
 #| msgid "Email Address"
 msgid "Primary Address"
 msgstr "이메일주소"
 
-#: templates/postorius/lists/summary.html:69
+#: templates/postorius/lists/summary.html:71
 #, fuzzy
 #| msgid "Mass Subscription"
 msgid "Manage Subscription"
 msgstr "매스 구독"
 
-#: templates/postorius/lists/summary.html:84
+#: templates/postorius/lists/summary.html:86
 msgid "Subscribe to this list"
 msgstr "이 목록에 가입"
 
-#: templates/postorius/lists/summary.html:86
+#: templates/postorius/lists/summary.html:88
 #, fuzzy, python-format
 #| msgid ""
 #| "\n"
@@ -2737,20 +2758,20 @@ msgstr ""
 " 또는 아래의 양식을 사용하십시오:\n"
 "              "
 
-#: templates/postorius/lists/summary.html:94
-#: templates/postorius/lists/summary.html:121
+#: templates/postorius/lists/summary.html:96
+#: templates/postorius/lists/summary.html:123
 #, fuzzy
 #| msgid "Unsubscribe"
 msgid "Subscribe"
 msgstr "구독하지 않음"
 
-#: templates/postorius/lists/summary.html:98
+#: templates/postorius/lists/summary.html:100
 msgid ""
 "You have a subscription request pending. If you don't hear back soon, please "
 "contact the list owners."
 msgstr "구독 요청이 보류 중임. 곧 회신이 없으면 목록 소유자에게 문의하십시오."
 
-#: templates/postorius/lists/summary.html:103
+#: templates/postorius/lists/summary.html:105
 msgid ""
 "\n"
 "        To subscribe or unsubscribe from this list, please log in first.\n"
@@ -2765,11 +2786,11 @@ msgstr ""
 "있음.\n"
 "        "
 
-#: templates/postorius/lists/summary.html:108
+#: templates/postorius/lists/summary.html:110
 msgid "Log In"
 msgstr "로그인"
 
-#: templates/postorius/lists/summary.html:113
+#: templates/postorius/lists/summary.html:115
 msgid ""
 "\n"
 "        You can also subscribe without creating an account.\n"
@@ -2781,23 +2802,23 @@ msgstr ""
 "그렇게 하려면 아래 양식을 사용하십시오.\n"
 "        "
 
-#: templates/postorius/lists/summary.html:130
+#: templates/postorius/lists/summary.html:132
 msgid "List metrics"
 msgstr "메트릭 나열"
 
-#: templates/postorius/lists/summary.html:132
+#: templates/postorius/lists/summary.html:134
 msgid "Created at"
 msgstr "에서 작성됨"
 
-#: templates/postorius/lists/summary.html:134
+#: templates/postorius/lists/summary.html:139
 msgid "Last post at"
 msgstr "마지막 게시물"
 
-#: templates/postorius/lists/summary.html:136
+#: templates/postorius/lists/summary.html:148
 msgid "Digest last sent at"
 msgstr "다이제스트 마지막 보낸"
 
-#: templates/postorius/lists/summary.html:138
+#: templates/postorius/lists/summary.html:157
 msgid "Volume"
 msgstr "용량"
 
@@ -3520,6 +3541,12 @@ msgstr ""
 #: views/user.py:432
 msgid "Password updated successfully"
 msgstr ""
+
+#~ msgid "Remove"
+#~ msgstr "제거"
+
+#~ msgid "Information"
+#~ msgstr "정보"
 
 #~ msgid "You are subscribed to this list with the following address:"
 #~ msgstr "다음 주소로 이 목록에 가입하셨습니다:"
