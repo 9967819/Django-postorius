@@ -31,6 +31,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   and 'Long Description' to signify what they mean. (Fixes #510)
 * Use ``date`` to format the dates in 'List Metrics' section in the
   List summary page. (Fixes #508)
+* Sort the list of languages in all Select elements alphabetically
+  so they are easier to naviate with screen readers. (Fixes #498)
 
 .. _NEWS-1.3.6:
 
