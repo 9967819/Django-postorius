@@ -98,7 +98,7 @@
                                   </td>
                                 <td>
                                   <label for="id_choices_{{ forloop.counter0 }}">
-                                    <a href="{% url 'list_member_options' list.list_id member.email %}?role=member">
+                                    <a href="{% url 'list_member_options' list.list_id member.email %}?role=member" title="Member options">
                                       {% if member.display_name %}
                                         "{{ member.display_name }}" &lt;{{ member.email }}&gt;
                                       {% else %}
@@ -115,7 +115,7 @@
                                 </td>
                                 {% elif role == 'nonmember' %}
                                 <td>
-                                  <a href="{% url 'list_member_options' list.list_id member.email %}?role=nonmember">
+                                  <a href="{% url 'list_member_options' list.list_id member.email %}?role=nonmember" title="NonMember options">
                                         {% if member.display_name %}
                                             "{{ member.display_name }}" &lt;{{ member.email }}&gt;
                                         {% else %}
