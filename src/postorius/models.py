@@ -63,6 +63,19 @@ class SubscriptionMode(Enum):
     as_user = 'as_user'
 
 
+class MemberRole(Enum):
+    """List of roles a Member resource can have.
+
+    The primary purpose of this enum right now is only to add the
+    role values to translations. At some point, we want to use MemberRole.owner
+    in all the places we are using the literal role as string.
+    """
+    owner = _('owner')
+    member = _('member')
+    nonmember = _('nonmember')
+    moderator = _('moderator')
+
+
 class MailmanApiError(Exception):
     """Raised if the API is not available.
     """

@@ -29,13 +29,7 @@
         </div>
         <div class="col-md-4">
           {% if role  %}
-            <h4>{% trans 'Role: ' %}
-              {% if role   == 'owner'     %} {% trans 'Owner'     %}
-              {% elif role == 'moderator' %} {% trans 'Moderator' %}
-              {% elif role == 'member'    %} {% trans 'Member'    %}
-              {% elif role == 'nonmember' %} {% trans 'Non-member' %}
-              {% endif %}
-            </h4>
+            <h4>{% trans 'Role: ' %} {% trans role %}</h4>
           {% endif %}
         </div>
     {% endif %}
