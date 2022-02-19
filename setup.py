@@ -61,5 +61,6 @@ setup(
     tests_require=[
         "beautifulsoup4",
         "isort",
+        "django-debug-toolbar",
     ],
 )
