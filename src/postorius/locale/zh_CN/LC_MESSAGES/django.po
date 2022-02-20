@@ -5,21 +5,22 @@
 # Cube Kassaki <2524737581@qq.com>, 2021.
 # Dingzhong Chen <wsxy162@gmail.com>, 2021, 2022.
 # poi <erbaotao@outlook.com>, 2021.
+# Eric <alchemillatruth@purelymail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-18 23:31-0800\n"
-"PO-Revision-Date: 2022-01-15 14:53+0000\n"
-"Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
-"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/gnu-"
-"mailman/postorius/zh_Hans/>\n"
+"PO-Revision-Date: 2022-02-19 19:53+0000\n"
+"Last-Translator: Eric <alchemillatruth@purelymail.com>\n"
+"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
+"gnu-mailman/postorius/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.10.1\n"
+"X-Generator: Weblate 4.11-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -53,7 +54,8 @@ msgstr ""
 "输入 example.com。"
 
 #: forms/domain_forms.py:54 templates/postorius/domain/index.html:22
-#: templates/postorius/index.html:56
+#: templates/postorius/index.html:56 forms/list_forms.py:84
+#: forms/list_forms.py:960 templates/postorius/index.html:62
 msgid "Description"
 msgstr "描述"
 
@@ -138,6 +140,7 @@ msgid "Make at least one selection"
 msgstr "至少选择一项"
 
 #: forms/fields.py:139 templates/postorius/lists/summary.html:54
+#: templates/postorius/lists/summary.html:52
 msgid "Delivery mode"
 msgstr "寄送方式"
 
@@ -155,6 +158,7 @@ msgstr ""
 "要。概略摘要目前等同于 MIME 摘要。"
 
 #: forms/fields.py:161 templates/postorius/lists/summary.html:53
+#: templates/postorius/lists/summary.html:51
 msgid "Delivery status"
 msgstr "寄送状态"
 
@@ -269,10 +273,8 @@ msgid "Hide this list in list index"
 msgstr "在列表索引中隐藏此列表"
 
 #: forms/list_forms.py:84 forms/list_forms.py:960
-#, fuzzy
-#| msgid "Description"
 msgid "Short Description"
-msgstr "描述"
+msgstr "简短描述"
 
 #: forms/list_forms.py:94
 msgid "Choose an existing Domain."
@@ -1353,10 +1355,8 @@ msgstr ""
 "可能的简洁，同时也要写明白它是什么列表。"
 
 #: forms/list_forms.py:969
-#, fuzzy
-#| msgid "Description"
 msgid "Long Description"
-msgstr "描述"
+msgstr "长描述"
 
 #: forms/list_forms.py:970
 msgid "A longer description of this mailing list."
@@ -1696,35 +1696,27 @@ msgstr ""
 "$site_email：联系站点所有者的电子邮件地址\n"
 "$language：列表首选与已的两字母语言代码，如 fr、en、de \n"
 
-#: models.py:73
-#, fuzzy
-#| msgid "Owners"
+#: templates/postorius/index.html:33
 msgid "owner"
 msgstr "所有者"
 
-#: models.py:74
-#, fuzzy
-#| msgid "Members"
+#: templates/postorius/index.html:35
 msgid "member"
 msgstr "成员"
 
 #: models.py:75
-#, fuzzy
-#| msgid "Non-Members"
 msgid "nonmember"
 msgstr "非成员"
 
-#: models.py:76
-#, fuzzy
-#| msgid "Moderators"
+#: templates/postorius/index.html:34
 msgid "moderator"
 msgstr "版主"
 
-#: models.py:253
+#: models.py:253 models.py:240
 msgid "Choose the template you want to customize."
 msgstr "选择你想定制的模板。"
 
-#: models.py:260
+#: models.py:260 models.py:247
 msgid ""
 "Language for the template, this should be the list's preferred language."
 msgstr "模板的语言，这应该为列表的首选语言。"
@@ -1922,6 +1914,7 @@ msgid "Users"
 msgstr "用户"
 
 #: templates/postorius/base.html:69 templates/postorius/lists/summary.html:33
+#: templates/postorius/lists/summary.html:31
 msgid "Archives"
 msgstr "存档"
 
@@ -1935,7 +1928,7 @@ msgstr "Mailman 设置"
 
 #: templates/postorius/base.html:94
 msgid "Posting activity"
-msgstr "发表活动"
+msgstr "发帖活动"
 
 #: templates/postorius/base.html:100
 msgid "Logout"
@@ -2001,6 +1994,7 @@ msgstr "删除"
 #: templates/postorius/lists/confirm_remove_role.html:24
 #: templates/postorius/lists/confirm_removeall_subscribers.html:22
 #: templates/postorius/lists/template_delete.html:25
+#: templates/postorius/lists/confirm_remove_role.html:18
 msgid "Cancel"
 msgstr "取消"
 
@@ -2056,7 +2050,7 @@ msgstr "模板"
 
 #: templates/postorius/domain/index.html:67
 msgid "No domains yet."
-msgstr ""
+msgstr "尚无域名。"
 
 #: templates/postorius/domain/new.html:6
 msgid "Add domain"
@@ -2067,10 +2061,8 @@ msgid "Add a new domain"
 msgstr "新增域"
 
 #: templates/postorius/domain/new.html:17
-#, fuzzy
-#| msgid "Create New Domain"
 msgid "Create domain"
-msgstr "新建域"
+msgstr "创建域"
 
 #: templates/postorius/domain/owners.html:6
 msgid "Add domain owner "
@@ -2156,79 +2148,66 @@ msgid "Mailing Lists"
 msgstr "邮件列表"
 
 #: templates/postorius/index.html:19
-#, fuzzy
-#| msgid "Filter types"
 msgid "Filter by Role"
-msgstr "过滤类型"
+msgstr "按角色过滤"
 
 #: templates/postorius/index.html:23
-#, fuzzy
-#| msgid "Owners"
 msgid "Owner"
 msgstr "所有者"
 
 #: templates/postorius/index.html:24
-#, fuzzy
-#| msgid "Moderators"
 msgid "Moderator"
 msgstr "版主"
 
 #: templates/postorius/index.html:25
-#, fuzzy
-#| msgid "Members"
 msgid "Member"
 msgstr "成员"
 
 #: templates/postorius/index.html:26
-#, fuzzy
-#| msgid "Non-Members"
 msgid "Non-member"
 msgstr "非成员"
 
 #: templates/postorius/index.html:27
 msgid "All"
-msgstr ""
+msgstr "全部"
 
 #: templates/postorius/index.html:32
-#, fuzzy
-#| msgid "Role"
 msgid "Role: "
-msgstr "角色"
+msgstr "角色： "
 
-#: templates/postorius/index.html:40
+#: templates/postorius/index.html:40 templates/postorius/index.html:46
 msgid "Create New Domain"
 msgstr "新建域"
 
-#: templates/postorius/index.html:42
+#: templates/postorius/index.html:42 templates/postorius/index.html:48
 msgid "Create New List"
 msgstr "新建列表"
 
-#: templates/postorius/index.html:54
+#: templates/postorius/index.html:54 templates/postorius/index.html:60
 msgid "List name"
 msgstr "列表名称"
 
-#: templates/postorius/index.html:55
+#: templates/postorius/index.html:55 templates/postorius/index.html:61
 msgid "Post address"
 msgstr "邮送地址"
 
-#: templates/postorius/index.html:66
+#: templates/postorius/index.html:66 templates/postorius/index.html:72
 msgid "unadvertised"
 msgstr "不公布"
 
-#: templates/postorius/index.html:78
-#, fuzzy
-#| msgid ""
-#| "Only lists that you are owner, moderator or subscriber for are shown here."
+#: templates/postorius/index.html:84
 msgid ""
 "Only lists that you are owner, moderator or subscriber for are shown here. "
 "Click to <a href=\"?all-lists\"> see all lists</a>."
-msgstr "只有你是所有者、版主或订阅者的列表会显示在这里。"
+msgstr ""
+"只有你是所有者、版主或订阅者的列表会显示在这里。单击 <a href=\"?all-lists\">"
+"查看所有列表</a>。"
 
-#: templates/postorius/index.html:82
+#: templates/postorius/index.html:82 templates/postorius/index.html:88
 msgid "Only admins see unadvertised lists in the list index."
 msgstr "只有管理员能在此列表索引中看到未公布的列表。"
 
-#: templates/postorius/index.html:88
+#: templates/postorius/index.html:88 templates/postorius/index.html:94
 msgid "There are currently no mailing lists."
 msgstr "当前没有邮件列表。"
 
@@ -2256,29 +2235,24 @@ msgstr ""
 "                "
 
 #: templates/postorius/lists/confirm_remove_role.html:5
+#: templates/postorius/lists/confirm_remove_role.html:12
 msgid "Confirm remove role"
 msgstr "确认移除角色"
 
 #: templates/postorius/lists/confirm_remove_role.html:15
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                Delete %(listname)s\n"
-#| "                "
+#, python-format
 msgid "Remove %(address)s as %(role_translated)s?"
-msgstr ""
-"\n"
-"                删除 %(listname)s\n"
-"                "
+msgstr "从 %(role_translated)s 中删除 %(address)s？"
 
 #: templates/postorius/lists/confirm_remove_role.html:20
+#: templates/postorius/lists/confirm_remove_role.html:14
 msgid "Are you sure?"
 msgstr "你确定吗？"
 
 #: templates/postorius/lists/confirm_remove_role.html:23
 #, python-format
 msgid " Remove %(role_translated)s"
-msgstr ""
+msgstr " 删除 %(role_translated)s"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 msgid "Unsubscribe all members"
@@ -2427,10 +2401,8 @@ msgid "Mass subscribe"
 msgstr "批量订阅"
 
 #: templates/postorius/lists/mass_subscribe.html:16
-#, fuzzy
-#| msgid "Unsubscribe users"
 msgid "Subscribe users"
-msgstr "退订用户"
+msgstr "订阅用户"
 
 #: templates/postorius/lists/memberoptions.html:7
 #: templates/postorius/user/list_options.html:7
@@ -2458,10 +2430,8 @@ msgid "CSV Export"
 msgstr "CSV 导出"
 
 #: templates/postorius/lists/members.html:62
-#, fuzzy
-#| msgid "Unsubscribe All"
 msgid "Unsubscribe Selected"
-msgstr "退订全部"
+msgstr "选中了退订"
 
 #: templates/postorius/lists/members.html:76
 #: templates/postorius/user/address_preferences.html:32
@@ -2517,18 +2487,22 @@ msgstr "拒绝原因"
 
 #: templates/postorius/lists/summary.html:10
 #: templates/postorius/menu/list_nav.html:10
+#: templates/postorius/lists/summary.html:8
 msgid "Info"
 msgstr "信息"
 
 #: templates/postorius/lists/summary.html:23
+#: templates/postorius/lists/summary.html:21
 msgid "To contact the list owners, use the following email address:"
 msgstr "要联系列表所有者，请使用以下的电子邮件地址："
 
 #: templates/postorius/lists/summary.html:29
+#: templates/postorius/lists/summary.html:27
 msgid "You have to login to visit the archives of this list."
 msgstr "你已经登入可以访问此列表的存档。"
 
 #: templates/postorius/lists/summary.html:35
+#: templates/postorius/lists/summary.html:33
 #, python-format
 msgid ""
 "\n"
@@ -2543,38 +2517,48 @@ msgstr ""
 
 #: templates/postorius/lists/summary.html:47
 #: templates/postorius/lists/summary.html:104
+#: templates/postorius/lists/summary.html:45
+#: templates/postorius/lists/summary.html:102
 msgid "Subscription / Unsubscription"
 msgstr "订阅 / 退订"
 
 #: templates/postorius/lists/summary.html:52
 #: templates/postorius/user/subscriptions.html:23
+#: templates/postorius/lists/summary.html:50
 msgid "Subscription Address"
 msgstr "订阅地址"
 
 #: templates/postorius/lists/summary.html:55
 #: templates/postorius/user/all.html:37
+#: templates/postorius/lists/summary.html:53
 msgid "Manage"
 msgstr "管理"
 
 #: templates/postorius/lists/summary.html:56
 #: templates/postorius/lists/summary.html:77
+#: templates/postorius/lists/summary.html:54
+#: templates/postorius/lists/summary.html:75
 msgid "Unsubscribe"
 msgstr "退订"
 
 #: templates/postorius/lists/summary.html:63
 #: templates/postorius/user/subscription_preferences.html:49
+#: templates/postorius/lists/summary.html:61
 msgid "Primary Address"
 msgstr "主要地址"
 
 #: templates/postorius/lists/summary.html:71
+#: templates/postorius/lists/summary.html:69
 msgid "Manage Subscription"
 msgstr "管理订阅"
 
 #: templates/postorius/lists/summary.html:86
+#: templates/postorius/lists/summary.html:84
 msgid "Subscribe to this list"
 msgstr "订阅到此列表"
 
 #: templates/postorius/lists/summary.html:88
+#: templates/postorius/lists/summary.html:86
 #, python-format
 msgid ""
 "\n"
@@ -2592,20 +2576,20 @@ msgstr ""
 "                或者使用下面的表格：\n"
 "            "
 
-#: templates/postorius/lists/summary.html:96
-#: templates/postorius/lists/summary.html:123
-#, fuzzy
-#| msgid "Unsubscribe"
+#: templates/postorius/lists/summary.html:94
+#: templates/postorius/lists/summary.html:121
 msgid "Subscribe"
-msgstr "退订"
+msgstr "订阅"
 
 #: templates/postorius/lists/summary.html:100
+#: templates/postorius/lists/summary.html:98
 msgid ""
 "You have a subscription request pending. If you don't hear back soon, please "
 "contact the list owners."
 msgstr "你有待处理的订阅请求。如果你没有很快收到回复，请联系列表的所有者。"
 
 #: templates/postorius/lists/summary.html:105
+#: templates/postorius/lists/summary.html:103
 msgid ""
 "\n"
 "        To subscribe or unsubscribe from this list, please log in first.\n"
@@ -2620,10 +2604,12 @@ msgstr ""
 "        "
 
 #: templates/postorius/lists/summary.html:110
+#: templates/postorius/lists/summary.html:108
 msgid "Log In"
 msgstr "登入"
 
 #: templates/postorius/lists/summary.html:115
+#: templates/postorius/lists/summary.html:113
 msgid ""
 "\n"
 "        You can also subscribe without creating an account.\n"
@@ -2636,22 +2622,27 @@ msgstr ""
 "        "
 
 #: templates/postorius/lists/summary.html:132
+#: templates/postorius/lists/summary.html:130
 msgid "List metrics"
 msgstr "列表指标"
 
 #: templates/postorius/lists/summary.html:134
+#: templates/postorius/lists/summary.html:132
 msgid "Created at"
 msgstr "创建于"
 
 #: templates/postorius/lists/summary.html:139
+#: templates/postorius/lists/summary.html:134
 msgid "Last post at"
 msgstr "最后发帖于"
 
 #: templates/postorius/lists/summary.html:148
+#: templates/postorius/lists/summary.html:136
 msgid "Digest last sent at"
 msgstr "摘要最后发送于"
 
 #: templates/postorius/lists/summary.html:157
+#: templates/postorius/lists/summary.html:138
 msgid "Volume"
 msgstr "卷号"
 
@@ -2789,10 +2780,8 @@ msgid "Use this form to change the email used for this subscription"
 msgstr "使用此表格更改用于此订阅的电子邮件"
 
 #: templates/postorius/user/list_options.html:22
-#, fuzzy
-#| msgid "Use this form to change the email used for this subscription"
 msgid "Change email used for subscription"
-msgstr "使用此表格更改用于此订阅的电子邮件"
+msgstr "更改用于订阅的电子邮箱"
 
 #: templates/postorius/user/mailman_settings.html:7
 msgid "Subscription settings"
@@ -3058,10 +3047,8 @@ msgid "Please check your inbox for further instructions"
 msgstr "请检查你的收件箱以获取更多说明"
 
 #: views/list.py:564
-#, fuzzy
-#| msgid "You are subscribed to %s."
 msgid "You can only unsubscribe yourself."
-msgstr "你已经订阅 %s。"
+msgstr "你只能取消订阅自己。"
 
 #: views/list.py:569
 msgid ""
@@ -3326,8 +3313,14 @@ msgstr "成功更新用户。"
 msgid "Password updated successfully"
 msgstr "密码更新成功"
 
-#~ msgid "Remove"
-#~ msgstr "移除"
+#: templates/postorius/lists/confirm_remove_role.html:17
+msgid "Remove"
+msgstr "移除"
 
-#~ msgid "Information"
-#~ msgstr "信息"
+#: forms/list_forms.py:969
+msgid "Information"
+msgstr "信息"
+
+#: templates/postorius/index.html:36
+msgid "non-member"
+msgstr "非成员"

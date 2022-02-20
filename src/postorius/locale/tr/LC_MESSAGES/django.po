@@ -1,13 +1,13 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Oğuz Ersen <oguzersen@protonmail.com>, 2020, 2021.
+# Oğuz Ersen <oguzersen@protonmail.com>, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-18 23:31-0800\n"
-"PO-Revision-Date: 2021-08-31 16:39+0000\n"
+"PO-Revision-Date: 2022-02-19 19:53+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/tr/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.8.1-dev\n"
+"X-Generator: Weblate 4.11-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -51,7 +51,8 @@ msgstr ""
 "istiyorsanız, buraya example.com yazın."
 
 #: forms/domain_forms.py:54 templates/postorius/domain/index.html:22
-#: templates/postorius/index.html:56
+#: templates/postorius/index.html:56 forms/list_forms.py:84
+#: forms/list_forms.py:960 templates/postorius/index.html:62
 msgid "Description"
 msgstr "Açıklama"
 
@@ -137,6 +138,7 @@ msgid "Make at least one selection"
 msgstr "En az bir seçim yapın"
 
 #: forms/fields.py:139 templates/postorius/lists/summary.html:54
+#: templates/postorius/lists/summary.html:52
 msgid "Delivery mode"
 msgstr "Teslimat modu"
 
@@ -156,6 +158,7 @@ msgstr ""
 "MIME Özetlerine eş değerdir."
 
 #: forms/fields.py:161 templates/postorius/lists/summary.html:53
+#: templates/postorius/lists/summary.html:51
 msgid "Delivery status"
 msgstr "Teslimat durumu"
 
@@ -275,10 +278,8 @@ msgid "Hide this list in list index"
 msgstr "Bu listeyi liste dizininde gizle"
 
 #: forms/list_forms.py:84 forms/list_forms.py:960
-#, fuzzy
-#| msgid "Description"
 msgid "Short Description"
-msgstr "Açıklama"
+msgstr "Kısa Açıklama"
 
 #: forms/list_forms.py:94
 msgid "Choose an existing Domain."
@@ -1440,10 +1441,8 @@ msgstr ""
 "belirtmeli, ve olabildiği kadar kısa ve öz olmalıdır."
 
 #: forms/list_forms.py:969
-#, fuzzy
-#| msgid "Description"
 msgid "Long Description"
-msgstr "Açıklama"
+msgstr "Uzun Açıklama"
 
 #: forms/list_forms.py:970
 msgid "A longer description of this mailing list."
@@ -1804,35 +1803,27 @@ msgstr ""
 "$language: Listenin tercih edilen dili için iki harfli dil kodu, örn. fr, "
 "en, de \n"
 
-#: models.py:73
-#, fuzzy
-#| msgid "Owners"
+#: templates/postorius/index.html:33
 msgid "owner"
-msgstr "Sahipleri"
+msgstr "sahip"
 
-#: models.py:74
-#, fuzzy
-#| msgid "Members"
+#: templates/postorius/index.html:35
 msgid "member"
-msgstr "Üyeler"
+msgstr "üye"
 
 #: models.py:75
-#, fuzzy
-#| msgid "Non-Members"
 msgid "nonmember"
-msgstr "Üye Olmayanlar"
+msgstr "üye olmayan"
 
-#: models.py:76
-#, fuzzy
-#| msgid "Moderators"
+#: templates/postorius/index.html:34
 msgid "moderator"
-msgstr "Moderatörler"
+msgstr "moderatör"
 
-#: models.py:253
+#: models.py:253 models.py:240
 msgid "Choose the template you want to customize."
 msgstr "Özelleştirmek istediğiniz şablonu seçin."
 
-#: models.py:260
+#: models.py:260 models.py:247
 msgid ""
 "Language for the template, this should be the list's preferred language."
 msgstr "Şablonun dili, bu listenin tercih edilen dili olmalıdır."
@@ -2064,6 +2055,7 @@ msgid "Users"
 msgstr "Kullanıcılar"
 
 #: templates/postorius/base.html:69 templates/postorius/lists/summary.html:33
+#: templates/postorius/lists/summary.html:31
 msgid "Archives"
 msgstr "Arşivler"
 
@@ -2143,6 +2135,7 @@ msgstr "Sil"
 #: templates/postorius/lists/confirm_remove_role.html:24
 #: templates/postorius/lists/confirm_removeall_subscribers.html:22
 #: templates/postorius/lists/template_delete.html:25
+#: templates/postorius/lists/confirm_remove_role.html:18
 msgid "Cancel"
 msgstr "İptal"
 
@@ -2198,7 +2191,7 @@ msgstr "Şablonlar"
 
 #: templates/postorius/domain/index.html:67
 msgid "No domains yet."
-msgstr ""
+msgstr "Henüz etki alanı yok."
 
 #: templates/postorius/domain/new.html:6
 msgid "Add domain"
@@ -2209,10 +2202,8 @@ msgid "Add a new domain"
 msgstr "Yeni bir etki alanı ekle"
 
 #: templates/postorius/domain/new.html:17
-#, fuzzy
-#| msgid "Create New Domain"
 msgid "Create domain"
-msgstr "Yeni Etki Alanı Oluştur"
+msgstr "Etki alanı oluştur"
 
 #: templates/postorius/domain/owners.html:6
 msgid "Add domain owner "
@@ -2298,81 +2289,67 @@ msgid "Mailing Lists"
 msgstr "Posta Listeleri"
 
 #: templates/postorius/index.html:19
-#, fuzzy
-#| msgid "Filter types"
 msgid "Filter by Role"
-msgstr "Filtrelenecek türler"
+msgstr "Role göre filtrele"
 
 #: templates/postorius/index.html:23
-#, fuzzy
-#| msgid "Owners"
 msgid "Owner"
-msgstr "Sahipleri"
+msgstr "Sahip"
 
 #: templates/postorius/index.html:24
-#, fuzzy
-#| msgid "Moderators"
 msgid "Moderator"
-msgstr "Moderatörler"
+msgstr "Moderatör"
 
 #: templates/postorius/index.html:25
-#, fuzzy
-#| msgid "Members"
 msgid "Member"
-msgstr "Üyeler"
+msgstr "Üye"
 
 #: templates/postorius/index.html:26
-#, fuzzy
-#| msgid "Non-Members"
 msgid "Non-member"
-msgstr "Üye Olmayanlar"
+msgstr "Üye olmayan"
 
 #: templates/postorius/index.html:27
 msgid "All"
-msgstr ""
+msgstr "Tümü"
 
 #: templates/postorius/index.html:32
-#, fuzzy
-#| msgid "Role"
 msgid "Role: "
-msgstr "Rol"
+msgstr "Rol: "
 
-#: templates/postorius/index.html:40
+#: templates/postorius/index.html:40 templates/postorius/index.html:46
 msgid "Create New Domain"
 msgstr "Yeni Etki Alanı Oluştur"
 
-#: templates/postorius/index.html:42
+#: templates/postorius/index.html:42 templates/postorius/index.html:48
 msgid "Create New List"
 msgstr "Yeni Liste Oluştur"
 
-#: templates/postorius/index.html:54
+#: templates/postorius/index.html:54 templates/postorius/index.html:60
 msgid "List name"
 msgstr "Liste adı"
 
-#: templates/postorius/index.html:55
+#: templates/postorius/index.html:55 templates/postorius/index.html:61
 msgid "Post address"
 msgstr "Posta adresi"
 
-#: templates/postorius/index.html:66
+#: templates/postorius/index.html:66 templates/postorius/index.html:72
 msgid "unadvertised"
 msgstr "tanıtılmayan"
 
-#: templates/postorius/index.html:78
-#, fuzzy
-#| msgid ""
-#| "Only lists that you are owner, moderator or subscriber for are shown here."
+#: templates/postorius/index.html:84
 msgid ""
 "Only lists that you are owner, moderator or subscriber for are shown here. "
 "Click to <a href=\"?all-lists\"> see all lists</a>."
 msgstr ""
 "Burada yalnızca sahibi, moderatörü veya abonesi olduğunuz listeler "
-"gösterilmektedir."
+"gösterilmektedir. Tüm listeleri görmek için <a href=\"?all-lists\">tıklayın</"
+"a>."
 
-#: templates/postorius/index.html:82
+#: templates/postorius/index.html:82 templates/postorius/index.html:88
 msgid "Only admins see unadvertised lists in the list index."
 msgstr "Yalnızca yöneticiler liste dizininde tanıtılmayan listeleri görür."
 
-#: templates/postorius/index.html:88
+#: templates/postorius/index.html:88 templates/postorius/index.html:94
 msgid "There are currently no mailing lists."
 msgstr "Şu anda posta listesi yok."
 
@@ -2400,29 +2377,24 @@ msgstr ""
 "                "
 
 #: templates/postorius/lists/confirm_remove_role.html:5
+#: templates/postorius/lists/confirm_remove_role.html:12
 msgid "Confirm remove role"
 msgstr "Rolü kaldırmayı doğrula"
 
 #: templates/postorius/lists/confirm_remove_role.html:15
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                Delete %(listname)s\n"
-#| "                "
+#, python-format
 msgid "Remove %(address)s as %(role_translated)s?"
-msgstr ""
-"\n"
-"                %(listname)s sil\n"
-"                "
+msgstr "%(role_translated)s olarak %(address)s kaldırılsın mı?"
 
 #: templates/postorius/lists/confirm_remove_role.html:20
+#: templates/postorius/lists/confirm_remove_role.html:14
 msgid "Are you sure?"
 msgstr "Emin misiniz?"
 
 #: templates/postorius/lists/confirm_remove_role.html:23
 #, python-format
 msgid " Remove %(role_translated)s"
-msgstr ""
+msgstr " %(role_translated)s kaldır"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 msgid "Unsubscribe all members"
@@ -2574,10 +2546,8 @@ msgid "Mass subscribe"
 msgstr "Toplu abone ol"
 
 #: templates/postorius/lists/mass_subscribe.html:16
-#, fuzzy
-#| msgid "Unsubscribe users"
 msgid "Subscribe users"
-msgstr "Kullanıcıları abonelikten çıkar"
+msgstr "Kullanıcıları abone yap"
 
 #: templates/postorius/lists/memberoptions.html:7
 #: templates/postorius/user/list_options.html:7
@@ -2605,10 +2575,8 @@ msgid "CSV Export"
 msgstr "CSV Dışa Aktar"
 
 #: templates/postorius/lists/members.html:62
-#, fuzzy
-#| msgid "Unsubscribe All"
 msgid "Unsubscribe Selected"
-msgstr "Hepsini Abonelikten Çıkar"
+msgstr "Seçilenleri Abonelikten Çıkar"
 
 #: templates/postorius/lists/members.html:76
 #: templates/postorius/user/address_preferences.html:32
@@ -2664,19 +2632,23 @@ msgstr "Reddetme nedeni"
 
 #: templates/postorius/lists/summary.html:10
 #: templates/postorius/menu/list_nav.html:10
+#: templates/postorius/lists/summary.html:8
 msgid "Info"
 msgstr "Bilgi"
 
 #: templates/postorius/lists/summary.html:23
+#: templates/postorius/lists/summary.html:21
 msgid "To contact the list owners, use the following email address:"
 msgstr ""
 "Liste sahipleriyle iletişim kurmak için aşağıdaki e-posta adresini kullanın:"
 
 #: templates/postorius/lists/summary.html:29
+#: templates/postorius/lists/summary.html:27
 msgid "You have to login to visit the archives of this list."
 msgstr "Bu listenin arşivlerini ziyaret etmek için giriş yapmalısınız."
 
 #: templates/postorius/lists/summary.html:35
+#: templates/postorius/lists/summary.html:33
 #, python-format
 msgid ""
 "\n"
@@ -2691,38 +2663,48 @@ msgstr ""
 
 #: templates/postorius/lists/summary.html:47
 #: templates/postorius/lists/summary.html:104
+#: templates/postorius/lists/summary.html:45
+#: templates/postorius/lists/summary.html:102
 msgid "Subscription / Unsubscription"
 msgstr "Abone Olma / Abonelikten Çıkma"
 
 #: templates/postorius/lists/summary.html:52
 #: templates/postorius/user/subscriptions.html:23
+#: templates/postorius/lists/summary.html:50
 msgid "Subscription Address"
 msgstr "Abonelik Adresi"
 
 #: templates/postorius/lists/summary.html:55
 #: templates/postorius/user/all.html:37
+#: templates/postorius/lists/summary.html:53
 msgid "Manage"
 msgstr "Yönet"
 
 #: templates/postorius/lists/summary.html:56
 #: templates/postorius/lists/summary.html:77
+#: templates/postorius/lists/summary.html:54
+#: templates/postorius/lists/summary.html:75
 msgid "Unsubscribe"
 msgstr "Abonelikten çık"
 
 #: templates/postorius/lists/summary.html:63
 #: templates/postorius/user/subscription_preferences.html:49
+#: templates/postorius/lists/summary.html:61
 msgid "Primary Address"
 msgstr "Birincil Adres"
 
 #: templates/postorius/lists/summary.html:71
+#: templates/postorius/lists/summary.html:69
 msgid "Manage Subscription"
 msgstr "Aboneliği Yönet"
 
 #: templates/postorius/lists/summary.html:86
+#: templates/postorius/lists/summary.html:84
 msgid "Subscribe to this list"
 msgstr "Bu listeye abone ol"
 
 #: templates/postorius/lists/summary.html:88
+#: templates/postorius/lists/summary.html:86
 #, python-format
 msgid ""
 "\n"
@@ -2740,14 +2722,13 @@ msgstr ""
 "                veya aşağıdaki formu kullanabilirsiniz:\n"
 "            "
 
-#: templates/postorius/lists/summary.html:96
-#: templates/postorius/lists/summary.html:123
-#, fuzzy
-#| msgid "Unsubscribe"
+#: templates/postorius/lists/summary.html:94
+#: templates/postorius/lists/summary.html:121
 msgid "Subscribe"
-msgstr "Abonelikten çık"
+msgstr "Abone ol"
 
 #: templates/postorius/lists/summary.html:100
+#: templates/postorius/lists/summary.html:98
 msgid ""
 "You have a subscription request pending. If you don't hear back soon, please "
 "contact the list owners."
@@ -2756,6 +2737,7 @@ msgstr ""
 "lütfen liste sahipleriyle iletişim kurun."
 
 #: templates/postorius/lists/summary.html:105
+#: templates/postorius/lists/summary.html:103
 msgid ""
 "\n"
 "        To subscribe or unsubscribe from this list, please log in first.\n"
@@ -2772,10 +2754,12 @@ msgstr ""
 "        "
 
 #: templates/postorius/lists/summary.html:110
+#: templates/postorius/lists/summary.html:108
 msgid "Log In"
 msgstr "Oturum Aç"
 
 #: templates/postorius/lists/summary.html:115
+#: templates/postorius/lists/summary.html:113
 msgid ""
 "\n"
 "        You can also subscribe without creating an account.\n"
@@ -2788,22 +2772,27 @@ msgstr ""
 "        "
 
 #: templates/postorius/lists/summary.html:132
+#: templates/postorius/lists/summary.html:130
 msgid "List metrics"
 msgstr "Liste metrikleri"
 
 #: templates/postorius/lists/summary.html:134
+#: templates/postorius/lists/summary.html:132
 msgid "Created at"
 msgstr "Oluşturulma zamanı"
 
 #: templates/postorius/lists/summary.html:139
+#: templates/postorius/lists/summary.html:134
 msgid "Last post at"
 msgstr "Son gönderi zamanı"
 
 #: templates/postorius/lists/summary.html:148
+#: templates/postorius/lists/summary.html:136
 msgid "Digest last sent at"
 msgstr "Son özet gönderme zamanı"
 
 #: templates/postorius/lists/summary.html:157
+#: templates/postorius/lists/summary.html:138
 msgid "Volume"
 msgstr "Hacim"
 
@@ -2944,11 +2933,8 @@ msgstr ""
 "Bu abonelik için kullanılan e-postayı değiştirmek için bu formu kullanın"
 
 #: templates/postorius/user/list_options.html:22
-#, fuzzy
-#| msgid "Use this form to change the email used for this subscription"
 msgid "Change email used for subscription"
-msgstr ""
-"Bu abonelik için kullanılan e-postayı değiştirmek için bu formu kullanın"
+msgstr "Abonelik için kullanılan e-postayı değiştir"
 
 #: templates/postorius/user/mailman_settings.html:7
 msgid "Subscription settings"
@@ -3214,10 +3200,8 @@ msgid "Please check your inbox for further instructions"
 msgstr "Lütfen sonraki talimatlar için gelen kutunuza bakın"
 
 #: views/list.py:564
-#, fuzzy
-#| msgid "You are subscribed to %s."
 msgid "You can only unsubscribe yourself."
-msgstr "%s'e abone oldunuz."
+msgstr "Yalnızca kendinizi abonelikten çıkarabilirsiniz."
 
 #: views/list.py:569
 msgid ""
@@ -3484,11 +3468,17 @@ msgstr "Kullanıcı başarıyla güncellendi."
 msgid "Password updated successfully"
 msgstr "Parola başarıyla güncellendi"
 
-#~ msgid "Remove"
-#~ msgstr "Kaldır"
+#: templates/postorius/lists/confirm_remove_role.html:17
+msgid "Remove"
+msgstr "Kaldır"
 
-#~ msgid "Information"
-#~ msgstr "Bilgi"
+#: forms/list_forms.py:969
+msgid "Information"
+msgstr "Bilgi"
+
+#: templates/postorius/index.html:36
+msgid "non-member"
+msgstr "üye olmayan"
 
 #~ msgid "You are subscribed to this list with the following address:"
 #~ msgstr "Bu listeye aşağıdaki adresle abone oldunuz:"

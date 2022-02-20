@@ -1,13 +1,13 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Yaron Shahrabani <sh.yaron@gmail.com>, 2020, 2021.
+# Yaron Shahrabani <sh.yaron@gmail.com>, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-18 23:31-0800\n"
-"PO-Revision-Date: 2021-09-01 03:49+0000\n"
+"PO-Revision-Date: 2022-02-19 19:53+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/he/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.8.1-dev\n"
+"X-Generator: Weblate 4.11-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -50,7 +50,8 @@ msgstr ""
 "com, יש למלא כאן example.com."
 
 #: forms/domain_forms.py:54 templates/postorius/domain/index.html:22
-#: templates/postorius/index.html:56
+#: templates/postorius/index.html:56 forms/list_forms.py:84
+#: forms/list_forms.py:960 templates/postorius/index.html:62
 msgid "Description"
 msgstr "תיאור"
 
@@ -135,6 +136,7 @@ msgid "Make at least one selection"
 msgstr "יש לבחור אחד לפחות"
 
 #: forms/fields.py:139 templates/postorius/lists/summary.html:54
+#: templates/postorius/lists/summary.html:52
 msgid "Delivery mode"
 msgstr "תצורת שליחה"
 
@@ -153,6 +155,7 @@ msgstr ""
 "בתקצירים בטקסט פשוט. סיכומי תקצירים הם שווי ערך לתקצירי MIME כרגע."
 
 #: forms/fields.py:161 templates/postorius/lists/summary.html:53
+#: templates/postorius/lists/summary.html:51
 msgid "Delivery status"
 msgstr "מצב שליחה"
 
@@ -268,10 +271,8 @@ msgid "Hide this list in list index"
 msgstr "להסתיר את הרשימה הזאת ממפתח הרשימות"
 
 #: forms/list_forms.py:84 forms/list_forms.py:960
-#, fuzzy
-#| msgid "Description"
 msgid "Short Description"
-msgstr "תיאור"
+msgstr "תיאור קצר"
 
 #: forms/list_forms.py:94
 msgid "Choose an existing Domain."
@@ -1387,10 +1388,8 @@ msgstr ""
 "וכן הלאה. הוא אמור להיות תמציתי ככל הניתן תוך מתן הסבר מסוים על אופי הרשימה."
 
 #: forms/list_forms.py:969
-#, fuzzy
-#| msgid "Description"
 msgid "Long Description"
-msgstr "תיאור"
+msgstr "תיאור ארוך"
 
 #: forms/list_forms.py:970
 msgid "A longer description of this mailing list."
@@ -1739,35 +1738,27 @@ msgstr ""
 "‎$language: קוד השפה באורך שני תווים שמייצג את השפה המועדפת של הרשימה, למשל: "
 "fr, en, he \n"
 
-#: models.py:73
-#, fuzzy
-#| msgid "Owners"
+#: templates/postorius/index.html:33
 msgid "owner"
 msgstr "בעלים"
 
-#: models.py:74
-#, fuzzy
-#| msgid "Members"
+#: templates/postorius/index.html:35
 msgid "member"
-msgstr "חברים"
+msgstr "בחברות"
 
 #: models.py:75
-#, fuzzy
-#| msgid "Non-Members"
 msgid "nonmember"
 msgstr "לא חברים"
 
-#: models.py:76
-#, fuzzy
-#| msgid "Moderators"
+#: templates/postorius/index.html:34
 msgid "moderator"
-msgstr "מפקחים"
+msgstr "פיקוח"
 
-#: models.py:253
+#: models.py:253 models.py:240
 msgid "Choose the template you want to customize."
 msgstr "נא לבחור את התבנית לעריכה."
 
-#: models.py:260
+#: models.py:260 models.py:247
 msgid ""
 "Language for the template, this should be the list's preferred language."
 msgstr "שפת התבנית, זאת אמורה להיות השפה המועדפת של הרשימה."
@@ -1967,6 +1958,7 @@ msgid "Users"
 msgstr "משתמשים"
 
 #: templates/postorius/base.html:69 templates/postorius/lists/summary.html:33
+#: templates/postorius/lists/summary.html:31
 msgid "Archives"
 msgstr "ארכיונים"
 
@@ -2046,6 +2038,7 @@ msgstr "מחיקה"
 #: templates/postorius/lists/confirm_remove_role.html:24
 #: templates/postorius/lists/confirm_removeall_subscribers.html:22
 #: templates/postorius/lists/template_delete.html:25
+#: templates/postorius/lists/confirm_remove_role.html:18
 msgid "Cancel"
 msgstr "ביטול"
 
@@ -2101,7 +2094,7 @@ msgstr "תבניות"
 
 #: templates/postorius/domain/index.html:67
 msgid "No domains yet."
-msgstr ""
+msgstr "אין שמות תחום עדיין."
 
 #: templates/postorius/domain/new.html:6
 msgid "Add domain"
@@ -2112,10 +2105,8 @@ msgid "Add a new domain"
 msgstr "הוספת שם תחום חדש"
 
 #: templates/postorius/domain/new.html:17
-#, fuzzy
-#| msgid "Create New Domain"
 msgid "Create domain"
-msgstr "יצירת שם תחום חדש"
+msgstr "יצירת שם תחום"
 
 #: templates/postorius/domain/owners.html:6
 msgid "Add domain owner "
@@ -2201,80 +2192,66 @@ msgid "Mailing Lists"
 msgstr "רשימות דיוור"
 
 #: templates/postorius/index.html:19
-#, fuzzy
-#| msgid "Filter types"
 msgid "Filter by Role"
-msgstr "סוגי מסנן"
+msgstr "סינון לפי תפקיד"
 
 #: templates/postorius/index.html:23
-#, fuzzy
-#| msgid "Owners"
 msgid "Owner"
 msgstr "בעלים"
 
 #: templates/postorius/index.html:24
-#, fuzzy
-#| msgid "Moderators"
 msgid "Moderator"
-msgstr "מפקחים"
+msgstr "פיקוח"
 
 #: templates/postorius/index.html:25
-#, fuzzy
-#| msgid "Members"
 msgid "Member"
-msgstr "חברים"
+msgstr "בחברות"
 
 #: templates/postorius/index.html:26
-#, fuzzy
-#| msgid "Non-Members"
 msgid "Non-member"
-msgstr "לא חברים"
+msgstr "ללא חברות"
 
 #: templates/postorius/index.html:27
 msgid "All"
-msgstr ""
+msgstr "הכול"
 
 #: templates/postorius/index.html:32
-#, fuzzy
-#| msgid "Role"
 msgid "Role: "
-msgstr "תפקיד"
+msgstr "תפקיד: "
 
-#: templates/postorius/index.html:40
+#: templates/postorius/index.html:40 templates/postorius/index.html:46
 msgid "Create New Domain"
 msgstr "יצירת שם תחום חדש"
 
-#: templates/postorius/index.html:42
+#: templates/postorius/index.html:42 templates/postorius/index.html:48
 msgid "Create New List"
 msgstr "יצירת רשימה חדשה"
 
-#: templates/postorius/index.html:54
+#: templates/postorius/index.html:54 templates/postorius/index.html:60
 msgid "List name"
 msgstr "שם הרשימה"
 
-#: templates/postorius/index.html:55
+#: templates/postorius/index.html:55 templates/postorius/index.html:61
 msgid "Post address"
 msgstr "כתובת פרסום"
 
-#: templates/postorius/index.html:66
+#: templates/postorius/index.html:66 templates/postorius/index.html:72
 msgid "unadvertised"
 msgstr "לא מופיעה ברישום"
 
-#: templates/postorius/index.html:78
-#, fuzzy
-#| msgid ""
-#| "Only lists that you are owner, moderator or subscriber for are shown here."
+#: templates/postorius/index.html:84
 msgid ""
 "Only lists that you are owner, moderator or subscriber for are shown here. "
 "Click to <a href=\"?all-lists\"> see all lists</a>."
 msgstr ""
-"רק רשימות שיש לך בעלות עליהן, הרשאות פיקוח או שנרשמת אליהן מופיעות כאן."
+"רק רשימות שיש לך בעלות עליהן, הרשאות פיקוח או שנרשמת אליהן מופיעות כאן. "
+"לחיצה לצפייה ב<a href=\"?all-lists\">כל הרשימות</a>."
 
-#: templates/postorius/index.html:82
+#: templates/postorius/index.html:82 templates/postorius/index.html:88
 msgid "Only admins see unadvertised lists in the list index."
 msgstr "רק מנהלים רואים רשימות שאינן מופיעות במפתח הרשימות."
 
-#: templates/postorius/index.html:88
+#: templates/postorius/index.html:88 templates/postorius/index.html:94
 msgid "There are currently no mailing lists."
 msgstr "אין רשימות דיוור כרגע."
 
@@ -2302,29 +2279,24 @@ msgstr ""
 "                "
 
 #: templates/postorius/lists/confirm_remove_role.html:5
+#: templates/postorius/lists/confirm_remove_role.html:12
 msgid "Confirm remove role"
 msgstr "אימות הסרת תפקיד"
 
 #: templates/postorius/lists/confirm_remove_role.html:15
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                Delete %(listname)s\n"
-#| "                "
+#, python-format
 msgid "Remove %(address)s as %(role_translated)s?"
-msgstr ""
-"\n"
-"                למחוק את %(listname)s\n"
-"                "
+msgstr "להסיר את %(address)s מהתפקיד %(role_translated)s?"
 
 #: templates/postorius/lists/confirm_remove_role.html:20
+#: templates/postorius/lists/confirm_remove_role.html:14
 msgid "Are you sure?"
 msgstr "להמשיך?"
 
 #: templates/postorius/lists/confirm_remove_role.html:23
 #, python-format
 msgid " Remove %(role_translated)s"
-msgstr ""
+msgstr " הסרת %(role_translated)s"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 msgid "Unsubscribe all members"
@@ -2473,10 +2445,8 @@ msgid "Mass subscribe"
 msgstr "רישום מינוי כמותי"
 
 #: templates/postorius/lists/mass_subscribe.html:16
-#, fuzzy
-#| msgid "Unsubscribe users"
 msgid "Subscribe users"
-msgstr "ביטול מינוי משתמשים"
+msgstr "מינוי משתמשים"
 
 #: templates/postorius/lists/memberoptions.html:7
 #: templates/postorius/user/list_options.html:7
@@ -2504,10 +2474,8 @@ msgid "CSV Export"
 msgstr "ייצוא CSV"
 
 #: templates/postorius/lists/members.html:62
-#, fuzzy
-#| msgid "Unsubscribe All"
 msgid "Unsubscribe Selected"
-msgstr "ביטול מינוי כל החברים"
+msgstr "ביטול מינוי לנבחרים"
 
 #: templates/postorius/lists/members.html:76
 #: templates/postorius/user/address_preferences.html:32
@@ -2563,18 +2531,22 @@ msgstr "סיבת הדחייה"
 
 #: templates/postorius/lists/summary.html:10
 #: templates/postorius/menu/list_nav.html:10
+#: templates/postorius/lists/summary.html:8
 msgid "Info"
 msgstr "מידע"
 
 #: templates/postorius/lists/summary.html:23
+#: templates/postorius/lists/summary.html:21
 msgid "To contact the list owners, use the following email address:"
 msgstr "כדי ליצור קשר עם בעלי הרשימה, יש להשתמש בכתובת הדוא״ל הבאה:"
 
 #: templates/postorius/lists/summary.html:29
+#: templates/postorius/lists/summary.html:27
 msgid "You have to login to visit the archives of this list."
 msgstr "עליך להיכנס כדי לבקר בארכיוני הרשימה הזו."
 
 #: templates/postorius/lists/summary.html:35
+#: templates/postorius/lists/summary.html:33
 #, python-format
 msgid ""
 "\n"
@@ -2589,38 +2561,48 @@ msgstr ""
 
 #: templates/postorius/lists/summary.html:47
 #: templates/postorius/lists/summary.html:104
+#: templates/postorius/lists/summary.html:45
+#: templates/postorius/lists/summary.html:102
 msgid "Subscription / Unsubscription"
 msgstr "מינוי / ביטול מינוי"
 
 #: templates/postorius/lists/summary.html:52
 #: templates/postorius/user/subscriptions.html:23
+#: templates/postorius/lists/summary.html:50
 msgid "Subscription Address"
 msgstr "כתובת מינוי"
 
 #: templates/postorius/lists/summary.html:55
 #: templates/postorius/user/all.html:37
+#: templates/postorius/lists/summary.html:53
 msgid "Manage"
 msgstr "ניהול"
 
 #: templates/postorius/lists/summary.html:56
 #: templates/postorius/lists/summary.html:77
+#: templates/postorius/lists/summary.html:54
+#: templates/postorius/lists/summary.html:75
 msgid "Unsubscribe"
 msgstr "ביטול מינוי"
 
 #: templates/postorius/lists/summary.html:63
 #: templates/postorius/user/subscription_preferences.html:49
+#: templates/postorius/lists/summary.html:61
 msgid "Primary Address"
 msgstr "כתובת עיקרית"
 
 #: templates/postorius/lists/summary.html:71
+#: templates/postorius/lists/summary.html:69
 msgid "Manage Subscription"
 msgstr "ניהול מינוי"
 
 #: templates/postorius/lists/summary.html:86
+#: templates/postorius/lists/summary.html:84
 msgid "Subscribe to this list"
 msgstr "מינוי לרשימה הזו"
 
 #: templates/postorius/lists/summary.html:88
+#: templates/postorius/lists/summary.html:86
 #, python-format
 msgid ""
 "\n"
@@ -2638,14 +2620,13 @@ msgstr ""
 "                 או להשתמש בטופס שלהלן:\n"
 "            "
 
-#: templates/postorius/lists/summary.html:96
-#: templates/postorius/lists/summary.html:123
-#, fuzzy
-#| msgid "Unsubscribe"
+#: templates/postorius/lists/summary.html:94
+#: templates/postorius/lists/summary.html:121
 msgid "Subscribe"
-msgstr "ביטול מינוי"
+msgstr "מינוי"
 
 #: templates/postorius/lists/summary.html:100
+#: templates/postorius/lists/summary.html:98
 msgid ""
 "You have a subscription request pending. If you don't hear back soon, please "
 "contact the list owners."
@@ -2654,6 +2635,7 @@ msgstr ""
 "הרשימה."
 
 #: templates/postorius/lists/summary.html:105
+#: templates/postorius/lists/summary.html:103
 msgid ""
 "\n"
 "        To subscribe or unsubscribe from this list, please log in first.\n"
@@ -2669,10 +2651,12 @@ msgstr ""
 "        "
 
 #: templates/postorius/lists/summary.html:110
+#: templates/postorius/lists/summary.html:108
 msgid "Log In"
 msgstr "כניסה"
 
 #: templates/postorius/lists/summary.html:115
+#: templates/postorius/lists/summary.html:113
 msgid ""
 "\n"
 "        You can also subscribe without creating an account.\n"
@@ -2685,22 +2669,27 @@ msgstr ""
 "        "
 
 #: templates/postorius/lists/summary.html:132
+#: templates/postorius/lists/summary.html:130
 msgid "List metrics"
 msgstr "מדדי הרשימה"
 
 #: templates/postorius/lists/summary.html:134
+#: templates/postorius/lists/summary.html:132
 msgid "Created at"
 msgstr "נוצרה במועד"
 
 #: templates/postorius/lists/summary.html:139
+#: templates/postorius/lists/summary.html:134
 msgid "Last post at"
 msgstr "פרסום אחרון במועד"
 
 #: templates/postorius/lists/summary.html:148
+#: templates/postorius/lists/summary.html:136
 msgid "Digest last sent at"
 msgstr "תקציר אחרון נשלח במועד"
 
 #: templates/postorius/lists/summary.html:157
+#: templates/postorius/lists/summary.html:138
 msgid "Volume"
 msgstr "נפח"
 
@@ -2838,10 +2827,8 @@ msgid "Use this form to change the email used for this subscription"
 msgstr "יש להשתמש בטופס זה כדי לשנות את כתובת הדוא״ל שמשמשת את המינוי הזה"
 
 #: templates/postorius/user/list_options.html:22
-#, fuzzy
-#| msgid "Use this form to change the email used for this subscription"
 msgid "Change email used for subscription"
-msgstr "יש להשתמש בטופס זה כדי לשנות את כתובת הדוא״ל שמשמשת את המינוי הזה"
+msgstr "החלפת הדוא״ל שמשמש למינוי"
 
 #: templates/postorius/user/mailman_settings.html:7
 msgid "Subscription settings"
@@ -3107,10 +3094,8 @@ msgid "Please check your inbox for further instructions"
 msgstr "נא לחפש הנחיות נוספות בתיבת הדואר הנכנס שלכם"
 
 #: views/list.py:564
-#, fuzzy
-#| msgid "You are subscribed to %s."
 msgid "You can only unsubscribe yourself."
-msgstr "נרשמת אל %s."
+msgstr "מותר לך להסיר מינוי רק לעצמך."
 
 #: views/list.py:569
 msgid ""
@@ -3375,11 +3360,17 @@ msgstr "המשתמש עודכן בהצלחה."
 msgid "Password updated successfully"
 msgstr "הססמה עודכנה בהצלחה"
 
-#~ msgid "Remove"
-#~ msgstr "הסרה"
+#: templates/postorius/lists/confirm_remove_role.html:17
+msgid "Remove"
+msgstr "הסרה"
 
-#~ msgid "Information"
-#~ msgstr "מידע"
+#: forms/list_forms.py:969
+msgid "Information"
+msgstr "מידע"
+
+#: templates/postorius/index.html:36
+msgid "non-member"
+msgstr "ללא חברות"
 
 #~ msgid "You are subscribed to this list with the following address:"
 #~ msgstr "נרשמת לרשימה הזו עם הכתובת הבאה:"
