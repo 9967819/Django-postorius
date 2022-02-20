@@ -66,13 +66,23 @@ py39-django32:
   script:
     - tox -e py39-django32
 
-py39-django-latest:
+py310-django32:
+  stage: test
+  script:
+    - tox -e py310-django32
+
+py310-django40:
+  stage: test
+  script:
+    - tox -e py310-django40
+
+py310-django-latest:
   stage: test
   allow_failure: true
   script:
     - printf "Remove all django version restriction from setup.py.\n"
     - sed -E 's/django[<=>,.[:digit:]]+/django/' -i setup.py
-    - tox -e py39-django-latest
+    - tox -e py310-django-latest
 
 coverage:
   stage: test
