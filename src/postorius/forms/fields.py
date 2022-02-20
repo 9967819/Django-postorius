@@ -19,7 +19,14 @@
 
 
 from django import forms
-from django.utils.encoding import smart_text
+
+
+try:
+    from django.utils.encoding import smart_str
+except ImportError:
+    # django < 4.0
+    from django.utils.encoding import smart_text as smart_str
+
 from django.utils.translation import gettext_lazy as _
 
 from postorius.utils import with_empty_choice
@@ -62,7 +69,7 @@ class ListOfStringsField(forms.Field):
             line = line.strip()
             if not line:
                 continue
-            result.append(smart_text(line))
+            result.append(smart_str(line))
         return result
 
 

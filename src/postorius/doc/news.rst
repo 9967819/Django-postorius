@@ -33,6 +33,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   List summary page. (Fixes #508)
 * Sort the list of languages in all Select elements alphabetically
   so they are easier to naviate with screen readers. (Fixes #498)
+* Add support for Django 4.0
 
 .. _NEWS-1.3.6:
 
