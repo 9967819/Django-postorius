@@ -14,27 +14,52 @@
 
     <div class="row">
     {% if user.is_authenticated %}
-        <div class="dropdown page-left col-md-4">
-          <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            {% trans 'Filter by Role' %}
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li><a href="?role=owner" class="dropdown-item">{% trans 'Owner' %}</a></li>
-            <li><a href="?role=moderator" class="dropdown-item">{% trans 'Moderator' %}</a></li>
-            <li><a href="?role=member" class="dropdown-item">{% trans 'Member' %}</a></li>
-            <li><a href="?role=nonmember" class="dropdown-item">{% trans 'Non-member' %}</a></li>
-            <li><a href="?all-lists" class="dropdown-item">{% trans 'All' %}</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          {% if role  %}
-            <h4>{% trans 'Role: ' %} {% trans role %}</h4>
-          {% endif %}
-        </div>
+    <div>
+      <span class="current-role">{% trans 'Role: ' %}</span>
+    </div>
+    <div class="col">
+            <ul class="horizontal-list align-middle">
+
+              {% comment %}
+
+              The conditional queries below for choosing "active" is a bit
+              complex because django's tmeplate syntax doesn't let us group the
+              boolean operators properly. The primary logic behind choosing the
+              role as active is basically:
+
+              1. Default view picks 'owner', 'moderator' and 'member' roles, so
+                 by default /postorius/lists will pick these and they are
+                 signified in code by (not all_lists and not role) i.e. neither
+                 all lists nor role is set.
+              2. Each role is obviously active when the role is chosen.
+              3. All lists is active when 'all_lists' is true.
+              {% endcomment %}
+              <li>
+                <a href="?role=owner" class="btn btn-outline-secondary btn-sm {% if role == 'owner' or not all_lists and not role %}active{% endif %} ">
+                  {% trans 'Owner' %}
+                </a>
+              </li>
+              <li>
+                <a href="?role=moderator" class="btn btn-outline-secondary btn-sm {% if role == 'moderator' or not all_lists and not role %}active{% endif %}">
+                  {% trans 'Moderator' %}
+                </a>
+              </li>
+              <li>
+                <a href="?role=member"  class="btn btn-outline-secondary btn-sm {% if role == 'member' or not all_lists and not role %}active{% endif %}">
+                  {% trans 'Member' %}
+                </a>
+              </li>
+              <li>
+                <a href="?role=nonmember" class="btn btn-outline-secondary btn-sm {% if role == 'nonmember' %}active{% endif %}">
+                  {% trans 'Non-member' %}
+                </a>
+              </li>
+              <li><a href="?all-lists" class="btn btn-outline-secondary btn-sm {% if all_lists %}active{% endif %}">{% trans 'All' %}</a></li>
+            </ul>
+          </div>
     {% endif %}
     {% if user.is_superuser %}
-      <div class="col-md-4">
+      <div class="col">
         <p class="text-right">
             {% if domain_count < 1 %}
                 <a class="btn btn-success" href="{% url 'domain_new' %}">{% trans 'Create New Domain' %}</a>

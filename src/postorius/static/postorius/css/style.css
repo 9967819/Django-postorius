@@ -52,14 +52,14 @@ table.header-matches td .errorlist {
 }
 
 .page-header{
-		margin-bottom: 20px;
+        margin-bottom: 20px;
     border-bottom: 1px solid #eee;
     padding-bottom: 9px;
 }
 
 .page-header h1 {
-		margin-top: 0px;
-		padding-top: 0px;
+        margin-top: 0px;
+        padding-top: 0px;
 }
 
 /* Improve contrast per accessibility guidelines */
@@ -68,7 +68,7 @@ table.header-matches td .errorlist {
 }
 .navbar-default .navbar-nav > li > a {
     color: #666;
-} 
+}
 .h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, .h4 .small, .h4 small, .h5 .small, .h5 small, .h6 .small, .h6 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small, h4 .small, h4 small, h5 .small, h5 small, h6 .small, h6 small {
     color: #666;
 }
@@ -79,7 +79,7 @@ a {
     background-color: #c8423e;
 }
 .btn-success {
-    background-color: #298529; 
+    background-color: #298529;
 }
 .btn-warning {
     background-color: #A4660E;
@@ -92,10 +92,29 @@ a {
 }
 
 .navbar-default {
-		margin-bottom: 20px;
+        margin-bottom: 20px;
 }
 
 h1, h2, h3, h4, h5, h6, h7 {
-		margin-bottom: 10px;
-		margin-top: 20px;
+        margin-bottom: 10px;
+        margin-top: 20px;
+}
+
+.current-role {
+    font-size: 150%;
+    font-weight: 130%;
+    text-align: center;
+    padding-left: 15px;
+}
+
+ul.horizontal-list {
+    list-style: none;
+    padding-inline-start: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    height: 100%;
+}
+
+ul.horizontal-list li {
+    display: inline;
 }
