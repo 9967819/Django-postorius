@@ -35,6 +35,14 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   so they are easier to naviate with screen readers. (Fixes #498)
 * Add support for Django 4.0
 
+
+UI
+--
+
+* Change the way role is selector in the List index page to allow use of the
+  filtering without javascript enabled dropdowns. It also enhances usability by
+  enabling the roles that are currently active by default. (See #544)
+
 .. _NEWS-1.3.6:
 
 1.3.6
