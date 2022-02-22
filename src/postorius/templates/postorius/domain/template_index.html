@@ -25,17 +25,18 @@
             <th> {% trans 'Template Name' %} </th>
             <th> &nbsp; </th>
           </tr>
-          <tbody>
-            {% for template in object_list %}
-            <tr>
-              <td> <b>[{{ template.name }}]</b> - {{ template.description }}</td>
-              <td>
-                <a class="btn btn-xs btn-primary" href="{% url 'domain_template_update' domain.mail_host template.id %}">{% trans 'Edit' %}</a>
-                <a class="btn btn-xs btn-danger" href="{% url 'domain_template_delete' domain.mail_host template.id %}">{% trans 'Delete' %}</a>
-              </td>
-            </tr>
-            {% endfor %}
-          </tbody>
+        </thead>
+        <tbody>
+          {% for template in object_list %}
+          <tr>
+            <td> <b>[{{ template.name }}]</b> - {{ template.description }}</td>
+            <td>
+              <a class="btn btn-xs btn-primary" href="{% url 'domain_template_update' domain.mail_host template.id %}">{% trans 'Edit' %}</a>
+              <a class="btn btn-xs btn-danger" href="{% url 'domain_template_delete' domain.mail_host template.id %}">{% trans 'Delete' %}</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
       </table>
     </div>
 
