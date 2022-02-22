@@ -16,13 +16,12 @@
             </h1>
         </div>
         <div class="panel-body">
-        </p>
-        <p>{% trans 'Are you sure?' %}</p>
-        <form method="post" action="{% url 'remove_role' list_id role address %}">
+          <p>{% trans 'Are you sure?' %}</p>
+          <form method="post" action="{% url 'remove_role' list_id role address %}">
             {% csrf_token %}
             <button class="btn btn-danger" type="submit">{% blocktrans %} Remove {{ role_translated }}{% endblocktrans %}</button>
             <a class="btn btn-success" href="{% url 'list_members' list_id role %}">{% trans 'Cancel' %}</a>
-        </form>
-    </div>
+          </form>
+        </div>
     </div>
 {% endblock content %}
