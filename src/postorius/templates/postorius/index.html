@@ -8,9 +8,9 @@
 
 {% block content %}
 
-    <div class="page-header">
-        <h1>{% trans 'Mailing Lists' %}</h1>
-    </div>
+    <header class="page-header">
+        {% trans 'Mailing Lists' %}
+    </header>
 
     <div class="row">
     {% if user.is_authenticated %}

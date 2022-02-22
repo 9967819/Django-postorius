@@ -149,6 +149,13 @@
     <script src="{% static 'postorius/libs/bootstrap/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'django-mailman3/js/main.js' %}"></script>
     <script src="{% static 'postorius/js/script.js' %}"></script>
+    <script>
+      // Add the .js-enabled class to the body so we can style the elements
+      // depending on whether Javascript is enabled.
+      $(document).ready(function(){
+          $("body").addClass("js-enabled");
+      });
+    </script>
     {% block additionaljs %}{% endblock %}
 </body>
 </html>
