@@ -62,5 +62,6 @@ setup(
         "beautifulsoup4",
         "isort",
         "django-debug-toolbar",
+        "django-requests-debug-toolbar",
     ],
 )

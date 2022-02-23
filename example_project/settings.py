@@ -86,6 +86,7 @@ INSTALLED_APPS = (
 
     # Dev only dependencies. Do not include in any production site.
     'debug_toolbar',
+    'requests_panel',
 )
 
 
@@ -308,6 +309,28 @@ if DEBUG and POSTORIUS_API_DEBUG:
 
 # Needed for django debug toolbar to show up.
 INTERNAL_IPS = ('127.0.0.1',)
+
+# List of panels that show up for django-debug-toolbar. They are
+# very useful for debugging and are ONLY REQUIRED FOR TESTING.
+DEBUG_TOOLBAR_PANELS = [
+    'requests_panel.panel.RequestsDebugPanel',
+    'debug_toolbar.panels.sql.SQLPanel',
+    'debug_toolbar.panels.templates.TemplatesPanel',
+
+    'debug_toolbar.panels.history.HistoryPanel',
+    'debug_toolbar.panels.versions.VersionsPanel',
+    'debug_toolbar.panels.timer.TimerPanel',
+    'debug_toolbar.panels.settings.SettingsPanel',
+    'debug_toolbar.panels.headers.HeadersPanel',
+    'debug_toolbar.panels.request.RequestPanel',
+    'debug_toolbar.panels.staticfiles.StaticFilesPanel',
+    'debug_toolbar.panels.cache.CachePanel',
+    'debug_toolbar.panels.signals.SignalsPanel',
+    'debug_toolbar.panels.logging.LoggingPanel',
+    'debug_toolbar.panels.redirects.RedirectsPanel',
+    'debug_toolbar.panels.profiling.ProfilingPanel',
+
+]
 
 try:
     from settings_local import *
