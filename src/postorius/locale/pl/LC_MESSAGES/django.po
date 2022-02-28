@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-18 23:31-0800\n"
-"PO-Revision-Date: 2022-02-17 06:39+0000\n"
+"PO-Revision-Date: 2022-02-22 16:59+0000\n"
 "Last-Translator: Piotr Frankowski <piotr@ten.net.pl>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/pl/>\n"
@@ -2330,7 +2330,7 @@ msgstr ""
 #: templates/postorius/lists/summary.html:10
 #: templates/postorius/menu/list_nav.html:10
 msgid "Info"
-msgstr ""
+msgstr "Informacje"
 
 #: templates/postorius/lists/summary.html:23
 msgid "To contact the list owners, use the following email address:"
