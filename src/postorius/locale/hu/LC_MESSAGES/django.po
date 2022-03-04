@@ -2,7 +2,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # balping <balping314@gmail.com>, 2020.
-# Peter Donka <peter.donka@gmail.com>, 2021.
+# Peter Donka <peter.donka@gmail.com>, 2021, 2022.
 # -- <eneremen@gmail.com>, 2021.
 # f3rr31 <5920873@disroot.org>, 2021.
 msgid ""
@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-18 23:31-0800\n"
-"PO-Revision-Date: 2021-12-27 22:24+0000\n"
-"Last-Translator: f3rr31 <5920873@disroot.org>\n"
+"PO-Revision-Date: 2022-03-02 22:54+0000\n"
+"Last-Translator: Peter Donka <peter.donka@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/hu/>\n"
 "Language: hu\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.10.1\n"
+"X-Generator: Weblate 4.11.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -281,10 +281,8 @@ msgid "Hide this list in list index"
 msgstr "Rejtse el a listát a listaindexben"
 
 #: forms/list_forms.py:84 forms/list_forms.py:960
-#, fuzzy
-#| msgid "Description"
 msgid "Short Description"
-msgstr "Leírás"
+msgstr "Rövid leírás"
 
 #: forms/list_forms.py:94
 msgid "Choose an existing Domain."
@@ -1437,10 +1435,8 @@ msgstr ""
 "de jellemezze a listát."
 
 #: forms/list_forms.py:969
-#, fuzzy
-#| msgid "Description"
 msgid "Long Description"
-msgstr "Leírás"
+msgstr "Hosszú leírás"
 
 #: forms/list_forms.py:970
 msgid "A longer description of this mailing list."
@@ -1805,28 +1801,20 @@ msgstr ""
 "fr, en, de \n"
 
 #: models.py:73
-#, fuzzy
-#| msgid "Owners"
 msgid "owner"
-msgstr "Tulajdonosok"
+msgstr "tulajdonos"
 
 #: models.py:74
-#, fuzzy
-#| msgid "Members"
 msgid "member"
-msgstr "Tagok"
+msgstr "tag"
 
 #: models.py:75
-#, fuzzy
-#| msgid "Non-Members"
 msgid "nonmember"
-msgstr "Nem tagok"
+msgstr "nem tag"
 
 #: models.py:76
-#, fuzzy
-#| msgid "Moderators"
 msgid "moderator"
-msgstr "Moderátorok"
+msgstr "moderátor"
 
 #: models.py:253
 msgid "Choose the template you want to customize."
@@ -2200,7 +2188,7 @@ msgstr "Sablonok"
 
 #: templates/postorius/domain/index.html:67
 msgid "No domains yet."
-msgstr ""
+msgstr "Még nincsenek domainek."
 
 #: templates/postorius/domain/new.html:6
 msgid "Add domain"
@@ -2211,10 +2199,8 @@ msgid "Add a new domain"
 msgstr "Új domain hozzáadása"
 
 #: templates/postorius/domain/new.html:17
-#, fuzzy
-#| msgid "Create New Domain"
 msgid "Create domain"
-msgstr "Új domain létrehozása"
+msgstr "Domain létrehozása"
 
 #: templates/postorius/domain/owners.html:6
 msgid "Add domain owner "
@@ -2300,44 +2286,32 @@ msgid "Mailing Lists"
 msgstr "Levelezőlisták"
 
 #: templates/postorius/index.html:19
-#, fuzzy
-#| msgid "Filter types"
 msgid "Filter by Role"
-msgstr "Szűrőtípusok"
+msgstr "Szűrés szerepkör szerint"
 
 #: templates/postorius/index.html:23
-#, fuzzy
-#| msgid "Owners"
 msgid "Owner"
-msgstr "Tulajdonosok"
+msgstr "Tulajdonos"
 
 #: templates/postorius/index.html:24
-#, fuzzy
-#| msgid "Moderators"
 msgid "Moderator"
-msgstr "Moderátorok"
+msgstr "Moderátor"
 
 #: templates/postorius/index.html:25
-#, fuzzy
-#| msgid "Members"
 msgid "Member"
-msgstr "Tagok"
+msgstr "Tag"
 
 #: templates/postorius/index.html:26
-#, fuzzy
-#| msgid "Non-Members"
 msgid "Non-member"
-msgstr "Nem tagok"
+msgstr "Nem tag"
 
 #: templates/postorius/index.html:27
 msgid "All"
-msgstr ""
+msgstr "Összes"
 
 #: templates/postorius/index.html:32
-#, fuzzy
-#| msgid "Role"
 msgid "Role: "
-msgstr "Szerepkör"
+msgstr "Szerep: "
 
 #: templates/postorius/index.html:40
 msgid "Create New Domain"
@@ -2360,15 +2334,13 @@ msgid "unadvertised"
 msgstr "hirdetetlenül"
 
 #: templates/postorius/index.html:78
-#, fuzzy
-#| msgid ""
-#| "Only lists that you are owner, moderator or subscriber for are shown here."
 msgid ""
 "Only lists that you are owner, moderator or subscriber for are shown here. "
 "Click to <a href=\"?all-lists\"> see all lists</a>."
 msgstr ""
-"Csak azok a listák jelennek meg itt, amelyeknek Ön tulajdonosa, moderátora "
-"vagy előfizetője."
+"Itt csak azok a listák jelennek meg, amelyeknek Ön a tulajdonosa, moderátora "
+"vagy előfizetője. Kattintson ide az összes lista <a href=\"?all-lists\"> "
+"megtekintéséhez</a>."
 
 #: templates/postorius/index.html:82
 msgid "Only admins see unadvertised lists in the list index."
@@ -2406,16 +2378,9 @@ msgid "Confirm remove role"
 msgstr "Erősítse meg a szerepkör eltávolítását"
 
 #: templates/postorius/lists/confirm_remove_role.html:15
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                Delete %(listname)s\n"
-#| "                "
+#, python-format
 msgid "Remove %(address)s as %(role_translated)s?"
-msgstr ""
-"\n"
-"                Törlés %(listname)s\n"
-"                "
+msgstr "%(address)s eltávolítása %(role_translated)s-ként?"
 
 #: templates/postorius/lists/confirm_remove_role.html:20
 msgid "Are you sure?"
@@ -2424,7 +2389,7 @@ msgstr "Biztos vagy benne?"
 #: templates/postorius/lists/confirm_remove_role.html:23
 #, python-format
 msgid " Remove %(role_translated)s"
-msgstr ""
+msgstr " %(role_translated)s eltávolítása"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 msgid "Unsubscribe all members"
@@ -2575,10 +2540,8 @@ msgid "Mass subscribe"
 msgstr "Tömeges feliratkozás"
 
 #: templates/postorius/lists/mass_subscribe.html:16
-#, fuzzy
-#| msgid "Unsubscribe users"
 msgid "Subscribe users"
-msgstr "Felhasználók leiratkozása"
+msgstr "Felhasználók feliratkozása"
 
 #: templates/postorius/lists/memberoptions.html:7
 #: templates/postorius/user/list_options.html:7
@@ -2606,10 +2569,8 @@ msgid "CSV Export"
 msgstr "CSV exportálása"
 
 #: templates/postorius/lists/members.html:62
-#, fuzzy
-#| msgid "Unsubscribe All"
 msgid "Unsubscribe Selected"
-msgstr "Összes leiratkozása"
+msgstr "Kiválasztott leiratkozása"
 
 #: templates/postorius/lists/members.html:76
 #: templates/postorius/user/address_preferences.html:32
@@ -2745,10 +2706,8 @@ msgstr ""
 
 #: templates/postorius/lists/summary.html:96
 #: templates/postorius/lists/summary.html:123
-#, fuzzy
-#| msgid "Unsubscribe"
 msgid "Subscribe"
-msgstr "Leiratkozás"
+msgstr "Feliratkozás"
 
 #: templates/postorius/lists/summary.html:100
 msgid ""
@@ -2947,10 +2906,8 @@ msgid "Use this form to change the email used for this subscription"
 msgstr "Ezzel az űrlappal módosíthatja az előfizetéshez használt e-mailt"
 
 #: templates/postorius/user/list_options.html:22
-#, fuzzy
-#| msgid "Use this form to change the email used for this subscription"
 msgid "Change email used for subscription"
-msgstr "Ezzel az űrlappal módosíthatja az előfizetéshez használt e-mailt"
+msgstr "A feliratkozáshoz használt e-mail cím megváltoztatása"
 
 #: templates/postorius/user/mailman_settings.html:7
 msgid "Subscription settings"
@@ -3217,10 +3174,8 @@ msgid "Please check your inbox for further instructions"
 msgstr "Kérjük, ellenőrizze a postaládáját további utasításokért"
 
 #: views/list.py:564
-#, fuzzy
-#| msgid "You are subscribed to %s."
 msgid "You can only unsubscribe yourself."
-msgstr "Feliratkozott a %s -ra."
+msgstr "Csak magadat tudod leiratkozni."
 
 #: views/list.py:569
 msgid ""
