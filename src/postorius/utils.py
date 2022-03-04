@@ -145,6 +145,7 @@ def filter_memberships_by_roles(memberships, roles):
 LANGUAGES = [
     ('ar', 'Arabic'),
     ('ast', 'Asturian'),
+    ('bg', 'Bulgarian'),
     ('ca', 'Catalan'),
     ('zh_CN', 'Chinese'),
     ('zh_TW', 'Chinese (Taiwan)'),
