@@ -1,22 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
+# dpa-weblate@aegee.org <dpa-weblate@aegee.org>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-18 23:31-0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2022-03-04 22:15+0000\n"
+"Last-Translator: dpa-weblate@aegee.org <dpa-weblate@aegee.org>\n"
+"Language-Team: Bulgarian <https://hosted.weblate.org/projects/gnu-mailman/"
+"postorius/bg/>\n"
+"Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.12-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -33,7 +33,7 @@ msgstr ""
 
 #: forms/domain_forms.py:46 forms/domain_forms.py:65
 msgid "Please enter a domain name"
-msgstr ""
+msgstr "Моля въведете име на домейн"
 
 #: forms/domain_forms.py:47 forms/domain_forms.py:66
 msgid "Please enter a valid domain name."
@@ -48,7 +48,7 @@ msgstr ""
 #: forms/domain_forms.py:54 templates/postorius/domain/index.html:22
 #: templates/postorius/index.html:56
 msgid "Description"
-msgstr ""
+msgstr "Описание"
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:23
 msgid "Alias Domain"
@@ -56,11 +56,12 @@ msgstr ""
 
 #: forms/domain_forms.py:59 forms/domain_forms.py:88
 msgid "Please enter a valid domain name or nothing."
-msgstr ""
+msgstr "Моля въведи правилно име на домейн или нищо."
 
 #: forms/domain_forms.py:61
 msgid "Normally empty.  Used only for unusual Postfix configs."
 msgstr ""
+"Обикновено е празен.  Използва се само за необичайни конфигурации на Postfix."
 
 #: forms/domain_forms.py:64 templates/postorius/domain/index.html:24
 msgid "Web Host"
@@ -68,7 +69,7 @@ msgstr ""
 
 #: forms/domain_forms.py:78
 msgid "Please enter a valid domain name"
-msgstr ""
+msgstr "Моля въведи правилно име на домейн"
 
 #: forms/domain_forms.py:103
 msgid "Owner's Email"
@@ -208,11 +209,11 @@ msgstr ""
 
 #: forms/list_forms.py:49
 msgid "Anyone"
-msgstr ""
+msgstr "Всеки"
 
 #: forms/list_forms.py:63 templates/postorius/user/subscriptions.html:22
 msgid "List Name"
-msgstr ""
+msgstr "Име на пощенски списък"
 
 #: forms/list_forms.py:65
 msgid "Please enter a name for your list."
@@ -232,11 +233,11 @@ msgstr ""
 
 #: forms/list_forms.py:75
 msgid "Advertise this list?"
-msgstr ""
+msgstr "Рекламиране на този пощенски списък?"
 
 #: forms/list_forms.py:77
 msgid "Please choose a list type."
-msgstr ""
+msgstr "Изберете тип пощенски списък."
 
 #: forms/list_forms.py:80
 msgid "Advertise this list in list index"
@@ -244,11 +245,11 @@ msgstr ""
 
 #: forms/list_forms.py:81
 msgid "Hide this list in list index"
-msgstr ""
+msgstr "Скрий този списък от каталога на пощенските списъци"
 
 #: forms/list_forms.py:84 forms/list_forms.py:960
 msgid "Short Description"
-msgstr ""
+msgstr "Кратко описание"
 
 #: forms/list_forms.py:94
 msgid "Choose an existing Domain."
@@ -280,7 +281,7 @@ msgstr ""
 
 #: forms/list_forms.py:147 forms/list_forms.py:180
 msgid "Your email address"
-msgstr ""
+msgstr "Твоят електронен адрес"
 
 #: forms/list_forms.py:151
 msgid ""
@@ -291,7 +292,7 @@ msgstr ""
 #: forms/list_forms.py:154 forms/list_forms.py:183 forms/member_forms.py:29
 #: forms/system.py:36
 msgid "Please enter an email address."
-msgstr ""
+msgstr "Въведи електронен адрес."
 
 #: forms/list_forms.py:155 forms/list_forms.py:184 forms/member_forms.py:30
 #: forms/system.py:37
@@ -300,7 +301,7 @@ msgstr ""
 
 #: forms/list_forms.py:158 forms/list_forms.py:187
 msgid "Your name (optional)"
-msgstr ""
+msgstr "Твоето име (по желание)"
 
 #: forms/list_forms.py:171 forms/list_forms.py:1211 views/list.py:457
 msgid "Primary Address ({})"
@@ -308,12 +309,12 @@ msgstr ""
 
 #: forms/list_forms.py:202
 msgid "Open"
-msgstr ""
+msgstr "Отворен"
 
 #: forms/list_forms.py:203 templates/postorius/domain/template_delete.html:27
 #: templates/postorius/lists/template_delete.html:24
 msgid "Confirm"
-msgstr ""
+msgstr "Потвърди"
 
 #: forms/list_forms.py:204
 msgid "Moderate"
@@ -378,7 +379,7 @@ msgstr ""
 #: forms/list_forms.py:1004 forms/list_forms.py:1025 forms/list_forms.py:1096
 #: forms/user_forms.py:58
 msgid "Yes"
-msgstr ""
+msgstr "Да"
 
 #: forms/list_forms.py:246 forms/list_forms.py:272 forms/list_forms.py:281
 #: forms/list_forms.py:290 forms/list_forms.py:402 forms/list_forms.py:410
@@ -391,7 +392,7 @@ msgstr ""
 #: forms/list_forms.py:1004 forms/list_forms.py:1025 forms/list_forms.py:1097
 #: forms/user_forms.py:58
 msgid "No"
-msgstr ""
+msgstr "Не"
 
 #: forms/list_forms.py:248
 msgid "Process Bounces"
@@ -400,7 +401,7 @@ msgstr ""
 #: forms/list_forms.py:250
 msgid ""
 "Specifies whether or not this list should do automatic bounce processing."
-msgstr ""
+msgstr "Указва дали грешките за недоставени писма да се обработват автоматично."
 
 #: forms/list_forms.py:255
 msgid "Bounce score threshold"
@@ -490,7 +491,7 @@ msgstr ""
 
 #: forms/list_forms.py:331
 msgid "Public archives"
-msgstr ""
+msgstr "Публични архиви"
 
 #: forms/list_forms.py:332
 msgid "Private archives"
@@ -1042,7 +1043,7 @@ msgstr ""
 
 #: forms/list_forms.py:847
 msgid "No automatic response"
-msgstr ""
+msgstr "Без автоматичен отговор"
 
 #: forms/list_forms.py:851
 msgid "Autorespond to list owner"
@@ -1120,7 +1121,7 @@ msgstr ""
 
 #: forms/list_forms.py:904 forms/list_forms.py:1102
 msgid "Send welcome message"
-msgstr ""
+msgstr "Изпрати съобщение за добре дошъл"
 
 #: forms/list_forms.py:906
 msgid ""
@@ -1130,10 +1131,16 @@ msgid ""
 "some other mailing list manager to Mailman.\n"
 "The text of Welcome message can be set via the Templates tab."
 msgstr ""
+"Изпращай съобщения за добре дошъл на нови абонати? Изключи само ако смяташ "
+"да добавяш абонати ръчно и не искаш те да разберат какво си направил. "
+"Стойност НЕ е най-удачна за прозрачно мигриране на пощенски списъци от друга "
+"система към Mailman.\n"
+"Съдържанието на съобщенията за добре дошъл могат да задават от секция "
+"“Шаблони“."
 
 #: forms/list_forms.py:916
 msgid "Send goodbye message"
-msgstr ""
+msgstr "Изпрати съобщение за довиждане"
 
 #: forms/list_forms.py:918
 msgid ""
@@ -1194,11 +1201,11 @@ msgstr ""
 
 #: forms/list_forms.py:969
 msgid "Long Description"
-msgstr ""
+msgstr "Дълго описание"
 
 #: forms/list_forms.py:970
 msgid "A longer description of this mailing list."
-msgstr ""
+msgstr "По-дълго описание за този пощенски списък."
 
 #: forms/list_forms.py:974
 msgid "Display name"
@@ -1210,7 +1217,7 @@ msgstr ""
 
 #: forms/list_forms.py:979
 msgid "Subject prefix"
-msgstr ""
+msgstr "Представка за темата"
 
 #: forms/list_forms.py:984
 msgid "Preferred Language"
@@ -1394,7 +1401,7 @@ msgstr ""
 
 #: forms/member_forms.py:27
 msgid "Email Address"
-msgstr ""
+msgstr "Електронен адрес"
 
 #: forms/member_forms.py:32 forms/user_forms.py:317
 msgid "Display Name"
@@ -1434,7 +1441,7 @@ msgstr ""
 
 #: forms/user_forms.py:80
 msgid "Hide address"
-msgstr ""
+msgstr "Скрий адрес"
 
 #: forms/user_forms.py:82
 msgid ""
@@ -1457,7 +1464,7 @@ msgstr ""
 
 #: forms/user_forms.py:101
 msgid "Preferred language"
-msgstr ""
+msgstr "Предпочитан език"
 
 #: forms/user_forms.py:103
 msgid ""
@@ -1465,6 +1472,9 @@ msgid ""
 "will override the MailingList's preferred language. This affects which "
 "language is used for your email notifications and such."
 msgstr ""
+"Предпочитан език за взаимодействието ви с Mailman. Когато е зададен, ще се "
+"използва вместо предпочитания език за пощенския списък. Определя кой език ще "
+"се използва за уведомления по електронна поща и други."
 
 #: forms/user_forms.py:147
 msgid "Cannot set delivery_status to {}"
@@ -1472,7 +1482,7 @@ msgstr ""
 
 #: forms/user_forms.py:242
 msgid "Verified"
-msgstr ""
+msgstr "Потвърден"
 
 #: forms/user_forms.py:244
 msgid "Specifies whether or not this email address is verified"
@@ -1481,7 +1491,7 @@ msgstr ""
 #: forms/validators.py:39
 #, python-brace-format
 msgid "Invalid: \"{0}\" should be either email or UUID"
-msgstr ""
+msgstr "Невалидно: „{0}” трябва да е електронен адрес или UUID"
 
 #: models.py:42
 msgid ""
@@ -1520,7 +1530,7 @@ msgstr ""
 
 #: models.py:253
 msgid "Choose the template you want to customize."
-msgstr ""
+msgstr "Изберете шаблон за промяна."
 
 #: models.py:260
 msgid ""
@@ -1699,12 +1709,12 @@ msgstr ""
 
 #: templates/postorius/base.html:38
 msgid "Lists"
-msgstr ""
+msgstr "Списъци"
 
 #: templates/postorius/base.html:44 templates/postorius/domain/index.html:5
 #: templates/postorius/domain/index.html:11
 msgid "Domains"
-msgstr ""
+msgstr "Домейни"
 
 #: templates/postorius/base.html:50
 msgid "Bans"
@@ -1721,15 +1731,15 @@ msgstr ""
 
 #: templates/postorius/base.html:69 templates/postorius/lists/summary.html:33
 msgid "Archives"
-msgstr ""
+msgstr "Архиви"
 
 #: templates/postorius/base.html:85
 msgid "Account"
-msgstr ""
+msgstr "Регистрация"
 
 #: templates/postorius/base.html:89
 msgid "Mailman settings"
-msgstr ""
+msgstr "Настройки на Mailman"
 
 #: templates/postorius/base.html:94
 msgid "Posting activity"
@@ -1753,7 +1763,7 @@ msgstr ""
 
 #: templates/postorius/base.html:138
 msgid "Postorius Version"
-msgstr ""
+msgstr "Версия на Postorius"
 
 #: templates/postorius/base.html:141
 msgid "Happy Mailman Day!"
@@ -1761,11 +1771,11 @@ msgstr ""
 
 #: templates/postorius/domain/confirm_delete.html:5
 msgid "Confirm domain removal"
-msgstr ""
+msgstr "Потвърди изтриване на домейн"
 
 #: templates/postorius/domain/confirm_delete.html:13
 msgid "Confirm deletion"
-msgstr ""
+msgstr "Потвърди изтриване"
 
 #: templates/postorius/domain/confirm_delete.html:17
 msgid "Are you sure you want to permanently delete"
@@ -1814,7 +1824,7 @@ msgstr ""
 
 #: templates/postorius/domain/index.html:14
 msgid "Add Domain"
-msgstr ""
+msgstr "Добави домейн"
 
 #: templates/postorius/domain/index.html:25
 #: templates/postorius/menu/list_nav.html:45
@@ -1847,7 +1857,7 @@ msgstr ""
 #: templates/postorius/lists/template_update.html:7
 #: templates/postorius/menu/list_nav.html:48 templatetags/nav_helpers.py:38
 msgid "Templates"
-msgstr ""
+msgstr "Шаблони"
 
 #: templates/postorius/domain/index.html:67
 msgid "No domains yet."
@@ -1855,7 +1865,7 @@ msgstr ""
 
 #: templates/postorius/domain/new.html:6
 msgid "Add domain"
-msgstr ""
+msgstr "Добави домейн"
 
 #: templates/postorius/domain/new.html:12
 msgid "Add a new domain"
@@ -1863,7 +1873,7 @@ msgstr ""
 
 #: templates/postorius/domain/new.html:17
 msgid "Create domain"
-msgstr ""
+msgstr "Нов домейн"
 
 #: templates/postorius/domain/owners.html:6
 msgid "Add domain owner "
@@ -1904,7 +1914,7 @@ msgstr ""
 #: templates/postorius/domain/template_index.html:16
 #: templates/postorius/lists/template_list.html:14
 msgid "New Template"
-msgstr ""
+msgstr "Нов шаблон"
 
 #: templates/postorius/domain/template_index.html:25
 #: templates/postorius/lists/template_list.html:24
@@ -1918,7 +1928,7 @@ msgstr ""
 
 #: templates/postorius/errors/generic.html:5
 msgid "Something went wrong"
-msgstr ""
+msgstr "Нещо се обърка"
 
 #: templates/postorius/fragments/bans.html:14
 msgid "Ban email"
@@ -1942,7 +1952,7 @@ msgstr ""
 
 #: templates/postorius/index.html:12
 msgid "Mailing Lists"
-msgstr ""
+msgstr "Пощенски списъци"
 
 #: templates/postorius/index.html:19
 msgid "Filter by Role"
@@ -1954,7 +1964,7 @@ msgstr ""
 
 #: templates/postorius/index.html:24
 msgid "Moderator"
-msgstr ""
+msgstr "Модератор"
 
 #: templates/postorius/index.html:25
 msgid "Member"
@@ -1966,23 +1976,23 @@ msgstr ""
 
 #: templates/postorius/index.html:27
 msgid "All"
-msgstr ""
+msgstr "Всички"
 
 #: templates/postorius/index.html:32
 msgid "Role: "
-msgstr ""
+msgstr "Роля: "
 
 #: templates/postorius/index.html:40
 msgid "Create New Domain"
-msgstr ""
+msgstr "Създай нов домейн"
 
 #: templates/postorius/index.html:42
 msgid "Create New List"
-msgstr ""
+msgstr "Създай нов пощенски списък"
 
 #: templates/postorius/index.html:54
 msgid "List name"
-msgstr ""
+msgstr "Име на списък"
 
 #: templates/postorius/index.html:55
 msgid "Post address"
@@ -2012,7 +2022,7 @@ msgstr ""
 
 #: templates/postorius/lists/confirm_delete.html:13
 msgid "Are you sure you want to permanently delete this list?"
-msgstr ""
+msgstr "Сигурен ли си, че искаш безвъзвратно да изтриеш този пощенски списък?"
 
 #: templates/postorius/lists/confirm_delete.html:14
 msgid "All settings and membership data will be lost!"
@@ -2037,7 +2047,7 @@ msgstr ""
 
 #: templates/postorius/lists/confirm_remove_role.html:20
 msgid "Are you sure?"
-msgstr ""
+msgstr "Сигурен ли си?"
 
 #: templates/postorius/lists/confirm_remove_role.html:23
 #, python-format
@@ -2046,7 +2056,7 @@ msgstr ""
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 msgid "Unsubscribe all members"
-msgstr ""
+msgstr "Премахни всички членове"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:14
 #, python-format
@@ -2060,7 +2070,7 @@ msgstr ""
 #: templates/postorius/lists/mass_removal.html:17
 #: templates/postorius/lists/members.html:63
 msgid "Unsubscribe All"
-msgstr ""
+msgstr "Отпише всички"
 
 #: templates/postorius/lists/confirm_token.html:12
 #, python-format
@@ -2098,7 +2108,7 @@ msgstr ""
 #: templates/postorius/user/list_options.html:27
 #: templates/postorius/user/mailman_settings.html:23
 msgid "Save changes"
-msgstr ""
+msgstr "Съхрани промените"
 
 #: templates/postorius/lists/header_matches.html:60
 msgid "Changes pending, click on the button to save them."
@@ -2111,7 +2121,7 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:26
 msgid "Perform action on selected messages"
-msgstr ""
+msgstr "Извърши действията върху избраните съобщения"
 
 #: templates/postorius/lists/held_messages.html:28
 #: templates/postorius/lists/held_messages.html:106
@@ -2121,7 +2131,7 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:38
 msgid "Subject"
-msgstr ""
+msgstr "Тема"
 
 #: templates/postorius/lists/held_messages.html:39
 msgid "Sender"
@@ -2129,7 +2139,7 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:40
 msgid "Reason"
-msgstr ""
+msgstr "Причина"
 
 #: templates/postorius/lists/held_messages.html:41
 msgid "Hold Date"
@@ -2137,11 +2147,11 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:53
 msgid "No Subject"
-msgstr ""
+msgstr "Без тема"
 
 #: templates/postorius/lists/held_messages.html:81
 msgid "Attachments"
-msgstr ""
+msgstr "Приложени файлове"
 
 #: templates/postorius/lists/held_messages.html:92
 msgid "Set member moderation"
@@ -2167,7 +2177,7 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:130
 msgid "Message could not be retrieved"
-msgstr ""
+msgstr "Съобщението не можеше да бъде изтеглено"
 
 #: templates/postorius/lists/mass_removal.html:14
 msgid "Unsubscribe users"
@@ -2176,7 +2186,7 @@ msgstr ""
 #: templates/postorius/lists/mass_subscribe.html:7
 #: templates/postorius/menu/list_nav.html:56
 msgid "Mass subscribe"
-msgstr ""
+msgstr "Масово абониране"
 
 #: templates/postorius/lists/mass_subscribe.html:16
 msgid "Subscribe users"
@@ -2197,7 +2207,7 @@ msgstr ""
 
 #: templates/postorius/lists/members.html:8
 msgid "List members"
-msgstr ""
+msgstr "Абонати на списъка"
 
 #: templates/postorius/lists/members.html:44
 msgid "Search members..."
@@ -2215,7 +2225,7 @@ msgstr ""
 #: templates/postorius/user/address_preferences.html:32
 #: templates/postorius/user/manage.html:63
 msgid "Address"
-msgstr ""
+msgstr "Адрес"
 
 #: templates/postorius/lists/members.html:80
 #: templates/postorius/user/subscriptions.html:24
@@ -2257,7 +2267,7 @@ msgstr ""
 #: templates/postorius/lists/settings.html:7
 #: templates/postorius/menu/list_nav.html:49
 msgid "Settings"
-msgstr ""
+msgstr "Настройки"
 
 #: templates/postorius/lists/subscription_requests.html:39
 msgid "Rejection reason"
@@ -2303,7 +2313,7 @@ msgstr ""
 #: templates/postorius/lists/summary.html:56
 #: templates/postorius/lists/summary.html:77
 msgid "Unsubscribe"
-msgstr ""
+msgstr "Отпиши"
 
 #: templates/postorius/lists/summary.html:63
 #: templates/postorius/user/subscription_preferences.html:49
@@ -2369,7 +2379,7 @@ msgstr ""
 
 #: templates/postorius/lists/summary.html:134
 msgid "Created at"
-msgstr ""
+msgstr "Създаден на"
 
 #: templates/postorius/lists/summary.html:139
 msgid "Last post at"
@@ -2410,23 +2420,23 @@ msgstr ""
 
 #: templates/postorius/menu/list_nav.html:42
 msgid "Members"
-msgstr ""
+msgstr "Абонати"
 
 #: templates/postorius/menu/list_nav.html:43
 msgid "Non-Members"
-msgstr ""
+msgstr "Не-абонати"
 
 #: templates/postorius/menu/list_nav.html:44
 msgid "Moderators"
-msgstr ""
+msgstr "Модератори"
 
 #: templates/postorius/menu/list_nav.html:53
 msgid "Mass operations"
-msgstr ""
+msgstr "Масови операции"
 
 #: templates/postorius/menu/list_nav.html:57
 msgid "Mass removal"
-msgstr ""
+msgstr "Масово триене"
 
 #: templates/postorius/menu/list_nav.html:60
 msgid "Ban List"
@@ -2434,7 +2444,7 @@ msgstr ""
 
 #: templates/postorius/menu/user_nav.html:4
 msgid "Mailman Settings"
-msgstr ""
+msgstr "Mailman настройки"
 
 #: templates/postorius/menu/user_nav.html:7
 #: templates/postorius/user/manage.html:51
@@ -2456,11 +2466,11 @@ msgstr ""
 
 #: templates/postorius/system_information.html:6
 msgid "System Configuration"
-msgstr ""
+msgstr "Системна конфигурация"
 
 #: templates/postorius/system_information.html:11
 msgid "Mailman System"
-msgstr ""
+msgstr "Mailman система"
 
 #: templates/postorius/user/address_preferences.html:8
 #: templates/postorius/user/subscription_preferences.html:7
@@ -2482,7 +2492,7 @@ msgstr ""
 
 #: templates/postorius/user/address_preferences.html:20
 msgid "Each email address can have specific Mailman preferences."
-msgstr ""
+msgstr "Всеки електронен адрес може да има собствени Mailman настройки."
 
 #: templates/postorius/user/address_preferences.html:21
 msgid ""
@@ -2496,7 +2506,7 @@ msgstr ""
 
 #: templates/postorius/user/all.html:35
 msgid "User"
-msgstr ""
+msgstr "Потребител"
 
 #: templates/postorius/user/all.html:36
 msgid "Created"
@@ -2532,12 +2542,12 @@ msgstr ""
 
 #: templates/postorius/user/manage.html:62
 msgid "List"
-msgstr ""
+msgstr "Списък"
 
 #: templates/postorius/user/manage.html:64
 #: templates/postorius/user/subscriptions.html:25
 msgid "Role"
-msgstr ""
+msgstr "Роля"
 
 #: templates/postorius/user/manage.html:89
 msgid "User has no subscriptions."
@@ -2549,7 +2559,7 @@ msgstr ""
 
 #: templates/postorius/user/manage.html:96
 msgid "Username"
-msgstr ""
+msgstr "Потребителско име"
 
 #: templates/postorius/user/manage.html:100
 msgid "Superuser"
@@ -2566,7 +2576,7 @@ msgstr ""
 #: templates/postorius/user/manage.html:113
 #: templates/postorius/user/manage.html:116
 msgid "Change password"
-msgstr ""
+msgstr "Промяна на парола"
 
 #: templates/postorius/user/subscription_preferences.html:21
 msgid "Each list subscription can have specific Mailman preferences."
@@ -2600,7 +2610,7 @@ msgstr ""
 
 #: templatetags/nav_helpers.py:29
 msgid "Delete List"
-msgstr ""
+msgstr "Изтрий списък"
 
 #: templatetags/nav_helpers.py:30
 msgid "Held Messages"
@@ -2620,15 +2630,15 @@ msgstr ""
 
 #: templatetags/nav_helpers.py:34
 msgid "List Settings"
-msgstr ""
+msgstr "Настройки на пощенския списък"
 
 #: templatetags/nav_helpers.py:35
 msgid "Summary"
-msgstr ""
+msgstr "Обобщение"
 
 #: templatetags/nav_helpers.py:37
 msgid "Confirm Removal of All Members"
-msgstr ""
+msgstr "Потвърди изтриването на всички абонати"
 
 #: templatetags/nav_helpers.py:39
 msgid "Address-based Settings"
@@ -2648,7 +2658,7 @@ msgstr ""
 
 #: views/domain.py:76
 msgid "New Domain registered"
-msgstr ""
+msgstr "Нов домейн беше регистриран"
 
 #: views/domain.py:114
 #, python-format
@@ -2662,12 +2672,12 @@ msgstr ""
 #: views/domain.py:141
 #, python-format
 msgid "The domain %s has been deleted."
-msgstr ""
+msgstr "Домейнът %s беше изтрит."
 
 #: views/domain.py:146
 #, python-format
 msgid "The domain could not be deleted: %s"
-msgstr ""
+msgstr "Домейнът не беше изтрит: %s"
 
 #: views/domain.py:164
 msgid "Added {} as an owner for {}"
@@ -2705,7 +2715,7 @@ msgstr ""
 
 #: views/list.py:132
 msgid "Add {}"
-msgstr ""
+msgstr "Добави {}"
 
 #: views/list.py:135
 msgid "No {}s were found matching the search."
@@ -2726,7 +2736,7 @@ msgstr ""
 
 #: views/list.py:215
 msgid "Member does not exist"
-msgstr ""
+msgstr "Абонатът не съществува"
 
 #: views/list.py:234
 msgid "The member's preferences have been updated."
@@ -2742,7 +2752,7 @@ msgstr ""
 
 #: views/list.py:436
 msgid "You are not subscribed to {}."
-msgstr ""
+msgstr "Не си абонат на {}."
 
 #: views/list.py:449
 msgid "You are already subscribed"
@@ -2750,7 +2760,7 @@ msgstr ""
 
 #: views/list.py:460
 msgid "Subscription changed to {}"
-msgstr ""
+msgstr "Абонамент променен на {}"
 
 #: views/list.py:464
 msgid "Something went wrong. Please try again. {} {}"
@@ -2765,7 +2775,7 @@ msgstr ""
 #: views/list.py:510
 #, python-format
 msgid "You are subscribed to %s."
-msgstr ""
+msgstr "Абониран си за %s."
 
 #: views/list.py:514 views/list.py:544
 msgid "Something went wrong. Please try again."
@@ -2777,7 +2787,7 @@ msgstr ""
 
 #: views/list.py:564
 msgid "You can only unsubscribe yourself."
-msgstr ""
+msgstr "Можеш да отпишеш само себе си."
 
 #: views/list.py:569
 msgid ""
@@ -2798,7 +2808,7 @@ msgstr ""
 #: views/list.py:613
 #, python-format
 msgid "The address %(address)s has been invited to %(list)s."
-msgstr ""
+msgstr "Адресът %(address)s беше поканен към списък %(list)s."
 
 #: views/list.py:616
 #, python-format
@@ -2814,7 +2824,7 @@ msgstr ""
 #: views/list.py:629 views/list.py:680
 #, python-format
 msgid "The email address %s is not valid."
-msgstr ""
+msgstr "Електронният адрес %s е грешен."
 
 #: views/list.py:654
 msgid "Please fill out the form correctly."
@@ -2823,11 +2833,11 @@ msgstr ""
 #: views/list.py:670
 #, python-brace-format
 msgid "These addresses {address} have been unsubscribed from {list}."
-msgstr ""
+msgstr "Адресите {address} бяха премахнати от {list}."
 
 #: views/list.py:701
 msgid "The selected messages were accepted"
-msgstr ""
+msgstr "Избраните съобщения бяха приети"
 
 #: views/list.py:705
 msgid "The selected messages were rejected"
@@ -2839,15 +2849,15 @@ msgstr ""
 
 #: views/list.py:711
 msgid "Message could not be found"
-msgstr ""
+msgstr "Съобщението не беше намерено"
 
 #: views/list.py:740
 msgid "The message was accepted"
-msgstr ""
+msgstr "Съобщението беше прието"
 
 #: views/list.py:743
 msgid "The message was rejected"
-msgstr ""
+msgstr "Съобщението беше върнато"
 
 #: views/list.py:746
 msgid "The message was discarded"
@@ -2867,11 +2877,11 @@ msgstr ""
 
 #: views/list.py:821
 msgid "Choose a Domain"
-msgstr ""
+msgstr "Избери домейн"
 
 #: views/list.py:842
 msgid "List created"
-msgstr ""
+msgstr "Списъкът е създаден"
 
 #: views/list.py:854
 msgid "Mailing List already exists."
@@ -2891,7 +2901,7 @@ msgstr ""
 
 #: views/list.py:1077
 msgid "The request has been accepted."
-msgstr ""
+msgstr "Искането беше прието."
 
 #: views/list.py:1078
 msgid "The request has been rejected."
@@ -2921,11 +2931,11 @@ msgstr ""
 
 #: views/list.py:1109
 msgid "Automatic Responses"
-msgstr ""
+msgstr "Автоматични отговори"
 
 #: views/list.py:1110
 msgid "Alter Messages"
-msgstr ""
+msgstr "Промени съобщения"
 
 #: views/list.py:1111
 msgid "DMARC Mitigations"
@@ -2941,7 +2951,7 @@ msgstr ""
 
 #: views/list.py:1114
 msgid "Archiving"
-msgstr ""
+msgstr "Архивиране"
 
 #: views/list.py:1115
 msgid "Member Policy"
@@ -2953,16 +2963,16 @@ msgstr ""
 
 #: views/list.py:1179
 msgid "The settings have been updated."
-msgstr ""
+msgstr "Настройките бяха съхранени."
 
 #: views/list.py:1184
 msgid "An error occurred: "
-msgstr ""
+msgstr "Появи се грешка: "
 
 #: views/list.py:1208
 #, python-format
 msgid "The user %(email)s is not in the %(role)s group"
-msgstr ""
+msgstr "Потребителят %(email)s не в групата%(role)s"
 
 #: views/list.py:1214
 msgid "Removing the last owner is impossible"
@@ -2980,11 +2990,11 @@ msgstr ""
 
 #: views/list.py:1248
 msgid "No member is subscribed to the list currently."
-msgstr ""
+msgstr "Пощенският списък няма абонати."
 
 #: views/list.py:1258
 msgid "All members have been unsubscribed from the list."
-msgstr ""
+msgstr "Всички абонати бяха изтрити от пощенския списък."
 
 #: views/list.py:1323
 msgid "The header matches were successfully modified."
@@ -3008,23 +3018,23 @@ msgstr ""
 
 #: views/rest.py:60
 msgid "Message does not exist"
-msgstr ""
+msgstr "Съобщението не съществува"
 
 #: views/rest.py:97
 msgid "Attachment does not exist"
-msgstr ""
+msgstr "Прикаченият файл не съществува"
 
 #: views/user.py:92
 msgid "Your preferences have been updated."
-msgstr ""
+msgstr "Предпочитанията ти са запазени."
 
 #: views/user.py:94
 msgid "Your preferences did not change."
-msgstr ""
+msgstr "Предпочитанията ти не са променени."
 
 #: views/user.py:214
 msgid "Subscription does not exist"
-msgstr ""
+msgstr "Абонаментът не съществува"
 
 #: views/user.py:407
 msgid "Successfully updated addresses {}"
@@ -3040,4 +3050,4 @@ msgstr ""
 
 #: views/user.py:432
 msgid "Password updated successfully"
-msgstr ""
+msgstr "Паролата беше променена"
