@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-18 23:31-0800\n"
-"PO-Revision-Date: 2022-03-04 22:15+0000\n"
+"PO-Revision-Date: 2022-03-06 09:15+0000\n"
 "Last-Translator: dpa-weblate@aegee.org <dpa-weblate@aegee.org>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/bg/>\n"
@@ -1170,7 +1170,7 @@ msgstr ""
 
 #: forms/list_forms.py:938
 msgid "Should administrator get notices of subscribes and unsubscribes?"
-msgstr ""
+msgstr "Да получава ли администраторът съобщения за нови и напуснали абонати?"
 
 #: forms/list_forms.py:943
 msgid "Not Moderated"
@@ -1186,7 +1186,7 @@ msgstr ""
 
 #: forms/list_forms.py:956
 msgid "Show list on index page"
-msgstr ""
+msgstr "Включи списъка в каталога на пощенски списъци"
 
 #: forms/list_forms.py:957
 msgid "Choose whether to include this list on the list of all lists"
@@ -1221,7 +1221,7 @@ msgstr "Представка за темата"
 
 #: forms/list_forms.py:984
 msgid "Preferred Language"
-msgstr ""
+msgstr "Предпочитан език"
 
 #: forms/list_forms.py:990
 msgid "Members List Visibility"
@@ -1759,7 +1759,7 @@ msgstr ""
 
 #: templates/postorius/base.html:134
 msgid "Postorius Documentation"
-msgstr ""
+msgstr "Документация на Postorius"
 
 #: templates/postorius/base.html:138
 msgid "Postorius Version"
@@ -1807,12 +1807,12 @@ msgstr ""
 #: templates/postorius/lists/confirm_removeall_subscribers.html:22
 #: templates/postorius/lists/template_delete.html:25
 msgid "Cancel"
-msgstr ""
+msgstr "Отказ"
 
 #: templates/postorius/domain/edit.html:6
 #: templates/postorius/domain/edit.html:12
 msgid "Edit domain"
-msgstr ""
+msgstr "Редактиране на домейн"
 
 #: templates/postorius/domain/edit.html:17
 #: templates/postorius/lists/template_update.html:20
@@ -1844,7 +1844,7 @@ msgstr ""
 
 #: templates/postorius/domain/index.html:54
 msgid "Add"
-msgstr ""
+msgstr "Добавяне"
 
 #: templates/postorius/domain/index.html:57
 #: templates/postorius/domain/template_add.html:6
@@ -1896,7 +1896,7 @@ msgstr ""
 #: templates/postorius/user/address_preferences.html:62
 #: templates/postorius/user/subscription_preferences.html:73
 msgid "Save"
-msgstr ""
+msgstr "Съхрани"
 
 #: templates/postorius/domain/template_delete.html:11
 msgid "Delete Template"
@@ -1919,12 +1919,12 @@ msgstr "Нов шаблон"
 #: templates/postorius/domain/template_index.html:25
 #: templates/postorius/lists/template_list.html:24
 msgid "Template Name"
-msgstr ""
+msgstr "Име на шаблон"
 
 #: templates/postorius/domain/template_index.html:44
 #: templates/postorius/lists/template_list.html:40
 msgid "No Templates."
-msgstr ""
+msgstr "Няма шаблони"
 
 #: templates/postorius/errors/generic.html:5
 msgid "Something went wrong"
@@ -1948,7 +1948,7 @@ msgstr ""
 
 #: templates/postorius/index.html:6
 msgid "List Index"
-msgstr ""
+msgstr "Каталог на пощенските списъци"
 
 #: templates/postorius/index.html:12
 msgid "Mailing Lists"
@@ -2014,7 +2014,7 @@ msgstr ""
 
 #: templates/postorius/index.html:88
 msgid "There are currently no mailing lists."
-msgstr ""
+msgstr "В момента няма пощенски списъци."
 
 #: templates/postorius/lists/bans.html:8
 msgid "Banned addresses"
