@@ -413,7 +413,7 @@ class MessageAcceptanceForm(ListSettingsForm):
         help_text=_(
             'Administrivia tests will check postings to see whether it\'s '
             'really meant as an administrative request (like subscribe, '
-            'unsubscribe, etc), and will add it to the the administrative '
+            'unsubscribe, etc), and will add it to the administrative '
             'requests queue, notifying the administrator of the new request, '
             'in the process.'))
     default_member_action = forms.ChoiceField(

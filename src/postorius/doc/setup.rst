@@ -13,7 +13,7 @@ Install Postorius
 =================
 
 Postorius supports Python 3.6+ and Django 2.2+. This information could however
-be out-of-date at a future time. Please refer to the the setup.py for the
+be out-of-date at a future time. Please refer to the setup.py for the
 latest supported version of Django.
 
 
