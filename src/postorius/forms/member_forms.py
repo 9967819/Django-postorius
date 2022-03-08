@@ -32,4 +32,4 @@ class MemberForm(forms.Form):
         label=_('Display Name'),
         required=False,
         error_messages={
-            'invalid': _('Please enter an display name.')})
+            'invalid': _('Please enter a display name.')})

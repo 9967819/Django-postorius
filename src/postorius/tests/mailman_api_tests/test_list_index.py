@@ -140,7 +140,7 @@ class ListIndexPageTest(ViewTestCase):
         # Current user is not an owner of any list.
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.context['lists']), 0)
-        # Let's make them an moderator of a list and see if it shows up.
+        # Let's make them a moderator of a list and see if it shows up.
         self.foo_list.add_moderator(self.user.email)
         response = self.client.get(url + '?role=moderator')
         self.assertEqual(response.status_code, 200)
@@ -158,7 +158,7 @@ class ListIndexPageTest(ViewTestCase):
         # Current user is not an owner of any list.
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.context['lists']), 0)
-        # Let's make them an moderator of a list and see if it shows up.
+        # Let's make them a moderator of a list and see if it shows up.
         self.foo_list.subscribe(
             self.user.email, pre_confirmed=True, pre_verified=True)
         response = self.client.get(url + '?role=member')

@@ -90,7 +90,7 @@ class ListMembersViews(ListOwnerMixin, MailingListView):
         """Prepare regex based query to search partial email addresses.
 
         Core's `members/find` API allows searching for memberships based on
-        regex. This methods prepares a valid regex to pass on the the REST API.
+        regex. This methods prepares a valid regex to pass on the REST API.
         """
         if request.GET.get('q'):
             query = request.GET['q']
@@ -1152,7 +1152,7 @@ def list_settings(request, list_id=None, visible_section=None,
     m_list = List.objects.get_or_404(fqdn_listname=list_id)
     list_settings = m_list.settings
     initial_data = dict((key, value) for key, value in list_settings.items())
-    # List settings are grouped an processed in different forms.
+    # List settings are grouped and processed in different forms.
     if request.method == 'POST':
         form = form_class(request.POST, mlist=m_list, initial=initial_data)
         if form.is_valid():
