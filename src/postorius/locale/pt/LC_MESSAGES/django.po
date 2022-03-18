@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-18 23:31-0800\n"
+"POT-Creation-Date: 2022-03-17 21:46-0700\n"
 "PO-Revision-Date: 2022-01-02 23:04+0000\n"
 "Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -53,7 +53,7 @@ msgstr ""
 "como testing@example.com, digite example.com aqui."
 
 #: forms/domain_forms.py:54 templates/postorius/domain/index.html:22
-#: templates/postorius/index.html:56
+#: templates/postorius/index.html:82
 msgid "Description"
 msgstr "Descrição"
 
@@ -82,67 +82,67 @@ msgstr "Insira um nome de domínio válido"
 msgid "Owner's Email"
 msgstr "E-mail do dono"
 
-#: forms/fields.py:28
+#: forms/fields.py:35
 msgid "Regular"
 msgstr "Normal"
 
-#: forms/fields.py:29
+#: forms/fields.py:36
 msgid "Plain Text Digests"
 msgstr "Resumos em Texto Simples"
 
-#: forms/fields.py:30
+#: forms/fields.py:37
 msgid "MIME Digests"
 msgstr "Resumos em MIME"
 
-#: forms/fields.py:31
+#: forms/fields.py:38
 msgid "Summary Digests"
 msgstr "Resumo dos Resumos"
 
-#: forms/fields.py:34 forms/list_forms.py:143
+#: forms/fields.py:41 forms/list_forms.py:143
 msgid "Enabled"
 msgstr "Ativado"
 
-#: forms/fields.py:35 forms/list_forms.py:144
+#: forms/fields.py:42 forms/list_forms.py:144
 msgid "Disabled"
 msgstr "Desativado"
 
-#: forms/fields.py:36
+#: forms/fields.py:43
 msgid "Disabled by Owner"
 msgstr "Desativado pelo Proprietário"
 
-#: forms/fields.py:37
+#: forms/fields.py:44
 msgid "Disabled by Bounces"
 msgstr "Desativado por Devoluções"
 
-#: forms/fields.py:40
+#: forms/fields.py:47
 msgid "Hold for moderation"
 msgstr "Reter para moderação"
 
-#: forms/fields.py:41
+#: forms/fields.py:48
 msgid "Reject (with notification)"
 msgstr "Rejeitar (com notificação)"
 
-#: forms/fields.py:42
+#: forms/fields.py:49
 msgid "Discard (no notification)"
 msgstr "Descartar (sem notificação)"
 
-#: forms/fields.py:43
+#: forms/fields.py:50
 msgid "Accept immediately (bypass other rules)"
 msgstr "Aceitar imediatamente (ignorar outras regras)"
 
-#: forms/fields.py:44
+#: forms/fields.py:51
 msgid "Default processing"
 msgstr "Processamento padrão"
 
-#: forms/fields.py:128
+#: forms/fields.py:135
 msgid "Make at least one selection"
 msgstr "Faça pelo menos uma seleção"
 
-#: forms/fields.py:139 templates/postorius/lists/summary.html:54
+#: forms/fields.py:146 templates/postorius/lists/summary.html:54
 msgid "Delivery mode"
 msgstr "Modo de entrega"
 
-#: forms/fields.py:141
+#: forms/fields.py:148
 msgid ""
 "If you select digests , you'll get posts bundled together (usually one per "
 "day but possibly more on busy lists), instead of singly when they're sent. "
@@ -156,11 +156,11 @@ msgstr ""
 "suportar e-mails em formato MIME. Geralmente os resumos MIME são melhores "
 "mas, se tiver problemas ao lê-los, selecione resumos em texto simples."
 
-#: forms/fields.py:161 templates/postorius/lists/summary.html:53
+#: forms/fields.py:168 templates/postorius/lists/summary.html:53
 msgid "Delivery status"
 msgstr "Estado da entrega"
 
-#: forms/fields.py:163
+#: forms/fields.py:170
 msgid ""
 "Set this option to Enabled to receive messages posted to this mailing list. "
 "Set it to Disabled if you want to stay subscribed, but don't want mail "
@@ -174,15 +174,15 @@ msgstr ""
 "mensagens, não se esqueça de reativá-la quando voltar; ela não será "
 "automaticamente reativada."
 
-#: forms/fields.py:174
+#: forms/fields.py:181
 msgid "Moderation"
 msgstr "Moderação"
 
-#: forms/fields.py:176 forms/list_forms.py:1098
+#: forms/fields.py:183 forms/list_forms.py:1098
 msgid "List default"
 msgstr "Ação Default da Lista"
 
-#: forms/fields.py:178
+#: forms/fields.py:185
 msgid ""
 "Default action to take when this member posts to the list. \n"
 "List default -- follow the list's default member action. \n"
@@ -645,11 +645,17 @@ msgid "Administrivia"
 msgstr "Questões administrativas"
 
 #: forms/list_forms.py:414
+#, fuzzy
+#| msgid ""
+#| "Administrivia tests will check postings to see whether it's really meant "
+#| "as an administrative request (like subscribe, unsubscribe, etc), and will "
+#| "add it to the the administrative requests queue, notifying the "
+#| "administrator of the new request, in the process."
 msgid ""
 "Administrivia tests will check postings to see whether it's really meant as "
 "an administrative request (like subscribe, unsubscribe, etc), and will add "
-"it to the the administrative requests queue, notifying the administrator of "
-"the new request, in the process."
+"it to the administrative requests queue, notifying the administrator of the "
+"new request, in the process."
 msgstr ""
 "Os testes por questões administrativas verificarão as postagens para ver se "
 "realmente se trata de uma solicitação administrativa (como inscrever-se, "
@@ -1697,7 +1703,9 @@ msgid "Display Name"
 msgstr "Nome para Exibição"
 
 #: forms/member_forms.py:35
-msgid "Please enter an display name."
+#, fuzzy
+#| msgid "Please enter an display name."
+msgid "Please enter a display name."
 msgstr "Informe um Nome para Exibição."
 
 #: forms/system.py:31
@@ -2158,11 +2166,11 @@ msgstr ""
 
 #: templates/postorius/domain/confirm_delete.html:33
 #: templates/postorius/domain/index.html:59
-#: templates/postorius/domain/template_index.html:34
+#: templates/postorius/domain/template_index.html:35
 #: templates/postorius/lists/confirm_delete.html:5
 #: templates/postorius/lists/members.html:132
 #: templates/postorius/lists/members.html:141
-#: templates/postorius/lists/template_list.html:32
+#: templates/postorius/lists/template_list.html:33
 #: templates/postorius/menu/list_nav.html:62
 msgid "Delete"
 msgstr "Apagar"
@@ -2170,7 +2178,7 @@ msgstr "Apagar"
 #: templates/postorius/domain/confirm_delete.html:34
 #: templates/postorius/domain/template_delete.html:28
 #: templates/postorius/lists/confirm_delete.html:25
-#: templates/postorius/lists/confirm_remove_role.html:24
+#: templates/postorius/lists/confirm_remove_role.html:23
 #: templates/postorius/lists/confirm_removeall_subscribers.html:22
 #: templates/postorius/lists/template_delete.html:25
 msgid "Cancel"
@@ -2200,8 +2208,8 @@ msgstr "Donos"
 
 #: templates/postorius/domain/index.html:38
 #: templates/postorius/domain/index.html:58
-#: templates/postorius/domain/template_index.html:33
-#: templates/postorius/lists/template_list.html:31
+#: templates/postorius/domain/template_index.html:34
+#: templates/postorius/lists/template_list.html:32
 msgid "Edit"
 msgstr "Editar"
 
@@ -2294,8 +2302,8 @@ msgstr "Novo Modelo"
 msgid "Template Name"
 msgstr "Nome do Modelo"
 
-#: templates/postorius/domain/template_index.html:44
-#: templates/postorius/lists/template_list.html:40
+#: templates/postorius/domain/template_index.html:45
+#: templates/postorius/lists/template_list.html:41
 msgid "No Templates."
 msgstr "Não há Modelos."
 
@@ -2327,67 +2335,61 @@ msgstr "Índice da lista"
 msgid "Mailing Lists"
 msgstr "Listas de Correio"
 
-#: templates/postorius/index.html:19
-#, fuzzy
-#| msgid "Filter types"
-msgid "Filter by Role"
-msgstr "Filtrar tipos"
-
-#: templates/postorius/index.html:23
-#, fuzzy
-#| msgid "Owners"
-msgid "Owner"
-msgstr "Donos"
-
-#: templates/postorius/index.html:24
-#, fuzzy
-#| msgid "Moderators"
-msgid "Moderator"
-msgstr "Moderadores"
-
-#: templates/postorius/index.html:25
-#, fuzzy
-#| msgid "Members"
-msgid "Member"
-msgstr "Membros"
-
-#: templates/postorius/index.html:26
-#, fuzzy
-#| msgid "Non-Members"
-msgid "Non-member"
-msgstr "Não Membros"
-
-#: templates/postorius/index.html:27
-msgid "All"
-msgstr ""
-
-#: templates/postorius/index.html:32
+#: templates/postorius/index.html:18
 #, fuzzy
 #| msgid "Role"
 msgid "Role: "
 msgstr "Papel"
 
 #: templates/postorius/index.html:40
+#, fuzzy
+#| msgid "Owners"
+msgid "Owner"
+msgstr "Donos"
+
+#: templates/postorius/index.html:45
+#, fuzzy
+#| msgid "Moderators"
+msgid "Moderator"
+msgstr "Moderadores"
+
+#: templates/postorius/index.html:50
+#, fuzzy
+#| msgid "Members"
+msgid "Member"
+msgstr "Membros"
+
+#: templates/postorius/index.html:55
+#, fuzzy
+#| msgid "Non-Members"
+msgid "Non-member"
+msgstr "Não Membros"
+
+#: templates/postorius/index.html:58
+msgid "All"
+msgstr ""
+
+#: templates/postorius/index.html:66
 msgid "Create New Domain"
 msgstr "Criar Novo Domínio"
 
-#: templates/postorius/index.html:42
+#: templates/postorius/index.html:68
 msgid "Create New List"
 msgstr "Criar Nova Lista"
 
-#: templates/postorius/index.html:54
+#: templates/postorius/index.html:80
 msgid "List name"
 msgstr "Nome da Lista"
 
-#: templates/postorius/index.html:55
+#: templates/postorius/index.html:81
 msgid "Post address"
 msgstr "Endereço da Lista"
 
-#: templates/postorius/index.html:66
+#: templates/postorius/index.html:92
 msgid "unadvertised"
 msgstr "não anunciado"
 
-#: templates/postorius/index.html:78
+#: templates/postorius/index.html:104
 #, fuzzy
 #| msgid ""
 #| "Only lists that you are owner, moderator or subscriber for are shown here."
@@ -2398,12 +2400,12 @@ msgstr ""
 "Apenas as listas das quais é proprietário, moderador ou assinante são "
 "mostradas aqui."
 
-#: templates/postorius/index.html:82
+#: templates/postorius/index.html:108
 msgid "Only admins see unadvertised lists in the list index."
 msgstr ""
 "Apenas os administradores veem listas não anunciadas no índice da lista."
 
-#: templates/postorius/index.html:88
+#: templates/postorius/index.html:114
 msgid "There are currently no mailing lists."
 msgstr "Atualmente não há listas de discussão."
 
@@ -2446,11 +2448,11 @@ msgstr ""
 "                Apagar a %(listname)s\n"
 "                "
 
-#: templates/postorius/lists/confirm_remove_role.html:20
+#: templates/postorius/lists/confirm_remove_role.html:19
 msgid "Are you sure?"
 msgstr "Tem a certeza?"
 
-#: templates/postorius/lists/confirm_remove_role.html:23
+#: templates/postorius/lists/confirm_remove_role.html:22
 #, python-format
 msgid " Remove %(role_translated)s"
 msgstr ""
@@ -3521,6 +3523,11 @@ msgstr "Atualizou com sucesso o utilizador."
 #: views/user.py:432
 msgid "Password updated successfully"
 msgstr "Palavra-passe atualizada com sucesso"
+
+#, fuzzy
+#~| msgid "Filter types"
+#~ msgid "Filter by Role"
+#~ msgstr "Filtrar tipos"
 
 #~ msgid "Remove"
 #~ msgstr "Remover"
