@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-17 21:46-0700\n"
-"PO-Revision-Date: 2022-02-19 19:53+0000\n"
+"PO-Revision-Date: 2022-03-20 17:16+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/he/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.11-dev\n"
+"X-Generator: Weblate 4.12-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -620,12 +620,6 @@ msgid "Administrivia"
 msgstr "מנהלתיות"
 
 #: forms/list_forms.py:414
-#, fuzzy
-#| msgid ""
-#| "Administrivia tests will check postings to see whether it's really meant "
-#| "as an administrative request (like subscribe, unsubscribe, etc), and will "
-#| "add it to the the administrative requests queue, notifying the "
-#| "administrator of the new request, in the process."
 msgid ""
 "Administrivia tests will check postings to see whether it's really meant as "
 "an administrative request (like subscribe, unsubscribe, etc), and will add "
@@ -1613,8 +1607,6 @@ msgid "Display Name"
 msgstr "שם תצוגה"
 
 #: forms/member_forms.py:35
-#, fuzzy
-#| msgid "Please enter an display name."
 msgid "Please enter a display name."
 msgstr "נא למלא שם תצוגה."
 

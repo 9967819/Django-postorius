@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Oğuz Ersen <oguzersen@protonmail.com>, 2020, 2021, 2022.
+# Oğuz Ersen <oguz@ersen.moe>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-17 21:46-0700\n"
-"PO-Revision-Date: 2022-02-19 19:53+0000\n"
-"Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
+"PO-Revision-Date: 2022-03-19 09:49+0000\n"
+"Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/tr/>\n"
 "Language: tr\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.11-dev\n"
+"X-Generator: Weblate 4.12-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -642,20 +643,14 @@ msgid "Administrivia"
 msgstr "Yönetici işleri"
 
 #: forms/list_forms.py:414
-#, fuzzy
-#| msgid ""
-#| "Administrivia tests will check postings to see whether it's really meant "
-#| "as an administrative request (like subscribe, unsubscribe, etc), and will "
-#| "add it to the the administrative requests queue, notifying the "
-#| "administrator of the new request, in the process."
 msgid ""
 "Administrivia tests will check postings to see whether it's really meant as "
 "an administrative request (like subscribe, unsubscribe, etc), and will add "
 "it to the administrative requests queue, notifying the administrator of the "
 "new request, in the process."
 msgstr ""
-"Yönetici işleri testleri, gönderilerin gerçekten bir yönetici işi isteği "
-"(abone olma, abonelikten çıkma, vb.) anlamına gelip gelmediğini görmek için "
+"Yönetici işleri testleri, gönderilerin gerçekten bir yönetici işi isteği ("
+"abone olma, abonelikten çıkma, vb.) anlamına gelip gelmediğini görmek için "
 "denetler ve bunu yönetici istekleri kuyruğuna ekler, yeni isteği yöneticiye "
 "bildirir."
 
@@ -1674,8 +1669,6 @@ msgid "Display Name"
 msgstr "Görünen Ad"
 
 #: forms/member_forms.py:35
-#, fuzzy
-#| msgid "Please enter an display name."
 msgid "Please enter a display name."
 msgstr "Lütfen bir görünen ad girin."
 
