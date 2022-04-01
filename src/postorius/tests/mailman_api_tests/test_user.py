@@ -16,6 +16,8 @@
 # Postorius.  If not, see <http://www.gnu.org/licenses/>.
 
 
+from unittest import expectedFailure
+
 from django.contrib.auth.models import User
 from django.test.utils import override_settings
 from django.urls import reverse
@@ -322,9 +324,14 @@ class MailmanUserTest(ViewTestCase):
                                 args=[member.member_id]))
         self.assertEqual(mm_user.preferred_address.email, self.user.email)
 
+    @expectedFailure
     def test_access_list_options_multiple_subscriptions(self):
         # Test that when multiple addresses of a single user are subscribed to
         # the same list that they are able to access them.
+        # This test is now expected to fail due to
+        # https://gitlab.com/mailman/mailman/-/merge_requests/997 which no
+        # longer permits a User whose primary address is the same as a
+        # subscribed Address to subscribe and vice versa.
         mm_user = get_mailman_user(self.user)
         self.assertIsNone(mm_user.preferred_address)
         self._set_primary(self.user, mm_user)

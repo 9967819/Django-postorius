@@ -34,6 +34,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * Sort the list of languages in all Select elements alphabetically
   so they are easier to naviate with screen readers. (Fixes #498)
 * Add support for Django 4.0
+* A couple of unit tests are now marked expectedFailure due to
+  https://gitlab.com/mailman/mailman/-/merge_requests/997.  (See #548)
 
 
 UI

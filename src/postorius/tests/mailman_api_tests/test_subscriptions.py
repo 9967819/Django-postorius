@@ -16,6 +16,7 @@
 # Postorius.  If not, see <http://www.gnu.org/licenses/>.
 
 
+from unittest import expectedFailure
 from unittest.mock import patch
 
 from django.contrib.auth.models import User
@@ -289,9 +290,14 @@ class TestSubscription(ViewTestCase):
             response, reverse('list_summary',
                               args=('confirm_list.example.com', )))
 
+    @expectedFailure
     def test_change_subscription_from_address_to_primary(self):
-        # Tes that can we can switch subscription between address and primary
+        # Test that can we can switch subscription between address and primary
         # address (which happens to be same).
+        # This test is now expected to fail due to
+        # https://gitlab.com/mailman/mailman/-/merge_requests/997 which no
+        # longer permits a User whose primary address is the same as a
+        # subscribed Address to subscribe and vice versa.
         member = self.open_list.subscribe('test@example.com')
         self.assertEqual(len(self.open_list.members), 1)
         self.assertEqual(member.subscription_mode,
