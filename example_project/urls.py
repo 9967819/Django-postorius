@@ -18,10 +18,9 @@
 
 
 from django.conf import settings
-from django.urls import include, path, re_path
 from django.contrib import admin
 from django.http import Http404
-from django.urls import reverse_lazy
+from django.urls import include, path, re_path, reverse_lazy
 from django.views.defaults import server_error
 from django.views.generic import RedirectView
 
