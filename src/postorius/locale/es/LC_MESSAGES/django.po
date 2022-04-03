@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Victoriano Giralt <victoriano@uma.es>, 2020.
 # Guillermo Hernandez <guillermo@querysoft.es>, 2021.
+# Francisco Serrador <fserrador@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-17 21:46-0700\n"
-"PO-Revision-Date: 2021-12-04 12:51+0000\n"
-"Last-Translator: Guillermo Hernandez <guillermo@querysoft.es>\n"
+"PO-Revision-Date: 2022-04-03 17:15+0000\n"
+"Last-Translator: Francisco Serrador <fserrador@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/es/>\n"
 "Language: es\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.10-dev\n"
+"X-Generator: Weblate 4.12-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -278,10 +279,8 @@ msgid "Hide this list in list index"
 msgstr "Ocultar esta lista en el índice de listas"
 
 #: forms/list_forms.py:84 forms/list_forms.py:960
-#, fuzzy
-#| msgid "Description"
 msgid "Short Description"
-msgstr "Descripción"
+msgstr "Descripción Breve"
 
 #: forms/list_forms.py:94
 msgid "Choose an existing Domain."
@@ -646,12 +645,6 @@ msgid "Administrivia"
 msgstr "Aspectos administrativos"
 
 #: forms/list_forms.py:414
-#, fuzzy
-#| msgid ""
-#| "Administrivia tests will check postings to see whether it's really meant "
-#| "as an administrative request (like subscribe, unsubscribe, etc), and will "
-#| "add it to the the administrative requests queue, notifying the "
-#| "administrator of the new request, in the process."
 msgid ""
 "Administrivia tests will check postings to see whether it's really meant as "
 "an administrative request (like subscribe, unsubscribe, etc), and will add "
@@ -659,9 +652,9 @@ msgid ""
 "new request, in the process."
 msgstr ""
 "Las pruebas administrativas comprobarán los envíos para ver si realmente se "
-"tratan de solicitudes administrativas (como suscribirse, darse de baja, "
-"etc.), y las añadirán a la cola de solicitudes administrativas, notificando "
-"al administrador de la nueva solicitud, en el proceso."
+"tratan de solicitudes administrativas (como suscribirse, darse de baja, etc.)"
+", y las añadirán a la cola de solicitudes administrativas, notificando al "
+"administrador de la nueva solicitud, en el proceso."
 
 #: forms/list_forms.py:421
 msgid "Default action to take when a member posts to the list"
@@ -1466,10 +1459,8 @@ msgstr ""
 "vez que identifica qué lista es."
 
 #: forms/list_forms.py:969
-#, fuzzy
-#| msgid "Description"
 msgid "Long Description"
-msgstr "Descripción"
+msgstr "Descripción Detallada"
 
 #: forms/list_forms.py:970
 msgid "A longer description of this mailing list."
@@ -1701,8 +1692,6 @@ msgid "Display Name"
 msgstr "Nombre a mostrar"
 
 #: forms/member_forms.py:35
-#, fuzzy
-#| msgid "Please enter an display name."
 msgid "Please enter a display name."
 msgstr "Introduzca un nombre a mostrar."
 
@@ -1839,28 +1828,20 @@ msgstr ""
 "lista, p.ej. es, ca, fr, en \n"
 
 #: models.py:73
-#, fuzzy
-#| msgid "Owners"
 msgid "owner"
-msgstr "Propietarios"
+msgstr "propietario"
 
 #: models.py:74
-#, fuzzy
-#| msgid "Members"
 msgid "member"
-msgstr "Miembros"
+msgstr "miembro"
 
 #: models.py:75
-#, fuzzy
-#| msgid "Non-Members"
 msgid "nonmember"
-msgstr "No Miembros"
+msgstr "no miembro"
 
 #: models.py:76
-#, fuzzy
-#| msgid "Moderators"
 msgid "moderator"
-msgstr "Moderadores"
+msgstr "moderador"
 
 #: models.py:253
 msgid "Choose the template you want to customize."
@@ -2240,7 +2221,7 @@ msgstr "Plantillas"
 
 #: templates/postorius/domain/index.html:67
 msgid "No domains yet."
-msgstr ""
+msgstr "Aún sin dominios."
 
 #: templates/postorius/domain/new.html:6
 msgid "Add domain"
@@ -2251,10 +2232,8 @@ msgid "Add a new domain"
 msgstr "Añadir un nuevo dominio"
 
 #: templates/postorius/domain/new.html:17
-#, fuzzy
-#| msgid "Create New Domain"
 msgid "Create domain"
-msgstr "Crear un nuevo dominio"
+msgstr "Crear dominio"
 
 #: templates/postorius/domain/owners.html:6
 msgid "Add domain owner "
@@ -2340,38 +2319,28 @@ msgid "Mailing Lists"
 msgstr "Listas de Correo"
 
 #: templates/postorius/index.html:18
-#, fuzzy
-#| msgid "Role"
 msgid "Role: "
-msgstr "Rol"
+msgstr "Rol: "
 
 #: templates/postorius/index.html:40
-#, fuzzy
-#| msgid "Owners"
 msgid "Owner"
-msgstr "Propietarios"
+msgstr "Propietario"
 
 #: templates/postorius/index.html:45
-#, fuzzy
-#| msgid "Moderators"
 msgid "Moderator"
-msgstr "Moderadores"
+msgstr "Moderador"
 
 #: templates/postorius/index.html:50
-#, fuzzy
-#| msgid "Members"
 msgid "Member"
-msgstr "Miembros"
+msgstr "Miembro"
 
 #: templates/postorius/index.html:55
-#, fuzzy
-#| msgid "Non-Members"
 msgid "Non-member"
-msgstr "No Miembros"
+msgstr "No Miembro"
 
 #: templates/postorius/index.html:58
 msgid "All"
-msgstr ""
+msgstr "Todos"
 
 #: templates/postorius/index.html:66
 msgid "Create New Domain"
@@ -2394,15 +2363,12 @@ msgid "unadvertised"
 msgstr "no se muestra"
 
 #: templates/postorius/index.html:104
-#, fuzzy
-#| msgid ""
-#| "Only lists that you are owner, moderator or subscriber for are shown here."
 msgid ""
 "Only lists that you are owner, moderator or subscriber for are shown here. "
 "Click to <a href=\"?all-lists\"> see all lists</a>."
 msgstr ""
 "Aquí solo se muestran listas de las que es propietario, moderador o "
-"suscriptor."
+"suscriptor. Pulse a <a href=\"?all-lists\"> para ver todos los listados</a>."
 
 #: templates/postorius/index.html:108
 msgid "Only admins see unadvertised lists in the list index."
@@ -2442,16 +2408,9 @@ msgid "Confirm remove role"
 msgstr "Confirmar eliminar rol"
 
 #: templates/postorius/lists/confirm_remove_role.html:15
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                Delete %(listname)s\n"
-#| "                "
+#, python-format
 msgid "Remove %(address)s as %(role_translated)s?"
-msgstr ""
-"\n"
-"                Borrar %(listname)s\n"
-"                "
+msgstr "¿Quitar %(address)s como %(role_translated)s?"
 
 #: templates/postorius/lists/confirm_remove_role.html:19
 msgid "Are you sure?"
@@ -2460,7 +2419,7 @@ msgstr "¿Está seguro?"
 #: templates/postorius/lists/confirm_remove_role.html:22
 #, python-format
 msgid " Remove %(role_translated)s"
-msgstr ""
+msgstr " Quitar %(role_translated)s"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 msgid "Unsubscribe all members"
@@ -2503,7 +2462,7 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"    Confirme la desuscripción de %(addr)s de %(name)s(%(listid)s):\n"
+"    Confirme la baja de %(addr)s desde %(name)s(%(listid)s):\n"
 "    "
 
 #: templates/postorius/lists/confirm_token.html:20
@@ -2612,10 +2571,8 @@ msgid "Mass subscribe"
 msgstr "Suscribir en bloque"
 
 #: templates/postorius/lists/mass_subscribe.html:16
-#, fuzzy
-#| msgid "Unsubscribe users"
 msgid "Subscribe users"
-msgstr "Dar de baja usuarios"
+msgstr "Suscribir usuarios"
 
 #: templates/postorius/lists/memberoptions.html:7
 #: templates/postorius/user/list_options.html:7
@@ -2643,10 +2600,8 @@ msgid "CSV Export"
 msgstr "Exportar CSV"
 
 #: templates/postorius/lists/members.html:62
-#, fuzzy
-#| msgid "Unsubscribe All"
 msgid "Unsubscribe Selected"
-msgstr "Dar de baja todas las suscripciones"
+msgstr "Dar de baja a los seleccionados"
 
 #: templates/postorius/lists/members.html:76
 #: templates/postorius/user/address_preferences.html:32
@@ -2782,10 +2737,8 @@ msgstr ""
 
 #: templates/postorius/lists/summary.html:96
 #: templates/postorius/lists/summary.html:123
-#, fuzzy
-#| msgid "Unsubscribe"
 msgid "Subscribe"
-msgstr "Darse de baja"
+msgstr "Suscribir"
 
 #: templates/postorius/lists/summary.html:100
 msgid ""
@@ -2988,12 +2941,8 @@ msgstr ""
 "suscripción"
 
 #: templates/postorius/user/list_options.html:22
-#, fuzzy
-#| msgid "Use this form to change the email used for this subscription"
 msgid "Change email used for subscription"
-msgstr ""
-"Usar este formulario para cambiar la dirección de correo utilizada para esta "
-"suscripción"
+msgstr "Cambie el correo utilizado para la suscripción"
 
 #: templates/postorius/user/mailman_settings.html:7
 msgid "Subscription settings"
@@ -3263,10 +3212,8 @@ msgid "Please check your inbox for further instructions"
 msgstr "Comprobar su buzón de entrada para más instrucciones"
 
 #: views/list.py:564
-#, fuzzy
-#| msgid "You are subscribed to %s."
 msgid "You can only unsubscribe yourself."
-msgstr "Está suscrito a %s."
+msgstr "Solo puede darse de baja usted mismo."
 
 #: views/list.py:569
 msgid ""
