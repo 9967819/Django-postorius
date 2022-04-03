@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-17 21:46-0700\n"
-"PO-Revision-Date: 2022-02-22 16:59+0000\n"
+"PO-Revision-Date: 2022-03-24 10:54+0000\n"
 "Last-Translator: Piotr Frankowski <piotr@ten.net.pl>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/pl/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
 "%100<12 || n%100>=14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
 "%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
-"X-Generator: Weblate 4.11-dev\n"
+"X-Generator: Weblate 4.12-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -1779,7 +1779,7 @@ msgstr ""
 #: templates/postorius/base.html:62 templates/postorius/menu/list_nav.html:39
 #: templates/postorius/user/all.html:8 templates/postorius/user/all.html:13
 msgid "Users"
-msgstr ""
+msgstr "Użytkownicy"
 
 #: templates/postorius/base.html:69 templates/postorius/lists/summary.html:33
 msgid "Archives"
@@ -1881,7 +1881,7 @@ msgstr ""
 #: templates/postorius/domain/index.html:25
 #: templates/postorius/menu/list_nav.html:45
 msgid "Owners"
-msgstr ""
+msgstr "Właściciele"
 
 #: templates/postorius/domain/index.html:38
 #: templates/postorius/domain/index.html:58
@@ -2088,7 +2088,7 @@ msgstr ""
 
 #: templates/postorius/lists/confirm_remove_role.html:5
 msgid "Confirm remove role"
-msgstr ""
+msgstr "Potwierdź usunięcie"
 
 #: templates/postorius/lists/confirm_remove_role.html:15
 #, python-format
@@ -2462,33 +2462,31 @@ msgstr ""
 
 #: templates/postorius/menu/list_nav.html:14
 msgid "Subscription requests"
-msgstr ""
+msgstr "Prośby o subskrypcję"
 
 #: templates/postorius/menu/list_nav.html:19
 msgid "Pending Approval"
-msgstr ""
+msgstr "Oczekujące na zatwierdzenie"
 
 #: templates/postorius/menu/list_nav.html:22
 msgid "Pending Confirmation"
-msgstr ""
+msgstr "Oczekujące na potwierdzenie"
 
 #: templates/postorius/menu/list_nav.html:25
-#, fuzzy
-#| msgid "Subscriptions"
 msgid "Unsubscription Requests"
-msgstr "Subskrypcje"
+msgstr "Prośby o anulowanie subskrypcji"
 
 #: templates/postorius/menu/list_nav.html:42
 msgid "Members"
-msgstr ""
+msgstr "Członkowie"
 
 #: templates/postorius/menu/list_nav.html:43
 msgid "Non-Members"
-msgstr ""
+msgstr "Niebędący członkami"
 
 #: templates/postorius/menu/list_nav.html:44
 msgid "Moderators"
-msgstr ""
+msgstr "Moderatorzy"
 
 #: templates/postorius/menu/list_nav.html:53
 msgid "Mass operations"
@@ -2963,11 +2961,11 @@ msgstr ""
 
 #: views/list.py:1015
 msgid "Subscriptions pending user confirmation"
-msgstr ""
+msgstr "Subskrypcje oczekujące na potwierdzenie użytkownika"
 
 #: views/list.py:1028
 msgid "Subscriptions pending approval"
-msgstr ""
+msgstr "Subskrypcje oczekujące na zatwierdzenie"
 
 #: views/list.py:1041
 #, fuzzy
@@ -3064,7 +3062,7 @@ msgstr ""
 #: views/list.py:1231
 #, python-format
 msgid "The user %(address)s has been removed from the %(role)s group."
-msgstr ""
+msgstr "Użytkownik %(address)s został usunięty z grupy %(role)s ."
 
 #: views/list.py:1248
 msgid "No member is subscribed to the list currently."

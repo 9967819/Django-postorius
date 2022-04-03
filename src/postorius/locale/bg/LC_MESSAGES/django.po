@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # dpa-weblate@aegee.org <dpa-weblate@aegee.org>, 2022.
+# Дилян Палаузов <dpa-weblate@aegee.org>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-17 21:46-0700\n"
-"PO-Revision-Date: 2022-03-22 08:55+0000\n"
-"Last-Translator: dpa-weblate@aegee.org <dpa-weblate@aegee.org>\n"
+"PO-Revision-Date: 2022-03-31 20:44+0000\n"
+"Last-Translator: Дилян Палаузов <dpa-weblate@aegee.org>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/bg/>\n"
 "Language: bg\n"
@@ -83,11 +84,11 @@ msgstr ""
 
 #: forms/fields.py:36 forms/fields.py:29
 msgid "Plain Text Digests"
-msgstr ""
+msgstr "Сборни писма в чист текст"
 
 #: forms/fields.py:37 forms/fields.py:30
 msgid "MIME Digests"
-msgstr ""
+msgstr "Сборни писма форматиран текст"
 
 #: forms/fields.py:38 forms/fields.py:31
 msgid "Summary Digests"
@@ -103,15 +104,15 @@ msgstr "Изключено"
 
 #: forms/fields.py:36
 msgid "Disabled by Owner"
-msgstr "Изключен от собственика"
+msgstr "Изключено от собственика"
 
 #: forms/fields.py:44 forms/fields.py:37
 msgid "Disabled by Bounces"
-msgstr ""
+msgstr "Изключено поради върнати писма"
 
 #: forms/fields.py:40
 msgid "Hold for moderation"
-msgstr "Задържан за модериране"
+msgstr "Задръж за модериране"
 
 #: forms/fields.py:41
 msgid "Reject (with notification)"
@@ -145,6 +146,13 @@ msgid ""
 "digests are preferred, but if you have a problem reading them, select plain "
 "text digests. Summary Digests are currently equivalent to MIME Digests."
 msgstr ""
+"Ако избереш Сборни писма ще получаваш съобщенията окомплектовани (обикновено "
+"по веднъж на ден или по-често за по-натоварени списъци), вместо всяко писмо "
+"отделно когато е изпратено. Твоята програма за четене на електронни писма "
+"може да не поддържа форматирани сборни писма. По принцип форматираните "
+"сборни писма са препоръчителни, но ако не можеш да ги отвориш избери Сборни "
+"писма в чист текст. Summary Digest в момента са еквивалентни на Форматирани "
+"сборни писма."
 
 #: forms/fields.py:168 templates/postorius/lists/summary.html:53
 #: forms/fields.py:161
@@ -318,7 +326,7 @@ msgstr "Основен адрес ({})"
 
 #: forms/list_forms.py:202
 msgid "Open"
-msgstr "Отворен"
+msgstr "Отворена"
 
 #: forms/list_forms.py:203 templates/postorius/domain/template_delete.html:27
 #: templates/postorius/lists/template_delete.html:24
@@ -331,7 +339,7 @@ msgstr "Модерирай"
 
 #: forms/list_forms.py:205
 msgid "Confirm, then moderate"
-msgstr "Потвърди, след това модерирай"
+msgstr "Потвърди и след това модерирай"
 
 #: forms/list_forms.py:214
 msgid "Subscription Policy"
@@ -346,7 +354,7 @@ msgid ""
 "Confirm then Moderate: First subscribers have to confirm, then a moderator "
 "needs to authorize."
 msgstr ""
-"Отворен: Абонатите се добавят автоматично\n"
+"Отворена: Абонатите се добавят автоматично\n"
 "Потвърди: Абонатите трябва да потвърдят чрез отговаряне на изпратено до тях "
 "писмо\n"
 "Модерирай: Модераторите трябва да одобрят всеки нов абонамент ръчно.\n"
@@ -366,10 +374,10 @@ msgid ""
 "Confirm then Moderate: First subscribers have to confirm, then a moderator "
 "needs to authorize."
 msgstr ""
-"Отворен: Абонатите се трият автоматично\n"
+"Отворена: Абонатите се трият автоматично\n"
 "Потвърди: Абонатите трябва да потвърдят отписването чрез отговаряне на "
 "изпратено до тях писмо\n"
-"Модерирай: Модераторите трябва да одобрят всекя желание за отписване ръчно.\n"
+"Модерирай: Модераторите трябва да одобрят всяко желание за отписване ръчно.\n"
 "Потвърди и след това модерирай: Първо абонатите трябва да потвърдят и след "
 "това модераторът да одобри."
 
@@ -449,7 +457,7 @@ msgstr ""
 
 #: forms/list_forms.py:274
 msgid "Notify owner on bounce increment"
-msgstr ""
+msgstr "Уведоми собственика, когато броят на недоставените писма се увеличи"
 
 #: forms/list_forms.py:276
 msgid ""
@@ -460,7 +468,7 @@ msgstr ""
 
 #: forms/list_forms.py:283
 msgid "Notify owner on disable"
-msgstr ""
+msgstr "Уведоми собственика при изключване"
 
 #: forms/list_forms.py:285
 msgid ""
@@ -578,6 +586,8 @@ msgid ""
 "This checks to ensure that the list posting address or an acceptable alias "
 "explicitly appears in a To: or Cc: header in the post."
 msgstr ""
+"Проверява дали адресът на пощенския списък фигурира в To: или Cc: полето на "
+"писмото."
 
 #: forms/list_forms.py:412
 msgid "Administrivia"
@@ -611,12 +621,12 @@ msgid ""
 "Default Processing: run additional checks and accept the message."
 msgstr ""
 "Действие по подразбиране, когато абонат пише до списъка.\n"
-"Задръж: Задържа съобщението за проверка от модератор.\n"
+"Задръж за модериране: Задържа съобщението за проверка от модератор.\n"
 "Върни: Автоматично отхвърля писмо като изпраща съобщение на подателя. "
 "Текстът на върнатото съобщение може да го настроиш сам.\n"
 "Изтрий: Изтрива съобщението без да уведомява подателя.\n"
-"Приеми: Приема и разпространява всички съобщения, без допълнителни "
-"проверки.\n"
+"Приеми: Приема и разпространява всички съобщения, без допълнителни проверки."
+"\n"
 "Обичайна обработка: извърши допълнителни проверки и приеми съобщението."
 
 #: forms/list_forms.py:440
@@ -668,6 +678,10 @@ msgid ""
 "will be held for moderation. This can be used to prevent mass mailings from "
 "being accepted. A value of 0 disables the check."
 msgstr ""
+"Ако писмо има поне толкова изрични получателя (To: и Cc:) писмото ще бъде "
+"задържано за модериране. Това може да се използва да предотврати "
+"разпространяването на масов спам през пощенския списък. Стойност 0 изключва "
+"проверката."
 
 #: forms/list_forms.py:488
 msgid "Accept these non-members"
@@ -738,37 +752,38 @@ msgstr ""
 
 #: forms/list_forms.py:569
 msgid "Enable Digests"
-msgstr ""
+msgstr "Разреши сборни писма"
 
 #: forms/list_forms.py:570
 msgid "Should Mailman enable digests for this MailingList?"
-msgstr ""
+msgstr "Да разреши ли Mailman сборни писма за този пощенски списък?"
 
 #: forms/list_forms.py:576
 msgid "Send Digest Periodically"
-msgstr ""
+msgstr "Изпращай сборни писма периодично"
 
 #: forms/list_forms.py:577
 msgid "Should Mailman send out digests periodically?"
-msgstr ""
+msgstr "Да изпраща ли Mailman периодично сборни писма?"
 
 #: forms/list_forms.py:583
 msgid "Digest Volume Frequency"
-msgstr ""
+msgstr "Честота на изпращане на сборни писма"
 
 #: forms/list_forms.py:584
 msgid ""
 "At what frequency should Mailman increment the digest volume number and "
 "reset the issue number?"
 msgstr ""
+"Колко често да изпраща Mailman сборни писма и да увеличава броя на изданието?"
 
 #: forms/list_forms.py:588
 msgid "Digest size threshold"
-msgstr ""
+msgstr "Горен размер на сборните писма"
 
 #: forms/list_forms.py:589
 msgid "How big in Kb should a digest be before it gets sent out?"
-msgstr ""
+msgstr "Колко килобайта да стане сборното писмо преди Mailman да го изпрати?"
 
 #: forms/list_forms.py:598
 msgid "DMARC mitigation action"
@@ -840,7 +855,7 @@ msgstr ""
 #: templates/postorius/lists/summary.html:153
 #: templatetags/membership_helpers.py:78 templatetags/membership_helpers.py:84
 msgid "None"
-msgstr "Без"
+msgstr "Никакво"
 
 #: forms/list_forms.py:642
 msgid "Individual"
@@ -862,7 +877,7 @@ msgid ""
 "header           modification. "
 msgstr ""
 "\n"
-"    Без: No personalization.\n"
+"    Никакво: Без промени - всички получат идентично писмо.\n"
 "\n"
 "    Индивидуално: Всеки получава отделно копие на съобщението и някои "
 "променливи се заместват в съобщението,            но заглавните полета за "
@@ -1123,12 +1138,14 @@ msgstr "Без автоматичен отговор"
 
 #: forms/list_forms.py:851
 msgid "Autorespond to list owner"
-msgstr ""
+msgstr "Автоматичен отговор на писмата до администраторите на пощенския списък"
 
 #: forms/list_forms.py:852
 msgid ""
 "Should Mailman send an auto-response to emails sent to the -owner address?"
 msgstr ""
+"Да изпраща ли Mailman автоматичен отговор на електронните писма изпратени на "
+"-owner адреса?"
 
 #: forms/list_forms.py:855
 msgid "Autoresponse owner text"
@@ -1140,7 +1157,7 @@ msgstr ""
 
 #: forms/list_forms.py:862
 msgid "Autorespond postings"
-msgstr ""
+msgstr "Автоматичен отговор на нови писма"
 
 #: forms/list_forms.py:863
 msgid "Should Mailman send an auto-response to mailing list posters?"
@@ -1183,6 +1200,9 @@ msgid ""
 "request/-owner address from the same poster. Set to zero (or negative) for "
 "no grace period (i.e. auto-respond to every message)."
 msgstr ""
+"Брой дни между автоматични отговори, изпратени до пощенския списък или "
+"-request/-owner адреса от същия подател. Сложи нула (или отрицателна "
+"стойност) за да изпраща отговор на всяко отдело съобщение."
 
 #: forms/list_forms.py:895
 msgid "Notify users of held messages"
@@ -1438,7 +1458,7 @@ msgid ""
 msgstr ""
 "Ако е „Да“ или “Не“ стандартните настройки на списъка за "
 "send_welcome_message ще бъдат пренебрегнати и дали ще се изпрати съобщение "
-"за Добре дошли зависи от избора."
+"за Добре дошъл зависи от избора тук."
 
 #: forms/list_forms.py:1124
 msgid "Emails to Unsubscribe"
@@ -1561,7 +1581,7 @@ msgid ""
 "email address to show up on this membership roster at all, select Yes for "
 "this option."
 msgstr ""
-"Когато някои преглежда списъка на абонатите, твоят електронен адрес "
+"Когато някой преглежда списъка на абонатите, твоят електронен адрес "
 "обикновено се показва (закодиран, за да не го намират спамъри). Ако не искаш "
 "адресът ти да се показва в списъка с абонати, избери „Да“ тук."
 
@@ -1575,6 +1595,10 @@ msgid ""
 "you can opt to not receive another copy from the mailing list. Select Yes to "
 "receive copies. Select No to avoid receiving copies from the mailing list"
 msgstr ""
+"Когато си посочен изрично в To: или Cc: полетата в писмо до пощенския "
+"списък, може да избереш да не получаваш копие от пощенския списък. Избери "
+"„Да“ за да получаваш копия.  Избери „Не“ за да избегнеш да получаваш копия "
+"от пощенския списък"
 
 #: forms/user_forms.py:101
 msgid "Preferred language"
@@ -1625,8 +1649,8 @@ msgid ""
 "$language: The two letter language code for list's preferred language e.g. "
 "fr, en, de \n"
 msgstr ""
-"Бележка: Не включвай таен текст в шаблоните, защото те са публично "
-"достъпни.\n"
+"Бележка: Не включвай таен текст в шаблоните, защото те са публично достъпни."
+"\n"
 "Може да използваш следните променливи в шаблоните. \n"
 "$hyperkitty_url: Постоянна връзка към архивираните съобщения в Hyperkitty\n"
 "$listname: Име на пощенския списък, например: ant@example.com \n"
@@ -1636,10 +1660,10 @@ msgstr ""
 "$domain: Домейнът на пощенския списък, например: example.com \n"
 "$info: Дългото описание на пощенския списък\n"
 "$request_email: Електронният адрес за -request команди \n"
-"$owner_email: Електронният адрес за връзка с управителите на списъка ( -"
-"owner асдрес) \n"
+"$owner_email: Електронният адрес за връзка със собствениците на списъка ( -"
+"owner адрес) \n"
 "$site_email: Електронният адрес за контакт с управителя на сайта \n"
-"$language: Двубуквения код на предпочитания за пощенски списък език, "
+"$language: Двубуквеният код на предпочитания за пощенския списък език, "
 "например: bg, fr, en, de \n"
 
 #: models.py:73
@@ -1660,7 +1684,7 @@ msgstr "модератор"
 
 #: models.py:253
 msgid "Choose the template you want to customize."
-msgstr "Изберете шаблон за промяна."
+msgstr "Избери шаблон за промяна."
 
 #: models.py:260
 msgid ""
@@ -1706,6 +1730,8 @@ msgid ""
 "Sent to the list administrators when a bounce message in an unrecognized "
 "format has been received."
 msgstr ""
+"Изпратено до собствениците на списъка, когато върнато съобщение не може да "
+"бъде разчетено."
 
 #: template_list.py:36
 msgid "Sent to the list administrators from the 'mailman notify' command."
@@ -1722,6 +1748,8 @@ msgid ""
 "Sent to the list administrators to notify them when a member's delivery is "
 "disabled due to excessive bounces."
 msgstr ""
+"Изпратено до собствениците на списъка, когато доставката за абонат се "
+"прекратява поради голям брой върнати писма."
 
 #: template_list.py:42
 msgid ""
@@ -1733,11 +1761,11 @@ msgstr ""
 
 #: template_list.py:44
 msgid "The footer for a digest message."
-msgstr ""
+msgstr "Текст вмъкнат най-долу в сборните писма."
 
 #: template_list.py:46
 msgid "The header for a digest message."
-msgstr ""
+msgstr "Текст-шапка на сборните писма."
 
 #: template_list.py:48
 msgid ""
@@ -1746,11 +1774,11 @@ msgstr ""
 
 #: template_list.py:50
 msgid "The footer for a regular (non-digest) message."
-msgstr ""
+msgstr "Текст вмъкнат най-долу в редовни (не сборни) писма."
 
 #: template_list.py:52
 msgid "The header for a regular (non-digest) message."
-msgstr ""
+msgstr "Текст-шапка вмъкнат в редовни (не сборни) писма."
 
 #: template_list.py:54
 msgid ""
@@ -1791,6 +1819,8 @@ msgid ""
 "Sent to a user when the maximum number of autoresponses has been reached for "
 "that day."
 msgstr ""
+"Изпратено до потребител, когато максималният брой автоматични отговори за "
+"деня е достигнат."
 
 #: template_list.py:66
 msgid ""
@@ -1834,7 +1864,7 @@ msgstr ""
 
 #: templates/403.html:5
 msgid "Forbidden"
-msgstr "Забранен"
+msgstr "Забранено"
 
 #: templates/403.html:6
 msgid "You do not have permissions to visit this page."
@@ -2594,7 +2624,7 @@ msgstr "Последно писмо от"
 
 #: templates/postorius/lists/summary.html:148
 msgid "Digest last sent at"
-msgstr ""
+msgstr "Сборно писмо последно изпратено на"
 
 #: templates/postorius/lists/summary.html:157
 msgid "Volume"
@@ -2742,7 +2772,7 @@ msgstr "Промени електронния адрес за абонамент
 
 #: templates/postorius/user/mailman_settings.html:7
 msgid "Subscription settings"
-msgstr ""
+msgstr "Настройки на абонамента"
 
 #: templates/postorius/user/manage.html:8
 msgid "Manage user"
@@ -2923,7 +2953,7 @@ msgstr "Появи се грешка: %s"
 #: views/generic.py:118 views/generic.py:129
 #, python-format
 msgid "Invalid data: %s"
-msgstr ""
+msgstr "Невалидни данни: %s"
 
 #: views/generic.py:124
 msgid "The email {} has been un-banned"
@@ -3158,7 +3188,7 @@ msgstr "Автоматични отговори"
 
 #: views/list.py:1110
 msgid "Alter Messages"
-msgstr "Промени съобщения"
+msgstr "Промени съобщенията"
 
 #: views/list.py:1111
 msgid "DMARC Mitigations"
@@ -3166,7 +3196,7 @@ msgstr ""
 
 #: views/list.py:1112
 msgid "Digest"
-msgstr ""
+msgstr "Сборно писмо"
 
 #: views/list.py:1113
 msgid "Message Acceptance"
