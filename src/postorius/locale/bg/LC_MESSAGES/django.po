@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-17 21:46-0700\n"
-"PO-Revision-Date: 2022-03-31 20:44+0000\n"
+"PO-Revision-Date: 2022-04-03 17:15+0000\n"
 "Last-Translator: Дилян Палаузов <dpa-weblate@aegee.org>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/bg/>\n"
@@ -120,7 +120,7 @@ msgstr "Отхвърли (с известие)"
 
 #: forms/fields.py:42
 msgid "Discard (no notification)"
-msgstr "Изтрия (без известие)"
+msgstr "Изтрий (без известие)"
 
 #: forms/fields.py:43
 msgid "Accept immediately (bypass other rules)"
@@ -256,7 +256,7 @@ msgstr "Изберете тип пощенски списък."
 
 #: forms/list_forms.py:80
 msgid "Advertise this list in list index"
-msgstr "Рекламирай този списък в списъка със списъците"
+msgstr "Рекламирай този списък в каталога на пощенските списъци"
 
 #: forms/list_forms.py:81
 msgid "Hide this list in list index"
@@ -395,7 +395,7 @@ msgstr "Администратори на списъка"
 
 #: forms/list_forms.py:242
 msgid "Site Admin"
-msgstr "Администратор на страницата"
+msgstr "Администратор на сървъра"
 
 #: forms/list_forms.py:246 forms/list_forms.py:272 forms/list_forms.py:281
 #: forms/list_forms.py:290 forms/list_forms.py:402 forms/list_forms.py:410
@@ -435,7 +435,7 @@ msgstr ""
 
 #: forms/list_forms.py:255
 msgid "Bounce score threshold"
-msgstr ""
+msgstr "Горна граница за върнати писма"
 
 #: forms/list_forms.py:258
 msgid ""
@@ -443,6 +443,8 @@ msgid ""
 "automatically disabled. When the subscription is  re-enabled, their bounce "
 "score will be reset to zero."
 msgstr ""
+"Това е броят върнати писма, над който абонаментът автоматично ще се изключи. "
+"Когато абонаментът се поднови, броят върнати писма ще се нулира."
 
 #: forms/list_forms.py:263
 msgid "Bounce info stale after"
@@ -553,7 +555,7 @@ msgstr "Включен архиватор"
 
 #: forms/list_forms.py:357
 msgid "Archive Rendering mode"
-msgstr ""
+msgstr "Режим на архивиране"
 
 #: forms/list_forms.py:358
 msgid ""
@@ -1447,7 +1449,7 @@ msgid ""
 "If checked, the other checkboxes are ignored and the users will be sent an "
 "invitation to join the list and will be subscribed upon acceptance thereof."
 msgstr ""
-"Ако е избрано, останалите кутийки се пренебрегват, потребителите ще получат "
+"Ако е избрано, останалите кутийки се пренебрегват. Потребителите ще получат "
 "покана за абониране и ще бъдат абонирани, щом я приемат."
 
 #: forms/list_forms.py:1104
@@ -2245,7 +2247,7 @@ msgstr "Потвърди изтриването на роля"
 #: templates/postorius/lists/confirm_remove_role.html:15
 #, python-format
 msgid "Remove %(address)s as %(role_translated)s?"
-msgstr "Изтрия %(address)s като %(role_translated)s?"
+msgstr "Изтрий %(address)s като %(role_translated)s?"
 
 #: templates/postorius/lists/confirm_remove_role.html:19
 #: templates/postorius/lists/confirm_remove_role.html:20
@@ -2653,7 +2655,7 @@ msgstr "Очакващи одобрение"
 
 #: templates/postorius/menu/list_nav.html:22
 msgid "Pending Confirmation"
-msgstr ""
+msgstr "Очакващи потвърждение"
 
 #: templates/postorius/menu/list_nav.html:25
 msgid "Unsubscription Requests"
@@ -3073,6 +3075,8 @@ msgid ""
 " Subscription may be pending address verification, confirmation or approval "
 "as appropriate."
 msgstr ""
+" Абонаментът може да чака за потвърждение на електронния адрес, одобрение от "
+"потребителя или модератора."
 
 #: views/list.py:629 views/list.py:680
 #, python-format
