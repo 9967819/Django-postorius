@@ -19,6 +19,7 @@
 
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
+from django.utils.translation import gettext_lazy
 
 from django_mailman3.lib.mailman import get_mailman_client
 
@@ -27,9 +28,9 @@ from postorius.views.generic import bans_view
 
 
 SYSTEM_INFO_KEYS = (
-    ('mailman_version', 'Mailman Core Version'),
-    ('api_version', 'Mailman Core API Version'),
-    ('python_version', 'Mailman Core Python Version'),
+    ('mailman_version', gettext_lazy('Mailman Core Version')),
+    ('api_version', gettext_lazy('Mailman Core API Version')),
+    ('python_version', gettext_lazy('Mailman Core Python Version')),
 )
 
 
@@ -43,10 +44,15 @@ def system_information(request):
     for key, name in SYSTEM_INFO_KEYS:
         configs.append((name, all_configs.get(key)))
 
+    queues = {
+        queue_name: len(queue.files)
+        for queue_name, queue in client.queues.items()
+        }
+
     return render(
         request,
         'postorius/system_information.html',
-        {'configs': configs},
+        {'configs': configs, 'queues': queues},
     )
 
 

@@ -46,6 +46,9 @@ UI
 * Change the way role is selector in the List index page to allow use of the
   filtering without javascript enabled dropdowns. It also enhances usability by
   enabling the roles that are currently active by default. (See #544)
+* Show the number of files in each Mailman queue under 'System Information'
+  tab for Admins. (Fixes #480)
+
 
 .. _NEWS-1.3.6:
 

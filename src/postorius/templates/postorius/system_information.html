@@ -19,4 +19,14 @@
         </tr>
         {% endfor %}
     </table>
+
+    <h2>{% trans 'Queues' %}</h2>
+    <table class="table table-bordered table-striped">
+        {% for queue, count in queues.items %}
+        <tr>
+            <td>{{ queue }}</td>
+            <td>{{ count }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 {% endblock content %}

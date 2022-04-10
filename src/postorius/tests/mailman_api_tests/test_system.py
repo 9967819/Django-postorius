@@ -45,3 +45,21 @@ class TestSystemInformationPage(ViewTestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'Mailman Core API Version', response.content)
         self.assertIn(b'Mailman Core Version', response.content)
+
+    def test_list_queue_info(self):
+        # Test the values inthe queue.
+        self.client.force_login(self.superuser)
+        response = self.client.get(reverse('system_information'))
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('queues', response.context)
+        self.mm_client.create_domain(
+            'example.com').create_list('somelist')
+        badq = self.mm_client.queues.get('bad')
+        badq.inject(
+            'somelist.example.com',
+            'From: abhilash@example.com\nTo:somelist@example.com\n\n Hello')
+        response = self.client.get(reverse('system_information'))
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('queues', response.context)
+        queues = response.context.get('queues')
+        self.assertEqual(queues['bad'], 1)
