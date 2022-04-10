@@ -52,14 +52,15 @@ table.header-matches td .errorlist {
 }
 
 .page-header{
-        margin-bottom: 20px;
+	margin-bottom: 20px;
     border-bottom: 1px solid #eee;
     padding-bottom: 9px;
+    font-size: 175%;
 }
 
 .page-header h1 {
-        margin-top: 0px;
-        padding-top: 0px;
+	margin-top: 0px;
+	padding-top: 0px;
 }
 
 /* Improve contrast per accessibility guidelines */

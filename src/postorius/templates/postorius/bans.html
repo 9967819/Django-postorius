@@ -6,9 +6,9 @@
 {% endblock %}
 
 {% block content %}
-<div class="page-header">
-    <h1>{% trans "Global Bans" %}</h1>
-</div>
+<header class="page-header">
+    {% trans "Global Bans" %}
+</header>
 
 {% url 'global_bans' as formurl %}
 {% include 'postorius/fragments/bans.html' with formurl=formurl %}
