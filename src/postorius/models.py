@@ -28,6 +28,7 @@ from django.db.models.signals import post_delete, post_save
 from django.dispatch import receiver
 from django.http import Http404
 from django.urls import reverse
+from django.utils.text import format_lazy
 from django.utils.translation import gettext_lazy as _
 
 from mailmanclient import MailmanConnectionError
@@ -244,7 +245,7 @@ class EmailTemplate(models.Model):
     # template file's name (key) prepended in square brackets to the
     # template's purpose (value).
     _templates_list_choices = [
-        (t[0], "[{key}] - {value}".format(key=t[0], value=t[1]))
+        (t[0], format_lazy("[{key}] - {value}", key=t[0], value=t[1]))
         for t in TEMPLATES_LIST
     ]
 
