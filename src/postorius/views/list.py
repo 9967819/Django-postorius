@@ -34,6 +34,7 @@ from django.shortcuts import redirect, render
 from django.urls import reverse
 from django.utils.decorators import method_decorator
 from django.utils.translation import gettext as _
+from django.utils.translation import gettext_lazy
 from django.views.decorators.http import require_http_methods
 
 from allauth.account.models import EmailAddress
@@ -1105,15 +1106,15 @@ def handle_subscription_request(request, list_id, request_id):
 
 
 SETTINGS_SECTION_NAMES = (
-    ('list_identity', _('List Identity')),
-    ('automatic_responses', _('Automatic Responses')),
-    ('alter_messages', _('Alter Messages')),
-    ('dmarc_mitigations', _('DMARC Mitigations')),
-    ('digest', _('Digest')),
-    ('message_acceptance', _('Message Acceptance')),
-    ('archiving', _('Archiving')),
-    ('subscription_policy', _('Member Policy')),
-    ('bounce_processing', _('Bounce Processing')),
+    ('list_identity', gettext_lazy('List Identity')),
+    ('automatic_responses', gettext_lazy('Automatic Responses')),
+    ('alter_messages', gettext_lazy('Alter Messages')),
+    ('dmarc_mitigations', gettext_lazy('DMARC Mitigations')),
+    ('digest', gettext_lazy('Digest')),
+    ('message_acceptance', gettext_lazy('Message Acceptance')),
+    ('archiving', gettext_lazy('Archiving')),
+    ('subscription_policy', gettext_lazy('Member Policy')),
+    ('bounce_processing', gettext_lazy('Bounce Processing')),
 )
 
 SETTINGS_FORMS = {
