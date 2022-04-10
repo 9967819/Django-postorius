@@ -58,25 +58,35 @@ dash:
 
     # List all currently configured envs:
     $ tox -l
-    py35-django111
-    py35-django20
-    py35-djangolatest
-    py36-django111
-    py36-django20
-    py36-djangolatest
-    py37-django111
-    py37-django20
-    py37-djangolatest
-    pep8
+    py36-django22
+    py36-django31
+    py36-django32
+    py36-django-latest
+    py37-django22
+    py37-django31
+    py37-django32
+    py37-django-latest
+    py38-django22
+    py38-django31
+    py38-django32
+    py38-django-latest
+    py39-django22
+    py39-django31
+    py39-django32
+    py39-django-latest
+    py310-django22
+    py310-django31
+    py310-django32
+    py310-django-latest
 
-    # Test Django 2.1 on Python3.7 only:
-    $ tox -e py37-django21
+    # Test Django 3.2 on Python3.7 only:
+    $ tox -e py37-django32
 
-    # Run only tests in ``test_address_activation``:
-    $ tox -- postorius.tests.test_address_activation
+    # Run only tests in ``test_address_activation.py``:
+    $ tox -e py37-django32-- src/postoriustests/test_address_activation.py
 
     # You get the idea...
-    $ tox -e py37-django21 -- postorius.tests.test_address_activation
+    $ tox -e py37-django32 -- postorius.tests.test_address_activation
 
 
 All test modules reside in the ``postorius/src/postorius/tests``
