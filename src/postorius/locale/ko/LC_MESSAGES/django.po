@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-17 21:46-0700\n"
+"POT-Creation-Date: 2022-05-18 17:38+0000\n"
 "PO-Revision-Date: 2021-05-19 11:33+0000\n"
 "Last-Translator: Lens0021 <lorentz0021@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -336,7 +336,7 @@ msgstr "올바른 이메일 주소를 입력하십시오."
 msgid "Your name (optional)"
 msgstr "이름(선택 사항)"
 
-#: forms/list_forms.py:171 forms/list_forms.py:1211 views/list.py:457
+#: forms/list_forms.py:171 forms/list_forms.py:1211 views/list.py:458
 msgid "Primary Address ({})"
 msgstr "최우선 주소 ({})"
 
@@ -1794,7 +1794,7 @@ msgstr "이 목록이 바운스 처리 절차를 자동으로 따를 지 결정�
 msgid "Invalid: \"{0}\" should be either email or UUID"
 msgstr ""
 
-#: models.py:42
+#: models.py:43
 msgid ""
 "Note: Do not add any secret content in templates as they are publicly "
 "accessible.\n"
@@ -1828,35 +1828,35 @@ msgstr ""
 "$language: 목록의 선호하는 언어에 대한 두 개의 문자 언어 코드(예: fr, en, "
 "en) \n"
 
-#: models.py:73
+#: models.py:74
 #, fuzzy
 #| msgid "Owners"
 msgid "owner"
 msgstr "오너"
 
-#: models.py:74
+#: models.py:75
 #, fuzzy
 #| msgid "Members"
 msgid "member"
 msgstr "회원들"
 
-#: models.py:75
+#: models.py:76
 #, fuzzy
 #| msgid "Non-Members"
 msgid "nonmember"
 msgstr "비회원들"
 
-#: models.py:76
+#: models.py:77
 #, fuzzy
 #| msgid "Moderators"
 msgid "moderator"
 msgstr "의장"
 
-#: models.py:253
+#: models.py:254
 msgid "Choose the template you want to customize."
 msgstr "사용자 지정할 템플릿을 선택하십시오."
 
-#: models.py:260
+#: models.py:261
 msgid ""
 "Language for the template, this should be the list's preferred language."
 msgstr "템플릿에 대한 언어, 이 언어가 목록의 선호 언어여야 한다."
@@ -2910,6 +2910,10 @@ msgstr "시스템 구성"
 msgid "Mailman System"
 msgstr "메일맨 설정들"
 
+#: templates/postorius/system_information.html:23
+msgid "Queues"
+msgstr ""
+
 #: templates/postorius/user/address_preferences.html:8
 #: templates/postorius/user/subscription_preferences.html:7
 msgid "Subscription preferences"
@@ -3127,7 +3131,7 @@ msgstr "새 도메인 등록"
 msgid "Domain %s updated"
 msgstr "%s 도메인 업데이트"
 
-#: views/domain.py:117 views/list.py:860
+#: views/domain.py:117 views/list.py:861
 msgid "Please check the errors below"
 msgstr "아래의 오류를 확인하십시오"
 
@@ -3157,7 +3161,7 @@ msgstr "{}이(가) {}의 소유자가 아님"
 msgid "The email {} has been banned."
 msgstr "이메일 {}이(가) 금지되었다."
 
-#: views/generic.py:116 views/generic.py:127 views/list.py:1321
+#: views/generic.py:116 views/generic.py:127 views/list.py:1322
 #, python-format
 msgid "An error occurred: %s"
 msgstr "오류 발생: %s"
@@ -3171,95 +3175,95 @@ msgstr "잘못된 데이터: %s"
 msgid "The email {} has been un-banned"
 msgstr "이메일 {}이(가) 금지되지 않음"
 
-#: views/list.py:118
+#: views/list.py:119
 msgid "List {}s"
 msgstr "{} 목록"
 
-#: views/list.py:132
+#: views/list.py:133
 msgid "Add {}"
 msgstr "{} 추가"
 
-#: views/list.py:135
+#: views/list.py:136
 msgid "No {}s were found matching the search."
 msgstr "검색과 일치하는 {}이(가) 발견되지 않았다."
 
-#: views/list.py:137
+#: views/list.py:138
 msgid "List has no {}s"
 msgstr "목록에 {}개 없음"
 
-#: views/list.py:150
+#: views/list.py:151
 msgid "The selected members have been unsubscribed"
 msgstr "선택한 구성원은 구독이 취소됨"
 
-#: views/list.py:168
+#: views/list.py:169
 #, python-brace-format
 msgid "{email} has been added with the role {role}"
 msgstr "{email}이(가) {role} 역할과 함께 추가됨"
 
-#: views/list.py:215
+#: views/list.py:216
 msgid "Member does not exist"
 msgstr "구성원이 존재하지 않음"
 
-#: views/list.py:234
+#: views/list.py:235
 msgid "The member's preferences have been updated."
 msgstr "멤버의 기본 설정이 업데이트되었다."
 
-#: views/list.py:243
+#: views/list.py:244
 msgid "No change to the member's moderation."
 msgstr "멤버의 절제에는 변화가 없다."
 
-#: views/list.py:255
+#: views/list.py:256
 msgid "The member's moderation settings have been updated."
 msgstr "이 멤버들의 적당한 설정을 업데이트하고 있다."
 
-#: views/list.py:436
+#: views/list.py:437
 #, fuzzy
 #| msgid "You are subscribed to %s."
 msgid "You are not subscribed to {}."
 msgstr "%s에 가입하셨습니다."
 
-#: views/list.py:449
+#: views/list.py:450
 msgid "You are already subscribed"
 msgstr "이미 가입하셨습니다"
 
-#: views/list.py:460
+#: views/list.py:461
 #, fuzzy
 #| msgid "Subscription changed to %s"
 msgid "Subscription changed to {}"
 msgstr "%s(으)로 변경된 서브스크립션으로 변경됨"
 
-#: views/list.py:464
+#: views/list.py:465
 #, fuzzy
 #| msgid "Something went wrong. Please try again."
 msgid "Something went wrong. Please try again. {} {}"
 msgstr "뭔가 잘못됐다. 다시 시도해보십시오."
 
-#: views/list.py:505
+#: views/list.py:506
 msgid ""
 "Your subscription request has been submitted and is waiting for moderator "
 "approval."
 msgstr "구독 요청이 제출되었으며 진행자의 승인을 기다리고 있다."
 
-#: views/list.py:510
+#: views/list.py:511
 #, python-format
 msgid "You are subscribed to %s."
 msgstr "%s에 가입하셨습니다."
 
-#: views/list.py:514 views/list.py:544
+#: views/list.py:515 views/list.py:545
 msgid "Something went wrong. Please try again."
 msgstr "뭔가 잘못됐다. 다시 시도해보십시오."
 
-#: views/list.py:540
+#: views/list.py:541
 msgid "Please check your inbox for further instructions"
 msgstr "제발 추가 지시를 받은 편지함을 확인한다"
 
-#: views/list.py:564
+#: views/list.py:565
 #, fuzzy
 #| msgid "You are subscribed to %s."
 msgid "You can only unsubscribe yourself."
 msgstr "%s에 가입하셨습니다."
 
-#: views/list.py:569
+#: views/list.py:570
 #, fuzzy
 #| msgid ""
 #| "Your subscription request has been submitted and is waiting for moderator "
@@ -3268,7 +3272,7 @@ msgid ""
 "You have a pending unsubscription request waiting for moderator approval."
 msgstr "구독 요청이 제출되었으며 진행자의 승인을 기다리고 있다."
 
-#: views/list.py:576
+#: views/list.py:577
 #, fuzzy
 #| msgid ""
 #| "Your subscription request has been submitted and is waiting for moderator "
@@ -3278,231 +3282,231 @@ msgid ""
 "approval."
 msgstr "구독 요청이 제출되었으며 진행자의 승인을 기다리고 있다."
 
-#: views/list.py:580
+#: views/list.py:581
 #, python-format
 msgid "%s has been unsubscribed from this list."
 msgstr "%s이(가) 이 목록에서 구독이 취소되었다."
 
-#: views/list.py:613
+#: views/list.py:614
 #, fuzzy, python-format
 #| msgid "The address %(address)s has been subscribed to %(list)s."
 msgid "The address %(address)s has been invited to %(list)s."
 msgstr "%(address)s 주소가 %(list)s에 가입되어 있음."
 
-#: views/list.py:616
+#: views/list.py:617
 #, python-format
 msgid "The address %(address)s has been subscribed to %(list)s."
 msgstr "%(address)s 주소가 %(list)s에 가입되어 있음."
 
-#: views/list.py:619
+#: views/list.py:620
 msgid ""
 " Subscription may be pending address verification, confirmation or approval "
 "as appropriate."
 msgstr ""
 
-#: views/list.py:629 views/list.py:680
+#: views/list.py:630 views/list.py:681
 #, python-format
 msgid "The email address %s is not valid."
 msgstr "%s 전자 메일 주소가 올바르지 않음."
 
-#: views/list.py:654
+#: views/list.py:655
 msgid "Please fill out the form correctly."
 msgstr "양식을 올바르게 작성하십시오."
 
-#: views/list.py:670
+#: views/list.py:671
 #, fuzzy, python-brace-format
 #| msgid "The address %(address)s has been unsubscribed from %(list)s."
 msgid "These addresses {address} have been unsubscribed from {list}."
 msgstr "%(address)s 주소가 %(list)s에서 구독 취소됨."
 
-#: views/list.py:701
+#: views/list.py:702
 msgid "The selected messages were accepted"
 msgstr "선택한 메시지가 수락됨"
 
-#: views/list.py:705
+#: views/list.py:706
 msgid "The selected messages were rejected"
 msgstr "선택한 메시지를 거절했습니다"
 
-#: views/list.py:709
+#: views/list.py:710
 msgid "The selected messages were discarded"
 msgstr "선택한 메시지가 삭제됨"
 
-#: views/list.py:711
+#: views/list.py:712
 msgid "Message could not be found"
 msgstr "메시지를 찾을 수 없음"
 
-#: views/list.py:740
+#: views/list.py:741
 msgid "The message was accepted"
 msgstr "그 메시지는 받아들여졌다"
 
-#: views/list.py:743
+#: views/list.py:744
 msgid "The message was rejected"
 msgstr "그 메시지는 거절당했다"
 
-#: views/list.py:746
+#: views/list.py:747
 msgid "The message was discarded"
 msgstr "메시지는 폐기되었다"
 
-#: views/list.py:751
+#: views/list.py:752
 msgid "Held message was not found."
 msgstr "고정된 메시지를 찾을 수 없음."
 
-#: views/list.py:764
+#: views/list.py:765
 msgid "Moderation action for {} set to {}"
 msgstr "{}에 대한 수정 작업이 {}(으)로 설정됨"
 
-#: views/list.py:769
+#: views/list.py:770
 #, fuzzy
 #| msgid "Failed to set moderation action: {}"
 msgid "Failed to set moderation action for {}"
 msgstr "절제 작업을 설정하지 못함: {}"
 
-#: views/list.py:821
+#: views/list.py:822
 msgid "Choose a Domain"
 msgstr "도메인 선택"
 
-#: views/list.py:842
+#: views/list.py:843
 msgid "List created"
 msgstr "생성된 목록"
 
-#: views/list.py:854
+#: views/list.py:855
 msgid "Mailing List already exists."
 msgstr "메일링 리스트가 이미 존재한다."
 
-#: views/list.py:1015
+#: views/list.py:1016
 msgid "Subscriptions pending user confirmation"
 msgstr "사용자 확인 보류 중인 구독"
 
-#: views/list.py:1028
+#: views/list.py:1029
 msgid "Subscriptions pending approval"
 msgstr "승인 보류 중인 구독"
 
-#: views/list.py:1041
+#: views/list.py:1042
 #, fuzzy
 #| msgid "Subscriptions pending approval"
 msgid "Un-subscriptions pending approval"
 msgstr "승인 보류 중인 구독"
 
-#: views/list.py:1077
+#: views/list.py:1078
 msgid "The request has been accepted."
 msgstr "요청이 받아들여졌다."
 
-#: views/list.py:1078
+#: views/list.py:1079
 msgid "The request has been rejected."
 msgstr "그 요청은 거절되었다."
 
-#: views/list.py:1079
+#: views/list.py:1080
 msgid "The request has been discarded."
 msgstr "그 요청은 이미 폐기되었다."
 
-#: views/list.py:1080
+#: views/list.py:1081
 msgid "The request has been defered."
 msgstr "요청이 되돌아 왔다."
 
-#: views/list.py:1099
+#: views/list.py:1100
 #, python-format
 msgid "The request was already moderated: %s"
 msgstr "요청이 이미 진행 중: %s"
 
-#: views/list.py:1102
+#: views/list.py:1103
 #, python-format
 msgid "The request could not be moderated: %s"
 msgstr "요청을 조정할 수 없음: %s"
 
-#: views/list.py:1108
+#: views/list.py:1109
 msgid "List Identity"
 msgstr "목록 식별"
 
-#: views/list.py:1109
+#: views/list.py:1110
 msgid "Automatic Responses"
 msgstr "자동 응답"
 
-#: views/list.py:1110
+#: views/list.py:1111
 msgid "Alter Messages"
 msgstr "메시지 변경"
 
-#: views/list.py:1111
+#: views/list.py:1112
 msgid "DMARC Mitigations"
 msgstr "DMARC 완화"
 
-#: views/list.py:1112
+#: views/list.py:1113
 msgid "Digest"
 msgstr "소화하다"
 
-#: views/list.py:1113
+#: views/list.py:1114
 msgid "Message Acceptance"
 msgstr "메시지 수락"
 
-#: views/list.py:1114
+#: views/list.py:1115
 msgid "Archiving"
 msgstr "보관"
 
-#: views/list.py:1115
+#: views/list.py:1116
 #, fuzzy
 #| msgid "Member options"
 msgid "Member Policy"
 msgstr "구성원 옵션"
 
-#: views/list.py:1116
+#: views/list.py:1117
 #, fuzzy
 #| msgid "Default processing"
 msgid "Bounce Processing"
 msgstr "기본 처리"
 
-#: views/list.py:1179
+#: views/list.py:1180
 msgid "The settings have been updated."
 msgstr "설정이 업데이트되었다."
 
-#: views/list.py:1184
+#: views/list.py:1185
 msgid "An error occurred: "
 msgstr "오류가 발생함: "
 
-#: views/list.py:1208
+#: views/list.py:1209
 #, python-format
 msgid "The user %(email)s is not in the %(role)s group"
 msgstr "사용자 %(email)s이(가) %(role)s그룹에 없음"
 
-#: views/list.py:1214
+#: views/list.py:1215
 msgid "Removing the last owner is impossible"
 msgstr "그 마지막 소유자를 제거하면 불가능하다"
 
-#: views/list.py:1228
+#: views/list.py:1229
 #, python-format
 msgid "The user could not be removed: %(msg)s"
 msgstr "사용자를 제거할 수 없음: %(msg)s"
 
-#: views/list.py:1231
+#: views/list.py:1232
 #, python-format
 msgid "The user %(address)s has been removed from the %(role)s group."
 msgstr "사용자가 %(address)s 그룹%(role)s으로부터 제거됨."
 
-#: views/list.py:1248
+#: views/list.py:1249
 msgid "No member is subscribed to the list currently."
 msgstr "현재 그 리스트에 가입한 회원이 없다."
 
-#: views/list.py:1258
+#: views/list.py:1259
 msgid "All members have been unsubscribed from the list."
 msgstr "모든 회원들이 그 명단에서 제외되었다."
 
-#: views/list.py:1323
+#: views/list.py:1324
 msgid "The header matches were successfully modified."
 msgstr "헤더 매치가 성공적으로 수정되었다."
 
-#: views/list.py:1330
+#: views/list.py:1331
 msgid "New header"
 msgstr "새 헤더"
 
-#: views/list.py:1331
+#: views/list.py:1332
 msgid "New pattern"
 msgstr "새 패턴"
 
-#: views/list.py:1358
+#: views/list.py:1359
 #, fuzzy
 #| msgid "Pending Confirmation"
 msgid "Invalid confirmation token"
 msgstr "확인 보류 중"
 
-#: views/list.py:1366 views/list.py:1378
+#: views/list.py:1367 views/list.py:1379
 msgid "Token expired or invalid."
 msgstr "토큰이 만료되었거나 올바르지 않습니다."
 
@@ -3513,6 +3517,20 @@ msgstr "메시지가 존재하지 않음"
 #: views/rest.py:97
 msgid "Attachment does not exist"
 msgstr "첨부 파일이 없음"
+
+#: views/system.py:31
+#, fuzzy
+#| msgid "Mailman logo"
+msgid "Mailman Core Version"
+msgstr "메일맨 로고"
+
+#: views/system.py:32
+msgid "Mailman Core API Version"
+msgstr ""
+
+#: views/system.py:33
+msgid "Mailman Core Python Version"
+msgstr ""
 
 #: views/user.py:92
 msgid "Your preferences have been updated."

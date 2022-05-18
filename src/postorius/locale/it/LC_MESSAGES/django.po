@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-17 21:46-0700\n"
+"POT-Creation-Date: 2022-05-18 17:38+0000\n"
 "PO-Revision-Date: 2021-09-24 14:39+0000\n"
 "Last-Translator: Leonardo Robol <leo@robol.it>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -345,7 +345,7 @@ msgstr "Inserisci un indirizzo e-mail valido."
 msgid "Your name (optional)"
 msgstr "Il tuo nome (opzionale)"
 
-#: forms/list_forms.py:171 forms/list_forms.py:1211 views/list.py:457
+#: forms/list_forms.py:171 forms/list_forms.py:1211 views/list.py:458
 msgid "Primary Address ({})"
 msgstr "Indirizzo principale ({})"
 
@@ -1825,7 +1825,7 @@ msgstr ""
 msgid "Invalid: \"{0}\" should be either email or UUID"
 msgstr "Invalido: \"{0}\" dovrebbe essere email o UUID"
 
-#: models.py:42
+#: models.py:43
 msgid ""
 "Note: Do not add any secret content in templates as they are publicly "
 "accessible.\n"
@@ -1861,35 +1861,35 @@ msgstr ""
 "$language: Il codice della lingua preferita per la lista, per esempio it, "
 "en, de\n"
 
-#: models.py:73
+#: models.py:74
 #, fuzzy
 #| msgid "Owners"
 msgid "owner"
 msgstr "Proprietari"
 
-#: models.py:74
+#: models.py:75
 #, fuzzy
 #| msgid "Members"
 msgid "member"
 msgstr "Membri"
 
-#: models.py:75
+#: models.py:76
 #, fuzzy
 #| msgid "Non-Members"
 msgid "nonmember"
 msgstr "Non-membri"
 
-#: models.py:76
+#: models.py:77
 #, fuzzy
 #| msgid "Moderators"
 msgid "moderator"
 msgstr "Moderatori"
 
-#: models.py:253
+#: models.py:254
 msgid "Choose the template you want to customize."
 msgstr "Seleziona il modello che vuoi personalizzare."
 
-#: models.py:260
+#: models.py:261
 msgid ""
 "Language for the template, this should be the list's preferred language."
 msgstr "Lingua per il modello, che deve essere fra le lingue preferite."
@@ -2963,6 +2963,10 @@ msgstr "Configurazione del sistema"
 msgid "Mailman System"
 msgstr "Mailman System"
 
+#: templates/postorius/system_information.html:23
+msgid "Queues"
+msgstr ""
+
 #: templates/postorius/user/address_preferences.html:8
 #: templates/postorius/user/subscription_preferences.html:7
 msgid "Subscription preferences"
@@ -3185,7 +3189,7 @@ msgstr "Nuovo dominio registrato"
 msgid "Domain %s updated"
 msgstr "Dominio %s aggiornato"
 
-#: views/domain.py:117 views/list.py:860
+#: views/domain.py:117 views/list.py:861
 msgid "Please check the errors below"
 msgstr "Controlla l'errore seguente"
 
@@ -3215,7 +3219,7 @@ msgstr "Rimosso {} come proprietario di {}"
 msgid "The email {} has been banned."
 msgstr "L'e-mail {} è stata preclusa."
 
-#: views/generic.py:116 views/generic.py:127 views/list.py:1321
+#: views/generic.py:116 views/generic.py:127 views/list.py:1322
 #, python-format
 msgid "An error occurred: %s"
 msgstr "C'è stato un errore: %s"
@@ -3229,64 +3233,64 @@ msgstr "Dati non validi: %s"
 msgid "The email {} has been un-banned"
 msgstr "L'e-mail {} è stata rimossa dalla preclusione"
 
-#: views/list.py:118
+#: views/list.py:119
 msgid "List {}s"
 msgstr "Lista {}s"
 
-#: views/list.py:132
+#: views/list.py:133
 msgid "Add {}"
 msgstr "Aggiungi {}"
 
-#: views/list.py:135
+#: views/list.py:136
 msgid "No {}s were found matching the search."
 msgstr "Nessun {}s trovato per la ricerca."
 
-#: views/list.py:137
+#: views/list.py:138
 msgid "List has no {}s"
 msgstr "La lista non ha {}s"
 
-#: views/list.py:150
+#: views/list.py:151
 msgid "The selected members have been unsubscribed"
 msgstr "I membri selezionati sono stati disiscritti"
 
-#: views/list.py:168
+#: views/list.py:169
 #, python-brace-format
 msgid "{email} has been added with the role {role}"
 msgstr "{email} è stato aggiunto con ruolo {role}"
 
-#: views/list.py:215
+#: views/list.py:216
 msgid "Member does not exist"
 msgstr "Il membro non esiste"
 
-#: views/list.py:234
+#: views/list.py:235
 msgid "The member's preferences have been updated."
 msgstr "Le preferenze del membro sono state aggiornate."
 
-#: views/list.py:243
+#: views/list.py:244
 msgid "No change to the member's moderation."
 msgstr "Nessun cambiamento alle moderazioni del membro."
 
-#: views/list.py:255
+#: views/list.py:256
 msgid "The member's moderation settings have been updated."
 msgstr "Le impostazioni di moderazione per i membri sono state aggiornate."
 
-#: views/list.py:436
+#: views/list.py:437
 msgid "You are not subscribed to {}."
 msgstr "Non sei iscritto a {}."
 
-#: views/list.py:449
+#: views/list.py:450
 msgid "You are already subscribed"
 msgstr "Sei già iscritto"
 
-#: views/list.py:460
+#: views/list.py:461
 msgid "Subscription changed to {}"
 msgstr "Iscrizione cambiata a {}"
 
-#: views/list.py:464
+#: views/list.py:465
 msgid "Something went wrong. Please try again. {} {}"
 msgstr "Qualcosa è andato storto. Per favore riprova. {} {}"
 
-#: views/list.py:505
+#: views/list.py:506
 msgid ""
 "Your subscription request has been submitted and is waiting for moderator "
 "approval."
@@ -3294,33 +3298,33 @@ msgstr ""
 "La tua richiesta di iscrizione è stata sottomessa e attende l'approvazione "
 "di un moderatore."
 
-#: views/list.py:510
+#: views/list.py:511
 #, python-format
 msgid "You are subscribed to %s."
 msgstr "Sei iscritto a %s."
 
-#: views/list.py:514 views/list.py:544
+#: views/list.py:515 views/list.py:545
 msgid "Something went wrong. Please try again."
 msgstr "Qualcosa è andato storto. Prova di nuovo."
 
-#: views/list.py:540
+#: views/list.py:541
 msgid "Please check your inbox for further instructions"
 msgstr "Controlla la tua posta in arrivo per ulteriori istruzioni"
 
-#: views/list.py:564
+#: views/list.py:565
 #, fuzzy
 #| msgid "You are subscribed to %s."
 msgid "You can only unsubscribe yourself."
 msgstr "Sei iscritto a %s."
 
-#: views/list.py:569
+#: views/list.py:570
 msgid ""
 "You have a pending unsubscription request waiting for moderator approval."
 msgstr ""
 "Hai una richiesta di disiscrizione in sospeso in attesa dell'approvazione "
 "del moderatore."
 
-#: views/list.py:576
+#: views/list.py:577
 msgid ""
 "Your unsubscription request has been submitted and is waiting for moderator "
 "approval."
@@ -3328,22 +3332,22 @@ msgstr ""
 "La tua richiesta di disiscrizione è stata inviata ed è in attesa "
 "dell'approvazione del moderatore."
 
-#: views/list.py:580
+#: views/list.py:581
 #, python-format
 msgid "%s has been unsubscribed from this list."
 msgstr "%s è stato disiscritto da questa lista."
 
-#: views/list.py:613
+#: views/list.py:614
 #, python-format
 msgid "The address %(address)s has been invited to %(list)s."
 msgstr "L'indirizzo %(address)s è stato inviato alla lista %(list)s."
 
-#: views/list.py:616
+#: views/list.py:617
 #, python-format
 msgid "The address %(address)s has been subscribed to %(list)s."
 msgstr "L'indirizzo %(address)s è stato iscritto alla lista %(list)s."
 
-#: views/list.py:619
+#: views/list.py:620
 msgid ""
 " Subscription may be pending address verification, confirmation or approval "
 "as appropriate."
@@ -3351,198 +3355,198 @@ msgstr ""
 " L'iscrizione potrebbe essere in attesa di verifica, conferma o approvazione "
 "dell'indirizzo, a seconda dei casi."
 
-#: views/list.py:629 views/list.py:680
+#: views/list.py:630 views/list.py:681
 #, python-format
 msgid "The email address %s is not valid."
 msgstr "L'indirizzo e-mail %s non è valido."
 
-#: views/list.py:654
+#: views/list.py:655
 msgid "Please fill out the form correctly."
 msgstr "Completa il formulario correttamente."
 
-#: views/list.py:670
+#: views/list.py:671
 #, python-brace-format
 msgid "These addresses {address} have been unsubscribed from {list}."
 msgstr "Questi indirizzi {address} sono stati disiscritti dalla {list}."
 
-#: views/list.py:701
+#: views/list.py:702
 msgid "The selected messages were accepted"
 msgstr "I messaggi selezionati son stati accettati"
 
-#: views/list.py:705
+#: views/list.py:706
 msgid "The selected messages were rejected"
 msgstr "I messaggi selezionati son stati rifiutati"
 
-#: views/list.py:709
+#: views/list.py:710
 msgid "The selected messages were discarded"
 msgstr "I messaggi selezionati son stati scartati"
 
-#: views/list.py:711
+#: views/list.py:712
 msgid "Message could not be found"
 msgstr "Il messaggio non può essere trovato"
 
-#: views/list.py:740
+#: views/list.py:741
 msgid "The message was accepted"
 msgstr "Il messaggio è stato accettato"
 
-#: views/list.py:743
+#: views/list.py:744
 msgid "The message was rejected"
 msgstr "Il messaggio è stato rifiutato"
 
-#: views/list.py:746
+#: views/list.py:747
 msgid "The message was discarded"
 msgstr "Il messaggio è stato scartato"
 
-#: views/list.py:751
+#: views/list.py:752
 msgid "Held message was not found."
 msgstr "Il messaggio trattenuto non è stato trovato."
 
-#: views/list.py:764
+#: views/list.py:765
 msgid "Moderation action for {} set to {}"
 msgstr "Azione di moderazione per {} impostata a {}"
 
-#: views/list.py:769
+#: views/list.py:770
 msgid "Failed to set moderation action for {}"
 msgstr "Impossibile impostare l'azione di moderazione per {}"
 
-#: views/list.py:821
+#: views/list.py:822
 msgid "Choose a Domain"
 msgstr "Seleziona un dominio"
 
-#: views/list.py:842
+#: views/list.py:843
 msgid "List created"
 msgstr "Lista creata"
 
-#: views/list.py:854
+#: views/list.py:855
 msgid "Mailing List already exists."
 msgstr "La lista esiste già."
 
-#: views/list.py:1015
+#: views/list.py:1016
 msgid "Subscriptions pending user confirmation"
 msgstr "Iscrizioni in attesa di conferma dell'utente"
 
-#: views/list.py:1028
+#: views/list.py:1029
 msgid "Subscriptions pending approval"
 msgstr "Iscrizioni che attendono approvazione"
 
-#: views/list.py:1041
+#: views/list.py:1042
 msgid "Un-subscriptions pending approval"
 msgstr "Disiscrizioni che attendono approvazione"
 
-#: views/list.py:1077
+#: views/list.py:1078
 msgid "The request has been accepted."
 msgstr "La richiesta è stata accettata."
 
-#: views/list.py:1078
+#: views/list.py:1079
 msgid "The request has been rejected."
 msgstr "La richiesta è stata negata."
 
-#: views/list.py:1079
+#: views/list.py:1080
 msgid "The request has been discarded."
 msgstr "La richiesta è stata scartata."
 
-#: views/list.py:1080
+#: views/list.py:1081
 msgid "The request has been defered."
 msgstr "La richiesta è stata posticipata."
 
-#: views/list.py:1099
+#: views/list.py:1100
 #, python-format
 msgid "The request was already moderated: %s"
 msgstr "La richiesta è stata già moderata: %s"
 
-#: views/list.py:1102
+#: views/list.py:1103
 #, python-format
 msgid "The request could not be moderated: %s"
 msgstr "La richiesta non può essere moderata: %s"
 
-#: views/list.py:1108
+#: views/list.py:1109
 msgid "List Identity"
 msgstr "Identità della lista"
 
-#: views/list.py:1109
+#: views/list.py:1110
 msgid "Automatic Responses"
 msgstr "Risposte automatiche"
 
-#: views/list.py:1110
+#: views/list.py:1111
 msgid "Alter Messages"
 msgstr "Modifica Messaggi"
 
-#: views/list.py:1111
+#: views/list.py:1112
 msgid "DMARC Mitigations"
 msgstr "Mitigazioni DMARC"
 
-#: views/list.py:1112
+#: views/list.py:1113
 msgid "Digest"
 msgstr "Raggruppamento"
 
-#: views/list.py:1113
+#: views/list.py:1114
 msgid "Message Acceptance"
 msgstr "Accettazioni messaggio"
 
-#: views/list.py:1114
+#: views/list.py:1115
 msgid "Archiving"
 msgstr "Archiviazione"
 
-#: views/list.py:1115
+#: views/list.py:1116
 msgid "Member Policy"
 msgstr "Politiche per i membri"
 
-#: views/list.py:1116
+#: views/list.py:1117
 msgid "Bounce Processing"
 msgstr "Elaborazione del Rimbalzo"
 
-#: views/list.py:1179
+#: views/list.py:1180
 msgid "The settings have been updated."
 msgstr "Le impostazioni sono state aggiornate."
 
-#: views/list.py:1184
+#: views/list.py:1185
 msgid "An error occurred: "
 msgstr "C'è stato un errore: "
 
-#: views/list.py:1208
+#: views/list.py:1209
 #, python-format
 msgid "The user %(email)s is not in the %(role)s group"
 msgstr "L'e-mail %(email)s dell'utente non fa parte del gruppo %(role)s"
 
-#: views/list.py:1214
+#: views/list.py:1215
 msgid "Removing the last owner is impossible"
 msgstr "Non è possibile rimuove l'ultimo possessore"
 
-#: views/list.py:1228
+#: views/list.py:1229
 #, python-format
 msgid "The user could not be removed: %(msg)s"
 msgstr "L'utente non può essere rimosso: %(msg)s"
 
-#: views/list.py:1231
+#: views/list.py:1232
 #, python-format
 msgid "The user %(address)s has been removed from the %(role)s group."
 msgstr "L'e-mail %(address)s dell'utente è stata rimosso dal gruppo %(role)s."
 
-#: views/list.py:1248
+#: views/list.py:1249
 msgid "No member is subscribed to the list currently."
 msgstr "La lista non ha membri."
 
-#: views/list.py:1258
+#: views/list.py:1259
 msgid "All members have been unsubscribed from the list."
 msgstr "Tutti i membri sono stati disiscritti dalla lista."
 
-#: views/list.py:1323
+#: views/list.py:1324
 msgid "The header matches were successfully modified."
 msgstr "Le intestazioni corrispondenti sono state modificate."
 
-#: views/list.py:1330
+#: views/list.py:1331
 msgid "New header"
 msgstr "Nuova intestazione"
 
-#: views/list.py:1331
+#: views/list.py:1332
 msgid "New pattern"
 msgstr "Nuovo modello"
 
-#: views/list.py:1358
+#: views/list.py:1359
 msgid "Invalid confirmation token"
 msgstr "Token di conferma non valido"
 
-#: views/list.py:1366 views/list.py:1378
+#: views/list.py:1367 views/list.py:1379
 msgid "Token expired or invalid."
 msgstr "Token scaduto o non valido."
 
@@ -3553,6 +3557,20 @@ msgstr "Il messaggio non esiste"
 #: views/rest.py:97
 msgid "Attachment does not exist"
 msgstr "L'allegato non esiste"
+
+#: views/system.py:31
+#, fuzzy
+#| msgid "Mailman logo"
+msgid "Mailman Core Version"
+msgstr "Logo di Mailman"
+
+#: views/system.py:32
+msgid "Mailman Core API Version"
+msgstr ""
+
+#: views/system.py:33
+msgid "Mailman Core Python Version"
+msgstr ""
 
 #: views/user.py:92
 msgid "Your preferences have been updated."
