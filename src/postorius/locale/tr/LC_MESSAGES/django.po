@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-17 21:46-0700\n"
+"POT-Creation-Date: 2022-05-18 17:38+0000\n"
 "PO-Revision-Date: 2022-03-19 09:49+0000\n"
 "Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -333,7 +333,7 @@ msgstr "Lütfen geçerli bir e-posta adresi girin."
 msgid "Your name (optional)"
 msgstr "Adınız (isteğe bağlı)"
 
-#: forms/list_forms.py:171 forms/list_forms.py:1211 views/list.py:457
+#: forms/list_forms.py:171 forms/list_forms.py:1211 views/list.py:458
 msgid "Primary Address ({})"
 msgstr "Birincil Adres ({})"
 
@@ -649,8 +649,8 @@ msgid ""
 "it to the administrative requests queue, notifying the administrator of the "
 "new request, in the process."
 msgstr ""
-"Yönetici işleri testleri, gönderilerin gerçekten bir yönetici işi isteği ("
-"abone olma, abonelikten çıkma, vb.) anlamına gelip gelmediğini görmek için "
+"Yönetici işleri testleri, gönderilerin gerçekten bir yönetici işi isteği "
+"(abone olma, abonelikten çıkma, vb.) anlamına gelip gelmediğini görmek için "
 "denetler ve bunu yönetici istekleri kuyruğuna ekler, yeni isteği yöneticiye "
 "bildirir."
 
@@ -1767,7 +1767,7 @@ msgstr "Bu e-posta adresinin doğrulanıp doğrulanmadığını belirtir"
 msgid "Invalid: \"{0}\" should be either email or UUID"
 msgstr "Geçersiz: \"{0}\" e-posta adresi veya UUID olmalıdır"
 
-#: models.py:42
+#: models.py:43
 msgid ""
 "Note: Do not add any secret content in templates as they are publicly "
 "accessible.\n"
@@ -1801,27 +1801,27 @@ msgstr ""
 "$language: Listenin tercih edilen dili için iki harfli dil kodu, örn. fr, "
 "en, de \n"
 
-#: models.py:73
+#: models.py:74
 msgid "owner"
 msgstr "sahip"
 
-#: models.py:74
+#: models.py:75
 msgid "member"
 msgstr "üye"
 
-#: models.py:75
+#: models.py:76
 msgid "nonmember"
 msgstr "üye olmayan"
 
-#: models.py:76
+#: models.py:77
 msgid "moderator"
 msgstr "moderatör"
 
-#: models.py:253
+#: models.py:254
 msgid "Choose the template you want to customize."
 msgstr "Özelleştirmek istediğiniz şablonu seçin."
 
-#: models.py:260
+#: models.py:261
 msgid ""
 "Language for the template, this should be the list's preferred language."
 msgstr "Şablonun dili, bu listenin tercih edilen dili olmalıdır."
@@ -2846,6 +2846,10 @@ msgstr "Sistem Yapılandırması"
 msgid "Mailman System"
 msgstr "Mailman Sistemi"
 
+#: templates/postorius/system_information.html:23
+msgid "Queues"
+msgstr ""
+
 #: templates/postorius/user/address_preferences.html:8
 #: templates/postorius/user/subscription_preferences.html:7
 msgid "Subscription preferences"
@@ -3046,7 +3050,7 @@ msgstr "Yeni etki alanı kaydedildi"
 msgid "Domain %s updated"
 msgstr "%s etki alanı güncellendi"
 
-#: views/domain.py:117 views/list.py:860
+#: views/domain.py:117 views/list.py:861
 msgid "Please check the errors below"
 msgstr "Lütfen aşağıdaki hataları gözden geçirin"
 
@@ -3076,7 +3080,7 @@ msgstr "{}, {} için sahiplerden kaldırıldı"
 msgid "The email {} has been banned."
 msgstr "{} e-posta adresi yasaklandı."
 
-#: views/generic.py:116 views/generic.py:127 views/list.py:1321
+#: views/generic.py:116 views/generic.py:127 views/list.py:1322
 #, python-format
 msgid "An error occurred: %s"
 msgstr "Bir hata oluştu: %s"
@@ -3090,113 +3094,113 @@ msgstr "Geçersiz veri: %s"
 msgid "The email {} has been un-banned"
 msgstr "{} e-posta adresinin yasağı kaldırıldı"
 
-#: views/list.py:118
+#: views/list.py:119
 msgid "List {}s"
 msgstr "{} listele"
 
-#: views/list.py:132
+#: views/list.py:133
 msgid "Add {}"
 msgstr "{} ekle"
 
-#: views/list.py:135
+#: views/list.py:136
 msgid "No {}s were found matching the search."
 msgstr "Aramayla eşleşen {} bulunamadı."
 
-#: views/list.py:137
+#: views/list.py:138
 msgid "List has no {}s"
 msgstr "Listede {} yok"
 
-#: views/list.py:150
+#: views/list.py:151
 msgid "The selected members have been unsubscribed"
 msgstr "Seçilen üyeler abonelikten çıkarıldı"
 
-#: views/list.py:168
+#: views/list.py:169
 #, python-brace-format
 msgid "{email} has been added with the role {role}"
 msgstr "{email}, {role} ile eklendi"
 
-#: views/list.py:215
+#: views/list.py:216
 msgid "Member does not exist"
 msgstr "Üye mevcut değil"
 
-#: views/list.py:234
+#: views/list.py:235
 msgid "The member's preferences have been updated."
 msgstr "Üyenin tercihleri güncellendi."
 
-#: views/list.py:243
+#: views/list.py:244
 msgid "No change to the member's moderation."
 msgstr "Üyenin denetiminde değişiklik yok."
 
-#: views/list.py:255
+#: views/list.py:256
 msgid "The member's moderation settings have been updated."
 msgstr "Üyenin denetim ayarları güncellendi."
 
-#: views/list.py:436
+#: views/list.py:437
 msgid "You are not subscribed to {}."
 msgstr "{} listesine abone değilsiniz."
 
-#: views/list.py:449
+#: views/list.py:450
 msgid "You are already subscribed"
 msgstr "Zaten abonesiniz"
 
-#: views/list.py:460
+#: views/list.py:461
 msgid "Subscription changed to {}"
 msgstr "Abonelik {} olarak değiştirildi"
 
-#: views/list.py:464
+#: views/list.py:465
 msgid "Something went wrong. Please try again. {} {}"
 msgstr "Bir şeyler yanlış gitti. Lütfen tekrar deneyin. {} {}"
 
-#: views/list.py:505
+#: views/list.py:506
 msgid ""
 "Your subscription request has been submitted and is waiting for moderator "
 "approval."
 msgstr "Abonelik isteğiniz gönderildi ve moderatör onayını bekliyor."
 
-#: views/list.py:510
+#: views/list.py:511
 #, python-format
 msgid "You are subscribed to %s."
 msgstr "%s'e abone oldunuz."
 
-#: views/list.py:514 views/list.py:544
+#: views/list.py:515 views/list.py:545
 msgid "Something went wrong. Please try again."
 msgstr "Bir şeyler yanlış gitti. Lütfen tekrar deneyin."
 
-#: views/list.py:540
+#: views/list.py:541
 msgid "Please check your inbox for further instructions"
 msgstr "Lütfen sonraki talimatlar için gelen kutunuza bakın"
 
-#: views/list.py:564
+#: views/list.py:565
 msgid "You can only unsubscribe yourself."
 msgstr "Yalnızca kendinizi abonelikten çıkarabilirsiniz."
 
-#: views/list.py:569
+#: views/list.py:570
 msgid ""
 "You have a pending unsubscription request waiting for moderator approval."
 msgstr "Moderatör onayını bekleyen bir abonelik iptali isteğiniz var."
 
-#: views/list.py:576
+#: views/list.py:577
 msgid ""
 "Your unsubscription request has been submitted and is waiting for moderator "
 "approval."
 msgstr "Abonelikten çıkma isteğiniz gönderildi ve moderatör onayını bekliyor."
 
-#: views/list.py:580
+#: views/list.py:581
 #, python-format
 msgid "%s has been unsubscribed from this list."
 msgstr "%s bu liste aboneliğinden çıktı."
 
-#: views/list.py:613
+#: views/list.py:614
 #, python-format
 msgid "The address %(address)s has been invited to %(list)s."
 msgstr "%(address)s adresi %(list)s'e davet edildi."
 
-#: views/list.py:616
+#: views/list.py:617
 #, python-format
 msgid "The address %(address)s has been subscribed to %(list)s."
 msgstr "%(address)s adresi %(list)s'e abone oldu."
 
-#: views/list.py:619
+#: views/list.py:620
 msgid ""
 " Subscription may be pending address verification, confirmation or approval "
 "as appropriate."
@@ -3204,198 +3208,198 @@ msgstr ""
 " Abonelik; adres doğrulama, doğrulama veya onay bekleme durumlarından "
 "birinde olabilir."
 
-#: views/list.py:629 views/list.py:680
+#: views/list.py:630 views/list.py:681
 #, python-format
 msgid "The email address %s is not valid."
 msgstr "%s e-posta adresi geçerli değil."
 
-#: views/list.py:654
+#: views/list.py:655
 msgid "Please fill out the form correctly."
 msgstr "Lütfen formu doğru bir şekilde doldurun."
 
-#: views/list.py:670
+#: views/list.py:671
 #, python-brace-format
 msgid "These addresses {address} have been unsubscribed from {list}."
 msgstr "Bu {address} adresleri, {list} aboneliğinden çıkarıldı."
 
-#: views/list.py:701
+#: views/list.py:702
 msgid "The selected messages were accepted"
 msgstr "Seçilen mesajlar kabul edildi"
 
-#: views/list.py:705
+#: views/list.py:706
 msgid "The selected messages were rejected"
 msgstr "Seçili mesajlar reddedildi"
 
-#: views/list.py:709
+#: views/list.py:710
 msgid "The selected messages were discarded"
 msgstr "Seçili mesajlar atıldı"
 
-#: views/list.py:711
+#: views/list.py:712
 msgid "Message could not be found"
 msgstr "Mesaj bulunamadı"
 
-#: views/list.py:740
+#: views/list.py:741
 msgid "The message was accepted"
 msgstr "Mesaj kabul edildi"
 
-#: views/list.py:743
+#: views/list.py:744
 msgid "The message was rejected"
 msgstr "Mesaj reddedildi"
 
-#: views/list.py:746
+#: views/list.py:747
 msgid "The message was discarded"
 msgstr "Mesaj atıldı"
 
-#: views/list.py:751
+#: views/list.py:752
 msgid "Held message was not found."
 msgstr "Bekletilen mesaj bulunamadı."
 
-#: views/list.py:764
+#: views/list.py:765
 msgid "Moderation action for {} set to {}"
 msgstr "{} için denetim eylemi {} olarak ayarlandı"
 
-#: views/list.py:769
+#: views/list.py:770
 msgid "Failed to set moderation action for {}"
 msgstr "{} için denetim eylemi ayarlanamadı"
 
-#: views/list.py:821
+#: views/list.py:822
 msgid "Choose a Domain"
 msgstr "Bir Etki Alanı Seçin"
 
-#: views/list.py:842
+#: views/list.py:843
 msgid "List created"
 msgstr "Liste oluşturuldu"
 
-#: views/list.py:854
+#: views/list.py:855
 msgid "Mailing List already exists."
 msgstr "Posta Listesi zaten var."
 
-#: views/list.py:1015
+#: views/list.py:1016
 msgid "Subscriptions pending user confirmation"
 msgstr "Kullanıcı doğrulaması bekleyen abonelikler"
 
-#: views/list.py:1028
+#: views/list.py:1029
 msgid "Subscriptions pending approval"
 msgstr "Onay bekleyen abonelikler"
 
-#: views/list.py:1041
+#: views/list.py:1042
 msgid "Un-subscriptions pending approval"
 msgstr "Onay bekleyen abonelikten çıkmalar"
 
-#: views/list.py:1077
+#: views/list.py:1078
 msgid "The request has been accepted."
 msgstr "İstek kabul edildi."
 
-#: views/list.py:1078
+#: views/list.py:1079
 msgid "The request has been rejected."
 msgstr "İstek reddedildi."
 
-#: views/list.py:1079
+#: views/list.py:1080
 msgid "The request has been discarded."
 msgstr "İstek atıldı."
 
-#: views/list.py:1080
+#: views/list.py:1081
 msgid "The request has been defered."
 msgstr "İstek ertelendi."
 
-#: views/list.py:1099
+#: views/list.py:1100
 #, python-format
 msgid "The request was already moderated: %s"
 msgstr "İstek zaten denetlendi: %s"
 
-#: views/list.py:1102
+#: views/list.py:1103
 #, python-format
 msgid "The request could not be moderated: %s"
 msgstr "İstek denetlenemedi: %s"
 
-#: views/list.py:1108
+#: views/list.py:1109
 msgid "List Identity"
 msgstr "Liste Kimliği"
 
-#: views/list.py:1109
+#: views/list.py:1110
 msgid "Automatic Responses"
 msgstr "Otomatik Yanıtlar"
 
-#: views/list.py:1110
+#: views/list.py:1111
 msgid "Alter Messages"
 msgstr "Mesajları Değiştir"
 
-#: views/list.py:1111
+#: views/list.py:1112
 msgid "DMARC Mitigations"
 msgstr "DMARC Azaltmaları"
 
-#: views/list.py:1112
+#: views/list.py:1113
 msgid "Digest"
 msgstr "Özet"
 
-#: views/list.py:1113
+#: views/list.py:1114
 msgid "Message Acceptance"
 msgstr "Mesaj Kabulü"
 
-#: views/list.py:1114
+#: views/list.py:1115
 msgid "Archiving"
 msgstr "Arşivleme"
 
-#: views/list.py:1115
+#: views/list.py:1116
 msgid "Member Policy"
 msgstr "Üye Politikası"
 
-#: views/list.py:1116
+#: views/list.py:1117
 msgid "Bounce Processing"
 msgstr "Geri Dönme İşleme"
 
-#: views/list.py:1179
+#: views/list.py:1180
 msgid "The settings have been updated."
 msgstr "Ayarlar güncellendi."
 
-#: views/list.py:1184
+#: views/list.py:1185
 msgid "An error occurred: "
 msgstr "Bir hata oluştu: "
 
-#: views/list.py:1208
+#: views/list.py:1209
 #, python-format
 msgid "The user %(email)s is not in the %(role)s group"
 msgstr "%(email)s kullanıcısı %(role)s grubunda değil"
 
-#: views/list.py:1214
+#: views/list.py:1215
 msgid "Removing the last owner is impossible"
 msgstr "Son sahibi kaldırmak mümkün değil"
 
-#: views/list.py:1228
+#: views/list.py:1229
 #, python-format
 msgid "The user could not be removed: %(msg)s"
 msgstr "Kullanıcı kaldırılamadı: %(msg)s"
 
-#: views/list.py:1231
+#: views/list.py:1232
 #, python-format
 msgid "The user %(address)s has been removed from the %(role)s group."
 msgstr "%(address)s kullanıcısı %(role)s grubundan kaldırıldı."
 
-#: views/list.py:1248
+#: views/list.py:1249
 msgid "No member is subscribed to the list currently."
 msgstr "Şu anda listeye hiçbir üye abone değil."
 
-#: views/list.py:1258
+#: views/list.py:1259
 msgid "All members have been unsubscribed from the list."
 msgstr "Tüm üyeler liste aboneliğinden çıkarıldı."
 
-#: views/list.py:1323
+#: views/list.py:1324
 msgid "The header matches were successfully modified."
 msgstr "Başlık eşleşmeleri başarıyla değiştirildi."
 
-#: views/list.py:1330
+#: views/list.py:1331
 msgid "New header"
 msgstr "Yeni başlık"
 
-#: views/list.py:1331
+#: views/list.py:1332
 msgid "New pattern"
 msgstr "Yeni kalıp"
 
-#: views/list.py:1358
+#: views/list.py:1359
 msgid "Invalid confirmation token"
 msgstr "Geçersiz doğrulama belirteci"
 
-#: views/list.py:1366 views/list.py:1378
+#: views/list.py:1367 views/list.py:1379
 msgid "Token expired or invalid."
 msgstr "Belirtecin süresi doldu veya geçersiz."
 
@@ -3406,6 +3410,20 @@ msgstr "Mesaj mevcut değil"
 #: views/rest.py:97
 msgid "Attachment does not exist"
 msgstr "Ek mevcut değil"
+
+#: views/system.py:31
+#, fuzzy
+#| msgid "Mailman logo"
+msgid "Mailman Core Version"
+msgstr "Mailman logosu"
+
+#: views/system.py:32
+msgid "Mailman Core API Version"
+msgstr ""
+
+#: views/system.py:33
+msgid "Mailman Core Python Version"
+msgstr ""
 
 #: views/user.py:92
 msgid "Your preferences have been updated."

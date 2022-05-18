@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-17 21:46-0700\n"
+"POT-Creation-Date: 2022-05-18 17:38+0000\n"
 "PO-Revision-Date: 2022-03-20 17:16+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -324,7 +324,7 @@ msgstr "נא להקליד כתובת דוא״ל תקנית."
 msgid "Your name (optional)"
 msgstr "שמך (רשות)"
 
-#: forms/list_forms.py:171 forms/list_forms.py:1211 views/list.py:457
+#: forms/list_forms.py:171 forms/list_forms.py:1211 views/list.py:458
 msgid "Primary Address ({})"
 msgstr "כתובת עיקרית ({})"
 
@@ -1702,7 +1702,7 @@ msgstr "מציין האם הכתובת הזאת מתוקפת או לאו"
 msgid "Invalid: \"{0}\" should be either email or UUID"
 msgstr "שגיאה: „{0}” אמור להיות דוא״ל או מזהה ייחודי"
 
-#: models.py:42
+#: models.py:43
 msgid ""
 "Note: Do not add any secret content in templates as they are publicly "
 "accessible.\n"
@@ -1735,27 +1735,27 @@ msgstr ""
 "‎$language: קוד השפה באורך שני תווים שמייצג את השפה המועדפת של הרשימה, למשל: "
 "fr, en, he \n"
 
-#: models.py:73
+#: models.py:74
 msgid "owner"
 msgstr "בעלים"
 
-#: models.py:74
+#: models.py:75
 msgid "member"
 msgstr "בחברות"
 
-#: models.py:75
+#: models.py:76
 msgid "nonmember"
 msgstr "לא חברים"
 
-#: models.py:76
+#: models.py:77
 msgid "moderator"
 msgstr "פיקוח"
 
-#: models.py:253
+#: models.py:254
 msgid "Choose the template you want to customize."
 msgstr "נא לבחור את התבנית לעריכה."
 
-#: models.py:260
+#: models.py:261
 msgid ""
 "Language for the template, this should be the list's preferred language."
 msgstr "שפת התבנית, זאת אמורה להיות השפה המועדפת של הרשימה."
@@ -2742,6 +2742,10 @@ msgstr "הגדרות מערכת"
 msgid "Mailman System"
 msgstr "מערכת Mailman"
 
+#: templates/postorius/system_information.html:23
+msgid "Queues"
+msgstr ""
+
 #: templates/postorius/user/address_preferences.html:8
 #: templates/postorius/user/subscription_preferences.html:7
 msgid "Subscription preferences"
@@ -2939,7 +2943,7 @@ msgstr "נרשם שם תחום חדש"
 msgid "Domain %s updated"
 msgstr "שם התחום %s עודכן"
 
-#: views/domain.py:117 views/list.py:860
+#: views/domain.py:117 views/list.py:861
 msgid "Please check the errors below"
 msgstr "נא לעיין בשגיאות שלהלן"
 
@@ -2969,7 +2973,7 @@ msgstr "הבעלות של {} על {} הוסרה"
 msgid "The email {} has been banned."
 msgstr "כתובת הדוא״ל {} נחסמה."
 
-#: views/generic.py:116 views/generic.py:127 views/list.py:1321
+#: views/generic.py:116 views/generic.py:127 views/list.py:1322
 #, python-format
 msgid "An error occurred: %s"
 msgstr "אירעה שגיאה: %s"
@@ -2983,310 +2987,310 @@ msgstr "נתונים שגויים: %s"
 msgid "The email {} has been un-banned"
 msgstr "חסימת כתובת הדוא״ל {} בוטלה"
 
-#: views/list.py:118
+#: views/list.py:119
 msgid "List {}s"
 msgstr "{} של הקבוצה"
 
-#: views/list.py:132
+#: views/list.py:133
 msgid "Add {}"
 msgstr "הוספת {}"
 
-#: views/list.py:135
+#: views/list.py:136
 msgid "No {}s were found matching the search."
 msgstr "לא נמצאו {} שתואמים את החיפוש."
 
-#: views/list.py:137
+#: views/list.py:138
 msgid "List has no {}s"
 msgstr "לרשימה אין {}"
 
-#: views/list.py:150
+#: views/list.py:151
 msgid "The selected members have been unsubscribed"
 msgstr "המינוי של החברים הנבחרים בוטל"
 
-#: views/list.py:168
+#: views/list.py:169
 #, python-brace-format
 msgid "{email} has been added with the role {role}"
 msgstr "{email} נוסף בתפקיד {role}"
 
-#: views/list.py:215
+#: views/list.py:216
 msgid "Member does not exist"
 msgstr "החבר לא קיים"
 
-#: views/list.py:234
+#: views/list.py:235
 msgid "The member's preferences have been updated."
 msgstr "העדפות החבר עודכנו."
 
-#: views/list.py:243
+#: views/list.py:244
 msgid "No change to the member's moderation."
 msgstr "אין שינוי בפיקוח על החבר."
 
-#: views/list.py:255
+#: views/list.py:256
 msgid "The member's moderation settings have been updated."
 msgstr "הגדרות הפיקוח על החבר עודכנו."
 
-#: views/list.py:436
+#: views/list.py:437
 msgid "You are not subscribed to {}."
 msgstr "אין לך מינוי אל {}."
 
-#: views/list.py:449
+#: views/list.py:450
 msgid "You are already subscribed"
 msgstr "כבר נרשמת"
 
-#: views/list.py:460
+#: views/list.py:461
 msgid "Subscription changed to {}"
 msgstr "המינוי השתנה לכדי {}"
 
-#: views/list.py:464
+#: views/list.py:465
 msgid "Something went wrong. Please try again. {} {}"
 msgstr "משהו השתבש. נא לנסות שוב. {} {}"
 
-#: views/list.py:505
+#: views/list.py:506
 msgid ""
 "Your subscription request has been submitted and is waiting for moderator "
 "approval."
 msgstr "בקשת המינוי שלך הוגשה והיא ממתינה לאישור המפקחים."
 
-#: views/list.py:510
+#: views/list.py:511
 #, python-format
 msgid "You are subscribed to %s."
 msgstr "נרשמת אל %s."
 
-#: views/list.py:514 views/list.py:544
+#: views/list.py:515 views/list.py:545
 msgid "Something went wrong. Please try again."
 msgstr "משהו השתבש. נא לנסות שוב."
 
-#: views/list.py:540
+#: views/list.py:541
 msgid "Please check your inbox for further instructions"
 msgstr "נא לחפש הנחיות נוספות בתיבת הדואר הנכנס שלכם"
 
-#: views/list.py:564
+#: views/list.py:565
 msgid "You can only unsubscribe yourself."
 msgstr "מותר לך להסיר מינוי רק לעצמך."
 
-#: views/list.py:569
+#: views/list.py:570
 msgid ""
 "You have a pending unsubscription request waiting for moderator approval."
 msgstr "יש לך בקשה להסרת מינוי שממתינה לאישור המפקחים."
 
-#: views/list.py:576
+#: views/list.py:577
 msgid ""
 "Your unsubscription request has been submitted and is waiting for moderator "
 "approval."
 msgstr "בקשת ביטול המינוי שלך הוגשה והיא ממתינה לאישור המפקחים."
 
-#: views/list.py:580
+#: views/list.py:581
 #, python-format
 msgid "%s has been unsubscribed from this list."
 msgstr "המינוי של %s לרשימה הזו הופסק."
 
-#: views/list.py:613
+#: views/list.py:614
 #, python-format
 msgid "The address %(address)s has been invited to %(list)s."
 msgstr "הכתובת %(address)s הוזמנה אל %(list)s."
 
-#: views/list.py:616
+#: views/list.py:617
 #, python-format
 msgid "The address %(address)s has been subscribed to %(list)s."
 msgstr "הכתובת %(address)s נרשמה אל %(list)s."
 
-#: views/list.py:619
+#: views/list.py:620
 msgid ""
 " Subscription may be pending address verification, confirmation or approval "
 "as appropriate."
 msgstr " יכול להיות שהמינוי ממתין לאימות כתובת דוא״ל, אישור או הכרה כהולם."
 
-#: views/list.py:629 views/list.py:680
+#: views/list.py:630 views/list.py:681
 #, python-format
 msgid "The email address %s is not valid."
 msgstr "כתובת הדוא״ל %s אינה תקינה."
 
-#: views/list.py:654
+#: views/list.py:655
 msgid "Please fill out the form correctly."
 msgstr "נא למלא את הטופס כראוי."
 
-#: views/list.py:670
+#: views/list.py:671
 #, python-brace-format
 msgid "These addresses {address} have been unsubscribed from {list}."
 msgstr "המינוי של כתובות אלו {address} הוסר מהרשימה {list}."
 
-#: views/list.py:701
+#: views/list.py:702
 msgid "The selected messages were accepted"
 msgstr "ההודעות הנבחרות התקבלו"
 
-#: views/list.py:705
+#: views/list.py:706
 msgid "The selected messages were rejected"
 msgstr "ההודעות הנבחרות נדחו"
 
-#: views/list.py:709
+#: views/list.py:710
 msgid "The selected messages were discarded"
 msgstr "ההודעות הנבחרות הושלכו"
 
-#: views/list.py:711
+#: views/list.py:712
 msgid "Message could not be found"
 msgstr "לא ניתן למצוא את ההודעה"
 
-#: views/list.py:740
+#: views/list.py:741
 msgid "The message was accepted"
 msgstr "ההודעה התקבלה"
 
-#: views/list.py:743
+#: views/list.py:744
 msgid "The message was rejected"
 msgstr "ההודעה נדחתה"
 
-#: views/list.py:746
+#: views/list.py:747
 msgid "The message was discarded"
 msgstr "ההודעה הושלכה"
 
-#: views/list.py:751
+#: views/list.py:752
 msgid "Held message was not found."
 msgstr "ההודעה שהוחזקה לא נמצאה."
 
-#: views/list.py:764
+#: views/list.py:765
 msgid "Moderation action for {} set to {}"
 msgstr "פעולת פיקוח עבור {} הוגדרה לכדי {}"
 
-#: views/list.py:769
+#: views/list.py:770
 msgid "Failed to set moderation action for {}"
 msgstr "הגדרת פעולת הפיקוח על {} נכשלה"
 
-#: views/list.py:821
+#: views/list.py:822
 msgid "Choose a Domain"
 msgstr "בחירת שם תחום"
 
-#: views/list.py:842
+#: views/list.py:843
 msgid "List created"
 msgstr "הרשימה נוצרה"
 
-#: views/list.py:854
+#: views/list.py:855
 msgid "Mailing List already exists."
 msgstr "רשימת הדיוור כבר קיימת."
 
-#: views/list.py:1015
+#: views/list.py:1016
 msgid "Subscriptions pending user confirmation"
 msgstr "המינויים ממתינים לאימות המשתמש"
 
-#: views/list.py:1028
+#: views/list.py:1029
 msgid "Subscriptions pending approval"
 msgstr "המינויים ממתינים לאישור"
 
-#: views/list.py:1041
+#: views/list.py:1042
 msgid "Un-subscriptions pending approval"
 msgstr "ביטולי המינויים הממתינים לאישור"
 
-#: views/list.py:1077
+#: views/list.py:1078
 msgid "The request has been accepted."
 msgstr "הבקשה התקבלה."
 
-#: views/list.py:1078
+#: views/list.py:1079
 msgid "The request has been rejected."
 msgstr "הבקשה נדחתה."
 
-#: views/list.py:1079
+#: views/list.py:1080
 msgid "The request has been discarded."
 msgstr "הבקשה הושלכה."
 
-#: views/list.py:1080
+#: views/list.py:1081
 msgid "The request has been defered."
 msgstr "הבקשה עוכבה."
 
-#: views/list.py:1099
+#: views/list.py:1100
 #, python-format
 msgid "The request was already moderated: %s"
 msgstr "הבקשה נבחנה על ידי הפיקוח: %s"
 
-#: views/list.py:1102
+#: views/list.py:1103
 #, python-format
 msgid "The request could not be moderated: %s"
 msgstr "לא ניתן להפעיל פיקוח על הבקשה: %s"
 
-#: views/list.py:1108
+#: views/list.py:1109
 msgid "List Identity"
 msgstr "זהות הרשימה"
 
-#: views/list.py:1109
+#: views/list.py:1110
 msgid "Automatic Responses"
 msgstr "מענה אוטומטי"
 
-#: views/list.py:1110
+#: views/list.py:1111
 msgid "Alter Messages"
 msgstr "עריכת ההודעות"
 
-#: views/list.py:1111
+#: views/list.py:1112
 msgid "DMARC Mitigations"
 msgstr "אפחותי DMARC"
 
-#: views/list.py:1112
+#: views/list.py:1113
 msgid "Digest"
 msgstr "תקציר"
 
-#: views/list.py:1113
+#: views/list.py:1114
 msgid "Message Acceptance"
 msgstr "קבלת הודעות"
 
-#: views/list.py:1114
+#: views/list.py:1115
 msgid "Archiving"
 msgstr "העברה לארכיון"
 
-#: views/list.py:1115
+#: views/list.py:1116
 msgid "Member Policy"
 msgstr "מדיניות חברות"
 
-#: views/list.py:1116
+#: views/list.py:1117
 msgid "Bounce Processing"
 msgstr "עיבוד החזרות"
 
-#: views/list.py:1179
+#: views/list.py:1180
 msgid "The settings have been updated."
 msgstr "ההגדרות עודכנו."
 
-#: views/list.py:1184
+#: views/list.py:1185
 msgid "An error occurred: "
 msgstr "אירעה שגיאה: "
 
-#: views/list.py:1208
+#: views/list.py:1209
 #, python-format
 msgid "The user %(email)s is not in the %(role)s group"
 msgstr "המשתמש %(email)s אינו בקבוצה %(role)s"
 
-#: views/list.py:1214
+#: views/list.py:1215
 msgid "Removing the last owner is impossible"
 msgstr "הסרת הבעלים האחרונים אינה אפשרית"
 
-#: views/list.py:1228
+#: views/list.py:1229
 #, python-format
 msgid "The user could not be removed: %(msg)s"
 msgstr "לא ניתן להסיר את המשתמש: %(msg)s"
 
-#: views/list.py:1231
+#: views/list.py:1232
 #, python-format
 msgid "The user %(address)s has been removed from the %(role)s group."
 msgstr "המשתמש %(address)s הוסר מהקבוצה %(role)s."
 
-#: views/list.py:1248
+#: views/list.py:1249
 msgid "No member is subscribed to the list currently."
 msgstr "כרגע אין אף חבר שמנוי לרשימה."
 
-#: views/list.py:1258
+#: views/list.py:1259
 msgid "All members have been unsubscribed from the list."
 msgstr "המינוי של כל החברים לרשימה הופסק."
 
-#: views/list.py:1323
+#: views/list.py:1324
 msgid "The header matches were successfully modified."
 msgstr "התאמות הכותרת נערכו בהצלחה."
 
-#: views/list.py:1330
+#: views/list.py:1331
 msgid "New header"
 msgstr "כותרת חדשה"
 
-#: views/list.py:1331
+#: views/list.py:1332
 msgid "New pattern"
 msgstr "תבנית חדשה"
 
-#: views/list.py:1358
+#: views/list.py:1359
 msgid "Invalid confirmation token"
 msgstr "אסימון אימות שגוי"
 
-#: views/list.py:1366 views/list.py:1378
+#: views/list.py:1367 views/list.py:1379
 msgid "Token expired or invalid."
 msgstr "האסימון פג או שהוא שגוי."
 
@@ -3297,6 +3301,20 @@ msgstr "ההודעה אינה קיימת"
 #: views/rest.py:97
 msgid "Attachment does not exist"
 msgstr "הקובץ המצורף אינו קיים"
+
+#: views/system.py:31
+#, fuzzy
+#| msgid "Mailman logo"
+msgid "Mailman Core Version"
+msgstr "הלוגו של Mailman"
+
+#: views/system.py:32
+msgid "Mailman Core API Version"
+msgstr ""
+
+#: views/system.py:33
+msgid "Mailman Core Python Version"
+msgstr ""
 
 #: views/user.py:92
 msgid "Your preferences have been updated."
