@@ -37,9 +37,9 @@ along with mailman.client. If not, see <http://www.gnu.org/licenses/>.
 Requirements
 ============
 
-Postorius requires Python 3.6+.
+Postorius requires Python 3.7+.
 
-The minimum Django version is 3.1.
+The minimum Django version is 3.2.
 
 Postorius needs a running version of GNU Mailman version 3.3.5.
 
