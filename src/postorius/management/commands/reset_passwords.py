@@ -30,13 +30,11 @@ PASSWORD_BYTES = 32
 
 class Command(BaseCommand):
 
-    help = '''Reset passwords of all users in Mailman Core. This does not affect
-              the login passwords of users in Django or any other social
-              authentication. Users will be able to login with their current
-              passwords.  Mailman Core maintains a second set of passwords for
-              every user, which would be set to a random value of base64 encode
-              32 bytes.
-            '''
+    help = """Reset passwords of all users in Mailman Core. This does not
+    affect the login passwords of users in Django or any other social
+    authentication. Users will be able to login with their current passwords.
+    Mailman Core maintains a second set of passwords for every user, which
+    would be set to a random value of base64 encode 32 bytes."""
 
     def handle(self, *args, **kwargs):
         client = get_mailman_client()
@@ -57,8 +55,8 @@ class Command(BaseCommand):
                 break
 
     def _reset_password(self, user):
-        """Given a mailmanclient.restobject.user.User object, reset its password
-        to None in the database.
+        """Given a mailmanclient.restobject.user.User object, reset its
+        password to None in the database.
         """
         user.password = self._get_random_password()
         user.save()

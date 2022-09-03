@@ -131,7 +131,7 @@ class UserMailmanSettingsView(UserPreferencesView):
             if key != "self_link":
                 combinedpreferences[key] = self.mm_user.preferences[key]
 
-        return(combinedpreferences)
+        return (combinedpreferences)
 
 
 class UserAddressPreferencesView(UserPreferencesView):

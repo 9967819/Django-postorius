@@ -38,6 +38,10 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   https://gitlab.com/mailman/mailman/-/merge_requests/997.  (See #548)
 * Translate template names in the “New Templates” page (See #547)
 * Translate the section names in the MailingList->"Settings" tab. (See #550)
+* Add support for Django 4.1
+* Add support for Python 3.10
+* Remove support for Django < 3.2
+* Remove support for Python < 3.7
 
 
 UI
