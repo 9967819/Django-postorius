@@ -42,6 +42,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * Add support for Python 3.10
 * Remove support for Django < 3.2
 * Remove support for Python < 3.7
+* Replace the use of mock with unittest.mock
 
 
 UI
