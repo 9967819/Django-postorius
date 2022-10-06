@@ -6,13 +6,14 @@
 # Dingzhong Chen <wsxy162@gmail.com>, 2021, 2022.
 # poi <erbaotao@outlook.com>, 2021.
 # Eric <alchemillatruth@purelymail.com>, 2022.
+# Yang Yulin <yylteam@hotmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-18 17:38+0000\n"
-"PO-Revision-Date: 2022-05-20 01:14+0000\n"
-"Last-Translator: Eric <alchemillatruth@purelymail.com>\n"
+"PO-Revision-Date: 2022-08-21 14:15+0000\n"
+"Last-Translator: Yang Yulin <yylteam@hotmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "gnu-mailman/postorius/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -20,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.13-dev\n"
+"X-Generator: Weblate 4.14-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -2697,7 +2698,7 @@ msgstr "Mailman 系统"
 
 #: templates/postorius/system_information.html:23
 msgid "Queues"
-msgstr ""
+msgstr "队列"
 
 #: templates/postorius/user/address_preferences.html:8
 #: templates/postorius/user/subscription_preferences.html:7
@@ -3261,11 +3262,11 @@ msgstr "Mailman 核心版本"
 
 #: views/system.py:32
 msgid "Mailman Core API Version"
-msgstr ""
+msgstr "Mailman 核心 API 版本"
 
 #: views/system.py:33
 msgid "Mailman Core Python Version"
-msgstr ""
+msgstr "Mailman Core Python 版本"
 
 #: views/user.py:92
 msgid "Your preferences have been updated."
