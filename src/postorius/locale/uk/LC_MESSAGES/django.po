@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # AtaZh <ipomoea@hilarious.com>, 2021.
 # Sergii Horichenko <m@sgg.im>, 2022.
+# Artem <artem@molotov.work>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-18 17:38+0000\n"
-"PO-Revision-Date: 2022-08-18 15:38+0000\n"
-"Last-Translator: Sergii Horichenko <m@sgg.im>\n"
+"PO-Revision-Date: 2022-08-25 14:18+0000\n"
+"Last-Translator: Artem <artem@molotov.work>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/uk/>\n"
 "Language: uk\n"
@@ -1791,7 +1792,7 @@ msgstr ""
 "$display_name: Назва списку розсилки для відображення, наприклад: Ant \n"
 "$short_listname: Локальна частина назви списку, наприклад: ant \n"
 "$domain: Доменна частина назви списку, наприклад: example.com \n"
-"$info: Більш докладний опис списку розсилки \n"
+"$info: докладніший опис списку розсилки \n"
 "$request_email: Адреса ел.пошти для адреси -request \n"
 "$owner_email: Адреса ел.пошти для адреси -owner \n"
 "$site_email: Адреса ел.пошти для зв'язку з власниками сайту \n"
