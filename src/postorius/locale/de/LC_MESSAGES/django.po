@@ -12,13 +12,14 @@
 # Tobias Wiese <tobias@tobiaswiese.com>, 2021.
 # Markus Schaaf <markuschaaf@gmail.com>, 2021.
 # Thorgrimsson <shop.news@posteo.de>, 2021.
+# Ettore Atalan <atalanttore@googlemail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-18 17:38+0000\n"
-"PO-Revision-Date: 2021-10-28 18:04+0000\n"
-"Last-Translator: Thorgrimsson <shop.news@posteo.de>\n"
+"PO-Revision-Date: 2022-05-30 19:14+0000\n"
+"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/de/>\n"
 "Language: de\n"
@@ -26,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Weblate 4.9-dev\n"
+"X-Generator: Weblate 4.13-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -289,10 +290,8 @@ msgid "Hide this list in list index"
 msgstr "Liste nicht im Index anzeigen"
 
 #: forms/list_forms.py:84 forms/list_forms.py:960
-#, fuzzy
-#| msgid "Description"
 msgid "Short Description"
-msgstr "Beschreibung"
+msgstr "Kurze Beschreibung"
 
 #: forms/list_forms.py:94
 msgid "Choose an existing Domain."
@@ -1479,10 +1478,8 @@ msgstr ""
 "prägnant sein."
 
 #: forms/list_forms.py:969
-#, fuzzy
-#| msgid "Description"
 msgid "Long Description"
-msgstr "Beschreibung"
+msgstr "Lange Beschreibung"
 
 #: forms/list_forms.py:970
 msgid "A longer description of this mailing list."
@@ -1712,10 +1709,8 @@ msgid "Display Name"
 msgstr "Anzeigename"
 
 #: forms/member_forms.py:35
-#, fuzzy
-#| msgid "Please enter an display name."
 msgid "Please enter a display name."
-msgstr "Bitte geben Sie einen Anzeigenamen an."
+msgstr "Bitte geben Sie einen Anzeigenamen ein."
 
 #: forms/system.py:31
 msgid "Add ban"
@@ -1852,16 +1847,12 @@ msgid "owner"
 msgstr "Besitzer"
 
 #: models.py:75
-#, fuzzy
-#| msgid "Members"
 msgid "member"
-msgstr "Mitglieder"
+msgstr "Mitglied"
 
 #: models.py:76
-#, fuzzy
-#| msgid "Non-Members"
 msgid "nonmember"
-msgstr "Nichtmitglieder"
+msgstr "Nicht-Mitglied"
 
 #: models.py:77
 msgid "moderator"
@@ -2254,17 +2245,15 @@ msgstr ""
 
 #: templates/postorius/domain/new.html:6
 msgid "Add domain"
-msgstr "Neue Domain zufügen"
+msgstr "Domain hinzufügen"
 
 #: templates/postorius/domain/new.html:12
 msgid "Add a new domain"
-msgstr "Neue Domain zufügen"
+msgstr "Neue Domain hinzufügen"
 
 #: templates/postorius/domain/new.html:17
-#, fuzzy
-#| msgid "Create New Domain"
 msgid "Create domain"
-msgstr "Neue Domain erzeugen"
+msgstr "Domain erstellen"
 
 #: templates/postorius/domain/owners.html:6
 msgid "Add domain owner "
@@ -2350,38 +2339,28 @@ msgid "Mailing Lists"
 msgstr "Mailing-Listen"
 
 #: templates/postorius/index.html:18
-#, fuzzy
-#| msgid "Role"
 msgid "Role: "
-msgstr "Rolle"
+msgstr "Rolle: "
 
 #: templates/postorius/index.html:40
-#, fuzzy
-#| msgid "Owners"
 msgid "Owner"
-msgstr "Besitzer"
+msgstr "Eigentümer"
 
 #: templates/postorius/index.html:45
-#, fuzzy
-#| msgid "Moderators"
 msgid "Moderator"
-msgstr "Moderatoren"
+msgstr "Moderator"
 
 #: templates/postorius/index.html:50
-#, fuzzy
-#| msgid "Members"
 msgid "Member"
-msgstr "Mitglieder"
+msgstr "Mitglied"
 
 #: templates/postorius/index.html:55
-#, fuzzy
-#| msgid "Non-Members"
 msgid "Non-member"
-msgstr "Nichtmitglieder"
+msgstr "Nicht-Mitglied"
 
 #: templates/postorius/index.html:58
 msgid "All"
-msgstr ""
+msgstr "Alle"
 
 #: templates/postorius/index.html:66
 msgid "Create New Domain"
@@ -2450,16 +2429,9 @@ msgid "Confirm remove role"
 msgstr "Bestätigen Sie das Entfernen der Rolle"
 
 #: templates/postorius/lists/confirm_remove_role.html:15
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                Delete %(listname)s\n"
-#| "                "
+#, python-format
 msgid "Remove %(address)s as %(role_translated)s?"
-msgstr ""
-"\n"
-"                Lösche %(listname)s\n"
-"                "
+msgstr "%(address)s als %(role_translated)s entfernen?"
 
 #: templates/postorius/lists/confirm_remove_role.html:19
 msgid "Are you sure?"
@@ -2468,7 +2440,7 @@ msgstr "Sind Sie sicher?"
 #: templates/postorius/lists/confirm_remove_role.html:22
 #, python-format
 msgid " Remove %(role_translated)s"
-msgstr ""
+msgstr " %(role_translated)s entfernen"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 msgid "Unsubscribe all members"
@@ -2623,10 +2595,8 @@ msgid "Mass subscribe"
 msgstr "Masseneintragung"
 
 #: templates/postorius/lists/mass_subscribe.html:16
-#, fuzzy
-#| msgid "Unsubscribe users"
 msgid "Subscribe users"
-msgstr "Benutzer abmelden"
+msgstr "Benutzer anmelden"
 
 #: templates/postorius/lists/memberoptions.html:7
 #: templates/postorius/user/list_options.html:7
@@ -2791,10 +2761,8 @@ msgstr ""
 
 #: templates/postorius/lists/summary.html:96
 #: templates/postorius/lists/summary.html:123
-#, fuzzy
-#| msgid "Subscribers"
 msgid "Subscribe"
-msgstr "Mitglieder"
+msgstr "Abonnieren"
 
 #: templates/postorius/lists/summary.html:100
 msgid ""
@@ -2943,7 +2911,7 @@ msgstr "Mailman-System"
 
 #: templates/postorius/system_information.html:23
 msgid "Queues"
-msgstr ""
+msgstr "Warteschlangen"
 
 #: templates/postorius/user/address_preferences.html:8
 #: templates/postorius/user/subscription_preferences.html:7
@@ -3000,12 +2968,8 @@ msgstr ""
 "ändern"
 
 #: templates/postorius/user/list_options.html:22
-#, fuzzy
-#| msgid "Use this form to change the email used for this subscription"
 msgid "Change email used for subscription"
-msgstr ""
-"Benutzen Sie dieses Formular, um die E-Mail-Adresse Ihrer Mitgliedschaft zu "
-"ändern"
+msgstr "Für das Abonnement verwendete E-Mail-Adresse ändern"
 
 #: templates/postorius/user/mailman_settings.html:7
 msgid "Subscription settings"
@@ -3275,10 +3239,8 @@ msgid "Please check your inbox for further instructions"
 msgstr "Bitte prüfen Sie Ihr E-Mail-Postfach für weitere Anweisungen"
 
 #: views/list.py:565
-#, fuzzy
-#| msgid "You are subscribed to %s."
 msgid "You can only unsubscribe yourself."
-msgstr "Sie sind Mitglied folgender Listen: %s."
+msgstr "Sie können sich nur selbst abmelden."
 
 #: views/list.py:570
 msgid ""
@@ -3520,18 +3482,16 @@ msgid "Attachment does not exist"
 msgstr "Anhang existiert nicht"
 
 #: views/system.py:31
-#, fuzzy
-#| msgid "Mailman logo"
 msgid "Mailman Core Version"
-msgstr "Mailman-Logo"
+msgstr "Mailman Core-Version"
 
 #: views/system.py:32
 msgid "Mailman Core API Version"
-msgstr ""
+msgstr "Mailman Core API-Version"
 
 #: views/system.py:33
 msgid "Mailman Core Python Version"
-msgstr ""
+msgstr "Mailman Core Python-Version"
 
 #: views/user.py:92
 msgid "Your preferences have been updated."
