@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-18 17:38+0000\n"
-"PO-Revision-Date: 2022-03-20 17:16+0000\n"
+"PO-Revision-Date: 2022-05-19 00:17+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/he/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.12-dev\n"
+"X-Generator: Weblate 4.13-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -2744,7 +2744,7 @@ msgstr "מערכת Mailman"
 
 #: templates/postorius/system_information.html:23
 msgid "Queues"
-msgstr ""
+msgstr "תורים"
 
 #: templates/postorius/user/address_preferences.html:8
 #: templates/postorius/user/subscription_preferences.html:7
@@ -3303,18 +3303,16 @@ msgid "Attachment does not exist"
 msgstr "הקובץ המצורף אינו קיים"
 
 #: views/system.py:31
-#, fuzzy
-#| msgid "Mailman logo"
 msgid "Mailman Core Version"
-msgstr "הלוגו של Mailman"
+msgstr "גרסת הליבה של Mailman"
 
 #: views/system.py:32
 msgid "Mailman Core API Version"
-msgstr ""
+msgstr "גרסת ה־API של הליבה של Mailman"
 
 #: views/system.py:33
 msgid "Mailman Core Python Version"
-msgstr ""
+msgstr "גרסת ה־Python של הליבה של Mailman"
 
 #: views/user.py:92
 msgid "Your preferences have been updated."
