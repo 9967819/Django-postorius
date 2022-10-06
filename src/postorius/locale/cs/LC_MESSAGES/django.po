@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Jiří Morariu <jirkamorariu@gmail.com>, 2021.
 # Sebastian Machat <sebi@outlook.com>, 2022.
+# Martin Bílý <mbily@mbily.eu>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-18 17:38+0000\n"
-"PO-Revision-Date: 2022-01-28 20:32+0000\n"
-"Last-Translator: Sebastian Machat <sebi@outlook.com>\n"
+"PO-Revision-Date: 2022-08-25 14:18+0000\n"
+"Last-Translator: Martin Bílý <mbily@mbily.eu>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/cs/>\n"
 "Language: cs\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.11-dev\n"
+"X-Generator: Weblate 4.14-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -1536,10 +1537,8 @@ msgid "Display Name"
 msgstr ""
 
 #: forms/member_forms.py:35
-#, fuzzy
-#| msgid "Please enter a domain name"
 msgid "Please enter a display name."
-msgstr "Zadejte doménové jméno, prosím"
+msgstr "Prosím zadejte doménové jméno."
 
 #: forms/system.py:31
 msgid "Add ban"
@@ -1858,11 +1857,11 @@ msgstr ""
 #: templates/postorius/base.html:62 templates/postorius/menu/list_nav.html:39
 #: templates/postorius/user/all.html:8 templates/postorius/user/all.html:13
 msgid "Users"
-msgstr ""
+msgstr "Uživatelé"
 
 #: templates/postorius/base.html:69 templates/postorius/lists/summary.html:33
 msgid "Archives"
-msgstr ""
+msgstr "Archivy"
 
 #: templates/postorius/base.html:85
 msgid "Account"
