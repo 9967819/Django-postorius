@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-18 17:38+0000\n"
+"POT-Creation-Date: 2022-10-22 10:20-0700\n"
 "PO-Revision-Date: 2022-08-25 14:18+0000\n"
 "Last-Translator: Artem <artem@molotov.work>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -1218,8 +1218,8 @@ msgstr ""
 "оригінальному повідомленні він був присутній, то він і не видалятиметься. "
 "Установка значень \"Відповісти у список\", \"Явна відповідь\" або \"Тільки "
 "відповісти\" призводить до додавання особливих заголовків Reply-To: в усі "
-"повідомлення, навіть із заміною у повідомленнях оригінальних заголовків ("
-"наприклад, \"Явна відповідь\" вставляє значення \"адреси для відповіді\"). "
+"повідомлення, навіть із заміною у повідомленнях оригінальних заголовків "
+"(наприклад, \"Явна відповідь\" вставляє значення \"адреси для відповіді\"). "
 "Набір \"Явна відповідь\" , \"без Cc\" зручно використовувати для "
 "повідомлень, якщо не хочете, щоби хтось міг відповісти на адресу списку "
 "розсилки. Існує багато причин, щоби не афішувати (або навіть перезаписувати) "
@@ -1427,7 +1427,8 @@ msgstr "Показати список на сторінці індексу"
 
 #: forms/list_forms.py:957
 msgid "Choose whether to include this list on the list of all lists"
-msgstr "Оберіть чи потрібно включати цей список розсилки до списку усіх списків"
+msgstr ""
+"Оберіть чи потрібно включати цей список розсилки до списку усіх списків"
 
 #: forms/list_forms.py:963
 msgid ""
@@ -2392,10 +2393,15 @@ msgid "Unsubscribe all members"
 msgstr "Відписати усіх учасників"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:14
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "        Are you sure you want to unsubscribe all members from "
+#| "%(listname)s?\n"
+#| "    "
 msgid ""
 "\n"
-"        Are you sure you want to unsubscribe all members from %(listname)s?\n"
+"        Warning! This will remove every member from %(listname)s?\n"
 "    "
 msgstr ""
 "\n"
@@ -2406,8 +2412,10 @@ msgstr ""
 #: templates/postorius/lists/confirm_removeall_subscribers.html:21
 #: templates/postorius/lists/mass_removal.html:17
 #: templates/postorius/lists/members.html:63
-msgid "Unsubscribe All"
-msgstr "Відписати усіх"
+#, fuzzy
+#| msgid "List members"
+msgid "Remove ALL members"
+msgstr "Список учасників"
 
 #: templates/postorius/lists/confirm_token.html:12
 #, python-format
@@ -2528,8 +2536,8 @@ msgid "Message could not be retrieved"
 msgstr "Повідомлення отримати не вийшло"
 
 #: templates/postorius/lists/mass_removal.html:14
-msgid "Unsubscribe users"
-msgstr "Відписати користувачів"
+msgid "Remove listed users"
+msgstr ""
 
 #: templates/postorius/lists/mass_subscribe.html:7
 #: templates/postorius/menu/list_nav.html:56
@@ -2566,8 +2574,8 @@ msgid "CSV Export"
 msgstr "Експорт CSV"
 
 #: templates/postorius/lists/members.html:62
-msgid "Unsubscribe Selected"
-msgstr "Відписати позначених"
+msgid "Remove Selected"
+msgstr ""
 
 #: templates/postorius/lists/members.html:76
 #: templates/postorius/user/address_preferences.html:32
@@ -2643,8 +2651,8 @@ msgid ""
 "          "
 msgstr ""
 "\n"
-"            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s\""
-">Архіви</a>\n"
+"            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s"
+"\">Архіви</a>\n"
 "          "
 
 #: templates/postorius/lists/summary.html:47
@@ -2694,8 +2702,8 @@ msgstr ""
 "\n"
 "                Для того щоби підписатися Ви можете надіслати ел.листа з "
 "темою \"Subscribe\"\n"
-"                <a href=\"mailto:%(address)s?subject=Subscribe\""
-">%(address)s</a>\n"
+"                <a href=\"mailto:%(address)s?subject=Subscribe\">"
+"%(address)s</a>\n"
 "                або скористатися цією формою:\n"
 "            "
 
@@ -3458,6 +3466,15 @@ msgstr "Обліковий запис користувача оновлений.
 #: views/user.py:432
 msgid "Password updated successfully"
 msgstr "Пароль успішно оновлений"
+
+#~ msgid "Unsubscribe All"
+#~ msgstr "Відписати усіх"
+
+#~ msgid "Unsubscribe users"
+#~ msgstr "Відписати користувачів"
+
+#~ msgid "Unsubscribe Selected"
+#~ msgstr "Відписати позначених"
 
 #~ msgid "Remove"
 #~ msgstr "Вилучити"

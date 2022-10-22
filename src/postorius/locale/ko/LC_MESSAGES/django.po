@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-18 17:38+0000\n"
+"POT-Creation-Date: 2022-10-22 10:20-0700\n"
 "PO-Revision-Date: 2021-05-19 11:33+0000\n"
 "Last-Translator: Lens0021 <lorentz0021@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -2443,10 +2443,15 @@ msgid "Unsubscribe all members"
 msgstr "모든 회원 가입 취소"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:14
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "        Are you sure you want to unsubscribe all members from "
+#| "%(listname)s?\n"
+#| "    "
 msgid ""
 "\n"
-"        Are you sure you want to unsubscribe all members from %(listname)s?\n"
+"        Warning! This will remove every member from %(listname)s?\n"
 "    "
 msgstr ""
 "\n"
@@ -2456,8 +2461,10 @@ msgstr ""
 #: templates/postorius/lists/confirm_removeall_subscribers.html:21
 #: templates/postorius/lists/mass_removal.html:17
 #: templates/postorius/lists/members.html:63
-msgid "Unsubscribe All"
-msgstr "모두 구독 취소"
+#, fuzzy
+#| msgid "List members"
+msgid "Remove ALL members"
+msgstr "회원 목록"
 
 #: templates/postorius/lists/confirm_token.html:12
 #, python-format
@@ -2567,8 +2574,8 @@ msgid "Message could not be retrieved"
 msgstr "메시지를 검색할 수 없음"
 
 #: templates/postorius/lists/mass_removal.html:14
-msgid "Unsubscribe users"
-msgstr "구독 취소 사용자"
+msgid "Remove listed users"
+msgstr ""
 
 #: templates/postorius/lists/mass_subscribe.html:7
 #: templates/postorius/menu/list_nav.html:56
@@ -2607,10 +2614,8 @@ msgid "CSV Export"
 msgstr "CSV 내보내기"
 
 #: templates/postorius/lists/members.html:62
-#, fuzzy
-#| msgid "Unsubscribe All"
-msgid "Unsubscribe Selected"
-msgstr "모두 구독 취소"
+msgid "Remove Selected"
+msgstr ""
 
 #: templates/postorius/lists/members.html:76
 #: templates/postorius/user/address_preferences.html:32
@@ -3561,6 +3566,17 @@ msgstr ""
 #: views/user.py:432
 msgid "Password updated successfully"
 msgstr ""
+
+#~ msgid "Unsubscribe All"
+#~ msgstr "모두 구독 취소"
+
+#~ msgid "Unsubscribe users"
+#~ msgstr "구독 취소 사용자"
+
+#, fuzzy
+#~| msgid "Unsubscribe All"
+#~ msgid "Unsubscribe Selected"
+#~ msgstr "모두 구독 취소"
 
 #, fuzzy
 #~| msgid "Filter content"

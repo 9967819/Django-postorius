@@ -18,6 +18,20 @@ You should have received a copy of the GNU Lesser General Public License
 along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 
 
+.. _NEWS-1.3.8:
+
+1.3.8
+=====
+
+(xxxx-xx-xx)
+
+UI
+--
+
+* The buttons and confirmation page for removing members have been revised in
+  an attempt to reduce accidental removal of all members. (Fixes #545)
+
+
 .. _NEWS-1.3.7:
 
 1.3.7

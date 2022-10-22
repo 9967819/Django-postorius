@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-18 17:38+0000\n"
+"POT-Creation-Date: 2022-10-22 10:20-0700\n"
 "PO-Revision-Date: 2022-09-14 12:18+0000\n"
 "Last-Translator: Fré van Limpt <fre@freedom.nl>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -1044,8 +1044,8 @@ msgid ""
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
 "MIME-types om uit de inkomende berichten te filteren. Een lijst van veel "
-"voorkomende types is te vinden op <a href=\"https://developer.mozilla.org/"
-"en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types\">hier </a>"
+"voorkomende types is te vinden op <a href=\"https://developer.mozilla.org/en-"
+"US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types\">hier </a>"
 
 #: forms/list_forms.py:698
 msgid "Filter extensions"
@@ -1346,9 +1346,9 @@ msgid ""
 "request/-owner address from the same poster. Set to zero (or negative) for "
 "no grace period (i.e. auto-respond to every message)."
 msgstr ""
-"Aantal dagen tussen automatische antwoorden op de mailinglijst of het "
-"-verzoek/eigen adres van dezelfde poster. Stel in op nul (of negatief) "
-"zonder pauzeperiode (d.w.z. automatisch antwoorden op elk bericht)."
+"Aantal dagen tussen automatische antwoorden op de mailinglijst of het -"
+"verzoek/eigen adres van dezelfde poster. Stel in op nul (of negatief) zonder "
+"pauzeperiode (d.w.z. automatisch antwoorden op elk bericht)."
 
 #: forms/list_forms.py:895
 msgid "Notify users of held messages"
@@ -2419,10 +2419,15 @@ msgid "Unsubscribe all members"
 msgstr "Alle leden uitschrijven"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:14
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "        Are you sure you want to unsubscribe all members from "
+#| "%(listname)s?\n"
+#| "    "
 msgid ""
 "\n"
-"        Are you sure you want to unsubscribe all members from %(listname)s?\n"
+"        Warning! This will remove every member from %(listname)s?\n"
 "    "
 msgstr ""
 "\n"
@@ -2432,8 +2437,10 @@ msgstr ""
 #: templates/postorius/lists/confirm_removeall_subscribers.html:21
 #: templates/postorius/lists/mass_removal.html:17
 #: templates/postorius/lists/members.html:63
-msgid "Unsubscribe All"
-msgstr "Allen uitschrijven"
+#, fuzzy
+#| msgid "List members"
+msgid "Remove ALL members"
+msgstr "Ledenlijst"
 
 #: templates/postorius/lists/confirm_token.html:12
 #, python-format
@@ -2554,8 +2561,8 @@ msgid "Message could not be retrieved"
 msgstr "Bericht kon niet worden opgehaald"
 
 #: templates/postorius/lists/mass_removal.html:14
-msgid "Unsubscribe users"
-msgstr "Gebruikers uitschrijven"
+msgid "Remove listed users"
+msgstr ""
 
 #: templates/postorius/lists/mass_subscribe.html:7
 #: templates/postorius/menu/list_nav.html:56
@@ -2592,8 +2599,8 @@ msgid "CSV Export"
 msgstr "CSV-uitvoer"
 
 #: templates/postorius/lists/members.html:62
-msgid "Unsubscribe Selected"
-msgstr "Uitschrijven Geselecteerd"
+msgid "Remove Selected"
+msgstr ""
 
 #: templates/postorius/lists/members.html:76
 #: templates/postorius/user/address_preferences.html:32
@@ -2671,8 +2678,8 @@ msgid ""
 "          "
 msgstr ""
 "\n"
-"            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s\""
-">Archief</a>\n"
+"            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s"
+"\">Archief</a>\n"
 "          "
 
 #: templates/postorius/lists/summary.html:47
@@ -2722,8 +2729,8 @@ msgstr ""
 "\n"
 "                Om u in te schrijven kunt u een e-mail sturen met 'schrijf "
 "mij in' in de onderwerpregel naar\n"
-"               <a href=\"mailto:%(address)s?subject=Subscribe\""
-">%(address)s</a>\n"
+"               <a href=\"mailto:%(address)s?subject=Subscribe\">%(address)s</"
+"a>\n"
 "                of het onderstaande formulier gebruiken:\n"
 "            "
 
@@ -3488,3 +3495,12 @@ msgstr "Succesvol bijgewerkte gebruiker."
 #: views/user.py:432
 msgid "Password updated successfully"
 msgstr "Wachtwoord succesvol bijgewerkt"
+
+#~ msgid "Unsubscribe All"
+#~ msgstr "Allen uitschrijven"
+
+#~ msgid "Unsubscribe users"
+#~ msgstr "Gebruikers uitschrijven"
+
+#~ msgid "Unsubscribe Selected"
+#~ msgstr "Uitschrijven Geselecteerd"

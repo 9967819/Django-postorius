@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-18 17:38+0000\n"
+"POT-Creation-Date: 2022-10-22 10:20-0700\n"
 "PO-Revision-Date: 2021-06-12 00:44+0000\n"
 "Last-Translator: Reza Almanda <rezaalmanda27@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -2067,14 +2067,14 @@ msgstr ""
 #, python-format
 msgid ""
 "\n"
-"        Are you sure you want to unsubscribe all members from %(listname)s?\n"
+"        Warning! This will remove every member from %(listname)s?\n"
 "    "
 msgstr ""
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:21
 #: templates/postorius/lists/mass_removal.html:17
 #: templates/postorius/lists/members.html:63
-msgid "Unsubscribe All"
+msgid "Remove ALL members"
 msgstr ""
 
 #: templates/postorius/lists/confirm_token.html:12
@@ -2185,7 +2185,7 @@ msgid "Message could not be retrieved"
 msgstr ""
 
 #: templates/postorius/lists/mass_removal.html:14
-msgid "Unsubscribe users"
+msgid "Remove listed users"
 msgstr ""
 
 #: templates/postorius/lists/mass_subscribe.html:7
@@ -2223,10 +2223,8 @@ msgid "CSV Export"
 msgstr ""
 
 #: templates/postorius/lists/members.html:62
-#, fuzzy
-#| msgid "Description"
-msgid "Unsubscribe Selected"
-msgstr "Deskripsi"
+msgid "Remove Selected"
+msgstr ""
 
 #: templates/postorius/lists/members.html:76
 #: templates/postorius/user/address_preferences.html:32
@@ -3094,3 +3092,8 @@ msgstr ""
 #: views/user.py:432
 msgid "Password updated successfully"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Description"
+#~ msgid "Unsubscribe Selected"
+#~ msgstr "Deskripsi"

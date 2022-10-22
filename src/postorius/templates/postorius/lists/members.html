@@ -59,8 +59,8 @@
                 <a href="{% url 'csv_view' list.list_id %}" class="btn btn-primary">
                    {% trans 'CSV Export' %}
                 </a>
-                <button class="btn btn-warning" id="unsubscribe-selected-btn">{% trans 'Unsubscribe Selected' %}</button>
-                <a href="{% url 'unsubscribe_all' list.list_id %}" class="btn btn-danger">{% trans 'Unsubscribe All' %}</a>
+                <button class="btn btn-info" id="unsubscribe-selected-btn">{% trans 'Remove Selected' %}</button>
+                <a href="{% url 'unsubscribe_all' list.list_id %}" class="btn btn-danger">{% trans 'Remove ALL members' %}</a>
             </div>
         {% endif %}
             <div class="table-responsive" style="clear:both">
