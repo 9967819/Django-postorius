@@ -3,13 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Jiří Morariu <jirkamorariu@gmail.com>, 2021.
 # Sebastian Machat <sebi@outlook.com>, 2022.
+# Martin Bílý <mbily@mbily.eu>, 2022.
+# SONS ČR <weblate@sons.cz>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-18 17:38+0000\n"
-"PO-Revision-Date: 2022-01-28 20:32+0000\n"
-"Last-Translator: Sebastian Machat <sebi@outlook.com>\n"
+"PO-Revision-Date: 2022-08-30 09:55+0000\n"
+"Last-Translator: SONS ČR <weblate@sons.cz>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/cs/>\n"
 "Language: cs\n"
@@ -17,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.11-dev\n"
+"X-Generator: Weblate 4.14.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -277,10 +279,8 @@ msgid "Hide this list in list index"
 msgstr "Schovat tento list ze seznamu listů"
 
 #: forms/list_forms.py:84 forms/list_forms.py:960
-#, fuzzy
-#| msgid "Description"
 msgid "Short Description"
-msgstr "Popis"
+msgstr "Krátký popis"
 
 #: forms/list_forms.py:94
 msgid "Choose an existing Domain."
@@ -570,7 +570,7 @@ msgstr "Tento list nearchivovat"
 
 #: forms/list_forms.py:337
 msgid "Plain text"
-msgstr "Obyčejný text"
+msgstr "Prostý text"
 
 #: forms/list_forms.py:338
 msgid "Markdown text"
@@ -638,15 +638,9 @@ msgstr ""
 
 #: forms/list_forms.py:412
 msgid "Administrivia"
-msgstr "Administrivia"
+msgstr "Administrativa"
 
 #: forms/list_forms.py:414
-#, fuzzy
-#| msgid ""
-#| "Administrivia tests will check postings to see whether it's really meant "
-#| "as an administrative request (like subscribe, unsubscribe, etc), and will "
-#| "add it to the the administrative requests queue, notifying the "
-#| "administrator of the new request, in the process."
 msgid ""
 "Administrivia tests will check postings to see whether it's really meant as "
 "an administrative request (like subscribe, unsubscribe, etc), and will add "
@@ -1326,10 +1320,8 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:969
-#, fuzzy
-#| msgid "Description"
 msgid "Long Description"
-msgstr "Popis"
+msgstr "Dlouhý popis"
 
 #: forms/list_forms.py:970
 msgid "A longer description of this mailing list."
@@ -1536,10 +1528,8 @@ msgid "Display Name"
 msgstr ""
 
 #: forms/member_forms.py:35
-#, fuzzy
-#| msgid "Please enter a domain name"
 msgid "Please enter a display name."
-msgstr "Zadejte doménové jméno, prosím"
+msgstr "Prosím zadejte doménové jméno."
 
 #: forms/system.py:31
 msgid "Add ban"
@@ -1648,16 +1638,12 @@ msgid "member"
 msgstr ""
 
 #: models.py:76
-#, fuzzy
-#| msgid "Hold these non-members"
 msgid "nonmember"
-msgstr "Přidržet od těchto nečlenů"
+msgstr "nečlen"
 
 #: models.py:77
-#, fuzzy
-#| msgid "Moderation"
 msgid "moderator"
-msgstr "Moderování"
+msgstr "moderátor"
 
 #: models.py:254
 msgid "Choose the template you want to customize."
@@ -1858,11 +1844,11 @@ msgstr ""
 #: templates/postorius/base.html:62 templates/postorius/menu/list_nav.html:39
 #: templates/postorius/user/all.html:8 templates/postorius/user/all.html:13
 msgid "Users"
-msgstr ""
+msgstr "Uživatelé"
 
 #: templates/postorius/base.html:69 templates/postorius/lists/summary.html:33
 msgid "Archives"
-msgstr ""
+msgstr "Archivy"
 
 #: templates/postorius/base.html:85
 msgid "Account"
@@ -1870,15 +1856,15 @@ msgstr "Účet"
 
 #: templates/postorius/base.html:89
 msgid "Mailman settings"
-msgstr ""
+msgstr "Nastavení Mailmanu"
 
 #: templates/postorius/base.html:94
 msgid "Posting activity"
-msgstr ""
+msgstr "Příspěvková aktivita"
 
 #: templates/postorius/base.html:100
 msgid "Logout"
-msgstr ""
+msgstr "Odhlásit se"
 
 #: templates/postorius/base.html:107
 msgid "Login"
@@ -1929,7 +1915,7 @@ msgstr ""
 #: templates/postorius/lists/template_list.html:33
 #: templates/postorius/menu/list_nav.html:62
 msgid "Delete"
-msgstr ""
+msgstr "Smazat"
 
 #: templates/postorius/domain/confirm_delete.html:34
 #: templates/postorius/domain/template_delete.html:28
@@ -1975,7 +1961,7 @@ msgstr ""
 
 #: templates/postorius/domain/index.html:54
 msgid "Add"
-msgstr ""
+msgstr "Přidat"
 
 #: templates/postorius/domain/index.html:57
 #: templates/postorius/domain/template_add.html:6
@@ -2094,10 +2080,8 @@ msgid "Owner"
 msgstr ""
 
 #: templates/postorius/index.html:45
-#, fuzzy
-#| msgid "Moderation"
 msgid "Moderator"
-msgstr "Moderování"
+msgstr "Moderátor"
 
 #: templates/postorius/index.html:50
 msgid "Member"
@@ -2260,7 +2244,7 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:38
 msgid "Subject"
-msgstr ""
+msgstr "Předmět"
 
 #: templates/postorius/lists/held_messages.html:39
 msgid "Sender"
@@ -2579,7 +2563,7 @@ msgstr ""
 #: templates/postorius/user/manage.html:51
 #: templates/postorius/user/subscriptions.html:8 templatetags/nav_helpers.py:42
 msgid "Subscriptions"
-msgstr ""
+msgstr "Odběry"
 
 #: templates/postorius/menu/user_nav.html:8
 msgid "Global Mailman preferences"
@@ -2635,7 +2619,7 @@ msgstr ""
 
 #: templates/postorius/user/all.html:20
 msgid "Search"
-msgstr ""
+msgstr "Vyhledat"
 
 #: templates/postorius/user/all.html:35
 msgid "User"
@@ -2675,7 +2659,7 @@ msgstr ""
 
 #: templates/postorius/user/manage.html:62
 msgid "List"
-msgstr ""
+msgstr "List"
 
 #: templates/postorius/user/manage.html:64
 #: templates/postorius/user/subscriptions.html:25

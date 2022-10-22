@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Shohei Kusakata <shohei@kusakata.com>, 2020, 2021.
+# Shohei Kusakata <shohei@kusakata.com>, 2020, 2021, 2022.
 # Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-18 17:38+0000\n"
-"PO-Revision-Date: 2021-07-07 15:34+0000\n"
+"PO-Revision-Date: 2022-09-14 12:17+0000\n"
 "Last-Translator: Shohei Kusakata <shohei@kusakata.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.8-dev\n"
+"X-Generator: Weblate 4.14.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -82,21 +82,19 @@ msgstr "オーナーのメール"
 
 #: forms/fields.py:35
 msgid "Regular"
-msgstr ""
+msgstr "通常"
 
 #: forms/fields.py:36
 msgid "Plain Text Digests"
-msgstr ""
+msgstr "プレーンテキストダイジェスト"
 
 #: forms/fields.py:37
-#, fuzzy
-#| msgid "Digest"
 msgid "MIME Digests"
-msgstr "ダイジェスト"
+msgstr "MIME ダイジェスト"
 
 #: forms/fields.py:38
 msgid "Summary Digests"
-msgstr ""
+msgstr "サマリーダイジェスト"
 
 #: forms/fields.py:41 forms/list_forms.py:143
 msgid "Enabled"
@@ -140,7 +138,7 @@ msgstr "どれかひとつは選択してください"
 
 #: forms/fields.py:146 templates/postorius/lists/summary.html:54
 msgid "Delivery mode"
-msgstr ""
+msgstr "配達モード"
 
 #: forms/fields.py:148
 msgid ""
@@ -150,10 +148,16 @@ msgid ""
 "digests are preferred, but if you have a problem reading them, select plain "
 "text digests. Summary Digests are currently equivalent to MIME Digests."
 msgstr ""
+"ダイジェストを選択した場合、それぞれの投稿が個別に送信されるかわりにまとめて"
+"配達されます（基本的に1日1通ですが投稿が多いリストの場合はそれ以上届く可能性"
+"があります）。使用しているメールリーダーによっては MIME "
+"ダイジェストに対応していないことがあります。通常は MIME ダイジェストが推奨さ"
+"れますが、ダイジェストを読めない場合、プレーンテキストダイジェストを選択して"
+"ください。サマリーダイジェストは MIME ダイジェストと同じです。"
 
 #: forms/fields.py:168 templates/postorius/lists/summary.html:53
 msgid "Delivery status"
-msgstr ""
+msgstr "配達ステータス"
 
 #: forms/fields.py:170
 msgid ""
@@ -163,6 +167,11 @@ msgid ""
 "mail delivery, don't forget to re-enable it when you come back; it will not "
 "be automatically re-enabled."
 msgstr ""
+"メーリングリストに投稿されたメッセージを受け取るには有効に設定してください。"
+"リストを購読したままで、しばらくの間メールを受け取りたくない場合（例えば休暇"
+"に出かける場合など）、無効に設定してください。メールの配達を無効にするときは"
+"、メールを受け取るには再度有効にする必要があるので注意してください。自動で有"
+"効になることはありません。"
 
 #: forms/fields.py:181
 msgid "Moderation"
@@ -170,7 +179,7 @@ msgstr ""
 
 #: forms/fields.py:183 forms/list_forms.py:1098
 msgid "List default"
-msgstr ""
+msgstr "リストのデフォルト"
 
 #: forms/fields.py:185
 msgid ""
@@ -301,12 +310,12 @@ msgstr ""
 #: forms/list_forms.py:154 forms/list_forms.py:183 forms/member_forms.py:29
 #: forms/system.py:36
 msgid "Please enter an email address."
-msgstr ""
+msgstr "メールアドレスを入力してください。"
 
 #: forms/list_forms.py:155 forms/list_forms.py:184 forms/member_forms.py:30
 #: forms/system.py:37
 msgid "Please enter a valid email address."
-msgstr ""
+msgstr "正しいメールアドレスを入力してください。"
 
 #: forms/list_forms.py:158 forms/list_forms.py:187
 msgid "Your name (optional)"
@@ -314,11 +323,11 @@ msgstr "あなたの名前 (任意)"
 
 #: forms/list_forms.py:171 forms/list_forms.py:1211 views/list.py:458
 msgid "Primary Address ({})"
-msgstr ""
+msgstr "プライマリアドレス ({})"
 
 #: forms/list_forms.py:202
 msgid "Open"
-msgstr ""
+msgstr "開く"
 
 #: forms/list_forms.py:203 templates/postorius/domain/template_delete.html:27
 #: templates/postorius/lists/template_delete.html:24
@@ -370,14 +379,12 @@ msgid "Discard"
 msgstr ""
 
 #: forms/list_forms.py:241
-#, fuzzy
-#| msgid "List Settings"
 msgid "List Admins"
-msgstr "リスト設定"
+msgstr "リストの管理者"
 
 #: forms/list_forms.py:242
 msgid "Site Admin"
-msgstr ""
+msgstr "サイトの管理者"
 
 #: forms/list_forms.py:246 forms/list_forms.py:272 forms/list_forms.py:281
 #: forms/list_forms.py:290 forms/list_forms.py:402 forms/list_forms.py:410
@@ -710,7 +717,7 @@ msgstr ""
 
 #: forms/list_forms.py:569
 msgid "Enable Digests"
-msgstr ""
+msgstr "ダイジェストを有効化"
 
 #: forms/list_forms.py:570
 msgid "Should Mailman enable digests for this MailingList?"
@@ -718,7 +725,7 @@ msgstr ""
 
 #: forms/list_forms.py:576
 msgid "Send Digest Periodically"
-msgstr ""
+msgstr "ダイジェストを定期的に送信"
 
 #: forms/list_forms.py:577
 msgid "Should Mailman send out digests periodically?"
@@ -1038,7 +1045,7 @@ msgstr ""
 
 #: forms/list_forms.py:832
 msgid "Pipeline"
-msgstr ""
+msgstr "パイプライン"
 
 #: forms/list_forms.py:837
 msgid "Type of pipeline you want to use for this mailing list"
@@ -1132,7 +1139,7 @@ msgstr ""
 
 #: forms/list_forms.py:904 forms/list_forms.py:1102
 msgid "Send welcome message"
-msgstr ""
+msgstr "歓迎メッセージを送信"
 
 #: forms/list_forms.py:906
 msgid ""
@@ -1408,17 +1415,15 @@ msgstr ""
 
 #: forms/member_forms.py:27
 msgid "Email Address"
-msgstr ""
+msgstr "メールアドレス"
 
 #: forms/member_forms.py:32 forms/user_forms.py:317
 msgid "Display Name"
-msgstr ""
+msgstr "表示名"
 
 #: forms/member_forms.py:35
-#, fuzzy
-#| msgid "Please enter a domain name"
 msgid "Please enter a display name."
-msgstr "ドメイン名を入力してください"
+msgstr "表示名を入力してください"
 
 #: forms/system.py:31
 msgid "Add ban"
@@ -1450,7 +1455,7 @@ msgstr ""
 
 #: forms/user_forms.py:80
 msgid "Hide address"
-msgstr ""
+msgstr "アドレスを隠す"
 
 #: forms/user_forms.py:82
 msgid ""
@@ -1473,7 +1478,7 @@ msgstr ""
 
 #: forms/user_forms.py:101
 msgid "Preferred language"
-msgstr ""
+msgstr "使用言語"
 
 #: forms/user_forms.py:103
 msgid ""
@@ -1695,7 +1700,7 @@ msgstr ""
 
 #: templates/403.html:6
 msgid "You do not have permissions to visit this page."
-msgstr ""
+msgstr "このページを表示する権限がありません。"
 
 #: templates/404.html:5
 msgid "Page not found"
@@ -1785,15 +1790,15 @@ msgstr ""
 
 #: templates/postorius/domain/confirm_delete.html:5
 msgid "Confirm domain removal"
-msgstr ""
+msgstr "ドメイン削除の確認"
 
 #: templates/postorius/domain/confirm_delete.html:13
 msgid "Confirm deletion"
-msgstr ""
+msgstr "削除の確認"
 
 #: templates/postorius/domain/confirm_delete.html:17
 msgid "Are you sure you want to permanently delete"
-msgstr ""
+msgstr "永続的に削除してもよろしいですか"
 
 #: templates/postorius/domain/confirm_delete.html:21
 #, python-format
@@ -1834,7 +1839,7 @@ msgstr "ドメインを編集"
 #: templates/postorius/user/manage.html:48
 #: templates/postorius/user/manage.html:86
 msgid "Update"
-msgstr ""
+msgstr "更新"
 
 #: templates/postorius/domain/index.html:14
 msgid "Add Domain"
@@ -1916,7 +1921,7 @@ msgstr "保存"
 
 #: templates/postorius/domain/template_delete.html:11
 msgid "Delete Template"
-msgstr ""
+msgstr "テンプレートの削除"
 
 #: templates/postorius/domain/template_delete.html:22
 #, python-format
@@ -1975,40 +1980,32 @@ msgid "Role: "
 msgstr ""
 
 #: templates/postorius/index.html:40
-#, fuzzy
-#| msgid "Owners"
 msgid "Owner"
 msgstr "オーナー"
 
 #: templates/postorius/index.html:45
-#, fuzzy
-#| msgid "Moderators"
 msgid "Moderator"
 msgstr "モデレータ"
 
 #: templates/postorius/index.html:50
-#, fuzzy
-#| msgid "Members"
 msgid "Member"
 msgstr "メンバー"
 
 #: templates/postorius/index.html:55
-#, fuzzy
-#| msgid "Non-Members"
 msgid "Non-member"
 msgstr "非メンバー"
 
 #: templates/postorius/index.html:58
 msgid "All"
-msgstr ""
+msgstr "すべて"
 
 #: templates/postorius/index.html:66
 msgid "Create New Domain"
-msgstr ""
+msgstr "新しいドメインの作成"
 
 #: templates/postorius/index.html:68
 msgid "Create New List"
-msgstr ""
+msgstr "新しいリストの作成"
 
 #: templates/postorius/index.html:80
 msgid "List name"
@@ -2132,7 +2129,7 @@ msgstr ""
 
 #: templates/postorius/lists/header_matches.html:60
 msgid "Changes pending, click on the button to save them."
-msgstr ""
+msgstr "変更はまだ保存されていません、ボタンをクリックすると変更が保存されます。"
 
 #: templates/postorius/lists/held_messages.html:10
 #: templates/postorius/menu/list_nav.html:31
@@ -2147,7 +2144,7 @@ msgstr ""
 #: templates/postorius/lists/held_messages.html:106
 #: templates/postorius/lists/subscription_requests.html:36
 msgid "Accept"
-msgstr ""
+msgstr "許可"
 
 #: templates/postorius/lists/held_messages.html:38
 msgid "Subject"
@@ -2171,7 +2168,7 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:81
 msgid "Attachments"
-msgstr ""
+msgstr "添付ファイル"
 
 #: templates/postorius/lists/held_messages.html:92
 msgid "Set member moderation"
@@ -2179,7 +2176,7 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:98
 msgid "Rejection reason:"
-msgstr ""
+msgstr "拒否理由:"
 
 #: templates/postorius/lists/held_messages.html:101
 msgid ""
@@ -2237,7 +2234,7 @@ msgstr ""
 
 #: templates/postorius/lists/members.html:60
 msgid "CSV Export"
-msgstr ""
+msgstr "CSV エクスポート"
 
 #: templates/postorius/lists/members.html:62
 #, fuzzy
@@ -2254,7 +2251,7 @@ msgstr ""
 #: templates/postorius/lists/members.html:80
 #: templates/postorius/user/subscriptions.html:24
 msgid "Delivery Mode"
-msgstr ""
+msgstr "配達モード"
 
 #: templates/postorius/lists/members.html:83
 msgid "Moderation Action"
@@ -2271,7 +2268,7 @@ msgstr ""
 #: templates/postorius/lists/pending_confirmations.html:19
 #: templates/postorius/lists/subscription_requests.html:19
 msgid "E-Mail Address"
-msgstr ""
+msgstr "メールアドレス"
 
 #: templates/postorius/lists/pending_confirmations.html:20
 #: templates/postorius/lists/subscription_requests.html:20
@@ -2295,7 +2292,7 @@ msgstr "設定"
 
 #: templates/postorius/lists/subscription_requests.html:39
 msgid "Rejection reason"
-msgstr ""
+msgstr "拒否理由"
 
 #: templates/postorius/lists/summary.html:10
 #: templates/postorius/menu/list_nav.html:10
@@ -2336,7 +2333,7 @@ msgstr "購読アドレス"
 #: templates/postorius/lists/summary.html:55
 #: templates/postorius/user/all.html:37
 msgid "Manage"
-msgstr ""
+msgstr "管理"
 
 #: templates/postorius/lists/summary.html:56
 #: templates/postorius/lists/summary.html:77
@@ -2384,10 +2381,8 @@ msgstr ""
 
 #: templates/postorius/lists/summary.html:96
 #: templates/postorius/lists/summary.html:123
-#, fuzzy
-#| msgid "Unsubscribe"
 msgid "Subscribe"
-msgstr "購読解除"
+msgstr "購読"
 
 #: templates/postorius/lists/summary.html:100
 msgid ""
@@ -2497,7 +2492,7 @@ msgstr ""
 
 #: templates/postorius/menu/user_nav.html:4
 msgid "Mailman Settings"
-msgstr ""
+msgstr "Mailman 設定"
 
 #: templates/postorius/menu/user_nav.html:7
 #: templates/postorius/user/manage.html:51
@@ -2511,11 +2506,11 @@ msgstr "Mailman の全体設定"
 
 #: templates/postorius/menu/user_nav.html:9
 msgid "Address-based preferences"
-msgstr ""
+msgstr "アドレスごとの設定"
 
 #: templates/postorius/menu/user_nav.html:10
 msgid "List-based preferences"
-msgstr ""
+msgstr "リストごとの設定"
 
 #: templates/postorius/system_information.html:6
 msgid "System Configuration"
@@ -2559,11 +2554,9 @@ msgstr ""
 
 #: templates/postorius/user/all.html:20
 msgid "Search"
-msgstr ""
+msgstr "検索"
 
 #: templates/postorius/user/all.html:35
-#, fuzzy
-#| msgid "Users"
 msgid "User"
 msgstr "ユーザー"
 
@@ -2590,22 +2583,18 @@ msgid "Subscription settings"
 msgstr "購読設定"
 
 #: templates/postorius/user/manage.html:8
-#, fuzzy
-#| msgid "Manage Subscription"
 msgid "Manage user"
-msgstr "購読管理"
+msgstr "ユーザーの管理"
 
 #: templates/postorius/user/manage.html:18
 msgid "Addresses"
-msgstr ""
+msgstr "アドレス"
 
 #: templates/postorius/user/manage.html:28
 msgid "Email"
-msgstr ""
+msgstr "メール"
 
 #: templates/postorius/user/manage.html:62
-#, fuzzy
-#| msgid "Lists"
 msgid "List"
 msgstr "リスト"
 
@@ -2627,20 +2616,16 @@ msgid "Web Account"
 msgstr "アカウント"
 
 #: templates/postorius/user/manage.html:96
-#, fuzzy
-#| msgid "Users"
 msgid "Username"
-msgstr "ユーザー"
+msgstr "ユーザー名"
 
 #: templates/postorius/user/manage.html:100
 msgid "Superuser"
 msgstr ""
 
 #: templates/postorius/user/manage.html:104
-#, fuzzy
-#| msgid "Login"
 msgid "Last login"
-msgstr "ログイン"
+msgstr "最後のログイン"
 
 #: templates/postorius/user/manage.html:108
 msgid "Date joined"
@@ -2715,11 +2700,11 @@ msgstr ""
 
 #: templatetags/nav_helpers.py:39
 msgid "Address-based Settings"
-msgstr ""
+msgstr "アドレスごとの設定"
 
 #: templatetags/nav_helpers.py:40
 msgid "Subscription Settings"
-msgstr ""
+msgstr "購読の設定"
 
 #: templatetags/nav_helpers.py:41
 msgid "Global Settings"
