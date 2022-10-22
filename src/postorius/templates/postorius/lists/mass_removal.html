@@ -11,10 +11,10 @@
         {% bootstrap_form_horizontal form 2 8 %}
         <div class="form-group">
             <div class="offset-md-2 col-md-8">
-                <button class="btn btn-warning" type="submit">{% trans 'Unsubscribe users' %}</button>
+                <button class="btn btn-info" type="submit">{% trans 'Remove listed users' %}</button>
                 <hr>
                 <a href="{% url 'unsubscribe_all' list.list_id %}" class="btn btn-danger">
-                    {% trans 'Unsubscribe All' %}</a>
+                    {% trans 'Remove ALL members' %}</a>
             </div>
         </div>
     </form>

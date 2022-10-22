@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-18 17:38+0000\n"
+"POT-Creation-Date: 2022-10-22 10:20-0700\n"
 "PO-Revision-Date: 2022-09-14 12:17+0000\n"
 "Last-Translator: Shohei Kusakata <shohei@kusakata.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -150,10 +150,10 @@ msgid ""
 msgstr ""
 "ダイジェストを選択した場合、それぞれの投稿が個別に送信されるかわりにまとめて"
 "配達されます（基本的に1日1通ですが投稿が多いリストの場合はそれ以上届く可能性"
-"があります）。使用しているメールリーダーによっては MIME "
-"ダイジェストに対応していないことがあります。通常は MIME ダイジェストが推奨さ"
-"れますが、ダイジェストを読めない場合、プレーンテキストダイジェストを選択して"
-"ください。サマリーダイジェストは MIME ダイジェストと同じです。"
+"があります）。使用しているメールリーダーによっては MIME ダイジェストに対応し"
+"ていないことがあります。通常は MIME ダイジェストが推奨されますが、ダイジェス"
+"トを読めない場合、プレーンテキストダイジェストを選択してください。サマリーダ"
+"イジェストは MIME ダイジェストと同じです。"
 
 #: forms/fields.py:168 templates/postorius/lists/summary.html:53
 msgid "Delivery status"
@@ -169,9 +169,9 @@ msgid ""
 msgstr ""
 "メーリングリストに投稿されたメッセージを受け取るには有効に設定してください。"
 "リストを購読したままで、しばらくの間メールを受け取りたくない場合（例えば休暇"
-"に出かける場合など）、無効に設定してください。メールの配達を無効にするときは"
-"、メールを受け取るには再度有効にする必要があるので注意してください。自動で有"
-"効になることはありません。"
+"に出かける場合など）、無効に設定してください。メールの配達を無効にするとき"
+"は、メールを受け取るには再度有効にする必要があるので注意してください。自動で"
+"有効になることはありません。"
 
 #: forms/fields.py:181
 msgid "Moderation"
@@ -2079,14 +2079,14 @@ msgstr ""
 #, python-format
 msgid ""
 "\n"
-"        Are you sure you want to unsubscribe all members from %(listname)s?\n"
+"        Warning! This will remove every member from %(listname)s?\n"
 "    "
 msgstr ""
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:21
 #: templates/postorius/lists/mass_removal.html:17
 #: templates/postorius/lists/members.html:63
-msgid "Unsubscribe All"
+msgid "Remove ALL members"
 msgstr ""
 
 #: templates/postorius/lists/confirm_token.html:12
@@ -2129,7 +2129,8 @@ msgstr ""
 
 #: templates/postorius/lists/header_matches.html:60
 msgid "Changes pending, click on the button to save them."
-msgstr "変更はまだ保存されていません、ボタンをクリックすると変更が保存されます。"
+msgstr ""
+"変更はまだ保存されていません、ボタンをクリックすると変更が保存されます。"
 
 #: templates/postorius/lists/held_messages.html:10
 #: templates/postorius/menu/list_nav.html:31
@@ -2197,7 +2198,7 @@ msgid "Message could not be retrieved"
 msgstr ""
 
 #: templates/postorius/lists/mass_removal.html:14
-msgid "Unsubscribe users"
+msgid "Remove listed users"
 msgstr ""
 
 #: templates/postorius/lists/mass_subscribe.html:7
@@ -2237,10 +2238,8 @@ msgid "CSV Export"
 msgstr "CSV エクスポート"
 
 #: templates/postorius/lists/members.html:62
-#, fuzzy
-#| msgid "Unsubscribe"
-msgid "Unsubscribe Selected"
-msgstr "購読解除"
+msgid "Remove Selected"
+msgstr ""
 
 #: templates/postorius/lists/members.html:76
 #: templates/postorius/user/address_preferences.html:32
@@ -3125,6 +3124,11 @@ msgstr ""
 #: views/user.py:432
 msgid "Password updated successfully"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Unsubscribe"
+#~ msgid "Unsubscribe Selected"
+#~ msgstr "購読解除"
 
 #~ msgid "Remove"
 #~ msgstr "削除"

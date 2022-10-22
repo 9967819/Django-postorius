@@ -10,15 +10,15 @@
 
     {% list_nav 'mass_removal' 'msgid:title:list_mass_removal_confirm' %}
 
-    <p>
+    <h3 class="alert alert-danger">
     {% blocktrans with listname=list.fqdn_listname %}
-        Are you sure you want to unsubscribe all members from {{ listname }}?
+        Warning! This will remove every member from {{ listname }}?
     {% endblocktrans %}
-    </p>
+    </h3>
 
     <form method="post" action="{% url 'unsubscribe_all' list.list_id %}">
         {% csrf_token %}
-        <button class="btn btn-danger" type="submit" >{% trans 'Unsubscribe All' %}</button>
+        <button class="btn btn-danger" type="submit" >{% trans 'Remove ALL members' %}</button>
         <a class="btn btn-success" href="{% url 'mass_removal' list.list_id %}">{% trans 'Cancel' %}</a>
     </form>
 

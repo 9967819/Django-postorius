@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-18 17:38+0000\n"
+"POT-Creation-Date: 2022-10-22 10:20-0700\n"
 "PO-Revision-Date: 2021-11-24 21:51+0000\n"
 "Last-Translator: Ecron <ecron_89@hotmail.com>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -2471,10 +2471,15 @@ msgid "Unsubscribe all members"
 msgstr "Donar de baixa a tots els membres"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:14
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "        Are you sure you want to unsubscribe all members from "
+#| "%(listname)s?\n"
+#| "    "
 msgid ""
 "\n"
-"        Are you sure you want to unsubscribe all members from %(listname)s?\n"
+"        Warning! This will remove every member from %(listname)s?\n"
 "    "
 msgstr ""
 "\n"
@@ -2485,8 +2490,10 @@ msgstr ""
 #: templates/postorius/lists/confirm_removeall_subscribers.html:21
 #: templates/postorius/lists/mass_removal.html:17
 #: templates/postorius/lists/members.html:63
-msgid "Unsubscribe All"
-msgstr "Donar de baixa Tots"
+#, fuzzy
+#| msgid "List members"
+msgid "Remove ALL members"
+msgstr "Membres de la llista"
 
 #: templates/postorius/lists/confirm_token.html:12
 #, python-format
@@ -2596,8 +2603,8 @@ msgid "Message could not be retrieved"
 msgstr "El missatge no s'ha pogut recuperar"
 
 #: templates/postorius/lists/mass_removal.html:14
-msgid "Unsubscribe users"
-msgstr "Donar de baixa usuaris"
+msgid "Remove listed users"
+msgstr ""
 
 #: templates/postorius/lists/mass_subscribe.html:7
 #: templates/postorius/menu/list_nav.html:56
@@ -2636,10 +2643,8 @@ msgid "CSV Export"
 msgstr "Exportar CSV"
 
 #: templates/postorius/lists/members.html:62
-#, fuzzy
-#| msgid "Unsubscribe All"
-msgid "Unsubscribe Selected"
-msgstr "Donar de baixa Tots"
+msgid "Remove Selected"
+msgstr ""
 
 #: templates/postorius/lists/members.html:76
 #: templates/postorius/user/address_preferences.html:32
@@ -3608,6 +3613,17 @@ msgstr ""
 #: views/user.py:432
 msgid "Password updated successfully"
 msgstr ""
+
+#~ msgid "Unsubscribe All"
+#~ msgstr "Donar de baixa Tots"
+
+#~ msgid "Unsubscribe users"
+#~ msgstr "Donar de baixa usuaris"
+
+#, fuzzy
+#~| msgid "Unsubscribe All"
+#~ msgid "Unsubscribe Selected"
+#~ msgstr "Donar de baixa Tots"
 
 #, fuzzy
 #~| msgid "Filter content"

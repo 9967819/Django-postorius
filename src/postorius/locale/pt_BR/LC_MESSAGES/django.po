@@ -9,11 +9,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-18 17:38+0000\n"
+"POT-Creation-Date: 2022-10-22 10:20-0700\n"
 "PO-Revision-Date: 2022-05-19 00:17+0000\n"
 "Last-Translator: Wellington Terumi Uemura <wellingtonuemura@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
-"gnu-mailman/postorius/pt_BR/>\n"
+"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/gnu-"
+"mailman/postorius/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2424,10 +2424,15 @@ msgid "Unsubscribe all members"
 msgstr "Desinscrever todos os membros"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:14
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "        Are you sure you want to unsubscribe all members from "
+#| "%(listname)s?\n"
+#| "    "
 msgid ""
 "\n"
-"        Are you sure you want to unsubscribe all members from %(listname)s?\n"
+"        Warning! This will remove every member from %(listname)s?\n"
 "    "
 msgstr ""
 "\n"
@@ -2438,8 +2443,10 @@ msgstr ""
 #: templates/postorius/lists/confirm_removeall_subscribers.html:21
 #: templates/postorius/lists/mass_removal.html:17
 #: templates/postorius/lists/members.html:63
-msgid "Unsubscribe All"
-msgstr "Desinscrever Todos"
+#, fuzzy
+#| msgid "List members"
+msgid "Remove ALL members"
+msgstr "Membros da Lista"
 
 #: templates/postorius/lists/confirm_token.html:12
 #, python-format
@@ -2560,8 +2567,8 @@ msgid "Message could not be retrieved"
 msgstr "A mensagem não pôde ser recuperada"
 
 #: templates/postorius/lists/mass_removal.html:14
-msgid "Unsubscribe users"
-msgstr "Desinscrever usuários"
+msgid "Remove listed users"
+msgstr ""
 
 #: templates/postorius/lists/mass_subscribe.html:7
 #: templates/postorius/menu/list_nav.html:56
@@ -2598,8 +2605,8 @@ msgid "CSV Export"
 msgstr "Exportar CSV"
 
 #: templates/postorius/lists/members.html:62
-msgid "Unsubscribe Selected"
-msgstr "Cancelar a inscrição dos selecionados"
+msgid "Remove Selected"
+msgstr ""
 
 #: templates/postorius/lists/members.html:76
 #: templates/postorius/user/address_preferences.html:32
@@ -3491,6 +3498,15 @@ msgstr "Atualizou com sucesso o usuário."
 #: views/user.py:432
 msgid "Password updated successfully"
 msgstr "Senha atualizada com sucesso"
+
+#~ msgid "Unsubscribe All"
+#~ msgstr "Desinscrever Todos"
+
+#~ msgid "Unsubscribe users"
+#~ msgstr "Desinscrever usuários"
+
+#~ msgid "Unsubscribe Selected"
+#~ msgstr "Cancelar a inscrição dos selecionados"
 
 #~ msgid "Filter by Role"
 #~ msgstr "Filtrar por função"
