@@ -23,7 +23,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 1.3.7
 =====
 
-(2022-XX-XX)
+(2022-10-22)
 
 * Fix a bug where various form(s) allowed setting empty values for
   ``delivery_mode`` and ``language``. (Fixes #540, #522)
