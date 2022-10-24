@@ -2295,11 +2295,11 @@ msgstr "ביטול המינוי של כל החברים"
 #, python-format
 msgid ""
 "\n"
-"        Warning! This will remove every member from %(listname)s?\n"
+"        Warning! This will remove every member from %(listname)s!\n"
 "    "
 msgstr ""
 "\n"
-"        אזהרה! פעולה זו תסיר את כל החברים מהרשימה %(listname)s?\n"
+"        אזהרה! פעולה זו תסיר את כל החברים מהרשימה %(listname)s!\n"
 "    "
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:21

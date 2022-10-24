@@ -2427,11 +2427,11 @@ msgstr "Desinscrever todos os membros"
 #, python-format
 msgid ""
 "\n"
-"        Warning! This will remove every member from %(listname)s?\n"
+"        Warning! This will remove every member from %(listname)s!\n"
 "    "
 msgstr ""
 "\n"
-"        Atenção! Isso removerá todos os membros de %(listname)s?\n"
+"        Atenção! Isso removerá todos os membros de %(listname)s!\n"
 "    "
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:21

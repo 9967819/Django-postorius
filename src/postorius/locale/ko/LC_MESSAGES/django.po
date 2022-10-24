@@ -2451,11 +2451,11 @@ msgstr "모든 회원 가입 취소"
 #| "    "
 msgid ""
 "\n"
-"        Warning! This will remove every member from %(listname)s?\n"
+"        Warning! This will remove every member from %(listname)s!\n"
 "    "
 msgstr ""
 "\n"
-"        %(listname)s의 모든 구성원을 구독 취소하시겠습니까?\n"
+"        %(listname)s의 모든 구성원을 구독 취소하시겠습니까!\n"
 "    "
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:21

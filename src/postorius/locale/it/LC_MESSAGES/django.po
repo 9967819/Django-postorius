@@ -2503,11 +2503,11 @@ msgstr "Disiscrivi tutti i membri"
 #| "    "
 msgid ""
 "\n"
-"        Warning! This will remove every member from %(listname)s?\n"
+"        Warning! This will remove every member from %(listname)s!\n"
 "    "
 msgstr ""
 "\n"
-"        Sicuro di disiscrivere tutti i membri dalla lista %(listname)s?\n"
+"        Sicuro di disiscrivere tutti i membri dalla lista %(listname)s!\n"
 "    "
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:21

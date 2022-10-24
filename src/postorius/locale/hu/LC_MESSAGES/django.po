@@ -2402,11 +2402,11 @@ msgstr "Minden tag leiratkozása"
 #| "    "
 msgid ""
 "\n"
-"        Warning! This will remove every member from %(listname)s?\n"
+"        Warning! This will remove every member from %(listname)s!\n"
 "    "
 msgstr ""
 "\n"
-"        Biztosan leiratkoztat minden tagot a %(listname)s listáról?\n"
+"        Biztosan leiratkoztat minden tagot a %(listname)s listáról!\n"
 "    "
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:21

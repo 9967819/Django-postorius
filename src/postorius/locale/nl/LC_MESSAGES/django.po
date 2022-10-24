@@ -2427,11 +2427,11 @@ msgstr "Alle leden uitschrijven"
 #| "    "
 msgid ""
 "\n"
-"        Warning! This will remove every member from %(listname)s?\n"
+"        Warning! This will remove every member from %(listname)s!\n"
 "    "
 msgstr ""
 "\n"
-"        Weet u zeker dat u alle leden uit %(listname)s wilt uitschrijven?\n"
+"        Weet u zeker dat u alle leden uit %(listname)s wilt uitschrijven!\n"
 "    "
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:21
