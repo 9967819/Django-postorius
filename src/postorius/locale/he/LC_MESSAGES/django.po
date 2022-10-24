@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-22 10:20-0700\n"
-"PO-Revision-Date: 2022-05-19 00:17+0000\n"
+"PO-Revision-Date: 2022-10-23 21:20+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/he/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.13-dev\n"
+"X-Generator: Weblate 4.14.2-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -2292,28 +2292,21 @@ msgid "Unsubscribe all members"
 msgstr "ביטול המינוי של כל החברים"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:14
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "        Are you sure you want to unsubscribe all members from "
-#| "%(listname)s?\n"
-#| "    "
+#, python-format
 msgid ""
 "\n"
 "        Warning! This will remove every member from %(listname)s?\n"
 "    "
 msgstr ""
 "\n"
-"        לבטל את המינוי של כל החברים אל %(listname)s?\n"
+"        אזהרה! פעולה זו תסיר את כל החברים מהרשימה %(listname)s?\n"
 "    "
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:21
 #: templates/postorius/lists/mass_removal.html:17
 #: templates/postorius/lists/members.html:63
-#, fuzzy
-#| msgid "List members"
 msgid "Remove ALL members"
-msgstr "חברי הרשימה"
+msgstr "הסרת כל חברי הרשימה"
 
 #: templates/postorius/lists/confirm_token.html:12
 #, python-format
@@ -2433,7 +2426,7 @@ msgstr "לא ניתן לקבל את ההודעה"
 
 #: templates/postorius/lists/mass_removal.html:14
 msgid "Remove listed users"
-msgstr ""
+msgstr "הסרת החברים המסומנים"
 
 #: templates/postorius/lists/mass_subscribe.html:7
 #: templates/postorius/menu/list_nav.html:56
@@ -2471,7 +2464,7 @@ msgstr "ייצוא CSV"
 
 #: templates/postorius/lists/members.html:62
 msgid "Remove Selected"
-msgstr ""
+msgstr "הסרת המסומנים"
 
 #: templates/postorius/lists/members.html:76
 #: templates/postorius/user/address_preferences.html:32
