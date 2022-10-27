@@ -37,7 +37,9 @@ def validate_uuid_or_email(input_value):
     if not any([is_email, is_uuid]):
         raise ValidationError(
             _('Invalid: "{0}" should be either email or UUID').format(
-                input_value),
+                input_value
+            ),
             params={'value': input_value},
-            code='invalid')
+            code='invalid',
+        )
     return input_value

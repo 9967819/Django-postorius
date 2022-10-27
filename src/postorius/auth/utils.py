@@ -40,16 +40,21 @@ def user_is_in_list_roster(user, mailing_list, roster):
     """
     if not user.is_authenticated:
         return False
-    addresses = set(email.lower() for email in
-                    EmailAddress.objects.filter(
-                        user=user, verified=True).values_list(
-                            "email", flat=True))
+    addresses = set(
+        email.lower()
+        for email in EmailAddress.objects.filter(
+            user=user, verified=True
+        ).values_list('email', flat=True)
+    )
     if roster not in ALL_ROSTER:
         raise ValueError(f'{roster} is a valid List Roster.')
 
     roster_addresses = set(
-        [member.email.lower()
-         for member in mailing_list.get_roster(roster, fields=['email'])])
+        [
+            member.email.lower()
+            for member in mailing_list.get_roster(roster, fields=['email'])
+        ]
+    )
     if addresses & roster_addresses:
         return True  # At least one address is in the roster
     return False
@@ -76,7 +81,8 @@ def set_list_access_props(user, mlist, owner=True, moderator=True):
     # If not already set, check if the user is in list moderator roster.
     if not hasattr(user, 'is_list_moderator') and moderator:
         user.is_list_moderator = user_is_in_list_roster(
-            user, mlist, 'moderator')
+            user, mlist, 'moderator'
+        )
 
 
 def set_domain_access_props(user, domain):
@@ -96,6 +102,9 @@ def set_domain_access_props(user, domain):
     for owner in domain.owners:
         owner_addresses.extend(owner.addresses)
     owner_addresses = set([each.email for each in owner_addresses])
-    user_addresses = set(EmailAddress.objects.filter(
-        user=user, verified=True).values_list("email", flat=True))
+    user_addresses = set(
+        EmailAddress.objects.filter(user=user, verified=True).values_list(
+            'email', flat=True
+        )
+    )
     user.is_domain_owner = owner_addresses & user_addresses

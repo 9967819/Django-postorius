@@ -37,16 +37,21 @@ class ListHeaderMatchesTest(ViewTestCase):
         self.domain = self.mm_client.create_domain('example.com')
         self.mlist = self.domain.create_list('list')
         self.user = User.objects.create_user(
-            'testuser', 'test@example.com', 'testpass')
+            'testuser', 'test@example.com', 'testpass'
+        )
         self.superuser = User.objects.create_superuser(
-            'testsu', 'su@example.com', 'testpass')
+            'testsu', 'su@example.com', 'testpass'
+        )
         self.owner = User.objects.create_user(
-            'testowner', 'owner@example.com', 'testpass')
+            'testowner', 'owner@example.com', 'testpass'
+        )
         self.moderator = User.objects.create_user(
-            'testmoderator', 'moderator@example.com', 'testpass')
+            'testmoderator', 'moderator@example.com', 'testpass'
+        )
         for user in (self.user, self.superuser, self.owner, self.moderator):
             EmailAddress.objects.create(
-                user=user, email=user.email, verified=True)
+                user=user, email=user.email, verified=True
+            )
         self.mlist.add_owner('owner@example.com')
         self.mlist.add_moderator('moderator@example.com')
 
@@ -80,22 +85,29 @@ class ListHeaderMatchesTest(ViewTestCase):
 
     def test_show_existing(self):
         self.mlist.header_matches.add(
-            header='testheader', pattern='testpattern', action='discard')
+            header='testheader', pattern='testpattern', action='discard'
+        )
         self.client.login(username='testowner', password='testpass')
         url = reverse('list_header_matches', args=['list.example.com'])
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(len(response.context["formset"]), 2)
+        self.assertEqual(len(response.context['formset']), 2)
         self.assertEqual(
-            response.context["formset"].initial,
-            [{'header': 'testheader', 'pattern': 'testpattern',
-              'action': 'discard'}])
+            response.context['formset'].initial,
+            [
+                {
+                    'header': 'testheader',
+                    'pattern': 'testpattern',
+                    'action': 'discard',
+                }
+            ],
+        )
         self.assertContains(response, 'testheader')
         self.assertContains(response, 'testpattern')
-        soup = BeautifulSoup(response.content, "html.parser")
-        tag_form = soup.find("select", {"name": "form-0-action"})
+        soup = BeautifulSoup(response.content, 'html.parser')
+        tag_form = soup.find('select', {'name': 'form-0-action'})
         self.assertIsNotNone(tag_form)
-        tag_option = tag_form.find("option", value="discard", selected=True)
+        tag_option = tag_form.find('option', value='discard', selected=True)
         self.assertIsNotNone(tag_option)
         # the new header match subform should not have ORDER or DELETE fields
         self.assertNotContains(response, 'form-1-ORDER')
@@ -161,8 +173,9 @@ class ListHeaderMatchesTest(ViewTestCase):
         self.assertEqual(response.status_code, 200)
         self.assertHasNoMessage(response)
         self.assertEqual(
-            response.context["formset"].errors,
-            [{'header': ['Please enter a header.']}])
+            response.context['formset'].errors,
+            [{'header': ['Please enter a header.']}],
+        )
         self.assertEqual(len(self.mlist.header_matches), 0)
 
     def test_add_empty_pattern(self):
@@ -183,13 +196,15 @@ class ListHeaderMatchesTest(ViewTestCase):
         self.assertEqual(response.status_code, 200)
         self.assertHasNoMessage(response)
         self.assertEqual(
-            response.context["formset"].errors,
-            [{'pattern': ['Please enter a pattern.']}])
+            response.context['formset'].errors,
+            [{'pattern': ['Please enter a pattern.']}],
+        )
         self.assertEqual(len(self.mlist.header_matches), 0)
 
     def test_edit(self):
         self.mlist.header_matches.add(
-            header='testheader', pattern='testpattern', action='discard')
+            header='testheader', pattern='testpattern', action='discard'
+        )
         self.client.login(username='testowner', password='testpass')
         url = reverse('list_header_matches', args=['list.example.com'])
         data = {
@@ -220,7 +235,8 @@ class ListHeaderMatchesTest(ViewTestCase):
 
     def test_edit_empty(self):
         self.mlist.header_matches.add(
-            header='testheader', pattern='testpattern', action='discard')
+            header='testheader', pattern='testpattern', action='discard'
+        )
         self.client.login(username='testowner', password='testpass')
         url = reverse('list_header_matches', args=['list.example.com'])
         data = {
@@ -244,10 +260,15 @@ class ListHeaderMatchesTest(ViewTestCase):
         self.assertEqual(response.status_code, 200)
         self.assertHasNoMessage(response)
         self.assertEqual(
-            response.context["formset"].errors,
-            [{'header': ['Please enter a header.'],
-              'pattern': ['Please enter a pattern.'],
-              }, {}])
+            response.context['formset'].errors,
+            [
+                {
+                    'header': ['Please enter a header.'],
+                    'pattern': ['Please enter a pattern.'],
+                },
+                {},
+            ],
+        )
         self.assertEqual(len(self.mlist.header_matches), 1)
         hm = self.mlist.header_matches[0]
         self.assertEqual(hm.header, 'testheader')
@@ -256,9 +277,11 @@ class ListHeaderMatchesTest(ViewTestCase):
 
     def test_delete(self):
         self.mlist.header_matches.add(
-            header='testheader-1', pattern='testpattern-1', action='discard')
+            header='testheader-1', pattern='testpattern-1', action='discard'
+        )
         self.mlist.header_matches.add(
-            header='testheader-2', pattern='testpattern-2', action='discard')
+            header='testheader-2', pattern='testpattern-2', action='discard'
+        )
         self.client.login(username='testowner', password='testpass')
         url = reverse('list_header_matches', args=['list.example.com'])
         data = {
@@ -294,11 +317,14 @@ class ListHeaderMatchesTest(ViewTestCase):
 
     def test_move_up(self):
         self.mlist.header_matches.add(
-            header='testheader-1', pattern='testpattern-1', action='discard')
+            header='testheader-1', pattern='testpattern-1', action='discard'
+        )
         self.mlist.header_matches.add(
-            header='testheader-2', pattern='testpattern-2', action='discard')
+            header='testheader-2', pattern='testpattern-2', action='discard'
+        )
         self.mlist.header_matches.add(
-            header='testheader-3', pattern='testpattern-3', action='discard')
+            header='testheader-3', pattern='testpattern-3', action='discard'
+        )
         self.client.login(username='testowner', password='testpass')
         url = reverse('list_header_matches', args=['list.example.com'])
         data = {
@@ -333,20 +359,27 @@ class ListHeaderMatchesTest(ViewTestCase):
         self.assertHasSuccessMessage(response)
         self.assertEqual(len(self.mlist.header_matches), 3)
         self.assertEqual(
-            [(hm.header, hm.pattern, hm.action)
-             for hm in self.mlist.header_matches],
-            [('testheader-1', 'testpattern-1', 'discard'),
-             ('testheader-3', 'testpattern-3', 'discard'),
-             ('testheader-2', 'testpattern-2', 'discard')]
-            )
+            [
+                (hm.header, hm.pattern, hm.action)
+                for hm in self.mlist.header_matches
+            ],
+            [
+                ('testheader-1', 'testpattern-1', 'discard'),
+                ('testheader-3', 'testpattern-3', 'discard'),
+                ('testheader-2', 'testpattern-2', 'discard'),
+            ],
+        )
 
     def test_move_down(self):
         self.mlist.header_matches.add(
-            header='testheader-1', pattern='testpattern-1', action='discard')
+            header='testheader-1', pattern='testpattern-1', action='discard'
+        )
         self.mlist.header_matches.add(
-            header='testheader-2', pattern='testpattern-2', action='discard')
+            header='testheader-2', pattern='testpattern-2', action='discard'
+        )
         self.mlist.header_matches.add(
-            header='testheader-3', pattern='testpattern-3', action='discard')
+            header='testheader-3', pattern='testpattern-3', action='discard'
+        )
         self.client.login(username='testowner', password='testpass')
         url = reverse('list_header_matches', args=['list.example.com'])
         data = {
@@ -381,18 +414,24 @@ class ListHeaderMatchesTest(ViewTestCase):
         self.assertHasSuccessMessage(response)
         self.assertEqual(len(self.mlist.header_matches), 3)
         self.assertEqual(
-            [(hm.header, hm.pattern, hm.action)
-             for hm in self.mlist.header_matches],
-            [('testheader-2', 'testpattern-2', 'discard'),
-             ('testheader-1', 'testpattern-1', 'discard'),
-             ('testheader-3', 'testpattern-3', 'discard')]
-            )
+            [
+                (hm.header, hm.pattern, hm.action)
+                for hm in self.mlist.header_matches
+            ],
+            [
+                ('testheader-2', 'testpattern-2', 'discard'),
+                ('testheader-1', 'testpattern-1', 'discard'),
+                ('testheader-3', 'testpattern-3', 'discard'),
+            ],
+        )
 
     def test_same_order(self):
         self.mlist.header_matches.add(
-            header='testheader-1', pattern='testpattern-1', action='discard')
+            header='testheader-1', pattern='testpattern-1', action='discard'
+        )
         self.mlist.header_matches.add(
-            header='testheader-2', pattern='testpattern-2', action='discard')
+            header='testheader-2', pattern='testpattern-2', action='discard'
+        )
         self.client.login(username='testowner', password='testpass')
         url = reverse('list_header_matches', args=['list.example.com'])
         data = {
@@ -420,22 +459,28 @@ class ListHeaderMatchesTest(ViewTestCase):
         response = self.client.post(url, data)
         self.assertEqual(response.status_code, 200)
         self.assertHasNoMessage(response)
-        for form_errors in response.context["formset"].errors:
+        for form_errors in response.context['formset'].errors:
             self.assertEqual(len(form_errors), 0)
         self.assertEqual(
-            response.context["formset"].non_form_errors(),
-            ['Header matches must have distinct orders.'])
+            response.context['formset'].non_form_errors(),
+            ['Header matches must have distinct orders.'],
+        )
         self.assertEqual(len(self.mlist.header_matches), 2)
         self.assertEqual(
-            [(hm.header, hm.pattern, hm.action)
-             for hm in self.mlist.header_matches],
-            [('testheader-1', 'testpattern-1', 'discard'),
-             ('testheader-2', 'testpattern-2', 'discard')]
-            )
+            [
+                (hm.header, hm.pattern, hm.action)
+                for hm in self.mlist.header_matches
+            ],
+            [
+                ('testheader-1', 'testpattern-1', 'discard'),
+                ('testheader-2', 'testpattern-2', 'discard'),
+            ],
+        )
 
     def test_add_existing(self):
         self.mlist.header_matches.add(
-            header='testheader', pattern='testpattern', action='discard')
+            header='testheader', pattern='testpattern', action='discard'
+        )
         self.client.login(username='testowner', password='testpass')
         url = reverse('list_header_matches', args=['list.example.com'])
         data = {
@@ -460,6 +505,9 @@ class ListHeaderMatchesTest(ViewTestCase):
         self.assertHasErrorMessage(response)
         self.assertEqual(len(self.mlist.header_matches), 1)
         self.assertEqual(
-            [(hm.header, hm.pattern, hm.action)
-             for hm in self.mlist.header_matches],
-            [('testheader', 'testpattern', 'discard')])
+            [
+                (hm.header, hm.pattern, hm.action)
+                for hm in self.mlist.header_matches
+            ],
+            [('testheader', 'testpattern', 'discard')],
+        )

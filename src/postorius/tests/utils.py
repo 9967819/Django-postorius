@@ -28,11 +28,18 @@ from django_mailman3.lib.mailman import get_mailman_client
 from django_mailman3.tests.utils import get_flash_messages
 from six import PY3, binary_type, text_type
 from six.moves.urllib_parse import (
-    parse_qsl, quote, urlencode, urlparse, urlunparse)
+    parse_qsl,
+    quote,
+    urlencode,
+    urlparse,
+    urlunparse,
+)
 
 
 def get_test_file(*fileparts):
-    return os.path.join(os.path.dirname(__file__), "test_data", *fileparts)
+    return os.path.join(os.path.dirname(__file__), 'test_data', *fileparts)
+
+
 get_test_file.__test__ = False  # noqa: E305
 
 
@@ -41,8 +48,8 @@ def reorder_request_params(request):
         parsed = None
         if PY3:
             if isinstance(params, binary_type):
-                params = params.decode("ascii")
-            parsed = parse_qsl(params, encoding="utf-8")
+                params = params.decode('ascii')
+            parsed = parse_qsl(params, encoding='utf-8')
         else:
             parsed = parse_qsl(params)
         if parsed:
@@ -51,13 +58,19 @@ def reorder_request_params(request):
             # Parsing failed, it may be a simple string.
             return params
         # sort the URL query-string by key names.
+
     uri_parts = urlparse(request.uri)
     if uri_parts.query:
-        request.uri = urlunparse((
-            uri_parts.scheme, uri_parts.netloc, uri_parts.path,
-            uri_parts.params, reorder_params(uri_parts.query),
-            uri_parts.fragment,
-        ))
+        request.uri = urlunparse(
+            (
+                uri_parts.scheme,
+                uri_parts.netloc,
+                uri_parts.path,
+                uri_parts.params,
+                reorder_params(uri_parts.query),
+                uri_parts.fragment,
+            )
+        )
         # convert the request body to text and sort the parameters.
     if isinstance(request.body, binary_type):
         try:
@@ -132,7 +145,6 @@ def create_mock_member(properties=None):
 
 
 class ViewTestCase(TransactionTestCase):
-
     def setUp(self):
         self.mm_client = get_mailman_client()
 
@@ -146,16 +158,20 @@ class ViewTestCase(TransactionTestCase):
         msgs = get_flash_messages(response)
         self.assertEqual(len(msgs), count)
         self.assertEqual(
-            msgs[0].level, messages.SUCCESS,
-            "%s: %s" % (messages.DEFAULT_TAGS[msgs[0].level], msgs[0].message))
+            msgs[0].level,
+            messages.SUCCESS,
+            '%s: %s' % (messages.DEFAULT_TAGS[msgs[0].level], msgs[0].message),
+        )
         return msgs[0].message
 
     def assertHasErrorMessage(self, response):
         msgs = get_flash_messages(response)
         self.assertEqual(len(msgs), 1)
         self.assertEqual(
-            msgs[0].level, messages.ERROR,
-            "%s: %s" % (messages.DEFAULT_TAGS[msgs[0].level], msgs[0].message))
+            msgs[0].level,
+            messages.ERROR,
+            '%s: %s' % (messages.DEFAULT_TAGS[msgs[0].level], msgs[0].message),
+        )
         return msgs[0].message
 
     def assertHasNoMessage(self, response):
@@ -164,8 +180,10 @@ class ViewTestCase(TransactionTestCase):
 
     def assertRedirectsToLogin(self, url):
         response = self.client.get(url)
-        self.assertRedirects(response, '{}?next={}'.format(
-            reverse(settings.LOGIN_URL), quote(url)))
+        self.assertRedirects(
+            response,
+            '{}?next={}'.format(reverse(settings.LOGIN_URL), quote(url)),
+        )
 
     @classmethod
     def write_response(cls, response):

@@ -27,33 +27,42 @@ from postorius.tests.utils import ViewTestCase
 
 
 class AuthTestCase(ViewTestCase):
-
     def setUp(self):
         super().setUp()
         self.domain = self.mm_client.create_domain('example.com')
         self.mlist = self.domain.create_list('authlist')
         self.user1 = User.objects.create_user(
-            'aperson', 'aperson@example.com', 'pass')
-        EmailAddress.objects.create(user=self.user1,
-                                    email=self.user1.email,
-                                    verified=True)
+            'aperson', 'aperson@example.com', 'pass'
+        )
+        EmailAddress.objects.create(
+            user=self.user1, email=self.user1.email, verified=True
+        )
         self.user2 = User.objects.create_user(
-            'bperson', 'BPERSON@example.com', 'pass')
-        EmailAddress.objects.create(user=self.user2,
-                                    email=self.user2.email,
-                                    verified=True)
+            'bperson', 'BPERSON@example.com', 'pass'
+        )
+        EmailAddress.objects.create(
+            user=self.user2, email=self.user2.email, verified=True
+        )
         self.mlist.subscribe(
             'APERSON@example.com',
-            pre_verified=True, pre_confirmed=True, pre_approved=True)
+            pre_verified=True,
+            pre_confirmed=True,
+            pre_approved=True,
+        )
         self.mlist.subscribe(
             'bperson@example.com',
-            pre_verified=True, pre_confirmed=True, pre_approved=True)
+            pre_verified=True,
+            pre_confirmed=True,
+            pre_approved=True,
+        )
 
     def test_user_in_roster_case_sensitivity(self):
         # Test that if Core stores the email adddress with Upper case letters
         # and Postorius stores it in lower case, the matching works.
         self.assertTrue(
-            user_is_in_list_roster(self.user1, self.mlist, 'member'))
+            user_is_in_list_roster(self.user1, self.mlist, 'member')
+        )
 
         self.assertTrue(
-            user_is_in_list_roster(self.user2, self.mlist, 'member'))
+            user_is_in_list_roster(self.user2, self.mlist, 'member')
+        )

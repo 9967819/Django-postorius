@@ -26,12 +26,13 @@ from postorius.forms import DomainForm
 
 
 class DomainViewTest(TestCase):
-
     def setUp(self):
-        self.user = User.objects.create_superuser('su', 'su@example.com',
-                                                  'pass')
+        self.user = User.objects.create_superuser(
+            'su', 'su@example.com', 'pass'
+        )
         EmailAddress.objects.create(
-            user=self.user, email=self.user.email, verified=True)
+            user=self.user, email=self.user.email, verified=True
+        )
 
     def tearDown(self):
         self.user.delete()

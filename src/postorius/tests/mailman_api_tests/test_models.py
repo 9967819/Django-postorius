@@ -20,7 +20,6 @@ from postorius.tests.utils import ViewTestCase
 
 
 class TestMailmanListManager(ViewTestCase):
-
     def setUp(self):
         super().setUp()
         self.domain = self.mm_client.create_domain('example.com')
@@ -36,14 +35,16 @@ class TestMailmanListManager(ViewTestCase):
         self.assertEqual(len(lists), 3)
         self.assertEqual(
             [x.fqdn_listname for x in lists],
-            ['bar@example.com', 'baz@most-desirable.org', 'foo@example.com'])
+            ['bar@example.com', 'baz@most-desirable.org', 'foo@example.com'],
+        )
 
     def test_get_by_mail_host(self):
         lists = self.list_manager.by_mail_host('example.com')
         self.assertEqual(len(lists), 2)
         self.assertEqual(
             [x.fqdn_listname for x in lists],
-            ['bar@example.com', 'foo@example.com'])
+            ['bar@example.com', 'foo@example.com'],
+        )
 
     def test_get_single_mailinglist(self):
         mlist = self.list_manager.get('baz@most-desirable.org')

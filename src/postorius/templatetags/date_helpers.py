@@ -25,7 +25,7 @@ register = template.Library()
 
 @register.filter
 def datetime_parse(value):
-    """Parse string value into datetime object. """
+    """Parse string value into datetime object."""
     try:
         return parse_datetime(value)
     except ValueError:

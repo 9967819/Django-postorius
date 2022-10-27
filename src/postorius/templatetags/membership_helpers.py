@@ -75,10 +75,10 @@ def owner_repr(owner):
 @register.filter
 def delivery_mode(value):
     """Convert the delivery_mode value into translated value."""
-    return dict(DELIVERY_MODE_CHOICES).get(value, _("None"))
+    return dict(DELIVERY_MODE_CHOICES).get(value, _('None'))
 
 
 @register.filter
 def moderation_action(value):
     """Convert the moderation_action value into translated text."""
-    return dict(ACTION_CHOICES).get(value, _("None"))
+    return dict(ACTION_CHOICES).get(value, _('None'))

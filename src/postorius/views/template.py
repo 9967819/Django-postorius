@@ -43,11 +43,11 @@ def _clean_with_no_strip(field, data):
 
 
 class ListContextMixin:
-
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
         context['list'] = List.objects.get_or_404(
-            fqdn_listname=self.kwargs['list_id'])
+            fqdn_listname=self.kwargs['list_id']
+        )
         return context
 
 
@@ -57,8 +57,7 @@ class ListTemplateIndexView(ListOwnerMixin, ListContextMixin, ListView):
     template_name = 'postorius/lists/template_list.html'
 
     def get_queryset(self):
-        return EmailTemplate.objects.filter(
-            identifier=self.kwargs['list_id'])
+        return EmailTemplate.objects.filter(identifier=self.kwargs['list_id'])
 
 
 class ListTemplateCreateView(ListOwnerMixin, ListContextMixin, CreateView):
@@ -68,13 +67,13 @@ class ListTemplateCreateView(ListOwnerMixin, ListContextMixin, CreateView):
     fields = ['name', 'data']
 
     def get_success_url(self):
-        return reverse(
-            'list_template_list', args=(self.kwargs['list_id'],))
+        return reverse('list_template_list', args=(self.kwargs['list_id'],))
 
     def form_valid(self, form):
         formdata = form.cleaned_data
-        formdata['data'] = _clean_with_no_strip(form.fields['data'],
-                                                form.data['data'])
+        formdata['data'] = _clean_with_no_strip(
+            form.fields['data'], form.data['data']
+        )
         formdata['identifier'] = self.kwargs['list_id']
         formdata['context'] = 'list'
         email_template = EmailTemplate(**formdata)
@@ -85,9 +84,11 @@ class ListTemplateCreateView(ListOwnerMixin, ListContextMixin, CreateView):
             email_template.save()
         except IntegrityError as e:
             form.add_error('name', str(e))
-            form.add_error('name',
-                           'You already have this template set. '
-                           'Use edit instead of creating a new one.')
+            form.add_error(
+                'name',
+                'You already have this template set. '
+                'Use edit instead of creating a new one.',
+            )
             return self.form_invalid(form)
         return redirect(self.get_success_url())
 
@@ -99,8 +100,7 @@ class ListTemplateUpdateView(ListOwnerMixin, ListContextMixin, UpdateView):
     form_class = TemplateUpdateForm
 
     def get_success_url(self):
-        return reverse(
-            'list_template_list', args=(self.kwargs['list_id'],))
+        return reverse('list_template_list', args=(self.kwargs['list_id'],))
 
 
 class ListTemplateDeleteView(ListOwnerMixin, ListContextMixin, DeleteView):
@@ -109,16 +109,15 @@ class ListTemplateDeleteView(ListOwnerMixin, ListContextMixin, DeleteView):
     model = EmailTemplate
 
     def get_success_url(self):
-        return reverse(
-            'list_template_list', args=(self.kwargs['list_id'],))
+        return reverse('list_template_list', args=(self.kwargs['list_id'],))
 
 
 class DomainContextMixin:
-
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
         context['domain'] = Domain.objects.get_or_404(
-            mail_host=self.kwargs['domain'])
+            mail_host=self.kwargs['domain']
+        )
         return context
 
 
@@ -133,7 +132,8 @@ class DomainTemplateIndexView(DomainOwnerMixin, DomainContextMixin, ListView):
 
 
 class DomainTemplateCreateView(
-        DomainOwnerMixin, DomainContextMixin, CreateView):
+    DomainOwnerMixin, DomainContextMixin, CreateView
+):
 
     model = EmailTemplate
     template_name = 'postorius/domain/template_add.html'
@@ -141,13 +141,13 @@ class DomainTemplateCreateView(
     header = 'New Template'
 
     def get_success_url(self):
-        return reverse('domain_template_list',
-                       args=(self.kwargs['domain'],))
+        return reverse('domain_template_list', args=(self.kwargs['domain'],))
 
     def form_valid(self, form):
         formdata = form.cleaned_data
-        formdata['data'] = _clean_with_no_strip(form.fields['data'],
-                                                form.data['data'])
+        formdata['data'] = _clean_with_no_strip(
+            form.fields['data'], form.data['data']
+        )
         formdata['identifier'] = self.kwargs['domain']
         formdata['context'] = 'domain'
         template = EmailTemplate(**formdata)
@@ -158,15 +158,18 @@ class DomainTemplateCreateView(
             template.save()
         except IntegrityError as e:
             form.add_error('name', str(e))
-            form.add_error('name',
-                           'You already have this template set.'
-                           'Use edit instead of creating a new one.')
+            form.add_error(
+                'name',
+                'You already have this template set.'
+                'Use edit instead of creating a new one.',
+            )
             return self.form_invalid(form)
         return redirect(self.get_success_url())
 
 
 class DomainTemplateUpdateView(
-        DomainOwnerMixin, DomainContextMixin, UpdateView):
+    DomainOwnerMixin, DomainContextMixin, UpdateView
+):
 
     model = EmailTemplate
     template_name = 'postorius/domain/template_add.html'
@@ -174,19 +177,18 @@ class DomainTemplateUpdateView(
     header = 'Edit Template'
 
     def get_success_url(self):
-        return reverse('domain_template_list',
-                       args=(self.kwargs['domain'],))
+        return reverse('domain_template_list', args=(self.kwargs['domain'],))
 
 
 class DomainTemplateDeleteView(
-        DomainOwnerMixin, DomainContextMixin, DeleteView):
+    DomainOwnerMixin, DomainContextMixin, DeleteView
+):
 
     template_name = 'postorius/domain/template_delete.html'
     model = EmailTemplate
 
     def get_success_url(self):
-        return reverse('domain_template_list',
-                       args=(self.kwargs['domain'],))
+        return reverse('domain_template_list', args=(self.kwargs['domain'],))
 
 
 @require_safe
@@ -196,7 +198,8 @@ def get_template_data(request, context, identifier, name):
     # content, if it exists, return a 404 otherwise.
     if context not in ('list', 'domain'):
         return HttpResponseBadRequest(
-            'context should be either "list" or "domain"')
+            'context should be either "list" or "domain"'
+        )
     data = dict(name=name, identifier=identifier, context=context)
     # Depending on the context, populate the right identifier.
     try:
@@ -209,5 +212,4 @@ def get_template_data(request, context, identifier, name):
     content_type = 'text/plain'
     if settings.DEFAULT_CHARSET:
         content_type += '; charset=' + settings.DEFAULT_CHARSET
-    return HttpResponse(template.data,
-                        content_type=content_type)
+    return HttpResponse(template.data, content_type=content_type)

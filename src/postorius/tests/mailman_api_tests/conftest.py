@@ -26,7 +26,10 @@ from mailman.config import config
 from mailman.core import initialize
 from mailman.core.initialize import INHIBIT_CONFIG_FILE
 from mailman.testing.helpers import (
-    TestableMaster, reset_the_world, wait_for_webservice)
+    TestableMaster,
+    reset_the_world,
+    wait_for_webservice,
+)
 
 
 @pytest.fixture(scope='session')
@@ -52,12 +55,18 @@ def config_initialize(request):
     # to run the actual postmap command, which may not exist anyway.
     postfix_cfg = os.path.join(var_dir, 'postfix.cfg')
     with open(postfix_cfg, 'w') as fp:
-        print(dedent("""
+        print(
+            dedent(
+                """
         [postfix]
         postmap_command: true
         transport_file_type: hash
-        """), file=fp)
-        test_config = dedent("""
+        """
+            ),
+            file=fp,
+        )
+        test_config = dedent(
+            """
         [mailman]
         layout: testing
         [paths.testing]
@@ -85,7 +94,10 @@ def config_initialize(request):
 
         [archiver.prototype]
         enable: yes
-        """.format(var_dir, postfix_cfg))
+        """.format(
+                var_dir, postfix_cfg
+            )
+        )
         config.create_paths = True
         config.push('test config', test_config)
         # Initialize everything else.

@@ -21,7 +21,10 @@ from django.contrib.sites.models import Site
 from django.test import TestCase
 
 from postorius.forms.domain_forms import (
-    DomainEditForm, DomainForm, DomainOwnerForm)
+    DomainEditForm,
+    DomainForm,
+    DomainOwnerForm,
+)
 
 
 class TestDomainEditForm(TestCase):
@@ -58,81 +61,107 @@ class TestDomainForm(TestCase):
         self.assertTrue(form.fields['site'].label == 'Web Host')
 
     def test_error_messages(self):
-        form = DomainForm({
-            'mail_host': 'mailman.most-desirable.org',
-        })
+        form = DomainForm(
+            {
+                'mail_host': 'mailman.most-desirable.org',
+            }
+        )
         self.assertFalse(form.is_valid())
         self.assertTrue('site' in form.errors.keys())
         self.assertEqual(form.errors['site'][0], 'Please enter a domain name')
         form = DomainForm({'site': 1})
         self.assertFalse(form.is_valid())
         self.assertTrue('mail_host' in form.errors.keys())
-        self.assertEqual(form.errors['mail_host'][0],
-                         'Please enter a domain name')
+        self.assertEqual(
+            form.errors['mail_host'][0], 'Please enter a domain name'
+        )
 
     def test_form_fields_validation(self):
         # With all valid values, the form should be valid.
-        form = DomainForm({
-            'mail_host': 'mailman.most-desirable.org',
-            'description': 'The Most Desirable organization',
-            'site': 1,
-        })
+        form = DomainForm(
+            {
+                'mail_host': 'mailman.most-desirable.org',
+                'description': 'The Most Desirable organization',
+                'site': 1,
+            }
+        )
         self.assertTrue(form.is_valid())
         # With a valid alias_domain the form should be valid.
-        form = DomainForm({
-            'mail_host': 'mailman.most-desirable.org',
-            'description': 'The Most Desirable organization',
-            'alias_domain': 'x.most-desirable.org',
-            'site': 1,
-        })
+        form = DomainForm(
+            {
+                'mail_host': 'mailman.most-desirable.org',
+                'description': 'The Most Desirable organization',
+                'alias_domain': 'x.most-desirable.org',
+                'site': 1,
+            }
+        )
         self.assertTrue(form.is_valid())
         # Because there is no site_id 2 by default in Django, this form should
         # not be valid.
-        form = DomainForm({
-            'mail_host': 'mailman.most-desirable.org',
-            'description': 'The Most Desirable organization',
-            'site': 2,
-        })
+        form = DomainForm(
+            {
+                'mail_host': 'mailman.most-desirable.org',
+                'description': 'The Most Desirable organization',
+                'site': 2,
+            }
+        )
         self.assertFalse(form.is_valid())
         self.assertTrue('site' in form.errors.keys())
-        self.assertEqual(form.errors['site'][0],
-                         'Select a valid choice.'
-                         ' That choice is not one of the available choices.')
+        self.assertEqual(
+            form.errors['site'][0],
+            'Select a valid choice.'
+            ' That choice is not one of the available choices.',
+        )
         # Now we use an invalid value for domain name.
-        form = DomainForm({
-            'mail_host': 'mailman@most-desirable.org',
-            'description': 'The Most Desirable organization',
-            'site': 1,
-        })
+        form = DomainForm(
+            {
+                'mail_host': 'mailman@most-desirable.org',
+                'description': 'The Most Desirable organization',
+                'site': 1,
+            }
+        )
         self.assertFalse(form.is_valid())
         self.assertTrue('mail_host' in form.errors.keys())
-        self.assertEqual(form.errors['mail_host'][0],
-                         'Please enter a valid domain name')
+        self.assertEqual(
+            form.errors['mail_host'][0], 'Please enter a valid domain name'
+        )
         # Now we use an invalid value for alias domain.
-        form = DomainForm({
-            'mail_host': 'mailman.most-desirable.org',
-            'description': 'The Most Desirable organization',
-            'alias_domain': 'x@most-desirable.org',
-            'site': 1,
-        })
+        form = DomainForm(
+            {
+                'mail_host': 'mailman.most-desirable.org',
+                'description': 'The Most Desirable organization',
+                'alias_domain': 'x@most-desirable.org',
+                'site': 1,
+            }
+        )
         self.assertFalse(form.is_valid())
         self.assertTrue('alias_domain' in form.errors.keys())
-        self.assertEqual(form.errors['alias_domain'][0],
-                         'Please enter a valid domain name or nothing.')
+        self.assertEqual(
+            form.errors['alias_domain'][0],
+            'Please enter a valid domain name or nothing.',
+        )
 
     def test_site_field_values(self):
         form = DomainForm()
         self.assertTrue('site' in form.fields.keys())
-        self.assertTrue([x for x in form.fields['site'].choices],
-                        [(1, 'example.com (example.com)')])
+        self.assertTrue(
+            [x for x in form.fields['site'].choices],
+            [(1, 'example.com (example.com)')],
+        )
         # Now let's create a new domain and see if it shows up.
         Site.objects.create(domain='mail.most-desirable.org', name='My Domain')
         Site.objects.create(domain='dom.most-desirable.org', name='A Domain')
         # Items are ordered by "name".
-        self.assertTrue([x for x in form.fields['site'].choices],
-                        [(1, 'A Domain (dom.most-desirable.org)'),
-                         (2, 'example.com (example.com)'),
-                         (3, 'My Domain (mail.most-desirable.org)')])
+        self.assertTrue(
+            [x for x in form.fields['site'].choices],
+            [
+                (1, 'A Domain (dom.most-desirable.org)'),
+                (2, 'example.com (example.com)'),
+                (3, 'My Domain (mail.most-desirable.org)'),
+            ],
+        )
         # Initial value should be set to the current site.
-        self.assertEqual(form.fields['site'].initial(),
-                         Site.objects.get(domain='example.com'))
+        self.assertEqual(
+            form.fields['site'].initial(),
+            Site.objects.get(domain='example.com'),
+        )

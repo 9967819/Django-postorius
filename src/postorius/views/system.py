@@ -47,7 +47,7 @@ def system_information(request):
     queues = {
         queue_name: len(queue.files)
         for queue_name, queue in client.queues.items()
-        }
+    }
 
     return render(
         request,

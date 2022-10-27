@@ -23,13 +23,16 @@ from django.utils.translation import gettext_lazy as _
 
 class MemberForm(forms.Form):
     """Assign a role to the member"""
+
     email = forms.EmailField(
         label=_('Email Address'),
         error_messages={
             'required': _('Please enter an email address.'),
-            'invalid': _('Please enter a valid email address.')})
+            'invalid': _('Please enter a valid email address.'),
+        },
+    )
     display_name = forms.CharField(
         label=_('Display Name'),
         required=False,
-        error_messages={
-            'invalid': _('Please enter a display name.')})
+        error_messages={'invalid': _('Please enter a display name.')},
+    )

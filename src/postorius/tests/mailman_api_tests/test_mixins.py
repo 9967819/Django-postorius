@@ -30,40 +30,51 @@ from allauth.account.models import EmailAddress
 from django_mailman3.models import MailDomain
 
 from postorius.auth.mixins import (
-    DomainOwnerMixin, ListModeratorMixin, ListOwnerMixin)
+    DomainOwnerMixin,
+    ListModeratorMixin,
+    ListOwnerMixin,
+)
 from postorius.tests.utils import ViewTestCase
 
 
 class TestAuthenticationMixins(ViewTestCase):
-
     def setUp(self):
         super().setUp()
         self.domain = self.mm_client.create_domain('example.com')
         self.su = User.objects.create_superuser(
-            username='su', email='su@example.com', password='testpass')
+            username='su', email='su@example.com', password='testpass'
+        )
         self.do = User.objects.create_user(
-            username='domain_owner', email='do@example.com',
-            password='testpass')
+            username='domain_owner',
+            email='do@example.com',
+            password='testpass',
+        )
         self.list_owner = User.objects.create_user(
-            username='list_owner', email='owner@example.com',
-            password='testpass')
+            username='list_owner',
+            email='owner@example.com',
+            password='testpass',
+        )
         self.list_mod = User.objects.create_user(
-            username='list_mod', email='mod@example.com',
-            password='testpass')
+            username='list_mod', email='mod@example.com', password='testpass'
+        )
         self.testuser = User.objects.create_user(
-            username='testuser', email='testuser@example.com',
-            password='testpass')
+            username='testuser',
+            email='testuser@example.com',
+            password='testpass',
+        )
         for user in (
-                self.testuser,
-                self.su,
-                self.list_owner,
-                self.list_mod,
-                self.do
+            self.testuser,
+            self.su,
+            self.list_owner,
+            self.list_mod,
+            self.do,
         ):
             EmailAddress.objects.create(
-                user=user, email=user.email, verified=True)
+                user=user, email=user.email, verified=True
+            )
         MailDomain.objects.create(
-            site=Site.objects.get_current(), mail_domain='example.com')
+            site=Site.objects.get_current(), mail_domain='example.com'
+        )
         self.domain.add_owner('do@example.com')
         self.mlist = self.domain.create_list('fun')
         self.mlist.add_owner('owner@example.com')
@@ -74,9 +85,11 @@ class TestAuthenticationMixins(ViewTestCase):
         class TestView(ListOwnerMixin, TemplateView):
             def get(request, *args, **kwargs):
                 return HttpResponse('Hello')
+
         view = TestView.as_view()
         request = self.factory.get(
-            reverse('list_delete', args=('fun.example.com',)))
+            reverse('list_delete', args=('fun.example.com',))
+        )
         # Make sure that an anonymous user isn't able to access this view.
         request.user = AnonymousUser()
         with self.assertRaises(PermissionDenied):
@@ -99,9 +112,11 @@ class TestAuthenticationMixins(ViewTestCase):
         class TestView(ListModeratorMixin, TemplateView):
             def get(request, *args, **kwargs):
                 return HttpResponse('Hello')
+
         view = TestView.as_view()
         request = self.factory.get(
-            reverse('list_delete', args=('fun.example.com',)))
+            reverse('list_delete', args=('fun.example.com',))
+        )
         # Make sure that an anonymous user can not get this.
         request.user = AnonymousUser()
         with self.assertRaises(PermissionDenied):
@@ -128,9 +143,11 @@ class TestAuthenticationMixins(ViewTestCase):
         class TestView(DomainOwnerMixin, TemplateView):
             def get(request, *args, **kwargs):
                 return HttpResponse('Hello')
+
         view = TestView.as_view()
         request = self.factory.get(
-            reverse('domain_delete', args=('example.com',)))
+            reverse('domain_delete', args=('example.com',))
+        )
         # Non logged-in user.
         request.user = AnonymousUser()
         with self.assertRaises(PermissionDenied):

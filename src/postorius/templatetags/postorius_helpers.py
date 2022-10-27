@@ -26,7 +26,7 @@ register = template.Library()
 def user_display(user):
     """Return a User's formatted display_name and email."""
     addresses = user.addresses
-    if user.display_name is not None and user.display_name != "":
+    if user.display_name is not None and user.display_name != '':
         if len(addresses) > 0:
             # We can't use email.utils.formataddr because it will return an
             # RFC2047 encoded display name part for non-ascii.  We don't need
@@ -37,4 +37,4 @@ def user_display(user):
             return user.display_name
     if len(addresses) > 0:
         return addresses[0].email
-    return "None"
+    return 'None'

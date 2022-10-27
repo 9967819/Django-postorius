@@ -49,12 +49,12 @@ _email_template_help_text = _(
     '$display_name: Display name of the mailing list e.g. Ant \n'
     '$short_listname: Local part of the listname e.g. ant \n'
     '$domain: The domain part of the listname e.g. example.com \n'
-    '$info: The mailing list\'s longer descriptive text \n'
+    "$info: The mailing list's longer descriptive text \n"
     '$request_email: The email address for -request address \n'
     '$owner_email: The email address for -owner address \n'
     '$site_email: The email address to reach the owners of the site \n'
-    '$language: The two letter language code for list\'s preferred language e.g. fr, en, de \n'  # noqa: E501
-    )
+    "$language: The two letter language code for list's preferred language e.g. fr, en, de \n"  # noqa: E501
+)
 
 
 class SubscriptionMode(Enum):
@@ -71,6 +71,7 @@ class MemberRole(Enum):
     role values to translations. At some point, we want to use MemberRole.owner
     in all the places we are using the literal role as string.
     """
+
     owner = _('owner')
     member = _('member')
     nonmember = _('nonmember')
@@ -78,13 +79,14 @@ class MemberRole(Enum):
 
 
 class MailmanApiError(Exception):
-    """Raised if the API is not available.
-    """
+    """Raised if the API is not available."""
+
     pass
 
 
 class Mailman404Error(Exception):
     """Proxy exception. Raised if the API returns 404."""
+
     pass
 
 
@@ -120,8 +122,7 @@ class MailmanRestManager(object):
             raise MailmanApiError(e)
 
     def get_or_404(self, *args, **kwargs):
-        """Similar to `self.get` but raises standard Django 404 error.
-        """
+        """Similar to `self.get` but raises standard Django 404 error."""
         try:
             return self.get(*args, **kwargs)
         except Mailman404Error:
@@ -132,7 +133,8 @@ class MailmanRestManager(object):
     def create(self, *args, **kwargs):
         try:
             method = getattr(
-                get_mailman_client(), 'create_' + self.resource_name)
+                get_mailman_client(), 'create_' + self.resource_name
+            )
             return method(*args, **kwargs)
         except AttributeError as e:
             raise MailmanApiError(e)
@@ -152,14 +154,14 @@ class MailmanRestManager(object):
 
 
 class MailmanListManager(MailmanRestManager):
-
     def __init__(self):
         super(MailmanListManager, self).__init__('list', 'lists')
 
     def all(self, advertised=False):
         try:
             method = getattr(
-                get_mailman_client(), 'get_' + self.resource_name_plural)
+                get_mailman_client(), 'get_' + self.resource_name_plural
+            )
             return method(advertised=advertised)
         except AttributeError:
             raise MailmanApiError
@@ -176,14 +178,13 @@ class MailmanListManager(MailmanRestManager):
 
 
 class MailmanUserManager(MailmanRestManager):
-
     def __init__(self):
         super(MailmanUserManager, self).__init__('user', 'users')
 
 
 class MailmanRestModel(object):
-    """Simple REST Model class to make REST API calls Django style.
-    """
+    """Simple REST Model class to make REST API calls Django style."""
+
     MailmanApiError = MailmanApiError
     DoesNotExist = Mailman404Error
 
@@ -199,39 +200,39 @@ class MailmanRestModel(object):
 
 
 class Domain(MailmanRestModel):
-    """Domain model class.
-    """
+    """Domain model class."""
+
     objects = MailmanRestManager('domain', 'domains')
 
 
 class List(MailmanRestModel):
-    """List model class.
-    """
+    """List model class."""
+
     objects = MailmanListManager()
 
 
 class MailmanUser(MailmanRestModel):
-    """MailmanUser model class.
-    """
+    """MailmanUser model class."""
+
     objects = MailmanUserManager()
 
 
 class Member(MailmanRestModel):
-    """Member model class.
-    """
+    """Member model class."""
+
     objects = MailmanRestManager('member', 'members')
 
 
 class Style(MailmanRestModel):
-    """
-    """
+    """ """
+
     objects = MailmanRestManager(None, 'styles')
 
 
 TEMPLATE_CONTEXT_CHOICES = (
     ('site', 'Site Wide'),
     ('domain', 'Domain Wide'),
-    ('list', 'MailingList Wide')
+    ('list', 'MailingList Wide'),
 )
 
 
@@ -245,21 +246,27 @@ class EmailTemplate(models.Model):
     # template file's name (key) prepended in square brackets to the
     # template's purpose (value).
     _templates_list_choices = [
-        (t[0], format_lazy("[{key}] - {value}", key=t[0], value=t[1]))
+        (t[0], format_lazy('[{key}] - {value}', key=t[0], value=t[1]))
         for t in TEMPLATES_LIST
     ]
 
     name = models.CharField(
-        max_length=100, choices=_templates_list_choices,
-        help_text=_('Choose the template you want to customize.'))
+        max_length=100,
+        choices=_templates_list_choices,
+        help_text=_('Choose the template you want to customize.'),
+    )
     data = models.TextField(
         help_text=_email_template_help_text,
         blank=True,
     )
     language = models.CharField(
-        max_length=5, choices=LANGUAGES,
-        help_text=_('Language for the template, this should be the list\'s preferred language.'),     # noqa: E501
-        blank=True)
+        max_length=5,
+        choices=LANGUAGES,
+        help_text=_(
+            "Language for the template, this should be the list's preferred language."  # noqa: E501
+        ),
+        blank=True,
+    )
     created_at = models.DateTimeField(auto_now_add=True)
     modified_at = models.DateTimeField(auto_now=True)
     context = models.CharField(max_length=50, choices=TEMPLATE_CONTEXT_CHOICES)
@@ -282,12 +289,15 @@ class EmailTemplate(models.Model):
         base_url = getattr(settings, 'POSTORIUS_TEMPLATE_BASE_URL', None)
         if not base_url:
             raise ImproperlyConfigured(
-                'Setting "POSTORIUS_TEMPLATE_BASE_URL" is not configured.')
+                'Setting "POSTORIUS_TEMPLATE_BASE_URL" is not configured.'
+            )
         resource_url = reverse(
             'rest_template',
-            kwargs=dict(context=self.context,
-                        identifier=self.identifier,
-                        name=self.name)
+            kwargs=dict(
+                context=self.context,
+                identifier=self.identifier,
+                name=self.name,
+            ),
         )
         return urljoin(base_url, resource_url)
 

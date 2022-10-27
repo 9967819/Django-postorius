@@ -25,8 +25,11 @@ from django.utils.translation import gettext_lazy as _
 from allauth.account.models import EmailAddress
 
 from postorius.forms.fields import (
-    NullBooleanRadioSelect, delivery_mode_field, delivery_status_field,
-    moderation_action_field)
+    NullBooleanRadioSelect,
+    delivery_mode_field,
+    delivery_status_field,
+    moderation_action_field,
+)
 from postorius.utils import LANGUAGES, with_empty_choice
 
 
@@ -39,11 +42,13 @@ class UserPreferences(forms.Form):
     def __init__(self, *args, **kwargs):
         self._preferences = kwargs.pop('preferences', None)
         self.disabled_delivery_choices = kwargs.pop(
-            'disabled_delivery_choices', [])
+            'disabled_delivery_choices', []
+        )
         super().__init__(*args, **kwargs)
         # Disable some options to be set.
-        self.fields['delivery_status'].widget.disabled_choices = (
-            self.disabled_delivery_choices)
+        self.fields[
+            'delivery_status'
+        ].widget.disabled_choices = self.disabled_delivery_choices
 
     @property
     def initial(self):
@@ -65,15 +70,18 @@ class UserPreferences(forms.Form):
         label=_('Receive own postings'),
         help_text=_(
             'Ordinarily, you will get a copy of every message you post to the '
-            'list. If you don\'t want to receive this copy, set this option '
+            "list. If you don't want to receive this copy, set this option "
             'to No.'
-        ))
+        ),
+    )
     acknowledge_posts = forms.NullBooleanField(
         widget=NullBooleanRadioSelect(choices=choices),
         required=False,
         label=_('Acknowledge posts'),
         help_text=_(
-            'Receive acknowledgement mail when you send mail to the list?'))
+            'Receive acknowledgement mail when you send mail to the list?'
+        ),
+    )
     hide_address = forms.NullBooleanField(
         widget=NullBooleanRadioSelect(choices=choices),
         required=False,
@@ -83,7 +91,9 @@ class UserPreferences(forms.Form):
             'normally shown (in an obscured fashion to thwart spam '
             'harvesters). '
             'If you do not want your email address to show up on this '
-            'membership roster at all, select Yes for this option.'))
+            'membership roster at all, select Yes for this option.'
+        ),
+    )
     receive_list_copy = forms.NullBooleanField(
         widget=NullBooleanRadioSelect(choices=choices),
         required=False,
@@ -92,7 +102,9 @@ class UserPreferences(forms.Form):
             'When you are listed explicitly in the To: or Cc: headers of a '
             'list message, you can opt to not receive another copy from the '
             'mailing list. Select Yes to receive copies. '
-            'Select No to avoid receiving copies from the mailing list'))
+            'Select No to avoid receiving copies from the mailing list'
+        ),
+    )
 
     preferred_language = forms.ChoiceField(
         widget=forms.Select(),
@@ -101,9 +113,11 @@ class UserPreferences(forms.Form):
         label=_('Preferred language'),
         help_text=_(
             'Preferred language for your interactions with Mailman. When '
-            'this is set, it will override the MailingList\'s preferred '
+            "this is set, it will override the MailingList's preferred "
             'language. This affects which language is used for your '
-            'email notifications and such.'))
+            'email notifications and such.'
+        ),
+    )
 
     class Meta:
 
@@ -111,9 +125,19 @@ class UserPreferences(forms.Form):
         Class to define the name of the fieldsets and what should be
         included in each.
         """
-        layout = [["User Preferences", "acknowledge_posts", "hide_address",
-                   "receive_list_copy", "receive_own_postings",
-                   "delivery_mode", "delivery_status", "preferred_language"]]
+
+        layout = [
+            [
+                'User Preferences',
+                'acknowledge_posts',
+                'hide_address',
+                'receive_list_copy',
+                'receive_own_postings',
+                'delivery_mode',
+                'delivery_status',
+                'preferred_language',
+            ]
+        ]
 
     def save(self):
         # Note (maxking): It is possible that delivery_status field will always
@@ -121,7 +145,7 @@ class UserPreferences(forms.Form):
         if not self.changed_data:
             return
         for key in self.changed_data:
-            if self.cleaned_data[key] not in (None, ""):
+            if self.cleaned_data[key] not in (None, ''):
                 # None: nothing set yet. Remember to remove this test
                 # when Mailman accepts None as a "reset to default"
                 # value.
@@ -144,25 +168,27 @@ class UserPreferences(forms.Form):
         # not, just raise a ValidationError.
         if val in self.disabled_delivery_choices:
             raise ValidationError(
-                _('Cannot set delivery_status to {}').format(val))
+                _('Cannot set delivery_status to {}').format(val)
+            )
         # The change seems correct, just return the value.
         return val
 
 
 class UserPreferencesFormset(forms.BaseFormSet):
-
     def __init__(self, *args, **kwargs):
         self._preferences = kwargs.pop('preferences')
         self._disabled_delivery_choices = kwargs.pop(
-            'disabled_delivery_choices', [])
-        kwargs["initial"] = self._preferences
+            'disabled_delivery_choices', []
+        )
+        kwargs['initial'] = self._preferences
         super(UserPreferencesFormset, self).__init__(*args, **kwargs)
 
     def _construct_form(self, i, **kwargs):
         form = super(UserPreferencesFormset, self)._construct_form(i, **kwargs)
         form._preferences = self._preferences[i]
-        form.fields['delivery_status'].widget.disabled_choices = (
-            self._disabled_delivery_choices)
+        form.fields[
+            'delivery_status'
+        ].widget.disabled_choices = self._disabled_delivery_choices
         return form
 
     def save(self):
@@ -185,8 +211,10 @@ class ManageMemberForm(forms.Form):
 
     @property
     def initial(self):
-        return {'moderation_action': self.member.moderation_action,
-                'delivery_mode': self.member.delivery_mode}
+        return {
+            'moderation_action': self.member.moderation_action,
+            'delivery_mode': self.member.delivery_mode,
+        }
 
     @initial.setter
     def initial(self, value):
@@ -201,14 +229,13 @@ class ManageMemberForm(forms.Form):
             return False
         for each in self.changed_data:
             updated = self.cleaned_data.get(each)
-            if updated not in (None, ""):
+            if updated not in (None, ''):
                 setattr(self.member, each, updated)
         self.member.save()
         return True
 
 
 class ManageMemberFormSet(forms.BaseFormSet):
-
     def __init__(self, *args, **kw):
         self._members = kw.pop('members')
         kw['initial'] = self._members
@@ -240,8 +267,8 @@ class ManageAddressForm(forms.Form):
         widget=forms.CheckboxInput(),
         required=False,
         label=_('Verified'),
-        help_text=_(
-            'Specifies whether or not this email address is verified'))
+        help_text=_('Specifies whether or not this email address is verified'),
+    )
 
     # TODO: Primary/Preferred Address. Needs integration with EmailAddress
     # model from Django/Allauth.
@@ -285,7 +312,6 @@ class ManageAddressForm(forms.Form):
 
 
 class ManageAddressFormSet(forms.BaseFormSet):
-
     def __init__(self, *args, **kw):
         self._addresses = kw.pop('addresses')
         kw['initial'] = self._addresses
@@ -313,9 +339,7 @@ class ManageAddressFormSet(forms.BaseFormSet):
 
 class ManageUserForm(forms.Form):
 
-    display_name = forms.CharField(
-        label=_('Display Name'),
-        required=True)
+    display_name = forms.CharField(label=_('Display Name'), required=True)
 
     def __init__(self, *args, **kw):
         self.user = kw.pop('user')

@@ -33,8 +33,9 @@ translation_msgids = {
     'msgid:title:list_members': _('Subscription Options'),
     'msgid:title:list_settings': _('List Settings'),
     'msgid:title:list_summary': _('Summary'),
-    'msgid:title:list_mass_removal_confirm':
-        _('Confirm Removal of All Members'),
+    'msgid:title:list_mass_removal_confirm': _(
+        'Confirm Removal of All Members'
+    ),
     'msgid:title:list_templates': _('Templates'),
     'msgid:title:user_settings_address': _('Address-based Settings'),
     'msgid:title:user_settings_list': _('Subscription Settings'),
@@ -47,19 +48,25 @@ translation_msgids = {
 def list_nav(context, current, title='', subtitle=''):
     title = translation_msgids.get(title, title)
     subtitle = translation_msgids.get(subtitle, subtitle)
-    return dict(list=context['list'],
-                current=current,
-                user=context['request'].user,
-                title=title, subtitle=subtitle)
+    return dict(
+        list=context['list'],
+        current=current,
+        user=context['request'].user,
+        title=title,
+        subtitle=subtitle,
+    )
 
 
 @register.inclusion_tag('postorius/menu/user_nav.html', takes_context=True)
 def user_nav(context, current, title='', subtitle=''):
     title = translation_msgids.get(title, title)
     subtitle = translation_msgids.get(subtitle, subtitle)
-    return dict(current=current,
-                user=context['request'].user,
-                title=title, subtitle=subtitle)
+    return dict(
+        current=current,
+        user=context['request'].user,
+        title=title,
+        subtitle=subtitle,
+    )
 
 
 @register.simple_tag(takes_context=True)

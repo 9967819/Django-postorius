@@ -29,17 +29,20 @@ from postorius.views.rest import get_attachments, parse
 
 
 class TestRestViews(ViewTestCase):
-
     def setUp(self):
         super().setUp()
         self.user = User.objects.create(
-            email='bob@example.com', password='testpass')
+            email='bob@example.com', password='testpass'
+        )
         self.su = User.objects.create_superuser(
-            username='alice', email='alice@example.com', password='testpass')
+            username='alice', email='alice@example.com', password='testpass'
+        )
         EmailAddress.objects.create(
-            user=self.user, email=self.user.email, verified=True)
+            user=self.user, email=self.user.email, verified=True
+        )
         EmailAddress.objects.create(
-            user=self.su, email=self.su.email, verified=True)
+            user=self.su, email=self.su.email, verified=True
+        )
         self.domain = self.mm_client.create_domain('example.com')
         self.foo_list = self.domain.create_list('foo')
 
@@ -62,24 +65,29 @@ class TestRestViews(ViewTestCase):
         with open(get_test_file('simple-email.txt')) as fp:
             retval = parse(fp.read())
         self.assertTrue('This is a test message.' in retval['body'])
-        for header_str in ['From: gil <puntogil@libero.it>',
-                           'Content-Type: multipart/mixed;',
-                           'Sender: devel-bounces@lists.fedoraproject.org']:
+        for header_str in [
+            'From: gil <puntogil@libero.it>',
+            'Content-Type: multipart/mixed;',
+            'Sender: devel-bounces@lists.fedoraproject.org',
+        ]:
             self.assertTrue(header_str, retval['headers'])
 
 
 class TestGetHeldMessage(ViewTestCase):
-
     def setUp(self):
         super().setUp()
         self.user = User.objects.create(
-            email='bob@example.com', password='testpass')
+            email='bob@example.com', password='testpass'
+        )
         self.su = User.objects.create_superuser(
-            username='alice', email='alice@example.com', password='testpass')
+            username='alice', email='alice@example.com', password='testpass'
+        )
         EmailAddress.objects.create(
-            user=self.user, email=self.user.email, verified=True)
+            user=self.user, email=self.user.email, verified=True
+        )
         EmailAddress.objects.create(
-            user=self.su, email=self.su.email, verified=True)
+            user=self.su, email=self.su.email, verified=True
+        )
         self.domain = self.mm_client.create_domain('example.com')
         self.foo_list = self.domain.create_list('foo')
         self.inq = self.mm_client.queues['in']
@@ -93,13 +101,23 @@ class TestGetHeldMessage(ViewTestCase):
 
     def test_get_held_message(self):
         self.client.login(username='alice', password='testpass')
-        response = self.client.get(reverse('rest_held_message',
-                                           args=['foo.example.com', '1']))
+        response = self.client.get(
+            reverse('rest_held_message', args=['foo.example.com', '1'])
+        )
         self.assertEqual(response.status_code, 200)
         content = json.loads(response.content.decode('utf-8'))
         self.assertEqual(
             sorted(list(content.keys())),
-            ['attachments', 'hold_date', 'msg', 'msgid', 'reason', 'sender', 'subject'])   # noqa
+            [
+                'attachments',
+                'hold_date',
+                'msg',
+                'msgid',
+                'reason',
+                'sender',
+                'subject',
+            ],
+        )   # noqa
         self.assertEqual(content['msgid'], 1)
         self.assertEqual(len(content['attachments']), 1)
         attachment_uri = content['attachments'][0]
@@ -108,19 +126,25 @@ class TestGetHeldMessage(ViewTestCase):
 
     def test_get_raw_held_message(self):
         self.client.login(username='alice', password='testpass')
-        response = self.client.get(reverse('rest_held_message',
-                                           args=['foo.example.com', '1']),
-                                   {'raw': 'True'})
+        response = self.client.get(
+            reverse('rest_held_message', args=['foo.example.com', '1']),
+            {'raw': 'True'},
+        )
         self.assertEqual(response.status_code, 200)
         email = message_from_bytes(response.content)
         self.assertIsNotNone(email)
 
     def test_get_attachments_for_held_message(self):
         self.client.login(username='alice', password='testpass')
-        response = self.client.get(reverse('rest_held_message',
-                                           args=['foo.example.com', '1']))
+        response = self.client.get(
+            reverse('rest_held_message', args=['foo.example.com', '1'])
+        )
         self.assertEqual(response.status_code, 200)
-        attachment_uri = json.loads(response.content.decode('utf-8'))['attachments'][0][0]   # noqa: E501
+        attachment_uri = json.loads(response.content.decode('utf-8'))[
+            'attachments'
+        ][0][
+            0
+        ]   # noqa: E501
         # Now we will get this attachment.
         response = self.client.get(attachment_uri)
         self.assertEqual(response.status_code, 200)

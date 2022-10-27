@@ -64,7 +64,6 @@ class Command(BaseCommand):
         self.stdout.write(self.style.SUCCESS(msg))
 
     def _get_random_password(self):
-        """Generate a random password for a user.
-        """
+        """Generate a random password for a user."""
         tok = os.urandom(PASSWORD_BYTES)
         return base64.urlsafe_b64encode(tok).rstrip(b'=').decode('ascii')

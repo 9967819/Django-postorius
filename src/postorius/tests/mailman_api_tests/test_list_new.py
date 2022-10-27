@@ -30,11 +30,13 @@ class ListCreationTest(ViewTestCase):
     def setUp(self):
         super(ListCreationTest, self).setUp()
         self.user = User.objects.create_user('user', 'user@example.com', 'pwd')
-        self.superuser = User.objects.create_superuser('su', 'su@example.com',
-                                                       'pwd')
+        self.superuser = User.objects.create_superuser(
+            'su', 'su@example.com', 'pwd'
+        )
         for user in (self.user, self.superuser):
             EmailAddress.objects.create(
-                user=user, email=user.email, verified=True)
+                user=user, email=user.email, verified=True
+            )
         self.domain = self.mm_client.create_domain('example.com')
 
     def test_permission_denied(self):
@@ -46,12 +48,14 @@ class ListCreationTest(ViewTestCase):
         # First, let's create a mailing list.
         self.domain.create_list('foo')
         self.client.login(username='su', password='pwd')
-        post_data = {'listname': 'foo',
-                     'mail_host': 'example.com',
-                     'list_owner': 'owner@example.com',
-                     'advertised': 'True',
-                     'list_style': 'legacy-default',
-                     'description': 'A new list.'}
+        post_data = {
+            'listname': 'foo',
+            'mail_host': 'example.com',
+            'list_owner': 'owner@example.com',
+            'advertised': 'True',
+            'list_style': 'legacy-default',
+            'description': 'A new list.',
+        }
         response = self.client.post(reverse('list_new'), post_data)
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'Mailing List already exists')
@@ -60,12 +64,14 @@ class ListCreationTest(ViewTestCase):
 
     def test_new_list_created_with_owner(self):
         self.client.login(username='su', password='pwd')
-        post_data = {'listname': 'a_new_list',
-                     'mail_host': 'example.com',
-                     'list_owner': 'owner@example.com',
-                     'advertised': 'True',
-                     'list_style': 'legacy-default',
-                     'description': 'A new list.'}
+        post_data = {
+            'listname': 'a_new_list',
+            'mail_host': 'example.com',
+            'list_owner': 'owner@example.com',
+            'advertised': 'True',
+            'list_style': 'legacy-default',
+            'description': 'A new list.',
+        }
         response = self.client.post(reverse('list_new'), post_data)
         self.assertEqual(response.status_code, 302)
         # self.assertHasSuccessMessage(response)
@@ -76,12 +82,14 @@ class ListCreationTest(ViewTestCase):
 
     def test_listname_validation(self):
         self.client.login(username='su', password='pwd')
-        post_data = {'listname': 'a new list',
-                     'mail_host': 'example.com',
-                     'list_owner': 'owner@example.com',
-                     'advertised': 'True',
-                     'list_style': 'legacy-default',
-                     'description': 'A new list.'}
+        post_data = {
+            'listname': 'a new list',
+            'mail_host': 'example.com',
+            'list_owner': 'owner@example.com',
+            'advertised': 'True',
+            'list_style': 'legacy-default',
+            'description': 'A new list.',
+        }
         response = self.client.post(reverse('list_new'), post_data)
         self.assertEqual(response.status_code, 200)
         # self.assertHasErrorMessage(response)

@@ -25,7 +25,6 @@ from postorius.utils import get_django_user
 
 
 class TestUtils(ViewTestCase):
-
     def setUp(self):
         super().setUp()
         self.user = self.mm_client.create_user('aperson@example.com', 'xxx')
@@ -35,7 +34,8 @@ class TestUtils(ViewTestCase):
 
     def test_get_django_user_exists(self):
         user = User.objects.create_user(
-            username='testuser', password='testpas')
+            username='testuser', password='testpas'
+        )
         EmailAddress.objects.create(user=user, email='aperson@example.com')
         dj_user = get_django_user(self.user)
         self.assertIsNotNone(dj_user)

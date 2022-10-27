@@ -33,15 +33,25 @@ def render_api_error(request):
     """Renders an error template.
     Use if MailmanApiError is catched.
     """
-    return render(request, 'postorius/errors/generic.html',
-                  {'error': _('Mailman REST API not available. Please start Mailman core.')},   # noqa: E501
-                  status=503)
+    return render(
+        request,
+        'postorius/errors/generic.html',
+        {
+            'error': _(
+                'Mailman REST API not available. Please start Mailman core.'
+            )
+        },  # noqa: E501
+        status=503,
+    )
 
 
 def render_client_error(request, error):
-    return render(request, 'postorius/errors/generic.html',
-                  {'error': str(error)},
-                  status=error.code)
+    return render(
+        request,
+        'postorius/errors/generic.html',
+        {'error': str(error)},
+        status=error.code,
+    )
 
 
 def get_mailman_client():
@@ -135,11 +145,7 @@ def filter_memberships_by_roles(memberships, roles):
     :returns: A list of memberships filtered by roles.
     :rtype: List[mailmanclient.restobjects.Member]
     """
-    return [
-        member
-        for member in memberships
-        if member.role in roles
-        ]
+    return [member for member in memberships if member.role in roles]
 
 
 LANGUAGES = [

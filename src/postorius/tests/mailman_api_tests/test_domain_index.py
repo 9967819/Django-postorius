@@ -39,16 +39,21 @@ class DomainIndexPageTest(ViewTestCase):
             self.foo_list = self.mm_client.get_list('foo.example.com')
 
         self.user = User.objects.create_user(
-            'testuser', 'test@example.com', 'testpass')
+            'testuser', 'test@example.com', 'testpass'
+        )
         self.superuser = User.objects.create_superuser(
-            'testsu', 'su@example.com', 'testpass')
+            'testsu', 'su@example.com', 'testpass'
+        )
         self.owner = User.objects.create_user(
-            'testowner', 'owner@example.com', 'testpass')
+            'testowner', 'owner@example.com', 'testpass'
+        )
         self.moderator = User.objects.create_user(
-            'testmoderator', 'moderator@example.com', 'testpass')
+            'testmoderator', 'moderator@example.com', 'testpass'
+        )
         for user in (self.user, self.superuser, self.owner, self.moderator):
             EmailAddress.objects.create(
-                user=user, email=user.email, verified=True)
+                user=user, email=user.email, verified=True
+            )
         self.foo_list.add_owner('owner@example.com')
         self.foo_list.add_moderator('moderator@example.com')
 
@@ -91,7 +96,8 @@ class DomainIndexPageTest(ViewTestCase):
         self.assertEqual(len(response.context['domains']), 1)
         self.assertContains(response, 'example.com')
         self.assertTrue(
-            MailDomain.objects.filter(mail_domain='example.com').exists())
+            MailDomain.objects.filter(mail_domain='example.com').exists()
+        )
         # Test there are owners are listed.
         self.assertContains(response, 'person@domain.com')
 
@@ -104,25 +110,26 @@ class DomainIndexPageTest(ViewTestCase):
         self.client.login(username='testsu', password='testpass')
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, b"Add a new owner to example.com")
-        response = self.client.post(
-            url,
-            dict(email='person@example.com'))
+        self.assertContains(response, b'Add a new owner to example.com')
+        response = self.client.post(url, dict(email='person@example.com'))
         self.assertEqual(response.status_code, 302)
         self.assertIn(
             'person@example.com',
-            [owner.addresses[0].email for owner in self.domain.owners])
+            [owner.addresses[0].email for owner in self.domain.owners],
+        )
 
     def test_domain_delete_owner_not_acceesible_to_anyone_but_superuser(self):
         self.domain.add_owner('one@example.com')
         self.domain.add_owner('two@example.com')
-        url = reverse('remove_domain_owner',
-                      args=(self.domain.mail_host,
-                            'person@domain.com'))
+        url = reverse(
+            'remove_domain_owner',
+            args=(self.domain.mail_host, 'person@domain.com'),
+        )
         self.client.login(username='testsu', password='testpass')
         response = self.client.post(url)
         self.assertEqual(response.status_code, 302)
         self.assertTrue(len(self.domain.owners), 2)
-        self.assertEqual(sorted(owner.addresses[0].email
-                                for owner in self.domain.owners),
-                         ['one@example.com', 'two@example.com'])
+        self.assertEqual(
+            sorted(owner.addresses[0].email for owner in self.domain.owners),
+            ['one@example.com', 'two@example.com'],
+        )

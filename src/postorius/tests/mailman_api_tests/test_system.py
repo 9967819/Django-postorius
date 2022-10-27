@@ -26,21 +26,23 @@ from postorius.tests.utils import ViewTestCase
 
 
 class TestSystemInformationPage(ViewTestCase):
-
     def setUp(self):
         super().setUp()
         self.superuser = User.objects.create_superuser(
-            'testsu', 'su@example.com', 'testpass')
+            'testsu', 'su@example.com', 'testpass'
+        )
         EmailAddress.objects.create(
-            user=self.superuser, email='su@example.com', verified=True)
+            user=self.superuser, email='su@example.com', verified=True
+        )
 
     def test_system_info(self):
         response = self.client.get(reverse('system_information'))
         # Logged-out users shouldn't be able to get this information.
         self.assertEqual(response.status_code, 302)
         # Superuser should have access to this information.
-        self.assertTrue(self.client.login(
-            username='testsu', password='testpass'))
+        self.assertTrue(
+            self.client.login(username='testsu', password='testpass')
+        )
         response = self.client.get(reverse('system_information'))
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'Mailman Core API Version', response.content)
@@ -52,12 +54,12 @@ class TestSystemInformationPage(ViewTestCase):
         response = self.client.get(reverse('system_information'))
         self.assertEqual(response.status_code, 200)
         self.assertIn('queues', response.context)
-        self.mm_client.create_domain(
-            'example.com').create_list('somelist')
+        self.mm_client.create_domain('example.com').create_list('somelist')
         badq = self.mm_client.queues.get('bad')
         badq.inject(
             'somelist.example.com',
-            'From: abhilash@example.com\nTo:somelist@example.com\n\n Hello')
+            'From: abhilash@example.com\nTo:somelist@example.com\n\n Hello',
+        )
         response = self.client.get(reverse('system_information'))
         self.assertEqual(response.status_code, 200)
         self.assertIn('queues', response.context)
