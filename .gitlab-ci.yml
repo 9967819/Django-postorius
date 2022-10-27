@@ -41,13 +41,16 @@ py310-django41:
   script:
     - tox -e py310-django41
 
-py310-django-latest:
-  stage: test
-  allow_failure: true
-  script:
-    - printf "Remove all django version restriction from setup.py.\n"
-    - sed -E 's/django[<=>,.[:digit:]]+/django/' -i setup.py
-    - tox -e py310-django-latest
+# Uncomment when we have a better way to run tests against the
+# master. Currently, there are version constraints in all the
+# sub-packages, which leads to all failing tests.
+# py310-django-latest:
+#   stage: test
+#   allow_failure: true
+#   script:
+#     - printf "Remove all django version restriction from setup.py.\n"
+#     - sed -E 's/django[<=>,.[:digit:]]+/django/' -i setup.py
+#     - tox -e py310-django-latest
 
 coverage:
   stage: test
