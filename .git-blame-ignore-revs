@@ -1,0 +1,7 @@
+# Use this file to ignore the commits with only code format
+# changes. You can use the command:
+# git blame --ignore-revs-file=.git-blame-ignore-revs
+#
+# https://gitlab.com/mailman/postorius/-/merge_requests/734
+# Autoformat first time using blue.
+a27530bbb2dd1a7b572639c2da49fd2cdcd2982a
