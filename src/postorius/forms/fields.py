@@ -32,23 +32,27 @@ from django.utils.translation import gettext_lazy as _
 from postorius.utils import with_empty_choice
 
 
-DELIVERY_MODE_CHOICES = (("regular", _('Regular')),
-                         ("plaintext_digests", _('Plain Text Digests')),
-                         ("mime_digests", _('MIME Digests')),
-                         ("summary_digests", _('Summary Digests')))
+DELIVERY_MODE_CHOICES = (
+    ('regular', _('Regular')),
+    ('plaintext_digests', _('Plain Text Digests')),
+    ('mime_digests', _('MIME Digests')),
+    ('summary_digests', _('Summary Digests')),
+)
 
 
-DELIVERY_STATUS_CHOICES = (("enabled", _('Enabled')),
-                           ("by_user", _('Disabled')),
-                           ("by_moderator", _('Disabled by Owner')),
-                           ("by_bounces", _('Disabled by Bounces')))
+DELIVERY_STATUS_CHOICES = (
+    ('enabled', _('Enabled')),
+    ('by_user', _('Disabled')),
+    ('by_moderator', _('Disabled by Owner')),
+    ('by_bounces', _('Disabled by Bounces')),
+)
 
 ACTION_CHOICES = (
-    ("hold", _("Hold for moderation")),
-    ("reject", _("Reject (with notification)")),
-    ("discard", _("Discard (no notification)")),
-    ("accept", _("Accept immediately (bypass other rules)")),
-    ("defer", _("Default processing")),
+    ('hold', _('Hold for moderation')),
+    ('reject', _('Reject (with notification)')),
+    ('discard', _('Discard (no notification)')),
+    ('accept', _('Accept immediately (bypass other rules)')),
+    ('defer', _('Default processing')),
 )
 
 
@@ -61,7 +65,7 @@ class ListOfStringsField(forms.Field):
         return value
 
     def to_python(self, value):
-        "Returns a list of Unicode object."
+        """Returns a list of Unicode object."""
         if value in self.empty_values:
             return []
         result = []
@@ -80,12 +84,14 @@ class NullBooleanRadioSelect(forms.RadioSelect):
 
     def value_from_datadict(self, data, files, name):
         value = data.get(name, None)
-        return {'2': True,
-                True: True,
-                'True': True,
-                '3': False,
-                'False': False,
-                False: False}.get(value, None)
+        return {
+            '2': True,
+            True: True,
+            'True': True,
+            '3': False,
+            'False': False,
+            False: False,
+        }.get(value, None)
 
 
 class SelectWidget(forms.Select):
@@ -114,15 +120,12 @@ class SelectWidget(forms.Select):
 
 
 class SiteModelChoiceField(forms.ModelChoiceField):
-
     def label_from_instance(self, obj):
-        return "%s (%s)" % (obj.name, obj.domain)
+        return '%s (%s)' % (obj.name, obj.domain)
 
 
 class MultipleChoiceForm(forms.Form):
-
     class MultipleChoiceField(forms.MultipleChoiceField):
-
         def validate(self, value):
             pass
 
@@ -145,13 +148,15 @@ def delivery_mode_field(default=None):
         initial=default,
         label=_('Delivery mode'),
         help_text=_(
-            'If you select digests , you\'ll get posts bundled '
+            "If you select digests , you'll get posts bundled "
             'together (usually one per day but possibly more on busy lists), '
-            'instead of singly when they\'re sent. Your mail reader may or '
+            "instead of singly when they're sent. Your mail reader may or "
             'may not support MIME digests. In general MIME digests are '
             'preferred, but if you have a problem reading them, select '
             'plain text digests. '
-            'Summary Digests are currently equivalent to MIME Digests.'))
+            'Summary Digests are currently equivalent to MIME Digests.'
+        ),
+    )
 
 
 def delivery_status_field(choices=None, widget=None):
@@ -169,10 +174,12 @@ def delivery_status_field(choices=None, widget=None):
         help_text=_(
             'Set this option to Enabled to receive messages posted to this '
             'mailing list. Set it to Disabled if you want to stay subscribed, '
-            'but don\'t want mail delivered to you for a while (e.g. you\'re '
-            'going on vacation). If you disable mail delivery, don\'t forget '
+            "but don't want mail delivered to you for a while (e.g. you're "
+            "going on vacation). If you disable mail delivery, don't forget "
             'to re-enable it when you come back; it will not be automatically '
-            're-enabled.'))
+            're-enabled.'
+        ),
+    )
 
 
 def moderation_action_field():
@@ -183,14 +190,16 @@ def moderation_action_field():
         choices=[(None, _('List default'))] + list(ACTION_CHOICES),
         help_text=_(
             'Default action to take when this member posts to the list. \n'
-            'List default -- follow the list\'s default member action. \n'
+            "List default -- follow the list's default member action. \n"
             'Hold -- This holds the message for approval by the list '
             'moderators. \n'
             'Reject -- this automatically rejects the message by sending a '
-            'bounce notice to the post\'s author. The text of the bounce '
+            "bounce notice to the post's author. The text of the bounce "
             'notice can be configured by you. \n'
             'Discard -- this simply discards the message, with no notice '
-            'sent to the post\'s author. \n'
+            "sent to the post's author. \n"
             'Accept -- accepts any postings without any further checks. \n'
             'Default Processing -- run additional checks and accept '
-            'the message. \n'))
+            'the message. \n'
+        ),
+    )

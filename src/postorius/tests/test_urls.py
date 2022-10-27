@@ -21,18 +21,23 @@ from django.urls import NoReverseMatch, reverse
 
 
 class URLTest(TestCase):
-
     def test_email_allows_slash(self):
         try:
-            reverse('list_member_options', kwargs={
+            reverse(
+                'list_member_options',
+                kwargs={
                     'list_id': 'test.example.com',
                     'email': 'slashed/are/allowed@example.com',
-                    })
-            reverse('remove_role', kwargs={
+                },
+            )
+            reverse(
+                'remove_role',
+                kwargs={
                     'list_id': 'test.example.com',
                     'role': 'subscriber',
                     'address': 'slashed/are/allowed@example.com',
-                    })
+                },
+            )
         except NoReverseMatch as e:
             self.fail(e)
 

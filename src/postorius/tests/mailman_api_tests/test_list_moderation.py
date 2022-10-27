@@ -32,11 +32,12 @@ class HeldMessageTest(ViewTestCase):
     def setUp(self):
         super().setUp()
         self.domain = self.mm_client.create_domain('example.com')
-        self.superuser = User.objects.create_superuser('su', 'su@example.com',
-                                                       'pwd')
-        EmailAddress.objects.create(user=self.superuser,
-                                    email=self.superuser.email,
-                                    verified=True)
+        self.superuser = User.objects.create_superuser(
+            'su', 'su@example.com', 'pwd'
+        )
+        EmailAddress.objects.create(
+            user=self.superuser, email=self.superuser.email, verified=True
+        )
         self.client.login(username='su', password='pwd')
 
     def _wait_for_processing(self, queue):
@@ -76,11 +77,13 @@ This is a test message.
         held_message = mlist.held[0]
         # Test that a held message is accepted when POST'ing.
         response = self.client.post(
-            reverse('moderate_held_message', args=('test-1.example.com', )),
-            {'msgid': held_message.request_id,
-             'accept': True,
-             'moderation_choice': 'no-action'}
-            )
+            reverse('moderate_held_message', args=('test-1.example.com',)),
+            {
+                'msgid': held_message.request_id,
+                'accept': True,
+                'moderation_choice': 'no-action',
+            },
+        )
         self.assertEqual(response.status_code, 302)
 
     def test_accept_held_message_moderate_member(self):
@@ -91,8 +94,9 @@ This is a test message.
         mlist.settings['default_member_action'] = 'hold'
         mlist.settings.save()
         # Subscribe this user.
-        mlist.subscribe('aperson@example.com',
-                        pre_verified=True, pre_confirmed=True)
+        mlist.subscribe(
+            'aperson@example.com', pre_verified=True, pre_confirmed=True
+        )
         test_msg = """\
 From: aperson@example.com
 To: test-2@example.com
@@ -113,10 +117,12 @@ This is a test message.
         held_message = mlist.held[0]
         # Test that a held message is accepted when POST'ing.
         response = self.client.post(
-            reverse('moderate_held_message', args=('test-2.example.com', )),
-            {'msgid': held_message.request_id,
-             'accept': True,
-             'moderation_choice': 'defer'}
+            reverse('moderate_held_message', args=('test-2.example.com',)),
+            {
+                'msgid': held_message.request_id,
+                'accept': True,
+                'moderation_choice': 'defer',
+            },
         )
         self.assertEqual(response.status_code, 302)
         member = mlist.get_member('aperson@example.com')
@@ -125,15 +131,15 @@ This is a test message.
     def test_moderate_held_message_missing(self):
         self.domain.create_list('test-3')
         response = self.client.post(
-            reverse('moderate_held_message', args=('test-3.example.com', )),
-            {'msgid': '12345',
-             'accept': True,
-             'moderation_choice': 'defer'})
+            reverse('moderate_held_message', args=('test-3.example.com',)),
+            {'msgid': '12345', 'accept': True, 'moderation_choice': 'defer'},
+        )
 
         self.assertHasErrorMessage(response)
         self.assertEqual(response.status_code, 302)
-        self.assertEqual(response.url,
-                         '/postorius/lists/test-3.example.com/held_messages')
+        self.assertEqual(
+            response.url, '/postorius/lists/test-3.example.com/held_messages'
+        )
 
     def test_reject_held_message_with_reason(self):
         mlist = self.domain.create_list('test-2')
@@ -157,10 +163,12 @@ This is a test message.
         held_message = mlist.held[0]
         # Test that a held message is rejected when POST'ing.
         response = self.client.post(
-            reverse('moderate_held_message', args=('test-2.example.com', )),
-            {'msgid': held_message.request_id,
-             'reject': True,
-             'reason': 'Wrong mailing list'}
+            reverse('moderate_held_message', args=('test-2.example.com',)),
+            {
+                'msgid': held_message.request_id,
+                'reject': True,
+                'reason': 'Wrong mailing list',
+            },
         )
         self.assertEqual(response.status_code, 302)
         self.assertEqual(len(mlist.held), 0)
@@ -187,11 +195,13 @@ This is a test message.
         held_message = mlist.held[0]
         # Test that a held message is rejected when POST'ing.
         response = self.client.post(
-            reverse('moderate_held_message', args=('test-3.example.com', )),
-            {'msgid': held_message.request_id,
-             'reject': True,
-             'reason': 'Wrong mailing list',
-             'moderation_choice': 'hold'}
+            reverse('moderate_held_message', args=('test-3.example.com',)),
+            {
+                'msgid': held_message.request_id,
+                'reject': True,
+                'reason': 'Wrong mailing list',
+                'moderation_choice': 'hold',
+            },
         )
         self.assertEqual(response.status_code, 302)
         self.assertHasSuccessMessage(response, count=2)
@@ -203,7 +213,10 @@ This is a test message.
         mlist = self.domain.create_list('test-4')
         member = mlist.subscribe(
             'aperson@example.com',
-            pre_verified=True, pre_approved=True, pre_confirmed=True)
+            pre_verified=True,
+            pre_approved=True,
+            pre_confirmed=True,
+        )
         mlist.settings['default_member_action'] = 'hold'
         mlist.settings.save()
         self.assertIsNotNone(member)
@@ -226,11 +239,13 @@ This is a test message.
         held_message = mlist.held[0]
         # Test that a held message is rejected when POST'ing.
         response = self.client.post(
-            reverse('moderate_held_message', args=('test-4.example.com', )),
-            {'msgid': held_message.request_id,
-             'reject': True,
-             'reason': 'Wrong mailing list',
-             'moderation_choice': 'defer'}
+            reverse('moderate_held_message', args=('test-4.example.com',)),
+            {
+                'msgid': held_message.request_id,
+                'reject': True,
+                'reason': 'Wrong mailing list',
+                'moderation_choice': 'defer',
+            },
         )
         self.assertEqual(response.status_code, 302)
         self.assertHasSuccessMessage(response, count=2)
@@ -240,7 +255,6 @@ This is a test message.
 
 
 class TestConfirmToken(ViewTestCase):
-
     def setUp(self):
         super().setUp()
         self.domain = self.mm_client.create_domain('example.com')
@@ -258,26 +272,28 @@ class TestConfirmToken(ViewTestCase):
         token = self.mlist.subscribe('aperson@example.com', 'Anne Person')
         self.assertIsNotNone(token.get('token'))
         resp = self.client.get(
-            reverse('confirm_token', args=(self.mlist.list_id, )) +
-            '?token={}'.format(token.get('token')))
+            reverse('confirm_token', args=(self.mlist.list_id,))
+            + '?token={}'.format(token.get('token'))
+        )
         self.assertEqual(resp.status_code, 200)
-        self.assertTrue(b'Confirm subscription of Anne Person'
-                        in resp.content)
+        self.assertTrue(b'Confirm subscription of Anne Person' in resp.content)
         self.assertTrue(token.get('token') in resp.content.decode('utf-8'))
         # Now, let's confirm the token.
         with self.assertRaises(ValueError):
             self.mlist.get_member('aperson@example.com')
         resp = self.client.post(
             reverse('confirm_token', args=(self.mlist.list_id,)),
-            data={'token': token.get('token')})
+            data={'token': token.get('token')},
+        )
         self.assertTrue(resp.status_code, 301)
         member = self.mlist.get_member('aperson@example.com')
         self.assertIsNotNone(member)
 
     def test_invalid_expired_token(self):
         resp = self.client.get(
-            reverse('confirm_token', args=(self.mlist.list_id, )) +
-            '?token=badtoken')
+            reverse('confirm_token', args=(self.mlist.list_id,))
+            + '?token=badtoken'
+        )
         self.assertEqual(resp.status_code, 404)
         self.assertTrue(b'Token expired or invalid' in resp.content)
 
@@ -288,14 +304,17 @@ class TestConfirmToken(ViewTestCase):
         settings.save()
         # Subscribe to generate a mod approval req.
         token = self.mlist.subscribe(
-            'aperson@example.com', 'Anne Person', pre_verified=True)
+            'aperson@example.com', 'Anne Person', pre_verified=True
+        )
         self.assertIsNotNone(token.get('token'))
         token = self.mlist.get_request(token.get('token'))
         self.assertEqual(token['token_owner'], 'moderator')
         resp = self.client.get(
-            reverse('confirm_token', args=(self.mlist.list_id, )) +
-            '?token={}'.format(token.get('token')))
+            reverse('confirm_token', args=(self.mlist.list_id,))
+            + '?token={}'.format(token.get('token'))
+        )
         self.assertEqual(resp.status_code, 302)
         self.assertEqual(
             resp.url,
-            '/postorius/lists/mylist.example.com/subscription_requests')
+            '/postorius/lists/mylist.example.com/subscription_requests',
+        )

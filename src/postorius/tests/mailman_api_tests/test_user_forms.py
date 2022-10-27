@@ -22,20 +22,24 @@ from django.forms import formset_factory
 from allauth.account.models import EmailAddress
 
 from postorius.forms.user_forms import (
-    ManageAddressForm, ManageAddressFormSet, ManageMemberForm,
-    ManageMemberFormSet, ManageUserForm)
+    ManageAddressForm,
+    ManageAddressFormSet,
+    ManageMemberForm,
+    ManageMemberFormSet,
+    ManageUserForm,
+)
 from postorius.tests.utils import ViewTestCase
 
 
 class ManageMemberFormTest(ViewTestCase):
-
     def setUp(self):
         super().setUp()
         self.user = self.mm_client.create_user('aperson@example.com', 'xxx')
         domain = self.mm_client.create_domain('example.com')
         self.mlist = domain.create_list('test')
         self.member = self.mlist.subscribe(
-            'aperson@example.com', pre_verified=True, pre_confirmed=True)
+            'aperson@example.com', pre_verified=True, pre_confirmed=True
+        )
 
     def test_manage_member_form_basic(self):
         form = ManageMemberForm(member=self.member)
@@ -44,18 +48,22 @@ class ManageMemberFormTest(ViewTestCase):
         form.initial['delivery_mode'] = self.member.delivery_mode
         # Initialized form is valid by default with no changed values.
         form = ManageMemberForm(
-            dict(delivery_mode=self.member.delivery_mode,
-                 moderation_action=self.member.moderation_action),
-            member=self.member,)
+            dict(
+                delivery_mode=self.member.delivery_mode,
+                moderation_action=self.member.moderation_action,
+            ),
+            member=self.member,
+        )
         self.assertTrue(form.is_valid())
         self.assertEqual(form.changed_data, [])
         # Saving the form with no changed data should return False.
         self.assertFalse(form.save())
 
     def test_manage_member_form_updates(self):
-        form = ManageMemberForm(dict(moderation_action='hold',
-                                     delivery_mode='plaintext_digests'),
-                                member=self.member)
+        form = ManageMemberForm(
+            dict(moderation_action='hold', delivery_mode='plaintext_digests'),
+            member=self.member,
+        )
         self.assertTrue(form.is_valid())
         self.assertTrue(form.changed_data, ['moderation_action'])
         self.assertTrue(form.save())
@@ -64,8 +72,9 @@ class ManageMemberFormTest(ViewTestCase):
 
     def test_manage_member_formset(self):
         # Test initialize formset with single Member.
-        formset = formset_factory(ManageMemberForm,
-                                  formset=ManageMemberFormSet, extra=0)
+        formset = formset_factory(
+            ManageMemberForm, formset=ManageMemberFormSet, extra=0
+        )
         form = formset(members=[self.member])
         self.assertEqual(len(form.forms), 1)
         self.assertEqual(form.forms[0].member, self.member)
@@ -75,7 +84,6 @@ class ManageMemberFormTest(ViewTestCase):
             'form-INITIAL_FORMS': '1',
             'form-MIN_NUM_FORMS': '0',
             'form-MAX_NUM_FORMS': '1',
-
             'form-0-moderation_action': 'discard',
             'form-0-delivery_mode': 'mime_digests',
         }
@@ -89,7 +97,6 @@ class ManageMemberFormTest(ViewTestCase):
 
 
 class ManageAddressFormTest(ViewTestCase):
-
     def setUp(self):
         super().setUp()
         self.user = self.mm_client.create_user('aperson@example.com', 'xxx')
@@ -114,7 +121,8 @@ class ManageAddressFormTest(ViewTestCase):
     def _test_manage_address_formset(self):
         addresses = self.user.addresses
         formset = formset_factory(
-            ManageAddressForm, formset=ManageAddressFormSet, extra=0)
+            ManageAddressForm, formset=ManageAddressFormSet, extra=0
+        )
         form = formset(addresses=addresses)
         self.assertEqual(len(form.forms), len(addresses))
 
@@ -137,8 +145,7 @@ class ManageAddressFormTest(ViewTestCase):
         # Create the django user.
         user = User.objects.create_user(username='tester', password='test')
         for addr in addresses:
-            EmailAddress.objects.create(
-                user=user, email=addr.email)
+            EmailAddress.objects.create(user=user, email=addr.email)
         # Initially, they are all unverified
         for addr in EmailAddress.objects.filter(user=user):
             self.assertFalse(addr.verified)
@@ -162,7 +169,6 @@ class ManageAddressFormTest(ViewTestCase):
 
 
 class ManageuserFormTest(ViewTestCase):
-
     def setUp(self):
         super().setUp()
         self.user = self.mm_client.create_user('aperson@example.com', 'xxx')

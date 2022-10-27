@@ -47,11 +47,14 @@ class TestSubscription(ViewTestCase):
         settings.save()
         # Create django user.
         self.user = User.objects.create_user(
-            'testuser', 'test@example.com', 'pwd')
+            'testuser', 'test@example.com', 'pwd'
+        )
         EmailAddress.objects.create(
-            user=self.user, email=self.user.email, verified=True)
+            user=self.user, email=self.user.email, verified=True
+        )
         EmailAddress.objects.create(
-            user=self.user, email='fritz@example.org', verified=True)
+            user=self.user, email='fritz@example.org', verified=True
+        )
         # Create Mailman user
         self.mm_user = self.mm_client.create_user('test@example.com', '')
         self.mm_user.add_address('fritz@example.org')
@@ -61,55 +64,63 @@ class TestSubscription(ViewTestCase):
     @patch('mailmanclient.MailingList.subscribe')
     def test_anonymous_subscribe(self, mock_subscribe):
         response = self.client.post(
-            reverse('list_anonymous_subscribe',
-                    args=('open_list.example.com', )),
-            {'email': 'test@example.com', 'display_name': 'Test User'})
+            reverse(
+                'list_anonymous_subscribe', args=('open_list.example.com',)
+            ),
+            {'email': 'test@example.com', 'display_name': 'Test User'},
+        )
         mock_subscribe.assert_called_once()
         mock_subscribe.assert_called_with(
-            'test@example.com', 'Test User', pre_verified=False,
-            pre_confirmed=False)
+            'test@example.com',
+            'Test User',
+            pre_verified=False,
+            pre_confirmed=False,
+        )
         self.assertRedirects(
-            response, reverse('list_summary',
-                              args=('open_list.example.com', )))
+            response, reverse('list_summary', args=('open_list.example.com',))
+        )
         self.assertHasSuccessMessage(response)
 
     def test_subscribe_open(self):
         # The subscription goes straight through.
         self.client.login(username='testuser', password='pwd')
         response = self.client.post(
-            reverse('list_subscribe', args=('open_list.example.com', )),
-            {'subscriber': 'test@example.com'})
+            reverse('list_subscribe', args=('open_list.example.com',)),
+            {'subscriber': 'test@example.com'},
+        )
         self.assertEqual(len(self.open_list.members), 1)
         self.assertEqual(len(self.open_list.requests), 0)
         self.assertRedirects(
-            response, reverse('list_summary',
-                              args=('open_list.example.com', )))
+            response, reverse('list_summary', args=('open_list.example.com',))
+        )
         self.assertHasSuccessMessage(response)
 
     def test_secondary_open(self):
         # Subscribe with a secondary email address
         self.client.login(username='testuser', password='pwd')
         response = self.client.post(
-            reverse('list_subscribe', args=('open_list.example.com', )),
-            {'subscriber': 'fritz@example.org'})
+            reverse('list_subscribe', args=('open_list.example.com',)),
+            {'subscriber': 'fritz@example.org'},
+        )
         self.assertEqual(len(self.open_list.members), 1)
         self.assertEqual(len(self.open_list.requests), 0)
         self.assertRedirects(
-            response, reverse('list_summary',
-                              args=('open_list.example.com', )))
+            response, reverse('list_summary', args=('open_list.example.com',))
+        )
         self.assertHasSuccessMessage(response)
 
     def test_unknown_address(self):
         # Impossible to register with an unknown address
         self.client.login(username='testuser', password='pwd')
         response = self.client.post(
-            reverse('list_subscribe', args=('open_list.example.com', )),
-            {'subscriber': 'unknown@example.org'})
+            reverse('list_subscribe', args=('open_list.example.com',)),
+            {'subscriber': 'unknown@example.org'},
+        )
         self.assertEqual(len(self.open_list.members), 0)
         self.assertEqual(len(self.open_list.requests), 0)
         self.assertRedirects(
-            response, reverse('list_summary',
-                              args=('open_list.example.com', )))
+            response, reverse('list_summary', args=('open_list.example.com',))
+        )
         self.assertHasErrorMessage(response)
 
     def test_banned_address(self):
@@ -117,54 +128,61 @@ class TestSubscription(ViewTestCase):
         self.client.login(username='testuser', password='pwd')
         self.open_list.bans.add('test@example.com')
         response = self.client.post(
-            reverse('list_subscribe', args=('open_list.example.com', )),
-            {'subscriber': 'test@example.com'})
+            reverse('list_subscribe', args=('open_list.example.com',)),
+            {'subscriber': 'test@example.com'},
+        )
         self.assertEqual(len(self.open_list.members), 0)
         self.assertEqual(len(self.open_list.requests), 0)
         self.assertRedirects(
-            response, reverse('list_summary',
-                              args=('open_list.example.com', )))
+            response, reverse('list_summary', args=('open_list.example.com',))
+        )
         self.assertHasErrorMessage(response)
 
     def test_subscribe_mod(self):
         # The subscription is held for approval.
         self.client.login(username='testuser', password='pwd')
         response = self.client.post(
-            reverse('list_subscribe', args=('moderate_subs.example.com', )),
-            {'subscriber': 'test@example.com'})
+            reverse('list_subscribe', args=('moderate_subs.example.com',)),
+            {'subscriber': 'test@example.com'},
+        )
         self.assertEqual(len(self.mod_list.members), 0)
         self.assertEqual(len(self.mod_list.requests), 1)
         self.assertRedirects(
-            response, reverse('list_summary',
-                              args=('moderate_subs.example.com', )))
+            response,
+            reverse('list_summary', args=('moderate_subs.example.com',)),
+        )
         self.assertHasSuccessMessage(response)
 
     def test_secondary_mod(self):
         # Subscribe with a secondary email address
         self.client.login(username='testuser', password='pwd')
         response = self.client.post(
-            reverse('list_subscribe', args=('moderate_subs.example.com', )),
-            {'subscriber': 'fritz@example.org'})
+            reverse('list_subscribe', args=('moderate_subs.example.com',)),
+            {'subscriber': 'fritz@example.org'},
+        )
         self.assertEqual(len(self.mod_list.members), 0)
         self.assertEqual(len(self.mod_list.requests), 1)
         self.assertRedirects(
-            response, reverse('list_summary',
-                              args=('moderate_subs.example.com', )))
+            response,
+            reverse('list_summary', args=('moderate_subs.example.com',)),
+        )
         self.assertHasSuccessMessage(response)
 
     def test_subscribe_already_pending(self):
         # The user tries to subscribe twice on a moderated list.
         self.client.login(username='testuser', password='pwd')
         response = self.client.post(
-            reverse('list_subscribe', args=('moderate_subs.example.com', )),
-            {'subscriber': 'test@example.com'})
+            reverse('list_subscribe', args=('moderate_subs.example.com',)),
+            {'subscriber': 'test@example.com'},
+        )
         self.assertEqual(len(self.mod_list.members), 0)
         self.assertEqual(len(self.mod_list.requests), 1)
         self.assertHasSuccessMessage(response)
         # Try to subscribe a second time.
         response = self.client.post(
-            reverse('list_subscribe', args=('moderate_subs.example.com', )),
-            {'subscriber': 'test@example.com'})
+            reverse('list_subscribe', args=('moderate_subs.example.com',)),
+            {'subscriber': 'test@example.com'},
+        )
         self.assertEqual(len(self.mod_list.members), 0)
         self.assertEqual(len(self.mod_list.requests), 1)
         message = self.assertHasErrorMessage(response)
@@ -172,9 +190,11 @@ class TestSubscription(ViewTestCase):
 
     def test_subscribe_with_name(self):
         owner = User.objects.create_user(
-            'testowner', 'owner@example.com', 'pwd')
+            'testowner', 'owner@example.com', 'pwd'
+        )
         EmailAddress.objects.create(
-            user=owner, email=owner.email, verified=True)
+            user=owner, email=owner.email, verified=True
+        )
         self.open_list.add_owner('owner@example.com')
         self.client.login(username='testowner', password='pwd')
         email_list = """First Person <test-1@example.org>\n
@@ -184,9 +204,12 @@ class TestSubscription(ViewTestCase):
                         <test-5@example.org>\n"""
         self.client.post(
             reverse('mass_subscribe', args=('open_list.example.com',)),
-            {'emails': email_list,
-             'pre_verified': True,
-             'send_welcome_message': 'default'})
+            {
+                'emails': email_list,
+                'pre_verified': True,
+                'send_welcome_message': 'default',
+            },
+        )
         self.assertEqual(len(self.open_list.members), 5)
         first = self.open_list.get_member('test-1@example.org')
         second = self.open_list.get_member('test-2@example.org')
@@ -201,9 +224,11 @@ class TestSubscription(ViewTestCase):
 
     def test_mass_subscribe_send_welcome_message(self):
         owner = User.objects.create_user(
-            'testowner', 'owner@example.com', 'pwd')
+            'testowner', 'owner@example.com', 'pwd'
+        )
         EmailAddress.objects.create(
-            user=owner, email=owner.email, verified=True)
+            user=owner, email=owner.email, verified=True
+        )
         self.open_list.add_owner('owner@example.com')
         self.client.login(username='testowner', password='pwd')
         virgin_q = self.mm_client.queues['virgin']
@@ -212,8 +237,12 @@ class TestSubscription(ViewTestCase):
                         "Second Person" <test-2@example.org>\n"""
         self.client.post(
             reverse('mass_subscribe', args=('open_list.example.com',)),
-            {'emails': email_list,
-             'pre_verified': True, 'send_welcome_message': True})
+            {
+                'emails': email_list,
+                'pre_verified': True,
+                'send_welcome_message': True,
+            },
+        )
         self.assertEqual(len(self.open_list.members), 2)
         virgin_q = self.mm_client.queues['virgin']
         # There should be two more files in the queue.
@@ -223,8 +252,12 @@ class TestSubscription(ViewTestCase):
         email_list = """test-3@example.org (Third Person)\n"""
         self.client.post(
             reverse('mass_subscribe', args=('open_list.example.com',)),
-            {'emails': email_list,
-             'pre_verified': True, 'send_welcome_message': False})
+            {
+                'emails': email_list,
+                'pre_verified': True,
+                'send_welcome_message': False,
+            },
+        )
         self.assertEqual(len(self.open_list.members), 3)
         # There should be zero more messages in virgin queue because we set
         # `sent_welcome_message` to False.
@@ -236,8 +269,12 @@ class TestSubscription(ViewTestCase):
         email_list = """test4@example.org (Third Person)\n"""
         self.client.post(
             reverse('mass_subscribe', args=('open_list.example.com',)),
-            {'emails': email_list,
-             'pre_verified': True, 'send_welcome_message': 'default'})
+            {
+                'emails': email_list,
+                'pre_verified': True,
+                'send_welcome_message': 'default',
+            },
+        )
         self.assertEqual(len(self.open_list.members), 4)
         virgin_q = self.mm_client.queues['virgin']
         self.assertEqual(len(virgin_q.files) - initial_files, 1)
@@ -250,8 +287,8 @@ class TestSubscription(ViewTestCase):
         self.client.login(username='testuser', password='pwd')
         response = self.client.post(
             reverse('change_subscription', args=['open_list.example.com']),
-            {'subscriber': 'fritz@example.org',
-             'member_id': member.member_id})
+            {'subscriber': 'fritz@example.org', 'member_id': member.member_id},
+        )
         self.assertHasSuccessMessage(response)
         self.assertEqual(len(self.open_list.members), 1)
         self.assertEqual(len(self.open_list.requests), 0)
@@ -261,8 +298,8 @@ class TestSubscription(ViewTestCase):
             self.fail('The subscription was not changed')
         self.assertEqual(member.email, 'fritz@example.org')
         self.assertRedirects(
-            response, reverse('list_summary',
-                              args=('open_list.example.com', )))
+            response, reverse('list_summary', args=('open_list.example.com',))
+        )
 
     def test_change_subscription_confirm(self):
         # The subscription is changed from an address to another
@@ -276,8 +313,8 @@ class TestSubscription(ViewTestCase):
         self.client.login(username='testuser', password='pwd')
         response = self.client.post(
             reverse('change_subscription', args=['confirm_list.example.com']),
-            {'subscriber': 'fritz@example.org',
-             'member_id': member.member_id})
+            {'subscriber': 'fritz@example.org', 'member_id': member.member_id},
+        )
         self.assertHasSuccessMessage(response)
         self.assertEqual(len(confirm_list.members), 1)
         self.assertEqual(len(confirm_list.requests), 0)
@@ -287,8 +324,9 @@ class TestSubscription(ViewTestCase):
             self.fail('The subscription was not changed')
         self.assertEqual(member.email, 'fritz@example.org')
         self.assertRedirects(
-            response, reverse('list_summary',
-                              args=('confirm_list.example.com', )))
+            response,
+            reverse('list_summary', args=('confirm_list.example.com',)),
+        )
 
     @expectedFailure
     def test_change_subscription_from_address_to_primary(self):
@@ -300,8 +338,9 @@ class TestSubscription(ViewTestCase):
         # subscribed Address to subscribe and vice versa.
         member = self.open_list.subscribe('test@example.com')
         self.assertEqual(len(self.open_list.members), 1)
-        self.assertEqual(member.subscription_mode,
-                         SubscriptionMode.as_address.name)
+        self.assertEqual(
+            member.subscription_mode, SubscriptionMode.as_address.name
+        )
         self.assertEqual(len(self.open_list.requests), 0)
         self.client.login(username='testuser', password='pwd')
         mm_user = get_mailman_user(self.user)
@@ -310,8 +349,8 @@ class TestSubscription(ViewTestCase):
         # subscribed.
         response = self.client.post(
             reverse('change_subscription', args=['open_list.example.com']),
-            {'subscriber': mm_user.user_id,
-             'member_id': member.member_id})
+            {'subscriber': mm_user.user_id, 'member_id': member.member_id},
+        )
         self.assertHasSuccessMessage(response)
         self.assertEqual(len(self.open_list.members), 1)
         self.assertEqual(len(self.open_list.requests), 0)
@@ -319,11 +358,12 @@ class TestSubscription(ViewTestCase):
             member = self.open_list.get_member('test@example.com')
         except ValueError:
             self.fail('The subscription was not changed')
-        self.assertEqual(member.subscription_mode,
-                         SubscriptionMode.as_user.name)
+        self.assertEqual(
+            member.subscription_mode, SubscriptionMode.as_user.name
+        )
         self.assertRedirects(
-            response, reverse('list_summary',
-                              args=('open_list.example.com', )))
+            response, reverse('list_summary', args=('open_list.example.com',))
+        )
         # Now, if the user_id and address both are subscribed.
         addr_member = self.open_list.subscribe('test@example.com')
         self.assertIsNotNone(addr_member)
@@ -331,7 +371,10 @@ class TestSubscription(ViewTestCase):
         # Now trying to switch subscription should say already subscribed.
         response = self.client.post(
             reverse('change_subscription', args=['open_list.example.com']),
-            {'subscriber': mm_user.user_id,
-             'member_id': addr_member.member_id})
+            {
+                'subscriber': mm_user.user_id,
+                'member_id': addr_member.member_id,
+            },
+        )
         self.assertEqual(response.status_code, 302)
         self.assertHasErrorMessage(response)

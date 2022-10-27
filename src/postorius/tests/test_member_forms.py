@@ -22,7 +22,6 @@ from postorius.forms import MemberForm
 
 
 class TestMemberForm(TestCase):
-
     def test_form_labels(self):
         form = MemberForm({})
         self.assertTrue('email' in form.fields.keys())
@@ -33,9 +32,11 @@ class TestMemberForm(TestCase):
     def test_form_errors(self):
         form = MemberForm({})
         self.assertFalse(form.is_valid())
-        self.assertEqual(form.errors['email'][0],
-                         'Please enter an email address.')
+        self.assertEqual(
+            form.errors['email'][0], 'Please enter an email address.'
+        )
         form = MemberForm({'email': 'invalid.example.com'})
         self.assertFalse(form.is_valid())
-        self.assertEqual(form.errors['email'][0],
-                         'Please enter a valid email address.')
+        self.assertEqual(
+            form.errors['email'][0], 'Please enter a valid email address.'
+        )

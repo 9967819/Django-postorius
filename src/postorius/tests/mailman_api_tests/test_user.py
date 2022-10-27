@@ -41,9 +41,11 @@ class MailmanUserTest(ViewTestCase):
         self.foo_list = self.domain.create_list('foo')
         self.foo_list.send_welcome_message = False
         self.user = User.objects.create_user(
-            'user', 'user@example.com', 'testpass')
+            'user', 'user@example.com', 'testpass'
+        )
         EmailAddress.objects.create(
-            user=self.user, email=self.user.email, verified=True, primary=True)
+            user=self.user, email=self.user.email, verified=True, primary=True
+        )
         self.mm_user = get_mailman_user(self.user)
 
     def test_address_preferences_not_logged_in(self):
@@ -63,7 +65,7 @@ class MailmanUserTest(ViewTestCase):
         self.mm_user.add_address('user3@example.com')
         response = self.client.get(reverse('user_address_preferences'))
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(len(response.context["formset"]), 3)
+        self.assertEqual(len(response.context['formset']), 3)
 
     # this test needs re-thinking with the way we've hacked preferences
     # it has been disabled for now
@@ -119,12 +121,13 @@ class MailmanUserTest(ViewTestCase):
         # Existing Django users without a corresponding Mailman user must not
         # cause views to crash.
         user = User.objects.create_user(
-            'old-user', 'old-user@example.com', 'testpass')
-        EmailAddress.objects.create(
-            user=user, email=user.email, verified=True)
+            'old-user', 'old-user@example.com', 'testpass'
+        )
+        EmailAddress.objects.create(user=user, email=user.email, verified=True)
         self.client.login(username='old-user', password='testpass')
-        self.assertRaises(Mailman404Error, MailmanUser.objects.get,
-                          address=user.email)
+        self.assertRaises(
+            Mailman404Error, MailmanUser.objects.get, address=user.email
+        )
         response = self.client.get(reverse('ps_user_profile'))
         self.assertEqual(response.status_code, 200)
         # The Mailman user must have been created
@@ -138,8 +141,12 @@ class MailmanUserTest(ViewTestCase):
 
     def test_presence_of_form_in_user_subscription_preferences(self):
         self.client.login(username='user', password='testpass')
-        self.foo_list.subscribe(self.user.email, pre_verified=True,
-                                pre_confirmed=True, pre_approved=True)
+        self.foo_list.subscribe(
+            self.user.email,
+            pre_verified=True,
+            pre_confirmed=True,
+            pre_approved=True,
+        )
         response = self.client.get(reverse('user_subscription_preferences'))
         self.assertEqual(response.status_code, 200)
         self.assertIsNotNone(response.context['formset'])
@@ -149,28 +156,39 @@ class MailmanUserTest(ViewTestCase):
         self.client.login(username='user', password='testpass')
         member = self.foo_list.subscribe(
             self.user.email,
-            pre_verified=True, pre_confirmed=True, pre_approved=True)
-        response = self.client.get(reverse('user_list_options',
-                                           args=[member.member_id]))
+            pre_verified=True,
+            pre_confirmed=True,
+            pre_approved=True,
+        )
+        response = self.client.get(
+            reverse('user_list_options', args=[member.member_id])
+        )
         self.assertEqual(response.status_code, 200)
-        self.assertIsInstance(response.context['form'],
-                              UserPreferences)
-        self.assertIsInstance(response.context['change_subscription_form'],
-                              ChangeSubscriptionForm)
+        self.assertIsInstance(response.context['form'], UserPreferences)
+        self.assertIsInstance(
+            response.context['change_subscription_form'],
+            ChangeSubscriptionForm,
+        )
 
     def test_list_options_shows_all_addresses(self):
         self.client.login(username='user', password='testpass')
-        member = self.foo_list.subscribe(self.user.email, pre_verified=True,
-                                         pre_confirmed=True, pre_approved=True)
+        member = self.foo_list.subscribe(
+            self.user.email,
+            pre_verified=True,
+            pre_confirmed=True,
+            pre_approved=True,
+        )
         # Add another email
         EmailAddress.objects.create(
-            user=self.user, email='anotheremail@example.com', verified=True)
+            user=self.user, email='anotheremail@example.com', verified=True
+        )
         user = self.mm_client.get_user('user@example.com')
         address = user.add_address('anotheremail@example.com')
         address.verify()
         # Check response
-        response = self.client.get(reverse('user_list_options',
-                                           args=[member.member_id]))
+        response = self.client.get(
+            reverse('user_list_options', args=[member.member_id])
+        )
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'anotheremail@example.com')
 
@@ -184,23 +202,30 @@ class MailmanUserTest(ViewTestCase):
         self.client.login(username='user', password='testpass')
         user = self.mm_client.get_user('user@example.com')
         EmailAddress.objects.create(
-            user=self.user, email='anotheremail@example.com', verified=True)
+            user=self.user, email='anotheremail@example.com', verified=True
+        )
         address = user.add_address('anotheremail@example.com')
         address.verify()
         member = self.foo_list.subscribe(
             self.user.email,
-            pre_verified=True, pre_confirmed=True, pre_approved=True)
+            pre_verified=True,
+            pre_confirmed=True,
+            pre_approved=True,
+        )
         # Now, first verify that the list_options page has all the emails.
         # Check response
-        response = self.client.get(reverse('user_list_options',
-                                           args=[member.member_id]))
+        response = self.client.get(
+            reverse('user_list_options', args=[member.member_id])
+        )
         self.assertContains(response, 'anotheremail@example.com')
         self.assertContains(
             response,
             '<option value="user@example.com"'
-            ' selected>user@example.com</option>')
+            ' selected>user@example.com</option>',
+        )
         member = self.mm_client.get_member(
-            self.foo_list.list_id, 'user@example.com')
+            self.foo_list.list_id, 'user@example.com'
+        )
         self.assertIsNotNone(member)
         # Initially, all preferences are none. Let's set it to something
         # custom.
@@ -209,22 +234,27 @@ class MailmanUserTest(ViewTestCase):
         member.preferences.save()
         # now, let's switch the subscription to a new user.
         response = self.client.post(
-            reverse('change_subscription', args=(self.foo_list.list_id, )),
-            {'subscriber': 'anotheremail@example.com',
-             'member_id': member.member_id}
+            reverse('change_subscription', args=(self.foo_list.list_id,)),
+            {
+                'subscriber': 'anotheremail@example.com',
+                'member_id': member.member_id,
+            },
         )
         self.assertEqual(response.status_code, 302)
         self.assertHasSuccessMessage(response)
         member_new = self.mm_client.get_member(
-            self.foo_list.list_id, 'anotheremail@example.com')
+            self.foo_list.list_id, 'anotheremail@example.com'
+        )
         self.assertIsNotNone(member_new)
         # There is no 'member_id' attribute, so we simply use the self_link to
         # compare and make sure that the Member object is same.
         self.assertEqual(member.self_link, member_new.self_link)
         self.assertEqual(member_new.subscription_mode, 'as_address')
         # Also, assert that the new member's preferences are same.
-        self.assertEqual(member.preferences['acknowledge_posts'],
-                         member_new.preferences['acknowledge_posts'])
+        self.assertEqual(
+            member.preferences['acknowledge_posts'],
+            member_new.preferences['acknowledge_posts'],
+        )
 
     def test_change_subscription_to_from_primary_address(self):
         # Test that we can change subscription to a new email.
@@ -233,17 +263,23 @@ class MailmanUserTest(ViewTestCase):
         self._set_primary(self.user, user)
         member = self.foo_list.subscribe(
             self.user.email,
-            pre_verified=True, pre_confirmed=True, pre_approved=True)
+            pre_verified=True,
+            pre_confirmed=True,
+            pre_approved=True,
+        )
         # Now, first verify that the list_options page has the primary address.
-        response = self.client.get(reverse('user_list_options',
-                                           args=[member.member_id]))
+        response = self.client.get(
+            reverse('user_list_options', args=[member.member_id])
+        )
         self.assertContains(response, 'Primary Address (user@example.com)')
         self.assertContains(
             response,
             '<option value="user@example.com" '
-            'selected>user@example.com</option>')
+            'selected>user@example.com</option>',
+        )
         member = self.mm_client.get_member(
-            self.foo_list.list_id, 'user@example.com')
+            self.foo_list.list_id, 'user@example.com'
+        )
         self.assertIsNotNone(member)
         # Initially, all preferences are none. Let's set it to something
         # custom.
@@ -252,13 +288,14 @@ class MailmanUserTest(ViewTestCase):
         member.preferences.save()
         # now, let's switch the subscription to a new user.
         response = self.client.post(
-            reverse('change_subscription', args=(self.foo_list.list_id, )),
-            {'subscriber': str(user.user_id), 'member_id': member.member_id}
+            reverse('change_subscription', args=(self.foo_list.list_id,)),
+            {'subscriber': str(user.user_id), 'member_id': member.member_id},
         )
         self.assertEqual(response.status_code, 302)
         self.assertHasSuccessMessage(response)
         new_member = self.mm_client.get_member(
-            self.foo_list.list_id, 'user@example.com')
+            self.foo_list.list_id, 'user@example.com'
+        )
         self.assertIsNotNone(new_member)
         self.assertEqual(new_member.subscription_mode, 'as_user')
         # we can't compare against the preferences object of `member` since the
@@ -270,19 +307,24 @@ class MailmanUserTest(ViewTestCase):
 
         member = self.foo_list.subscribe(
             self.user.email,
-            pre_verified=True, pre_confirmed=True, pre_approved=True)
+            pre_verified=True,
+            pre_confirmed=True,
+            pre_approved=True,
+        )
         # Now, first verify that the list_options page has all the emails.
         # Check response
-        response = self.client.get(reverse('user_list_options',
-                                           args=[member.member_id]))
+        response = self.client.get(
+            reverse('user_list_options', args=[member.member_id])
+        )
         self.assertContains(
             response,
             '<option value="user@example.com" '
-            'selected>user@example.com</option>')
+            'selected>user@example.com</option>',
+        )
         # now, let's switch the subscription to a new user.
         response = self.client.post(
-            reverse('change_subscription', args=(self.foo_list.list_id, )),
-            {'subscriber': 'user@example.com', 'member_id': member.member_id}
+            reverse('change_subscription', args=(self.foo_list.list_id,)),
+            {'subscriber': 'user@example.com', 'member_id': member.member_id},
         )
         self.assertEqual(response.status_code, 302)
         error = self.assertHasErrorMessage(response)
@@ -295,18 +337,25 @@ class MailmanUserTest(ViewTestCase):
         self._set_primary(self.user, user)
         member = self.foo_list.subscribe(
             user.user_id,
-            pre_verified=True, pre_confirmed=True, pre_approved=True)
+            pre_verified=True,
+            pre_confirmed=True,
+            pre_approved=True,
+        )
         # Now, first verify that the list_options page has the primary address.
-        response = self.client.get(reverse('user_list_options',
-                                           args=[member.member_id]))
+        response = self.client.get(
+            reverse('user_list_options', args=[member.member_id])
+        )
         self.assertContains(
             response,
-            ('<option value="{}" selected>Primary Address (user@example.com)'
-             '</option>').format(user.user_id))
+            (
+                '<option value="{}" selected>Primary Address (user@example.com)'  # noqa: E501
+                '</option>'
+            ).format(user.user_id),
+        )
         # now, let's switch the subscription to a new user.
         response = self.client.post(
-            reverse('change_subscription', args=(self.foo_list.list_id, )),
-            {'subscriber': str(user.user_id), 'member_id': member.member_id}
+            reverse('change_subscription', args=(self.foo_list.list_id,)),
+            {'subscriber': str(user.user_id), 'member_id': member.member_id},
         )
         self.assertEqual(response.status_code, 302)
         error = self.assertHasErrorMessage(response)
@@ -318,10 +367,12 @@ class MailmanUserTest(ViewTestCase):
         self.assertIsNone(mm_user.preferred_address)
         member = self.foo_list.subscribe(
             self.user.email,
-            pre_verified=True, pre_confirmed=True, pre_approved=True)
+            pre_verified=True,
+            pre_confirmed=True,
+            pre_approved=True,
+        )
         self.client.login(username='user', password='testpass')
-        self.client.get(reverse('user_list_options',
-                                args=[member.member_id]))
+        self.client.get(reverse('user_list_options', args=[member.member_id]))
         self.assertEqual(mm_user.preferred_address.email, self.user.email)
 
     @expectedFailure
@@ -339,15 +390,20 @@ class MailmanUserTest(ViewTestCase):
         # primary address.
         member_primary = self.foo_list.subscribe(
             mm_user.user_id,
-            pre_verified=True, pre_confirmed=True, pre_approved=True)
+            pre_verified=True,
+            pre_confirmed=True,
+            pre_approved=True,
+        )
         member_addr = self.foo_list.subscribe(
             self.user.email,
-            pre_verified=True, pre_confirmed=True, pre_approved=True)
+            pre_verified=True,
+            pre_confirmed=True,
+            pre_approved=True,
+        )
         self.assertEqual(len(self.foo_list.members), 2)
 
         self.client.login(username='user', password='testpass')
-        response = self.client.get(
-            reverse('user_subscription_preferences'))
+        response = self.client.get(reverse('user_subscription_preferences'))
         self.assertEqual(response.status_code, 200)
         # There should be list options for two users.
         self.assertContains(response, 'Primary Address')
@@ -355,49 +411,56 @@ class MailmanUserTest(ViewTestCase):
         # Get the list options for both memberships and check subscriber ==
         # address.
         response = self.client.get(
-            reverse('user_list_options',
-                    args=[member_addr.member_id]))
+            reverse('user_list_options', args=[member_addr.member_id])
+        )
         self.assertEqual(response.status_code, 200)
         subscriber = response.context.get(
-            'change_subscription_form').initial.get('subscriber')
+            'change_subscription_form'
+        ).initial.get('subscriber')
         self.assertEqual(subscriber, member_addr.address.email)
         # Check subscriber == member_id
         response = self.client.get(
-            reverse('user_list_options',
-                    args=[member_primary.member_id]))
+            reverse('user_list_options', args=[member_primary.member_id])
+        )
         self.assertEqual(response.status_code, 200)
         subscriber = response.context.get(
-            'change_subscription_form').initial.get('subscriber')
+            'change_subscription_form'
+        ).initial.get('subscriber')
         self.assertEqual(subscriber, member_primary.user.user_id)
 
     def test_access_list_options_other_member(self):
         # Test that a user can't access member options for a different user.
         member_addr = self.foo_list.subscribe(
             self.user.email,
-            pre_verified=True, pre_confirmed=True, pre_approved=True)
+            pre_verified=True,
+            pre_confirmed=True,
+            pre_approved=True,
+        )
         another_member = self.foo_list.subscribe(
             'anoter@example.com',
-            pre_verified=True, pre_confirmed=True, pre_approved=True)
+            pre_verified=True,
+            pre_confirmed=True,
+            pre_approved=True,
+        )
         self.client.login(username='user', password='testpass')
         response = self.client.get(
-            reverse('user_list_options',
-                    args=[another_member.member_id]))
+            reverse('user_list_options', args=[another_member.member_id])
+        )
         self.assertEqual(response.status_code, 404)
         # But they can access their own.
         response = self.client.get(
-            reverse('user_list_options',
-                    args=[member_addr.member_id]))
+            reverse('user_list_options', args=[member_addr.member_id])
+        )
         self.assertEqual(response.status_code, 200)
 
 
 class TestListAllUsers(ViewTestCase):
-
     def setUp(self):
         super().setUp()
         for i in range(11):
-            self.mm_client.create_user('user{}@example.com'.format(i),
-                                       'testpass',
-                                       'User {}'.format(i))
+            self.mm_client.create_user(
+                'user{}@example.com'.format(i), 'testpass', 'User {}'.format(i)
+            )
         self.su = User.objects.create_superuser('su', 'su@example.com', 'pass')
 
     def test_get_all_users_forbidden(self):
@@ -434,31 +497,33 @@ class TestListAllUsers(ViewTestCase):
         # It should be one user, user7@example.com, but it should search with
         # display name because of the space.
         self.assertEqual(len(response.context['all_users']), 1)
-        self.assertEqual(response.context['all_users'][0].display_name,
-                         'User 7')
+        self.assertEqual(
+            response.context['all_users'][0].display_name, 'User 7'
+        )
 
 
 class TestManageUser(ViewTestCase):
-
     def setUp(self):
         super().setUp()
-        self.user = self.mm_client.create_user('user@example.com',
-                                               'testpass')
+        self.user = self.mm_client.create_user('user@example.com', 'testpass')
         self.su = User.objects.create_superuser('su', 'su@example.com', 'pass')
         dom = self.mm_client.create_domain('example.com')
         self.mlist = dom.create_list('test')
-        self.mlist.subscribe('user@example.com',
-                             pre_verified=True, pre_confirmed=True)
+        self.mlist.subscribe(
+            'user@example.com', pre_verified=True, pre_confirmed=True
+        )
 
     def test_get_all_users_forbidden(self):
         response = self.client.get(
-            reverse('manage_user', args=[self.user.user_id]))
+            reverse('manage_user', args=[self.user.user_id])
+        )
         self.assertEqual(response.status_code, 403)
 
     def test_get_manage_user(self):
         self.client.force_login(self.su)
         response = self.client.get(
-            reverse('manage_user', args=[self.user.user_id]))
+            reverse('manage_user', args=[self.user.user_id])
+        )
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.context['auser'].user_id, self.user.user_id)
         user_form = response.context['user_form']
@@ -473,11 +538,11 @@ class TestManageUser(ViewTestCase):
     def test_get_manage_user_with_django_user(self):
         user = User.objects.create_user(username='tester', password='test')
         for addr in self.user.addresses:
-            EmailAddress.objects.create(
-                user=user, email=addr.email)
+            EmailAddress.objects.create(user=user, email=addr.email)
         self.client.force_login(self.su)
         response = self.client.get(
-            reverse('manage_user', args=[self.user.user_id]))
+            reverse('manage_user', args=[self.user.user_id])
+        )
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.context['auser'].user_id, self.user.user_id)
         user_form = response.context['user_form']
@@ -494,7 +559,8 @@ class TestManageUser(ViewTestCase):
         response = self.client.post(
             reverse('manage_user', args=[self.user.user_id]),
             data={'display_name': 'My User', 'user_form': 'Update'},
-            follow=True)
+            follow=True,
+        )
         self.assertEqual(response.status_code, 200)
         self.assertIn('Successfully updated user.', response.content.decode())
 
@@ -514,11 +580,14 @@ class TestManageUser(ViewTestCase):
         response = self.client.post(
             reverse('manage_user', args=[self.user.user_id]),
             data=formdata,
-            follow=True)
+            follow=True,
+        )
         self.assertEqual(response.status_code, 200)
         self.assertTrue(self.user.addresses[0].verified)
-        self.assertIn('Successfully updated addresses user@example.com',
-                      response.content.decode())
+        self.assertIn(
+            'Successfully updated addresses user@example.com',
+            response.content.decode(),
+        )
 
     def test_update_user_subscriptions(self):
         self.client.force_login(self.su)
@@ -527,7 +596,6 @@ class TestManageUser(ViewTestCase):
             'form-INITIAL_FORMS': '1',
             'form-MIN_NUM_FORMS': '0',
             'form-MAX_NUM_FORMS': '1',
-
             'form-0-moderation_action': 'discard',
             'form-0-delivery_mode': 'mime_digests',
             'subs_form': 'Update',
@@ -535,17 +603,22 @@ class TestManageUser(ViewTestCase):
         response = self.client.post(
             reverse('manage_user', args=[self.user.user_id]),
             data=data,
-            follow=True)
+            follow=True,
+        )
         self.assertEqual(response.status_code, 200)
-        self.assertIn('Successfully updated memberships for test.example.com',
-                      response.content.decode())
+        self.assertIn(
+            'Successfully updated memberships for test.example.com',
+            response.content.decode(),
+        )
 
     def test_update_user_password(self):
         user = User.objects.create_user(
-            username='myuser', password='mypassword')
+            username='myuser', password='mypassword'
+        )
         EmailAddress.objects.create(user=user, email='user@example.com')
         self.assertTrue(
-            self.client.login(username='myuser', password='mypassword'))
+            self.client.login(username='myuser', password='mypassword')
+        )
         self.client.force_login(self.su)
         data = {
             'change_password': 'Update',
@@ -553,9 +626,10 @@ class TestManageUser(ViewTestCase):
             'password2': 'newpsdsd1987',
         }
         response = self.client.post(
-            reverse('manage_user', args=[self.user.user_id]),
-            data=data)
+            reverse('manage_user', args=[self.user.user_id]), data=data
+        )
         self.assertEqual(response.status_code, 302)
         # Verify by tring to login.
         self.assertTrue(
-            self.client.login(username='myuser', password='newpsdsd1987'))
+            self.client.login(username='myuser', password='newpsdsd1987')
+        )

@@ -29,31 +29,33 @@ def server_error(requset):
 
 
 class TestUtils(TestCase):
-
     def test_404_page(self):
         response = self.client.get('/postorius/not-here', follow=True)
         self.assertEqual(response.status_code, 404)
+        self.assertTrue('<h1>Page not found</h1>' in str(response.content))
         self.assertTrue(
-            '<h1>Page not found</h1>' in str(response.content))
-        self.assertTrue(
-            '<div class="alert alert-danger">' in str(response.content))
+            '<div class="alert alert-danger">' in str(response.content)
+        )
 
     @patch.object(Client, 'get_list')
     def test_403_page(self, mock_get_list):
         user = User.objects.create_user(
-            'testuser', 'test@example.com', 'testpass')
+            'testuser', 'test@example.com', 'testpass'
+        )
         self.client.force_login(user)
         response = self.client.get(
-            '/postorius/lists/foolist.example.org/settings/', follow=True)
+            '/postorius/lists/foolist.example.org/settings/', follow=True
+        )
         self.assertEqual(response.status_code, 403)
+        self.assertTrue('<h1>Forbidden</h1>' in str(response.content))
         self.assertTrue(
-            '<h1>Forbidden</h1>' in str(response.content))
-        self.assertTrue(
-            '<div class="alert alert-danger">' in str(response.content))
+            '<div class="alert alert-danger">' in str(response.content)
+        )
 
     def test_500_page(self):
         su = User.objects.create_superuser(
-            'su', 'test@example.com', 'testpass')
+            'su', 'test@example.com', 'testpass'
+        )
         self.client.force_login(su)
         response = self.client.get('/500', follow=True)
         self.assertEqual(response.status_code, 500)

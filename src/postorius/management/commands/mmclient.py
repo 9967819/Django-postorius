@@ -37,9 +37,11 @@ A complete list of commands can be found in the mailmanclient documentation."""
         # choose an interpreter
         try:
             import IPython
+
             console_fn = IPython.embed
         except ImportError:
             import code
+
             shell = code.InteractiveConsole(globals())
             console_fn = shell.interact
         # connect to mailmanclient

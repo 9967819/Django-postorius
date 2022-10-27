@@ -27,18 +27,20 @@ from postorius.tests.utils import ViewTestCase
 
 
 class TestDomainEdit(ViewTestCase):
-
     def setUp(self):
         super().setUp()
         self.domain = self.mm_client.create_domain('example.com')
         self.user = User.objects.create_user('user', 'user@example.com', 'pwd')
         self.superuser = User.objects.create_superuser(
-            'su', 'su@example.com', 'pwd')
+            'su', 'su@example.com', 'pwd'
+        )
         for user in (self.user, self.superuser):
             EmailAddress.objects.create(
-                user=user, email=user.email, verified=True)
+                user=user, email=user.email, verified=True
+            )
         MailDomain.objects.create(
-            site=Site.objects.get_current(), mail_domain='example.com')
+            site=Site.objects.get_current(), mail_domain='example.com'
+        )
         self.url = reverse('domain_edit', args=['example.com'])
 
     def test_permission_denied(self):
@@ -50,26 +52,31 @@ class TestDomainEdit(ViewTestCase):
         self.client.login(username='su', password='pwd')
         response = self.client.get(reverse('domain_edit', args=['random.com']))
         self.assertEqual(response.status_code, 404)
-        self.assertEqual(response.context['exception'],
-                         'Domain does not exist')
+        self.assertEqual(
+            response.context['exception'], 'Domain does not exist'
+        )
 
     def test_edit_domain_works(self):
         self.client.login(username='su', password='pwd')
         response = self.client.post(
             self.url,
-            dict(mail_host='example.com',
-                 description='This is a new list description',
-                 site=Site.objects.get_current().id))
+            dict(
+                mail_host='example.com',
+                description='This is a new list description',
+                site=Site.objects.get_current().id,
+            ),
+        )
         self.assertEqual(response.status_code, 302)
-        self.assertEqual(self.domain.description,
-                         'This is a new list description')
+        self.assertEqual(
+            self.domain.description, 'This is a new list description'
+        )
 
     def test_change_mail_host(self):
         new_site = Site.objects.create(domain='most-desirable.org')
         self.client.login(username='su', password='pwd')
-        response = self.client.post(self.url,
-                                    dict(mail_host='example.com',
-                                         site=new_site.id))
+        response = self.client.post(
+            self.url, dict(mail_host='example.com', site=new_site.id)
+        )
         self.assertEqual(response.status_code, 302)
         mdomain = MailDomain.objects.get(mail_domain=self.domain.mail_host)
         self.assertEqual(mdomain.site, new_site)

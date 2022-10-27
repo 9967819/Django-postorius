@@ -23,11 +23,11 @@ from django.test import TestCase
 
 
 class TestMigrationPending(TestCase):
-
     def test_pending_migration(self):
         # Test that there aren't any pending migrations to be added.
         output = StringIO()
         # We will call the makemigrations command and check the output.
         call_command(
-            'makemigrations', interactive=False, dry_run=True, stdout=output)
+            'makemigrations', interactive=False, dry_run=True, stdout=output
+        )
         self.assertEqual(output.getvalue(), 'No changes detected\n')

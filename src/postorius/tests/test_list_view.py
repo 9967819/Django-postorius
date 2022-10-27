@@ -49,13 +49,10 @@ class TestListView(TestCase):
         mailing_list_data = {'list_id': 'test_list.example.com'}
         mailing_list = MailingList(None, None, data=mailing_list_data)
         view = ListMembersViews(mailing_list=mailing_list)
-        request_data = {
-            'email': ['.*@example.com'],
-            'display_name': ['']
-        }
+        request_data = {'email': ['.*@example.com'], 'display_name': ['']}
         request = self.request_factory.post(
             '/postorius/lists/test_list.example.com/members/nonmember/',
-            data=request_data
+            data=request_data,
         )
         request._messages = LocalStorage(request)
         view.post(request, 'test_list.example.com', role='nonmember')

@@ -35,20 +35,26 @@ class DomainDeleteTest(ViewTestCase):
         self.foo_list = self.domain.create_list('foo')
 
         self.user = User.objects.create_user(
-            'testuser', 'test@example.com', 'testpass')
+            'testuser', 'test@example.com', 'testpass'
+        )
         self.superuser = User.objects.create_superuser(
-            'testsu', 'su@example.com', 'testpass')
+            'testsu', 'su@example.com', 'testpass'
+        )
         self.owner = User.objects.create_user(
-            'testowner', 'owner@example.com', 'testpass')
+            'testowner', 'owner@example.com', 'testpass'
+        )
         self.moderator = User.objects.create_user(
-            'testmoderator', 'moderator@example.com', 'testpass')
+            'testmoderator', 'moderator@example.com', 'testpass'
+        )
         for user in (self.user, self.superuser, self.owner, self.moderator):
             EmailAddress.objects.create(
-                user=user, email=user.email, verified=True)
+                user=user, email=user.email, verified=True
+            )
         self.foo_list.add_owner('owner@example.com')
         self.foo_list.add_moderator('moderator@example.com')
         MailDomain.objects.create(
-            site=Site.objects.get_current(), mail_domain='example.com')
+            site=Site.objects.get_current(), mail_domain='example.com'
+        )
         self.url = reverse('domain_delete', args=['example.com'])
 
     def test_access_anonymous(self):
@@ -89,7 +95,8 @@ class DomainDeleteTest(ViewTestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTrue(
             'This would delete 1 lists, some of which are'
-            in str(response.content))
+            in str(response.content)
+        )
         self.assertTrue('foo@example.com' in str(response.content))
 
     def test_domain_delete(self):
@@ -101,4 +108,5 @@ class DomainDeleteTest(ViewTestCase):
         self.assertEqual(len(self.mm_client.lists), 0)
         self.assertHasSuccessMessage(response)
         self.assertFalse(
-            MailDomain.objects.filter(mail_domain='example.com').exists())
+            MailDomain.objects.filter(mail_domain='example.com').exists()
+        )

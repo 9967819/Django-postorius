@@ -29,6 +29,7 @@ def list_owner_required(fn):
     Assumes that the request object is the first arg and that list_id
     is present in kwargs.
     """
+
     @wraps(fn)
     def wrapper(*args, **kwargs):
         user = args[0].user
@@ -42,6 +43,7 @@ def list_owner_required(fn):
             return fn(*args, **kwargs)
         else:
             raise PermissionDenied(f'User {user} is not Owner of {list_id}')
+
     return wrapper
 
 
@@ -50,6 +52,7 @@ def list_moderator_required(fn):
     Assumes that the request object is the first arg and that list_id
     is present in kwargs.
     """
+
     @wraps(fn)
     def wrapper(*args, **kwargs):
         user = args[0].user
@@ -63,7 +66,9 @@ def list_moderator_required(fn):
             return fn(*args, **kwargs)
         else:
             raise PermissionDenied(
-                f'User {user} is not Owner or Moderator of {list_id}')
+                f'User {user} is not Owner or Moderator of {list_id}'
+            )
+
     return wrapper
 
 
@@ -71,10 +76,12 @@ def superuser_required(fn):
     """Make sure that the logged in user is a superuser or otherwise raise
     PermissionDenied.
     Assumes the request object to be the first arg."""
+
     @wraps(fn)
     def wrapper(*args, **kwargs):
         user = args[0].user
         if not user.is_superuser:
             raise PermissionDenied
         return fn(*args, **kwargs)
+
     return wrapper

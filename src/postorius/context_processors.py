@@ -30,8 +30,7 @@ MAILMAN_DAY = 1
 
 
 def postorius(request):
-    """Add template variables to context.
-    """
+    """Add template variables to context."""
     return dict(
         POSTORIUS_VERSION=__version__,
         # Mailman Day is first of every month.

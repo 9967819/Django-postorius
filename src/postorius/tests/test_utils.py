@@ -22,13 +22,13 @@ from postorius.utils import render_api_error
 
 
 class TestUtils(TestCase):
-
     def setUp(self):
         self.factory = RequestFactory()
 
     def test_render_api_error_works(self):
         request = self.factory.get('/postorius/lists')
         response = render_api_error(request)
-        self.assertTrue('Mailman REST API not available.' in
-                        str(response.content))
+        self.assertTrue(
+            'Mailman REST API not available.' in str(response.content)
+        )
         self.assertEqual(response.status_code, 503)

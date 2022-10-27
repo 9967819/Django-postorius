@@ -51,6 +51,7 @@ class MailingListView(TemplateView, MailmanClientMixin):
 
     Sets self.mailing_list to list object if list_id is in **kwargs.
     """
+
     def get(self, request, *args, **kwargs):
         # This should be overridden by the subclass.
         return HttpResponse(status=405)
@@ -65,8 +66,9 @@ class MailingListView(TemplateView, MailmanClientMixin):
     def dispatch(self, request, *args, **kwargs):
         # get the list object.
         if 'list_id' in kwargs:
-            self.mailing_list = self._get_list(kwargs['list_id'],
-                                               int(kwargs.get('page', 1)))
+            self.mailing_list = self._get_list(
+                kwargs['list_id'], int(kwargs.get('page', 1))
+            )
             set_list_access_props(request.user, self.mailing_list)
         # set the template
         if 'template' in kwargs:
@@ -76,7 +78,8 @@ class MailingListView(TemplateView, MailmanClientMixin):
     def _has_pending_unsub_req(self, email):
         """Check if there is a pending unsubscription request for email."""
         for req in self.mailing_list.get_requests(
-                token_owner='moderator', request_type='unsubscription'):
+            token_owner='moderator', request_type='unsubscription'
+        ):
             if req.get('email') == email:
                 return req
         return False
@@ -108,21 +111,28 @@ def bans_view(request, template, list_id=None):
             if addban_form.is_valid():
                 try:
                     ban_list.add(addban_form.cleaned_data['email'])
-                    messages.success(request, _(
-                        'The email {} has been banned.').format(
-                            addban_form.cleaned_data['email']))
+                    messages.success(
+                        request,
+                        _('The email {} has been banned.').format(
+                            addban_form.cleaned_data['email']
+                        ),
+                    )
                 except HTTPError as e:
                     messages.error(
-                        request, _('An error occurred: %s') % e.reason)
+                        request, _('An error occurred: %s') % e.reason
+                    )
                 except ValueError as e:
                     messages.error(request, _('Invalid data: %s') % e)
                 return redirect(url)
         elif 'del' in request.POST:
             try:
                 ban_list.remove(request.POST['email'])
-                messages.success(request, _(
-                    'The email {} has been un-banned').format(
-                        request.POST['email']))
+                messages.success(
+                    request,
+                    _('The email {} has been un-banned').format(
+                        request.POST['email']
+                    ),
+                )
             except HTTPError as e:
                 messages.error(request, _('An error occurred: %s') % e.reason)
             except ValueError as e:
@@ -131,7 +141,8 @@ def bans_view(request, template, list_id=None):
     else:
         addban_form = AddBanForm(initial=request.GET)
     banned_addresses = paginate(
-        list(ban_list), request.GET.get('page'), request.GET.get('count'))
+        list(ban_list), request.GET.get('page'), request.GET.get('count')
+    )
 
     context = {
         'addban_form': addban_form,

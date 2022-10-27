@@ -31,9 +31,10 @@ def not_found(request):
 
 
 urlpatterns = [
-    re_path(r'^$', RedirectView.as_view(
-        url=reverse_lazy('list_index'),
-        permanent=True)),
+    re_path(
+        r'^$',
+        RedirectView.as_view(url=reverse_lazy('list_index'), permanent=True),
+    ),
     re_path(r'^postorius/', include('postorius.urls')),
     re_path(r'', include('django_mailman3.urls')),
     re_path(r'^accounts/', include('allauth.urls')),
@@ -48,6 +49,7 @@ urlpatterns = [
 
 if settings.DEBUG:
     import debug_toolbar
+
     urlpatterns = [
         path('__debug__/', include(debug_toolbar.urls)),
     ] + urlpatterns

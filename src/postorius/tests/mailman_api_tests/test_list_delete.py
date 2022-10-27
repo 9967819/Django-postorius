@@ -27,27 +27,32 @@ from postorius.tests.utils import ViewTestCase
 
 
 class ListDeleteTest(ViewTestCase):
-
     def setUp(self):
         super(ListDeleteTest, self).setUp()
         # Create domain `example.com` in Mailman
         self.domain = self.mm_client.create_domain('example.com')
         self.foo_list = self.domain.create_list('test_list')
         self.user = User.objects.create_user(
-            'testuser', 'test@example.com', 'testpass')
+            'testuser', 'test@example.com', 'testpass'
+        )
         self.superuser = User.objects.create_superuser(
-            'testsu', 'su@example.com', 'testpass')
+            'testsu', 'su@example.com', 'testpass'
+        )
         self.owner = User.objects.create_user(
-            'testowner', 'owner@example.com', 'testpass')
+            'testowner', 'owner@example.com', 'testpass'
+        )
         self.moderator = User.objects.create_user(
-            'testmoderator', 'moderator@example.com', 'testpass')
+            'testmoderator', 'moderator@example.com', 'testpass'
+        )
         for user in (self.user, self.superuser, self.owner, self.moderator):
             EmailAddress.objects.create(
-                user=user, email=user.email, verified=True)
+                user=user, email=user.email, verified=True
+            )
         self.foo_list.add_owner('owner@example.com')
         self.foo_list.add_moderator('moderator@example.com')
         MailDomain.objects.create(
-            site=Site.objects.get_current(), mail_domain='example.com')
+            site=Site.objects.get_current(), mail_domain='example.com'
+        )
         self.url = reverse('list_delete', args=['test_list.example.com'])
 
     def test_access_anonymous(self):

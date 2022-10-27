@@ -46,7 +46,7 @@ SECRET_KEY = '$!-7^wl#wiifjbh)5@f7ji%x!vp7s1vzbvwt26hxv$idixq0u0'
 DEBUG = True
 
 ADMINS = (
-    #('Admin', 'webmaster@example.com'),
+    # ('Admin', 'webmaster@example.com'),
 )
 
 SITE_ID = 1
@@ -83,7 +83,6 @@ INSTALLED_APPS = (
     # 'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.twitter',
     'allauth.socialaccount.providers.stackexchange',
-
     # Dev only dependencies. Do not include in any production site.
     'debug_toolbar',
     'requests_panel',
@@ -201,14 +200,11 @@ LOGIN_REDIRECT_URL = 'list_index'
 LOGOUT_URL = 'account_logout'
 
 
-
 # From Address for emails sent to users
 DEFAULT_FROM_EMAIL = 'postorius@localhost.local'
 # From Address for emails sent to admins
 SERVER_EMAIL = 'root@localhost.local'
-MESSAGE_TAGS = {
-    messages.ERROR: 'danger'
-}
+MESSAGE_TAGS = {messages.ERROR: 'danger'}
 
 
 AUTHENTICATION_BACKENDS = (
@@ -217,18 +213,16 @@ AUTHENTICATION_BACKENDS = (
 )
 
 # Django Allauth
-ACCOUNT_AUTHENTICATION_METHOD = "username_email"
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_EMAIL_VERIFICATION = "mandatory"
-ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
-ACCOUNT_UNIQUE_EMAIL  = True
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_DEFAULT_HTTP_PROTOCOL = 'https'
+ACCOUNT_UNIQUE_EMAIL = True
 
 SOCIALACCOUNT_PROVIDERS = {
     'openid': {
         'SERVERS': [
-            dict(id='yahoo',
-                 name='Yahoo',
-                 openid_url='http://me.yahoo.com'),
+            dict(id='yahoo', name='Yahoo', openid_url='http://me.yahoo.com'),
         ],
     },
     'google': {
@@ -236,20 +230,19 @@ SOCIALACCOUNT_PROVIDERS = {
         'AUTH_PARAMS': {'access_type': 'online'},
     },
     'facebook': {
-       'METHOD': 'oauth2',
-       'SCOPE': ['email'],
-       'FIELDS': [
-           'email',
-           'name',
-           'first_name',
-           'last_name',
-           'locale',
-           'timezone',
-           ],
-       'VERSION': 'v2.4',
+        'METHOD': 'oauth2',
+        'SCOPE': ['email'],
+        'FIELDS': [
+            'email',
+            'name',
+            'first_name',
+            'last_name',
+            'locale',
+            'timezone',
+        ],
+        'VERSION': 'v2.4',
     },
 }
-
 
 
 # These can be set to override the defaults but are not mandatory:
@@ -265,7 +258,7 @@ LOGGING = {
             'class': 'logging.StreamHandler',
             'formatter': 'simple',
         },
-        'file':{
+        'file': {
             'level': 'INFO',
             #'class': 'logging.handlers.RotatingFileHandler',
             'class': 'logging.handlers.WatchedFileHandler',
@@ -285,12 +278,10 @@ LOGGING = {
         'postorius': {
             'handlers': ['console', 'file'],
             'level': 'DEBUG',
-        }
+        },
     },
     'formatters': {
-        'simple': {
-            'format': '%(levelname)s: %(message)s'
-        },
+        'simple': {'format': '%(levelname)s: %(message)s'},
         'verbose': {
             'format': '%(levelname)s %(asctime)s %(process)d %(name)s %(message)s'
         },
@@ -298,7 +289,7 @@ LOGGING = {
 }
 
 
-POSTORIUS_TEMPLATE_BASE_URL = "http://localhost:8000"
+POSTORIUS_TEMPLATE_BASE_URL = 'http://localhost:8000'
 
 #: Debug the API calls made by Postorius.
 POSTORIUS_API_DEBUG = False
@@ -316,7 +307,6 @@ DEBUG_TOOLBAR_PANELS = [
     'requests_panel.panel.RequestsDebugPanel',
     'debug_toolbar.panels.sql.SQLPanel',
     'debug_toolbar.panels.templates.TemplatesPanel',
-
     'debug_toolbar.panels.history.HistoryPanel',
     'debug_toolbar.panels.versions.VersionsPanel',
     'debug_toolbar.panels.timer.TimerPanel',
@@ -329,7 +319,6 @@ DEBUG_TOOLBAR_PANELS = [
     'debug_toolbar.panels.logging.LoggingPanel',
     'debug_toolbar.panels.redirects.RedirectsPanel',
     'debug_toolbar.panels.profiling.ProfilingPanel',
-
 ]
 
 try:

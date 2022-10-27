@@ -34,17 +34,20 @@ class AnonymousSubscribeTest(ViewTestCase):
         url = reverse('list_anonymous_subscribe', args=('foo.example.com',))
         response = self.client.post(url, dict(email='aperson@example.com'))
         self.assertEqual(response.status_code, 302)
-        self.assertEqual(response.url,
-                         reverse('list_summary', args=('foo.example.com',)))
+        self.assertEqual(
+            response.url, reverse('list_summary', args=('foo.example.com',))
+        )
         # 302 responses have no context, hence we can't check the actual
         # success message.
-        response = self.client.post(url,
-                                    dict(email='bperson@example.com'),
-                                    follow=True)
+        response = self.client.post(
+            url, dict(email='bperson@example.com'), follow=True
+        )
         success_msg = list(response.context.get('messages'))[0]
         self.assertEqual(success_msg.tags, 'success')
-        self.assertEqual(success_msg.message,
-                         'Please check your inbox for further instructions')
+        self.assertEqual(
+            success_msg.message,
+            'Please check your inbox for further instructions',
+        )
         # Make sure that there are two pending requests in Mailing List.
         self.assertEqual(len(self.foo_list.requests), 2)
         for req in self.foo_list.requests:

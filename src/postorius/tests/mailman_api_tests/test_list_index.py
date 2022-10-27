@@ -41,11 +41,13 @@ class ListIndexPageTest(ViewTestCase):
 
         self.user = User.objects.create_user('user', 'user@example.com', 'pwd')
         self.superuser = User.objects.create_superuser(
-            'su', 'su@example.com', 'pwd')
+            'su', 'su@example.com', 'pwd'
+        )
 
         for user in (self.user, self.superuser):
             EmailAddress.objects.create(
-                user=user, email=user.email, verified=True)
+                user=user, email=user.email, verified=True
+            )
 
     def test_list_index_contains_the_lists(self):
         # The list index page should contain the lists
@@ -55,7 +57,8 @@ class ListIndexPageTest(ViewTestCase):
         # The lists should be sorted by address
         self.assertEqual(
             [ml.fqdn_listname for ml in response.context['lists']],
-            ['bar@example.com', 'foo@example.com'])
+            ['bar@example.com', 'foo@example.com'],
+        )
 
     def test_list_index_only_contains_advertised_lists(self):
         # The list index page should contain only contain the advertised lists
@@ -66,12 +69,13 @@ class ListIndexPageTest(ViewTestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.context['lists']), 2)
         self.assertNotIn(
-            'baz.example.com',
-            [ml.list_id for ml in response.context['lists']])
+            'baz.example.com', [ml.list_id for ml in response.context['lists']]
+        )
 
     def test_list_index_post_redirects(self):
-        response = self.client.post(reverse('list_index'),
-                                    dict(list='foo.example.com'))
+        response = self.client.post(
+            reverse('list_index'), dict(list='foo.example.com')
+        )
         # This should redirect to the list's summary view.
         self.assertEqual(response.status_code, 302)
         self.assertEqual(response.url, '/postorius/lists/foo.example.com/')
@@ -87,8 +91,9 @@ class ListIndexPageTest(ViewTestCase):
         response = self.client.get(url)
         self.assertEqual(len(response.context['lists']), 3)
         self.assertTrue(
-            b'Only admins see unadvertised lists in the list index.' in
-            response.content)
+            b'Only admins see unadvertised lists in the list index.'
+            in response.content
+        )
 
     def test_list_index_all_lists(self):
         # Test that list index page for a logged-in user.
@@ -104,7 +109,8 @@ class ListIndexPageTest(ViewTestCase):
         self.assertEqual(len(response.context['lists']), 2)
         # Now, if we subscribe the user to a list, it will show only that list.
         self.foo_list.subscribe(
-            self.user.email, pre_confirmed=True, pre_verified=True)
+            self.user.email, pre_confirmed=True, pre_verified=True
+        )
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.context['lists']), 1)
@@ -160,7 +166,8 @@ class ListIndexPageTest(ViewTestCase):
         self.assertEqual(len(response.context['lists']), 0)
         # Let's make them a moderator of a list and see if it shows up.
         self.foo_list.subscribe(
-            self.user.email, pre_confirmed=True, pre_verified=True)
+            self.user.email, pre_confirmed=True, pre_verified=True
+        )
         response = self.client.get(url + '?role=member')
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.context['lists']), 1)
@@ -175,7 +182,8 @@ class ListIndexPageTest(ViewTestCase):
         url = reverse('list_index')
         # Current user is not an owner of any list.
         self.foo_list.subscribe(
-            self.user.email, pre_confirmed=True, pre_verified=True)
+            self.user.email, pre_confirmed=True, pre_verified=True
+        )
         self.foo_list.add_owner(self.user.email)
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
@@ -185,10 +193,12 @@ class ListIndexPageTest(ViewTestCase):
 
     def test_list_index_multiple_addresses(self):
         EmailAddress.objects.create(
-            user=self.user, email='test-email2@example.com', verified=True)
+            user=self.user, email='test-email2@example.com', verified=True
+        )
         sync_email_addresses(self.user)
         self.foo_list.subscribe(
-            'test-email2@example.com', pre_confirmed=True, pre_verified=True)
+            'test-email2@example.com', pre_confirmed=True, pre_verified=True
+        )
         self.client.login(username='user', password='pwd')
         url = reverse('list_index')
         response = self.client.get(url)
@@ -216,7 +226,7 @@ class ListIndexPageTest(ViewTestCase):
         self.assertTrue(b'Results per page' in response.content)
 
 
-@override_settings(FILTER_VHOST=True, ALLOWED_HOSTS=["*"])
+@override_settings(FILTER_VHOST=True, ALLOWED_HOSTS=['*'])
 class DomainFilteringListIndexPageTest(ListIndexPageTest):
     """Tests for the list index page when domain filtering is enabled.
 
@@ -228,16 +238,17 @@ class DomainFilteringListIndexPageTest(ListIndexPageTest):
         self.domain2 = self.mm_client.create_domain('example.org')
         self.quux_list = self.domain2.create_list('quux')
         self.thud_list = self.domain2.create_list('thud')
-        self._site = Site.objects.create(domain='www.example.org',
-                                         name='www')
+        self._site = Site.objects.create(domain='www.example.org', name='www')
         self.mail_domain2 = MailDomain.objects.create(
-            site=self._site, mail_domain="example.org")
+            site=self._site, mail_domain='example.org'
+        )
 
         self.client._get = self.client.get
         self.client.get = partial(self.client._get, HTTP_HOST='example.com')
         self.client.get2 = partial(self.client._get, HTTP_HOST='example.org')
-        self.client.get3 = partial(self.client._get,
-                                   HTTP_HOST='www.example.org')
+        self.client.get3 = partial(
+            self.client._get, HTTP_HOST='www.example.org'
+        )
 
     def test_domain2_list_index_contains_the_lists(self):
         # The list index page should contain only the requested domain's lists
@@ -246,7 +257,8 @@ class DomainFilteringListIndexPageTest(ListIndexPageTest):
         self.assertEqual(len(response.context['lists']), 2)
         self.assertEqual(
             [ml.fqdn_listname for ml in response.context['lists']],
-            ['quux@example.org', 'thud@example.org'])
+            ['quux@example.org', 'thud@example.org'],
+        )
 
     def test_domain2_list_index_www_host_contains_the_lists(self):
         # The list index page should contain only the requested domain's lists
@@ -255,7 +267,8 @@ class DomainFilteringListIndexPageTest(ListIndexPageTest):
         self.assertEqual(len(response.context['lists']), 2)
         self.assertEqual(
             [ml.fqdn_listname for ml in response.context['lists']],
-            ['quux@example.org', 'thud@example.org'])
+            ['quux@example.org', 'thud@example.org'],
+        )
 
     def test_domain2_list_index_all_lists(self):
         # Test that list index page for a logged-in user.
@@ -271,7 +284,8 @@ class DomainFilteringListIndexPageTest(ListIndexPageTest):
         self.assertEqual(len(response.context['lists']), 2)
         # Now, if we subscribe the user to a list, it will show only that list.
         self.quux_list.subscribe(
-            self.user.email, pre_confirmed=True, pre_verified=True)
+            self.user.email, pre_confirmed=True, pre_verified=True
+        )
         response = self.client.get2(url)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.context['lists']), 1)

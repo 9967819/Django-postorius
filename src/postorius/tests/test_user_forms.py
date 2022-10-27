@@ -23,14 +23,15 @@ from postorius.forms.user_forms import UserPreferences
 
 
 class UserPreferencesTest(TestCase):
-
     def test_form_fields_valid(self):
-        form = UserPreferences({
-            'acknowledge_posts': 'True',
-            'hide_address': 'True',
-            'receive_list_copy': 'False',
-            'receive_own_postings': 'False',
-        })
+        form = UserPreferences(
+            {
+                'acknowledge_posts': 'True',
+                'hide_address': 'True',
+                'receive_list_copy': 'False',
+                'receive_own_postings': 'False',
+            }
+        )
         self.assertTrue(form.is_valid())
 
     def test_disabled_fields(self):
@@ -41,7 +42,8 @@ class UserPreferencesTest(TestCase):
         # Verify that the disabled choices are set on the widget.
         self.assertEqual(
             form.fields['delivery_status'].widget.disabled_choices,
-            ['by_moderator'])
+            ['by_moderator'],
+        )
         delivery_status_field = None
         for each in form.visible_fields():
             if each.name == 'delivery_status':
@@ -52,7 +54,8 @@ class UserPreferencesTest(TestCase):
         self.assertTrue(
             '<option value="by_moderator" disabled="disabled">'
             'Disabled by Admin</option>',
-            str(delivery_status_field))
+            str(delivery_status_field),
+        )
 
     def test_value_for_disabled_field_cannot_be_set(self):
         # Initially, this value is set to by_bounces, it shouldn't change on
@@ -62,7 +65,7 @@ class UserPreferencesTest(TestCase):
             'hide_address': 'True',
             'receive_list_copy': 'False',
             'receive_own_postings': 'True',
-            'delivery_status': 'by_bounces'
+            'delivery_status': 'by_bounces',
         }
 
         # Mock preferences obj that can be saved.
@@ -78,7 +81,7 @@ class UserPreferencesTest(TestCase):
             initial=initial,
             preferences=preferences,
             disabled_delivery_choices=['by_moderator', 'by_bounces'],
-            )
+        )
         self.assertTrue(form.is_bound)
         self.assertTrue(form.is_valid())
         form.save()
@@ -92,7 +95,7 @@ class UserPreferencesTest(TestCase):
             initial=initial,
             preferences=preferences,
             disabled_delivery_choices=['by_moderator', 'by_bounces'],
-            )
+        )
         self.assertTrue(form.is_bound)
         self.assertTrue(form.is_valid())
         form.save()
@@ -106,8 +109,10 @@ class UserPreferencesTest(TestCase):
             initial=initial,
             preferences=preferences,
             disabled_delivery_choices=['by_moderator', 'by_bounces'],
-            )
+        )
         self.assertTrue(form.is_bound)
         self.assertFalse(form.is_valid())
-        self.assertEqual(form.errors.get('delivery_status')[0],
-                         'Cannot set delivery_status to by_moderator')
+        self.assertEqual(
+            form.errors.get('delivery_status')[0],
+            'Cannot set delivery_status to by_moderator',
+        )

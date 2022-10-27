@@ -20,12 +20,13 @@
 import time
 
 from postorius.templatetags.nav_helpers import (
-    held_count, pending_subscriptions)
+    held_count,
+    pending_subscriptions,
+)
 from postorius.tests.utils import ViewTestCase
 
 
 class TestNavigationHelpers(ViewTestCase):
-
     def setUp(self):
         super().setUp()
         # Create a domain.
@@ -40,14 +41,14 @@ class TestNavigationHelpers(ViewTestCase):
         self.assertEqual(pending_subscriptions(self.mlist), 0)
         self.mlist.settings['subscription_policy'] = 'moderate'
         self.mlist.settings.save()
-        self.mlist.subscribe('needsmoderation@example.com',
-                             pre_verified=True)
+        self.mlist.subscribe('needsmoderation@example.com', pre_verified=True)
         self.assertEqual(pending_subscriptions(self.mlist), 1)
         # Make sure the ones pending user approval don't show up.
         self.mlist.settings['subscription_policy'] = 'confirm'
         self.mlist.settings.save()
-        self.mlist.subscribe('needsconfirmation@example.com',
-                             pre_verified=True)
+        self.mlist.subscribe(
+            'needsconfirmation@example.com', pre_verified=True
+        )
         self.assertEqual(pending_subscriptions(self.mlist), 1)
 
     def test_held_message_count(self):

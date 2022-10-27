@@ -23,6 +23,7 @@ from django.utils.translation import gettext_lazy as _
 
 class AddBanForm(forms.Form):
     """Ban an email address or regular expression."""
+
     # TODO maxking: This form should only accept valid emails or regular
     # expressions. Anything else that doesn't look like a valid email address
     # or regexp for email should not be a valid value for the field. However,
@@ -31,7 +32,10 @@ class AddBanForm(forms.Form):
         label=_('Add ban'),
         help_text=_(
             'You can ban a single email address or use a regular expression '
-            'to match similar email addresses.'),
+            'to match similar email addresses.'
+        ),
         error_messages={
             'required': _('Please enter an email address.'),
-            'invalid': _('Please enter a valid email address.')})
+            'invalid': _('Please enter a valid email address.'),
+        },
+    )

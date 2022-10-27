@@ -35,7 +35,6 @@ __all__ = [
 
 
 class PostoriusMiddleware(object):
-
     def __init__(self, get_response=None):
         self.get_response = get_response
 
@@ -93,8 +92,12 @@ class APICountingMiddleware:
         logger.debug('View function was %s', self.view_func)
         logger.debug('%s calls to API', len(self.api_call_counter))
         for each in self.api_call_counter:
-            logger.debug('[%s] %s with %s',
-                         each.get('method'), each.get('url'), each.get('data'))
+            logger.debug(
+                '[%s] %s with %s',
+                each.get('method'),
+                each.get('url'),
+                each.get('data'),
+            )
         logger.debug('=======================')
         self.api_call_counter = []
         return response
@@ -110,4 +113,5 @@ class APICountingMiddleware:
     def process_view(self, request, view_func, view_args, view_kwars):
         """Get a pointer to view function object."""
         self.view_func = '{}.{}'.format(
-            view_func.__module__, view_func.__name__)
+            view_func.__module__, view_func.__name__
+        )

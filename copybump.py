@@ -14,7 +14,7 @@ pyre_n = re.compile(r'# Copyright ((?P<start>\d{4})-)?(?P<end>\d{4})')
 new_c = '# Copyright (C) {}-{} {}'
 new_n = '# Copyright {}-{} {}'
 
-MODE = (stat.S_IRWXU | stat.S_IRWXG | stat.S_IRWXO)
+MODE = stat.S_IRWXU | stat.S_IRWXG | stat.S_IRWXO
 
 
 if '--noc' in sys.argv:
@@ -36,14 +36,18 @@ def do_file(path, owner):
                 if mo_c is None and mo_n is None:
                     out_file.write(line)
                     continue
-                mo = (mo_n if mo_c is None else mo_c)
-                start = (mo.group('end')
-                         if mo.group('start') is None
-                         else mo.group('start'))
+                mo = mo_n if mo_c is None else mo_c
+                start = (
+                    mo.group('end')
+                    if mo.group('start') is None
+                    else mo.group('start')
+                )
                 if int(start) == this_year:
                     out_file.write(line)
                     continue
-                print(new.format(start, this_year, owner), file=out_file) # noqa
+                print(
+                    new.format(start, this_year, owner), file=out_file
+                )   # noqa
                 print('=>', path)
                 for line in in_file:
                     out_file.write(line)

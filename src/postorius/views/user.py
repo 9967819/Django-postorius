@@ -39,12 +39,21 @@ from django_mailman3.lib.paginator import MailmanPaginator, paginate
 
 from postorius.auth.decorators import superuser_required
 from postorius.forms import (
-    ChangeSubscriptionForm, ManageAddressForm, ManageAddressFormSet,
-    ManageMemberForm, ManageMemberFormSet, ManageUserForm, UserPreferences,
-    UserPreferencesFormset)
+    ChangeSubscriptionForm,
+    ManageAddressForm,
+    ManageAddressFormSet,
+    ManageMemberForm,
+    ManageMemberFormSet,
+    ManageUserForm,
+    UserPreferences,
+    UserPreferencesFormset,
+)
 from postorius.models import List, SubscriptionMode
 from postorius.utils import (
-    filter_memberships_by_roles, get_django_user, set_preferred)
+    filter_memberships_by_roles,
+    get_django_user,
+    set_preferred,
+)
 from postorius.views.generic import MailmanClientMixin
 
 
@@ -70,7 +79,8 @@ class UserPreferencesView(FormView, MailmanClientMixin):
         kwargs['preferences'] = self._get_preferences()
         # Disable the choice of by_admin and by_bounces for a user.
         kwargs[
-            'disabled_delivery_choices'] = self.delivery_status_disabled_fields
+            'disabled_delivery_choices'
+        ] = self.delivery_status_disabled_fields
         return kwargs
 
     def _set_view_attributes(self, request, *args, **kwargs):
@@ -80,7 +90,8 @@ class UserPreferencesView(FormView, MailmanClientMixin):
     def dispatch(self, request, *args, **kwargs):
         self._set_view_attributes(request, *args, **kwargs)
         return super(UserPreferencesView, self).dispatch(
-            request, *args, **kwargs)
+            request, *args, **kwargs
+        )
 
     def form_valid(self, form):
         try:
@@ -89,7 +100,8 @@ class UserPreferencesView(FormView, MailmanClientMixin):
             messages.error(self.request, e.msg)
         if form.has_changed():
             messages.success(
-                self.request, _('Your preferences have been updated.'))
+                self.request, _('Your preferences have been updated.')
+            )
         else:
             messages.info(self.request, _('Your preferences did not change.'))
         return super(UserPreferencesView, self).form_valid(form)
@@ -106,7 +118,7 @@ class UserMailmanSettingsView(UserPreferencesView):
         # Get the defaults and pre-populate so view shows them
         combinedpreferences = self._get_combined_preferences()
         for key in combinedpreferences:
-            if key != "self_link":
+            if key != 'self_link':
                 self.mm_user.preferences[key] = combinedpreferences[key]
 
         # This is a bit of a hack so preferences behave as users expect
@@ -123,15 +135,15 @@ class UserMailmanSettingsView(UserPreferencesView):
         defaultpreferences = get_mailman_client().preferences
         combinedpreferences = {}
         for key in defaultpreferences:
-            if key != "self_link":
+            if key != 'self_link':
                 combinedpreferences[key] = defaultpreferences[key]
 
         # Clobber defaults with any preferences already set
         for key in self.mm_user.preferences:
-            if key != "self_link":
+            if key != 'self_link':
                 combinedpreferences[key] = self.mm_user.preferences[key]
 
-        return (combinedpreferences)
+        return combinedpreferences
 
 
 class UserAddressPreferencesView(UserPreferencesView):
@@ -142,7 +154,8 @@ class UserAddressPreferencesView(UserPreferencesView):
 
     def get_form_class(self):
         return formset_factory(
-            UserPreferences, formset=UserPreferencesFormset, extra=0)
+            UserPreferences, formset=UserPreferencesFormset, extra=0
+        )
 
     def _get_preferences(self):
         return [address.preferences for address in self.mm_user.addresses]
@@ -163,33 +176,35 @@ class UserAddressPreferencesView(UserPreferencesView):
 
             # initialize with default preferences
             for key in defaultpreferences:
-                if key != "self_link":
+                if key != 'self_link':
                     prefs[key] = defaultpreferences[key]
 
             # overwrite with user's global preferences
             for key in globalpreferences:
-                if key != "self_link":
+                if key != 'self_link':
                     prefs[key] = globalpreferences[key]
 
             # overwrite with address-specific preferences
             for key in address.preferences:
-                if key != "self_link":
+                if key != 'self_link':
                     prefs[key] = address.preferences[key]
             combinedpreferences.append(prefs)
 
             # put the combined preferences back on the original object
             for key in prefs:
-                if key != "self_link":
+                if key != 'self_link':
                     address.preferences[key] = prefs[key]
 
         return combinedpreferences
 
     def get_context_data(self, **kwargs):
         data = super(UserAddressPreferencesView, self).get_context_data(
-            **kwargs)
+            **kwargs
+        )
         data['formset'] = data.pop('form')
-        for form, address in list(zip(
-                data['formset'].forms, self.mm_user.addresses)):
+        for form, address in list(
+            zip(data['formset'].forms, self.mm_user.addresses)
+        ):
             form.address = address
         return data
 
@@ -216,13 +231,17 @@ class UserListOptionsView(UserPreferencesView):
 
     def _set_view_attributes(self, request, *args, **kwargs):
         super(UserListOptionsView, self)._set_view_attributes(
-            request, *args, **kwargs)
+            request, *args, **kwargs
+        )
         self.member_id = kwargs.get('member_id')
         self.subscription = self._get_subscription(self.member_id)
         self.mlist = List.objects.get_or_404(
-            fqdn_listname=self.subscription.list_id)
-        if (self.subscription.subscription_mode ==
-                SubscriptionMode.as_user.name):
+            fqdn_listname=self.subscription.list_id
+        )
+        if (
+            self.subscription.subscription_mode
+            == SubscriptionMode.as_user.name
+        ):
             self.subscriber = self.subscription.user.user_id
         else:
             self.subscriber = self.subscription.email
@@ -233,9 +252,11 @@ class UserListOptionsView(UserPreferencesView):
     def get_context_data(self, **kwargs):
         data = super(UserListOptionsView, self).get_context_data(**kwargs)
         data['mlist'] = self.mlist
-        user_emails = EmailAddress.objects.filter(
-            user=self.request.user, verified=True).order_by(
-            "email").values_list("email", flat=True)
+        user_emails = (
+            EmailAddress.objects.filter(user=self.request.user, verified=True)
+            .order_by('email')
+            .values_list('email', flat=True)
+        )
         mm_user = get_mailman_user(self.request.user)
         primary_email = None
         if mm_user.preferred_address is None:
@@ -243,14 +264,20 @@ class UserListOptionsView(UserPreferencesView):
         else:
             primary_email = mm_user.preferred_address.email
         data['change_subscription_form'] = ChangeSubscriptionForm(
-            user_emails, mm_user.user_id, primary_email,
-            initial={'subscriber': self.subscriber,
-                     'member_id': self.member_id})
+            user_emails,
+            mm_user.user_id,
+            primary_email,
+            initial={
+                'subscriber': self.subscriber,
+                'member_id': self.member_id,
+            },
+        )
         return data
 
     def get_success_url(self):
         return reverse(
-            'user_list_options', kwargs=dict(member_id=self.member_id))
+            'user_list_options', kwargs=dict(member_id=self.member_id)
+        )
 
 
 class UserSubscriptionPreferencesView(UserPreferencesView):
@@ -269,12 +296,14 @@ class UserSubscriptionPreferencesView(UserPreferencesView):
 
     def _set_view_attributes(self, request, *args, **kwargs):
         super(UserSubscriptionPreferencesView, self)._set_view_attributes(
-            request, *args, **kwargs)
+            request, *args, **kwargs
+        )
         self.subscriptions = self._get_subscriptions()
 
     def get_form_class(self):
         return formset_factory(
-            UserPreferences, formset=UserPreferencesFormset, extra=0)
+            UserPreferences, formset=UserPreferencesFormset, extra=0
+        )
 
     def _get_preferences(self):
         return [sub.preferences for sub in self.subscriptions]
@@ -295,12 +324,12 @@ class UserSubscriptionPreferencesView(UserPreferencesView):
 
             # initialize with default preferences
             for key in defaultpreferences:
-                if key != "self_link":
+                if key != 'self_link':
                     prefs[key] = defaultpreferences[key]
 
             # overwrite with user's global preferences
             for key in globalpreferences:
-                if key != "self_link":
+                if key != 'self_link':
                     prefs[key] = globalpreferences[key]
 
             # overwrite with address-based preferences
@@ -312,12 +341,12 @@ class UserSubscriptionPreferencesView(UserPreferencesView):
                     addresspreferences = address.preferences
 
             for key in addresspreferences:
-                if key != "self_link":
+                if key != 'self_link':
                     prefs[key] = addresspreferences[key]
 
             # overwrite with subscription-specific preferences
             for key in sub.preferences:
-                if key != "self_link":
+                if key != 'self_link':
                     prefs[key] = sub.preferences[key]
 
             combinedpreferences.append(prefs)
@@ -327,10 +356,12 @@ class UserSubscriptionPreferencesView(UserPreferencesView):
 
     def get_context_data(self, **kwargs):
         data = super(UserSubscriptionPreferencesView, self).get_context_data(
-            **kwargs)
+            **kwargs
+        )
         data['formset'] = data.pop('form')
-        for form, subscription in list(zip(
-                data['formset'].forms, self.subscriptions)):
+        for form, subscription in list(
+            zip(data['formset'].forms, self.subscriptions)
+        ):
             form.list_id = subscription.list_id
             form.member_id = subscription.member_id
             form.subscription_mode = subscription.subscription_mode
@@ -343,8 +374,11 @@ def user_subscriptions(request):
     """Shows the subscriptions of a user."""
     mm_user = get_mailman_user(request.user)
     memberships = [m for m in mm_user.subscriptions]
-    return render(request, 'postorius/user/subscriptions.html',
-                  {'memberships': memberships})
+    return render(
+        request,
+        'postorius/user/subscriptions.html',
+        {'memberships': memberships},
+    )
 
 
 @require_GET
@@ -355,19 +389,25 @@ def list_users(request):
     query = request.GET.get('q')
 
     if query:
+
         def _find_users(count, page):
             return client.find_users_page(query, count, page)
+
         find_method = _find_users
     else:
         find_method = client.get_user_page
 
-    users = paginate(find_method,
-                     request.GET.get('page'),
-                     request.GET.get('count'),
-                     paginator_class=MailmanPaginator)
-    return render(request,
-                  'postorius/user/all.html',
-                  {'all_users': users, 'query': query})
+    users = paginate(
+        find_method,
+        request.GET.get('page'),
+        request.GET.get('count'),
+        paginator_class=MailmanPaginator,
+    )
+    return render(
+        request,
+        'postorius/user/all.html',
+        {'all_users': users, 'query': query},
+    )
 
 
 @superuser_required
@@ -378,13 +418,18 @@ def manage_user(request, user_id):
     user = client.get_user(user_id)
     user_form = ManageUserForm(user=user)
     addr_formset = formset_factory(
-        ManageAddressForm, formset=ManageAddressFormSet, extra=0)
+        ManageAddressForm, formset=ManageAddressFormSet, extra=0
+    )
     sub_formset = formset_factory(
-        ManageMemberForm, formset=ManageMemberFormSet, extra=0)
+        ManageMemberForm, formset=ManageMemberFormSet, extra=0
+    )
     django_user = get_django_user(user)
     addresses = addr_formset(addresses=user.addresses)
-    subscriptions = sub_formset(members=filter_memberships_by_roles(
-        user.subscriptions, roles=['member', 'nonmember']))
+    subscriptions = sub_formset(
+        members=filter_memberships_by_roles(
+            user.subscriptions, roles=['member', 'nonmember']
+        )
+    )
 
     change_password = None
     if django_user is not None:
@@ -404,17 +449,24 @@ def manage_user(request, user_id):
                 if updated:
                     messages.success(
                         request,
-                        _('Successfully updated addresses {}').format(', '.join(updated)))     # noqa: E501
+                        _('Successfully updated addresses {}').format(
+                            ', '.join(updated)
+                        ),
+                    )     # noqa: E501
         elif 'subs_form' in request.POST:
             # This is the 'subscriptions' form, built using sub_formset.
             subscriptions = sub_formset(
-                request.POST, members=user.subscriptions)
+                request.POST, members=user.subscriptions
+            )
             if subscriptions.is_valid():
                 updated = subscriptions.save()
                 if updated:
                     messages.success(
                         request,
-                        _('Successfully updated memberships for {}').format(', '.join(updated)))  # noqa: E501
+                        _('Successfully updated memberships for {}').format(
+                            ', '.join(updated)
+                        ),
+                    )  # noqa: E501
         elif 'user_form' in request.POST:
             # This is the 'user' form, built using ManageUserForm.
             user_form = ManageUserForm(request.POST, user=user)
@@ -423,7 +475,8 @@ def manage_user(request, user_id):
                 messages.success(request, _('Successfully updated user.'))
         elif 'change_password' in request.POST:
             change_password = AdminPasswordChangeForm(
-                django_user, request.POST)
+                django_user, request.POST
+            )
             if change_password.is_valid():
                 change_password.save()
                 # This will log the user out, which we want because the admin
@@ -432,17 +485,22 @@ def manage_user(request, user_id):
                 messages.success(request, _('Password updated successfully'))
                 # Stop the form from grabbing the passowrd if successfully
                 # updated.
-                change_password.fields[
-                    'password1'].widget.attrs['autofocus'] = False
+                change_password.fields['password1'].widget.attrs[
+                    'autofocus'
+                ] = False
 
         return redirect(reverse('manage_user', args=(user_id,)))
 
     # In case of GET request, return the formsets with initial data.
-    return render(request,
-                  'postorius/user/manage.html',
-                  {'auser': user,
-                   'user_form': user_form,
-                   'change_password': change_password,
-                   'django_user': django_user,
-                   'addresses': addresses,
-                   'subscriptions': subscriptions})
+    return render(
+        request,
+        'postorius/user/manage.html',
+        {
+            'auser': user,
+            'user_form': user_form,
+            'change_password': change_password,
+            'django_user': django_user,
+            'addresses': addresses,
+            'subscriptions': subscriptions,
+        },
+    )

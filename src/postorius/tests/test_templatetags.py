@@ -27,15 +27,15 @@ from postorius.templatetags.p_gravatar import gravatar
 
 
 class TestDatetimeParser(SimpleTestCase):
-
     def test_datetime_parse(self):
         value = '2005-08-01T07:49:23'
         parsed_date = datetime_parse(value)
         # Make sure the parsing actually worked.
         self.assertFalse(parsed_date is value)
         self.assertTrue(isinstance(parsed_date, datetime.datetime))
-        self.assertEqual(parsed_date.strftime('%Y %m %d, %H %M'),
-                         '2005 08 01, 07 49')
+        self.assertEqual(
+            parsed_date.strftime('%Y %m %d, %H %M'), '2005 08 01, 07 49'
+        )
 
     def test_invalid_dateimtime(self):
         # Things that can't be parsed as datetime are returned as None.
@@ -51,11 +51,11 @@ class TestDatetimeParser(SimpleTestCase):
 
 
 class TestGravatar(SimpleTestCase):
-
     def test_gravatar(self):
         """Test that we call gravatar library."""
-        with patch('postorius''.templatetags.'
-                   'p_gravatar.gravatar_orig') as mock_grav:
+        with patch(
+            'postorius' '.templatetags.' 'p_gravatar.gravatar_orig'
+        ) as mock_grav:
             gravatar('aperson@example.com')
             self.assertTrue(mock_grav.called)
             mock_grav.assert_called_with('aperson@example.com')
@@ -64,12 +64,14 @@ class TestGravatar(SimpleTestCase):
             html,
             '<img class="gravatar" src="https://secure.gravatar.com/avatar/'
             'a100672ae026b5b7a7fb2929ff533e1e.jpg?s=80&amp;d=mm&amp;r=g" '
-            'width="80" height="80" alt="" />')
+            'width="80" height="80" alt="" />',
+        )
 
     @override_settings(HYPERKITTY_ENABLE_GRAVATAR=False)
     def test_disabled_gravatar(self):
-        with patch('postorius''.templatetags.'
-                   'p_gravatar.gravatar_orig') as mock_grav:
+        with patch(
+            'postorius' '.templatetags.' 'p_gravatar.gravatar_orig'
+        ) as mock_grav:
             resp = gravatar('aperson@example.com')
             self.assertFalse(mock_grav.called)
             self.assertEqual(resp, '')

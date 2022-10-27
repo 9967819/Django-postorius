@@ -22,6 +22,7 @@ Django test settings for postorius project.
 
 from .settings import *
 
+
 ROOT_URLCONF = 'example_project.urls'
 
 TESTING = True

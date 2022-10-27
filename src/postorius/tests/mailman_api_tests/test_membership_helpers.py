@@ -24,36 +24,51 @@ from mailmanclient import MailingList
 
 from postorius.models import Mailman404Error
 from postorius.templatetags.membership_helpers import (
-    get_list, user_is_list_moderator, user_is_list_owner)
+    get_list,
+    user_is_list_moderator,
+    user_is_list_owner,
+)
 from postorius.tests.utils import ViewTestCase
 
 
 class TestMembershipHelpers(ViewTestCase):
-
     def setUp(self):
         super(TestMembershipHelpers, self).setUp()
         # Create a domain.
         self.domain = self.mm_client.create_domain('example.com')
         self.mlist = self.domain.create_list('test_list')
         self.test_user = User.objects.create_user(
-            'test_user', 'test_user@example.com', 'pwd')
+            'test_user', 'test_user@example.com', 'pwd'
+        )
         self.test_superuser = User.objects.create_superuser(
-            'test_superuser', 'test_superuser@example.com', 'pwd')
+            'test_superuser', 'test_superuser@example.com', 'pwd'
+        )
         self.test_owner = User.objects.create_user(
-            'testowner', 'owner@example.com', 'testpass')
+            'testowner', 'owner@example.com', 'testpass'
+        )
         self.test_moderator = User.objects.create_user(
-            'testmoderator', 'moderator@example.com', 'testpass')
-        for user in (self.test_user, self.test_superuser, self.test_owner,
-                     self.test_moderator):
+            'testmoderator', 'moderator@example.com', 'testpass'
+        )
+        for user in (
+            self.test_user,
+            self.test_superuser,
+            self.test_owner,
+            self.test_moderator,
+        ):
             EmailAddress.objects.create(
-                user=user, email=user.email, verified=True)
+                user=user, email=user.email, verified=True
+            )
         self.mlist.add_owner(self.test_owner.email)
         self.mlist.add_moderator(self.test_moderator.email)
 
     def tearDown(self):
         self.domain.delete()
-        for user in (self.test_user, self.test_superuser, self.test_owner,
-                     self.test_moderator):
+        for user in (
+            self.test_user,
+            self.test_superuser,
+            self.test_owner,
+            self.test_moderator,
+        ):
             user.delete()
 
     def test_get_list(self):
@@ -93,8 +108,9 @@ class TestMembershipHelpers(ViewTestCase):
         # It should return False for the list owner.
         self.assertFalse(user_is_list_moderator(self.test_owner, self.mlist))
         # It should return False for the list moderator.
-        self.assertTrue(user_is_list_moderator(self.test_moderator,
-                                               self.mlist))
+        self.assertTrue(
+            user_is_list_moderator(self.test_moderator, self.mlist)
+        )
         # Now let's add the test_user as an owner of the list.
         self.mlist.add_moderator(self.test_user.email)
         self.assertTrue(user_is_list_moderator(self.test_user, self.mlist))

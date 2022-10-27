@@ -34,20 +34,20 @@ with open('src/postorius/__init__.py') as fp:
 
 
 setup(
-    name="postorius",
+    name='postorius',
     version=__version__,
-    description="A web user interface for GNU Mailman",
+    description='A web user interface for GNU Mailman',
     long_description=open('README.rst').read(),
-    maintainer="The Mailman GSOC Coders",
+    maintainer='The Mailman GSOC Coders',
     license='GPLv3',
     keywords='email mailman django',
-    url=" https://gitlab.com/mailman/postorius",
+    url=' https://gitlab.com/mailman/postorius',
     classifiers=[
-        "Framework :: Django",
-        "Development Status :: 4 - Beta",
-        "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
-        "Topic :: Communications :: Email :: Mailing List Servers",
-        "Programming Language :: Python :: 3",
+        'Framework :: Django',
+        'Development Status :: 4 - Beta',
+        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
+        'Topic :: Communications :: Email :: Mailing List Servers',
+        'Programming Language :: Python :: 3',
     ],
     packages=find_packages('src'),
     package_dir={'': 'src'},
@@ -59,9 +59,9 @@ setup(
         'readme_renderer[md]',
     ],
     tests_require=[
-        "beautifulsoup4",
-        "isort",
-        "django-debug-toolbar",
-        "django-requests-debug-toolbar",
+        'beautifulsoup4',
+        'isort',
+        'django-debug-toolbar',
+        'django-requests-debug-toolbar',
     ],
 )
