@@ -1,9 +1,8 @@
 ---
 image: ghcr.io/maxking/mailman-ci-runner
 
-workflow:
-  rules:
-    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+include:
+  - template: 'Workflows/MergeRequest-Pipelines.gitlab-ci.yml'
 
 py37-django32:
   stage: test
