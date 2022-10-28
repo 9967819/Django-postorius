@@ -1,6 +1,10 @@
 ---
 image: ghcr.io/maxking/mailman-ci-runner
 
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+
 py37-django32:
   stage: test
   script:
