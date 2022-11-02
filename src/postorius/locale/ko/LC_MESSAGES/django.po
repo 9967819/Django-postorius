@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Lens0021 <lorentz0021@gmail.com>, 2021.
+# 이정희 <daemul72@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-22 10:20-0700\n"
-"PO-Revision-Date: 2021-05-19 11:33+0000\n"
-"Last-Translator: Lens0021 <lorentz0021@gmail.com>\n"
+"PO-Revision-Date: 2022-10-30 14:02+0000\n"
+"Last-Translator: 이정희 <daemul72@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ko/>\n"
 "Language: ko\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.7-dev\n"
+"X-Generator: Weblate 4.14.2-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -1780,7 +1781,7 @@ msgstr ""
 
 #: forms/user_forms.py:242
 msgid "Verified"
-msgstr ""
+msgstr "검증됨"
 
 #: forms/user_forms.py:244
 #, fuzzy
@@ -2179,7 +2180,7 @@ msgstr "편집 도메인"
 #: templates/postorius/user/manage.html:48
 #: templates/postorius/user/manage.html:86
 msgid "Update"
-msgstr ""
+msgstr "업데이트"
 
 #: templates/postorius/domain/index.html:14
 msgid "Add Domain"
@@ -3023,10 +3024,8 @@ msgid "Web Account"
 msgstr "계정"
 
 #: templates/postorius/user/manage.html:96
-#, fuzzy
-#| msgid "Users"
 msgid "Username"
-msgstr "사용자들"
+msgstr "사용자이름"
 
 #: templates/postorius/user/manage.html:100
 msgid "Superuser"
