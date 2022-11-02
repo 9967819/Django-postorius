@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-22 10:20-0700\n"
-"PO-Revision-Date: 2022-10-23 21:20+0000\n"
-"Last-Translator: Eric <hamburger1024@mailbox.org>\n"
+"PO-Revision-Date: 2022-10-30 14:02+0000\n"
+"Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "gnu-mailman/postorius/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -2384,7 +2384,7 @@ msgstr "消息无法检索"
 
 #: templates/postorius/lists/mass_removal.html:14
 msgid "Remove listed users"
-msgstr ""
+msgstr "移除所列用户"
 
 #: templates/postorius/lists/mass_subscribe.html:7
 #: templates/postorius/menu/list_nav.html:56
@@ -2422,7 +2422,7 @@ msgstr "CSV 导出"
 
 #: templates/postorius/lists/members.html:62
 msgid "Remove Selected"
-msgstr ""
+msgstr "移除所选项"
 
 #: templates/postorius/lists/members.html:76
 #: templates/postorius/user/address_preferences.html:32
