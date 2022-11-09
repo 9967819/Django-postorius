@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-22 10:20-0700\n"
-"PO-Revision-Date: 2022-11-06 17:16+0000\n"
+"PO-Revision-Date: 2022-11-09 17:30+0000\n"
 "Last-Translator: Neko Nekowazarashi <kodra@nekoweb.my.id>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/id/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.2\n"
+"X-Generator: Weblate 4.15-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -82,7 +82,7 @@ msgstr "Surel Pemilik"
 
 #: forms/fields.py:35
 msgid "Regular"
-msgstr ""
+msgstr "Reguler"
 
 #: forms/fields.py:36
 msgid "Plain Text Digests"
@@ -126,11 +126,11 @@ msgstr "Buang (tanpa pemberitahuan)"
 
 #: forms/fields.py:50
 msgid "Accept immediately (bypass other rules)"
-msgstr ""
+msgstr "Terima langsung (melewati aturan lain)"
 
 #: forms/fields.py:51
 msgid "Default processing"
-msgstr ""
+msgstr "Pemrosesan baku"
 
 #: forms/fields.py:135
 msgid "Make at least one selection"
@@ -211,15 +211,15 @@ msgstr "Setiap tahun"
 
 #: forms/list_forms.py:47
 msgid "Only mailinglist moderators"
-msgstr ""
+msgstr "Hanya moderator milis"
 
 #: forms/list_forms.py:48
 msgid "Only mailinglist members"
-msgstr ""
+msgstr "Hanya anggota milis"
 
 #: forms/list_forms.py:49
 msgid "Anyone"
-msgstr ""
+msgstr "Siapa pun"
 
 #: forms/list_forms.py:63 templates/postorius/user/subscriptions.html:22
 msgid "List Name"
@@ -239,7 +239,7 @@ msgstr ""
 
 #: forms/list_forms.py:71
 msgid "Please enter the list owner's email address."
-msgstr ""
+msgstr "Masukkan alamat surel pemilik milis."
 
 #: forms/list_forms.py:75
 msgid "Advertise this list?"
@@ -283,11 +283,11 @@ msgstr "Pilih Gaya Milis yang valid."
 
 #: forms/list_forms.py:105
 msgid "Site admin has not created any domains"
-msgstr ""
+msgstr "Admin situs belum membuat domain apa pun"
 
 #: forms/list_forms.py:118
 msgid "Please enter a valid listname"
-msgstr ""
+msgstr "Mohon masukkan nama milis yang valid"
 
 #: forms/list_forms.py:147 forms/list_forms.py:180
 msgid "Your email address"
@@ -302,20 +302,20 @@ msgstr ""
 #: forms/list_forms.py:154 forms/list_forms.py:183 forms/member_forms.py:29
 #: forms/system.py:36
 msgid "Please enter an email address."
-msgstr ""
+msgstr "Mohon masukkan alamat surel."
 
 #: forms/list_forms.py:155 forms/list_forms.py:184 forms/member_forms.py:30
 #: forms/system.py:37
 msgid "Please enter a valid email address."
-msgstr ""
+msgstr "Mohon masukkan alamat surel yang valid."
 
 #: forms/list_forms.py:158 forms/list_forms.py:187
 msgid "Your name (optional)"
-msgstr ""
+msgstr "Nama Anda (opsional)"
 
 #: forms/list_forms.py:171 forms/list_forms.py:1211 views/list.py:458
 msgid "Primary Address ({})"
-msgstr ""
+msgstr "Surel Utama ({})"
 
 #: forms/list_forms.py:202
 msgid "Open"
@@ -526,7 +526,7 @@ msgstr "Kebijakan pengarsipan"
 
 #: forms/list_forms.py:345
 msgid "Policy for archiving messages for this list"
-msgstr ""
+msgstr "Kebijakan untuk pengarsipan pesan di milis ini"
 
 #: forms/list_forms.py:350
 msgid "Active archivers"
@@ -570,7 +570,7 @@ msgstr ""
 
 #: forms/list_forms.py:412
 msgid "Administrivia"
-msgstr ""
+msgstr "Administrivia"
 
 #: forms/list_forms.py:414
 msgid ""
@@ -579,14 +579,18 @@ msgid ""
 "it to the administrative requests queue, notifying the administrator of the "
 "new request, in the process."
 msgstr ""
+"Tes Administrivia akan memeriksa pos untuk melihat apakah itu benar-benar "
+"digunakan untuk permintaan administratif (seperti langganan, batal "
+"berlangganan, dll.) dan akan menambahkannya ke antrean permintaan "
+"administratif dan memberitahukan administrator tentang permintaan baru."
 
 #: forms/list_forms.py:421
 msgid "Default action to take when a member posts to the list"
-msgstr ""
+msgstr "Tindakan baku yang dilakukan ketika anggota pos ke milis"
 
 #: forms/list_forms.py:423
 msgid "Please choose a default member action."
-msgstr ""
+msgstr "Pilih tindakan baku anggota."
 
 #: forms/list_forms.py:427
 msgid ""
@@ -606,7 +610,7 @@ msgstr ""
 
 #: forms/list_forms.py:442
 msgid "Please choose a default non-member action."
-msgstr ""
+msgstr "Pilih tindakan baku non-anggota."
 
 #: forms/list_forms.py:446
 msgid ""
@@ -614,6 +618,9 @@ msgid ""
 "against the list of explicitly accepted, held, rejected (bounced), and "
 "discarded addresses. If no match is found, then this action is taken."
 msgstr ""
+"Ketika pos dari non-anggota diterima, pengirim pesan dicocokkan dengan "
+"daftar alamat surel yang secara eksplisit diterima, ditahan, ditolak, dan "
+"dihapus. Jika tidak ada yang cocok, maka tindakan ini yang dilakukan."
 
 #: forms/list_forms.py:453
 msgid "Emergency Moderation"
@@ -628,17 +635,19 @@ msgstr ""
 
 #: forms/list_forms.py:462
 msgid "Maximum message size"
-msgstr ""
+msgstr "Ukuran pesan maksimum"
 
 #: forms/list_forms.py:465
 msgid ""
 "The maximum allowed message size in KB. This can be used to prevent emails "
 "with large attachments. A size of 0 disables the check."
 msgstr ""
+"Ukuran maksimum pesan yang dibolehkan dalam KB. Ini bisa digunakan untuk "
+"mencegah surel dengan lampiran besar. Ukuran 0 akan mematikan pemeriksaan."
 
 #: forms/list_forms.py:470
 msgid "Maximum number of recipients"
-msgstr ""
+msgstr "Maksimum penerima"
 
 #: forms/list_forms.py:473
 msgid ""
@@ -646,10 +655,13 @@ msgid ""
 "will be held for moderation. This can be used to prevent mass mailings from "
 "being accepted. A value of 0 disables the check."
 msgstr ""
+"Jika sebuah pos mempunyai sebanyak ini atau lebih penerima (To: dan Cc:), "
+"pos akan ditahan untuk dimoderasi. Ini bisa digunakan untuk mencegah "
+"pengiriman surel massal diterima. 0 akan mematikan pemeriksaan."
 
 #: forms/list_forms.py:488
 msgid "Accept these non-members"
-msgstr ""
+msgstr "Terima non-anggota tersebut"
 
 #: forms/list_forms.py:491
 msgid ""
@@ -660,12 +672,19 @@ msgid ""
 "to add the address as a nonmember and set the nonmember's Moderation to "
 "Default Processing."
 msgstr ""
+"Ini adalah daftar, satu per baris, dari ekspresi reguler (regexps) dari "
+"surel yang cocok yang dibolehkan untuk pos ke milis ini tanpa berlangganan "
+"ke milis. Entri ini ditulis dalam regexps yang dimulai dengan `^` dan "
+"dicocokkan dengan surel pengirim di pesan. Meskipun surel non-regexps bisa "
+"dimasukkan di sini, direkomendasikan untuk menambahkan surel sebagai non-"
+"anggota dan atur moderasi non-anggota ke Pemrosesan Baku."
 
 #: forms/list_forms.py:501
 msgid "Hold these non-members"
-msgstr ""
+msgstr "Tahan non-anggota tersebut"
 
 #: forms/list_forms.py:504
+#, fuzzy
 msgid ""
 "This is a list, one per line, of regexps matching nonmember addresses, posts "
 "from which are held automatically. Entries are regexps beginning with `^' "
@@ -673,12 +692,19 @@ msgid ""
 "regexp addresses can be entered here, it is preferred to add the address as "
 "a nonmember and set the nonmember's Moderation to Hold."
 msgstr ""
+"Ini adalah daftar, satu per baris, dari ekspresi reguler (regexps) dari "
+"surel yang cocok dengan alamat non-anggota, yang mana pos akan secara "
+"otomatis ditahan. Entri ini ditulis dalam regexps yang dimulai dengan `^` "
+"dan dicocokkan dengan surel pengirim di pesan. Meskipun surel non-regexps "
+"bisa dimasukkan di sini, direkomendasikan untuk menambahkan surel sebagai "
+"non-anggota dan atur moderasi non-anggota ke Moderasi untuk Tahan."
 
 #: forms/list_forms.py:513
 msgid "Reject these non-members"
-msgstr ""
+msgstr "Tolak non-anggota tersebut"
 
 #: forms/list_forms.py:516
+#, fuzzy
 msgid ""
 "This is a list, one per line, of regexps matching nonmember addresses, posts "
 "from which are rejected with notice to the sender. Entries are regexps "
@@ -686,10 +712,16 @@ msgid ""
 "message. While non-regexp addresses can be entered here, it is preferred to "
 "add the address as a nonmember and set the nonmember's Moderation to Reject."
 msgstr ""
+"Ini adalah daftar, satu per baris, dari ekspresi reguler (regexps) dari "
+"surel yang cocok dengan alamat non-anggota, yang mana pos akan ditolak "
+"dengan peringatan ke pengirim. Entri ini ditulis dalam regexps yang dimulai "
+"dengan `^` dan dicocokkan dengan surel pengirim di pesan. Meskipun surel non-"
+"regexps bisa dimasukkan di sini, direkomendasikan untuk menambahkan surel "
+"sebagai non-anggota dan atur moderasi non-anggota ke Moderasi untuk Tolak."
 
 #: forms/list_forms.py:526
 msgid "Discard these non-members"
-msgstr ""
+msgstr "Hapus non-anggota tersebut"
 
 #: forms/list_forms.py:529
 msgid ""
@@ -699,6 +731,12 @@ msgid ""
 "regexp addresses can be entered here, it is preferred to add the address as "
 "a nonmember and set the nonmember's Moderation to Discard."
 msgstr ""
+"Ini adalah daftar, satu per baris, dari ekspresi reguler (regexps) dari "
+"surel yang cocok dengan alamat non-anggota, yang mana pos akan dihapus "
+"secara otomatis. Entri ini ditulis dalam regexps yang dimulai dengan `^` dan "
+"dicocokkan dengan surel pengirim di pesan. Meskipun surel non-regexps bisa "
+"dimasukkan di sini, direkomendasikan untuk menambahkan surel sebagai non-"
+"anggota dan atur moderasi non-anggota ke Moderasi untuk Hapus."
 
 #: forms/list_forms.py:551
 msgid "Invalid alias regexp: {}: {}"
@@ -764,11 +802,11 @@ msgstr ""
 
 #: forms/list_forms.py:608
 msgid "Reject the message"
-msgstr ""
+msgstr "Tolak pesan"
 
 #: forms/list_forms.py:609
 msgid "Discard the message"
-msgstr ""
+msgstr "Hapus pesan"
 
 #: forms/list_forms.py:611
 msgid ""
@@ -812,15 +850,15 @@ msgstr ""
 #: templates/postorius/lists/summary.html:153
 #: templatetags/membership_helpers.py:78 templatetags/membership_helpers.py:84
 msgid "None"
-msgstr ""
+msgstr "Tidak ada"
 
 #: forms/list_forms.py:642
 msgid "Individual"
-msgstr ""
+msgstr "Individual"
 
 #: forms/list_forms.py:643
 msgid "Full"
-msgstr ""
+msgstr "Penuh"
 
 #: forms/list_forms.py:647
 msgid ""
@@ -838,7 +876,7 @@ msgstr ""
 #: templates/postorius/lists/held_messages.html:107
 #: templates/postorius/lists/subscription_requests.html:40
 msgid "Reject"
-msgstr ""
+msgstr "Tolak"
 
 #: forms/list_forms.py:659
 msgid "Forward"
@@ -860,36 +898,40 @@ msgstr ""
 
 #: forms/list_forms.py:680
 msgid "Personalize"
-msgstr ""
+msgstr "Personalisasi"
 
 #: forms/list_forms.py:686
 msgid "Filter content"
-msgstr ""
+msgstr "Filter konten"
 
 #: forms/list_forms.py:687
 msgid ""
 "Should Mailman filter the content of list traffic according to the settings "
 "below?"
-msgstr ""
+msgstr "Haruskan Mailman filter konten milis berdasarkan pengaturan di bawah?"
 
 #: forms/list_forms.py:690
 msgid "Filter types"
-msgstr ""
+msgstr "Filter jenis"
 
 #: forms/list_forms.py:693
+#, fuzzy
 msgid ""
 "MIME types to filter from the incoming posts. A list of common types can be "
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
+"Filter jenis MIME dari pos yang diterima. Daftar jenis umum bisa ditemukan "
+"di <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
+"Basics_of_HTTP/MIME_types/Common_types\">sini </a>"
 
 #: forms/list_forms.py:698
 msgid "Filter extensions"
-msgstr ""
+msgstr "Filter ekstensi"
 
 #: forms/list_forms.py:701
 msgid "Extensions to filter from the incoming posts."
-msgstr ""
+msgstr "Filter ekstensi dari pos yang diterima."
 
 #: forms/list_forms.py:704
 msgid "Pass types"
@@ -920,32 +962,37 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:728
+#, fuzzy
 msgid "Filter Action"
-msgstr ""
+msgstr "Filter Tindakan"
 
 #: forms/list_forms.py:734
 msgid "Convert html to plaintext"
-msgstr ""
+msgstr "Konversi HTML ke teks polos"
 
 #: forms/list_forms.py:735
 msgid ""
 "Should Mailman convert text/html parts to plain text? This conversion "
 "happens after MIME attachments have been stripped."
 msgstr ""
+"Haruskan Mailman mengonversi bagian teks/html ke teks polos? Konversi ini "
+"terjadi setelah lampiran MIME dilepaskan."
 
 #: forms/list_forms.py:742
 msgid "Anonymous list"
-msgstr ""
+msgstr "Milis awanama"
 
 #: forms/list_forms.py:743
 msgid ""
 "Hide the sender of a message, replacing it with the list address (Removes "
 "From, Sender and Reply-To fields)"
 msgstr ""
+"Sembunyikan pengirim pesan, mengubahnya menjadi alamat surel milis (Hapus "
+"bidang From, Sender, dan Reply-To)"
 
 #: forms/list_forms.py:750
 msgid "Include RFC2369 headers"
-msgstr ""
+msgstr "Memuat tajuk RFC2369"
 
 #: forms/list_forms.py:752
 msgid ""
@@ -960,16 +1007,30 @@ msgid ""
 "headers, but this is not recommended (and in fact, your ability to disable "
 "these headers may eventually go away)."
 msgstr ""
+"Ya, ini sangat direkomendasikan. RFC 2369 merinci berbagai tajuk List-* yang "
+"biasanya ditambahkan ke setiap pesan yang dikirim ke keanggotaan milis. Ini "
+"mempermudah pengguna yang menggunakan pembaca surel yang memenuhi standar. "
+"Mereka biasanya selalu diaktifkan. Meskipun begitu, tidak semua pembaca "
+"surel memenuhi standar dan jika Anda memiliki banyak anggota yang "
+"menggunakan pembaca surel tidak memenuhi standar, mereka mungkin akan "
+"terganggu dengan tajuk tersebut. Pertama-tama Anda harus mencoba mengedukasi "
+"anggota Anda tentang mengapa tajuk tersebut harus ada dan cara untuk "
+"menyembunyikannya di pembaca surel mereka. Sebagai jalan terakhir, Anda bisa "
+"mematikan tajuk tersebut, tapi ini tidak direkomendasikan (dan dalam "
+"realitanya, kemampuan Anda untuk mematikan tajuk tersebut mungkin akan "
+"hilang)."
 
 #: forms/list_forms.py:768
 msgid "Include the list post header"
-msgstr ""
+msgstr "Memuat tajuk pos milis"
 
 #: forms/list_forms.py:770
 msgid ""
 "This can be set to no for announce lists that do not wish to include the "
 "List-Post header because posting to the list is discouraged."
 msgstr ""
+"Ini bisa diatur ke 'tidak' untuk milis pengumuman yang tidak menginginkan "
+"untuk memuat tajuk List-Post karena pos ke milis tersebut tidak disarankan."
 
 #: forms/list_forms.py:774
 msgid "Explicit reply-to address"
@@ -1179,15 +1240,15 @@ msgstr ""
 
 #: forms/list_forms.py:943
 msgid "Not Moderated"
-msgstr ""
+msgstr "Tidak Dimoderasi"
 
 #: forms/list_forms.py:944
 msgid "Moderated but allows for open posting"
-msgstr ""
+msgstr "Dimoderasi tapi memperbolehkan pos terbuka"
 
 #: forms/list_forms.py:945
 msgid "Moderated"
-msgstr ""
+msgstr "Dimoderasi"
 
 #: forms/list_forms.py:956
 msgid "Show list on index page"
@@ -1214,11 +1275,11 @@ msgstr ""
 
 #: forms/list_forms.py:974
 msgid "Display name"
-msgstr ""
+msgstr "Nama tampilan"
 
 #: forms/list_forms.py:976
 msgid "Display name is the name shown in the web interface."
-msgstr ""
+msgstr "Nama tampilan adalah nama yang ditampilkan di tampilan web."
 
 #: forms/list_forms.py:979
 msgid "Subject prefix"
@@ -1230,11 +1291,11 @@ msgstr ""
 
 #: forms/list_forms.py:990
 msgid "Members List Visibility"
-msgstr ""
+msgstr "Visibilitas Daftar Anggota"
 
 #: forms/list_forms.py:994
 msgid "Who is allowed to see members list for this MailingList?"
-msgstr ""
+msgstr "Siapa yang diperbolehkan untuk melihat daftar anggota milis ini?"
 
 #: forms/list_forms.py:999
 msgid "Gateway to mail"
@@ -1299,39 +1360,43 @@ msgstr ""
 
 #: forms/list_forms.py:1056
 msgid "Pre confirm"
-msgstr ""
+msgstr "Pre-konfirmasi"
 
 #: forms/list_forms.py:1060
 msgid "If checked, users will not have to confirm their subscription."
-msgstr ""
+msgstr "Jika dicentang, pengguna tidak harus mengonfirmasi langganan mereka."
 
 #: forms/list_forms.py:1065
 msgid "Pre approved"
-msgstr ""
+msgstr "Pre-persetujuan"
 
 #: forms/list_forms.py:1069
 msgid ""
 "If checked, moderators will not have to approve the subscription request."
-msgstr ""
+msgstr "Jika dicentang, moderator tidak harus menyetujui permintaan langganan."
 
 #: forms/list_forms.py:1075
 msgid "Pre Verified"
-msgstr ""
+msgstr "Pre-verifikasi"
 
 #: forms/list_forms.py:1079
 msgid ""
 "If checked, users will not have to verify that their email address is valid."
 msgstr ""
+"Jika dicentang, pengguna tidak harus memverifikasi bahwa surel mereka valid."
 
 #: forms/list_forms.py:1085
 msgid "Invitation"
-msgstr ""
+msgstr "Undangan"
 
 #: forms/list_forms.py:1089
 msgid ""
 "If checked, the other checkboxes are ignored and the users will be sent an "
 "invitation to join the list and will be subscribed upon acceptance thereof."
 msgstr ""
+"Jika dicentang, kotak pilihan lain akan diabaikan dan pengguna akan dikirim "
+"undangan untuk bergabung ke milis dan akan langsung berlangganan ketika "
+"mereka menyetujuinya."
 
 #: forms/list_forms.py:1104
 msgid ""
@@ -1339,38 +1404,41 @@ msgid ""
 "will be ignored for these subscribers and a welcome message will be sent or "
 "not sent based on the choice."
 msgstr ""
+"Jika disetel ke \"Ya\" atau \"Tidak\", pengaturan baku milis untuk "
+"send_welcome_message akan diabaikan untuk anggota langganan tersebut dan "
+"pesan selamat datang akan dikirim atau tidak berdasarkan pilihan tersebut."
 
 #: forms/list_forms.py:1124
 msgid "Emails to Unsubscribe"
-msgstr ""
+msgstr "Surel untuk Membatalkan Langganan"
 
 #: forms/list_forms.py:1125
 msgid "Add one email address on each line"
-msgstr ""
+msgstr "Tambahkan satu surel per satu baris"
 
 #: forms/list_forms.py:1140
 msgid "Default antispam action"
-msgstr ""
+msgstr "Tindakan anti-spam baku"
 
 #: forms/list_forms.py:1144
 msgid "Header"
-msgstr ""
+msgstr "Tajuk"
 
 #: forms/list_forms.py:1145
 msgid "Email header to filter on (case-insensitive)."
-msgstr ""
+msgstr "Tajuk surel untuk difilter (sensitif huruf kapital/kecil)."
 
 #: forms/list_forms.py:1147
 msgid "Please enter a header."
-msgstr ""
+msgstr "Masukkan sebuah tajuk."
 
 #: forms/list_forms.py:1148
 msgid "Please enter a valid header."
-msgstr ""
+msgstr "Masukkan tajuk yang valid."
 
 #: forms/list_forms.py:1150
 msgid "Pattern"
-msgstr ""
+msgstr "Pola"
 
 #: forms/list_forms.py:1151
 msgid "Regular expression matching the header's value."
@@ -1378,39 +1446,39 @@ msgstr ""
 
 #: forms/list_forms.py:1153
 msgid "Please enter a pattern."
-msgstr ""
+msgstr "Mohon masukkan sebuah pola."
 
 #: forms/list_forms.py:1154
 msgid "Please enter a valid pattern."
-msgstr ""
+msgstr "Mohon masukkan pola yang valid."
 
 #: forms/list_forms.py:1156 templates/postorius/domain/index.html:26
 msgid "Action"
-msgstr ""
+msgstr "Tindakan"
 
 #: forms/list_forms.py:1157
 msgid "Please enter a valid action."
-msgstr ""
+msgstr "Mohon masukkan tindakan yang valid."
 
 #: forms/list_forms.py:1160
 msgid "Action to take when a header matches"
-msgstr ""
+msgstr "Tindakan yang dilakukan ketika tajuk sesuai"
 
 #: forms/list_forms.py:1193
 msgid "Select Email"
-msgstr ""
+msgstr "Pilih Surel"
 
 #: forms/list_forms.py:1217
 msgid "Data"
-msgstr ""
+msgstr "Data"
 
 #: forms/member_forms.py:27
 msgid "Email Address"
-msgstr ""
+msgstr "Alamat Surel"
 
 #: forms/member_forms.py:32 forms/user_forms.py:317
 msgid "Display Name"
-msgstr ""
+msgstr "Nama Tampilan"
 
 #: forms/member_forms.py:35
 msgid "Please enter a display name."
@@ -1418,23 +1486,28 @@ msgstr "Silakan masukkan nama tampilan."
 
 #: forms/system.py:31
 msgid "Add ban"
-msgstr ""
+msgstr "Tambahkan larangan"
 
 #: forms/system.py:33
 msgid ""
 "You can ban a single email address or use a regular expression to match "
 "similar email addresses."
 msgstr ""
+"Anda bisa melarang satu surel atau menggunakan ekspresi reguler (regex) "
+"untuk mencocokkan surel sejenis."
 
 #: forms/user_forms.py:65
 msgid "Receive own postings"
-msgstr ""
+msgstr "Terima pos diri sendiri"
 
 #: forms/user_forms.py:67
 msgid ""
 "Ordinarily, you will get a copy of every message you post to the list. If "
 "you don't want to receive this copy, set this option to No."
 msgstr ""
+"Secara normal, Anda akan menerima salinan setiap pesan yang Anda pos ke "
+"milis. Jika Anda tidak ingin menerima salinan ini, atur pilihan ini ke "
+"\"Tidak\"."
 
 #: forms/user_forms.py:74
 msgid "Acknowledge posts"
@@ -1446,7 +1519,7 @@ msgstr ""
 
 #: forms/user_forms.py:80
 msgid "Hide address"
-msgstr ""
+msgstr "Sembunyikan surel"
 
 #: forms/user_forms.py:82
 msgid ""
@@ -1469,7 +1542,7 @@ msgstr ""
 
 #: forms/user_forms.py:101
 msgid "Preferred language"
-msgstr ""
+msgstr "Bahasa"
 
 #: forms/user_forms.py:103
 msgid ""
@@ -1493,7 +1566,7 @@ msgstr ""
 #: forms/validators.py:39
 #, python-brace-format
 msgid "Invalid: \"{0}\" should be either email or UUID"
-msgstr ""
+msgstr "Tidak valid: \"{0}\" harus antar surel atau UUID"
 
 #: models.py:43
 msgid ""
@@ -1516,11 +1589,11 @@ msgstr ""
 
 #: models.py:74
 msgid "owner"
-msgstr ""
+msgstr "pemilik"
 
 #: models.py:75
 msgid "member"
-msgstr ""
+msgstr "anggota"
 
 #: models.py:76
 msgid "nonmember"
@@ -1528,7 +1601,7 @@ msgstr "bukan anggota"
 
 #: models.py:77
 msgid "moderator"
-msgstr ""
+msgstr "moderator"
 
 #: models.py:254
 msgid "Choose the template you want to customize."
@@ -1615,17 +1688,21 @@ msgstr ""
 #: template_list.py:54
 msgid ""
 "The message sent to subscribers when a subscription confirmation is required."
-msgstr ""
+msgstr "Pesan yang dikirim ke pengguna ketika konfirmasi langganan diperlukan."
 
 #: template_list.py:56
 msgid ""
 "The message sent to subscribers when an unsubscription confirmation is "
 "required."
 msgstr ""
+"Pesan yang dikirim ke pengguna ketika konfirmasi membatalkan langganan "
+"diperlukan."
 
 #: template_list.py:58
 msgid "The message sent to subscribers when they are invited to join a list."
 msgstr ""
+"Pesan yang dikirim ke pengguna ketika mereka diundang untuk bergabung ke "
+"milis."
 
 #: template_list.py:60
 msgid "The notice sent to a member when they unsubscribe from a mailing list."
@@ -1642,6 +1719,7 @@ msgid ""
 "Sent to a user when the maximum number of autoresponses has been reached for "
 "that day."
 msgstr ""
+"Dikirim ke pengguna ketika respons otomatis maksimum telah tercapai hari itu."
 
 #: template_list.py:66
 msgid ""
@@ -1679,61 +1757,61 @@ msgstr ""
 
 #: templates/403.html:5
 msgid "Forbidden"
-msgstr ""
+msgstr "Terlarang"
 
 #: templates/403.html:6
 msgid "You do not have permissions to visit this page."
-msgstr ""
+msgstr "Anda tidak memiliki izin untuk mengunjungi halaman ini."
 
 #: templates/404.html:5
 msgid "Page not found"
-msgstr ""
+msgstr "Halaman tidak ditemukan"
 
 #: templates/404.html:6
 msgid "This page either doesn't exist, or it moved somewhere else."
-msgstr ""
+msgstr "Halaman ini entah tidak ada atau telah dipindahkan ke suatu tempat."
 
 #: templates/500.html:24
 msgid "Server error"
-msgstr ""
+msgstr "Galat peladen"
 
 #: templates/500.html:25
 msgid "An error occurred while processing your request."
-msgstr ""
+msgstr "Ada galat ketika memproses permintaan Anda."
 
 #: templates/postorius/bans.html:5 templates/postorius/bans.html:10
 msgid "Global Bans"
-msgstr ""
+msgstr "Larangan Global"
 
 #: templates/postorius/base.html:32
 msgid "Mailman logo"
-msgstr ""
+msgstr "Logo Mailman"
 
 #: templates/postorius/base.html:38
 msgid "Lists"
-msgstr ""
+msgstr "Milis"
 
 #: templates/postorius/base.html:44 templates/postorius/domain/index.html:5
 #: templates/postorius/domain/index.html:11
 msgid "Domains"
-msgstr ""
+msgstr "Domain"
 
 #: templates/postorius/base.html:50
 msgid "Bans"
-msgstr ""
+msgstr "Larangan"
 
 #: templates/postorius/base.html:56
 msgid "System Information"
-msgstr ""
+msgstr "Informasi Sistem"
 
 #: templates/postorius/base.html:62 templates/postorius/menu/list_nav.html:39
 #: templates/postorius/user/all.html:8 templates/postorius/user/all.html:13
 msgid "Users"
-msgstr ""
+msgstr "Pengguna"
 
 #: templates/postorius/base.html:69 templates/postorius/lists/summary.html:33
 msgid "Archives"
-msgstr ""
+msgstr "Arsip"
 
 #: templates/postorius/base.html:85
 msgid "Account"
@@ -1753,7 +1831,7 @@ msgstr "Keluar"
 
 #: templates/postorius/base.html:107
 msgid "Login"
-msgstr ""
+msgstr "Masuk"
 
 #: templates/postorius/base.html:111
 msgid "Sign Up"
@@ -1761,27 +1839,27 @@ msgstr "Daftar"
 
 #: templates/postorius/base.html:134
 msgid "Postorius Documentation"
-msgstr ""
+msgstr "Dokumentasi Postorius"
 
 #: templates/postorius/base.html:138
 msgid "Postorius Version"
-msgstr ""
+msgstr "Versi Postorius"
 
 #: templates/postorius/base.html:141
 msgid "Happy Mailman Day!"
-msgstr ""
+msgstr "Selamat Hari Mailman!"
 
 #: templates/postorius/domain/confirm_delete.html:5
 msgid "Confirm domain removal"
-msgstr ""
+msgstr "Konfirmasi penghapusan domain"
 
 #: templates/postorius/domain/confirm_delete.html:13
 msgid "Confirm deletion"
-msgstr ""
+msgstr "Konfirmasi penghapusan"
 
 #: templates/postorius/domain/confirm_delete.html:17
 msgid "Are you sure you want to permanently delete"
-msgstr ""
+msgstr "Apakah Anda yakin ingin secara permanen menghapus"
 
 #: templates/postorius/domain/confirm_delete.html:21
 #, python-format
@@ -1809,12 +1887,12 @@ msgstr "Hapus"
 #: templates/postorius/lists/confirm_removeall_subscribers.html:22
 #: templates/postorius/lists/template_delete.html:25
 msgid "Cancel"
-msgstr ""
+msgstr "Batal"
 
 #: templates/postorius/domain/edit.html:6
 #: templates/postorius/domain/edit.html:12
 msgid "Edit domain"
-msgstr ""
+msgstr "Sunting domain"
 
 #: templates/postorius/domain/edit.html:17
 #: templates/postorius/lists/template_update.html:20
@@ -1826,23 +1904,23 @@ msgstr "Perbarui"
 
 #: templates/postorius/domain/index.html:14
 msgid "Add Domain"
-msgstr ""
+msgstr "Tambah Domain"
 
 #: templates/postorius/domain/index.html:25
 #: templates/postorius/menu/list_nav.html:45
 msgid "Owners"
-msgstr ""
+msgstr "Pemilik"
 
 #: templates/postorius/domain/index.html:38
 #: templates/postorius/domain/index.html:58
 #: templates/postorius/domain/template_index.html:34
 #: templates/postorius/lists/template_list.html:32
 msgid "Edit"
-msgstr ""
+msgstr "Sunting"
 
 #: templates/postorius/domain/index.html:50
 msgid "remove"
-msgstr ""
+msgstr "hapus"
 
 #: templates/postorius/domain/index.html:54
 msgid "Add"
@@ -1863,27 +1941,28 @@ msgstr ""
 
 #: templates/postorius/domain/index.html:67
 msgid "No domains yet."
-msgstr ""
+msgstr "Belum ada domain."
 
 #: templates/postorius/domain/new.html:6
 msgid "Add domain"
-msgstr ""
+msgstr "Tambah domain"
 
 #: templates/postorius/domain/new.html:12
 msgid "Add a new domain"
-msgstr ""
+msgstr "Tambah domain baru"
 
 #: templates/postorius/domain/new.html:17
 msgid "Create domain"
-msgstr ""
+msgstr "Buat domain"
 
 #: templates/postorius/domain/owners.html:6
 msgid "Add domain owner "
-msgstr ""
+msgstr "Tambah pemilik domain "
 
 #: templates/postorius/domain/owners.html:12
+#, fuzzy
 msgid "Add a new owner to"
-msgstr ""
+msgstr "Tambah pemilik baru ke"
 
 #: templates/postorius/domain/template_add.html:17
 #: templates/postorius/domain/template_delete.html:16
@@ -1898,7 +1977,7 @@ msgstr ""
 #: templates/postorius/user/address_preferences.html:62
 #: templates/postorius/user/subscription_preferences.html:73
 msgid "Save"
-msgstr ""
+msgstr "Simpan"
 
 #: templates/postorius/domain/template_delete.html:11
 msgid "Delete Template"
@@ -1930,11 +2009,11 @@ msgstr ""
 
 #: templates/postorius/errors/generic.html:5
 msgid "Something went wrong"
-msgstr ""
+msgstr "Ada sesuatu yang salah"
 
 #: templates/postorius/fragments/bans.html:14
 msgid "Ban email"
-msgstr ""
+msgstr "Larang surel"
 
 #: templates/postorius/fragments/bans.html:22
 msgid "Currently banned addresses"
@@ -1946,7 +2025,7 @@ msgstr ""
 
 #: templates/postorius/fragments/bans.html:46
 msgid "No addresses are currently banned."
-msgstr ""
+msgstr "Tidak ada surel yang saat ini dilarang."
 
 #: templates/postorius/index.html:6
 msgid "List Index"
@@ -1954,7 +2033,7 @@ msgstr ""
 
 #: templates/postorius/index.html:12
 msgid "Mailing Lists"
-msgstr ""
+msgstr "Milis"
 
 #: templates/postorius/index.html:18
 msgid "Role: "
@@ -1962,11 +2041,11 @@ msgstr ""
 
 #: templates/postorius/index.html:40
 msgid "Owner"
-msgstr ""
+msgstr "Pemilik"
 
 #: templates/postorius/index.html:45
 msgid "Moderator"
-msgstr ""
+msgstr "Moderator"
 
 #: templates/postorius/index.html:50
 msgid "Member"
@@ -1974,27 +2053,27 @@ msgstr "Anggota"
 
 #: templates/postorius/index.html:55
 msgid "Non-member"
-msgstr ""
+msgstr "Non-anggota"
 
 #: templates/postorius/index.html:58
 msgid "All"
-msgstr ""
+msgstr "Semua"
 
 #: templates/postorius/index.html:66
 msgid "Create New Domain"
-msgstr ""
+msgstr "Buat Domain Baru"
 
 #: templates/postorius/index.html:68
 msgid "Create New List"
-msgstr ""
+msgstr "Buat Milis Baru"
 
 #: templates/postorius/index.html:80
 msgid "List name"
-msgstr ""
+msgstr "Nama milis"
 
 #: templates/postorius/index.html:81
 msgid "Post address"
-msgstr ""
+msgstr "Alamat surel pos"
 
 #: templates/postorius/index.html:92
 msgid "unadvertised"
@@ -2005,6 +2084,9 @@ msgid ""
 "Only lists that you are owner, moderator or subscriber for are shown here. "
 "Click to <a href=\"?all-lists\"> see all lists</a>."
 msgstr ""
+"Hanya milis yang Anda adalah pemilik, moderator, atau pelanggan yang "
+"ditampilkan di sini. Klik ke <a href=\"?all-lists\"> untuk melihat semua "
+"milis</a>."
 
 #: templates/postorius/index.html:108
 msgid "Only admins see unadvertised lists in the list index."
@@ -2012,11 +2094,11 @@ msgstr ""
 
 #: templates/postorius/index.html:114
 msgid "There are currently no mailing lists."
-msgstr ""
+msgstr "Tidak ada milis saat ini."
 
 #: templates/postorius/lists/bans.html:8
 msgid "Banned addresses"
-msgstr ""
+msgstr "Alamat surel terlarang"
 
 #: templates/postorius/lists/confirm_delete.html:13
 msgid "Are you sure you want to permanently delete this list?"
@@ -2024,7 +2106,7 @@ msgstr ""
 
 #: templates/postorius/lists/confirm_delete.html:14
 msgid "All settings and membership data will be lost!"
-msgstr ""
+msgstr "Semua data pengaturan dan keanggotaan akan hilang!"
 
 #: templates/postorius/lists/confirm_delete.html:20
 #, python-format
@@ -2033,6 +2115,9 @@ msgid ""
 "                Delete %(listname)s\n"
 "                "
 msgstr ""
+"\n"
+"                Hapus %(listname)s\n"
+"                "
 
 #: templates/postorius/lists/confirm_remove_role.html:5
 msgid "Confirm remove role"
@@ -2045,12 +2130,12 @@ msgstr ""
 
 #: templates/postorius/lists/confirm_remove_role.html:19
 msgid "Are you sure?"
-msgstr ""
+msgstr "Anda yakin?"
 
 #: templates/postorius/lists/confirm_remove_role.html:22
 #, python-format
 msgid " Remove %(role_translated)s"
-msgstr ""
+msgstr " Hapus %(role_translated)s"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 msgid "Unsubscribe all members"
@@ -2063,12 +2148,15 @@ msgid ""
 "        Warning! This will remove every member from %(listname)s!\n"
 "    "
 msgstr ""
+"\n"
+"        Peringatan! Ini akan menghapus semua anggota %(listname)s!\n"
+"    "
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:21
 #: templates/postorius/lists/mass_removal.html:17
 #: templates/postorius/lists/members.html:63
 msgid "Remove ALL members"
-msgstr ""
+msgstr "Hapus SEMUA anggota"
 
 #: templates/postorius/lists/confirm_token.html:12
 #, python-format
@@ -2106,7 +2194,7 @@ msgstr ""
 #: templates/postorius/user/list_options.html:27
 #: templates/postorius/user/mailman_settings.html:23
 msgid "Save changes"
-msgstr ""
+msgstr "Simpan perubahan"
 
 #: templates/postorius/lists/header_matches.html:60
 msgid "Changes pending, click on the button to save them."
@@ -2115,7 +2203,7 @@ msgstr ""
 #: templates/postorius/lists/held_messages.html:10
 #: templates/postorius/menu/list_nav.html:31
 msgid "Held messages"
-msgstr ""
+msgstr "Tahan pesan"
 
 #: templates/postorius/lists/held_messages.html:26
 msgid "Perform action on selected messages"
@@ -2125,19 +2213,19 @@ msgstr ""
 #: templates/postorius/lists/held_messages.html:106
 #: templates/postorius/lists/subscription_requests.html:36
 msgid "Accept"
-msgstr ""
+msgstr "Terima"
 
 #: templates/postorius/lists/held_messages.html:38
 msgid "Subject"
-msgstr ""
+msgstr "Subjek"
 
 #: templates/postorius/lists/held_messages.html:39
 msgid "Sender"
-msgstr ""
+msgstr "Pengirim"
 
 #: templates/postorius/lists/held_messages.html:40
 msgid "Reason"
-msgstr ""
+msgstr "Alasan"
 
 #: templates/postorius/lists/held_messages.html:41
 msgid "Hold Date"
@@ -2145,11 +2233,11 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:53
 msgid "No Subject"
-msgstr ""
+msgstr "Tidak Ada Subjek"
 
 #: templates/postorius/lists/held_messages.html:81
 msgid "Attachments"
-msgstr ""
+msgstr "Lampiran"
 
 #: templates/postorius/lists/held_messages.html:92
 msgid "Set member moderation"
@@ -2167,15 +2255,15 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:115
 msgid "Show Headers"
-msgstr ""
+msgstr "Tampilkan Tajuk"
 
 #: templates/postorius/lists/held_messages.html:123
 msgid "There are currently no held messages."
-msgstr ""
+msgstr "Tidak ada pesan yang saat ini ditahan."
 
 #: templates/postorius/lists/held_messages.html:130
 msgid "Message could not be retrieved"
-msgstr ""
+msgstr "Pesan tidak dapat diambil"
 
 #: templates/postorius/lists/mass_removal.html:14
 msgid "Remove listed users"
@@ -2193,96 +2281,98 @@ msgstr ""
 #: templates/postorius/lists/memberoptions.html:7
 #: templates/postorius/user/list_options.html:7
 msgid "Member options"
-msgstr ""
+msgstr "Pilihan anggota"
 
 #: templates/postorius/lists/memberoptions.html:15
 msgid "No Preferences Available"
-msgstr ""
+msgstr "Tidak Ada Preferensi yang Tersedia"
 
 #: templates/postorius/lists/memberoptions.html:16
 msgid "You are not the owner for this list"
-msgstr ""
+msgstr "Anda bukan pemilik dari milis ini"
 
 #: templates/postorius/lists/members.html:8
 msgid "List members"
-msgstr ""
+msgstr "Anggota milis"
 
 #: templates/postorius/lists/members.html:44
 msgid "Search members..."
-msgstr ""
+msgstr "Cari anggota..."
 
 #: templates/postorius/lists/members.html:60
 msgid "CSV Export"
-msgstr ""
+msgstr "Ekspor CSV"
 
 #: templates/postorius/lists/members.html:62
+#, fuzzy
 msgid "Remove Selected"
-msgstr ""
+msgstr "Hapus yang Terpilih"
 
 #: templates/postorius/lists/members.html:76
 #: templates/postorius/user/address_preferences.html:32
 #: templates/postorius/user/manage.html:63
 msgid "Address"
-msgstr ""
+msgstr "Alamat"
 
 #: templates/postorius/lists/members.html:80
 #: templates/postorius/user/subscriptions.html:24
+#, fuzzy
 msgid "Delivery Mode"
-msgstr ""
+msgstr "Mode Pengiriman"
 
 #: templates/postorius/lists/members.html:83
 msgid "Moderation Action"
-msgstr ""
+msgstr "Tindakan Moderasi"
 
 #: templates/postorius/lists/new.html:6 templates/postorius/lists/new.html:17
 msgid "Create list"
-msgstr ""
+msgstr "Buat milis"
 
 #: templates/postorius/lists/new.html:12
 msgid "Create a new list"
-msgstr ""
+msgstr "Buat milis baru"
 
 #: templates/postorius/lists/pending_confirmations.html:19
 #: templates/postorius/lists/subscription_requests.html:19
 msgid "E-Mail Address"
-msgstr ""
+msgstr "Alamat Surel"
 
 #: templates/postorius/lists/pending_confirmations.html:20
 #: templates/postorius/lists/subscription_requests.html:20
 msgid "Actions"
-msgstr ""
+msgstr "Tindakan"
 
 #: templates/postorius/lists/pending_confirmations.html:37
 #: templates/postorius/lists/subscription_requests.html:38
 msgid "Ban"
-msgstr ""
+msgstr "Larang"
 
 #: templates/postorius/lists/pending_confirmations.html:47
 #: templates/postorius/lists/subscription_requests.html:50
 msgid "There are currently no subscription requests for this list."
-msgstr ""
+msgstr "Saat ini tidak ada permintaan langganan untuk milis ini."
 
 #: templates/postorius/lists/settings.html:7
 #: templates/postorius/menu/list_nav.html:49
 msgid "Settings"
-msgstr ""
+msgstr "Pengaturan"
 
 #: templates/postorius/lists/subscription_requests.html:39
 msgid "Rejection reason"
-msgstr ""
+msgstr "Alasan penolakan"
 
 #: templates/postorius/lists/summary.html:10
 #: templates/postorius/menu/list_nav.html:10
 msgid "Info"
-msgstr ""
+msgstr "Info"
 
 #: templates/postorius/lists/summary.html:23
 msgid "To contact the list owners, use the following email address:"
-msgstr ""
+msgstr "Untuk mengontak pemilik milis, gunakan alamat surel berikut:"
 
 #: templates/postorius/lists/summary.html:29
 msgid "You have to login to visit the archives of this list."
-msgstr ""
+msgstr "Anda harus masuk untuk melihat arsip milis ini."
 
 #: templates/postorius/lists/summary.html:35
 #, python-format
@@ -2292,31 +2382,35 @@ msgid ""
 "\">Archives</a>\n"
 "          "
 msgstr ""
+"\n"
+"            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s\""
+">Arsip</a>\n"
+"          "
 
 #: templates/postorius/lists/summary.html:47
 #: templates/postorius/lists/summary.html:104
 msgid "Subscription / Unsubscription"
-msgstr ""
+msgstr "Berlangganan/Batal Berlangganan"
 
 #: templates/postorius/lists/summary.html:52
 #: templates/postorius/user/subscriptions.html:23
 msgid "Subscription Address"
-msgstr ""
+msgstr "Alamat Langganan"
 
 #: templates/postorius/lists/summary.html:55
 #: templates/postorius/user/all.html:37
 msgid "Manage"
-msgstr ""
+msgstr "Kelola"
 
 #: templates/postorius/lists/summary.html:56
 #: templates/postorius/lists/summary.html:77
 msgid "Unsubscribe"
-msgstr ""
+msgstr "Batal Berlangganan"
 
 #: templates/postorius/lists/summary.html:63
 #: templates/postorius/user/subscription_preferences.html:49
 msgid "Primary Address"
-msgstr ""
+msgstr "Alamat Utama"
 
 #: templates/postorius/lists/summary.html:71
 msgid "Manage Subscription"
@@ -2324,7 +2418,7 @@ msgstr "Kelola Langganan"
 
 #: templates/postorius/lists/summary.html:86
 msgid "Subscribe to this list"
-msgstr ""
+msgstr "Berlangganan ke milis ini"
 
 #: templates/postorius/lists/summary.html:88
 #, python-format
@@ -2341,7 +2435,7 @@ msgstr ""
 #: templates/postorius/lists/summary.html:96
 #: templates/postorius/lists/summary.html:123
 msgid "Subscribe"
-msgstr ""
+msgstr "Langgan"
 
 #: templates/postorius/lists/summary.html:100
 msgid ""
@@ -2361,7 +2455,7 @@ msgstr ""
 
 #: templates/postorius/lists/summary.html:110
 msgid "Log In"
-msgstr ""
+msgstr "Masuk"
 
 #: templates/postorius/lists/summary.html:115
 msgid ""
@@ -2370,18 +2464,22 @@ msgid ""
 "        If you wish to do so, please use the form below.\n"
 "        "
 msgstr ""
+"\n"
+"        Anda juga bisa berlangganan tanpa membuat akun.\n"
+"        Jika Anda ingin begitu, silakan gunakan formulir di bawah ini.\n"
+"        "
 
 #: templates/postorius/lists/summary.html:132
 msgid "List metrics"
-msgstr ""
+msgstr "Metrik milis"
 
 #: templates/postorius/lists/summary.html:134
 msgid "Created at"
-msgstr ""
+msgstr "Dibuat pada"
 
 #: templates/postorius/lists/summary.html:139
 msgid "Last post at"
-msgstr ""
+msgstr "Pos terakhir pada"
 
 #: templates/postorius/lists/summary.html:148
 msgid "Digest last sent at"
@@ -2402,15 +2500,17 @@ msgstr ""
 
 #: templates/postorius/menu/list_nav.html:14
 msgid "Subscription requests"
-msgstr ""
+msgstr "Permintaan langganan"
 
 #: templates/postorius/menu/list_nav.html:19
+#, fuzzy
 msgid "Pending Approval"
-msgstr ""
+msgstr "Persetujuan Tertunda"
 
 #: templates/postorius/menu/list_nav.html:22
+#, fuzzy
 msgid "Pending Confirmation"
-msgstr ""
+msgstr "Konfirmasi Tertunda"
 
 #: templates/postorius/menu/list_nav.html:25
 msgid "Unsubscription Requests"
@@ -2418,31 +2518,31 @@ msgstr "Permintaan Batal Berlangganan"
 
 #: templates/postorius/menu/list_nav.html:42
 msgid "Members"
-msgstr ""
+msgstr "Anggota"
 
 #: templates/postorius/menu/list_nav.html:43
 msgid "Non-Members"
-msgstr ""
+msgstr "Non-Anggota"
 
 #: templates/postorius/menu/list_nav.html:44
 msgid "Moderators"
-msgstr ""
+msgstr "Moderator"
 
 #: templates/postorius/menu/list_nav.html:53
 msgid "Mass operations"
-msgstr ""
+msgstr "Tindakan massal"
 
 #: templates/postorius/menu/list_nav.html:57
 msgid "Mass removal"
-msgstr ""
+msgstr "Penghapusan massal"
 
 #: templates/postorius/menu/list_nav.html:60
 msgid "Ban List"
-msgstr ""
+msgstr "Larang Milis"
 
 #: templates/postorius/menu/user_nav.html:4
 msgid "Mailman Settings"
-msgstr ""
+msgstr "Pengaturan Mailman"
 
 #: templates/postorius/menu/user_nav.html:7
 #: templates/postorius/user/manage.html:51
@@ -2452,38 +2552,40 @@ msgstr "Langganan"
 
 #: templates/postorius/menu/user_nav.html:8
 msgid "Global Mailman preferences"
-msgstr ""
+msgstr "Preferensi Global Mailman"
 
 #: templates/postorius/menu/user_nav.html:9
+#, fuzzy
 msgid "Address-based preferences"
-msgstr ""
+msgstr "Preferensi Seputar Surel"
 
 #: templates/postorius/menu/user_nav.html:10
+#, fuzzy
 msgid "List-based preferences"
-msgstr ""
+msgstr "Preferensi Seputar Milis"
 
 #: templates/postorius/system_information.html:6
 msgid "System Configuration"
-msgstr ""
+msgstr "Konfigurasi Sistem"
 
 #: templates/postorius/system_information.html:11
 msgid "Mailman System"
-msgstr ""
+msgstr "Sistem Mailman"
 
 #: templates/postorius/system_information.html:23
 msgid "Queues"
-msgstr ""
+msgstr "Antrean"
 
 #: templates/postorius/user/address_preferences.html:8
 #: templates/postorius/user/subscription_preferences.html:7
 msgid "Subscription preferences"
-msgstr ""
+msgstr "Preferensi langganan"
 
 #: templates/postorius/user/address_preferences.html:17
 #: templates/postorius/user/mailman_settings.html:17
 #: templates/postorius/user/subscription_preferences.html:17
 msgid "No preferences available"
-msgstr ""
+msgstr "Tidak ada preferensi yang tersedia"
 
 #: templates/postorius/user/address_preferences.html:18
 #: templates/postorius/user/mailman_settings.html:19
@@ -2491,16 +2593,20 @@ msgstr ""
 msgid ""
 "You are not yet subscribed to any lists, so you have no Mailman preferences."
 msgstr ""
+"Anda tidak berlangganan ke milis apa pun, jadi Anda tidak mempunyai "
+"preferensi Mailman."
 
 #: templates/postorius/user/address_preferences.html:20
 msgid "Each email address can have specific Mailman preferences."
-msgstr ""
+msgstr "Setiap alamat surel bisa memiliki preferensi Mailman tersendiri."
 
 #: templates/postorius/user/address_preferences.html:21
 msgid ""
 "Any options showing as not set here have inherit at runtime from your global "
 "preferences (viewable on other tab)"
 msgstr ""
+"Pilihan apa pun yang ditampilkan sebagai belum diatur di sini mengikuti "
+"preferensi global Anda saat pemulaian (bisa dilihat di bilah lain)"
 
 #: templates/postorius/user/all.html:20
 msgid "Search"
@@ -2508,19 +2614,21 @@ msgstr "Cari"
 
 #: templates/postorius/user/all.html:35
 msgid "User"
-msgstr ""
+msgstr "Pengguna"
 
 #: templates/postorius/user/all.html:36
+#, fuzzy
 msgid "Created"
-msgstr ""
+msgstr "Dibuat"
 
 #: templates/postorius/user/list_options.html:14
 msgid "Subscription options for"
-msgstr ""
+msgstr "Pilihan langganan untuk"
 
 #: templates/postorius/user/list_options.html:18
 msgid "Use this form to change the email used for this subscription"
 msgstr ""
+"Gunakan formulir ini untuk mengganti surel yang digunakan untuk langganan ini"
 
 #: templates/postorius/user/list_options.html:22
 msgid "Change email used for subscription"
@@ -2528,7 +2636,7 @@ msgstr "Ubah surel yang digunakan untuk langganan"
 
 #: templates/postorius/user/mailman_settings.html:7
 msgid "Subscription settings"
-msgstr ""
+msgstr "Pengaturan langganan"
 
 #: templates/postorius/user/manage.html:8
 msgid "Manage user"
@@ -2536,11 +2644,11 @@ msgstr "Kelola pengguna"
 
 #: templates/postorius/user/manage.html:18
 msgid "Addresses"
-msgstr ""
+msgstr "Alamat"
 
 #: templates/postorius/user/manage.html:28
 msgid "Email"
-msgstr ""
+msgstr "Surel"
 
 #: templates/postorius/user/manage.html:62
 msgid "List"
@@ -2549,7 +2657,7 @@ msgstr "Milis"
 #: templates/postorius/user/manage.html:64
 #: templates/postorius/user/subscriptions.html:25
 msgid "Role"
-msgstr ""
+msgstr "Peran"
 
 #: templates/postorius/user/manage.html:89
 msgid "User has no subscriptions."
@@ -2564,63 +2672,67 @@ msgid "Username"
 msgstr "Nama pengguna"
 
 #: templates/postorius/user/manage.html:100
+#, fuzzy
 msgid "Superuser"
-msgstr ""
+msgstr "Pengguna Istimewa"
 
 #: templates/postorius/user/manage.html:104
 msgid "Last login"
-msgstr ""
+msgstr "Terakhir masuk"
 
 #: templates/postorius/user/manage.html:108
 msgid "Date joined"
-msgstr ""
+msgstr "Tanggal bergabung"
 
 #: templates/postorius/user/manage.html:113
 #: templates/postorius/user/manage.html:116
 msgid "Change password"
-msgstr ""
+msgstr "Ubah kata sandi"
 
 #: templates/postorius/user/subscription_preferences.html:21
 msgid "Each list subscription can have specific Mailman preferences."
-msgstr ""
+msgstr "Setiap langganan milis bisa memiliki preferensi Mailman tersendiri."
 
 #: templates/postorius/user/subscription_preferences.html:22
 msgid ""
 "Any options showing as not set inherit at runtime from your global or "
 "address specific preferences (viewable on other tabs)"
 msgstr ""
+"Pilihan apa pun yang ditampilkan sebagai belum diatur di sini akan mengikuti "
+"preferensi global atau spesifik-alamat saat pemulaian (bisa dilihat di bilah "
+"lain)"
 
 #: templates/postorius/user/subscription_preferences.html:32
 msgid "Subscription"
-msgstr ""
+msgstr "Langganan"
 
 #: templates/postorius/user/subscriptions.html:17
 msgid "You are subscribed to the following mailing lists:"
-msgstr ""
+msgstr "Anda berlangganan ke milis berikut:"
 
 #: templates/postorius/user/subscriptions.html:41
 msgid "You are not yet subscribed to any lists."
-msgstr ""
+msgstr "Anda belum berlangganan ke milis mana pun."
 
 #: templatetags/nav_helpers.py:27
 msgid "Header Filters"
-msgstr ""
+msgstr "Filter Tajuk"
 
 #: templatetags/nav_helpers.py:28
 msgid "Banned Addresses"
-msgstr ""
+msgstr "Surel Terlarang"
 
 #: templatetags/nav_helpers.py:29
 msgid "Delete List"
-msgstr ""
+msgstr "Hapus Milis"
 
 #: templatetags/nav_helpers.py:30
 msgid "Held Messages"
-msgstr ""
+msgstr "Tahan Pesan"
 
 #: templatetags/nav_helpers.py:31
 msgid "Mass Removal"
-msgstr ""
+msgstr "Penghapusan Massal"
 
 #: templatetags/nav_helpers.py:32
 #, fuzzy
@@ -2630,84 +2742,86 @@ msgstr "Deskripsi"
 
 #: templatetags/nav_helpers.py:33
 msgid "Subscription Options"
-msgstr ""
+msgstr "Pilihan Langganan"
 
 #: templatetags/nav_helpers.py:34
 msgid "List Settings"
-msgstr ""
+msgstr "Pengaturan Milis"
 
 #: templatetags/nav_helpers.py:35
 msgid "Summary"
-msgstr ""
+msgstr "Ringkasan"
 
 #: templatetags/nav_helpers.py:37
 msgid "Confirm Removal of All Members"
-msgstr ""
+msgstr "Konfirmasi Penghapusan Semua Anggota"
 
 #: templatetags/nav_helpers.py:39
+#, fuzzy
 msgid "Address-based Settings"
-msgstr ""
+msgstr "Pengaturan Seputar Surel"
 
 #: templatetags/nav_helpers.py:40
 msgid "Subscription Settings"
-msgstr ""
+msgstr "Pengaturan Langganan"
 
 #: templatetags/nav_helpers.py:41
 msgid "Global Settings"
-msgstr ""
+msgstr "Pengaturan Global"
 
 #: utils.py:37
 msgid "Mailman REST API not available. Please start Mailman core."
-msgstr ""
+msgstr "API REST Mailman tidak tersedia. Coba mulai Mailman Inti."
 
 #: views/domain.py:76
+#, fuzzy
 msgid "New Domain registered"
-msgstr ""
+msgstr "Domain baru terdaftar"
 
 #: views/domain.py:114
 #, python-format
 msgid "Domain %s updated"
-msgstr ""
+msgstr "Domain %s diperbarui"
 
 #: views/domain.py:117 views/list.py:861
 msgid "Please check the errors below"
-msgstr ""
+msgstr "Mohon periksa galat di bawah ini"
 
 #: views/domain.py:141
 #, python-format
 msgid "The domain %s has been deleted."
-msgstr ""
+msgstr "Domain %s telah dihapus."
 
 #: views/domain.py:146
 #, python-format
 msgid "The domain could not be deleted: %s"
-msgstr ""
+msgstr "Domain tidak bisa dihapus: %s"
 
 #: views/domain.py:164
 msgid "Added {} as an owner for {}"
-msgstr ""
+msgstr "Menambahkan {} sebagai pemilik dari {}"
 
 #: views/domain.py:193
 msgid "{} is not an owner for {}"
-msgstr ""
+msgstr "{} bukan pemilik dari {}"
 
 #: views/domain.py:200
 msgid "Removed {} as an owner for {}"
-msgstr ""
+msgstr "Menghapus {} sebagai pemilik dari {}"
 
 #: views/generic.py:112
 msgid "The email {} has been banned."
-msgstr ""
+msgstr "Surel {} telah dilarang."
 
 #: views/generic.py:116 views/generic.py:127 views/list.py:1322
 #, python-format
 msgid "An error occurred: %s"
-msgstr ""
+msgstr "Galat terjadi: %s"
 
 #: views/generic.py:118 views/generic.py:129
 #, python-format
 msgid "Invalid data: %s"
-msgstr ""
+msgstr "Data tidak valid: %s"
 
 #: views/generic.py:124
 msgid "The email {} has been un-banned"
@@ -2715,11 +2829,11 @@ msgstr ""
 
 #: views/list.py:119
 msgid "List {}s"
-msgstr ""
+msgstr "Milis {}s"
 
 #: views/list.py:133
 msgid "Add {}"
-msgstr ""
+msgstr "Tambah {}"
 
 #: views/list.py:136
 msgid "No {}s were found matching the search."
@@ -2736,88 +2850,95 @@ msgstr ""
 #: views/list.py:169
 #, python-brace-format
 msgid "{email} has been added with the role {role}"
-msgstr ""
+msgstr "{email} telah ditambahkan dengan perang {role}"
 
 #: views/list.py:216
 msgid "Member does not exist"
-msgstr ""
+msgstr "Anggota tidak ada"
 
 #: views/list.py:235
 msgid "The member's preferences have been updated."
-msgstr ""
+msgstr "Preferensi anggota telah diperbarui."
 
 #: views/list.py:244
 msgid "No change to the member's moderation."
-msgstr ""
+msgstr "Tidak ada perubahan ke moderasi anggota."
 
 #: views/list.py:256
 msgid "The member's moderation settings have been updated."
-msgstr ""
+msgstr "Pengaturan moderasi anggota telah diperbarui."
 
 #: views/list.py:437
 msgid "You are not subscribed to {}."
-msgstr ""
+msgstr "Anda tidak berlangganan ke {}."
 
 #: views/list.py:450
 msgid "You are already subscribed"
-msgstr ""
+msgstr "Anda telah berlangganan"
 
 #: views/list.py:461
 msgid "Subscription changed to {}"
-msgstr ""
+msgstr "Langganan diubah ke {}"
 
 #: views/list.py:465
 msgid "Something went wrong. Please try again. {} {}"
-msgstr ""
+msgstr "Ada sesuatu yang salah. Mohon coba lagi. {} {}"
 
 #: views/list.py:506
 msgid ""
 "Your subscription request has been submitted and is waiting for moderator "
 "approval."
 msgstr ""
+"Permintaan langganan Anda telah diajukan dan sedang menunggu persetujuan "
+"moderator."
 
 #: views/list.py:511
 #, python-format
 msgid "You are subscribed to %s."
-msgstr ""
+msgstr "Anda berlangganan ke %s."
 
 #: views/list.py:515 views/list.py:545
 msgid "Something went wrong. Please try again."
-msgstr ""
+msgstr "Ada sesuatu yang salah. Mohon coba lagi."
 
 #: views/list.py:541
 msgid "Please check your inbox for further instructions"
-msgstr ""
+msgstr "Periksa kotak masuk Anda untuk petunjuk lebih lanjut"
 
 #: views/list.py:565
+#, fuzzy
 msgid "You can only unsubscribe yourself."
-msgstr ""
+msgstr "Anda hanya dapat berhenti berlangganan sendiri."
 
 #: views/list.py:570
 msgid ""
 "You have a pending unsubscription request waiting for moderator approval."
 msgstr ""
+"Anda memiliki permintaan berhenti berlangganan tertahan karena menunggu "
+"persetujuan moderator."
 
 #: views/list.py:577
 msgid ""
 "Your unsubscription request has been submitted and is waiting for moderator "
 "approval."
 msgstr ""
+"Permintaan berhenti berlangganan Anda telah diajukan dan sedang menunggu "
+"persetujuan moderator."
 
 #: views/list.py:581
 #, python-format
 msgid "%s has been unsubscribed from this list."
-msgstr ""
+msgstr "%s telah membatalkan langganan dari milis ini."
 
 #: views/list.py:614
 #, python-format
 msgid "The address %(address)s has been invited to %(list)s."
-msgstr ""
+msgstr "Alamat surel %(address)s telah diundang ke %(list)s."
 
 #: views/list.py:617
 #, python-format
 msgid "The address %(address)s has been subscribed to %(list)s."
-msgstr ""
+msgstr "Alamat surel %(address)s telah berlangganan ke %(list)s."
 
 #: views/list.py:620
 msgid ""
@@ -2828,68 +2949,68 @@ msgstr ""
 #: views/list.py:630 views/list.py:681
 #, python-format
 msgid "The email address %s is not valid."
-msgstr ""
+msgstr "Surel %s tidak valid."
 
 #: views/list.py:655
 msgid "Please fill out the form correctly."
-msgstr ""
+msgstr "Tolong isi formulir dengan benar."
 
 #: views/list.py:671
 #, python-brace-format
 msgid "These addresses {address} have been unsubscribed from {list}."
-msgstr ""
+msgstr "Alamat surel {address} telah berhenti berlangganan dari {list}."
 
 #: views/list.py:702
 msgid "The selected messages were accepted"
-msgstr ""
+msgstr "Pesan terpilih telah diterima"
 
 #: views/list.py:706
 msgid "The selected messages were rejected"
-msgstr ""
+msgstr "Pesan terpilih telah ditolak"
 
 #: views/list.py:710
 msgid "The selected messages were discarded"
-msgstr ""
+msgstr "Pesan terpilih telah dihapus"
 
 #: views/list.py:712
 msgid "Message could not be found"
-msgstr ""
+msgstr "Pesan tidak ditemukan"
 
 #: views/list.py:741
 msgid "The message was accepted"
-msgstr ""
+msgstr "Pesan diterima"
 
 #: views/list.py:744
 msgid "The message was rejected"
-msgstr ""
+msgstr "Pesan ditolak"
 
 #: views/list.py:747
 msgid "The message was discarded"
-msgstr ""
+msgstr "Pesan telah dihapus"
 
 #: views/list.py:752
 msgid "Held message was not found."
-msgstr ""
+msgstr "Pesan tertunda tidak ditemukan."
 
 #: views/list.py:765
 msgid "Moderation action for {} set to {}"
-msgstr ""
+msgstr "Tindakan moderasi untuk {} diatur ke {}"
 
 #: views/list.py:770
 msgid "Failed to set moderation action for {}"
-msgstr ""
+msgstr "Gagal untuk mengatur tindakan moderasi untuk {}"
 
 #: views/list.py:822
 msgid "Choose a Domain"
-msgstr ""
+msgstr "Pilih Domain"
 
 #: views/list.py:843
 msgid "List created"
-msgstr ""
+msgstr "Milis dibuat"
 
 #: views/list.py:855
 msgid "Mailing List already exists."
-msgstr ""
+msgstr "Milis telah ada."
 
 #: views/list.py:1016
 msgid "Subscriptions pending user confirmation"
@@ -2907,15 +3028,15 @@ msgstr "Deskripsi"
 
 #: views/list.py:1078
 msgid "The request has been accepted."
-msgstr ""
+msgstr "Permintaan telah diterima."
 
 #: views/list.py:1079
 msgid "The request has been rejected."
-msgstr ""
+msgstr "Permintaan telah ditolak."
 
 #: views/list.py:1080
 msgid "The request has been discarded."
-msgstr ""
+msgstr "Permintaan telah dihapus."
 
 #: views/list.py:1081
 msgid "The request has been defered."
@@ -2924,12 +3045,12 @@ msgstr ""
 #: views/list.py:1100
 #, python-format
 msgid "The request was already moderated: %s"
-msgstr ""
+msgstr "Permintaan telah dimoderasi: %s"
 
 #: views/list.py:1103
 #, python-format
 msgid "The request could not be moderated: %s"
-msgstr ""
+msgstr "Permintaan tidak bisa dimoderasi: %s"
 
 #: views/list.py:1109
 msgid "List Identity"
@@ -2937,7 +3058,7 @@ msgstr ""
 
 #: views/list.py:1110
 msgid "Automatic Responses"
-msgstr ""
+msgstr "Respons Otomatis"
 
 #: views/list.py:1111
 msgid "Alter Messages"
@@ -2969,38 +3090,38 @@ msgstr ""
 
 #: views/list.py:1180
 msgid "The settings have been updated."
-msgstr ""
+msgstr "Pengaturan telah diperbarui."
 
 #: views/list.py:1185
 msgid "An error occurred: "
-msgstr ""
+msgstr "Galat terjadi: "
 
 #: views/list.py:1209
 #, python-format
 msgid "The user %(email)s is not in the %(role)s group"
-msgstr ""
+msgstr "Pengguna %(email)s bukan di grup %(role)s"
 
 #: views/list.py:1215
 msgid "Removing the last owner is impossible"
-msgstr ""
+msgstr "Tidak mungkin untuk menghapus pemilik terakhir"
 
 #: views/list.py:1229
 #, python-format
 msgid "The user could not be removed: %(msg)s"
-msgstr ""
+msgstr "Pengguna tidak bisa dihapus: %(msg)s"
 
 #: views/list.py:1232
 #, python-format
 msgid "The user %(address)s has been removed from the %(role)s group."
-msgstr ""
+msgstr "Pengguna %(address)s telah dihapus dari grup %(role)s"
 
 #: views/list.py:1249
 msgid "No member is subscribed to the list currently."
-msgstr ""
+msgstr "Tidak ada anggota yang saat ini berlangganan ke milis."
 
 #: views/list.py:1259
 msgid "All members have been unsubscribed from the list."
-msgstr ""
+msgstr "Semua anggota telah dibatalkan langganan dari milis."
 
 #: views/list.py:1324
 msgid "The header matches were successfully modified."
@@ -3033,23 +3154,23 @@ msgstr "Lampiran tidak ada"
 
 #: views/system.py:31
 msgid "Mailman Core Version"
-msgstr "Versi Inti Mailman"
+msgstr "Versi Mailman Inti"
 
 #: views/system.py:32
 msgid "Mailman Core API Version"
-msgstr ""
+msgstr "Versi API Mailman Inti"
 
 #: views/system.py:33
 msgid "Mailman Core Python Version"
-msgstr ""
+msgstr "Versi Python Mailman Inti"
 
 #: views/user.py:92
 msgid "Your preferences have been updated."
-msgstr ""
+msgstr "Preferensi Anda telah diperbarui."
 
 #: views/user.py:94
 msgid "Your preferences did not change."
-msgstr ""
+msgstr "Preferensi Anda tidak berubah."
 
 #: views/user.py:214
 msgid "Subscription does not exist"
@@ -3057,15 +3178,16 @@ msgstr "Langganan tidak ada"
 
 #: views/user.py:407
 msgid "Successfully updated addresses {}"
-msgstr ""
+msgstr "Berhasil memperbarui surel {}"
 
 #: views/user.py:417
 msgid "Successfully updated memberships for {}"
-msgstr ""
+msgstr "Berhasil memperbarui keanggotaan untuk {}"
 
 #: views/user.py:423
+#, fuzzy
 msgid "Successfully updated user."
-msgstr ""
+msgstr "Berhasil memperbarui pengguna."
 
 #: views/user.py:432
 msgid "Password updated successfully"
