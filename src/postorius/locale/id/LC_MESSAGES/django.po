@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-22 10:20-0700\n"
-"PO-Revision-Date: 2022-11-13 14:48+0000\n"
+"PO-Revision-Date: 2022-11-15 12:18+0000\n"
 "Last-Translator: Neko Nekowazarashi <kodra@nekoweb.my.id>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/id/>\n"
@@ -110,7 +110,7 @@ msgstr "Dimatikan oleh Pemilik"
 
 #: forms/fields.py:44
 msgid "Disabled by Bounces"
-msgstr ""
+msgstr "Dimatikan oleh Status Pengiriman"
 
 #: forms/fields.py:47
 msgid "Hold for moderation"
@@ -249,7 +249,7 @@ msgstr "Masukkan alamat surel pemilik milis."
 
 #: forms/list_forms.py:75
 msgid "Advertise this list?"
-msgstr "Iklankan milis ini?"
+msgstr "Promosikan milis ini?"
 
 #: forms/list_forms.py:77
 msgid "Please choose a list type."
@@ -257,7 +257,7 @@ msgstr "Pilih jenis milis."
 
 #: forms/list_forms.py:80
 msgid "Advertise this list in list index"
-msgstr ""
+msgstr "Promosikan milis ini di indeks milis"
 
 #: forms/list_forms.py:81
 msgid "Hide this list in list index"
@@ -428,16 +428,18 @@ msgstr "Tidak"
 
 #: forms/list_forms.py:248
 msgid "Process Bounces"
-msgstr ""
+msgstr "Proses Status Pengiriman"
 
 #: forms/list_forms.py:250
 msgid ""
 "Specifies whether or not this list should do automatic bounce processing."
 msgstr ""
+"Rincikan apakah milis ini akan melakukan pemrosesan status pengiriman secara "
+"otomatis."
 
 #: forms/list_forms.py:255
 msgid "Bounce score threshold"
-msgstr ""
+msgstr "Batas skor status pengiriman"
 
 #: forms/list_forms.py:258
 msgid ""
@@ -445,6 +447,9 @@ msgid ""
 "automatically disabled. When the subscription is  re-enabled, their bounce "
 "score will be reset to zero."
 msgstr ""
+"Ini adalah skor status pengiriman yang mana langganan anggota jika melebihi "
+"akan secara otomatis dimatikan. Ketika langganan diaktifkan kembali, skor "
+"status pengiriman akan diatur ulang ke nol."
 
 #: forms/list_forms.py:263
 msgid "Bounce info stale after"
@@ -459,7 +464,7 @@ msgstr ""
 
 #: forms/list_forms.py:274
 msgid "Notify owner on bounce increment"
-msgstr ""
+msgstr "Beritahu pemilik pada penambahan skor status pengiriman"
 
 #: forms/list_forms.py:276
 msgid ""
@@ -467,10 +472,13 @@ msgid ""
 "member's bounce score is incremented, but to a value less than their bounce "
 "threshold. "
 msgstr ""
+"Pilihan ini mengatur apakah pemilik milis diberitahu ketika skor status "
+"pengiriman anggota bertambah, tetapi masih berada di bawah batas skor status "
+"pengiriman mereka. "
 
 #: forms/list_forms.py:283
 msgid "Notify owner on disable"
-msgstr ""
+msgstr "Beritahu pemilik pada pematian"
 
 #: forms/list_forms.py:285
 msgid ""
@@ -478,10 +486,13 @@ msgid ""
 "member's subscription is automatically disabled due to their bounce "
 "threshold being reached. "
 msgstr ""
+"Pilihan ini mengatur apakah pemilik milis diberitahu ketika langganan "
+"anggota secara otomatis dimatikan karena batas skor status pengiriman mereka "
+"telah tercapai. "
 
 #: forms/list_forms.py:292
 msgid "Notify owner on removal"
-msgstr ""
+msgstr "Beritahu pemilik pada penghapusan"
 
 #: forms/list_forms.py:294
 msgid ""
@@ -489,6 +500,8 @@ msgid ""
 "is removed from the list after their disabled notifications have been "
 "exhausted. "
 msgstr ""
+"Pilihan ini mengatur apakah pemilik milis diberitahu ketika anggota dihapus "
+"dari milis setelah notifikasi dimatikan mereka telah habis. "
 
 #: forms/list_forms.py:301
 msgid "Forward unrecognized bounces"
@@ -567,7 +580,7 @@ msgstr ""
 
 #: forms/list_forms.py:390
 msgid "Acceptable aliases"
-msgstr ""
+msgstr "Alias yang disetujui"
 
 #: forms/list_forms.py:393
 msgid ""
@@ -579,6 +592,13 @@ msgid ""
 "message. The matching is performed with Python's re.match() function, "
 "meaning they are anchored to the start of the string."
 msgstr ""
+"Ini adalah daftar, satu per baris, dari surel dan ekspresi reguler yang "
+"cocok dengan surel yang disetujui di To: atau Cc: untuk menggantikan surel "
+"pos milis ketika `require_explicit_destination' diaktifkan.  Daftar adalah "
+"antara surel atau ekspresi reguler yang cocok dengan surel.  Ekspresi "
+"reguler adalah baris yang dimulai dengan `^` dan dicocokkan dengan setiap "
+"surel penerima di pesan. Pencocokkan dilakukan oleh fungsi Python re.match()"
+", artinya"
 
 #: forms/list_forms.py:404
 msgid "Require Explicit Destination"
@@ -589,6 +609,8 @@ msgid ""
 "This checks to ensure that the list posting address or an acceptable alias "
 "explicitly appears in a To: or Cc: header in the post."
 msgstr ""
+"Ini akan memastikan bahwa surel untuk pos milis atau alias yang disetujui "
+"berada secara tertulis di tajuk To: atau Cc: di pos."
 
 #: forms/list_forms.py:412
 msgid "Administrivia"
@@ -625,6 +647,16 @@ msgid ""
 "Accept: accepts any postings without any further checks.\n"
 "Default Processing: run additional checks and accept the message."
 msgstr ""
+"Tindakan baku yang dilakukan ketika anggota pos ke milis.\n"
+"Tahan: Ini akan menahan pesan untuk disetujui oleh moderator milis.\n"
+"Tolak: Ini akan secara otomatis menolak pesan dengan mengirim pemberitahuan "
+"status pengiriman ke pembuat pos. Teks dari pemberitahuan status pengiriman "
+"bisa diatur oleh Anda.\n"
+"Hapus: Ini akan menghapus pesan, dengan tidak ada pemberitahuan ke pembuat "
+"pos.\n"
+"Terima: Ini akan menerima setiap pos tanpa pemeriksaan lebih lanjut.\n"
+"Pemrosesan Baku: Ini akan menjalankan pemeriksaan tambahan dan menerima "
+"pesannya."
 
 #: forms/list_forms.py:440
 msgid "Default action to take when a non-member posts to the list"
@@ -654,6 +686,9 @@ msgid ""
 "held for moderation. Turn this option on when your list is experiencing a "
 "flamewar and you want a cooling off period. "
 msgstr ""
+"Ketika ini diaktifkan, semua lalu lintas milis akan dimoderasi darurat ("
+"tahan untuk dimoderasi). Aktifkan ini ketika milis Anda ada perang teks "
+"daring dan Anda ingin ada masa tenang sejenak. "
 
 #: forms/list_forms.py:462
 msgid "Maximum message size"
@@ -761,12 +796,13 @@ msgstr ""
 "anggota dan atur moderasi non-anggota ke Moderasi untuk Hapus."
 
 #: forms/list_forms.py:551
+#, fuzzy
 msgid "Invalid alias regexp: {}: {}"
-msgstr ""
+msgstr "Alias regexp tidak valid: {}: {}"
 
 #: forms/list_forms.py:557
 msgid "Invalid alias email: {}"
-msgstr ""
+msgstr "Alias surel tidak valid: {}"
 
 #: forms/list_forms.py:569
 msgid "Enable Digests"
@@ -786,21 +822,24 @@ msgstr "Haruskan Mailman mengirim ringkasan secara berkala?"
 
 #: forms/list_forms.py:583
 msgid "Digest Volume Frequency"
-msgstr ""
+msgstr "Frekuensi Volume Ringkasan"
 
 #: forms/list_forms.py:584
+#, fuzzy
 msgid ""
 "At what frequency should Mailman increment the digest volume number and "
 "reset the issue number?"
 msgstr ""
+"Pada frekuensi berapa Mailman harus menambahkan jumlah volume ringkasan dan "
+"mengatur ulang angka pengiriman?"
 
 #: forms/list_forms.py:588
 msgid "Digest size threshold"
-msgstr ""
+msgstr "Batas ukuran ringkasan"
 
 #: forms/list_forms.py:589
 msgid "How big in Kb should a digest be before it gets sent out?"
-msgstr ""
+msgstr "Berapa besar ringkasan dalam Kb sebelum dikirim?"
 
 #: forms/list_forms.py:598
 msgid "DMARC mitigation action"
@@ -816,7 +855,7 @@ msgstr ""
 
 #: forms/list_forms.py:605
 msgid "Replace From: with list address"
-msgstr ""
+msgstr "Ganti From: dengan surel milis"
 
 #: forms/list_forms.py:607
 msgid "Wrap the message in an outer message From: the list."
@@ -949,15 +988,15 @@ msgstr ""
 
 #: forms/list_forms.py:698
 msgid "Filter extensions"
-msgstr "Filter ekstensi"
+msgstr "Filter pengaya"
 
 #: forms/list_forms.py:701
 msgid "Extensions to filter from the incoming posts."
-msgstr "Filter ekstensi dari pos yang diterima."
+msgstr "Filter pengaya dari pos yang diterima."
 
 #: forms/list_forms.py:704
 msgid "Pass types"
-msgstr ""
+msgstr "Jenis yang dibolehkan"
 
 #: forms/list_forms.py:707
 msgid ""
@@ -965,14 +1004,17 @@ msgid ""
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
+"Jenis MIME yang dibolehkan pada pos masuk. Daftar jenis umum bisa ditemukan "
+"di <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
+"Basics_of_HTTP/MIME_types/Common_types\">sini </a>"
 
 #: forms/list_forms.py:712
 msgid "Pass extensions"
-msgstr ""
+msgstr "Pengaya yang dibolehkan"
 
 #: forms/list_forms.py:715
 msgid "Extensions to allow in the incoming posts."
-msgstr ""
+msgstr "Pengaya yang dibolehkan di pos masuk."
 
 #: forms/list_forms.py:721
 msgid "Collapse alternatives"
@@ -1215,7 +1257,7 @@ msgstr ""
 
 #: forms/list_forms.py:904 forms/list_forms.py:1102
 msgid "Send welcome message"
-msgstr ""
+msgstr "Kirim pesan selamat datang"
 
 #: forms/list_forms.py:906
 msgid ""
@@ -1228,7 +1270,7 @@ msgstr ""
 
 #: forms/list_forms.py:916
 msgid "Send goodbye message"
-msgstr ""
+msgstr "Kirim pesan perpisahan"
 
 #: forms/list_forms.py:918
 msgid ""
@@ -1254,11 +1296,13 @@ msgstr ""
 
 #: forms/list_forms.py:937
 msgid "Notify admin of membership changes"
-msgstr ""
+msgstr "Beritahu administrator pada perubahan langganan"
 
 #: forms/list_forms.py:938
 msgid "Should administrator get notices of subscribes and unsubscribes?"
 msgstr ""
+"Haruskah administrator mendapatkan pemberitahuan pada langganan dan "
+"pembatalan langganan?"
 
 #: forms/list_forms.py:943
 msgid "Not Moderated"
@@ -1308,8 +1352,9 @@ msgid "Subject prefix"
 msgstr ""
 
 #: forms/list_forms.py:984
+#, fuzzy
 msgid "Preferred Language"
-msgstr ""
+msgstr "Bahasa"
 
 #: forms/list_forms.py:990
 msgid "Members List Visibility"
@@ -1341,19 +1386,19 @@ msgstr ""
 
 #: forms/list_forms.py:1011
 msgid "Linked Newsgroup"
-msgstr ""
+msgstr "Grup Berita yang Tersambung"
 
 #: forms/list_forms.py:1014
 msgid "The name of the linked newsgroup."
-msgstr ""
+msgstr "Nama grup berita yang tersambung."
 
 #: forms/list_forms.py:1017
 msgid "Newsgroup moderation"
-msgstr "Moderasi grup berita (newsgroup)"
+msgstr "Moderasi grup berita"
 
 #: forms/list_forms.py:1021
 msgid "The moderation policy for the linked newsgroup, if there is one."
-msgstr ""
+msgstr "Kebijakan moderasi untuk grup berita, jika ada."
 
 #: forms/list_forms.py:1027
 msgid "NNTP Include subject prefix "
@@ -1472,7 +1517,7 @@ msgstr "Pola"
 
 #: forms/list_forms.py:1151
 msgid "Regular expression matching the header's value."
-msgstr ""
+msgstr "Ekspresi reguler (regex) yang cocok dengan tajuk."
 
 #: forms/list_forms.py:1153
 msgid "Please enter a pattern."
@@ -1805,6 +1850,8 @@ msgid ""
 "The notice sent to a member when their membership has been disabled due to "
 "excessive bounces."
 msgstr ""
+"Pemberitahuan yang dikirim ke anggota ketika langganan mereka telah "
+"dimatikan karena galat yang berlebihan."
 
 #: templates/403.html:5
 msgid "Forbidden"
@@ -1991,7 +2038,7 @@ msgstr "Tambah"
 #: templates/postorius/lists/template_update.html:7
 #: templates/postorius/menu/list_nav.html:48 templatetags/nav_helpers.py:38
 msgid "Templates"
-msgstr ""
+msgstr "Templat"
 
 #: templates/postorius/domain/index.html:67
 msgid "No domains yet."
@@ -2024,7 +2071,7 @@ msgstr "Tambah pemilik baru ke"
 #: templates/postorius/lists/template_update.html:13
 #, python-format
 msgid "Template '%(name)s'"
-msgstr ""
+msgstr "Templat '%(name)s'"
 
 #: templates/postorius/domain/template_add.html:25
 #: templates/postorius/lists/template_add.html:16
@@ -2035,7 +2082,7 @@ msgstr "Simpan"
 
 #: templates/postorius/domain/template_delete.html:11
 msgid "Delete Template"
-msgstr ""
+msgstr "Hapus Templat"
 
 #: templates/postorius/domain/template_delete.html:22
 #, python-format
@@ -2049,17 +2096,17 @@ msgstr ""
 #: templates/postorius/domain/template_index.html:16
 #: templates/postorius/lists/template_list.html:14
 msgid "New Template"
-msgstr ""
+msgstr "Templat Baru"
 
 #: templates/postorius/domain/template_index.html:25
 #: templates/postorius/lists/template_list.html:24
 msgid "Template Name"
-msgstr ""
+msgstr "Nama Templat"
 
 #: templates/postorius/domain/template_index.html:45
 #: templates/postorius/lists/template_list.html:41
 msgid "No Templates."
-msgstr ""
+msgstr "Tidak Ada Templat."
 
 #: templates/postorius/errors/generic.html:5
 msgid "Something went wrong"
@@ -3137,7 +3184,7 @@ msgstr "Ringkasan"
 
 #: views/list.py:1114
 msgid "Message Acceptance"
-msgstr ""
+msgstr "Penerimaan Pesan"
 
 #: views/list.py:1115
 msgid "Archiving"
@@ -3149,7 +3196,7 @@ msgstr "Kebijakan Anggota"
 
 #: views/list.py:1117
 msgid "Bounce Processing"
-msgstr ""
+msgstr "Pemrosesan Status Pengiriman"
 
 #: views/list.py:1180
 msgid "The settings have been updated."
@@ -3187,8 +3234,9 @@ msgid "All members have been unsubscribed from the list."
 msgstr "Semua anggota telah dibatalkan langganan dari milis."
 
 #: views/list.py:1324
+#, fuzzy
 msgid "The header matches were successfully modified."
-msgstr ""
+msgstr "Pencocokan tajuk telah berhasil diubah."
 
 #: views/list.py:1331
 #, fuzzy
