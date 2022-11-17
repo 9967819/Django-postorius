@@ -2,12 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Fré van Limpt <fre@freedom.nl>, 2022.
+# Michael Smith <shmitty@protonmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-22 10:20-0700\n"
-"PO-Revision-Date: 2022-09-14 12:18+0000\n"
+"PO-Revision-Date: 2022-11-16 21:03+0000\n"
 "Last-Translator: Fré van Limpt <fre@freedom.nl>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/nl/>\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1-dev\n"
+"X-Generator: Weblate 4.15-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -1836,7 +1837,7 @@ msgstr "niet-lid"
 
 #: models.py:77
 msgid "moderator"
-msgstr "beheerder"
+msgstr "moderator"
 
 #: models.py:254
 msgid "Choose the template you want to customize."
@@ -2419,28 +2420,22 @@ msgid "Unsubscribe all members"
 msgstr "Alle leden uitschrijven"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:14
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "        Are you sure you want to unsubscribe all members from "
-#| "%(listname)s?\n"
-#| "    "
+#, python-format
 msgid ""
 "\n"
 "        Warning! This will remove every member from %(listname)s!\n"
 "    "
 msgstr ""
 "\n"
-"        Weet u zeker dat u alle leden uit %(listname)s wilt uitschrijven!\n"
+"        Let op! Deze actie zal alle leden van de %(listname)s maillijst "
+"verwijderen!\n"
 "    "
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:21
 #: templates/postorius/lists/mass_removal.html:17
 #: templates/postorius/lists/members.html:63
-#, fuzzy
-#| msgid "List members"
 msgid "Remove ALL members"
-msgstr "Ledenlijst"
+msgstr "Verwijder ALLE leden"
 
 #: templates/postorius/lists/confirm_token.html:12
 #, python-format
@@ -2562,7 +2557,7 @@ msgstr "Bericht kon niet worden opgehaald"
 
 #: templates/postorius/lists/mass_removal.html:14
 msgid "Remove listed users"
-msgstr ""
+msgstr "Verwijder getoonde leden"
 
 #: templates/postorius/lists/mass_subscribe.html:7
 #: templates/postorius/menu/list_nav.html:56
@@ -2600,7 +2595,7 @@ msgstr "CSV-uitvoer"
 
 #: templates/postorius/lists/members.html:62
 msgid "Remove Selected"
-msgstr ""
+msgstr "Verwijder geselecteerde"
 
 #: templates/postorius/lists/members.html:76
 #: templates/postorius/user/address_preferences.html:32
