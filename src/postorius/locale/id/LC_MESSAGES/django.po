@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-22 10:20-0700\n"
-"PO-Revision-Date: 2022-11-15 12:18+0000\n"
+"PO-Revision-Date: 2022-11-19 15:47+0000\n"
 "Last-Translator: Neko Nekowazarashi <kodra@nekoweb.my.id>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/id/>\n"
@@ -505,7 +505,7 @@ msgstr ""
 
 #: forms/list_forms.py:301
 msgid "Forward unrecognized bounces"
-msgstr ""
+msgstr "Teruskan galat pengiriman tak dikenali"
 
 #: forms/list_forms.py:302
 msgid ""
@@ -513,6 +513,9 @@ msgid ""
 "List Admins: Send to the list owners and moderators\n"
 "Site Admin: Send to the site's configured site_owner"
 msgstr ""
+"Hapus: Galat pengiriman tak dikenali akan dihapus\n"
+"Admin Milis: Kirim ke pemilik dan moderator milis\n"
+"Admin Situs: Kirim ke site_owner situs ini"
 
 #: forms/list_forms.py:307
 msgid "Bounce disabled warnings interval"
@@ -568,8 +571,9 @@ msgid "Active archivers"
 msgstr "Pengarsip aktif"
 
 #: forms/list_forms.py:357
+#, fuzzy
 msgid "Archive Rendering mode"
-msgstr ""
+msgstr "Mode Perenderan Arsip"
 
 #: forms/list_forms.py:358
 msgid ""
@@ -583,6 +587,7 @@ msgid "Acceptable aliases"
 msgstr "Alias yang disetujui"
 
 #: forms/list_forms.py:393
+#, fuzzy
 msgid ""
 "This is a list, one per line, of addresses and regexps matching addresses "
 "that are acceptable in To: or Cc: in lieu of the list posting address when "
@@ -598,7 +603,7 @@ msgstr ""
 "antara surel atau ekspresi reguler yang cocok dengan surel.  Ekspresi "
 "reguler adalah baris yang dimulai dengan `^` dan dicocokkan dengan setiap "
 "surel penerima di pesan. Pencocokkan dilakukan oleh fungsi Python re.match()"
-", artinya"
+", artinya ditautkan ke awal string."
 
 #: forms/list_forms.py:404
 msgid "Require Explicit Destination"
