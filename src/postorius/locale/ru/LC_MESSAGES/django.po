@@ -5,13 +5,14 @@
 # Juri Grabowski <hosted-weblate@jugra.de>, 2020.
 # Artem <KovalevArtem.ru@gmail.com>, 2020.
 # Ivan Kuznetsov <kia@solvo.ru>, 2021.
+# Alexander Ryazanov (alryaz) <alryaz@xavux.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-22 10:20-0700\n"
-"PO-Revision-Date: 2021-12-31 16:53+0000\n"
-"Last-Translator: Ivan Kuznetsov <kia@solvo.ru>\n"
+"PO-Revision-Date: 2022-11-23 05:47+0000\n"
+"Last-Translator: Alexander Ryazanov (alryaz) <alryaz@xavux.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ru/>\n"
 "Language: ru\n"
@@ -21,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
-"X-Generator: Weblate 4.10.1\n"
+"X-Generator: Weblate 4.15-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -279,10 +280,8 @@ msgid "Hide this list in list index"
 msgstr "Скрывать рассылку в общем списке"
 
 #: forms/list_forms.py:84 forms/list_forms.py:960
-#, fuzzy
-#| msgid "Description"
 msgid "Short Description"
-msgstr "Описание"
+msgstr "Краткое описание"
 
 #: forms/list_forms.py:94
 msgid "Choose an existing Domain."
@@ -646,12 +645,6 @@ msgid "Administrivia"
 msgstr "Проверки на административные сообщения"
 
 #: forms/list_forms.py:414
-#, fuzzy
-#| msgid ""
-#| "Administrivia tests will check postings to see whether it's really meant "
-#| "as an administrative request (like subscribe, unsubscribe, etc), and will "
-#| "add it to the the administrative requests queue, notifying the "
-#| "administrator of the new request, in the process."
 msgid ""
 "Administrivia tests will check postings to see whether it's really meant as "
 "an administrative request (like subscribe, unsubscribe, etc), and will add "
@@ -1478,11 +1471,11 @@ msgstr ""
 
 #: forms/list_forms.py:979
 msgid "Subject prefix"
-msgstr ""
+msgstr "Префикс темы письма"
 
 #: forms/list_forms.py:984
 msgid "Preferred Language"
-msgstr ""
+msgstr "Предпочитаемый язык"
 
 #: forms/list_forms.py:990
 msgid "Members List Visibility"
@@ -1564,8 +1557,9 @@ msgid "If checked, users will not have to confirm their subscription."
 msgstr ""
 
 #: forms/list_forms.py:1065
+#, fuzzy
 msgid "Pre approved"
-msgstr ""
+msgstr "Предодобренная"
 
 #: forms/list_forms.py:1069
 msgid ""
@@ -1665,8 +1659,9 @@ msgid "Data"
 msgstr "Данные"
 
 #: forms/member_forms.py:27
+#, fuzzy
 msgid "Email Address"
-msgstr ""
+msgstr "Адрес электронной почты"
 
 #: forms/member_forms.py:32 forms/user_forms.py:317
 msgid "Display Name"
@@ -1731,7 +1726,7 @@ msgstr ""
 
 #: forms/user_forms.py:101
 msgid "Preferred language"
-msgstr ""
+msgstr "Предпочитаемый язык"
 
 #: forms/user_forms.py:103
 msgid ""
@@ -1784,7 +1779,7 @@ msgstr "Владельцы"
 
 #: models.py:75
 msgid "member"
-msgstr ""
+msgstr "подписчик"
 
 #: models.py:76
 #, fuzzy
@@ -1965,7 +1960,7 @@ msgstr ""
 
 #: templates/500.html:24
 msgid "Server error"
-msgstr ""
+msgstr "Ошибка сервера"
 
 #: templates/500.html:25
 msgid "An error occurred while processing your request."
@@ -1973,15 +1968,15 @@ msgstr ""
 
 #: templates/postorius/bans.html:5 templates/postorius/bans.html:10
 msgid "Global Bans"
-msgstr ""
+msgstr "Глобальные блокировки"
 
 #: templates/postorius/base.html:32
 msgid "Mailman logo"
-msgstr ""
+msgstr "Логотип Mailman"
 
 #: templates/postorius/base.html:38
 msgid "Lists"
-msgstr ""
+msgstr "Списки рассылки"
 
 #: templates/postorius/base.html:44 templates/postorius/domain/index.html:5
 #: templates/postorius/domain/index.html:11
@@ -1990,7 +1985,7 @@ msgstr "Домены"
 
 #: templates/postorius/base.html:50
 msgid "Bans"
-msgstr ""
+msgstr "Блокировки"
 
 #: templates/postorius/base.html:56
 msgid "System Information"
@@ -2032,11 +2027,11 @@ msgstr "Регистрация"
 
 #: templates/postorius/base.html:134
 msgid "Postorius Documentation"
-msgstr ""
+msgstr "Документация Postorius"
 
 #: templates/postorius/base.html:138
 msgid "Postorius Version"
-msgstr ""
+msgstr "Версия Postorius"
 
 #: templates/postorius/base.html:141
 msgid "Happy Mailman Day!"
@@ -2085,7 +2080,7 @@ msgstr "Отмена"
 #: templates/postorius/domain/edit.html:6
 #: templates/postorius/domain/edit.html:12
 msgid "Edit domain"
-msgstr ""
+msgstr "Редактировать домен"
 
 #: templates/postorius/domain/edit.html:17
 #: templates/postorius/lists/template_update.html:20
@@ -2113,7 +2108,7 @@ msgstr "Редактировать"
 
 #: templates/postorius/domain/index.html:50
 msgid "remove"
-msgstr ""
+msgstr "удалить"
 
 #: templates/postorius/domain/index.html:54
 msgid "Add"
@@ -2138,7 +2133,7 @@ msgstr ""
 
 #: templates/postorius/domain/new.html:6
 msgid "Add domain"
-msgstr ""
+msgstr "Добавить домен"
 
 #: templates/postorius/domain/new.html:12
 msgid "Add a new domain"
@@ -2164,7 +2159,7 @@ msgstr ""
 #: templates/postorius/lists/template_update.html:13
 #, python-format
 msgid "Template '%(name)s'"
-msgstr ""
+msgstr "Шаблон '%(name)s'"
 
 #: templates/postorius/domain/template_add.html:25
 #: templates/postorius/lists/template_add.html:16
@@ -2175,7 +2170,7 @@ msgstr "Сохранить"
 
 #: templates/postorius/domain/template_delete.html:11
 msgid "Delete Template"
-msgstr ""
+msgstr "Удалить шаблон"
 
 #: templates/postorius/domain/template_delete.html:22
 #, python-format
@@ -2194,12 +2189,12 @@ msgstr "Новый шаблон"
 #: templates/postorius/domain/template_index.html:25
 #: templates/postorius/lists/template_list.html:24
 msgid "Template Name"
-msgstr ""
+msgstr "Название шаблона"
 
 #: templates/postorius/domain/template_index.html:45
 #: templates/postorius/lists/template_list.html:41
 msgid "No Templates."
-msgstr ""
+msgstr "Шаблоны отсутствуют."
 
 #: templates/postorius/errors/generic.html:5
 msgid "Something went wrong"
@@ -2207,7 +2202,7 @@ msgstr ""
 
 #: templates/postorius/fragments/bans.html:14
 msgid "Ban email"
-msgstr ""
+msgstr "Заблокировать адрес"
 
 #: templates/postorius/fragments/bans.html:22
 msgid "Currently banned addresses"
@@ -2259,7 +2254,7 @@ msgstr ""
 
 #: templates/postorius/index.html:58
 msgid "All"
-msgstr ""
+msgstr "Все"
 
 #: templates/postorius/index.html:66
 msgid "Create New Domain"
@@ -2271,15 +2266,16 @@ msgstr ""
 
 #: templates/postorius/index.html:80
 msgid "List name"
-msgstr ""
+msgstr "Название списка"
 
 #: templates/postorius/index.html:81
 msgid "Post address"
 msgstr "Почтовый адрес"
 
 #: templates/postorius/index.html:92
+#, fuzzy
 msgid "unadvertised"
-msgstr ""
+msgstr "скрыто"
 
 #: templates/postorius/index.html:104
 msgid ""
@@ -2297,7 +2293,7 @@ msgstr ""
 
 #: templates/postorius/lists/bans.html:8
 msgid "Banned addresses"
-msgstr ""
+msgstr "Заблокированные адреса"
 
 #: templates/postorius/lists/confirm_delete.html:13
 msgid "Are you sure you want to permanently delete this list?"
@@ -2314,6 +2310,9 @@ msgid ""
 "                Delete %(listname)s\n"
 "                "
 msgstr ""
+"\n"
+"                Удалить %(listname)s\n"
+"                "
 
 #: templates/postorius/lists/confirm_remove_role.html:5
 msgid "Confirm remove role"
@@ -2378,7 +2377,7 @@ msgstr ""
 #: templates/postorius/lists/header_matches.html:7
 #: templates/postorius/menu/list_nav.html:61
 msgid "Header filters"
-msgstr ""
+msgstr "Фильтры заголовков"
 
 #: templates/postorius/lists/header_matches.html:58
 #: templates/postorius/lists/memberoptions.html:20
@@ -2396,7 +2395,7 @@ msgstr ""
 #: templates/postorius/lists/held_messages.html:10
 #: templates/postorius/menu/list_nav.html:31
 msgid "Held messages"
-msgstr ""
+msgstr "Удержанные сообщения"
 
 #: templates/postorius/lists/held_messages.html:26
 msgid "Perform action on selected messages"
@@ -2422,7 +2421,7 @@ msgstr "Причина"
 
 #: templates/postorius/lists/held_messages.html:41
 msgid "Hold Date"
-msgstr ""
+msgstr "Дата удержания"
 
 #: templates/postorius/lists/held_messages.html:53
 msgid "No Subject"
@@ -2438,7 +2437,7 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:98
 msgid "Rejection reason:"
-msgstr ""
+msgstr "Причина отклонения:"
 
 #: templates/postorius/lists/held_messages.html:101
 msgid ""
@@ -2448,7 +2447,7 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:115
 msgid "Show Headers"
-msgstr ""
+msgstr "Показать заголовки"
 
 #: templates/postorius/lists/held_messages.html:123
 msgid "There are currently no held messages."
@@ -2465,7 +2464,7 @@ msgstr ""
 #: templates/postorius/lists/mass_subscribe.html:7
 #: templates/postorius/menu/list_nav.html:56
 msgid "Mass subscribe"
-msgstr ""
+msgstr "Массовая подписка"
 
 #: templates/postorius/lists/mass_subscribe.html:16
 #, fuzzy
@@ -2487,8 +2486,9 @@ msgid "You are not the owner for this list"
 msgstr ""
 
 #: templates/postorius/lists/members.html:8
+#, fuzzy
 msgid "List members"
-msgstr ""
+msgstr "Подписчики"
 
 #: templates/postorius/lists/members.html:44
 msgid "Search members..."
@@ -2496,7 +2496,7 @@ msgstr "Поиск участников ..."
 
 #: templates/postorius/lists/members.html:60
 msgid "CSV Export"
-msgstr ""
+msgstr "Экспорт в CSV"
 
 #: templates/postorius/lists/members.html:62
 msgid "Remove Selected"
@@ -2506,12 +2506,12 @@ msgstr ""
 #: templates/postorius/user/address_preferences.html:32
 #: templates/postorius/user/manage.html:63
 msgid "Address"
-msgstr ""
+msgstr "Адрес"
 
 #: templates/postorius/lists/members.html:80
 #: templates/postorius/user/subscriptions.html:24
 msgid "Delivery Mode"
-msgstr ""
+msgstr "Режим доставки"
 
 #: templates/postorius/lists/members.html:83
 #, fuzzy
@@ -2521,7 +2521,7 @@ msgstr "Модерация"
 
 #: templates/postorius/lists/new.html:6 templates/postorius/lists/new.html:17
 msgid "Create list"
-msgstr ""
+msgstr "Создать список"
 
 #: templates/postorius/lists/new.html:12
 msgid "Create a new list"
@@ -2529,8 +2529,9 @@ msgstr ""
 
 #: templates/postorius/lists/pending_confirmations.html:19
 #: templates/postorius/lists/subscription_requests.html:19
+#, fuzzy
 msgid "E-Mail Address"
-msgstr ""
+msgstr "Адрес электронной почты"
 
 #: templates/postorius/lists/pending_confirmations.html:20
 #: templates/postorius/lists/subscription_requests.html:20
@@ -2554,12 +2555,12 @@ msgstr "Настройки"
 
 #: templates/postorius/lists/subscription_requests.html:39
 msgid "Rejection reason"
-msgstr ""
+msgstr "Причина отклонения"
 
 #: templates/postorius/lists/summary.html:10
 #: templates/postorius/menu/list_nav.html:10
 msgid "Info"
-msgstr ""
+msgstr "Информация"
 
 #: templates/postorius/lists/summary.html:23
 msgid "To contact the list owners, use the following email address:"
@@ -2586,12 +2587,12 @@ msgstr ""
 #: templates/postorius/lists/summary.html:52
 #: templates/postorius/user/subscriptions.html:23
 msgid "Subscription Address"
-msgstr ""
+msgstr "Адрес подписки"
 
 #: templates/postorius/lists/summary.html:55
 #: templates/postorius/user/all.html:37
 msgid "Manage"
-msgstr ""
+msgstr "Управление"
 
 #: templates/postorius/lists/summary.html:56
 #: templates/postorius/lists/summary.html:77
@@ -2601,7 +2602,7 @@ msgstr "Отписаться"
 #: templates/postorius/lists/summary.html:63
 #: templates/postorius/user/subscription_preferences.html:49
 msgid "Primary Address"
-msgstr ""
+msgstr "Основной адрес"
 
 #: templates/postorius/lists/summary.html:71
 #, fuzzy
@@ -2695,11 +2696,11 @@ msgstr "Запросы на подписку"
 
 #: templates/postorius/menu/list_nav.html:19
 msgid "Pending Approval"
-msgstr ""
+msgstr "Ожидает одобрения"
 
 #: templates/postorius/menu/list_nav.html:22
 msgid "Pending Confirmation"
-msgstr ""
+msgstr "Ожидает подтверждения"
 
 #: templates/postorius/menu/list_nav.html:25
 #, fuzzy
@@ -2709,7 +2710,7 @@ msgstr "Запросы на подписку"
 
 #: templates/postorius/menu/list_nav.html:42
 msgid "Members"
-msgstr ""
+msgstr "Подписчики"
 
 #: templates/postorius/menu/list_nav.html:43
 msgid "Non-Members"
@@ -2720,8 +2721,9 @@ msgid "Moderators"
 msgstr "Модераторы"
 
 #: templates/postorius/menu/list_nav.html:53
+#, fuzzy
 msgid "Mass operations"
-msgstr ""
+msgstr "Массовые действия"
 
 #: templates/postorius/menu/list_nav.html:57
 msgid "Mass removal"
@@ -2729,11 +2731,11 @@ msgstr "Массового удаления"
 
 #: templates/postorius/menu/list_nav.html:60
 msgid "Ban List"
-msgstr ""
+msgstr "Перечень блокировок"
 
 #: templates/postorius/menu/user_nav.html:4
 msgid "Mailman Settings"
-msgstr ""
+msgstr "Настройки Mailman"
 
 #: templates/postorius/menu/user_nav.html:7
 #: templates/postorius/user/manage.html:51
@@ -2746,29 +2748,31 @@ msgid "Global Mailman preferences"
 msgstr ""
 
 #: templates/postorius/menu/user_nav.html:9
+#, fuzzy
 msgid "Address-based preferences"
-msgstr ""
+msgstr "Настройки адресов"
 
 #: templates/postorius/menu/user_nav.html:10
+#, fuzzy
 msgid "List-based preferences"
-msgstr ""
+msgstr "Настройки списков"
 
 #: templates/postorius/system_information.html:6
 msgid "System Configuration"
-msgstr ""
+msgstr "Конфигурация системы"
 
 #: templates/postorius/system_information.html:11
 msgid "Mailman System"
-msgstr ""
+msgstr "Система Mailman"
 
 #: templates/postorius/system_information.html:23
 msgid "Queues"
-msgstr ""
+msgstr "Очереди"
 
 #: templates/postorius/user/address_preferences.html:8
 #: templates/postorius/user/subscription_preferences.html:7
 msgid "Subscription preferences"
-msgstr ""
+msgstr "Настройки подписки"
 
 #: templates/postorius/user/address_preferences.html:17
 #: templates/postorius/user/mailman_settings.html:17
@@ -2795,7 +2799,7 @@ msgstr ""
 
 #: templates/postorius/user/all.html:20
 msgid "Search"
-msgstr ""
+msgstr "Поиск"
 
 #: templates/postorius/user/all.html:35
 #, fuzzy
@@ -2825,7 +2829,7 @@ msgstr "Подписки"
 
 #: templates/postorius/user/mailman_settings.html:7
 msgid "Subscription settings"
-msgstr ""
+msgstr "Настройки подписки"
 
 #: templates/postorius/user/manage.html:8
 #, fuzzy
@@ -2835,7 +2839,7 @@ msgstr "Подписки"
 
 #: templates/postorius/user/manage.html:18
 msgid "Addresses"
-msgstr ""
+msgstr "Адреса"
 
 #: templates/postorius/user/manage.html:28
 msgid "Email"
@@ -2843,7 +2847,7 @@ msgstr ""
 
 #: templates/postorius/user/manage.html:62
 msgid "List"
-msgstr ""
+msgstr "Список"
 
 #: templates/postorius/user/manage.html:64
 #: templates/postorius/user/subscriptions.html:25
@@ -2867,8 +2871,9 @@ msgid "Username"
 msgstr "Имя пользователя"
 
 #: templates/postorius/user/manage.html:100
+#, fuzzy
 msgid "Superuser"
-msgstr ""
+msgstr "Суперпользователь"
 
 #: templates/postorius/user/manage.html:104
 #, fuzzy
@@ -2883,7 +2888,7 @@ msgstr ""
 #: templates/postorius/user/manage.html:113
 #: templates/postorius/user/manage.html:116
 msgid "Change password"
-msgstr ""
+msgstr "Изменить пароль"
 
 #: templates/postorius/user/subscription_preferences.html:21
 msgid "Each list subscription can have specific Mailman preferences."
@@ -2897,7 +2902,7 @@ msgstr ""
 
 #: templates/postorius/user/subscription_preferences.html:32
 msgid "Subscription"
-msgstr ""
+msgstr "Подписка"
 
 #: templates/postorius/user/subscriptions.html:17
 msgid "You are subscribed to the following mailing lists:"
@@ -2909,35 +2914,35 @@ msgstr ""
 
 #: templatetags/nav_helpers.py:27
 msgid "Header Filters"
-msgstr ""
+msgstr "Фильтры заголовков"
 
 #: templatetags/nav_helpers.py:28
 msgid "Banned Addresses"
-msgstr ""
+msgstr "Заблокированные адреса"
 
 #: templatetags/nav_helpers.py:29
 msgid "Delete List"
-msgstr ""
+msgstr "Удалить список"
 
 #: templatetags/nav_helpers.py:30
 msgid "Held Messages"
-msgstr ""
+msgstr "Удержанные сообщения"
 
 #: templatetags/nav_helpers.py:31
 msgid "Mass Removal"
-msgstr ""
+msgstr "Массовое удаление"
 
 #: templatetags/nav_helpers.py:32
 msgid "Mass Subscription"
-msgstr ""
+msgstr "Массовая подписка"
 
 #: templatetags/nav_helpers.py:33
 msgid "Subscription Options"
-msgstr ""
+msgstr "Опции подписки"
 
 #: templatetags/nav_helpers.py:34
 msgid "List Settings"
-msgstr ""
+msgstr "Настройки списка"
 
 #: templatetags/nav_helpers.py:35
 msgid "Summary"
@@ -2949,15 +2954,15 @@ msgstr ""
 
 #: templatetags/nav_helpers.py:39
 msgid "Address-based Settings"
-msgstr ""
+msgstr "Настройки адресов"
 
 #: templatetags/nav_helpers.py:40
 msgid "Subscription Settings"
-msgstr ""
+msgstr "Настройки подписки"
 
 #: templatetags/nav_helpers.py:41
 msgid "Global Settings"
-msgstr ""
+msgstr "Глобальные настройки"
 
 #: utils.py:37
 msgid "Mailman REST API not available. Please start Mailman core."
@@ -3022,7 +3027,7 @@ msgstr ""
 
 #: views/list.py:133
 msgid "Add {}"
-msgstr ""
+msgstr "Добавить {}"
 
 #: views/list.py:136
 msgid "No {}s were found matching the search."
@@ -3190,7 +3195,7 @@ msgstr ""
 
 #: views/list.py:843
 msgid "List created"
-msgstr ""
+msgstr "Список создан"
 
 #: views/list.py:855
 msgid "Mailing List already exists."
@@ -3240,11 +3245,12 @@ msgstr ""
 
 #: views/list.py:1110
 msgid "Automatic Responses"
-msgstr ""
+msgstr "Автоматические ответы"
 
 #: views/list.py:1111
+#, fuzzy
 msgid "Alter Messages"
-msgstr ""
+msgstr "Изменять сообщения"
 
 #: views/list.py:1112
 msgid "DMARC Mitigations"
@@ -3264,7 +3270,7 @@ msgstr "Архивация"
 
 #: views/list.py:1116
 msgid "Member Policy"
-msgstr ""
+msgstr "Политика членства"
 
 #: views/list.py:1117
 msgid "Bounce Processing"
@@ -3311,7 +3317,7 @@ msgstr ""
 
 #: views/list.py:1331
 msgid "New header"
-msgstr ""
+msgstr "Новый заголовок"
 
 #: views/list.py:1332
 msgid "New pattern"
@@ -3373,7 +3379,7 @@ msgstr ""
 
 #: views/user.py:432
 msgid "Password updated successfully"
-msgstr ""
+msgstr "Пароль успешно изменён"
 
 #~ msgid "Unsubscribe All"
 #~ msgstr "Отписаться от всех"
