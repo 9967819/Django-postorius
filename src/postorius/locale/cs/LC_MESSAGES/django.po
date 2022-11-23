@@ -5,13 +5,14 @@
 # Sebastian Machat <sebi@outlook.com>, 2022.
 # Martin Bílý <mbily@mbily.eu>, 2022.
 # SONS ČR <weblate@sons.cz>, 2022.
+# Jiří Setnička <setnicka@seznam.cz>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-22 10:20-0700\n"
-"PO-Revision-Date: 2022-08-30 09:55+0000\n"
-"Last-Translator: SONS ČR <weblate@sons.cz>\n"
+"PO-Revision-Date: 2022-11-21 19:47+0000\n"
+"Last-Translator: Jiří Setnička <setnicka@seznam.cz>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/cs/>\n"
 "Language: cs\n"
@@ -19,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.14.1-dev\n"
+"X-Generator: Weblate 4.15-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -2780,84 +2781,84 @@ msgstr ""
 #: views/domain.py:114
 #, python-format
 msgid "Domain %s updated"
-msgstr ""
+msgstr "Doména %s aktualizována"
 
 #: views/domain.py:117 views/list.py:861
 msgid "Please check the errors below"
-msgstr ""
+msgstr "Prosím zkontrolujte níže vypsané chyby"
 
 #: views/domain.py:141
 #, python-format
 msgid "The domain %s has been deleted."
-msgstr ""
+msgstr "Doména %s byla smazána."
 
 #: views/domain.py:146
 #, python-format
 msgid "The domain could not be deleted: %s"
-msgstr ""
+msgstr "Nelze smazat doménu: %s"
 
 #: views/domain.py:164
 msgid "Added {} as an owner for {}"
-msgstr ""
+msgstr "Přidat {} jako vlastníka {}"
 
 #: views/domain.py:193
 msgid "{} is not an owner for {}"
-msgstr ""
+msgstr "{} není vlastník {}"
 
 #: views/domain.py:200
 msgid "Removed {} as an owner for {}"
-msgstr ""
+msgstr "Odstraněn {} jako vlastník {}"
 
 #: views/generic.py:112
 msgid "The email {} has been banned."
-msgstr ""
+msgstr "Email {} byl zabanován."
 
 #: views/generic.py:116 views/generic.py:127 views/list.py:1322
 #, python-format
 msgid "An error occurred: %s"
-msgstr ""
+msgstr "Vyskytla se chyba: %s"
 
 #: views/generic.py:118 views/generic.py:129
 #, python-format
 msgid "Invalid data: %s"
-msgstr ""
+msgstr "Neplatná data: %s"
 
 #: views/generic.py:124
 msgid "The email {} has been un-banned"
-msgstr ""
+msgstr "Email {} byl odbanován"
 
 #: views/list.py:119
 msgid "List {}s"
-msgstr ""
+msgstr "Konference {}s"
 
 #: views/list.py:133
 msgid "Add {}"
-msgstr ""
+msgstr "Přidat {}"
 
 #: views/list.py:136
 msgid "No {}s were found matching the search."
-msgstr ""
+msgstr "Nebyly nalezeny žádné {}s vyhovující vyhledávání."
 
 #: views/list.py:138
 msgid "List has no {}s"
-msgstr ""
+msgstr "Konference nemá žádné {}s"
 
 #: views/list.py:151
 msgid "The selected members have been unsubscribed"
-msgstr ""
+msgstr "Vybraní členové byli odhlášeni"
 
 #: views/list.py:169
 #, python-brace-format
 msgid "{email} has been added with the role {role}"
-msgstr ""
+msgstr "{email} byl přidaný s rolí {role}"
 
 #: views/list.py:216
 msgid "Member does not exist"
-msgstr ""
+msgstr "Člen neexistuje"
 
 #: views/list.py:235
 msgid "The member's preferences have been updated."
-msgstr ""
+msgstr "Nastavení člena bylo upraveno."
 
 #: views/list.py:244
 msgid "No change to the member's moderation."
@@ -2869,7 +2870,7 @@ msgstr ""
 
 #: views/list.py:437
 msgid "You are not subscribed to {}."
-msgstr ""
+msgstr "Nejste přihlášeni do {}."
 
 #: views/list.py:450
 msgid "You are already subscribed"
@@ -2925,12 +2926,12 @@ msgstr ""
 #: views/list.py:614
 #, python-format
 msgid "The address %(address)s has been invited to %(list)s."
-msgstr ""
+msgstr "Adresát %(address)s byl pozván do %(list)s."
 
 #: views/list.py:617
 #, python-format
 msgid "The address %(address)s has been subscribed to %(list)s."
-msgstr ""
+msgstr "Adresát %(address)s byl přihlášen do %(list)s."
 
 #: views/list.py:620
 msgid ""
@@ -3179,7 +3180,7 @@ msgstr ""
 
 #: views/user.py:432
 msgid "Password updated successfully"
-msgstr ""
+msgstr "Heslo úspěšně změněno"
 
 #~ msgid "Remove"
 #~ msgstr "Odstranit"
