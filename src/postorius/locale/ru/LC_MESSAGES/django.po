@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-22 10:20-0700\n"
-"PO-Revision-Date: 2022-11-24 01:55+0000\n"
+"PO-Revision-Date: 2022-11-25 11:46+0000\n"
 "Last-Translator: Alexander Ryazanov (alryaz) <alryaz@xavux.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ru/>\n"
@@ -2652,7 +2652,7 @@ msgstr "Свойства списков"
 
 #: templates/postorius/lists/summary.html:134
 msgid "Created at"
-msgstr "Создан в"
+msgstr "Дата создания"
 
 #: templates/postorius/lists/summary.html:139
 msgid "Last post at"
