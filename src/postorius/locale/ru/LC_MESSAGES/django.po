@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-22 10:20-0700\n"
-"PO-Revision-Date: 2022-11-25 11:46+0000\n"
+"PO-Revision-Date: 2022-11-30 14:48+0000\n"
 "Last-Translator: Alexander Ryazanov (alryaz) <alryaz@xavux.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ru/>\n"
@@ -1110,7 +1110,7 @@ msgstr ""
 
 #: forms/list_forms.py:742
 msgid "Anonymous list"
-msgstr "Анонимная рассылка"
+msgstr "Анонимизировать участников"
 
 #: forms/list_forms.py:743
 msgid ""
@@ -2274,6 +2274,8 @@ msgstr ""
 #: templates/postorius/index.html:108
 msgid "Only admins see unadvertised lists in the list index."
 msgstr ""
+"Только администраторы могут видеть скрытые элементы в каталоге списков "
+"рассылки."
 
 #: templates/postorius/index.html:114
 msgid "There are currently no mailing lists."
@@ -3210,7 +3212,7 @@ msgstr "Запрос не прошёл модерацию: %s"
 
 #: views/list.py:1109
 msgid "List Identity"
-msgstr "Идентификатор списка"
+msgstr "Идентификация списка"
 
 #: views/list.py:1110
 msgid "Automatic Responses"
@@ -3218,7 +3220,7 @@ msgstr "Автоматические ответы"
 
 #: views/list.py:1111
 msgid "Alter Messages"
-msgstr "Изменять сообщения"
+msgstr "Изменение сообщений"
 
 #: views/list.py:1112
 msgid "DMARC Mitigations"
