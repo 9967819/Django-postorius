@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-22 10:20-0700\n"
-"PO-Revision-Date: 2022-11-19 15:47+0000\n"
+"PO-Revision-Date: 2022-12-13 17:50+0000\n"
 "Last-Translator: Neko Nekowazarashi <kodra@nekoweb.my.id>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/id/>\n"
@@ -1175,16 +1175,17 @@ msgid "Type of pipeline you want to use for this mailing list"
 msgstr ""
 
 #: forms/list_forms.py:845
+#, fuzzy
 msgid "Respond and continue processing"
-msgstr ""
+msgstr "Balas dan lanjut pemrosesan"
 
 #: forms/list_forms.py:846
 msgid "Respond and discard message"
-msgstr ""
+msgstr "Balas dan hapus pesan"
 
 #: forms/list_forms.py:847
 msgid "No automatic response"
-msgstr ""
+msgstr "Tidak ada balasan otomatis"
 
 #: forms/list_forms.py:851
 msgid "Autorespond to list owner"
@@ -1221,7 +1222,7 @@ msgstr ""
 
 #: forms/list_forms.py:873
 msgid "Autorespond requests"
-msgstr ""
+msgstr "Permintaan balasan otomatis"
 
 #: forms/list_forms.py:875
 msgid ""
@@ -1641,7 +1642,7 @@ msgstr "Terverifikasi"
 
 #: forms/user_forms.py:244
 msgid "Specifies whether or not this email address is verified"
-msgstr ""
+msgstr "Rincikan apakah surel ini terverifikasi atau tidak"
 
 #: forms/validators.py:39
 #, python-brace-format
@@ -1769,11 +1770,11 @@ msgstr ""
 
 #: template_list.py:50
 msgid "The footer for a regular (non-digest) message."
-msgstr ""
+msgstr "Catatan kaki untuk surel umum (non-ringkasan)."
 
 #: template_list.py:52
 msgid "The header for a regular (non-digest) message."
-msgstr ""
+msgstr "Tajuk untuk pesan umum (non-ringkasan)."
 
 #: template_list.py:54
 msgid ""
@@ -2232,7 +2233,7 @@ msgstr "Konfirmasi penghapusan peran"
 #: templates/postorius/lists/confirm_remove_role.html:15
 #, python-format
 msgid "Remove %(address)s as %(role_translated)s?"
-msgstr ""
+msgstr "Hapus %(address)s sebagai %(role_translated)s?"
 
 #: templates/postorius/lists/confirm_remove_role.html:19
 msgid "Are you sure?"
@@ -2245,7 +2246,7 @@ msgstr " Hapus %(role_translated)s"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 msgid "Unsubscribe all members"
-msgstr ""
+msgstr "Batalkan langganan semua anggota"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:14
 #, python-format
@@ -2293,6 +2294,9 @@ msgid ""
 "    Confirm token %(token)s:\n"
 "    "
 msgstr ""
+"\n"
+"    Konfirmasi token %(token)s:\n"
+"    "
 
 #: templates/postorius/lists/header_matches.html:7
 #: templates/postorius/menu/list_nav.html:61
@@ -2310,7 +2314,7 @@ msgstr "Simpan perubahan"
 
 #: templates/postorius/lists/header_matches.html:60
 msgid "Changes pending, click on the button to save them."
-msgstr ""
+msgstr "Perubahan tertunda, klik pada tombol untuk menyimpan mereka."
 
 #: templates/postorius/lists/held_messages.html:10
 #: templates/postorius/menu/list_nav.html:31
@@ -2319,7 +2323,7 @@ msgstr "Tahan pesan"
 
 #: templates/postorius/lists/held_messages.html:26
 msgid "Perform action on selected messages"
-msgstr ""
+msgstr "Lakukan tindakan pada pesan yang dipilih"
 
 #: templates/postorius/lists/held_messages.html:28
 #: templates/postorius/lists/held_messages.html:106
@@ -2545,6 +2549,13 @@ msgid ""
 "                or use the form below:\n"
 "            "
 msgstr ""
+"\n"
+"                Untuk berlangganan, Anda bisa mengirim surel dengan subjek "
+"'subscribe'\n"
+"                ke <a href=\"mailto:%(address)s?subject=Subscribe\""
+">%(address)s</a>\n"
+"                atau gunakan formulir berikut:\n"
+"            "
 
 #: templates/postorius/lists/summary.html:96
 #: templates/postorius/lists/summary.html:123
@@ -3129,17 +3140,15 @@ msgstr "Milis telah ada."
 
 #: views/list.py:1016
 msgid "Subscriptions pending user confirmation"
-msgstr ""
+msgstr "Langganan menunggu konfirmasi pengguna"
 
 #: views/list.py:1029
 msgid "Subscriptions pending approval"
-msgstr ""
+msgstr "Langganan menunggu persetujuan"
 
 #: views/list.py:1042
-#, fuzzy
-#| msgid "Description"
 msgid "Un-subscriptions pending approval"
-msgstr "Deskripsi"
+msgstr "Pembatalan langganan menunggu persetujuan"
 
 #: views/list.py:1078
 msgid "The request has been accepted."
@@ -3169,7 +3178,7 @@ msgstr "Permintaan tidak bisa dimoderasi: %s"
 
 #: views/list.py:1109
 msgid "List Identity"
-msgstr ""
+msgstr "Identitas Milis"
 
 #: views/list.py:1110
 msgid "Automatic Responses"
