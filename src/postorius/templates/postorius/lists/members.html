@@ -82,9 +82,12 @@
                             <th>
                               {% trans 'Moderation Action' %}
                             </th>
+                            <th>
+                              {% trans 'Bounce Score' %}
+                            </th>
                             {%  endif %}
-                            {# Extra column here for the "Delete" button of Non-members. #}
-                            {% if role == 'nonmember' %}
+                            {# Extra column here for the "Delete" button of Non-members, owners and mods. #}
+                            {% if role != 'member' %}
                              <th></th>
                             {% endif %}
                         </tr>
@@ -112,6 +115,9 @@
                                 </td>
                                 <td>
                                   {{ member.moderation_action | moderation_action }}
+                                </td>
+                                <td>
+                                  {{ member.bounce_score }}
                                 </td>
                                 {% elif role == 'nonmember' %}
                                 <td>
