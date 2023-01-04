@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright (C) 2016-2022 by the Free Software Foundation, Inc.
+# Copyright (C) 2016-2023 by the Free Software Foundation, Inc.
 #
 # This file is part of Postorius.
 #

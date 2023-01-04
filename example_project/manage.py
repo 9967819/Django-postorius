@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Copyright (C) 1998-2022 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2023 by the Free Software Foundation, Inc.
 #
 # This file is part of Postorius.
 #
