@@ -22,6 +22,10 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 1.3.9
 =====
 
+UI
+--
+
+* Use RFC 2047 decoded user names in the confirm_token view. (Fixes #564)
 
 .. _NEWS-1.3.8:
 
