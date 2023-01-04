@@ -39,10 +39,10 @@ py310-django40:
   script:
     - tox -e py310-django40-git
 
-py310-django41:
+py311-django41:
   stage: test
   script:
-    - tox -e py310-django41-git
+    - tox -e py311-django41-git
 
 released:
   stage: test

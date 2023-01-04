@@ -31,6 +31,7 @@ UI
 * The buttons and confirmation page for removing members have been revised in
   an attempt to reduce accidental removal of all members. (Fixes #545)
 * Add bounce score for members in the Members table (See #12)
+* Add support for Python 3.11.
 
 
 .. _NEWS-1.3.7:
