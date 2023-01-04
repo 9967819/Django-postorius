@@ -1,5 +1,5 @@
 # Postorius translation German
-# Copyright (C) 2017-2022 by the Free Software Foundation, Inc.
+# Copyright (C) 2017-2023 by the Free Software Foundation, Inc.
 # This file is distributed under the same license as the Postorius package.
 # Manfred Dohmen <manfred.dohmen@gmail.com>, 2017.
 # Milo Ivir <mail@milotype.de>, 2020.
