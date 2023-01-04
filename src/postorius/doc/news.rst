@@ -23,7 +23,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 1.3.8
 =====
 
-(xxxx-xx-xx)
+(2023-01-04)
 
 UI
 --
