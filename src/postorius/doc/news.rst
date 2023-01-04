@@ -17,6 +17,11 @@ General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 
+.. _NEWS-1.3.9:
+
+1.3.9
+=====
+
 
 .. _NEWS-1.3.8:
 
