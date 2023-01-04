@@ -269,14 +269,17 @@ class TestConfirmToken(ViewTestCase):
 
     def test_confirm_token(self):
         # Test that we can first get a token page to confirm.
-        token = self.mlist.subscribe('aperson@example.com', 'Anne Person')
+        token = self.mlist.subscribe('aperson@example.com', 'Anne Петрова')
         self.assertIsNotNone(token.get('token'))
         resp = self.client.get(
             reverse('confirm_token', args=(self.mlist.list_id,))
             + '?token={}'.format(token.get('token'))
         )
         self.assertEqual(resp.status_code, 200)
-        self.assertTrue(b'Confirm subscription of Anne Person' in resp.content)
+        self.assertTrue(
+            'Confirm subscription of Anne Петрова'
+            in resp.content.decode('utf-8')
+        )
         self.assertTrue(token.get('token') in resp.content.decode('utf-8'))
         # Now, let's confirm the token.
         with self.assertRaises(ValueError):

@@ -1629,8 +1629,11 @@ def confirm_token(request, list_id):
     form = TokenConfirmForm(initial=dict(token=token))
     # Show the display_name if it is not None or "".
     if pending_req.get('display_name'):
-        addr = email.utils.formataddr(
-            (pending_req.get('display_name'), pending_req.get('email'))
+        addr = (
+            pending_req.get('display_name')
+            + ' <'
+            + pending_req.get('email')
+            + '>'
         )
     else:
         addr = pending_req.get('email')
