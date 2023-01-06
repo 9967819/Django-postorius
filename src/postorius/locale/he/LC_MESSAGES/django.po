@@ -1,13 +1,13 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Yaron Shahrabani <sh.yaron@gmail.com>, 2020, 2021, 2022.
+# Yaron Shahrabani <sh.yaron@gmail.com>, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-04 10:52+0530\n"
-"PO-Revision-Date: 2022-10-23 21:20+0000\n"
+"PO-Revision-Date: 2023-01-06 13:52+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/he/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.14.2-dev\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -2482,10 +2482,8 @@ msgid "Moderation Action"
 msgstr "פעולת פיקוח"
 
 #: templates/postorius/lists/members.html:86
-#, fuzzy
-#| msgid "Bounce score threshold"
 msgid "Bounce Score"
-msgstr "סף ניקוד החזרה"
+msgstr "ניקוד החזרה"
 
 #: templates/postorius/lists/new.html:6 templates/postorius/lists/new.html:17
 msgid "Create list"

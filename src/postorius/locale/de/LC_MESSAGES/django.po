@@ -12,13 +12,13 @@
 # Tobias Wiese <tobias@tobiaswiese.com>, 2021.
 # Markus Schaaf <markuschaaf@gmail.com>, 2021.
 # Thorgrimsson <shop.news@posteo.de>, 2021.
-# Ettore Atalan <atalanttore@googlemail.com>, 2022.
+# Ettore Atalan <atalanttore@googlemail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-04 10:52+0530\n"
-"PO-Revision-Date: 2022-05-30 19:14+0000\n"
+"PO-Revision-Date: 2023-01-06 13:52+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/de/>\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Weblate 4.13-dev\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -2241,7 +2241,7 @@ msgstr "Vorlagen"
 
 #: templates/postorius/domain/index.html:67
 msgid "No domains yet."
-msgstr ""
+msgstr "Noch keine Domains."
 
 #: templates/postorius/domain/new.html:6
 msgid "Add domain"
