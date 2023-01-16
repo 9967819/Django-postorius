@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-04 10:52+0530\n"
+"POT-Creation-Date: 2023-01-16 12:47-0800\n"
 "PO-Revision-Date: 2023-01-06 13:52+0000\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -228,12 +228,14 @@ msgid "Yearly"
 msgstr "Vjetore"
 
 #: forms/list_forms.py:51
-msgid "Only mailinglist moderators"
+#, fuzzy
+#| msgid "Only mailinglist moderators"
+msgid "Only mailinglist administrators"
 msgstr "Vetëm për moderatorë të listës së postimeve"
 
 #: forms/list_forms.py:52
-msgid "Only mailinglist members"
-msgstr "Vetëm për anëtarë të listës së postimeve"
+msgid "Mailinglist administrators and members"
+msgstr ""
 
 #: forms/list_forms.py:53
 msgid "Anyone"
@@ -648,8 +650,8 @@ msgid ""
 "new request, in the process."
 msgstr ""
 "Testet Administrivia do të kontrollojnë postimet për të parë nëse vërtet "
-"bëhet fjalë për një kërkesë administrative (bie fjala, pajtim, shpajtim, etj)"
-" dhe do ta shtojë te radha e kërkesave administrative, duke njoftuar, në "
+"bëhet fjalë për një kërkesë administrative (bie fjala, pajtim, shpajtim, "
+"etj) dhe do ta shtojë te radha e kërkesave administrative, duke njoftuar, në "
 "proces, përgjegjësin për kërkesën e re."
 
 #: forms/list_forms.py:490
@@ -1682,7 +1684,7 @@ msgstr "Të dhëna"
 msgid "Email Address"
 msgstr "Adresë Email"
 
-#: forms/member_forms.py:35 forms/user_forms.py:342
+#: forms/member_forms.py:35 forms/user_forms.py:341
 msgid "Display Name"
 msgstr "Emër Në Ekran"
 
@@ -1727,22 +1729,27 @@ msgid "Hide address"
 msgstr "Fshihe adresën"
 
 #: forms/user_forms.py:90
+#, fuzzy
+#| msgid ""
+#| "When someone views the list membership, your email address is normally "
+#| "shown (in an obscured fashion to thwart spam harvesters). If you do not "
+#| "want your email address to show up on this membership roster at all, "
+#| "select Yes for this option."
 msgid ""
-"When someone views the list membership, your email address is normally shown "
-"(in an obscured fashion to thwart spam harvesters). If you do not want your "
-"email address to show up on this membership roster at all, select Yes for "
-"this option."
+"When other members allowed to view the list membership, your email address "
+"is normally shown. If you do not want your email address to show up on this "
+"membership roster, select Yes for this option."
 msgstr ""
 "Kur dikush sheh anëtarësinë e listës, adresa juaj email normalisht shfaqet "
 "(në një mënyrë të errët, për të penguar grumbulluesit e adresave për mesazhe "
 "të padëshiruar). Nëse s’doni që adresa juaj email të shfaqet në këtë listë "
 "anëtarësie, përzgjidhni “Po” për këtë mundësi."
 
-#: forms/user_forms.py:100
+#: forms/user_forms.py:99
 msgid "Receive list copies (possible duplicates)"
 msgstr "Merrni kopje nga lista (me gjasa, përsëdytje)"
 
-#: forms/user_forms.py:102
+#: forms/user_forms.py:101
 msgid ""
 "When you are listed explicitly in the To: or Cc: headers of a list message, "
 "you can opt to not receive another copy from the mailing list. Select Yes to "
@@ -1753,11 +1760,11 @@ msgstr ""
 "postimeve. Përzgjidhni “Po” për të marrë kopje. Përzgjidhni “Jo” për të "
 "marrë kopje prej listës së postimeve"
 
-#: forms/user_forms.py:113
+#: forms/user_forms.py:112
 msgid "Preferred language"
 msgstr "Gjuhë e parapëlqyer"
 
-#: forms/user_forms.py:115
+#: forms/user_forms.py:114
 msgid ""
 "Preferred language for your interactions with Mailman. When this is set, it "
 "will override the MailingList's preferred language. This affects which "
@@ -1767,15 +1774,15 @@ msgstr ""
 "gjuha e parapëlqyer e MailingList-ës do të anashkalohet. Kjo prek cila gjuhë "
 "përdoret për njoftime tuajat me email dhe gjëra të tilla të ngjashme."
 
-#: forms/user_forms.py:171
+#: forms/user_forms.py:170
 msgid "Cannot set delivery_status to {}"
 msgstr "S’caktohet dot delivery_status si {}"
 
-#: forms/user_forms.py:269
+#: forms/user_forms.py:268
 msgid "Verified"
 msgstr "E paraverifikuar"
 
-#: forms/user_forms.py:270
+#: forms/user_forms.py:269
 msgid "Specifies whether or not this email address is verified"
 msgstr "Specifikon nëse kjo email adresë është e verifikuar apo jo"
 
@@ -2061,7 +2068,7 @@ msgstr "Dëbime"
 msgid "System Information"
 msgstr "Të dhëna Mbi Sistemin"
 
-#: templates/postorius/base.html:62 templates/postorius/menu/list_nav.html:39
+#: templates/postorius/base.html:62 templates/postorius/menu/list_nav.html:40
 #: templates/postorius/user/all.html:8 templates/postorius/user/all.html:13
 msgid "Users"
 msgstr "Përdorues"
@@ -2133,10 +2140,10 @@ msgstr ""
 #: templates/postorius/domain/index.html:59
 #: templates/postorius/domain/template_index.html:35
 #: templates/postorius/lists/confirm_delete.html:5
-#: templates/postorius/lists/members.html:138
-#: templates/postorius/lists/members.html:147
+#: templates/postorius/lists/members.html:159
+#: templates/postorius/lists/members.html:170
 #: templates/postorius/lists/template_list.html:33
-#: templates/postorius/menu/list_nav.html:62
+#: templates/postorius/menu/list_nav.html:68
 msgid "Delete"
 msgstr "Fshije"
 
@@ -2167,7 +2174,7 @@ msgid "Add Domain"
 msgstr "Shtoni Përkatësi"
 
 #: templates/postorius/domain/index.html:25
-#: templates/postorius/menu/list_nav.html:45
+#: templates/postorius/menu/list_nav.html:46
 msgid "Owners"
 msgstr "Pronarë"
 
@@ -2195,7 +2202,7 @@ msgstr "Shtoje"
 #: templates/postorius/lists/template_delete.html:7
 #: templates/postorius/lists/template_list.html:7
 #: templates/postorius/lists/template_update.html:7
-#: templates/postorius/menu/list_nav.html:48 templatetags/nav_helpers.py:39
+#: templates/postorius/menu/list_nav.html:54 templatetags/nav_helpers.py:39
 msgid "Templates"
 msgstr "Gjedhe"
 
@@ -2454,7 +2461,7 @@ msgstr ""
 "    "
 
 #: templates/postorius/lists/header_matches.html:7
-#: templates/postorius/menu/list_nav.html:61
+#: templates/postorius/menu/list_nav.html:67
 msgid "Header filters"
 msgstr "Filtra kryesh"
 
@@ -2543,7 +2550,7 @@ msgid "Remove listed users"
 msgstr "Hiqi përdoruesit e paraqitur"
 
 #: templates/postorius/lists/mass_subscribe.html:7
-#: templates/postorius/menu/list_nav.html:56
+#: templates/postorius/menu/list_nav.html:62
 msgid "Mass subscribe"
 msgstr "Pajtim në masë"
 
@@ -2580,24 +2587,28 @@ msgstr "Eksportim si CSV"
 msgid "Remove Selected"
 msgstr "Hiq të Përzgjedhurin"
 
-#: templates/postorius/lists/members.html:76
+#: templates/postorius/lists/members.html:78
 #: templates/postorius/user/address_preferences.html:32
 #: templates/postorius/user/manage.html:63
 msgid "Address"
 msgstr "Adresë"
 
-#: templates/postorius/lists/members.html:80
+#: templates/postorius/lists/members.html:82
 #: templates/postorius/user/subscriptions.html:24
 msgid "Delivery Mode"
 msgstr "Mënyrë Dërgimi"
 
-#: templates/postorius/lists/members.html:83
+#: templates/postorius/lists/members.html:85
 msgid "Moderation Action"
 msgstr "Veprim Moderimi"
 
-#: templates/postorius/lists/members.html:86
+#: templates/postorius/lists/members.html:90
 msgid "Bounce Score"
 msgstr "Përfundim për Kthime Mbrapsht"
+
+#: templates/postorius/lists/members.html:116
+msgid "Masked per the user request"
+msgstr ""
 
 #: templates/postorius/lists/new.html:6 templates/postorius/lists/new.html:17
 msgid "Create list"
@@ -2628,7 +2639,7 @@ msgid "There are currently no subscription requests for this list."
 msgstr "Hëpërhë s’ka kërkesa pajtimi për këtë listë."
 
 #: templates/postorius/lists/settings.html:7
-#: templates/postorius/menu/list_nav.html:49
+#: templates/postorius/menu/list_nav.html:55
 msgid "Settings"
 msgstr "Rregullime"
 
@@ -2653,13 +2664,13 @@ msgstr "Që të vizitoni arkivat e kësaj liste, duhet të bëni hyrjen."
 #, python-format
 msgid ""
 "\n"
-"            <a class=\"btn btn-primary\" "
-"href=\"%(hyperkitty_list_url)s\">Archives</a>\n"
+"            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s"
+"\">Archives</a>\n"
 "          "
 msgstr ""
 "\n"
-"            <a class=\"btn btn-primary\" "
-"href=\"%(hyperkitty_list_url)s\">Arkiva</a>\n"
+"            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s"
+"\">Arkiva</a>\n"
 "          "
 
 #: templates/postorius/lists/summary.html:47
@@ -2701,16 +2712,16 @@ msgid ""
 "\n"
 "                To subscribe you can send an email with 'subscribe' in the "
 "subject to\n"
-"                <a href=\"mailto:%(address)s?"
-"subject=Subscribe\">%(address)s</a>\n"
+"                <a href=\"mailto:%(address)s?subject=Subscribe\">"
+"%(address)s</a>\n"
 "                or use the form below:\n"
 "            "
 msgstr ""
 "\n"
 "                Për t’u pajtuar, mund të dërgoni një email me 'subscribe' te "
 "subjekti, për\n"
-"                <a href=\"mailto:%(address)s?"
-"subject=Subscribe\">%(address)s</a>,\n"
+"                <a href=\"mailto:%(address)s?subject=Subscribe\">"
+"%(address)s</a>,\n"
 "                ose të përdorni formularin më poshtë:\n"
 "            "
 
@@ -2808,27 +2819,28 @@ msgstr "Në Pritje të Ripohimit"
 msgid "Unsubscription Requests"
 msgstr "Kërkesa Shpajtimi"
 
-#: templates/postorius/menu/list_nav.html:42
+#: templates/postorius/menu/list_nav.html:43
+#: templates/postorius/menu/list_nav.html:50
 msgid "Members"
 msgstr "Anëtarë"
 
-#: templates/postorius/menu/list_nav.html:43
+#: templates/postorius/menu/list_nav.html:44
 msgid "Non-Members"
 msgstr "Jo-Anëtarë"
 
-#: templates/postorius/menu/list_nav.html:44
+#: templates/postorius/menu/list_nav.html:45
 msgid "Moderators"
 msgstr "Moderatorë"
 
-#: templates/postorius/menu/list_nav.html:53
+#: templates/postorius/menu/list_nav.html:59
 msgid "Mass operations"
 msgstr "Veprime në masë"
 
-#: templates/postorius/menu/list_nav.html:57
+#: templates/postorius/menu/list_nav.html:63
 msgid "Mass removal"
 msgstr "Heqje në masë"
 
-#: templates/postorius/menu/list_nav.html:60
+#: templates/postorius/menu/list_nav.html:66
 msgid "Ban List"
 msgstr "Listë Dëbimesh"
 
@@ -3471,6 +3483,9 @@ msgstr "Përdoruesi u përditësua me sukses."
 msgid "Password updated successfully"
 msgstr "Fjalëkalimi u përditësua me sukses"
 
+#~ msgid "Only mailinglist members"
+#~ msgstr "Vetëm për anëtarë të listës së postimeve"
+
 #~ msgid "Unsubscribe All"
 #~ msgstr "Shpajtoji Krejt"
 
@@ -3504,13 +3519,13 @@ msgstr "Fjalëkalimi u përditësua me sukses"
 
 #~ msgid ""
 #~ "\n"
-#~ "                You can manage your subscription on <a "
-#~ "href=\"%(user_list_options_url)s\">your list options page</a>\n"
+#~ "                You can manage your subscription on <a href="
+#~ "\"%(user_list_options_url)s\">your list options page</a>\n"
 #~ "              "
 #~ msgstr ""
 #~ "\n"
-#~ "                Pajtimin tuaj mund ta administroni te <a "
-#~ "href=\"%(user_list_options_url)s\">faqja e mundësive të listës tuaj</a>\n"
+#~ "                Pajtimin tuaj mund ta administroni te <a href="
+#~ "\"%(user_list_options_url)s\">faqja e mundësive të listës tuaj</a>\n"
 #~ "              "
 
 #~ msgid ""

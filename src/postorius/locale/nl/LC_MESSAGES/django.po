@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-04 10:52+0530\n"
+"POT-Creation-Date: 2023-01-16 12:47-0800\n"
 "PO-Revision-Date: 2022-11-16 21:03+0000\n"
 "Last-Translator: Fré van Limpt <fre@freedom.nl>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -230,12 +230,14 @@ msgid "Yearly"
 msgstr "Jaarlijks"
 
 #: forms/list_forms.py:51
-msgid "Only mailinglist moderators"
+#, fuzzy
+#| msgid "Only mailinglist moderators"
+msgid "Only mailinglist administrators"
 msgstr "Alleen moderators van mailinglijsten"
 
 #: forms/list_forms.py:52
-msgid "Only mailinglist members"
-msgstr "Alleen leden van de mailinglijst"
+msgid "Mailinglist administrators and members"
+msgstr ""
 
 #: forms/list_forms.py:53
 msgid "Anyone"
@@ -1687,7 +1689,7 @@ msgstr "Gegevens"
 msgid "Email Address"
 msgstr "E-mailadres"
 
-#: forms/member_forms.py:35 forms/user_forms.py:342
+#: forms/member_forms.py:35 forms/user_forms.py:341
 msgid "Display Name"
 msgstr "Weergave naam"
 
@@ -1732,22 +1734,27 @@ msgid "Hide address"
 msgstr "Adres verbergen"
 
 #: forms/user_forms.py:90
+#, fuzzy
+#| msgid ""
+#| "When someone views the list membership, your email address is normally "
+#| "shown (in an obscured fashion to thwart spam harvesters). If you do not "
+#| "want your email address to show up on this membership roster at all, "
+#| "select Yes for this option."
 msgid ""
-"When someone views the list membership, your email address is normally shown "
-"(in an obscured fashion to thwart spam harvesters). If you do not want your "
-"email address to show up on this membership roster at all, select Yes for "
-"this option."
+"When other members allowed to view the list membership, your email address "
+"is normally shown. If you do not want your email address to show up on this "
+"membership roster, select Yes for this option."
 msgstr ""
 "Wanneer iemand het lidmaatschap van de lijst bekijkt wordt uw e-mailadres "
 "normaal getoond (op een versluierde manier om spamverzamelaars te hinderen). "
 "Als u absoluut niet wilt dat uw e-mailadres op deze ledenlijst verschijnt "
 "selecteer dan Ja voor deze optie."
 
-#: forms/user_forms.py:100
+#: forms/user_forms.py:99
 msgid "Receive list copies (possible duplicates)"
 msgstr "Lijstkopieën ontvangen (mogelijke duplicaten)"
 
-#: forms/user_forms.py:102
+#: forms/user_forms.py:101
 msgid ""
 "When you are listed explicitly in the To: or Cc: headers of a list message, "
 "you can opt to not receive another copy from the mailing list. Select Yes to "
@@ -1758,11 +1765,11 @@ msgstr ""
 "mailinglijst te ontvangen. Selecteer Ja om kopieën te ontvangen. Selecteer "
 "Nee om te voorkomen dat u exemplaren van de mailinglijst ontvangt"
 
-#: forms/user_forms.py:113
+#: forms/user_forms.py:112
 msgid "Preferred language"
 msgstr "Voorkeurstaal"
 
-#: forms/user_forms.py:115
+#: forms/user_forms.py:114
 msgid ""
 "Preferred language for your interactions with Mailman. When this is set, it "
 "will override the MailingList's preferred language. This affects which "
@@ -1772,15 +1779,15 @@ msgstr ""
 "het de voorkeurstaal van de mailinglijst overschrijven. Dit heeft invloed op "
 "de taal die wordt gebruikt voor uw e-mailnotificaties en dergelijke."
 
-#: forms/user_forms.py:171
+#: forms/user_forms.py:170
 msgid "Cannot set delivery_status to {}"
 msgstr "Kan aflevering_status niet op {} zetten"
 
-#: forms/user_forms.py:269
+#: forms/user_forms.py:268
 msgid "Verified"
 msgstr "Geverifieerd"
 
-#: forms/user_forms.py:270
+#: forms/user_forms.py:269
 msgid "Specifies whether or not this email address is verified"
 msgstr "Geeft aan of dit e-mailadres al dan niet is geverifieerd"
 
@@ -2077,7 +2084,7 @@ msgstr "Verboden"
 msgid "System Information"
 msgstr "Systeeminformatie"
 
-#: templates/postorius/base.html:62 templates/postorius/menu/list_nav.html:39
+#: templates/postorius/base.html:62 templates/postorius/menu/list_nav.html:40
 #: templates/postorius/user/all.html:8 templates/postorius/user/all.html:13
 msgid "Users"
 msgstr "Gebruikers"
@@ -2149,10 +2156,10 @@ msgstr ""
 #: templates/postorius/domain/index.html:59
 #: templates/postorius/domain/template_index.html:35
 #: templates/postorius/lists/confirm_delete.html:5
-#: templates/postorius/lists/members.html:138
-#: templates/postorius/lists/members.html:147
+#: templates/postorius/lists/members.html:159
+#: templates/postorius/lists/members.html:170
 #: templates/postorius/lists/template_list.html:33
-#: templates/postorius/menu/list_nav.html:62
+#: templates/postorius/menu/list_nav.html:68
 msgid "Delete"
 msgstr "Verwijderen"
 
@@ -2183,7 +2190,7 @@ msgid "Add Domain"
 msgstr "Domein toevoegen"
 
 #: templates/postorius/domain/index.html:25
-#: templates/postorius/menu/list_nav.html:45
+#: templates/postorius/menu/list_nav.html:46
 msgid "Owners"
 msgstr "Eigenaars"
 
@@ -2211,7 +2218,7 @@ msgstr "Voeg toe"
 #: templates/postorius/lists/template_delete.html:7
 #: templates/postorius/lists/template_list.html:7
 #: templates/postorius/lists/template_update.html:7
-#: templates/postorius/menu/list_nav.html:48 templatetags/nav_helpers.py:39
+#: templates/postorius/menu/list_nav.html:54 templatetags/nav_helpers.py:39
 msgid "Templates"
 msgstr "Sjablonen"
 
@@ -2471,7 +2478,7 @@ msgstr ""
 "    "
 
 #: templates/postorius/lists/header_matches.html:7
-#: templates/postorius/menu/list_nav.html:61
+#: templates/postorius/menu/list_nav.html:67
 msgid "Header filters"
 msgstr "Filters header"
 
@@ -2560,7 +2567,7 @@ msgid "Remove listed users"
 msgstr "Verwijder getoonde leden"
 
 #: templates/postorius/lists/mass_subscribe.html:7
-#: templates/postorius/menu/list_nav.html:56
+#: templates/postorius/menu/list_nav.html:62
 msgid "Mass subscribe"
 msgstr "Massaal abonneren"
 
@@ -2597,26 +2604,30 @@ msgstr "CSV-uitvoer"
 msgid "Remove Selected"
 msgstr "Verwijder geselecteerde"
 
-#: templates/postorius/lists/members.html:76
+#: templates/postorius/lists/members.html:78
 #: templates/postorius/user/address_preferences.html:32
 #: templates/postorius/user/manage.html:63
 msgid "Address"
 msgstr "Adres"
 
-#: templates/postorius/lists/members.html:80
+#: templates/postorius/lists/members.html:82
 #: templates/postorius/user/subscriptions.html:24
 msgid "Delivery Mode"
 msgstr "Bezorgingswijze"
 
-#: templates/postorius/lists/members.html:83
+#: templates/postorius/lists/members.html:85
 msgid "Moderation Action"
 msgstr "Moderatieactie"
 
-#: templates/postorius/lists/members.html:86
+#: templates/postorius/lists/members.html:90
 #, fuzzy
 #| msgid "Bounce score threshold"
 msgid "Bounce Score"
 msgstr "Drempelwaarde voor bouncescore"
+
+#: templates/postorius/lists/members.html:116
+msgid "Masked per the user request"
+msgstr ""
 
 #: templates/postorius/lists/new.html:6 templates/postorius/lists/new.html:17
 msgid "Create list"
@@ -2647,7 +2658,7 @@ msgid "There are currently no subscription requests for this list."
 msgstr "Er zijn momenteel geen abonnementsverzoeken voor deze lijst."
 
 #: templates/postorius/lists/settings.html:7
-#: templates/postorius/menu/list_nav.html:49
+#: templates/postorius/menu/list_nav.html:55
 msgid "Settings"
 msgstr "Instellingen"
 
@@ -2674,13 +2685,13 @@ msgstr "U moet inloggen om de archieven van deze lijst te kunnen bezoeken."
 #, python-format
 msgid ""
 "\n"
-"            <a class=\"btn btn-primary\" "
-"href=\"%(hyperkitty_list_url)s\">Archives</a>\n"
+"            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s"
+"\">Archives</a>\n"
 "          "
 msgstr ""
 "\n"
-"            <a class=\"btn btn-primary\" "
-"href=\"%(hyperkitty_list_url)s\">Archief</a>\n"
+"            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s"
+"\">Archief</a>\n"
 "          "
 
 #: templates/postorius/lists/summary.html:47
@@ -2722,8 +2733,8 @@ msgid ""
 "\n"
 "                To subscribe you can send an email with 'subscribe' in the "
 "subject to\n"
-"                <a href=\"mailto:%(address)s?"
-"subject=Subscribe\">%(address)s</a>\n"
+"                <a href=\"mailto:%(address)s?subject=Subscribe\">"
+"%(address)s</a>\n"
 "                or use the form below:\n"
 "            "
 msgstr ""
@@ -2831,27 +2842,28 @@ msgstr "In afwachting van bevestiging"
 msgid "Unsubscription Requests"
 msgstr "Uitschrijvingsverzoeken"
 
-#: templates/postorius/menu/list_nav.html:42
+#: templates/postorius/menu/list_nav.html:43
+#: templates/postorius/menu/list_nav.html:50
 msgid "Members"
 msgstr "Leden"
 
-#: templates/postorius/menu/list_nav.html:43
+#: templates/postorius/menu/list_nav.html:44
 msgid "Non-Members"
 msgstr "Niet-leden"
 
-#: templates/postorius/menu/list_nav.html:44
+#: templates/postorius/menu/list_nav.html:45
 msgid "Moderators"
 msgstr "Moderatoren"
 
-#: templates/postorius/menu/list_nav.html:53
+#: templates/postorius/menu/list_nav.html:59
 msgid "Mass operations"
 msgstr "Massale operaties"
 
-#: templates/postorius/menu/list_nav.html:57
+#: templates/postorius/menu/list_nav.html:63
 msgid "Mass removal"
 msgstr "Massaverwijdering"
 
-#: templates/postorius/menu/list_nav.html:60
+#: templates/postorius/menu/list_nav.html:66
 msgid "Ban List"
 msgstr "Verbied lijst"
 
@@ -3496,6 +3508,9 @@ msgstr "Succesvol bijgewerkte gebruiker."
 #: views/user.py:485
 msgid "Password updated successfully"
 msgstr "Wachtwoord succesvol bijgewerkt"
+
+#~ msgid "Only mailinglist members"
+#~ msgstr "Alleen leden van de mailinglijst"
 
 #~ msgid "Unsubscribe All"
 #~ msgstr "Allen uitschrijven"
