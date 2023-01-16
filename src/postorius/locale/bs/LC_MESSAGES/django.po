@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-04 10:52+0530\n"
+"POT-Creation-Date: 2023-01-16 12:46-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -200,11 +200,11 @@ msgid "Yearly"
 msgstr ""
 
 #: forms/list_forms.py:51
-msgid "Only mailinglist moderators"
+msgid "Only mailinglist administrators"
 msgstr ""
 
 #: forms/list_forms.py:52
-msgid "Only mailinglist members"
+msgid "Mailinglist administrators and members"
 msgstr ""
 
 #: forms/list_forms.py:53
@@ -1397,7 +1397,7 @@ msgstr ""
 msgid "Email Address"
 msgstr ""
 
-#: forms/member_forms.py:35 forms/user_forms.py:342
+#: forms/member_forms.py:35 forms/user_forms.py:341
 msgid "Display Name"
 msgstr ""
 
@@ -1439,43 +1439,42 @@ msgstr ""
 
 #: forms/user_forms.py:90
 msgid ""
-"When someone views the list membership, your email address is normally shown "
-"(in an obscured fashion to thwart spam harvesters). If you do not want your "
-"email address to show up on this membership roster at all, select Yes for "
-"this option."
+"When other members allowed to view the list membership, your email address "
+"is normally shown. If you do not want your email address to show up on this "
+"membership roster, select Yes for this option."
 msgstr ""
 
-#: forms/user_forms.py:100
+#: forms/user_forms.py:99
 msgid "Receive list copies (possible duplicates)"
 msgstr ""
 
-#: forms/user_forms.py:102
+#: forms/user_forms.py:101
 msgid ""
 "When you are listed explicitly in the To: or Cc: headers of a list message, "
 "you can opt to not receive another copy from the mailing list. Select Yes to "
 "receive copies. Select No to avoid receiving copies from the mailing list"
 msgstr ""
 
-#: forms/user_forms.py:113
+#: forms/user_forms.py:112
 msgid "Preferred language"
 msgstr ""
 
-#: forms/user_forms.py:115
+#: forms/user_forms.py:114
 msgid ""
 "Preferred language for your interactions with Mailman. When this is set, it "
 "will override the MailingList's preferred language. This affects which "
 "language is used for your email notifications and such."
 msgstr ""
 
-#: forms/user_forms.py:171
+#: forms/user_forms.py:170
 msgid "Cannot set delivery_status to {}"
 msgstr ""
 
-#: forms/user_forms.py:269
+#: forms/user_forms.py:268
 msgid "Verified"
 msgstr ""
 
-#: forms/user_forms.py:270
+#: forms/user_forms.py:269
 msgid "Specifies whether or not this email address is verified"
 msgstr ""
 
@@ -1715,7 +1714,7 @@ msgstr ""
 msgid "System Information"
 msgstr ""
 
-#: templates/postorius/base.html:62 templates/postorius/menu/list_nav.html:39
+#: templates/postorius/base.html:62 templates/postorius/menu/list_nav.html:40
 #: templates/postorius/user/all.html:8 templates/postorius/user/all.html:13
 msgid "Users"
 msgstr ""
@@ -1784,10 +1783,10 @@ msgstr ""
 #: templates/postorius/domain/index.html:59
 #: templates/postorius/domain/template_index.html:35
 #: templates/postorius/lists/confirm_delete.html:5
-#: templates/postorius/lists/members.html:138
-#: templates/postorius/lists/members.html:147
+#: templates/postorius/lists/members.html:159
+#: templates/postorius/lists/members.html:170
 #: templates/postorius/lists/template_list.html:33
-#: templates/postorius/menu/list_nav.html:62
+#: templates/postorius/menu/list_nav.html:68
 msgid "Delete"
 msgstr ""
 
@@ -1818,7 +1817,7 @@ msgid "Add Domain"
 msgstr ""
 
 #: templates/postorius/domain/index.html:25
-#: templates/postorius/menu/list_nav.html:45
+#: templates/postorius/menu/list_nav.html:46
 msgid "Owners"
 msgstr ""
 
@@ -1846,7 +1845,7 @@ msgstr ""
 #: templates/postorius/lists/template_delete.html:7
 #: templates/postorius/lists/template_list.html:7
 #: templates/postorius/lists/template_update.html:7
-#: templates/postorius/menu/list_nav.html:48 templatetags/nav_helpers.py:39
+#: templates/postorius/menu/list_nav.html:54 templatetags/nav_helpers.py:39
 msgid "Templates"
 msgstr ""
 
@@ -2084,7 +2083,7 @@ msgid ""
 msgstr ""
 
 #: templates/postorius/lists/header_matches.html:7
-#: templates/postorius/menu/list_nav.html:61
+#: templates/postorius/menu/list_nav.html:67
 msgid "Header filters"
 msgstr ""
 
@@ -2171,7 +2170,7 @@ msgid "Remove listed users"
 msgstr ""
 
 #: templates/postorius/lists/mass_subscribe.html:7
-#: templates/postorius/menu/list_nav.html:56
+#: templates/postorius/menu/list_nav.html:62
 msgid "Mass subscribe"
 msgstr ""
 
@@ -2208,23 +2207,27 @@ msgstr ""
 msgid "Remove Selected"
 msgstr ""
 
-#: templates/postorius/lists/members.html:76
+#: templates/postorius/lists/members.html:78
 #: templates/postorius/user/address_preferences.html:32
 #: templates/postorius/user/manage.html:63
 msgid "Address"
 msgstr ""
 
-#: templates/postorius/lists/members.html:80
+#: templates/postorius/lists/members.html:82
 #: templates/postorius/user/subscriptions.html:24
 msgid "Delivery Mode"
 msgstr ""
 
-#: templates/postorius/lists/members.html:83
+#: templates/postorius/lists/members.html:85
 msgid "Moderation Action"
 msgstr ""
 
-#: templates/postorius/lists/members.html:86
+#: templates/postorius/lists/members.html:90
 msgid "Bounce Score"
+msgstr ""
+
+#: templates/postorius/lists/members.html:116
+msgid "Masked per the user request"
 msgstr ""
 
 #: templates/postorius/lists/new.html:6 templates/postorius/lists/new.html:17
@@ -2256,7 +2259,7 @@ msgid "There are currently no subscription requests for this list."
 msgstr ""
 
 #: templates/postorius/lists/settings.html:7
-#: templates/postorius/menu/list_nav.html:49
+#: templates/postorius/menu/list_nav.html:55
 msgid "Settings"
 msgstr ""
 
@@ -2281,8 +2284,8 @@ msgstr ""
 #, python-format
 msgid ""
 "\n"
-"            <a class=\"btn btn-primary\" "
-"href=\"%(hyperkitty_list_url)s\">Archives</a>\n"
+"            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s"
+"\">Archives</a>\n"
 "          "
 msgstr ""
 
@@ -2325,8 +2328,8 @@ msgid ""
 "\n"
 "                To subscribe you can send an email with 'subscribe' in the "
 "subject to\n"
-"                <a href=\"mailto:%(address)s?"
-"subject=Subscribe\">%(address)s</a>\n"
+"                <a href=\"mailto:%(address)s?subject=Subscribe\">"
+"%(address)s</a>\n"
 "                or use the form below:\n"
 "            "
 msgstr ""
@@ -2409,27 +2412,28 @@ msgstr ""
 msgid "Unsubscription Requests"
 msgstr ""
 
-#: templates/postorius/menu/list_nav.html:42
+#: templates/postorius/menu/list_nav.html:43
+#: templates/postorius/menu/list_nav.html:50
 msgid "Members"
 msgstr ""
 
-#: templates/postorius/menu/list_nav.html:43
+#: templates/postorius/menu/list_nav.html:44
 msgid "Non-Members"
 msgstr ""
 
-#: templates/postorius/menu/list_nav.html:44
+#: templates/postorius/menu/list_nav.html:45
 msgid "Moderators"
 msgstr ""
 
-#: templates/postorius/menu/list_nav.html:53
+#: templates/postorius/menu/list_nav.html:59
 msgid "Mass operations"
 msgstr ""
 
-#: templates/postorius/menu/list_nav.html:57
+#: templates/postorius/menu/list_nav.html:63
 msgid "Mass removal"
 msgstr ""
 
-#: templates/postorius/menu/list_nav.html:60
+#: templates/postorius/menu/list_nav.html:66
 msgid "Ban List"
 msgstr ""
 

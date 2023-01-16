@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-04 10:52+0530\n"
+"POT-Creation-Date: 2023-01-16 12:47-0800\n"
 "PO-Revision-Date: 2022-10-30 14:02+0000\n"
 "Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/gnu-"
@@ -31,8 +31,8 @@ msgid ""
 "same or different from the Mail Host. You can edit the list of available web "
 "hosts <a href=\"%s\">here</a>."
 msgstr ""
-"你希望从中提供 Web UI 的域。 与邮件主机相同或不同都可以。 你可以在<a "
-"href=\"%s\">此处</a>编辑可用的 Web 主机列表。"
+"你希望从中提供 Web UI 的域。 与邮件主机相同或不同都可以。 你可以在<a href="
+"\"%s\">此处</a>编辑可用的 Web 主机列表。"
 
 #: forms/domain_forms.py:46 forms/list_forms.py:100
 #: templates/postorius/domain/index.html:21
@@ -224,12 +224,14 @@ msgid "Yearly"
 msgstr "年报"
 
 #: forms/list_forms.py:51
-msgid "Only mailinglist moderators"
+#, fuzzy
+#| msgid "Only mailinglist moderators"
+msgid "Only mailinglist administrators"
 msgstr "仅邮件列表版主"
 
 #: forms/list_forms.py:52
-msgid "Only mailinglist members"
-msgstr "仅邮件列表成员"
+msgid "Mailinglist administrators and members"
+msgstr ""
 
 #: forms/list_forms.py:53
 msgid "Anyone"
@@ -1251,8 +1253,8 @@ msgid ""
 "request/-owner address from the same poster. Set to zero (or negative) for "
 "no grace period (i.e. auto-respond to every message)."
 msgstr ""
-"发至邮件列表或同个发帖人的 -request/-owner 地址的自动响应之间的天数。设为 0"
-"（或负值）则无宽限期（即对每条消息都自动响应）。"
+"发至邮件列表或同个发帖人的 -request/-owner 地址的自动响应之间的天数。设为 "
+"0（或负值）则无宽限期（即对每条消息都自动响应）。"
 
 #: forms/list_forms.py:1047
 msgid "Notify users of held messages"
@@ -1568,7 +1570,7 @@ msgstr "数据"
 msgid "Email Address"
 msgstr "电子邮件地址"
 
-#: forms/member_forms.py:35 forms/user_forms.py:342
+#: forms/member_forms.py:35 forms/user_forms.py:341
 msgid "Display Name"
 msgstr "显示名称"
 
@@ -1610,21 +1612,26 @@ msgid "Hide address"
 msgstr "隐藏地址"
 
 #: forms/user_forms.py:90
+#, fuzzy
+#| msgid ""
+#| "When someone views the list membership, your email address is normally "
+#| "shown (in an obscured fashion to thwart spam harvesters). If you do not "
+#| "want your email address to show up on this membership roster at all, "
+#| "select Yes for this option."
 msgid ""
-"When someone views the list membership, your email address is normally shown "
-"(in an obscured fashion to thwart spam harvesters). If you do not want your "
-"email address to show up on this membership roster at all, select Yes for "
-"this option."
+"When other members allowed to view the list membership, your email address "
+"is normally shown. If you do not want your email address to show up on this "
+"membership roster, select Yes for this option."
 msgstr ""
 "当有人查看列表的成员关系，你的电子邮件地址通常会显示（为模糊形式以阻止垃圾邮"
 "件收集）。如果你完全不想你的电子邮件地址显示在此成员关系名册上，此选项应选为"
 "是。"
 
-#: forms/user_forms.py:100
+#: forms/user_forms.py:99
 msgid "Receive list copies (possible duplicates)"
 msgstr "接收列表副本（可能重复）"
 
-#: forms/user_forms.py:102
+#: forms/user_forms.py:101
 msgid ""
 "When you are listed explicitly in the To: or Cc: headers of a list message, "
 "you can opt to not receive another copy from the mailing list. Select Yes to "
@@ -1633,11 +1640,11 @@ msgstr ""
 "当你被列表消息的 To: 或 Cc: 首部中明确列出时，你可以选择不从邮件列表接收另一"
 "份副本。选择是则接收副本。选择否可以避免从邮件列表接收副本。"
 
-#: forms/user_forms.py:113
+#: forms/user_forms.py:112
 msgid "Preferred language"
 msgstr "首选语言"
 
-#: forms/user_forms.py:115
+#: forms/user_forms.py:114
 msgid ""
 "Preferred language for your interactions with Mailman. When this is set, it "
 "will override the MailingList's preferred language. This affects which "
@@ -1646,15 +1653,15 @@ msgstr ""
 "你与 Mailman 交互时首选的语言。当设定此选项时，它将覆盖邮件列表的首选语言。这"
 "会影响你的电子邮件通知等使用的语言。"
 
-#: forms/user_forms.py:171
+#: forms/user_forms.py:170
 msgid "Cannot set delivery_status to {}"
 msgstr "无法设定 delivery_status 为 {}"
 
-#: forms/user_forms.py:269
+#: forms/user_forms.py:268
 msgid "Verified"
 msgstr "已验证"
 
-#: forms/user_forms.py:270
+#: forms/user_forms.py:269
 msgid "Specifies whether or not this email address is verified"
 msgstr "指定此电子邮件是否已验证"
 
@@ -1907,7 +1914,7 @@ msgstr "封禁"
 msgid "System Information"
 msgstr "系统信息"
 
-#: templates/postorius/base.html:62 templates/postorius/menu/list_nav.html:39
+#: templates/postorius/base.html:62 templates/postorius/menu/list_nav.html:40
 #: templates/postorius/user/all.html:8 templates/postorius/user/all.html:13
 msgid "Users"
 msgstr "用户"
@@ -1979,10 +1986,10 @@ msgstr ""
 #: templates/postorius/domain/index.html:59
 #: templates/postorius/domain/template_index.html:35
 #: templates/postorius/lists/confirm_delete.html:5
-#: templates/postorius/lists/members.html:138
-#: templates/postorius/lists/members.html:147
+#: templates/postorius/lists/members.html:159
+#: templates/postorius/lists/members.html:170
 #: templates/postorius/lists/template_list.html:33
-#: templates/postorius/menu/list_nav.html:62
+#: templates/postorius/menu/list_nav.html:68
 msgid "Delete"
 msgstr "删除"
 
@@ -2013,7 +2020,7 @@ msgid "Add Domain"
 msgstr "添加域"
 
 #: templates/postorius/domain/index.html:25
-#: templates/postorius/menu/list_nav.html:45
+#: templates/postorius/menu/list_nav.html:46
 msgid "Owners"
 msgstr "所有者"
 
@@ -2041,7 +2048,7 @@ msgstr "添加"
 #: templates/postorius/lists/template_delete.html:7
 #: templates/postorius/lists/template_list.html:7
 #: templates/postorius/lists/template_update.html:7
-#: templates/postorius/menu/list_nav.html:48 templatetags/nav_helpers.py:39
+#: templates/postorius/menu/list_nav.html:54 templatetags/nav_helpers.py:39
 msgid "Templates"
 msgstr "模板"
 
@@ -2300,7 +2307,7 @@ msgstr ""
 "    "
 
 #: templates/postorius/lists/header_matches.html:7
-#: templates/postorius/menu/list_nav.html:61
+#: templates/postorius/menu/list_nav.html:67
 msgid "Header filters"
 msgstr "首部过滤器"
 
@@ -2387,7 +2394,7 @@ msgid "Remove listed users"
 msgstr "移除所列用户"
 
 #: templates/postorius/lists/mass_subscribe.html:7
-#: templates/postorius/menu/list_nav.html:56
+#: templates/postorius/menu/list_nav.html:62
 msgid "Mass subscribe"
 msgstr "批量订阅"
 
@@ -2424,26 +2431,30 @@ msgstr "CSV 导出"
 msgid "Remove Selected"
 msgstr "移除所选项"
 
-#: templates/postorius/lists/members.html:76
+#: templates/postorius/lists/members.html:78
 #: templates/postorius/user/address_preferences.html:32
 #: templates/postorius/user/manage.html:63
 msgid "Address"
 msgstr "地址"
 
-#: templates/postorius/lists/members.html:80
+#: templates/postorius/lists/members.html:82
 #: templates/postorius/user/subscriptions.html:24
 msgid "Delivery Mode"
 msgstr "寄送模式"
 
-#: templates/postorius/lists/members.html:83
+#: templates/postorius/lists/members.html:85
 msgid "Moderation Action"
 msgstr "审核动作"
 
-#: templates/postorius/lists/members.html:86
+#: templates/postorius/lists/members.html:90
 #, fuzzy
 #| msgid "Bounce score threshold"
 msgid "Bounce Score"
 msgstr "退信分数阈值"
+
+#: templates/postorius/lists/members.html:116
+msgid "Masked per the user request"
+msgstr ""
 
 #: templates/postorius/lists/new.html:6 templates/postorius/lists/new.html:17
 msgid "Create list"
@@ -2474,7 +2485,7 @@ msgid "There are currently no subscription requests for this list."
 msgstr "你当前没有对此列表的订阅请求。"
 
 #: templates/postorius/lists/settings.html:7
-#: templates/postorius/menu/list_nav.html:49
+#: templates/postorius/menu/list_nav.html:55
 msgid "Settings"
 msgstr "设置"
 
@@ -2499,8 +2510,8 @@ msgstr "你已经登入可以访问此列表的存档。"
 #, python-format
 msgid ""
 "\n"
-"            <a class=\"btn btn-primary\" "
-"href=\"%(hyperkitty_list_url)s\">Archives</a>\n"
+"            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s"
+"\">Archives</a>\n"
 "          "
 msgstr ""
 "\n"
@@ -2547,15 +2558,15 @@ msgid ""
 "\n"
 "                To subscribe you can send an email with 'subscribe' in the "
 "subject to\n"
-"                <a href=\"mailto:%(address)s?"
-"subject=Subscribe\">%(address)s</a>\n"
+"                <a href=\"mailto:%(address)s?subject=Subscribe\">"
+"%(address)s</a>\n"
 "                or use the form below:\n"
 "            "
 msgstr ""
 "\n"
 "                要进行订阅，你可以发送带有“subscribe”主题的电子邮件至\n"
-"                <a href=\"mailto:%(address)s?"
-"subject=Subscribe\">%(address)s</a>\n"
+"                <a href=\"mailto:%(address)s?subject=Subscribe\">"
+"%(address)s</a>\n"
 "                或者使用下面的表格：\n"
 "            "
 
@@ -2649,27 +2660,28 @@ msgstr "等待确认"
 msgid "Unsubscription Requests"
 msgstr "退订请求"
 
-#: templates/postorius/menu/list_nav.html:42
+#: templates/postorius/menu/list_nav.html:43
+#: templates/postorius/menu/list_nav.html:50
 msgid "Members"
 msgstr "成员"
 
-#: templates/postorius/menu/list_nav.html:43
+#: templates/postorius/menu/list_nav.html:44
 msgid "Non-Members"
 msgstr "非成员"
 
-#: templates/postorius/menu/list_nav.html:44
+#: templates/postorius/menu/list_nav.html:45
 msgid "Moderators"
 msgstr "版主"
 
-#: templates/postorius/menu/list_nav.html:53
+#: templates/postorius/menu/list_nav.html:59
 msgid "Mass operations"
 msgstr "批量操作"
 
-#: templates/postorius/menu/list_nav.html:57
+#: templates/postorius/menu/list_nav.html:63
 msgid "Mass removal"
 msgstr "批量移除"
 
-#: templates/postorius/menu/list_nav.html:60
+#: templates/postorius/menu/list_nav.html:66
 msgid "Ban List"
 msgstr "封禁列表"
 
@@ -3302,6 +3314,9 @@ msgstr "成功更新用户。"
 #: views/user.py:485
 msgid "Password updated successfully"
 msgstr "密码更新成功"
+
+#~ msgid "Only mailinglist members"
+#~ msgstr "仅邮件列表成员"
 
 #~ msgid "Unsubscribe All"
 #~ msgstr "退订全部"

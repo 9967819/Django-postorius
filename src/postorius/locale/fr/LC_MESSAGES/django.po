@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-04 10:52+0530\n"
+"POT-Creation-Date: 2023-01-16 12:46-0800\n"
 "PO-Revision-Date: 2021-11-05 02:19+0000\n"
 "Last-Translator: Frédéric Daniel Luc Lehobey <weblate@lehobey.net>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -238,12 +238,14 @@ msgid "Yearly"
 msgstr "Annuel"
 
 #: forms/list_forms.py:51
-msgid "Only mailinglist moderators"
+#, fuzzy
+#| msgid "Only mailinglist moderators"
+msgid "Only mailinglist administrators"
 msgstr "Seulement les modérateurs de la liste de diffusion"
 
 #: forms/list_forms.py:52
-msgid "Only mailinglist members"
-msgstr "Seulement les abonnés de la liste de diffusion"
+msgid "Mailinglist administrators and members"
+msgstr ""
 
 #: forms/list_forms.py:53
 msgid "Anyone"
@@ -1727,7 +1729,7 @@ msgstr "Données"
 msgid "Email Address"
 msgstr "Adresse de courriel"
 
-#: forms/member_forms.py:35 forms/user_forms.py:342
+#: forms/member_forms.py:35 forms/user_forms.py:341
 msgid "Display Name"
 msgstr "Nom public"
 
@@ -1777,22 +1779,27 @@ msgid "Hide address"
 msgstr "Cacher l'adresse"
 
 #: forms/user_forms.py:90
+#, fuzzy
+#| msgid ""
+#| "When someone views the list membership, your email address is normally "
+#| "shown (in an obscured fashion to thwart spam harvesters). If you do not "
+#| "want your email address to show up on this membership roster at all, "
+#| "select Yes for this option."
 msgid ""
-"When someone views the list membership, your email address is normally shown "
-"(in an obscured fashion to thwart spam harvesters). If you do not want your "
-"email address to show up on this membership roster at all, select Yes for "
-"this option."
+"When other members allowed to view the list membership, your email address "
+"is normally shown. If you do not want your email address to show up on this "
+"membership roster, select Yes for this option."
 msgstr ""
 "Quand quelqu'un consulte la liste des abonnés, votre adresse de courriel est "
 "normalement affichée (de manière contournée pour contrer les industriels du "
 "pourriel). Si vous ne souhaitez pas du tout voir votre adresse de courriel "
 "s'afficher dans la liste des abonnés, sélectionnez « Oui » pour cette option."
 
-#: forms/user_forms.py:100
+#: forms/user_forms.py:99
 msgid "Receive list copies (possible duplicates)"
 msgstr "Recevoir les messages de la liste (doublons possibles)"
 
-#: forms/user_forms.py:102
+#: forms/user_forms.py:101
 msgid ""
 "When you are listed explicitly in the To: or Cc: headers of a list message, "
 "you can opt to not receive another copy from the mailing list. Select Yes to "
@@ -1804,11 +1811,11 @@ msgstr ""
 "Choisissez « Non » pour éviter de recevoir des copies de la liste de "
 "diffusion"
 
-#: forms/user_forms.py:113
+#: forms/user_forms.py:112
 msgid "Preferred language"
 msgstr "Langue préférée"
 
-#: forms/user_forms.py:115
+#: forms/user_forms.py:114
 msgid ""
 "Preferred language for your interactions with Mailman. When this is set, it "
 "will override the MailingList's preferred language. This affects which "
@@ -1818,15 +1825,15 @@ msgstr ""
 "elle remplacera la langue préférée de la liste de diffusion. Ceci affecte la "
 "langue utilisée pour vos notifications par courriel et autres."
 
-#: forms/user_forms.py:171
+#: forms/user_forms.py:170
 msgid "Cannot set delivery_status to {}"
 msgstr "delivery_status ne peut être mis à {}"
 
-#: forms/user_forms.py:269
+#: forms/user_forms.py:268
 msgid "Verified"
 msgstr "Vérifié"
 
-#: forms/user_forms.py:270
+#: forms/user_forms.py:269
 msgid "Specifies whether or not this email address is verified"
 msgstr "Indique si cette adresse de courriel est ou non vérifiée"
 
@@ -2127,7 +2134,7 @@ msgstr "Bannissements"
 msgid "System Information"
 msgstr "Système d'information"
 
-#: templates/postorius/base.html:62 templates/postorius/menu/list_nav.html:39
+#: templates/postorius/base.html:62 templates/postorius/menu/list_nav.html:40
 #: templates/postorius/user/all.html:8 templates/postorius/user/all.html:13
 msgid "Users"
 msgstr "Utilisateurs"
@@ -2199,10 +2206,10 @@ msgstr ""
 #: templates/postorius/domain/index.html:59
 #: templates/postorius/domain/template_index.html:35
 #: templates/postorius/lists/confirm_delete.html:5
-#: templates/postorius/lists/members.html:138
-#: templates/postorius/lists/members.html:147
+#: templates/postorius/lists/members.html:159
+#: templates/postorius/lists/members.html:170
 #: templates/postorius/lists/template_list.html:33
-#: templates/postorius/menu/list_nav.html:62
+#: templates/postorius/menu/list_nav.html:68
 msgid "Delete"
 msgstr "Supprimer"
 
@@ -2233,7 +2240,7 @@ msgid "Add Domain"
 msgstr "Ajouter un domaine"
 
 #: templates/postorius/domain/index.html:25
-#: templates/postorius/menu/list_nav.html:45
+#: templates/postorius/menu/list_nav.html:46
 msgid "Owners"
 msgstr "Propriétaires"
 
@@ -2261,7 +2268,7 @@ msgstr "Ajouter"
 #: templates/postorius/lists/template_delete.html:7
 #: templates/postorius/lists/template_list.html:7
 #: templates/postorius/lists/template_update.html:7
-#: templates/postorius/menu/list_nav.html:48 templatetags/nav_helpers.py:39
+#: templates/postorius/menu/list_nav.html:54 templatetags/nav_helpers.py:39
 msgid "Templates"
 msgstr "Modèles"
 
@@ -2550,7 +2557,7 @@ msgstr ""
 "    "
 
 #: templates/postorius/lists/header_matches.html:7
-#: templates/postorius/menu/list_nav.html:61
+#: templates/postorius/menu/list_nav.html:67
 msgid "Header filters"
 msgstr "Filtres sur les entêtes"
 
@@ -2639,7 +2646,7 @@ msgid "Remove listed users"
 msgstr ""
 
 #: templates/postorius/lists/mass_subscribe.html:7
-#: templates/postorius/menu/list_nav.html:56
+#: templates/postorius/menu/list_nav.html:62
 msgid "Mass subscribe"
 msgstr "Abonnement en Masse"
 
@@ -2678,26 +2685,30 @@ msgstr "Export en CSV"
 msgid "Remove Selected"
 msgstr ""
 
-#: templates/postorius/lists/members.html:76
+#: templates/postorius/lists/members.html:78
 #: templates/postorius/user/address_preferences.html:32
 #: templates/postorius/user/manage.html:63
 msgid "Address"
 msgstr "Adresse"
 
-#: templates/postorius/lists/members.html:80
+#: templates/postorius/lists/members.html:82
 #: templates/postorius/user/subscriptions.html:24
 msgid "Delivery Mode"
 msgstr "Mode de distribution"
 
-#: templates/postorius/lists/members.html:83
+#: templates/postorius/lists/members.html:85
 msgid "Moderation Action"
 msgstr "Action de modération"
 
-#: templates/postorius/lists/members.html:86
+#: templates/postorius/lists/members.html:90
 #, fuzzy
 #| msgid "Bounce score threshold"
 msgid "Bounce Score"
 msgstr "Seuil du score de rejet"
+
+#: templates/postorius/lists/members.html:116
+msgid "Masked per the user request"
+msgstr ""
 
 #: templates/postorius/lists/new.html:6 templates/postorius/lists/new.html:17
 msgid "Create list"
@@ -2728,7 +2739,7 @@ msgid "There are currently no subscription requests for this list."
 msgstr "Aucune demande d'abonnement pour cette liste."
 
 #: templates/postorius/lists/settings.html:7
-#: templates/postorius/menu/list_nav.html:49
+#: templates/postorius/menu/list_nav.html:55
 msgid "Settings"
 msgstr "Paramètres"
 
@@ -2755,8 +2766,8 @@ msgstr "Vous devez vous identifier pour consulter les archives de cette liste."
 #, python-format
 msgid ""
 "\n"
-"            <a class=\"btn btn-primary\" "
-"href=\"%(hyperkitty_list_url)s\">Archives</a>\n"
+"            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s"
+"\">Archives</a>\n"
 "          "
 msgstr ""
 "\n"
@@ -2803,15 +2814,15 @@ msgid ""
 "\n"
 "                To subscribe you can send an email with 'subscribe' in the "
 "subject to\n"
-"                <a href=\"mailto:%(address)s?"
-"subject=Subscribe\">%(address)s</a>\n"
+"                <a href=\"mailto:%(address)s?subject=Subscribe\">"
+"%(address)s</a>\n"
 "                or use the form below:\n"
 "            "
 msgstr ""
 "\n"
 "                Pour vous abonner vous pouvez envoyer un courriel à\n"
-"                  <a href=\"mailto:%(address)s?"
-"subject=Subscribe\">%(address)s</a>\n"
+"                  <a href=\"mailto:%(address)s?subject=Subscribe\">"
+"%(address)s</a>\n"
 "                  avec « subscribe » dans l'objet ou utiliser le formulaire "
 "suivant :\n"
 "            "
@@ -2910,27 +2921,28 @@ msgstr "Confirmation en attente"
 msgid "Unsubscription Requests"
 msgstr "Demandes de désabonnement"
 
-#: templates/postorius/menu/list_nav.html:42
+#: templates/postorius/menu/list_nav.html:43
+#: templates/postorius/menu/list_nav.html:50
 msgid "Members"
 msgstr "Membres"
 
-#: templates/postorius/menu/list_nav.html:43
+#: templates/postorius/menu/list_nav.html:44
 msgid "Non-Members"
 msgstr "Non-abonnés"
 
-#: templates/postorius/menu/list_nav.html:44
+#: templates/postorius/menu/list_nav.html:45
 msgid "Moderators"
 msgstr "Modérateurs"
 
-#: templates/postorius/menu/list_nav.html:53
+#: templates/postorius/menu/list_nav.html:59
 msgid "Mass operations"
 msgstr "Opérations groupées"
 
-#: templates/postorius/menu/list_nav.html:57
+#: templates/postorius/menu/list_nav.html:63
 msgid "Mass removal"
 msgstr "Suppression en masse"
 
-#: templates/postorius/menu/list_nav.html:60
+#: templates/postorius/menu/list_nav.html:66
 msgid "Ban List"
 msgstr "Liste des bannis"
 
@@ -3589,6 +3601,9 @@ msgstr "Utilisateur mis à jour avec succès."
 msgid "Password updated successfully"
 msgstr "Mot de passe mis à jour avec succès"
 
+#~ msgid "Only mailinglist members"
+#~ msgstr "Seulement les abonnés de la liste de diffusion"
+
 #~ msgid "Unsubscribe All"
 #~ msgstr "Désabonner tous"
 
@@ -3622,13 +3637,13 @@ msgstr "Mot de passe mis à jour avec succès"
 
 #~ msgid ""
 #~ "\n"
-#~ "                You can manage your subscription on <a "
-#~ "href=\"%(user_list_options_url)s\">your list options page</a>\n"
+#~ "                You can manage your subscription on <a href="
+#~ "\"%(user_list_options_url)s\">your list options page</a>\n"
 #~ "              "
 #~ msgstr ""
 #~ "\n"
-#~ "                Vous pouvez gérer vos abonnements sur <a "
-#~ "href=\"%(user_list_options_url)s\">votre page des options de listes</a>\n"
+#~ "                Vous pouvez gérer vos abonnements sur <a href="
+#~ "\"%(user_list_options_url)s\">votre page des options de listes</a>\n"
 #~ "              "
 
 #~ msgid ""
