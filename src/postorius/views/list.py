@@ -56,7 +56,7 @@ from postorius.auth.decorators import (
     list_owner_required,
     superuser_required,
 )
-from postorius.auth.mixins import ListOwnerMixin
+from postorius.auth.mixins import UserShowListMembersMixin
 from postorius.forms import (
     AlterMessagesForm,
     ArchiveSettingsForm,
@@ -113,7 +113,7 @@ class TokenOwner:
     moderator = 'moderator'
 
 
-class ListMembersViews(ListOwnerMixin, MailingListView):
+class ListMembersViews(UserShowListMembersMixin, MailingListView):
 
     # List of allowed roles for the memberships. The string value matches the
     # exact value Core's REST API expects.

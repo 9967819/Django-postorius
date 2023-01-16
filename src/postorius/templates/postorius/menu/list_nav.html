@@ -32,7 +32,8 @@
       </a>
     </li>
     {% endif %}
-    {% if user.is_superuser or user.is_list_owner %}
+    {% if user.is_superuser or user.show_list_members %}
+      {% if user.is_superuser or user.is_list_owner %}
         <li role="tab" class="dropdown nav-item">
             <a href="#" class="nav-link dropdown-toggle {% nav_active_class current 'list_members' %} " data-toggle="dropdown"
                role="button" aria-haspopup="true" aria-expanded="false">
@@ -45,6 +46,11 @@
               <li><a href="{% url 'list_members' list.list_id 'owner' %}" class="dropdown-item">{% trans 'Owners' %}</a></li>
             </ul>
         </li>
+      {% else %}
+        <li role="tab" class="nav-item"><a href="{% url 'list_members' list.list_id 'member' %}" class="nav-link {% nav_active_class current 'list_members' %}">{% trans 'Members' %}</a></li>
+      {% endif %}
+    {% endif %}
+    {% if user.is_superuser or user.is_list_owner %}
         <li role="tab" class="nav-item"><a href="{% url 'list_template_list' list.list_id %}" class="nav-link {% nav_active_class current 'templates' %}">{% trans 'Templates' %}</a></li>
         <li role="tab" class="nav-item"><a href="{% url 'list_settings' list.list_id %}" class="nav-link {% nav_active_class current 'list_settings' %} ">{% trans 'Settings' %}</a></li>
         <li role="tab" class="dropdown nav-item">

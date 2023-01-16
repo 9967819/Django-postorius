@@ -78,11 +78,32 @@ def set_list_access_props(user, mlist, owner=True, moderator=True):
     # If not already set, check if the user is in list ownership roster.
     if (not hasattr(user, 'is_list_owner')) and owner:
         user.is_list_owner = user_is_in_list_roster(user, mlist, 'owner')
+    # Calculate combined status for superusers and list owners
+    user.is_poweruser = user.is_superuser or user.is_list_owner
     # If not already set, check if the user is in list moderator roster.
     if not hasattr(user, 'is_list_moderator') and moderator:
         user.is_list_moderator = user_is_in_list_roster(
             user, mlist, 'moderator'
         )
+    if not hasattr(user, 'show_list_members'):
+        member_roster_visibility = mlist.settings['member_roster_visibility']
+        if user.is_superuser or user.is_list_owner:
+            user.show_list_members = True
+        else:
+            is_list_moderator = (
+                user.is_list_moderator
+                if hasattr(user, 'is_list_moderator')
+                else user_is_in_list_roster(user, mlist, 'moderator')
+            )
+            user.show_list_members = (
+                member_roster_visibility == 'moderators' and is_list_moderator
+            ) or (
+                member_roster_visibility == 'members'
+                and (
+                    is_list_moderator
+                    or user_is_in_list_roster(user, mlist, 'member')
+                )
+            )
 
 
 def set_domain_access_props(user, domain):

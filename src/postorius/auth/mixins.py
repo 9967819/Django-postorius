@@ -53,6 +53,21 @@ class ListModeratorMixin(LoginRequiredMixin, UserPassesTestMixin):
         return user.is_list_owner or user.is_list_moderator
 
 
+class UserShowListMembersMixin(LoginRequiredMixin, UserPassesTestMixin):
+    """Mixin to allow listing of members depending on list settings and
+    user role."""
+
+    raise_exception = True
+
+    def test_func(self):
+        user = self.request.user
+        if user.is_superuser:
+            return True
+        mlist_id = self.kwargs['list_id']
+        set_list_access_props(user, mlist_id)
+        return user.show_list_members
+
+
 class DomainOwnerMixin(LoginRequiredMixin, UserPassesTestMixin):
     """Mixin to allow access to only Domain Owner."""
 

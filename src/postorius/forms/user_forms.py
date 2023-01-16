@@ -87,11 +87,10 @@ class UserPreferences(forms.Form):
         required=False,
         label=_('Hide address'),
         help_text=_(
-            'When someone views the list membership, your email address is '
-            'normally shown (in an obscured fashion to thwart spam '
-            'harvesters). '
+            'When other members allowed to view the list membership, '
+            'your email address is normally shown. '
             'If you do not want your email address to show up on this '
-            'membership roster at all, select Yes for this option.'
+            'membership roster, select Yes for this option.'
         ),
     )
     receive_list_copy = forms.NullBooleanField(
