@@ -12,7 +12,7 @@
 
     {% list_nav 'list_members' page_title page_subtitle %}
 
-    {% if role != 'member' %}
+    {% if role != 'member' and user.is_poweruser %}
         <form action="{% url 'list_members' list.list_id role %}" method="post" class="form-inline margin-bottom">
             {% csrf_token %}
             <div class="form-group {% if member_form.email.errors %}has-error{% endif %}">
@@ -51,7 +51,7 @@
 
 
     {% if members|length > 0 %}
-        {% if role == 'member' %}
+        {% if role == 'member' and user.is_poweruser %}
             <form action="{% url 'list_members' list.list_id role %}" method="post" id="unsubscribe-form">
             {% csrf_token %}
             <input type="submit" class="d-none" />
@@ -68,9 +68,11 @@
                     <thead>
                         <tr>
                             {% if role == 'member' %}
+                              {% if user.is_poweruser %}
                             <th>
                               <input type="checkbox" id="all-members-checkbox" aria-label="Select all members" />
                             </td>
+                              {% endif %}
                             {% endif %}
                             <th>
                               {% trans 'Address' %}
@@ -82,13 +84,17 @@
                             <th>
                               {% trans 'Moderation Action' %}
                             </th>
+                            {%  endif %}
+                            {% if role == 'member' %}
                             <th>
                               {% trans 'Bounce Score' %}
                             </th>
                             {%  endif %}
                             {# Extra column here for the "Delete" button of Non-members, owners and mods. #}
                             {% if role != 'member' %}
+                              {% if user.is_poweruser %}
                              <th></th>
+                              {% endif %}
                             {% endif %}
                         </tr>
                     </thead>
@@ -96,18 +102,28 @@
                         {% for member in members %}
                             <tr>
                                 {% if role == 'member' %}
+                                  {% if user.is_poweruser %}
                                   <td>
                                     <input type="checkbox" class="member-checkbox" name="choices" id="id_choices_{{ forloop.counter0 }}" value="{{ member.email }}"/>
                                   </td>
+                                  {% endif %}
                                 <td>
                                   <label for="id_choices_{{ forloop.counter0 }}">
+                                  {% if user.is_poweruser %}
                                     <a href="{% url 'list_member_options' list.list_id member.email %}?role=member" title="Member options">
+                                  {% endif %}
+                                    {% if member.preferences.hide_address and not user.is_list_moderator and not user.is_poweruser %}
+                                        {% trans 'Masked per the user request' %}
+                                    {% else %}
                                       {% if member.display_name %}
                                         "{{ member.display_name }}" &lt;{{ member.email }}&gt;
                                       {% else %}
                                         {{ member.email }}
                                       {% endif %}
+                                    {% endif %}
+                                  {% if user.is_poweruser %}
                                     </a>
+                                  {% endif %}
                                   </label>
                                   </td>
                                 <td>
@@ -121,13 +137,17 @@
                                 </td>
                                 {% elif role == 'nonmember' %}
                                 <td>
+                                  {% if user.is_poweruser %}
                                   <a href="{% url 'list_member_options' list.list_id member.email %}?role=nonmember" title="NonMember options">
+                                  {% endif %}
                                         {% if member.display_name %}
                                             "{{ member.display_name }}" &lt;{{ member.email }}&gt;
                                         {% else %}
                                             {{ member.email }}
                                         {% endif %}
+                                  {% if user.is_poweruser %}
                                   </a>
+                                  {% endif %}
                                 </td>
                                 <td>
                                   {{ member.delivery_mode | delivery_mode }}
@@ -135,7 +155,9 @@
                                 <td>
                                   {{ member.moderation_action | moderation_action }}
                                 </td>
+                                  {% if user.is_poweruser %}
                                 <td><a href="{% url 'remove_role' list.list_id role member.email %}" class="btn btn-xs btn-danger">{% trans 'Delete' %}</a></td>
+                                  {% endif %}
                                 {% else %}
                                     <td>
                                         {% if member.display_name %}
@@ -144,14 +166,16 @@
                                             {{ member.email }}
                                         {% endif %}
                                     </td>
+                                  {% if user.is_poweruser %}
                                     <td><a href="{% url 'remove_role' list.list_id role member.email %}" class="btn btn-xs btn-danger">{% trans 'Delete' %}</a></td>
+                                  {% endif %}
                                 {% endif %}
                             </tr>
                         {% endfor %}
                     </tbody>
                 </table>
             </div>
-        {% if role == 'member' or role == 'nonmember' %}
+        {% if role == 'member' and user.is_poweruser %}
             </form>
         {% endif %}
         {% paginator members %}

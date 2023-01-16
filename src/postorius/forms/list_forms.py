@@ -48,8 +48,8 @@ DIGEST_FREQUENCY_CHOICES = (
 )
 
 ROSTER_VISIBILITY_CHOICES = (
-    ('moderators', _('Only mailinglist moderators')),
-    ('members', _('Only mailinglist members')),
+    ('moderators', _('Only mailinglist administrators')),
+    ('members', _('Mailinglist administrators and members')),
     ('public', _('Anyone')),
 )
 

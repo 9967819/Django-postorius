@@ -22,6 +22,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 1.3.9
 =====
 
+* Honor per-list member roster visibility options (Closes #369)
+
 UI
 --
 

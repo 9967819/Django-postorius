@@ -80,7 +80,7 @@ class ListMembersAccessTest(ViewTestCase):
             )
             self.assertEqual(response.status_code, 403)
 
-    def test_not_accessible_for_moderator(self):
+    def test_page_accessible_for_moderator(self):
         self.client.login(username='testmoderator', password='testpass')
         response = self.client.get(
             reverse(
@@ -91,7 +91,7 @@ class ListMembersAccessTest(ViewTestCase):
                 ),
             )
         )
-        self.assertEqual(response.status_code, 403)
+        self.assertEqual(response.status_code, 200)
 
     def test_page_accessible_for_superuser(self):
         self.client.login(username='testsu', password='testpass')
