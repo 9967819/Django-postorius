@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 12:47-0800\n"
-"PO-Revision-Date: 2023-01-06 13:52+0000\n"
+"PO-Revision-Date: 2023-01-18 19:47+0000\n"
 "Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/tr/>\n"
@@ -228,14 +228,12 @@ msgid "Yearly"
 msgstr "Yıllık"
 
 #: forms/list_forms.py:51
-#, fuzzy
-#| msgid "Only mailinglist moderators"
 msgid "Only mailinglist administrators"
-msgstr "Yalnızca posta listesi moderatörleri"
+msgstr "Yalnızca posta listesi yöneticileri"
 
 #: forms/list_forms.py:52
 msgid "Mailinglist administrators and members"
-msgstr ""
+msgstr "Posta listesi yöneticileri ve üyeleri"
 
 #: forms/list_forms.py:53
 msgid "Anyone"
@@ -1712,21 +1710,14 @@ msgid "Hide address"
 msgstr "Adresi gizle"
 
 #: forms/user_forms.py:90
-#, fuzzy
-#| msgid ""
-#| "When someone views the list membership, your email address is normally "
-#| "shown (in an obscured fashion to thwart spam harvesters). If you do not "
-#| "want your email address to show up on this membership roster at all, "
-#| "select Yes for this option."
 msgid ""
 "When other members allowed to view the list membership, your email address "
 "is normally shown. If you do not want your email address to show up on this "
 "membership roster, select Yes for this option."
 msgstr ""
-"Birisi liste üyeliğini görüntülediğinde, e-posta adresiniz normal olarak "
-"gösterilir (spam toplayıcılarını engellemek için karmaşıklaştırılmış bir "
-"şekilde). E-posta adresinizin bu üyelik listesinde görünmesini "
-"istemiyorsanız, bu seçenek için Evet'i seçin."
+"Diğer üyelerin liste üyeliğini görüntülemesine izin verildiğinde, e-posta "
+"adresiniz normal olarak gösterilir. E-posta adresinizin bu üyelik listesinde "
+"görünmesini istemiyorsanız, bu seçenek için Evet'i seçin."
 
 #: forms/user_forms.py:99
 msgid "Receive list copies (possible duplicates)"
@@ -2595,7 +2586,7 @@ msgstr "Geri Dönme Puanı"
 
 #: templates/postorius/lists/members.html:116
 msgid "Masked per the user request"
-msgstr ""
+msgstr "Kullanıcı isteğine göre maskelendi"
 
 #: templates/postorius/lists/new.html:6 templates/postorius/lists/new.html:17
 msgid "Create list"
