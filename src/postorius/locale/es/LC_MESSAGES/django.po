@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 12:46-0800\n"
-"PO-Revision-Date: 2023-01-06 13:52+0000\n"
+"PO-Revision-Date: 2023-01-18 19:47+0000\n"
 "Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/es/>\n"
@@ -232,14 +232,12 @@ msgid "Yearly"
 msgstr "Anual"
 
 #: forms/list_forms.py:51
-#, fuzzy
-#| msgid "Only mailinglist moderators"
 msgid "Only mailinglist administrators"
-msgstr "Solo los moderadores de la lista"
+msgstr "Sólo administradores de las listas de correos"
 
 #: forms/list_forms.py:52
 msgid "Mailinglist administrators and members"
-msgstr ""
+msgstr "Administradores y miembros de las listas de los correos"
 
 #: forms/list_forms.py:53
 msgid "Anyone"
@@ -1735,21 +1733,15 @@ msgid "Hide address"
 msgstr "Ocultar dirección"
 
 #: forms/user_forms.py:90
-#, fuzzy
-#| msgid ""
-#| "When someone views the list membership, your email address is normally "
-#| "shown (in an obscured fashion to thwart spam harvesters). If you do not "
-#| "want your email address to show up on this membership roster at all, "
-#| "select Yes for this option."
 msgid ""
 "When other members allowed to view the list membership, your email address "
 "is normally shown. If you do not want your email address to show up on this "
 "membership roster, select Yes for this option."
 msgstr ""
-"Cuando alguien ve la lista de miembros, normalmente se muestra su dirección "
-"de correo electrónico (camuflada para evadir recolectores para correo "
-"basura). Si no quiere que su dirección de correo electrónico aparezca en "
-"esta lista de miembros, seleccionar Sí para esta opción."
+"Cuando otros miembros pueden ver la lista de miembros, normalmente se "
+"muestra su dirección de correo electrónico. Si no desea que su dirección de "
+"correo electrónico aparezca en esta lista de miembros, seleccione Sí para "
+"esta opción."
 
 #: forms/user_forms.py:99
 msgid "Receive list copies (possible duplicates)"
@@ -2631,7 +2623,7 @@ msgstr "Tasa de rebote"
 
 #: templates/postorius/lists/members.html:116
 msgid "Masked per the user request"
-msgstr ""
+msgstr "Enmascarado por la solicitud del usuario"
 
 #: templates/postorius/lists/new.html:6 templates/postorius/lists/new.html:17
 msgid "Create list"

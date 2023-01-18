@@ -10,10 +10,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 12:47-0800\n"
-"PO-Revision-Date: 2023-01-06 13:52+0000\n"
+"PO-Revision-Date: 2023-01-18 19:47+0000\n"
 "Last-Translator: Wellington Terumi Uemura <wellingtonuemura@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/gnu-"
-"mailman/postorius/pt_BR/>\n"
+"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
+"gnu-mailman/postorius/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -230,14 +230,12 @@ msgid "Yearly"
 msgstr "Anual"
 
 #: forms/list_forms.py:51
-#, fuzzy
-#| msgid "Only mailinglist moderators"
 msgid "Only mailinglist administrators"
-msgstr "Apenas moderadoras da lista de discussão"
+msgstr "Apenas os administradores da lista de discussão"
 
 #: forms/list_forms.py:52
 msgid "Mailinglist administrators and members"
-msgstr ""
+msgstr "Os administradores e os membros da lista de discussão"
 
 #: forms/list_forms.py:53
 msgid "Anyone"
@@ -1738,21 +1736,14 @@ msgid "Hide address"
 msgstr "Ocultar Endereço"
 
 #: forms/user_forms.py:90
-#, fuzzy
-#| msgid ""
-#| "When someone views the list membership, your email address is normally "
-#| "shown (in an obscured fashion to thwart spam harvesters). If you do not "
-#| "want your email address to show up on this membership roster at all, "
-#| "select Yes for this option."
 msgid ""
 "When other members allowed to view the list membership, your email address "
 "is normally shown. If you do not want your email address to show up on this "
 "membership roster, select Yes for this option."
 msgstr ""
-"Quando alguém visualiza a inscrição na lista, o seu endereço de e-mail "
-"normalmente é mostrado (de forma obscura para impedir os coletores de spam). "
-"Se você não deseja que seu endereço de e-mail apareça nesta lista de "
-"membros, selecione Sim para esta opção."
+"Quando outros membros têm permissão para visualizar a lista de membros, o "
+"seu endereço de e-mail normalmente é exibido. Caso não queira que o seu "
+"endereço de e-mail apareça nesta lista de membros, selecione Sim nesta opção."
 
 #: forms/user_forms.py:99
 msgid "Receive list copies (possible duplicates)"
@@ -2628,7 +2619,7 @@ msgstr "Pontuação de devolução"
 
 #: templates/postorius/lists/members.html:116
 msgid "Masked per the user request"
-msgstr ""
+msgstr "Foi mascarado por uma solicitação do usuário"
 
 #: templates/postorius/lists/new.html:6 templates/postorius/lists/new.html:17
 msgid "Create list"

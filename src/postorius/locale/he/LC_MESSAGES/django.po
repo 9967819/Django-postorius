@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 12:46-0800\n"
-"PO-Revision-Date: 2023-01-06 13:52+0000\n"
+"PO-Revision-Date: 2023-01-18 19:47+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/he/>\n"
@@ -220,14 +220,12 @@ msgid "Yearly"
 msgstr "שנתי"
 
 #: forms/list_forms.py:51
-#, fuzzy
-#| msgid "Only mailinglist moderators"
 msgid "Only mailinglist administrators"
-msgstr "רק מפקחי רשימת הדיוור"
+msgstr "רק מנהלי רשימת הדיוור"
 
 #: forms/list_forms.py:52
 msgid "Mailinglist administrators and members"
-msgstr ""
+msgstr "מנהלי וחברי רשימת הדיוור"
 
 #: forms/list_forms.py:53
 msgid "Anyone"
@@ -963,7 +961,8 @@ msgid ""
 " Forward = forward the message to the list owner(s).\n"
 " Preserve = save the message in qfiles/bad.\n"
 msgstr ""
-"פעולה לנקוט על הודעות שאין להן תוכן לאחר סינון.\n"
+"פעולה לנקוט על הודעות שאין להן תוכן לאחר\n"
+"סינון.\n"
 " להשליך = להשליך את ההודעה באופן שקט.\n"
 " לדחות = לדחות את ההודעה ולהודיע לשולח.\n"
 " להעביר = להעביר את ההודעות לבעלי הרשימה.\n"
@@ -1649,20 +1648,13 @@ msgid "Hide address"
 msgstr "הסתרת כתובת"
 
 #: forms/user_forms.py:90
-#, fuzzy
-#| msgid ""
-#| "When someone views the list membership, your email address is normally "
-#| "shown (in an obscured fashion to thwart spam harvesters). If you do not "
-#| "want your email address to show up on this membership roster at all, "
-#| "select Yes for this option."
 msgid ""
 "When other members allowed to view the list membership, your email address "
 "is normally shown. If you do not want your email address to show up on this "
 "membership roster, select Yes for this option."
 msgstr ""
-"כשמישהו צופה בחברי הרשימה, כתובת הדוא״ל שלך מופיעה (בצורה מעורפלת כדי לסכל "
-"גששיות של שולחי ספאם). אם אין ברצונך שכתובת הדוא״ל שלך תופיע ברשימת החברים "
-"הזאת כלל, יש לבחור כן באפשרות הזאת."
+"כשחברים אחרים יכולים לצפות בחברי הרשימה, כתובת הדוא״ל שלך מופיעה. אם ברצונך "
+"שכתובת הדוא״ל שלך לא תופיע ברשימת החברים הזאת, יש לבחור כן באפשרות הזאת."
 
 #: forms/user_forms.py:99
 msgid "Receive list copies (possible duplicates)"
@@ -2494,7 +2486,7 @@ msgstr "ניקוד החזרה"
 
 #: templates/postorius/lists/members.html:116
 msgid "Masked per the user request"
-msgstr ""
+msgstr "ממוסך לבקשת המשתמש"
 
 #: templates/postorius/lists/new.html:6 templates/postorius/lists/new.html:17
 msgid "Create list"
