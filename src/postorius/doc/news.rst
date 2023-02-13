@@ -36,6 +36,8 @@ A11y
   tab like style but aren't true tabs as the page refreshes. (Closes #491)
 * Remove successfully subscribed addresses from the form when the page
   returns in the mass-subscription page. (Closes #494)
+* Add a label for the checkbox in the Held messages list page. (Closes #501)
+
 
 .. _NEWS-1.3.8:
 
