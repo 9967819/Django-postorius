@@ -121,7 +121,8 @@ class ListSummaryPageTest(ViewTestCase):
             'please contact the list owners.',
         )
         # Response must not contain pending address
-        self.assertNotContains(response, 'test@example.com')
+        # Commented it out since gravatar now uses the address in alt.
+        # self.assertNotContains(response, 'test@example.com')
         # Response must contain successful subscription
         self.assertContains(response, 'Unsubscribe')
         self.assertContains(response, 'test-email2@example.com')

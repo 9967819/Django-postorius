@@ -12,12 +12,13 @@
         {% trans 'Mailing Lists' %}
     </header>
 
-    <div class="row">
+    <div class="row mb-3">
     {% if user.is_authenticated %}
-    <div>
-      <span class="current-role">{% trans 'Role: ' %}</span>
-    </div>
-    <div class="col">
+
+    <div class="col d-flex">
+      <div class="me-2">
+        <span class="current-role">{% trans 'Role: ' %}</span>
+      </div>
             <ul class="horizontal-list align-middle">
 
               {% comment %}
@@ -59,14 +60,14 @@
           </div>
     {% endif %}
     {% if user.is_superuser %}
-      <div class="col">
-        <p class="text-right">
+      <div class="col d-flex flex-row-reverse">
+
             {% if domain_count < 1 %}
                 <a class="btn btn-success" href="{% url 'domain_new' %}">{% trans 'Create New Domain' %}</a>
             {% else %}
                 <a class="btn btn-success" href="{% url 'list_new' %}">{% trans 'Create New List' %}</a>
             {% endif %}
-        </p>
+
       </div>
     {% endif %}
     </div>

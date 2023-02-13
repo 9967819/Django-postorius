@@ -32,7 +32,7 @@
                                     <th>{% trans 'Address' %}</th>
                                     {% for field in form.visible_fields %}
                                         <th>
-                                            <label for="{{ field.id_for_label }}"><a data-toggle="tooltip" title="{{ field.help_text }}">{{ field.label }}</a></label>
+                                            <label for="{{ field.id_for_label }}"><a data-bs-toggle="tooltip" title="{{ field.help_text }}">{{ field.label }}</a></label>
                                         </th>
                                     {% endfor %}
                                 </tr>
@@ -50,6 +50,8 @@
                                             </label>
                                         {% endfor %}
                                     </td>
+                                {% elif field|fieldtype_is:'Select' %}
+                                    <td>{{ field|add_form_select }}</td>
                                 {% else %}
                                     <td>{{ field|add_form_control }}</td>
                                 {% endif %}
@@ -69,7 +71,7 @@
 {% block additionaljs %}
 <script>
     $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
+        $('[data-bs-toggle="tooltip"]').tooltip()
     })
 </script>
 {% endblock %}

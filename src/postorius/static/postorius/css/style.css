@@ -64,11 +64,23 @@ table.header-matches td .errorlist {
 }
 
 /* Improve contrast per accessibility guidelines */
+header.navbar {
+    background-color: rgb(8, 109, 215);
+    min-height: 59px;
+}
 .navbar-default .navbar-brand {
-    color: #666;
+    color: white;
+}
+.navbar-default a.nav-link {
+    color: white;
+}
+.navbar-brand img {
+    height: 35px;
 }
 .navbar-default .navbar-nav > li > a {
-    color: #666;
+    color: white;
+    font-weight: 400;
+    line-height: 1.4;
 }
 .h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, .h4 .small, .h4 small, .h5 .small, .h5 small, .h6 .small, .h6 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small, h4 .small, h4 small, h5 .small, h5 small, h6 .small, h6 small {
     color: #666;
@@ -92,9 +104,9 @@ a {
     color: #773231;
 }
 
-.navbar-default {
+/* .navbar-default {
         margin-bottom: 20px;
-}
+} */
 
 h1, h2, h3, h4, h5, h6, h7 {
         margin-bottom: 10px;
@@ -102,10 +114,10 @@ h1, h2, h3, h4, h5, h6, h7 {
 }
 
 .current-role {
-    font-size: 150%;
-    font-weight: 130%;
+    font-size: 120%;
+    font-weight: 110%;
     text-align: center;
-    padding-left: 15px;
+    /* padding-left: 15px; */
 }
 
 ul.horizontal-list {
@@ -118,4 +130,13 @@ ul.horizontal-list {
 
 ul.horizontal-list li {
     display: inline;
+}
+
+.username {
+    font-weight: 400;
+}
+
+button.user-button {
+    background-color: inherit;
+    border: none;
 }

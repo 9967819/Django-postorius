@@ -131,13 +131,13 @@
             <hr />
             <h3>{% trans 'List metrics' %}</h3>
             <dl class="row">
-              <dt class="col-2">{% trans 'Created at' %}</dt>
-              <dd class="col-4">
+              <dt class="col-6 col-md-2">{% trans 'Created at' %}</dt>
+              <dd class="col-6 col-md-4">
                 {% if list.settings.created_at %}{{ list.settings.created_at|datetime_parse|localtime|date:"DATETIME_FORMAT" }}{% endif %}
               </dd>
               <div class="w-100"></div>
-              <dt class="col-2">{% trans 'Last post at' %}</dt>
-              <dd class="col-4">
+              <dt class="col-6 col-md-2">{% trans 'Last post at' %}</dt>
+              <dd class="col-6 col-md-4">
                 {% if list.settings.last_post_at%}
                 {{ list.settings.last_post_at|datetime_parse|localtime|date:"DATETIME_FORMAT" }}
                 {% else %}
@@ -145,8 +145,8 @@
                 {% endif %}
               </dd>
               <div class="w-100"></div>
-              <dt class="col-2">{% trans 'Digest last sent at' %}</dt>
-              <dd class="col-4">
+              <dt class="col-6 col-md-2">{% trans 'Digest last sent at' %}</dt>
+              <dd class="col-6 col-md-4">
                 {% if list.settings.digest_last_sent_at %}
                   {{ list.settings.digest_last_sent_at|datetime_parse|localtime|date:"DATETIME_FORMAT" }}
                 {% else %}
@@ -154,7 +154,8 @@
                 {% endif %}
               </dd>
               <div class="w-100"></div>
-              <dt class="col-2">{% trans 'Volume' %}</dt><dd class="col-4">{{ list.settings.volume }}</dd>
+              <dt class="col-6 col-md-2">{% trans 'Volume' %}</dt>
+              <dd class="col-6 col-md-4 ">{{ list.settings.volume }}</dd>
             </dl>
         {% endif %}
     {% endif %}

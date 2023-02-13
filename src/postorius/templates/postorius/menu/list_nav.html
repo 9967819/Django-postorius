@@ -10,8 +10,8 @@
       <a href="{% url 'list_summary' list.list_id %}" class="{% nav_active_class current 'list_summary' %} nav-link">{% trans 'Info' %}</a></li>
     {% if user.is_superuser or user.is_list_owner or user.is_list_moderator %}
     <li role="tab" class="dropdown nav-item">
-      <a href="#" class="{% nav_active_class current 'list_subscription_requests' %} nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-        {% trans 'Subscription requests' %}<span class="badge badge-pill badge-dark">{{ list|pending_subscriptions }}</span>
+      <a href="#" class="{% nav_active_class current 'list_subscription_requests' %} nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+        {% trans 'Subscription requests' %}<span class="ms-2 badge rounded-4 bg-warning">{{ list|pending_subscriptions }}</span>
         <span class="caret"></span>
       </a>
       <ul class="dropdown-menu">
@@ -28,14 +28,14 @@
     </li>
     <li role="tab" class="nav-item">
       <a href="{% url 'list_held_messages' list.list_id %}" class="{% nav_active_class current 'list_held_messages' %} nav-link">
-        {% trans 'Held messages' %}<span class="badge badge-pill badge-dark"> {{ list|held_count }}</span>
+        {% trans 'Held messages' %}<span class="badge rounded-4 bg-warning ms-2"> {{ list|held_count }}</span>
       </a>
     </li>
     {% endif %}
     {% if user.is_superuser or user.show_list_members %}
       {% if user.is_superuser or user.is_list_owner %}
         <li role="tab" class="dropdown nav-item">
-            <a href="#" class="nav-link dropdown-toggle {% nav_active_class current 'list_members' %} " data-toggle="dropdown"
+            <a href="#" class="nav-link dropdown-toggle {% nav_active_class current 'list_members' %} " data-bs-toggle="dropdown"
                role="button" aria-haspopup="true" aria-expanded="false">
                 {% trans 'Users' %}<span class="caret"></span>
             </a>
@@ -54,7 +54,7 @@
         <li role="tab" class="nav-item"><a href="{% url 'list_template_list' list.list_id %}" class="nav-link {% nav_active_class current 'templates' %}">{% trans 'Templates' %}</a></li>
         <li role="tab" class="nav-item"><a href="{% url 'list_settings' list.list_id %}" class="nav-link {% nav_active_class current 'list_settings' %} ">{% trans 'Settings' %}</a></li>
         <li role="tab" class="dropdown nav-item">
-            <a href="#" class="{% nav_active_class current 'list_mass_ops' %} dropdown-toggle nav-link" data-toggle="dropdown"
+            <a href="#" class="{% nav_active_class current 'list_mass_ops' %} dropdown-toggle nav-link" data-bs-toggle="dropdown"
                role="button" aria-haspopup="true" aria-expanded="false">
                 {% trans 'Mass operations' %}<span class="caret"></span>
             </a>
