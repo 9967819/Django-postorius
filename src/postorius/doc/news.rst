@@ -30,6 +30,11 @@ UI
 
 * Use RFC 2047 decoded user names in the confirm_token view. (Fixes #564)
 
+A11y
+----
+* Do not mark the List navigation as "tablist" since they are just using
+  tab like style but aren't true tabs as the page refreshes. (Closes #491)
+
 .. _NEWS-1.3.8:
 
 1.3.8
