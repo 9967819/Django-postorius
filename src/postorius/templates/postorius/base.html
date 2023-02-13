@@ -3,159 +3,161 @@
 {% load p_gravatar %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block head_title %}{{ site_name }}{% endblock %}</title>
-    <link rel="shortcut icon" href="{% static 'postorius/img/favicon.ico' %}">
-    <link rel="stylesheet" href="{% static 'postorius/libs/bootstrap/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'django-mailman3/css/main.css' %}">
-    <link rel="stylesheet" href="{% static 'postorius/css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'postorius/libs/fonts/font-awesome/css/font-awesome.min.css' %}" type="text/css" media="all" />
-    {% block additionalcss %}{% endblock %}
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block head_title %}{{ site_name }}{% endblock %}</title>
+        <link rel="shortcut icon" href="{% static 'postorius/img/favicon.ico' %}">
+        <link rel="stylesheet" href="{% static 'postorius/libs/bootstrap/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'django-mailman3/css/main.css' %}">
+        <link rel="stylesheet" href="{% static 'postorius/css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'postorius/libs/fonts/font-awesome/css/font-awesome.min.css' %}" type="text/css" media="all" />
+        {% block additionalcss %}{% endblock %}
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
       <script src="{% static 'postorius/libs/html5shiv/html5shiv.min.js' %}"></script>
       <script src="{% static 'postorius/libs/respond/respond.min.js' %}"></script>
     <![endif]-->
-</head>
-<body>
-  <nav class="navbar navbar-expand-md navbar-light bg-light navbar-default">
-    <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#header-nav" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="fa fa-bars"></span>
-                </button>
-                <a class="navbar-brand" href="{% url 'list_index' %}"><span><img src="{% static 'postorius/img/mailman_logo_small_trans.png' %}" alt="{% trans 'Mailman logo' %}"/> Postorius</span></a>
-            </div>
-            <div class="collapse navbar-collapse" id="header-nav">
-                <ul class="nav navbar-nav mr-auto">
-                    <li class="nav-item"><a href="{% url 'list_index' %}" class="nav-link">
-                        <span class="fa fa-envelope"></span>
-                        {% trans 'Lists' %}
-                    </a></li>
-                    {% if user.is_superuser %}
-                        <li class="nav-item">
-                          <a href="{% url 'domain_index' %}" class="nav-link">
-                            <span class="fa fa-globe"></span>
-                            {% trans 'Domains' %}
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{% url 'global_bans' %}" class="nav-link">
-                                <span class="fa fa-ban"></span>
-                                {% trans 'Bans' %}
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{% url 'system_information' %}" class="nav-link">
-                                <span class="fa fa-list-alt"></span>
-                                {% trans 'System Information' %}
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{% url 'list_users' %}" class="nav-link">
-                                <span class="fa fa-user"></span>
-                                {% trans 'Users' %}
-                            </a>
-                        </li>
-                    {% endif %}
-                    {% if 'hyperkitty' in INSTALLED_APPS %}
-                        <li class="nav-item"><a href="{% url 'hk_root' %}" class="nav-link">
-                            <span class="fa fa-comment"></span>
-                            {% trans 'Archives' %}
+    </head>
+    <body>
+        <header class="navbar navbar-expand-lg bd-navbar">
+            <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap navbar-default">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#header-nav" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <a class="navbar-brand me-0 me-lg-2" href="{% url 'list_index' %}">
+                        <span><img src="{% static 'postorius/img/mailman_logo_small_trans.png' %}" alt="{% trans 'Mailman logo' %}"/> Postorius</span>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="header-nav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a href="{% url 'list_index' %}" class="nav-link">
+                            <span class="fa fa-envelope"></span>
+                            {% trans 'Lists' %}
                         </a></li>
-                    {% endif %}
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    {% if user.is_authenticated %}
-                        <li class="dropdown nav-item">
-                            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"
-                               role="button" aria-haspopup="true" aria-expanded="false">
-                                {% gravatar user.email 20 %}
-                                {{ user.username|truncatechars:"35" }}
-                                <span class="caret"></span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <a href="{% url 'mm_user_profile' %}" class="dropdown-item">
+                        {% if user.is_superuser %}
+                            <li class="nav-item">
+                                <a href="{% url 'domain_index' %}" class="nav-link">
+                                    <span class="fa fa-globe"></span>
+                                    {% trans 'Domains' %}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{% url 'global_bans' %}" class="nav-link">
+                                    <span class="fa fa-ban"></span>
+                                    {% trans 'Bans' %}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{% url 'system_information' %}" class="nav-link">
+                                    <span class="fa fa-list-alt"></span>
+                                    {% trans 'System Information' %}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{% url 'list_users' %}" class="nav-link">
                                     <span class="fa fa-user"></span>
-                                    {% trans 'Account' %}
+                                    {% trans 'Users' %}
                                 </a>
-                                <a href="{% url 'ps_user_profile' %}" class="dropdown-item">
-                                    <span class="fa fa-cog"></span>
-                                    {% trans 'Mailman settings' %}
-                                </a>
-                                {% if 'hyperkitty' in INSTALLED_APPS %}
-                                <a href="{% url 'hk_user_profile' %}" class="dropdown-item">
+                            </li>
+                        {% endif %}
+                        {% if 'hyperkitty' in INSTALLED_APPS %}
+                            <li class="nav-item"><a href="{% url 'hk_root' %}" class="nav-link">
                                 <span class="fa fa-comment"></span>
+                                {% trans 'Archives' %}
+                            </a></li>
+                        {% endif %}
+                    </ul>
+                    <ul class="navbar-nav">
+                        {% if not user.is_authenticated %}
+                            <li class="nav-item"><a class="nav-link" href="{% url LOGIN_URL %}?next={{ next|default:request.path|urlencode }}">
+                                <span class="fa fa-sign-in"></span>
+                                {% trans 'Sign In' %}
+                            </a>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'account_signup' %}?next={{next|default:request.path|urlencode}}">
+                                <span class="fa fa-user-plus"></span>
+                                {% trans 'Sign Up' %}
+                            </a>
+                        {% endif %}
+                    </ul>
+                </div>
+                    <div class="dropdown nav-item">
+                    {% if user.is_authenticated %}
+                        <button href="#" class="btn btn-primary user-button dropdown-toggle" data-bs-toggle="dropdown"
+                            role="button" aria-haspopup="true" aria-expanded="false">
+                            {% gravatar user.email 40 user.email %}
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <span class="username dropdown-item">{{ user.username|truncatechars:"35" }}</span>
+                            <div class="dropdown-divider"></div>
+                            <a href="{% url 'mm_user_profile' %}" class="dropdown-item">
+                                <span class="fa fa-user"></span>
+                                {% trans 'Account' %}
+                            </a>
+                            <a href="{% url 'ps_user_profile' %}" class="dropdown-item">
+                                <span class="fa fa-cog"></span>
+                                {% trans 'Mailman settings' %}
+                            </a>
+                            {% if 'hyperkitty' in INSTALLED_APPS %}
+                                <a href="{% url 'hk_user_profile' %}" class="dropdown-item">
+                                    <span class="fa fa-comment"></span>
                                     {% trans 'Posting activity' %}
                                 </a>
-                                {% endif %}
-                                <div class="dropdown-divider"></div>
-                                <a href="{% url LOGOUT_URL %}?next={% url 'list_index' %}" class="dropdown-item">
-                                    <span class="fa fa-sign-out"></span>
-                                    {% trans 'Logout' %}
-                                </a>
-                            </div>
-                        </li>
-                    {% else %}
-                        <li class="nav-item"><a class="nav-link" href="{% url LOGIN_URL %}?next={{ next|default:request.path|urlencode }}">
-                            <span class="fa fa-sign-in"></span>
-                            {% trans 'Login' %}
-                        </a></li>
-                        <li  class="nav-item"><a class="nav-link" href="{% url 'account_signup' %}?next={{next|default:request.path|urlencode}}">
-                            <span class="fa fa-user-plus"></span>
-                            {% trans 'Sign Up' %}
-                        </a></li>
+                            {% endif %}
+                            <div class="dropdown-divider"></div>
+                            <a href="{% url LOGOUT_URL %}?next={% url 'list_index' %}" class="dropdown-item">
+                                <span class="fa fa-sign-out"></span>
+                                {% trans 'Logout' %}
+                            </a>
+                        </div>
                     {% endif %}
-                </ul>
-            </div>
-            </div>
-    </nav>
+                </div>
+            </nav>
+        </header>
 
-    <div class="container" role="main">
-        {% for message in messages %}
-        <div class="alert alert-{{ message.tags }} fade show" role="alert">
-            {{ message }}
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
+
+        <div class="container-xxl" role="main">
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} fade show alert-dismissible" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+            {% block content %}{% endblock content %}
         </div>
-        {% endfor %}
-        {% block content %}{% endblock content %}
-    </div>
 
-    <footer class="footer">
-        <div class="container">
-            <p class="text-center">
-                <a href="https://postorius.readthedocs.org">{% trans 'Postorius Documentation' %}</a>
-                &bull;
-                <a href="http://list.org">GNU Mailman</a>
-                &bull;
-                {% trans 'Postorius Version' %} {{ POSTORIUS_VERSION }}
-                {% if mailman_day %}
-                &bull;
-                {% trans 'Happy Mailman Day!' %}
-                {% endif %}
-            </p>
-        </div>
-    </footer>
+        <footer class="footer">
+            <div class="container">
+                <p class="text-center">
+                    <a href="https://postorius.readthedocs.org">{% trans 'Postorius Documentation' %}</a>
+                    &bull;
+                    <a href="https://list.org">GNU Mailman</a>
+                    &bull;
+                    {% trans 'Postorius Version' %} {{ POSTORIUS_VERSION }}
+                    {% if mailman_day %}
+                        &bull;
+                        {% trans 'Happy Mailman Day!' %}
+                    {% endif %}
+                </p>
+            </div>
+        </footer>
 
-    <script src="{% static 'postorius/libs/jquery/jquery-3.6.0.min.js' %}"></script>
-    <script src="{% static 'postorius/libs/popperjs/popper-v1.11.0.min.js' %}"></script>
-    <script src="{% static 'postorius/libs/bootstrap/js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'django-mailman3/js/main.js' %}"></script>
-    <script src="{% static 'postorius/js/script.js' %}"></script>
-    <script>
-      // Add the .js-enabled class to the body so we can style the elements
-      // depending on whether Javascript is enabled.
-      $(document).ready(function(){
-          $("body").addClass("js-enabled");
-      });
-    </script>
-    {% block additionaljs %}{% endblock %}
-</body>
+        <script src="{% static 'postorius/libs/jquery/jquery-3.6.0.min.js' %}"></script>
+        <script src="{% static 'postorius/libs/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'django-mailman3/js/main.js' %}"></script>
+        <script src="{% static 'postorius/js/script.js' %}"></script>
+        <script>
+            // Add the .js-enabled class to the body so we can style the elements
+            // depending on whether Javascript is enabled.
+            $(document).ready(function(){
+                $("body").addClass("js-enabled");
+                $(".gravatar").addClass("rounded-circle");
+            });
+        </script>
+        {% block additionaljs %}{% endblock %}
+    </body>
 </html>

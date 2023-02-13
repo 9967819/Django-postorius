@@ -38,9 +38,19 @@
                         {{ field|add_form_control }}
                         <a href="" class="up"><span class="fa fa-arrow-up"></span></a>
                         <a href="" class="down"><span class="fa fa-arrow-down"></span></a>
+                    </td>
+                    {% elif field|fieldtype_is:"CheckboxInput" %}
+                    <td>
+                        {{ field }}
+                    </td>
+                    {% elif field|fieldtype_is:"Select" %}
+                    <td>
+                        {{ field|add_form_select }}
+                    </td>
                     {% else %}
                     <td>
                         {{ field|add_form_control }}
+                    </td>
                     {% endif %}
                         <div class="text-danger">{{ field.errors }}</div>
                     </td>

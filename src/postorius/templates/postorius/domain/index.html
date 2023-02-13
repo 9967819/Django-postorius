@@ -11,7 +11,7 @@
         {% trans 'Domains' %}
     </header>
 
-    <p class="text-right"><a class="btn btn-success" href="{% url 'domain_new' %}">{% trans 'Add Domain' %}</a></p>
+    <div class="d-flex flex-row-reverse mb-2"><a class="btn btn-success" href="{% url 'domain_new' %}">{% trans 'Add Domain' %}</a></div>
 
     {% if domains %}
     <div class="table-responsive">

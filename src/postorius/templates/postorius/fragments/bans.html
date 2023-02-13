@@ -3,13 +3,13 @@
 {% load pagination %}
 
 <!-- Add ban -->
-<form action="{{ formurl }}" method="POST" class="form-inline bans-add-form">
+<form action="{{ formurl }}" method="POST" class="form-inline bans-add-form row g-3 align-items-center">
     {% csrf_token %}
     <div class="form-group {% if addban_form.email.errors %}has-error{% endif %}">
         {% if addban_form.email.errors %}
-        <div class="alert alert-danger">{{ addban_form.email.errors }}</div>
+            <div class="alert alert-danger">{{ addban_form.email.errors }}</div>
         {% endif %}
-        {{ addban_form.email.label_tag }}
+        <span class="fw-bold">{{ addban_form.email.label_tag }}</span>
         {{ addban_form.email|add_form_control }}
         <button class="btn btn-primary" type="submit" name="add">{% trans 'Ban email' %}</button>
         <div id="help-{{ addban_form.email.id_for_label }}" class="help-block text-muted">

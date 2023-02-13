@@ -11,9 +11,9 @@
 
     {% list_nav 'templates' 'msgid:title:list_templates' %}
 
-<p class="text-right"><a href="{% url 'list_template_new' list.list_id %}" class="btn btn-success">{% trans 'New Template' %}</a></p>
-
-
+<div class="d-flex flex-row-reverse">
+  <a href="{% url 'list_template_new' list.list_id %}" class="btn btn-success">{% trans 'New Template' %}</a>
+</div>
 
 {% if object_list %}
 

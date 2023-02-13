@@ -28,7 +28,7 @@
           <th>{% trans 'Email' %}</th>
           {% for field in form.visible_fields %}
           <th>
-            <label for="{{ field.id_for_label }}"><a data-toggle="tooltip" title="{{ field.help_text }}">{{ field.label }}</a></label>
+            <label for="{{ field.id_for_label }}"><a data-bs-toggle="tooltip" title="{{ field.help_text }}">{{ field.label }}</a></label>
           </th>
           {% endfor %}
         </tr>
@@ -38,7 +38,7 @@
         <tr>
           <td>{{ form.address.email }}</td>
           {% for field in form %}
-          <td>{{ field|add_form_control }}</td>
+          <td>{{ field }}</td>
           {% endfor %}
         </tr>
         {% endfor %}
@@ -61,10 +61,10 @@
         <tr>
           <th>{% trans 'List' %}</th>
           <th>{% trans 'Address' %}</th>
-          <th>{% trans 'Role' %}</th>          
+          <th>{% trans 'Role' %}</th>
           {% for field in form.visible_fields %}
           <th>
-            <label for="{{ field.id_for_label }}"><a data-toggle="tooltip" title="{{ field.help_text }}">{{ field.label }}</a></label>
+            <label for="{{ field.id_for_label }}"><a data-bs-toggle="tooltip" title="{{ field.help_text }}">{{ field.label }}</a></label>
           </th>
           {% endfor %}
         </tr >
