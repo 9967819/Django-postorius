@@ -711,6 +711,7 @@ def list_mass_subscribe(request, list_id):
     mailing_list = List.objects.get_or_404(fqdn_listname=list_id)
     if request.method == 'POST':
         form = ListMassSubscription(request.POST)
+        failed = []
         if form.is_valid():
             for data in form.cleaned_data['emails']:
                 try:
@@ -758,6 +759,7 @@ def list_mass_subscribe(request, list_id):
                     )
                 except HTTPError as e:
                     messages.error(request, e)
+                    failed.append(address)
                 except ValidationError:
                     messages.error(
                         request,
@@ -766,6 +768,14 @@ def list_mass_subscribe(request, list_id):
                     # When the email address is bad, set the focus back to the
                     # email field after returning to the same page.
                     form.fields['emails'].widget.attrs['autofocus'] = True
+                    failed.append(address)
+        # Make a copy of the initial list of emails and update just the
+        # emails to only the failed ones, so they are populated for being
+        # fixed by the list owner.
+        initial = form.cleaned_data.copy()
+        initial['emails'] = failed
+        # Re-initialize the form with the data.
+        form = ListMassSubscription(initial=initial)
     else:
         form = ListMassSubscription()
     return render(
