@@ -23,6 +23,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 =====
 
 * Honor per-list member roster visibility options (Closes #369)
+* Migrate to Bootstrap 5. (See !769)
 
 UI
 --
