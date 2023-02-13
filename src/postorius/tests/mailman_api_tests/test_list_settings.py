@@ -530,3 +530,33 @@ class ListSettingsTest(ViewTestCase):
         # Get a new list object to avoid caching
         settings._reset_cache()
         self.assertEqual(settings.get('accept_these_nonmembers'), [])
+
+    def test_mass_subscribe_form_removes_succeeded_emails(self):
+        # Test that after the mass-subscribe succeeds that it removes
+        # the list of emails from the pre-populated list (form initial data).
+        self.client.login(username='testsu', password='testpass')
+        updated_values = {
+            # 2nd line is an invalid email with no @
+            'emails': 'john4@example.com\njohn5example.com',
+            'pre_verified': True,
+            'pre_confirmed': True,
+            'pre_approved': True,
+        }
+        url = reverse('mass_subscribe', args=('foo.example.com',))
+        response = self.client.post(url, updated_values)
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(
+            b'The address john4@example.com has been subscribed to'
+            b' foo@example.com.',
+            response.content,
+        )
+        self.assertIn(
+            b'The email address john5example.com is not valid.',
+            response.content,
+        )
+        subform = response.context['form']
+        emails = subform.get_initial_for_field(
+            subform.fields['emails'], 'emails'
+        )
+        # Assert that only invalid value is in the form.
+        self.assertEqual(emails, ['john5example.com'])
