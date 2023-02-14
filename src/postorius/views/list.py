@@ -1256,6 +1256,7 @@ def _list_subscriptions(
             'paginated_requests': paginated_requests,
             'page_title': page_title,
             'page_subtitle': page_subtitle,
+            'request_type': request_type,
         },
     )
 
@@ -1281,6 +1282,7 @@ def handle_subscription_request(request, list_id, request_id):
     for each in confirmation_messages:
         if each in request.POST:
             action = each
+            break
     # If None of the actions were specified, just raise an error and return.
     m_list = List.objects.get_or_404(fqdn_listname=list_id)
     if action is None:
@@ -1300,6 +1302,14 @@ def handle_subscription_request(request, list_id, request_id):
             messages.error(
                 request, _('The request could not be moderated: %s') % e.reason
             )
+    # Determine the kind of request we handled using the 'kind' POST param.
+    req_kind = request.POST.get('kind')
+    if req_kind == 'unsubscription':
+        return redirect('list_unsubscription_requests', m_list.list_id)
+    elif req_kind == 'confirmation':
+        return redirect('list_pending_confirmation', m_list.list_id)
+
+    # The default is the list_subscription page.
     return redirect('list_subscription_requests', m_list.list_id)
 
 

@@ -339,7 +339,7 @@ class ListSettingsTest(ViewTestCase):
         self.assertTrue(response.status_code, 302)
         self.assertTrue(
             response.url,
-            '/postorius/lists/foo.example.com/subscription_requests',
+            '/postorius/lists/foo.example.com/unsubscription_requests',
         )
         self.assertEqual(len(self.foo_list.requests), 0)
         self.assertEqual(len(self.foo_list.members), 0)
