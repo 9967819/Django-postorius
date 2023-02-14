@@ -37,6 +37,8 @@ A11y
 * Remove successfully subscribed addresses from the form when the page
   returns in the mass-subscription page. (Closes #494)
 * Add a label for the checkbox in the Held messages list page. (Closes #501)
+* Redirect to the right page when submitting on un-subscription request
+  and pending confirmation requests. (Closes #482)
 
 
 .. _NEWS-1.3.8:
