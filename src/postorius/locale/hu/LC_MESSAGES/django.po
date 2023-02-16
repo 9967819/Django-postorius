@@ -2,7 +2,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # balping <balping314@gmail.com>, 2020.
-# Peter Donka <peter.donka@gmail.com>, 2021, 2022.
+# Peter Donka <peter.donka@gmail.com>, 2021, 2022, 2023.
 # -- <eneremen@gmail.com>, 2021.
 # f3rr31 <5920873@disroot.org>, 2021.
 msgid ""
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 12:46-0800\n"
-"PO-Revision-Date: 2022-07-04 21:13+0000\n"
+"PO-Revision-Date: 2023-02-16 13:39+0000\n"
 "Last-Translator: Peter Donka <peter.donka@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/hu/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1-dev\n"
+"X-Generator: Weblate 4.16-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -233,14 +233,12 @@ msgid "Yearly"
 msgstr "Éves"
 
 #: forms/list_forms.py:51
-#, fuzzy
-#| msgid "Only mailinglist moderators"
 msgid "Only mailinglist administrators"
-msgstr "Csak levelezőlista moderátorok"
+msgstr "Csak levelezőlista adminisztrátorok"
 
 #: forms/list_forms.py:52
 msgid "Mailinglist administrators and members"
-msgstr ""
+msgstr "Levelezőlista adminisztrátorok és tagok"
 
 #: forms/list_forms.py:53
 msgid "Anyone"
@@ -1712,21 +1710,14 @@ msgid "Hide address"
 msgstr "Cím elrejtése"
 
 #: forms/user_forms.py:90
-#, fuzzy
-#| msgid ""
-#| "When someone views the list membership, your email address is normally "
-#| "shown (in an obscured fashion to thwart spam harvesters). If you do not "
-#| "want your email address to show up on this membership roster at all, "
-#| "select Yes for this option."
 msgid ""
 "When other members allowed to view the list membership, your email address "
 "is normally shown. If you do not want your email address to show up on this "
 "membership roster, select Yes for this option."
 msgstr ""
-"Amikor valaki megtekinti a listatagságot, az Ön e-mail címe általában "
-"megjelenik (homályos módon, hogy meghiúsítsa a spammerek munkáját). Ha "
-"egyáltalán nem szeretné, hogy az e-mail-címe megjelenjen ezen a tagsági "
-"listán, válassza az Igen lehetőséget."
+"Amikor más tagok számára engedélyezik a listatagság megtekintését, az Ön e-"
+"mail címe általában megjelenik. Ha nem szeretné, hogy az e-mail címe "
+"megjelenjen ezen a taglistán, válassza az Igen lehetőséget."
 
 #: forms/user_forms.py:99
 msgid "Receive list copies (possible duplicates)"
@@ -2401,28 +2392,21 @@ msgid "Unsubscribe all members"
 msgstr "Minden tag leiratkozása"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:14
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "        Are you sure you want to unsubscribe all members from "
-#| "%(listname)s?\n"
-#| "    "
+#, python-format
 msgid ""
 "\n"
 "        Warning! This will remove every member from %(listname)s!\n"
 "    "
 msgstr ""
 "\n"
-"        Biztosan leiratkoztat minden tagot a %(listname)s listáról!\n"
+"        Figyelem! Ez minden tagot eltávolít a %(listname)s oldalról !\n"
 "    "
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:21
 #: templates/postorius/lists/mass_removal.html:17
 #: templates/postorius/lists/members.html:63
-#, fuzzy
-#| msgid "List members"
 msgid "Remove ALL members"
-msgstr "A tagok listája"
+msgstr "MINDEN tag eltávolítása"
 
 #: templates/postorius/lists/confirm_token.html:12
 #, python-format
@@ -2544,7 +2528,7 @@ msgstr "Az üzenet nem olvasható be"
 
 #: templates/postorius/lists/mass_removal.html:14
 msgid "Remove listed users"
-msgstr ""
+msgstr "Listázott felhasználók eltávolítása"
 
 #: templates/postorius/lists/mass_subscribe.html:7
 #: templates/postorius/menu/list_nav.html:62
@@ -2582,7 +2566,7 @@ msgstr "CSV exportálása"
 
 #: templates/postorius/lists/members.html:62
 msgid "Remove Selected"
-msgstr ""
+msgstr "Kiválasztott eltávolítása"
 
 #: templates/postorius/lists/members.html:78
 #: templates/postorius/user/address_preferences.html:32
@@ -2600,14 +2584,12 @@ msgid "Moderation Action"
 msgstr "Moderálási művelet"
 
 #: templates/postorius/lists/members.html:90
-#, fuzzy
-#| msgid "Bounce score threshold"
 msgid "Bounce Score"
-msgstr "Visszapattanási ponthatár"
+msgstr "Visszapattanási pontszám"
 
 #: templates/postorius/lists/members.html:116
 msgid "Masked per the user request"
-msgstr ""
+msgstr "A felhasználó kérésére maszkolt"
 
 #: templates/postorius/lists/new.html:6 templates/postorius/lists/new.html:17
 msgid "Create list"
