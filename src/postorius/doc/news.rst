@@ -39,6 +39,7 @@ A11y
 * Add a label for the checkbox in the Held messages list page. (Closes #501)
 * Redirect to the right page when submitting on un-subscription request
   and pending confirmation requests. (Closes #482)
+* Use white hamburger lines for better contrast with blue top bar. (See #569)
 
 
 .. _NEWS-1.3.8:
