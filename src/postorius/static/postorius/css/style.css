@@ -68,10 +68,14 @@ header.navbar {
     background-color: rgb(8, 109, 215);
     min-height: 59px;
 }
+
 .navbar-default .navbar-brand {
     color: white;
 }
 .navbar-default a.nav-link {
+    color: white;
+}
+.navbar-default .fa-bars {
     color: white;
 }
 .navbar-brand img {
