@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # dpa-weblate@aegee.org <dpa-weblate@aegee.org>, 2022.
-# Дилян Палаузов <dpa-weblate@aegee.org>, 2022.
+# Дилян Палаузов <dpa-weblate@aegee.org>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 12:46-0800\n"
-"PO-Revision-Date: 2022-10-27 19:03+0000\n"
+"PO-Revision-Date: 2023-02-19 17:21+0000\n"
 "Last-Translator: Дилян Палаузов <dpa-weblate@aegee.org>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/bg/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2-dev\n"
+"X-Generator: Weblate 4.16-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -80,7 +80,7 @@ msgstr "Адрес на собственика"
 
 #: forms/fields.py:36
 msgid "Regular"
-msgstr ""
+msgstr "Редовен"
 
 #: forms/fields.py:37
 msgid "Plain Text Digests"
@@ -214,10 +214,8 @@ msgid "Yearly"
 msgstr "Годишно"
 
 #: forms/list_forms.py:51
-#, fuzzy
-#| msgid "Only mailinglist moderators"
 msgid "Only mailinglist administrators"
-msgstr "Само модератори на пощенския списък"
+msgstr "Само администратори на пощенския списък"
 
 #: forms/list_forms.py:52
 msgid "Mailinglist administrators and members"
@@ -1588,20 +1586,14 @@ msgid "Hide address"
 msgstr "Скрий адрес"
 
 #: forms/user_forms.py:90
-#, fuzzy
-#| msgid ""
-#| "When someone views the list membership, your email address is normally "
-#| "shown (in an obscured fashion to thwart spam harvesters). If you do not "
-#| "want your email address to show up on this membership roster at all, "
-#| "select Yes for this option."
 msgid ""
 "When other members allowed to view the list membership, your email address "
 "is normally shown. If you do not want your email address to show up on this "
 "membership roster, select Yes for this option."
 msgstr ""
-"Когато някой преглежда списъка на абонатите, твоят електронен адрес "
-"обикновено се показва (закодиран, за да не го намират спамъри). Ако не искаш "
-"адресът ти да се показва в списъка с абонати, избери „Да“ тук."
+"Когато други членове преглеждат абонатите, твоят електронен адрес обикновено "
+"се показва. Ако не искаш адресът ти да се показва в списъка с абонати, "
+"избери „Да“ тук."
 
 #: forms/user_forms.py:99
 msgid "Receive list copies (possible duplicates)"
@@ -2289,10 +2281,8 @@ msgstr ""
 #: templates/postorius/lists/confirm_removeall_subscribers.html:21
 #: templates/postorius/lists/mass_removal.html:17
 #: templates/postorius/lists/members.html:63
-#, fuzzy
-#| msgid "List members"
 msgid "Remove ALL members"
-msgstr "Абонати на списъка"
+msgstr "Изтрий ВСИЧКИ абонати"
 
 #: templates/postorius/lists/confirm_token.html:12
 #, python-format
@@ -3310,9 +3300,8 @@ msgid "Attachment does not exist"
 msgstr "Прикаченият файл не съществува"
 
 #: views/system.py:31
-#, fuzzy
 msgid "Mailman Core Version"
-msgstr "Настройки на Mailman"
+msgstr "Версия на Mailman Core"
 
 #: views/system.py:32
 msgid "Mailman Core API Version"
