@@ -633,3 +633,58 @@ class TestManageUser(ViewTestCase):
         self.assertTrue(
             self.client.login(username='myuser', password='newpsdsd1987')
         )
+
+    def test_delete_user(self):
+        user = User.objects.create_user(
+            'deluser1', 'deluser1@example.com', 'delpassword1'
+        )
+        EmailAddress.objects.create(user=user, email=user.email, verified=True)
+        mm_user = get_mailman_user(user)
+        self.client.force_login(self.su)
+        response = self.client.post(
+            reverse('delete_user', args=[mm_user.user_id]),
+            follow=True,
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(
+            'Successfully deleted account',
+            response.content.decode(),
+        )
+        self.assertRaises(
+            User.DoesNotExist, User.objects.get, email='deluser1@example.com'
+        )
+        self.assertRaises(
+            Mailman404Error,
+            MailmanUser.objects.get,
+            address='deluser1@example.com',
+        )
+
+    def test_delete_user_multiple_emails(self):
+        user = User.objects.create_user(
+            'deluser2', 'deluser2@example.com', 'delpassword2'
+        )
+        EmailAddress.objects.create(user=user, email=user.email, verified=True)
+        EmailAddress.objects.create(
+            user=user, email='deluser2-another@example.com', verified=True
+        )
+        mm_user = get_mailman_user(user)
+        address = mm_user.add_address('deluser2-another@example.com')
+        address.verify()
+        self.client.force_login(self.su)
+        response = self.client.post(
+            reverse('delete_user', args=[mm_user.user_id]),
+        )
+        self.assertEqual(response.status_code, 302)
+        self.assertRaises(
+            User.DoesNotExist, User.objects.get, email='deluser2@example.com'
+        )
+        self.assertRaises(
+            Mailman404Error,
+            MailmanUser.objects.get,
+            address='deluser2@example.com',
+        )
+        self.assertRaises(
+            Mailman404Error,
+            MailmanUser.objects.get,
+            address='deluser2-another@example.com',
+        )

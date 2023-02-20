@@ -504,3 +504,23 @@ def manage_user(request, user_id):
             'subscriptions': subscriptions,
         },
     )
+
+
+@superuser_required
+def delete_user(request, user_id):
+    client = get_mailman_client()
+    user = client.get_user(user_id)
+    django_user = get_django_user(user)
+    if request.method == 'POST':
+        try:
+            user.delete()
+            if django_user:
+                django_user.delete()
+        except HTTPError as e:
+            messages.error(request, e.msg)
+        else:
+            messages.success(request, _('Successfully deleted account'))
+        return redirect(reverse('list_users'))
+    return render(
+        request, 'postorius/user/confirm_delete.html', {'auser': user}
+    )

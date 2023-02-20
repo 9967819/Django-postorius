@@ -257,4 +257,9 @@ urlpatterns = [
         user_views.manage_user,
         name='manage_user',
     ),
+    re_path(
+        r'users/(?P<user_id>[^/]+)/delete$',
+        user_views.delete_user,
+        name='delete_user',
+    ),
 ]
