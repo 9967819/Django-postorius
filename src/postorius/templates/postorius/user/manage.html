@@ -116,4 +116,6 @@
   <input class="btn btn-primary btn-sm" name="change_password" type="submit" value="{% trans 'Change password' %}">
 </form>
 {% endif %}
+<h4>{% trans 'Delete Account' %}</h4>
+<a class="btn btn-primary btn-sm" href={% url 'delete_user' auser.user_id %}>Delete</a>
 {% endblock content %}

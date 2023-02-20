@@ -44,6 +44,7 @@
         <td> {{ auser.created_on|datetime_parse|date:"DATETIME_FORMAT" }}</td>
         <td>
           <a class="btn btn-primary btn-sm" href={% url 'manage_user' auser.user_id %}>Manage</a>
+          <a class="btn btn-primary btn-sm" href={% url 'delete_user' auser.user_id %}>Delete</a>
         </td>
       </tr>
       {% endfor %}
