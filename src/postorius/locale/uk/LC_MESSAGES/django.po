@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-16 12:47-0800\n"
+"POT-Creation-Date: 2023-02-21 23:44+0000\n"
 "PO-Revision-Date: 2022-11-09 17:30+0000\n"
 "Last-Translator: Sergii Horichenko <m@sgg.im>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -54,7 +54,7 @@ msgstr ""
 "testing@example.com, уведіть тут example.com."
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:22
-#: templates/postorius/index.html:82
+#: templates/postorius/index.html:83
 msgid "Description"
 msgstr "Опис"
 
@@ -401,7 +401,7 @@ msgstr ""
 #: forms/list_forms.py:278 forms/list_forms.py:766
 #: templates/postorius/lists/held_messages.html:30
 #: templates/postorius/lists/held_messages.html:108
-#: templates/postorius/lists/pending_confirmations.html:36
+#: templates/postorius/lists/pending_confirmations.html:37
 #: templates/postorius/lists/subscription_requests.html:37
 msgid "Discard"
 msgstr "Відкинути"
@@ -2036,69 +2036,71 @@ msgstr "Під час виконання Вашого запиту виникл�
 msgid "Global Bans"
 msgstr "Глобальні блокування (бан)"
 
-#: templates/postorius/base.html:32
+#: templates/postorius/base.html:33
 msgid "Mailman logo"
 msgstr "Лого Mailman"
 
-#: templates/postorius/base.html:38
+#: templates/postorius/base.html:40
 msgid "Lists"
 msgstr "Списки"
 
-#: templates/postorius/base.html:44 templates/postorius/domain/index.html:5
+#: templates/postorius/base.html:46 templates/postorius/domain/index.html:5
 #: templates/postorius/domain/index.html:11
 msgid "Domains"
 msgstr "Домени"
 
-#: templates/postorius/base.html:50
+#: templates/postorius/base.html:52
 msgid "Bans"
 msgstr "Бани"
 
-#: templates/postorius/base.html:56
+#: templates/postorius/base.html:58
 msgid "System Information"
 msgstr "Системна інформація"
 
-#: templates/postorius/base.html:62 templates/postorius/menu/list_nav.html:40
+#: templates/postorius/base.html:64 templates/postorius/menu/list_nav.html:40
 #: templates/postorius/user/all.html:8 templates/postorius/user/all.html:13
 msgid "Users"
 msgstr "Користувачі"
 
-#: templates/postorius/base.html:69 templates/postorius/lists/summary.html:33
+#: templates/postorius/base.html:71 templates/postorius/lists/summary.html:33
 msgid "Archives"
 msgstr "Архіви"
 
-#: templates/postorius/base.html:85
-msgid "Account"
-msgstr "Обліковий запис"
+#: templates/postorius/base.html:79
+#, fuzzy
+#| msgid "Sign Up"
+msgid "Sign In"
+msgstr "Зареєструватися"
 
-#: templates/postorius/base.html:89
-msgid "Mailman settings"
-msgstr "Налаштування Mailman"
-
-#: templates/postorius/base.html:94
-msgid "Posting activity"
-msgstr "Активність"
-
-#: templates/postorius/base.html:100
-msgid "Logout"
-msgstr "Вийти"
-
-#: templates/postorius/base.html:107
-msgid "Login"
-msgstr "Вхід"
-
-#: templates/postorius/base.html:111
+#: templates/postorius/base.html:83
 msgid "Sign Up"
 msgstr "Зареєструватися"
 
-#: templates/postorius/base.html:134
+#: templates/postorius/base.html:99
+msgid "Account"
+msgstr "Обліковий запис"
+
+#: templates/postorius/base.html:103
+msgid "Mailman settings"
+msgstr "Налаштування Mailman"
+
+#: templates/postorius/base.html:108
+msgid "Posting activity"
+msgstr "Активність"
+
+#: templates/postorius/base.html:114
+msgid "Logout"
+msgstr "Вийти"
+
+#: templates/postorius/base.html:136
 msgid "Postorius Documentation"
 msgstr "Документація Postorius"
 
-#: templates/postorius/base.html:138
+#: templates/postorius/base.html:140
 msgid "Postorius Version"
 msgstr "Версія Postorius"
 
-#: templates/postorius/base.html:141
+#: templates/postorius/base.html:143
 msgid "Happy Mailman Day!"
 msgstr "Щасливого Дня Mailman!"
 
@@ -2142,6 +2144,7 @@ msgstr "Вилучити"
 #: templates/postorius/lists/confirm_remove_role.html:23
 #: templates/postorius/lists/confirm_removeall_subscribers.html:22
 #: templates/postorius/lists/template_delete.html:25
+#: templates/postorius/user/confirm_delete.html:23
 msgid "Cancel"
 msgstr "Скасувати"
 
@@ -2229,8 +2232,8 @@ msgstr "Шаблон \"%(name)s\""
 
 #: templates/postorius/domain/template_add.html:25
 #: templates/postorius/lists/template_add.html:16
-#: templates/postorius/user/address_preferences.html:62
-#: templates/postorius/user/subscription_preferences.html:73
+#: templates/postorius/user/address_preferences.html:64
+#: templates/postorius/user/subscription_preferences.html:75
 msgid "Save"
 msgstr "Зберегти"
 
@@ -2252,7 +2255,7 @@ msgstr ""
 "           "
 
 #: templates/postorius/domain/template_index.html:16
-#: templates/postorius/lists/template_list.html:14
+#: templates/postorius/lists/template_list.html:15
 msgid "New Template"
 msgstr "Новий шаблон"
 
@@ -2294,51 +2297,51 @@ msgstr "Індекс списку"
 msgid "Mailing Lists"
 msgstr "Списки розсилок"
 
-#: templates/postorius/index.html:18
+#: templates/postorius/index.html:20
 msgid "Role: "
 msgstr "Роль: "
 
-#: templates/postorius/index.html:40
+#: templates/postorius/index.html:41
 msgid "Owner"
 msgstr "Власник"
 
-#: templates/postorius/index.html:45
+#: templates/postorius/index.html:46
 msgid "Moderator"
 msgstr "Модератор"
 
-#: templates/postorius/index.html:50
+#: templates/postorius/index.html:51
 msgid "Member"
 msgstr "Учасник"
 
-#: templates/postorius/index.html:55
+#: templates/postorius/index.html:56
 msgid "Non-member"
 msgstr "Не-учасник"
 
-#: templates/postorius/index.html:58
+#: templates/postorius/index.html:59
 msgid "All"
 msgstr "Все"
 
-#: templates/postorius/index.html:66
+#: templates/postorius/index.html:67
 msgid "Create New Domain"
 msgstr "Створити новий домен"
 
-#: templates/postorius/index.html:68
+#: templates/postorius/index.html:69
 msgid "Create New List"
 msgstr "Створити новий список"
 
-#: templates/postorius/index.html:80
+#: templates/postorius/index.html:81
 msgid "List name"
 msgstr "Назва списку"
 
-#: templates/postorius/index.html:81
+#: templates/postorius/index.html:82
 msgid "Post address"
 msgstr "Поштова адреса"
 
-#: templates/postorius/index.html:92
+#: templates/postorius/index.html:93
 msgid "unadvertised"
 msgstr "не опубліковано"
 
-#: templates/postorius/index.html:104
+#: templates/postorius/index.html:105
 msgid ""
 "Only lists that you are owner, moderator or subscriber for are shown here. "
 "Click to <a href=\"?all-lists\"> see all lists</a>."
@@ -2346,11 +2349,11 @@ msgstr ""
 "Тут відбражаються лише ті списки, де Ви є власником, модератором чи "
 "підписником. Клацніть для <a href=\"?all-lists\"> перегляду усіх списків</a>."
 
-#: templates/postorius/index.html:108
+#: templates/postorius/index.html:109
 msgid "Only admins see unadvertised lists in the list index."
 msgstr "Неопубліковані списки в індексі списків бачать лише адміністратори."
 
-#: templates/postorius/index.html:114
+#: templates/postorius/index.html:115
 msgid "There are currently no mailing lists."
 msgstr "Наразі списків розсилки немає."
 
@@ -2454,7 +2457,7 @@ msgstr ""
 msgid "Header filters"
 msgstr "Фільтри заголовків"
 
-#: templates/postorius/lists/header_matches.html:58
+#: templates/postorius/lists/header_matches.html:68
 #: templates/postorius/lists/memberoptions.html:20
 #: templates/postorius/lists/memberoptions.html:28
 #: templates/postorius/lists/settings.html:30
@@ -2463,7 +2466,7 @@ msgstr "Фільтри заголовків"
 msgid "Save changes"
 msgstr "Зберегти зміни"
 
-#: templates/postorius/lists/header_matches.html:60
+#: templates/postorius/lists/header_matches.html:70
 msgid "Changes pending, click on the button to save them."
 msgstr "Зміни не виконані. Натисніть кнопку для їх збереження."
 
@@ -2619,13 +2622,13 @@ msgstr "Адреса ел.пошти"
 msgid "Actions"
 msgstr "Дії"
 
-#: templates/postorius/lists/pending_confirmations.html:37
+#: templates/postorius/lists/pending_confirmations.html:38
 #: templates/postorius/lists/subscription_requests.html:38
 msgid "Ban"
 msgstr "Бан"
 
-#: templates/postorius/lists/pending_confirmations.html:47
-#: templates/postorius/lists/subscription_requests.html:50
+#: templates/postorius/lists/pending_confirmations.html:48
+#: templates/postorius/lists/subscription_requests.html:51
 msgid "There are currently no subscription requests for this list."
 msgstr "Запити щодо підписки на цей список розсилки наразі відсутні."
 
@@ -2913,6 +2916,21 @@ msgstr "Користувач"
 msgid "Created"
 msgstr "Створено"
 
+#: templates/postorius/user/confirm_delete.html:9
+#: templates/postorius/user/confirm_delete.html:13
+#: templates/postorius/user/confirm_delete.html:22
+#: templates/postorius/user/manage.html:119
+#, fuzzy
+#| msgid "Web Account"
+msgid "Delete Account"
+msgstr "Веб-акаунт"
+
+#: templates/postorius/user/confirm_delete.html:17
+msgid ""
+"Are you sure you want to delete this account? This will remove the account "
+"along with all its subscriptions."
+msgstr ""
+
 #: templates/postorius/user/list_options.html:14
 msgid "Subscription options for"
 msgstr "Налаштування підписки для"
@@ -3071,7 +3089,7 @@ msgstr "Реєстрація нового домена"
 msgid "Domain %s updated"
 msgstr "Домен %s оновлений"
 
-#: views/domain.py:130 views/list.py:1019
+#: views/domain.py:130 views/list.py:1029
 msgid "Please check the errors below"
 msgstr "Перевірте, будь ласка, помилки"
 
@@ -3101,7 +3119,7 @@ msgstr "Вилучаємо {} з власників {}"
 msgid "The email {} has been banned."
 msgstr "Ел.адреса {} була заблокована."
 
-#: views/generic.py:122 views/generic.py:137 views/list.py:1549
+#: views/generic.py:122 views/generic.py:137 views/list.py:1569
 #, python-format
 msgid "An error occurred: %s"
 msgstr "Виникла помилка: %s"
@@ -3216,17 +3234,17 @@ msgstr ""
 msgid "%s has been unsubscribed from this list."
 msgstr "%s скасовує підписку на цей список розсилки."
 
-#: views/list.py:737
+#: views/list.py:738
 #, python-format
 msgid "The address %(address)s has been invited to %(list)s."
 msgstr "Адреса %(address)s запрошена до списку %(list)s."
 
-#: views/list.py:742
+#: views/list.py:743
 #, python-format
 msgid "The address %(address)s has been subscribed to %(list)s."
 msgstr "Адреса %(address)s була підписана на %(list)s."
 
-#: views/list.py:747
+#: views/list.py:748
 msgid ""
 " Subscription may be pending address verification, confirmation or approval "
 "as appropriate."
@@ -3234,198 +3252,198 @@ msgstr ""
 " Підписка може затримуватися через очікування на перевірку адреси, а також "
 "підтвердження та схвалення модератором."
 
-#: views/list.py:764 views/list.py:826
+#: views/list.py:766 views/list.py:836
 #, python-format
 msgid "The email address %s is not valid."
 msgstr "Адреса %s не дійсна."
 
-#: views/list.py:795
+#: views/list.py:805
 msgid "Please fill out the form correctly."
 msgstr "Будь ласка, заповніть форму правильно."
 
-#: views/list.py:813
+#: views/list.py:823
 #, python-brace-format
 msgid "These addresses {address} have been unsubscribed from {list}."
 msgstr "Ці адреси {address} були відписані від {list}."
 
-#: views/list.py:848
+#: views/list.py:858
 msgid "The selected messages were accepted"
 msgstr "Позначені повідомлення отримані"
 
-#: views/list.py:853
+#: views/list.py:863
 msgid "The selected messages were rejected"
 msgstr "Позначені повідомлення відкинуті"
 
-#: views/list.py:858
+#: views/list.py:868
 msgid "The selected messages were discarded"
 msgstr "Позначені повідомлення відхилені"
 
-#: views/list.py:861
+#: views/list.py:871
 msgid "Message could not be found"
 msgstr "Знайти повідомлення не вийшло"
 
-#: views/list.py:892
+#: views/list.py:902
 msgid "The message was accepted"
 msgstr "Повідомлення було прийняте"
 
-#: views/list.py:895
+#: views/list.py:905
 msgid "The message was rejected"
 msgstr "Повідомлення було відкинуте"
 
-#: views/list.py:898
+#: views/list.py:908
 msgid "The message was discarded"
 msgstr "Повідомлення було відхилене"
 
-#: views/list.py:901
+#: views/list.py:911
 msgid "Held message was not found."
 msgstr "Затриманих повідомлень не знайдено."
 
-#: views/list.py:915
+#: views/list.py:925
 msgid "Moderation action for {} set to {}"
 msgstr "Дії модераторів для {} призначені {}"
 
-#: views/list.py:923
+#: views/list.py:933
 msgid "Failed to set moderation action for {}"
 msgstr "Дію модераторів для {} призначити вийшло"
 
-#: views/list.py:975
+#: views/list.py:985
 msgid "Choose a Domain"
 msgstr "Оберіть домен"
 
-#: views/list.py:999
+#: views/list.py:1009
 msgid "List created"
 msgstr "Список створений"
 
-#: views/list.py:1011
+#: views/list.py:1021
 msgid "Mailing List already exists."
 msgstr "Список розсилки вже існує."
 
-#: views/list.py:1191
+#: views/list.py:1201
 msgid "Subscriptions pending user confirmation"
 msgstr "Підписки очікують на схвалення користувачів"
 
-#: views/list.py:1204
+#: views/list.py:1214
 msgid "Subscriptions pending approval"
 msgstr "Підписки очікують схвалення"
 
-#: views/list.py:1217
+#: views/list.py:1227
 msgid "Un-subscriptions pending approval"
 msgstr "Відписки очікують схвалення"
 
-#: views/list.py:1265
+#: views/list.py:1276
 msgid "The request has been accepted."
 msgstr "Запит був схвалений."
 
-#: views/list.py:1266
+#: views/list.py:1277
 msgid "The request has been rejected."
 msgstr "Запит був відкинутий."
 
-#: views/list.py:1267
+#: views/list.py:1278
 msgid "The request has been discarded."
 msgstr "Запит був відхилений."
 
-#: views/list.py:1268
+#: views/list.py:1279
 msgid "The request has been defered."
 msgstr "Запит був відкладений."
 
-#: views/list.py:1287
+#: views/list.py:1299
 #, python-format
 msgid "The request was already moderated: %s"
 msgstr "Запит вже оброблений модератором: %s"
 
-#: views/list.py:1291
+#: views/list.py:1303
 #, python-format
 msgid "The request could not be moderated: %s"
 msgstr "Запит не може бути оброблений: %s"
 
-#: views/list.py:1297
+#: views/list.py:1317
 msgid "List Identity"
 msgstr "Ідентифікатор списку"
 
-#: views/list.py:1298
+#: views/list.py:1318
 msgid "Automatic Responses"
 msgstr "Автоматичні відповіді"
 
-#: views/list.py:1299
+#: views/list.py:1319
 msgid "Alter Messages"
 msgstr "Змінити повідомлення"
 
-#: views/list.py:1300
+#: views/list.py:1320
 msgid "DMARC Mitigations"
 msgstr "Заходи для обходу DMARC"
 
-#: views/list.py:1301
+#: views/list.py:1321
 msgid "Digest"
 msgstr "Дайджест"
 
-#: views/list.py:1302
+#: views/list.py:1322
 msgid "Message Acceptance"
 msgstr "Прийняття повідомлень"
 
-#: views/list.py:1303
+#: views/list.py:1323
 msgid "Archiving"
 msgstr "Архівація"
 
-#: views/list.py:1304
+#: views/list.py:1324
 msgid "Member Policy"
 msgstr "Політика членства"
 
-#: views/list.py:1305
+#: views/list.py:1325
 msgid "Bounce Processing"
 msgstr "Обробка повернень"
 
-#: views/list.py:1372
+#: views/list.py:1392
 msgid "The settings have been updated."
 msgstr "Налаштування оновлені."
 
-#: views/list.py:1375
+#: views/list.py:1395
 msgid "An error occurred: "
 msgstr "Виникла помилка: "
 
-#: views/list.py:1409
+#: views/list.py:1429
 #, python-format
 msgid "The user %(email)s is not in the %(role)s group"
 msgstr "Користувач %(email)s не є учасником групи %(role)s"
 
-#: views/list.py:1416
+#: views/list.py:1436
 msgid "Removing the last owner is impossible"
 msgstr "Вилучення останнього власника неможливе"
 
-#: views/list.py:1434
+#: views/list.py:1454
 #, python-format
 msgid "The user could not be removed: %(msg)s"
 msgstr "Користувача не можна вилучити: %(msg)s"
 
-#: views/list.py:1440
+#: views/list.py:1460
 #, python-format
 msgid "The user %(address)s has been removed from the %(role)s group."
 msgstr "Користувач %(address)s був вилучений з групи %(role)s."
 
-#: views/list.py:1461
+#: views/list.py:1481
 msgid "No member is subscribed to the list currently."
 msgstr "На цей список наразі ніхто не підписаний."
 
-#: views/list.py:1474
+#: views/list.py:1494
 msgid "All members have been unsubscribed from the list."
 msgstr "Усі учасники були відписані від розсилки."
 
-#: views/list.py:1553
+#: views/list.py:1573
 msgid "The header matches were successfully modified."
 msgstr "Відповідні заголовки успішно змінені."
 
-#: views/list.py:1560
+#: views/list.py:1580
 msgid "New header"
 msgstr "Новий заголовок"
 
-#: views/list.py:1561
+#: views/list.py:1581
 msgid "New pattern"
 msgstr "Новий шаблон"
 
-#: views/list.py:1593
+#: views/list.py:1613
 msgid "Invalid confirmation token"
 msgstr "Хибний токен підтвердження"
 
-#: views/list.py:1603 views/list.py:1619
+#: views/list.py:1623 views/list.py:1639
 msgid "Token expired or invalid."
 msgstr "Токен хибний або вже не діє."
 
@@ -3476,6 +3494,15 @@ msgstr "Обліковий запис користувача оновлений.
 #: views/user.py:485
 msgid "Password updated successfully"
 msgstr "Пароль успішно оновлений"
+
+#: views/user.py:522
+#, fuzzy
+#| msgid "Successfully updated user."
+msgid "Successfully deleted account"
+msgstr "Обліковий запис користувача оновлений."
+
+#~ msgid "Login"
+#~ msgstr "Вхід"
 
 #~ msgid "Only mailinglist members"
 #~ msgstr "Лише учасники списку розсилки"

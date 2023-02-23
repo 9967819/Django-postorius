@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-16 12:47-0800\n"
+"POT-Creation-Date: 2023-02-21 23:44+0000\n"
 "PO-Revision-Date: 2022-10-30 14:02+0000\n"
 "Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/gnu-"
@@ -56,7 +56,7 @@ msgstr ""
 "输入 example.com。"
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:22
-#: templates/postorius/index.html:82
+#: templates/postorius/index.html:83
 msgid "Description"
 msgstr "描述"
 
@@ -389,7 +389,7 @@ msgstr ""
 #: forms/list_forms.py:278 forms/list_forms.py:766
 #: templates/postorius/lists/held_messages.html:30
 #: templates/postorius/lists/held_messages.html:108
-#: templates/postorius/lists/pending_confirmations.html:36
+#: templates/postorius/lists/pending_confirmations.html:37
 #: templates/postorius/lists/subscription_requests.html:37
 msgid "Discard"
 msgstr "丢弃"
@@ -1893,69 +1893,71 @@ msgstr "处理你的请求是发生错误。"
 msgid "Global Bans"
 msgstr "全局封禁"
 
-#: templates/postorius/base.html:32
+#: templates/postorius/base.html:33
 msgid "Mailman logo"
 msgstr "Mailman 徽标"
 
-#: templates/postorius/base.html:38
+#: templates/postorius/base.html:40
 msgid "Lists"
 msgstr "列表"
 
-#: templates/postorius/base.html:44 templates/postorius/domain/index.html:5
+#: templates/postorius/base.html:46 templates/postorius/domain/index.html:5
 #: templates/postorius/domain/index.html:11
 msgid "Domains"
 msgstr "域"
 
-#: templates/postorius/base.html:50
+#: templates/postorius/base.html:52
 msgid "Bans"
 msgstr "封禁"
 
-#: templates/postorius/base.html:56
+#: templates/postorius/base.html:58
 msgid "System Information"
 msgstr "系统信息"
 
-#: templates/postorius/base.html:62 templates/postorius/menu/list_nav.html:40
+#: templates/postorius/base.html:64 templates/postorius/menu/list_nav.html:40
 #: templates/postorius/user/all.html:8 templates/postorius/user/all.html:13
 msgid "Users"
 msgstr "用户"
 
-#: templates/postorius/base.html:69 templates/postorius/lists/summary.html:33
+#: templates/postorius/base.html:71 templates/postorius/lists/summary.html:33
 msgid "Archives"
 msgstr "存档"
 
-#: templates/postorius/base.html:85
-msgid "Account"
-msgstr "帐户"
+#: templates/postorius/base.html:79
+#, fuzzy
+#| msgid "Sign Up"
+msgid "Sign In"
+msgstr "注册"
 
-#: templates/postorius/base.html:89
-msgid "Mailman settings"
-msgstr "Mailman 设置"
-
-#: templates/postorius/base.html:94
-msgid "Posting activity"
-msgstr "发帖活动"
-
-#: templates/postorius/base.html:100
-msgid "Logout"
-msgstr "登出"
-
-#: templates/postorius/base.html:107
-msgid "Login"
-msgstr "登入"
-
-#: templates/postorius/base.html:111
+#: templates/postorius/base.html:83
 msgid "Sign Up"
 msgstr "注册"
 
-#: templates/postorius/base.html:134
+#: templates/postorius/base.html:99
+msgid "Account"
+msgstr "帐户"
+
+#: templates/postorius/base.html:103
+msgid "Mailman settings"
+msgstr "Mailman 设置"
+
+#: templates/postorius/base.html:108
+msgid "Posting activity"
+msgstr "发帖活动"
+
+#: templates/postorius/base.html:114
+msgid "Logout"
+msgstr "登出"
+
+#: templates/postorius/base.html:136
 msgid "Postorius Documentation"
 msgstr "Postorius 文档"
 
-#: templates/postorius/base.html:138
+#: templates/postorius/base.html:140
 msgid "Postorius Version"
 msgstr "Postorius 版本"
 
-#: templates/postorius/base.html:141
+#: templates/postorius/base.html:143
 msgid "Happy Mailman Day!"
 msgstr "邮差日快乐！"
 
@@ -1999,6 +2001,7 @@ msgstr "删除"
 #: templates/postorius/lists/confirm_remove_role.html:23
 #: templates/postorius/lists/confirm_removeall_subscribers.html:22
 #: templates/postorius/lists/template_delete.html:25
+#: templates/postorius/user/confirm_delete.html:23
 msgid "Cancel"
 msgstr "取消"
 
@@ -2086,8 +2089,8 @@ msgstr "模板“%(name)s”"
 
 #: templates/postorius/domain/template_add.html:25
 #: templates/postorius/lists/template_add.html:16
-#: templates/postorius/user/address_preferences.html:62
-#: templates/postorius/user/subscription_preferences.html:73
+#: templates/postorius/user/address_preferences.html:64
+#: templates/postorius/user/subscription_preferences.html:75
 msgid "Save"
 msgstr "保存"
 
@@ -2109,7 +2112,7 @@ msgstr ""
 "           "
 
 #: templates/postorius/domain/template_index.html:16
-#: templates/postorius/lists/template_list.html:14
+#: templates/postorius/lists/template_list.html:15
 msgid "New Template"
 msgstr "新建模板"
 
@@ -2151,51 +2154,51 @@ msgstr "列表索引"
 msgid "Mailing Lists"
 msgstr "邮件列表"
 
-#: templates/postorius/index.html:18
+#: templates/postorius/index.html:20
 msgid "Role: "
 msgstr "角色： "
 
-#: templates/postorius/index.html:40
+#: templates/postorius/index.html:41
 msgid "Owner"
 msgstr "所有者"
 
-#: templates/postorius/index.html:45
+#: templates/postorius/index.html:46
 msgid "Moderator"
 msgstr "版主"
 
-#: templates/postorius/index.html:50
+#: templates/postorius/index.html:51
 msgid "Member"
 msgstr "成员"
 
-#: templates/postorius/index.html:55
+#: templates/postorius/index.html:56
 msgid "Non-member"
 msgstr "非成员"
 
-#: templates/postorius/index.html:58
+#: templates/postorius/index.html:59
 msgid "All"
 msgstr "全部"
 
-#: templates/postorius/index.html:66
+#: templates/postorius/index.html:67
 msgid "Create New Domain"
 msgstr "新建域"
 
-#: templates/postorius/index.html:68
+#: templates/postorius/index.html:69
 msgid "Create New List"
 msgstr "新建列表"
 
-#: templates/postorius/index.html:80
+#: templates/postorius/index.html:81
 msgid "List name"
 msgstr "列表名称"
 
-#: templates/postorius/index.html:81
+#: templates/postorius/index.html:82
 msgid "Post address"
 msgstr "邮送地址"
 
-#: templates/postorius/index.html:92
+#: templates/postorius/index.html:93
 msgid "unadvertised"
 msgstr "不公布"
 
-#: templates/postorius/index.html:104
+#: templates/postorius/index.html:105
 msgid ""
 "Only lists that you are owner, moderator or subscriber for are shown here. "
 "Click to <a href=\"?all-lists\"> see all lists</a>."
@@ -2203,11 +2206,11 @@ msgstr ""
 "只有你是所有者、版主或订阅者的列表会显示在这里。单击 <a href=\"?all-lists\">"
 "查看所有列表</a>。"
 
-#: templates/postorius/index.html:108
+#: templates/postorius/index.html:109
 msgid "Only admins see unadvertised lists in the list index."
 msgstr "只有管理员能在此列表索引中看到未公布的列表。"
 
-#: templates/postorius/index.html:114
+#: templates/postorius/index.html:115
 msgid "There are currently no mailing lists."
 msgstr "当前没有邮件列表。"
 
@@ -2311,7 +2314,7 @@ msgstr ""
 msgid "Header filters"
 msgstr "首部过滤器"
 
-#: templates/postorius/lists/header_matches.html:58
+#: templates/postorius/lists/header_matches.html:68
 #: templates/postorius/lists/memberoptions.html:20
 #: templates/postorius/lists/memberoptions.html:28
 #: templates/postorius/lists/settings.html:30
@@ -2320,7 +2323,7 @@ msgstr "首部过滤器"
 msgid "Save changes"
 msgstr "保存更改"
 
-#: templates/postorius/lists/header_matches.html:60
+#: templates/postorius/lists/header_matches.html:70
 msgid "Changes pending, click on the button to save them."
 msgstr "有未保存的更改，点击按钮以保存它们。"
 
@@ -2474,13 +2477,13 @@ msgstr "电子邮件列表"
 msgid "Actions"
 msgstr "动作"
 
-#: templates/postorius/lists/pending_confirmations.html:37
+#: templates/postorius/lists/pending_confirmations.html:38
 #: templates/postorius/lists/subscription_requests.html:38
 msgid "Ban"
 msgstr "封禁"
 
-#: templates/postorius/lists/pending_confirmations.html:47
-#: templates/postorius/lists/subscription_requests.html:50
+#: templates/postorius/lists/pending_confirmations.html:48
+#: templates/postorius/lists/subscription_requests.html:51
 msgid "There are currently no subscription requests for this list."
 msgstr "你当前没有对此列表的订阅请求。"
 
@@ -2761,6 +2764,21 @@ msgstr "用户"
 msgid "Created"
 msgstr "创建日期"
 
+#: templates/postorius/user/confirm_delete.html:9
+#: templates/postorius/user/confirm_delete.html:13
+#: templates/postorius/user/confirm_delete.html:22
+#: templates/postorius/user/manage.html:119
+#, fuzzy
+#| msgid "Web Account"
+msgid "Delete Account"
+msgstr "Web 帐户"
+
+#: templates/postorius/user/confirm_delete.html:17
+msgid ""
+"Are you sure you want to delete this account? This will remove the account "
+"along with all its subscriptions."
+msgstr ""
+
 #: templates/postorius/user/list_options.html:14
 msgid "Subscription options for"
 msgstr "订阅选项 —"
@@ -2916,7 +2934,7 @@ msgstr "已注册新域"
 msgid "Domain %s updated"
 msgstr "已更新域 %s"
 
-#: views/domain.py:130 views/list.py:1019
+#: views/domain.py:130 views/list.py:1029
 msgid "Please check the errors below"
 msgstr "请检查下面的错误"
 
@@ -2946,7 +2964,7 @@ msgstr "{} 作为 {} 的所有者已被移除"
 msgid "The email {} has been banned."
 msgstr "电子邮件 {} 已被封禁。"
 
-#: views/generic.py:122 views/generic.py:137 views/list.py:1549
+#: views/generic.py:122 views/generic.py:137 views/list.py:1569
 #, python-format
 msgid "An error occurred: %s"
 msgstr "发生错误：%s"
@@ -3056,214 +3074,214 @@ msgstr "你的退订请求已被提交并等待版主批准。"
 msgid "%s has been unsubscribed from this list."
 msgstr "%s 已从此列表退订。"
 
-#: views/list.py:737
+#: views/list.py:738
 #, python-format
 msgid "The address %(address)s has been invited to %(list)s."
 msgstr "地址 %(address)s 已被邀请至 %(list)s。"
 
-#: views/list.py:742
+#: views/list.py:743
 #, python-format
 msgid "The address %(address)s has been subscribed to %(list)s."
 msgstr "地址 %(address)s 已经订阅至 %(list)s。"
 
-#: views/list.py:747
+#: views/list.py:748
 msgid ""
 " Subscription may be pending address verification, confirmation or approval "
 "as appropriate."
 msgstr " 订阅可能正在等待正确的地址验证、确认或者批准。"
 
-#: views/list.py:764 views/list.py:826
+#: views/list.py:766 views/list.py:836
 #, python-format
 msgid "The email address %s is not valid."
 msgstr "电子邮件地址 %s 无效。"
 
-#: views/list.py:795
+#: views/list.py:805
 msgid "Please fill out the form correctly."
 msgstr "请正确填写表格。"
 
-#: views/list.py:813
+#: views/list.py:823
 #, python-brace-format
 msgid "These addresses {address} have been unsubscribed from {list}."
 msgstr "这些地址 {address} 已经从 {list} 退订。"
 
-#: views/list.py:848
+#: views/list.py:858
 msgid "The selected messages were accepted"
 msgstr "所选消息已被接受"
 
-#: views/list.py:853
+#: views/list.py:863
 msgid "The selected messages were rejected"
 msgstr "所选消息已被拒绝"
 
-#: views/list.py:858
+#: views/list.py:868
 msgid "The selected messages were discarded"
 msgstr "所选消息已被丢弃"
 
-#: views/list.py:861
+#: views/list.py:871
 msgid "Message could not be found"
 msgstr "消息未找到"
 
-#: views/list.py:892
+#: views/list.py:902
 msgid "The message was accepted"
 msgstr "此消息已被接受"
 
-#: views/list.py:895
+#: views/list.py:905
 msgid "The message was rejected"
 msgstr "此消息已被拒绝"
 
-#: views/list.py:898
+#: views/list.py:908
 msgid "The message was discarded"
 msgstr "此消息已被丢弃"
 
-#: views/list.py:901
+#: views/list.py:911
 msgid "Held message was not found."
 msgstr "未找到搁置的消息。"
 
-#: views/list.py:915
+#: views/list.py:925
 msgid "Moderation action for {} set to {}"
 msgstr "{} 的审核动作已设为 {}"
 
-#: views/list.py:923
+#: views/list.py:933
 msgid "Failed to set moderation action for {}"
 msgstr "设定 {} 的审核动作失败"
 
-#: views/list.py:975
+#: views/list.py:985
 msgid "Choose a Domain"
 msgstr "选择域"
 
-#: views/list.py:999
+#: views/list.py:1009
 msgid "List created"
 msgstr "列表已创建"
 
-#: views/list.py:1011
+#: views/list.py:1021
 msgid "Mailing List already exists."
 msgstr "邮件列表已存在。"
 
-#: views/list.py:1191
+#: views/list.py:1201
 msgid "Subscriptions pending user confirmation"
 msgstr "订阅等待用户确认"
 
-#: views/list.py:1204
+#: views/list.py:1214
 msgid "Subscriptions pending approval"
 msgstr "订阅等待批准"
 
-#: views/list.py:1217
+#: views/list.py:1227
 msgid "Un-subscriptions pending approval"
 msgstr "退订等待批准"
 
-#: views/list.py:1265
+#: views/list.py:1276
 msgid "The request has been accepted."
 msgstr "此请求已被接受。"
 
-#: views/list.py:1266
+#: views/list.py:1277
 msgid "The request has been rejected."
 msgstr "此请求已被拒绝。"
 
-#: views/list.py:1267
+#: views/list.py:1278
 msgid "The request has been discarded."
 msgstr "此请求已被丢弃。"
 
-#: views/list.py:1268
+#: views/list.py:1279
 msgid "The request has been defered."
 msgstr "此请求已被延迟。"
 
-#: views/list.py:1287
+#: views/list.py:1299
 #, python-format
 msgid "The request was already moderated: %s"
 msgstr "此请求已被审核：%s"
 
-#: views/list.py:1291
+#: views/list.py:1303
 #, python-format
 msgid "The request could not be moderated: %s"
 msgstr "此请求无法审核：%s"
 
-#: views/list.py:1297
+#: views/list.py:1317
 msgid "List Identity"
 msgstr "列表标识"
 
-#: views/list.py:1298
+#: views/list.py:1318
 msgid "Automatic Responses"
 msgstr "自动回复"
 
-#: views/list.py:1299
+#: views/list.py:1319
 msgid "Alter Messages"
 msgstr "更改消息"
 
-#: views/list.py:1300
+#: views/list.py:1320
 msgid "DMARC Mitigations"
 msgstr "DMARC 缓解措施"
 
-#: views/list.py:1301
+#: views/list.py:1321
 msgid "Digest"
 msgstr "摘要"
 
-#: views/list.py:1302
+#: views/list.py:1322
 msgid "Message Acceptance"
 msgstr "消息接受"
 
-#: views/list.py:1303
+#: views/list.py:1323
 msgid "Archiving"
 msgstr "存档"
 
-#: views/list.py:1304
+#: views/list.py:1324
 msgid "Member Policy"
 msgstr "成员策略"
 
-#: views/list.py:1305
+#: views/list.py:1325
 msgid "Bounce Processing"
 msgstr "退信处理"
 
-#: views/list.py:1372
+#: views/list.py:1392
 msgid "The settings have been updated."
 msgstr "设置已更新。"
 
-#: views/list.py:1375
+#: views/list.py:1395
 msgid "An error occurred: "
 msgstr "发生错误： "
 
-#: views/list.py:1409
+#: views/list.py:1429
 #, python-format
 msgid "The user %(email)s is not in the %(role)s group"
 msgstr "用户 %(email)s 不在 %(role)s 组内"
 
-#: views/list.py:1416
+#: views/list.py:1436
 msgid "Removing the last owner is impossible"
 msgstr "无法移除最后一个的所有者"
 
-#: views/list.py:1434
+#: views/list.py:1454
 #, python-format
 msgid "The user could not be removed: %(msg)s"
 msgstr "用户无法被移除：%(msg)s"
 
-#: views/list.py:1440
+#: views/list.py:1460
 #, python-format
 msgid "The user %(address)s has been removed from the %(role)s group."
 msgstr "用户 %(address)s 已从 %(role)s 组移除。"
 
-#: views/list.py:1461
+#: views/list.py:1481
 msgid "No member is subscribed to the list currently."
 msgstr "当前没有成员订阅此列表。"
 
-#: views/list.py:1474
+#: views/list.py:1494
 msgid "All members have been unsubscribed from the list."
 msgstr "所有成员都已从此列表退订。"
 
-#: views/list.py:1553
+#: views/list.py:1573
 msgid "The header matches were successfully modified."
 msgstr "首部匹配项都已成功修改。"
 
-#: views/list.py:1560
+#: views/list.py:1580
 msgid "New header"
 msgstr "新首部"
 
-#: views/list.py:1561
+#: views/list.py:1581
 msgid "New pattern"
 msgstr "新模式"
 
-#: views/list.py:1593
+#: views/list.py:1613
 msgid "Invalid confirmation token"
 msgstr "无效的确认令牌"
 
-#: views/list.py:1603 views/list.py:1619
+#: views/list.py:1623 views/list.py:1639
 msgid "Token expired or invalid."
 msgstr "令牌过期或无效。"
 
@@ -3314,6 +3332,15 @@ msgstr "成功更新用户。"
 #: views/user.py:485
 msgid "Password updated successfully"
 msgstr "密码更新成功"
+
+#: views/user.py:522
+#, fuzzy
+#| msgid "Successfully updated user."
+msgid "Successfully deleted account"
+msgstr "成功更新用户。"
+
+#~ msgid "Login"
+#~ msgstr "登入"
 
 #~ msgid "Only mailinglist members"
 #~ msgstr "仅邮件列表成员"

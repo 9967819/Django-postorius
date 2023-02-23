@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-16 12:46-0800\n"
+"POT-Creation-Date: 2023-02-21 23:44+0000\n"
 "PO-Revision-Date: 2021-09-24 14:39+0000\n"
 "Last-Translator: Leonardo Robol <leo@robol.it>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -54,7 +54,7 @@ msgstr ""
 "testing@example.com, inserisci example.com."
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:22
-#: templates/postorius/index.html:82
+#: templates/postorius/index.html:83
 msgid "Description"
 msgstr "Descrizione"
 
@@ -413,7 +413,7 @@ msgstr ""
 #: forms/list_forms.py:278 forms/list_forms.py:766
 #: templates/postorius/lists/held_messages.html:30
 #: templates/postorius/lists/held_messages.html:108
-#: templates/postorius/lists/pending_confirmations.html:36
+#: templates/postorius/lists/pending_confirmations.html:37
 #: templates/postorius/lists/subscription_requests.html:37
 msgid "Discard"
 msgstr "Scarta"
@@ -2114,69 +2114,71 @@ msgstr "C'è stato un errore nel processare la tua richiesta."
 msgid "Global Bans"
 msgstr "Divieti globali"
 
-#: templates/postorius/base.html:32
+#: templates/postorius/base.html:33
 msgid "Mailman logo"
 msgstr "Logo di Mailman"
 
-#: templates/postorius/base.html:38
+#: templates/postorius/base.html:40
 msgid "Lists"
 msgstr "Liste"
 
-#: templates/postorius/base.html:44 templates/postorius/domain/index.html:5
+#: templates/postorius/base.html:46 templates/postorius/domain/index.html:5
 #: templates/postorius/domain/index.html:11
 msgid "Domains"
 msgstr "Domini"
 
-#: templates/postorius/base.html:50
+#: templates/postorius/base.html:52
 msgid "Bans"
 msgstr "Divieti"
 
-#: templates/postorius/base.html:56
+#: templates/postorius/base.html:58
 msgid "System Information"
 msgstr "Informazioni sul sistema"
 
-#: templates/postorius/base.html:62 templates/postorius/menu/list_nav.html:40
+#: templates/postorius/base.html:64 templates/postorius/menu/list_nav.html:40
 #: templates/postorius/user/all.html:8 templates/postorius/user/all.html:13
 msgid "Users"
 msgstr "Utenti"
 
-#: templates/postorius/base.html:69 templates/postorius/lists/summary.html:33
+#: templates/postorius/base.html:71 templates/postorius/lists/summary.html:33
 msgid "Archives"
 msgstr "Archivi"
 
-#: templates/postorius/base.html:85
-msgid "Account"
-msgstr "Account"
+#: templates/postorius/base.html:79
+#, fuzzy
+#| msgid "Sign Up"
+msgid "Sign In"
+msgstr "Iscrizione"
 
-#: templates/postorius/base.html:89
-msgid "Mailman settings"
-msgstr "Impostazioni di Mailman"
-
-#: templates/postorius/base.html:94
-msgid "Posting activity"
-msgstr "Attività dei messaggi"
-
-#: templates/postorius/base.html:100
-msgid "Logout"
-msgstr "Esci"
-
-#: templates/postorius/base.html:107
-msgid "Login"
-msgstr "Accedi"
-
-#: templates/postorius/base.html:111
+#: templates/postorius/base.html:83
 msgid "Sign Up"
 msgstr "Iscrizione"
 
-#: templates/postorius/base.html:134
+#: templates/postorius/base.html:99
+msgid "Account"
+msgstr "Account"
+
+#: templates/postorius/base.html:103
+msgid "Mailman settings"
+msgstr "Impostazioni di Mailman"
+
+#: templates/postorius/base.html:108
+msgid "Posting activity"
+msgstr "Attività dei messaggi"
+
+#: templates/postorius/base.html:114
+msgid "Logout"
+msgstr "Esci"
+
+#: templates/postorius/base.html:136
 msgid "Postorius Documentation"
 msgstr "Documentazione di Postorius"
 
-#: templates/postorius/base.html:138
+#: templates/postorius/base.html:140
 msgid "Postorius Version"
 msgstr "Versione di Postorius"
 
-#: templates/postorius/base.html:141
+#: templates/postorius/base.html:143
 msgid "Happy Mailman Day!"
 msgstr "Felicie giorno con Mailman!"
 
@@ -2220,6 +2222,7 @@ msgstr "Elimina"
 #: templates/postorius/lists/confirm_remove_role.html:23
 #: templates/postorius/lists/confirm_removeall_subscribers.html:22
 #: templates/postorius/lists/template_delete.html:25
+#: templates/postorius/user/confirm_delete.html:23
 msgid "Cancel"
 msgstr "Annulla"
 
@@ -2309,8 +2312,8 @@ msgstr "Modello '%(name)s'"
 
 #: templates/postorius/domain/template_add.html:25
 #: templates/postorius/lists/template_add.html:16
-#: templates/postorius/user/address_preferences.html:62
-#: templates/postorius/user/subscription_preferences.html:73
+#: templates/postorius/user/address_preferences.html:64
+#: templates/postorius/user/subscription_preferences.html:75
 msgid "Save"
 msgstr "Salva"
 
@@ -2332,7 +2335,7 @@ msgstr ""
 "           "
 
 #: templates/postorius/domain/template_index.html:16
-#: templates/postorius/lists/template_list.html:14
+#: templates/postorius/lists/template_list.html:15
 msgid "New Template"
 msgstr "Nuovo modello"
 
@@ -2374,61 +2377,61 @@ msgstr "Indice della lista"
 msgid "Mailing Lists"
 msgstr "Liste"
 
-#: templates/postorius/index.html:18
+#: templates/postorius/index.html:20
 #, fuzzy
 #| msgid "Role"
 msgid "Role: "
 msgstr "Ruolo"
 
-#: templates/postorius/index.html:40
+#: templates/postorius/index.html:41
 #, fuzzy
 #| msgid "Owners"
 msgid "Owner"
 msgstr "Proprietari"
 
-#: templates/postorius/index.html:45
+#: templates/postorius/index.html:46
 #, fuzzy
 #| msgid "Moderators"
 msgid "Moderator"
 msgstr "Moderatori"
 
-#: templates/postorius/index.html:50
+#: templates/postorius/index.html:51
 #, fuzzy
 #| msgid "Members"
 msgid "Member"
 msgstr "Membri"
 
-#: templates/postorius/index.html:55
+#: templates/postorius/index.html:56
 #, fuzzy
 #| msgid "Non-Members"
 msgid "Non-member"
 msgstr "Non-membri"
 
-#: templates/postorius/index.html:58
+#: templates/postorius/index.html:59
 msgid "All"
 msgstr ""
 
-#: templates/postorius/index.html:66
+#: templates/postorius/index.html:67
 msgid "Create New Domain"
 msgstr "Crea un nuovo dominio"
 
-#: templates/postorius/index.html:68
+#: templates/postorius/index.html:69
 msgid "Create New List"
 msgstr "Crea una nuova lista"
 
-#: templates/postorius/index.html:80
+#: templates/postorius/index.html:81
 msgid "List name"
 msgstr "Nome lista"
 
-#: templates/postorius/index.html:81
+#: templates/postorius/index.html:82
 msgid "Post address"
 msgstr "Indirizzo dei messaggi"
 
-#: templates/postorius/index.html:92
+#: templates/postorius/index.html:93
 msgid "unadvertised"
 msgstr "non pubblicizzato"
 
-#: templates/postorius/index.html:104
+#: templates/postorius/index.html:105
 #, fuzzy
 #| msgid ""
 #| "Only lists that you are owner, moderator or subscriber for are shown here."
@@ -2439,13 +2442,13 @@ msgstr ""
 "Qui sono mostrate solo le liste per le quali sei proprietario, moderatore o "
 "iscritto."
 
-#: templates/postorius/index.html:108
+#: templates/postorius/index.html:109
 msgid "Only admins see unadvertised lists in the list index."
 msgstr ""
 "Solo gli amministratori possono vedere le liste non pubblicizzate "
 "nell'indice delle liste."
 
-#: templates/postorius/index.html:114
+#: templates/postorius/index.html:115
 msgid "There are currently no mailing lists."
 msgstr "Non ci sono liste."
 
@@ -2563,7 +2566,7 @@ msgstr ""
 msgid "Header filters"
 msgstr "Filtri intestazione"
 
-#: templates/postorius/lists/header_matches.html:58
+#: templates/postorius/lists/header_matches.html:68
 #: templates/postorius/lists/memberoptions.html:20
 #: templates/postorius/lists/memberoptions.html:28
 #: templates/postorius/lists/settings.html:30
@@ -2572,7 +2575,7 @@ msgstr "Filtri intestazione"
 msgid "Save changes"
 msgstr "Salva cambiamenti"
 
-#: templates/postorius/lists/header_matches.html:60
+#: templates/postorius/lists/header_matches.html:70
 msgid "Changes pending, click on the button to save them."
 msgstr "Cambiamenti pendenti, clicca il pulsante per salvarli."
 
@@ -2730,13 +2733,13 @@ msgstr "Indirizzo e-mail"
 msgid "Actions"
 msgstr "Azioni"
 
-#: templates/postorius/lists/pending_confirmations.html:37
+#: templates/postorius/lists/pending_confirmations.html:38
 #: templates/postorius/lists/subscription_requests.html:38
 msgid "Ban"
 msgstr "Precludi"
 
-#: templates/postorius/lists/pending_confirmations.html:47
-#: templates/postorius/lists/subscription_requests.html:50
+#: templates/postorius/lists/pending_confirmations.html:48
+#: templates/postorius/lists/subscription_requests.html:51
 msgid "There are currently no subscription requests for this list."
 msgstr "Non ci sono richieste di iscrizione per questa lista."
 
@@ -3038,6 +3041,21 @@ msgstr "Utenti"
 msgid "Created"
 msgstr "Creata il"
 
+#: templates/postorius/user/confirm_delete.html:9
+#: templates/postorius/user/confirm_delete.html:13
+#: templates/postorius/user/confirm_delete.html:22
+#: templates/postorius/user/manage.html:119
+#, fuzzy
+#| msgid "Account"
+msgid "Delete Account"
+msgstr "Account"
+
+#: templates/postorius/user/confirm_delete.html:17
+msgid ""
+"Are you sure you want to delete this account? This will remove the account "
+"along with all its subscriptions."
+msgstr ""
+
 #: templates/postorius/user/list_options.html:14
 msgid "Subscription options for"
 msgstr "Opzioni di iscrizione per"
@@ -3212,7 +3230,7 @@ msgstr "Nuovo dominio registrato"
 msgid "Domain %s updated"
 msgstr "Dominio %s aggiornato"
 
-#: views/domain.py:130 views/list.py:1019
+#: views/domain.py:130 views/list.py:1029
 msgid "Please check the errors below"
 msgstr "Controlla l'errore seguente"
 
@@ -3242,7 +3260,7 @@ msgstr "Rimosso {} come proprietario di {}"
 msgid "The email {} has been banned."
 msgstr "L'e-mail {} è stata preclusa."
 
-#: views/generic.py:122 views/generic.py:137 views/list.py:1549
+#: views/generic.py:122 views/generic.py:137 views/list.py:1569
 #, python-format
 msgid "An error occurred: %s"
 msgstr "C'è stato un errore: %s"
@@ -3360,17 +3378,17 @@ msgstr ""
 msgid "%s has been unsubscribed from this list."
 msgstr "%s è stato disiscritto da questa lista."
 
-#: views/list.py:737
+#: views/list.py:738
 #, python-format
 msgid "The address %(address)s has been invited to %(list)s."
 msgstr "L'indirizzo %(address)s è stato inviato alla lista %(list)s."
 
-#: views/list.py:742
+#: views/list.py:743
 #, python-format
 msgid "The address %(address)s has been subscribed to %(list)s."
 msgstr "L'indirizzo %(address)s è stato iscritto alla lista %(list)s."
 
-#: views/list.py:747
+#: views/list.py:748
 msgid ""
 " Subscription may be pending address verification, confirmation or approval "
 "as appropriate."
@@ -3378,198 +3396,198 @@ msgstr ""
 " L'iscrizione potrebbe essere in attesa di verifica, conferma o approvazione "
 "dell'indirizzo, a seconda dei casi."
 
-#: views/list.py:764 views/list.py:826
+#: views/list.py:766 views/list.py:836
 #, python-format
 msgid "The email address %s is not valid."
 msgstr "L'indirizzo e-mail %s non è valido."
 
-#: views/list.py:795
+#: views/list.py:805
 msgid "Please fill out the form correctly."
 msgstr "Completa il formulario correttamente."
 
-#: views/list.py:813
+#: views/list.py:823
 #, python-brace-format
 msgid "These addresses {address} have been unsubscribed from {list}."
 msgstr "Questi indirizzi {address} sono stati disiscritti dalla {list}."
 
-#: views/list.py:848
+#: views/list.py:858
 msgid "The selected messages were accepted"
 msgstr "I messaggi selezionati son stati accettati"
 
-#: views/list.py:853
+#: views/list.py:863
 msgid "The selected messages were rejected"
 msgstr "I messaggi selezionati son stati rifiutati"
 
-#: views/list.py:858
+#: views/list.py:868
 msgid "The selected messages were discarded"
 msgstr "I messaggi selezionati son stati scartati"
 
-#: views/list.py:861
+#: views/list.py:871
 msgid "Message could not be found"
 msgstr "Il messaggio non può essere trovato"
 
-#: views/list.py:892
+#: views/list.py:902
 msgid "The message was accepted"
 msgstr "Il messaggio è stato accettato"
 
-#: views/list.py:895
+#: views/list.py:905
 msgid "The message was rejected"
 msgstr "Il messaggio è stato rifiutato"
 
-#: views/list.py:898
+#: views/list.py:908
 msgid "The message was discarded"
 msgstr "Il messaggio è stato scartato"
 
-#: views/list.py:901
+#: views/list.py:911
 msgid "Held message was not found."
 msgstr "Il messaggio trattenuto non è stato trovato."
 
-#: views/list.py:915
+#: views/list.py:925
 msgid "Moderation action for {} set to {}"
 msgstr "Azione di moderazione per {} impostata a {}"
 
-#: views/list.py:923
+#: views/list.py:933
 msgid "Failed to set moderation action for {}"
 msgstr "Impossibile impostare l'azione di moderazione per {}"
 
-#: views/list.py:975
+#: views/list.py:985
 msgid "Choose a Domain"
 msgstr "Seleziona un dominio"
 
-#: views/list.py:999
+#: views/list.py:1009
 msgid "List created"
 msgstr "Lista creata"
 
-#: views/list.py:1011
+#: views/list.py:1021
 msgid "Mailing List already exists."
 msgstr "La lista esiste già."
 
-#: views/list.py:1191
+#: views/list.py:1201
 msgid "Subscriptions pending user confirmation"
 msgstr "Iscrizioni in attesa di conferma dell'utente"
 
-#: views/list.py:1204
+#: views/list.py:1214
 msgid "Subscriptions pending approval"
 msgstr "Iscrizioni che attendono approvazione"
 
-#: views/list.py:1217
+#: views/list.py:1227
 msgid "Un-subscriptions pending approval"
 msgstr "Disiscrizioni che attendono approvazione"
 
-#: views/list.py:1265
+#: views/list.py:1276
 msgid "The request has been accepted."
 msgstr "La richiesta è stata accettata."
 
-#: views/list.py:1266
+#: views/list.py:1277
 msgid "The request has been rejected."
 msgstr "La richiesta è stata negata."
 
-#: views/list.py:1267
+#: views/list.py:1278
 msgid "The request has been discarded."
 msgstr "La richiesta è stata scartata."
 
-#: views/list.py:1268
+#: views/list.py:1279
 msgid "The request has been defered."
 msgstr "La richiesta è stata posticipata."
 
-#: views/list.py:1287
+#: views/list.py:1299
 #, python-format
 msgid "The request was already moderated: %s"
 msgstr "La richiesta è stata già moderata: %s"
 
-#: views/list.py:1291
+#: views/list.py:1303
 #, python-format
 msgid "The request could not be moderated: %s"
 msgstr "La richiesta non può essere moderata: %s"
 
-#: views/list.py:1297
+#: views/list.py:1317
 msgid "List Identity"
 msgstr "Identità della lista"
 
-#: views/list.py:1298
+#: views/list.py:1318
 msgid "Automatic Responses"
 msgstr "Risposte automatiche"
 
-#: views/list.py:1299
+#: views/list.py:1319
 msgid "Alter Messages"
 msgstr "Modifica Messaggi"
 
-#: views/list.py:1300
+#: views/list.py:1320
 msgid "DMARC Mitigations"
 msgstr "Mitigazioni DMARC"
 
-#: views/list.py:1301
+#: views/list.py:1321
 msgid "Digest"
 msgstr "Raggruppamento"
 
-#: views/list.py:1302
+#: views/list.py:1322
 msgid "Message Acceptance"
 msgstr "Accettazioni messaggio"
 
-#: views/list.py:1303
+#: views/list.py:1323
 msgid "Archiving"
 msgstr "Archiviazione"
 
-#: views/list.py:1304
+#: views/list.py:1324
 msgid "Member Policy"
 msgstr "Politiche per i membri"
 
-#: views/list.py:1305
+#: views/list.py:1325
 msgid "Bounce Processing"
 msgstr "Elaborazione del Rimbalzo"
 
-#: views/list.py:1372
+#: views/list.py:1392
 msgid "The settings have been updated."
 msgstr "Le impostazioni sono state aggiornate."
 
-#: views/list.py:1375
+#: views/list.py:1395
 msgid "An error occurred: "
 msgstr "C'è stato un errore: "
 
-#: views/list.py:1409
+#: views/list.py:1429
 #, python-format
 msgid "The user %(email)s is not in the %(role)s group"
 msgstr "L'e-mail %(email)s dell'utente non fa parte del gruppo %(role)s"
 
-#: views/list.py:1416
+#: views/list.py:1436
 msgid "Removing the last owner is impossible"
 msgstr "Non è possibile rimuove l'ultimo possessore"
 
-#: views/list.py:1434
+#: views/list.py:1454
 #, python-format
 msgid "The user could not be removed: %(msg)s"
 msgstr "L'utente non può essere rimosso: %(msg)s"
 
-#: views/list.py:1440
+#: views/list.py:1460
 #, python-format
 msgid "The user %(address)s has been removed from the %(role)s group."
 msgstr "L'e-mail %(address)s dell'utente è stata rimosso dal gruppo %(role)s."
 
-#: views/list.py:1461
+#: views/list.py:1481
 msgid "No member is subscribed to the list currently."
 msgstr "La lista non ha membri."
 
-#: views/list.py:1474
+#: views/list.py:1494
 msgid "All members have been unsubscribed from the list."
 msgstr "Tutti i membri sono stati disiscritti dalla lista."
 
-#: views/list.py:1553
+#: views/list.py:1573
 msgid "The header matches were successfully modified."
 msgstr "Le intestazioni corrispondenti sono state modificate."
 
-#: views/list.py:1560
+#: views/list.py:1580
 msgid "New header"
 msgstr "Nuova intestazione"
 
-#: views/list.py:1561
+#: views/list.py:1581
 msgid "New pattern"
 msgstr "Nuovo modello"
 
-#: views/list.py:1593
+#: views/list.py:1613
 msgid "Invalid confirmation token"
 msgstr "Token di conferma non valido"
 
-#: views/list.py:1603 views/list.py:1619
+#: views/list.py:1623 views/list.py:1639
 msgid "Token expired or invalid."
 msgstr "Token scaduto o non valido."
 
@@ -3624,6 +3642,15 @@ msgstr ""
 #: views/user.py:485
 msgid "Password updated successfully"
 msgstr ""
+
+#: views/user.py:522
+#, fuzzy
+#| msgid "Currently banned addresses"
+msgid "Successfully deleted account"
+msgstr "Indirizzi attualmente preclusi"
+
+#~ msgid "Login"
+#~ msgstr "Accedi"
 
 #~ msgid "Only mailinglist members"
 #~ msgstr "Solo membri della lista"
