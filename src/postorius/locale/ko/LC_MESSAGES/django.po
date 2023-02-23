@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-16 12:47-0800\n"
+"POT-Creation-Date: 2023-02-21 23:44+0000\n"
 "PO-Revision-Date: 2022-10-30 14:02+0000\n"
 "Last-Translator: 이정희 <daemul72@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -51,7 +51,7 @@ msgstr ""
 "리스트를 원한다면 example.com를 이곳에 입력해주세요."
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:22
-#: templates/postorius/index.html:82
+#: templates/postorius/index.html:83
 msgid "Description"
 msgstr "설명"
 
@@ -401,7 +401,7 @@ msgstr ""
 #: forms/list_forms.py:278 forms/list_forms.py:766
 #: templates/postorius/lists/held_messages.html:30
 #: templates/postorius/lists/held_messages.html:108
-#: templates/postorius/lists/pending_confirmations.html:36
+#: templates/postorius/lists/pending_confirmations.html:37
 #: templates/postorius/lists/subscription_requests.html:37
 msgid "Discard"
 msgstr "폐기하다"
@@ -2067,69 +2067,71 @@ msgstr "요청을 처리하는 동안 오류가 발생합니다."
 msgid "Global Bans"
 msgstr "글로벌 설정"
 
-#: templates/postorius/base.html:32
+#: templates/postorius/base.html:33
 msgid "Mailman logo"
 msgstr "메일맨 로고"
 
-#: templates/postorius/base.html:38
+#: templates/postorius/base.html:40
 msgid "Lists"
 msgstr "목록"
 
-#: templates/postorius/base.html:44 templates/postorius/domain/index.html:5
+#: templates/postorius/base.html:46 templates/postorius/domain/index.html:5
 #: templates/postorius/domain/index.html:11
 msgid "Domains"
 msgstr "도메인"
 
-#: templates/postorius/base.html:50
+#: templates/postorius/base.html:52
 msgid "Bans"
 msgstr ""
 
-#: templates/postorius/base.html:56
+#: templates/postorius/base.html:58
 msgid "System Information"
 msgstr "시스템 정보"
 
-#: templates/postorius/base.html:62 templates/postorius/menu/list_nav.html:40
+#: templates/postorius/base.html:64 templates/postorius/menu/list_nav.html:40
 #: templates/postorius/user/all.html:8 templates/postorius/user/all.html:13
 msgid "Users"
 msgstr "사용자들"
 
-#: templates/postorius/base.html:69 templates/postorius/lists/summary.html:33
+#: templates/postorius/base.html:71 templates/postorius/lists/summary.html:33
 msgid "Archives"
 msgstr "기록 보관소"
 
-#: templates/postorius/base.html:85
-msgid "Account"
-msgstr "계정"
+#: templates/postorius/base.html:79
+#, fuzzy
+#| msgid "Sign Up"
+msgid "Sign In"
+msgstr "회원가입"
 
-#: templates/postorius/base.html:89
-msgid "Mailman settings"
-msgstr "Mailman 설정"
-
-#: templates/postorius/base.html:94
-msgid "Posting activity"
-msgstr "포스팅 기록"
-
-#: templates/postorius/base.html:100
-msgid "Logout"
-msgstr "로그아웃"
-
-#: templates/postorius/base.html:107
-msgid "Login"
-msgstr "로그인"
-
-#: templates/postorius/base.html:111
+#: templates/postorius/base.html:83
 msgid "Sign Up"
 msgstr "회원가입"
 
-#: templates/postorius/base.html:134
+#: templates/postorius/base.html:99
+msgid "Account"
+msgstr "계정"
+
+#: templates/postorius/base.html:103
+msgid "Mailman settings"
+msgstr "Mailman 설정"
+
+#: templates/postorius/base.html:108
+msgid "Posting activity"
+msgstr "포스팅 기록"
+
+#: templates/postorius/base.html:114
+msgid "Logout"
+msgstr "로그아웃"
+
+#: templates/postorius/base.html:136
 msgid "Postorius Documentation"
 msgstr "포스토리우스 문서"
 
-#: templates/postorius/base.html:138
+#: templates/postorius/base.html:140
 msgid "Postorius Version"
 msgstr "포스토리우스 버전"
 
-#: templates/postorius/base.html:141
+#: templates/postorius/base.html:143
 msgid "Happy Mailman Day!"
 msgstr "해피 메일맨 데이!"
 
@@ -2173,6 +2175,7 @@ msgstr "삭제"
 #: templates/postorius/lists/confirm_remove_role.html:23
 #: templates/postorius/lists/confirm_removeall_subscribers.html:22
 #: templates/postorius/lists/template_delete.html:25
+#: templates/postorius/user/confirm_delete.html:23
 msgid "Cancel"
 msgstr "취소"
 
@@ -2262,8 +2265,8 @@ msgstr "템플릿'%(name)s'"
 
 #: templates/postorius/domain/template_add.html:25
 #: templates/postorius/lists/template_add.html:16
-#: templates/postorius/user/address_preferences.html:62
-#: templates/postorius/user/subscription_preferences.html:73
+#: templates/postorius/user/address_preferences.html:64
+#: templates/postorius/user/subscription_preferences.html:75
 msgid "Save"
 msgstr "지키다"
 
@@ -2285,7 +2288,7 @@ msgstr ""
 "           "
 
 #: templates/postorius/domain/template_index.html:16
-#: templates/postorius/lists/template_list.html:14
+#: templates/postorius/lists/template_list.html:15
 msgid "New Template"
 msgstr "새로운 템플릿"
 
@@ -2327,61 +2330,61 @@ msgstr "인덱스 리스트"
 msgid "Mailing Lists"
 msgstr "메일링 리스트"
 
-#: templates/postorius/index.html:18
+#: templates/postorius/index.html:20
 #, fuzzy
 #| msgid "Role"
 msgid "Role: "
 msgstr "역할"
 
-#: templates/postorius/index.html:40
+#: templates/postorius/index.html:41
 #, fuzzy
 #| msgid "Owners"
 msgid "Owner"
 msgstr "오너"
 
-#: templates/postorius/index.html:45
+#: templates/postorius/index.html:46
 #, fuzzy
 #| msgid "Moderators"
 msgid "Moderator"
 msgstr "의장"
 
-#: templates/postorius/index.html:50
+#: templates/postorius/index.html:51
 #, fuzzy
 #| msgid "Members"
 msgid "Member"
 msgstr "회원들"
 
-#: templates/postorius/index.html:55
+#: templates/postorius/index.html:56
 #, fuzzy
 #| msgid "Non-Members"
 msgid "Non-member"
 msgstr "비회원들"
 
-#: templates/postorius/index.html:58
+#: templates/postorius/index.html:59
 msgid "All"
 msgstr ""
 
-#: templates/postorius/index.html:66
+#: templates/postorius/index.html:67
 msgid "Create New Domain"
 msgstr "새로운 도메인 만들기"
 
-#: templates/postorius/index.html:68
+#: templates/postorius/index.html:69
 msgid "Create New List"
 msgstr "새로운 리스트 만들기"
 
-#: templates/postorius/index.html:80
+#: templates/postorius/index.html:81
 msgid "List name"
 msgstr "리스트 이름"
 
-#: templates/postorius/index.html:81
+#: templates/postorius/index.html:82
 msgid "Post address"
 msgstr "우편 주소"
 
-#: templates/postorius/index.html:92
+#: templates/postorius/index.html:93
 msgid "unadvertised"
 msgstr "광고가 없는"
 
-#: templates/postorius/index.html:104
+#: templates/postorius/index.html:105
 #, fuzzy
 #| msgid ""
 #| "Only lists that you are owner, moderator or subscriber for are shown here."
@@ -2390,11 +2393,11 @@ msgid ""
 "Click to <a href=\"?all-lists\"> see all lists</a>."
 msgstr "사용자가 소유자, 모더레이터 또는 구독자인 목록만 여기에 표시됩니다."
 
-#: templates/postorius/index.html:108
+#: templates/postorius/index.html:109
 msgid "Only admins see unadvertised lists in the list index."
 msgstr "관리자만 목록 색인에서 광고되지 않은 목록을 볼 수 있다."
 
-#: templates/postorius/index.html:114
+#: templates/postorius/index.html:115
 msgid "There are currently no mailing lists."
 msgstr "현재 우편물 발송 목록이 없다."
 
@@ -2503,7 +2506,7 @@ msgstr ""
 msgid "Header filters"
 msgstr "헤더 필터"
 
-#: templates/postorius/lists/header_matches.html:58
+#: templates/postorius/lists/header_matches.html:68
 #: templates/postorius/lists/memberoptions.html:20
 #: templates/postorius/lists/memberoptions.html:28
 #: templates/postorius/lists/settings.html:30
@@ -2512,7 +2515,7 @@ msgstr "헤더 필터"
 msgid "Save changes"
 msgstr "변경 사항 저장"
 
-#: templates/postorius/lists/header_matches.html:60
+#: templates/postorius/lists/header_matches.html:70
 msgid "Changes pending, click on the button to save them."
 msgstr "보류 중인 변경 사항을 저장하려면 버튼을 클릭하십시오."
 
@@ -2670,13 +2673,13 @@ msgstr "전자 메일 주소"
 msgid "Actions"
 msgstr "행동들"
 
-#: templates/postorius/lists/pending_confirmations.html:37
+#: templates/postorius/lists/pending_confirmations.html:38
 #: templates/postorius/lists/subscription_requests.html:38
 msgid "Ban"
 msgstr "금지"
 
-#: templates/postorius/lists/pending_confirmations.html:47
-#: templates/postorius/lists/subscription_requests.html:50
+#: templates/postorius/lists/pending_confirmations.html:48
+#: templates/postorius/lists/subscription_requests.html:51
 msgid "There are currently no subscription requests for this list."
 msgstr "현재 이 목록에 대한 구독 요청이 없다."
 
@@ -2984,6 +2987,21 @@ msgstr "사용자들"
 msgid "Created"
 msgstr "에서 작성됨"
 
+#: templates/postorius/user/confirm_delete.html:9
+#: templates/postorius/user/confirm_delete.html:13
+#: templates/postorius/user/confirm_delete.html:22
+#: templates/postorius/user/manage.html:119
+#, fuzzy
+#| msgid "Account"
+msgid "Delete Account"
+msgstr "계정"
+
+#: templates/postorius/user/confirm_delete.html:17
+msgid ""
+"Are you sure you want to delete this account? This will remove the account "
+"along with all its subscriptions."
+msgstr ""
+
 #: templates/postorius/user/list_options.html:14
 msgid "Subscription options for"
 msgstr "에 대한 구독 선택"
@@ -3153,7 +3171,7 @@ msgstr "새 도메인 등록"
 msgid "Domain %s updated"
 msgstr "%s 도메인 업데이트"
 
-#: views/domain.py:130 views/list.py:1019
+#: views/domain.py:130 views/list.py:1029
 msgid "Please check the errors below"
 msgstr "아래의 오류를 확인하십시오"
 
@@ -3183,7 +3201,7 @@ msgstr "{}이(가) {}의 소유자가 아님"
 msgid "The email {} has been banned."
 msgstr "이메일 {}이(가) 금지되었다."
 
-#: views/generic.py:122 views/generic.py:137 views/list.py:1549
+#: views/generic.py:122 views/generic.py:137 views/list.py:1569
 #, python-format
 msgid "An error occurred: %s"
 msgstr "오류 발생: %s"
@@ -3309,226 +3327,226 @@ msgstr "구독 요청이 제출되었으며 진행자의 승인을 기다리고 
 msgid "%s has been unsubscribed from this list."
 msgstr "%s이(가) 이 목록에서 구독이 취소되었다."
 
-#: views/list.py:737
+#: views/list.py:738
 #, fuzzy, python-format
 #| msgid "The address %(address)s has been subscribed to %(list)s."
 msgid "The address %(address)s has been invited to %(list)s."
 msgstr "%(address)s 주소가 %(list)s에 가입되어 있음."
 
-#: views/list.py:742
+#: views/list.py:743
 #, python-format
 msgid "The address %(address)s has been subscribed to %(list)s."
 msgstr "%(address)s 주소가 %(list)s에 가입되어 있음."
 
-#: views/list.py:747
+#: views/list.py:748
 msgid ""
 " Subscription may be pending address verification, confirmation or approval "
 "as appropriate."
 msgstr ""
 
-#: views/list.py:764 views/list.py:826
+#: views/list.py:766 views/list.py:836
 #, python-format
 msgid "The email address %s is not valid."
 msgstr "%s 전자 메일 주소가 올바르지 않음."
 
-#: views/list.py:795
+#: views/list.py:805
 msgid "Please fill out the form correctly."
 msgstr "양식을 올바르게 작성하십시오."
 
-#: views/list.py:813
+#: views/list.py:823
 #, fuzzy, python-brace-format
 #| msgid "The address %(address)s has been unsubscribed from %(list)s."
 msgid "These addresses {address} have been unsubscribed from {list}."
 msgstr "%(address)s 주소가 %(list)s에서 구독 취소됨."
 
-#: views/list.py:848
+#: views/list.py:858
 msgid "The selected messages were accepted"
 msgstr "선택한 메시지가 수락됨"
 
-#: views/list.py:853
+#: views/list.py:863
 msgid "The selected messages were rejected"
 msgstr "선택한 메시지를 거절했습니다"
 
-#: views/list.py:858
+#: views/list.py:868
 msgid "The selected messages were discarded"
 msgstr "선택한 메시지가 삭제됨"
 
-#: views/list.py:861
+#: views/list.py:871
 msgid "Message could not be found"
 msgstr "메시지를 찾을 수 없음"
 
-#: views/list.py:892
+#: views/list.py:902
 msgid "The message was accepted"
 msgstr "그 메시지는 받아들여졌다"
 
-#: views/list.py:895
+#: views/list.py:905
 msgid "The message was rejected"
 msgstr "그 메시지는 거절당했다"
 
-#: views/list.py:898
+#: views/list.py:908
 msgid "The message was discarded"
 msgstr "메시지는 폐기되었다"
 
-#: views/list.py:901
+#: views/list.py:911
 msgid "Held message was not found."
 msgstr "고정된 메시지를 찾을 수 없음."
 
-#: views/list.py:915
+#: views/list.py:925
 msgid "Moderation action for {} set to {}"
 msgstr "{}에 대한 수정 작업이 {}(으)로 설정됨"
 
-#: views/list.py:923
+#: views/list.py:933
 #, fuzzy
 #| msgid "Failed to set moderation action: {}"
 msgid "Failed to set moderation action for {}"
 msgstr "절제 작업을 설정하지 못함: {}"
 
-#: views/list.py:975
+#: views/list.py:985
 msgid "Choose a Domain"
 msgstr "도메인 선택"
 
-#: views/list.py:999
+#: views/list.py:1009
 msgid "List created"
 msgstr "생성된 목록"
 
-#: views/list.py:1011
+#: views/list.py:1021
 msgid "Mailing List already exists."
 msgstr "메일링 리스트가 이미 존재한다."
 
-#: views/list.py:1191
+#: views/list.py:1201
 msgid "Subscriptions pending user confirmation"
 msgstr "사용자 확인 보류 중인 구독"
 
-#: views/list.py:1204
+#: views/list.py:1214
 msgid "Subscriptions pending approval"
 msgstr "승인 보류 중인 구독"
 
-#: views/list.py:1217
+#: views/list.py:1227
 #, fuzzy
 #| msgid "Subscriptions pending approval"
 msgid "Un-subscriptions pending approval"
 msgstr "승인 보류 중인 구독"
 
-#: views/list.py:1265
+#: views/list.py:1276
 msgid "The request has been accepted."
 msgstr "요청이 받아들여졌다."
 
-#: views/list.py:1266
+#: views/list.py:1277
 msgid "The request has been rejected."
 msgstr "그 요청은 거절되었다."
 
-#: views/list.py:1267
+#: views/list.py:1278
 msgid "The request has been discarded."
 msgstr "그 요청은 이미 폐기되었다."
 
-#: views/list.py:1268
+#: views/list.py:1279
 msgid "The request has been defered."
 msgstr "요청이 되돌아 왔다."
 
-#: views/list.py:1287
+#: views/list.py:1299
 #, python-format
 msgid "The request was already moderated: %s"
 msgstr "요청이 이미 진행 중: %s"
 
-#: views/list.py:1291
+#: views/list.py:1303
 #, python-format
 msgid "The request could not be moderated: %s"
 msgstr "요청을 조정할 수 없음: %s"
 
-#: views/list.py:1297
+#: views/list.py:1317
 msgid "List Identity"
 msgstr "목록 식별"
 
-#: views/list.py:1298
+#: views/list.py:1318
 msgid "Automatic Responses"
 msgstr "자동 응답"
 
-#: views/list.py:1299
+#: views/list.py:1319
 msgid "Alter Messages"
 msgstr "메시지 변경"
 
-#: views/list.py:1300
+#: views/list.py:1320
 msgid "DMARC Mitigations"
 msgstr "DMARC 완화"
 
-#: views/list.py:1301
+#: views/list.py:1321
 msgid "Digest"
 msgstr "소화하다"
 
-#: views/list.py:1302
+#: views/list.py:1322
 msgid "Message Acceptance"
 msgstr "메시지 수락"
 
-#: views/list.py:1303
+#: views/list.py:1323
 msgid "Archiving"
 msgstr "보관"
 
-#: views/list.py:1304
+#: views/list.py:1324
 #, fuzzy
 #| msgid "Member options"
 msgid "Member Policy"
 msgstr "구성원 옵션"
 
-#: views/list.py:1305
+#: views/list.py:1325
 #, fuzzy
 #| msgid "Default processing"
 msgid "Bounce Processing"
 msgstr "기본 처리"
 
-#: views/list.py:1372
+#: views/list.py:1392
 msgid "The settings have been updated."
 msgstr "설정이 업데이트되었다."
 
-#: views/list.py:1375
+#: views/list.py:1395
 msgid "An error occurred: "
 msgstr "오류가 발생함: "
 
-#: views/list.py:1409
+#: views/list.py:1429
 #, python-format
 msgid "The user %(email)s is not in the %(role)s group"
 msgstr "사용자 %(email)s이(가) %(role)s그룹에 없음"
 
-#: views/list.py:1416
+#: views/list.py:1436
 msgid "Removing the last owner is impossible"
 msgstr "그 마지막 소유자를 제거하면 불가능하다"
 
-#: views/list.py:1434
+#: views/list.py:1454
 #, python-format
 msgid "The user could not be removed: %(msg)s"
 msgstr "사용자를 제거할 수 없음: %(msg)s"
 
-#: views/list.py:1440
+#: views/list.py:1460
 #, python-format
 msgid "The user %(address)s has been removed from the %(role)s group."
 msgstr "사용자가 %(address)s 그룹%(role)s으로부터 제거됨."
 
-#: views/list.py:1461
+#: views/list.py:1481
 msgid "No member is subscribed to the list currently."
 msgstr "현재 그 리스트에 가입한 회원이 없다."
 
-#: views/list.py:1474
+#: views/list.py:1494
 msgid "All members have been unsubscribed from the list."
 msgstr "모든 회원들이 그 명단에서 제외되었다."
 
-#: views/list.py:1553
+#: views/list.py:1573
 msgid "The header matches were successfully modified."
 msgstr "헤더 매치가 성공적으로 수정되었다."
 
-#: views/list.py:1560
+#: views/list.py:1580
 msgid "New header"
 msgstr "새 헤더"
 
-#: views/list.py:1561
+#: views/list.py:1581
 msgid "New pattern"
 msgstr "새 패턴"
 
-#: views/list.py:1593
+#: views/list.py:1613
 #, fuzzy
 #| msgid "Pending Confirmation"
 msgid "Invalid confirmation token"
 msgstr "확인 보류 중"
 
-#: views/list.py:1603 views/list.py:1619
+#: views/list.py:1623 views/list.py:1639
 msgid "Token expired or invalid."
 msgstr "토큰이 만료되었거나 올바르지 않습니다."
 
@@ -3583,6 +3601,15 @@ msgstr ""
 #: views/user.py:485
 msgid "Password updated successfully"
 msgstr ""
+
+#: views/user.py:522
+#, fuzzy
+#| msgid "Currently banned addresses"
+msgid "Successfully deleted account"
+msgstr "현재 금지된 주소"
+
+#~ msgid "Login"
+#~ msgstr "로그인"
 
 #~ msgid "Only mailinglist members"
 #~ msgstr "메일링리스트 진행자만"

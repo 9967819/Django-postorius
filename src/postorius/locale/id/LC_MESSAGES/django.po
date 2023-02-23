@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-16 12:46-0800\n"
+"POT-Creation-Date: 2023-02-21 23:44+0000\n"
 "PO-Revision-Date: 2023-02-20 16:04+0000\n"
 "Last-Translator: Neko Nekowazarashi <kodra@nekoweb.my.id>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -51,7 +51,7 @@ msgstr ""
 "masukkan contoh.id di sini."
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:22
-#: templates/postorius/index.html:82
+#: templates/postorius/index.html:83
 msgid "Description"
 msgstr "Deskripsi"
 
@@ -389,7 +389,7 @@ msgstr ""
 #: forms/list_forms.py:278 forms/list_forms.py:766
 #: templates/postorius/lists/held_messages.html:30
 #: templates/postorius/lists/held_messages.html:108
-#: templates/postorius/lists/pending_confirmations.html:36
+#: templates/postorius/lists/pending_confirmations.html:37
 #: templates/postorius/lists/subscription_requests.html:37
 msgid "Discard"
 msgstr "Buang"
@@ -1888,69 +1888,71 @@ msgstr "Ada galat ketika memproses permintaan Anda."
 msgid "Global Bans"
 msgstr "Larangan Global"
 
-#: templates/postorius/base.html:32
+#: templates/postorius/base.html:33
 msgid "Mailman logo"
 msgstr "Logo Mailman"
 
-#: templates/postorius/base.html:38
+#: templates/postorius/base.html:40
 msgid "Lists"
 msgstr "Milis"
 
-#: templates/postorius/base.html:44 templates/postorius/domain/index.html:5
+#: templates/postorius/base.html:46 templates/postorius/domain/index.html:5
 #: templates/postorius/domain/index.html:11
 msgid "Domains"
 msgstr "Domain"
 
-#: templates/postorius/base.html:50
+#: templates/postorius/base.html:52
 msgid "Bans"
 msgstr "Larangan"
 
-#: templates/postorius/base.html:56
+#: templates/postorius/base.html:58
 msgid "System Information"
 msgstr "Informasi Sistem"
 
-#: templates/postorius/base.html:62 templates/postorius/menu/list_nav.html:40
+#: templates/postorius/base.html:64 templates/postorius/menu/list_nav.html:40
 #: templates/postorius/user/all.html:8 templates/postorius/user/all.html:13
 msgid "Users"
 msgstr "Pengguna"
 
-#: templates/postorius/base.html:69 templates/postorius/lists/summary.html:33
+#: templates/postorius/base.html:71 templates/postorius/lists/summary.html:33
 msgid "Archives"
 msgstr "Arsip"
 
-#: templates/postorius/base.html:85
-msgid "Account"
-msgstr "Akun"
+#: templates/postorius/base.html:79
+#, fuzzy
+#| msgid "Sign Up"
+msgid "Sign In"
+msgstr "Daftar"
 
-#: templates/postorius/base.html:89
-msgid "Mailman settings"
-msgstr "Pengaturan Mailman"
-
-#: templates/postorius/base.html:94
-msgid "Posting activity"
-msgstr "Aktivitas pos"
-
-#: templates/postorius/base.html:100
-msgid "Logout"
-msgstr "Keluar"
-
-#: templates/postorius/base.html:107
-msgid "Login"
-msgstr "Masuk"
-
-#: templates/postorius/base.html:111
+#: templates/postorius/base.html:83
 msgid "Sign Up"
 msgstr "Daftar"
 
-#: templates/postorius/base.html:134
+#: templates/postorius/base.html:99
+msgid "Account"
+msgstr "Akun"
+
+#: templates/postorius/base.html:103
+msgid "Mailman settings"
+msgstr "Pengaturan Mailman"
+
+#: templates/postorius/base.html:108
+msgid "Posting activity"
+msgstr "Aktivitas pos"
+
+#: templates/postorius/base.html:114
+msgid "Logout"
+msgstr "Keluar"
+
+#: templates/postorius/base.html:136
 msgid "Postorius Documentation"
 msgstr "Dokumentasi Postorius"
 
-#: templates/postorius/base.html:138
+#: templates/postorius/base.html:140
 msgid "Postorius Version"
 msgstr "Versi Postorius"
 
-#: templates/postorius/base.html:141
+#: templates/postorius/base.html:143
 msgid "Happy Mailman Day!"
 msgstr "Selamat Hari Mailman!"
 
@@ -1994,6 +1996,7 @@ msgstr "Hapus"
 #: templates/postorius/lists/confirm_remove_role.html:23
 #: templates/postorius/lists/confirm_removeall_subscribers.html:22
 #: templates/postorius/lists/template_delete.html:25
+#: templates/postorius/user/confirm_delete.html:23
 msgid "Cancel"
 msgstr "Batal"
 
@@ -2082,8 +2085,8 @@ msgstr "Templat '%(name)s'"
 
 #: templates/postorius/domain/template_add.html:25
 #: templates/postorius/lists/template_add.html:16
-#: templates/postorius/user/address_preferences.html:62
-#: templates/postorius/user/subscription_preferences.html:73
+#: templates/postorius/user/address_preferences.html:64
+#: templates/postorius/user/subscription_preferences.html:75
 msgid "Save"
 msgstr "Simpan"
 
@@ -2101,7 +2104,7 @@ msgid ""
 msgstr ""
 
 #: templates/postorius/domain/template_index.html:16
-#: templates/postorius/lists/template_list.html:14
+#: templates/postorius/lists/template_list.html:15
 msgid "New Template"
 msgstr "Templat Baru"
 
@@ -2143,51 +2146,51 @@ msgstr ""
 msgid "Mailing Lists"
 msgstr "Milis"
 
-#: templates/postorius/index.html:18
+#: templates/postorius/index.html:20
 msgid "Role: "
 msgstr "Peran: "
 
-#: templates/postorius/index.html:40
+#: templates/postorius/index.html:41
 msgid "Owner"
 msgstr "Pemilik"
 
-#: templates/postorius/index.html:45
+#: templates/postorius/index.html:46
 msgid "Moderator"
 msgstr "Moderator"
 
-#: templates/postorius/index.html:50
+#: templates/postorius/index.html:51
 msgid "Member"
 msgstr "Anggota"
 
-#: templates/postorius/index.html:55
+#: templates/postorius/index.html:56
 msgid "Non-member"
 msgstr "Non-anggota"
 
-#: templates/postorius/index.html:58
+#: templates/postorius/index.html:59
 msgid "All"
 msgstr "Semua"
 
-#: templates/postorius/index.html:66
+#: templates/postorius/index.html:67
 msgid "Create New Domain"
 msgstr "Buat Domain Baru"
 
-#: templates/postorius/index.html:68
+#: templates/postorius/index.html:69
 msgid "Create New List"
 msgstr "Buat Milis Baru"
 
-#: templates/postorius/index.html:80
+#: templates/postorius/index.html:81
 msgid "List name"
 msgstr "Nama milis"
 
-#: templates/postorius/index.html:81
+#: templates/postorius/index.html:82
 msgid "Post address"
 msgstr "Alamat surel pos"
 
-#: templates/postorius/index.html:92
+#: templates/postorius/index.html:93
 msgid "unadvertised"
 msgstr ""
 
-#: templates/postorius/index.html:104
+#: templates/postorius/index.html:105
 msgid ""
 "Only lists that you are owner, moderator or subscriber for are shown here. "
 "Click to <a href=\"?all-lists\"> see all lists</a>."
@@ -2196,11 +2199,11 @@ msgstr ""
 "ditampilkan di sini. Klik ke <a href=\"?all-lists\"> untuk melihat semua "
 "milis</a>."
 
-#: templates/postorius/index.html:108
+#: templates/postorius/index.html:109
 msgid "Only admins see unadvertised lists in the list index."
 msgstr ""
 
-#: templates/postorius/index.html:114
+#: templates/postorius/index.html:115
 msgid "There are currently no mailing lists."
 msgstr "Tidak ada milis saat ini."
 
@@ -2304,7 +2307,7 @@ msgstr ""
 msgid "Header filters"
 msgstr "Filter tajuk"
 
-#: templates/postorius/lists/header_matches.html:58
+#: templates/postorius/lists/header_matches.html:68
 #: templates/postorius/lists/memberoptions.html:20
 #: templates/postorius/lists/memberoptions.html:28
 #: templates/postorius/lists/settings.html:30
@@ -2313,7 +2316,7 @@ msgstr "Filter tajuk"
 msgid "Save changes"
 msgstr "Simpan perubahan"
 
-#: templates/postorius/lists/header_matches.html:60
+#: templates/postorius/lists/header_matches.html:70
 msgid "Changes pending, click on the button to save them."
 msgstr "Perubahan tertunda, klik pada tombol untuk menyimpan mereka."
 
@@ -2471,13 +2474,13 @@ msgstr "Alamat Surel"
 msgid "Actions"
 msgstr "Tindakan"
 
-#: templates/postorius/lists/pending_confirmations.html:37
+#: templates/postorius/lists/pending_confirmations.html:38
 #: templates/postorius/lists/subscription_requests.html:38
 msgid "Ban"
 msgstr "Larang"
 
-#: templates/postorius/lists/pending_confirmations.html:47
-#: templates/postorius/lists/subscription_requests.html:50
+#: templates/postorius/lists/pending_confirmations.html:48
+#: templates/postorius/lists/subscription_requests.html:51
 msgid "There are currently no subscription requests for this list."
 msgstr "Saat ini tidak ada permintaan langganan untuk milis ini."
 
@@ -2758,6 +2761,21 @@ msgstr "Pengguna"
 msgid "Created"
 msgstr "Dibuat"
 
+#: templates/postorius/user/confirm_delete.html:9
+#: templates/postorius/user/confirm_delete.html:13
+#: templates/postorius/user/confirm_delete.html:22
+#: templates/postorius/user/manage.html:119
+#, fuzzy
+#| msgid "Web Account"
+msgid "Delete Account"
+msgstr "Akun Web"
+
+#: templates/postorius/user/confirm_delete.html:17
+msgid ""
+"Are you sure you want to delete this account? This will remove the account "
+"along with all its subscriptions."
+msgstr ""
+
 #: templates/postorius/user/list_options.html:14
 msgid "Subscription options for"
 msgstr "Pilihan langganan untuk"
@@ -2920,7 +2938,7 @@ msgstr "Domain baru terdaftar"
 msgid "Domain %s updated"
 msgstr "Domain %s diperbarui"
 
-#: views/domain.py:130 views/list.py:1019
+#: views/domain.py:130 views/list.py:1029
 msgid "Please check the errors below"
 msgstr "Mohon periksa galat di bawah ini"
 
@@ -2950,7 +2968,7 @@ msgstr "Menghapus {} sebagai pemilik dari {}"
 msgid "The email {} has been banned."
 msgstr "Surel {} telah dilarang."
 
-#: views/generic.py:122 views/generic.py:137 views/list.py:1549
+#: views/generic.py:122 views/generic.py:137 views/list.py:1569
 #, python-format
 msgid "An error occurred: %s"
 msgstr "Galat terjadi: %s"
@@ -3068,216 +3086,216 @@ msgstr ""
 msgid "%s has been unsubscribed from this list."
 msgstr "%s telah membatalkan langganan dari milis ini."
 
-#: views/list.py:737
+#: views/list.py:738
 #, python-format
 msgid "The address %(address)s has been invited to %(list)s."
 msgstr "Alamat surel %(address)s telah diundang ke %(list)s."
 
-#: views/list.py:742
+#: views/list.py:743
 #, python-format
 msgid "The address %(address)s has been subscribed to %(list)s."
 msgstr "Alamat surel %(address)s telah berlangganan ke %(list)s."
 
-#: views/list.py:747
+#: views/list.py:748
 msgid ""
 " Subscription may be pending address verification, confirmation or approval "
 "as appropriate."
 msgstr ""
 
-#: views/list.py:764 views/list.py:826
+#: views/list.py:766 views/list.py:836
 #, python-format
 msgid "The email address %s is not valid."
 msgstr "Surel %s tidak valid."
 
-#: views/list.py:795
+#: views/list.py:805
 msgid "Please fill out the form correctly."
 msgstr "Tolong isi formulir dengan benar."
 
-#: views/list.py:813
+#: views/list.py:823
 #, python-brace-format
 msgid "These addresses {address} have been unsubscribed from {list}."
 msgstr "Alamat surel {address} telah berhenti berlangganan dari {list}."
 
-#: views/list.py:848
+#: views/list.py:858
 msgid "The selected messages were accepted"
 msgstr "Pesan terpilih telah diterima"
 
-#: views/list.py:853
+#: views/list.py:863
 msgid "The selected messages were rejected"
 msgstr "Pesan terpilih telah ditolak"
 
-#: views/list.py:858
+#: views/list.py:868
 msgid "The selected messages were discarded"
 msgstr "Pesan terpilih telah dihapus"
 
-#: views/list.py:861
+#: views/list.py:871
 msgid "Message could not be found"
 msgstr "Pesan tidak ditemukan"
 
-#: views/list.py:892
+#: views/list.py:902
 msgid "The message was accepted"
 msgstr "Pesan diterima"
 
-#: views/list.py:895
+#: views/list.py:905
 msgid "The message was rejected"
 msgstr "Pesan ditolak"
 
-#: views/list.py:898
+#: views/list.py:908
 msgid "The message was discarded"
 msgstr "Pesan telah dihapus"
 
-#: views/list.py:901
+#: views/list.py:911
 msgid "Held message was not found."
 msgstr "Pesan tertunda tidak ditemukan."
 
-#: views/list.py:915
+#: views/list.py:925
 msgid "Moderation action for {} set to {}"
 msgstr "Tindakan moderasi untuk {} diatur ke {}"
 
-#: views/list.py:923
+#: views/list.py:933
 msgid "Failed to set moderation action for {}"
 msgstr "Gagal untuk mengatur tindakan moderasi untuk {}"
 
-#: views/list.py:975
+#: views/list.py:985
 msgid "Choose a Domain"
 msgstr "Pilih Domain"
 
-#: views/list.py:999
+#: views/list.py:1009
 msgid "List created"
 msgstr "Milis dibuat"
 
-#: views/list.py:1011
+#: views/list.py:1021
 msgid "Mailing List already exists."
 msgstr "Milis telah ada."
 
-#: views/list.py:1191
+#: views/list.py:1201
 msgid "Subscriptions pending user confirmation"
 msgstr "Langganan menunggu konfirmasi pengguna"
 
-#: views/list.py:1204
+#: views/list.py:1214
 msgid "Subscriptions pending approval"
 msgstr "Langganan menunggu persetujuan"
 
-#: views/list.py:1217
+#: views/list.py:1227
 msgid "Un-subscriptions pending approval"
 msgstr "Pembatalan langganan menunggu persetujuan"
 
-#: views/list.py:1265
+#: views/list.py:1276
 msgid "The request has been accepted."
 msgstr "Permintaan telah diterima."
 
-#: views/list.py:1266
+#: views/list.py:1277
 msgid "The request has been rejected."
 msgstr "Permintaan telah ditolak."
 
-#: views/list.py:1267
+#: views/list.py:1278
 msgid "The request has been discarded."
 msgstr "Permintaan telah dihapus."
 
-#: views/list.py:1268
+#: views/list.py:1279
 msgid "The request has been defered."
 msgstr ""
 
-#: views/list.py:1287
+#: views/list.py:1299
 #, python-format
 msgid "The request was already moderated: %s"
 msgstr "Permintaan telah dimoderasi: %s"
 
-#: views/list.py:1291
+#: views/list.py:1303
 #, python-format
 msgid "The request could not be moderated: %s"
 msgstr "Permintaan tidak bisa dimoderasi: %s"
 
-#: views/list.py:1297
+#: views/list.py:1317
 msgid "List Identity"
 msgstr "Identitas Milis"
 
-#: views/list.py:1298
+#: views/list.py:1318
 msgid "Automatic Responses"
 msgstr "Respons Otomatis"
 
-#: views/list.py:1299
+#: views/list.py:1319
 msgid "Alter Messages"
 msgstr ""
 
-#: views/list.py:1300
+#: views/list.py:1320
 msgid "DMARC Mitigations"
 msgstr ""
 
-#: views/list.py:1301
+#: views/list.py:1321
 msgid "Digest"
 msgstr "Ringkasan"
 
-#: views/list.py:1302
+#: views/list.py:1322
 msgid "Message Acceptance"
 msgstr "Penerimaan Pesan"
 
-#: views/list.py:1303
+#: views/list.py:1323
 msgid "Archiving"
 msgstr "Mengarsipkan"
 
-#: views/list.py:1304
+#: views/list.py:1324
 msgid "Member Policy"
 msgstr "Kebijakan Anggota"
 
-#: views/list.py:1305
+#: views/list.py:1325
 msgid "Bounce Processing"
 msgstr "Pemrosesan Status Pengiriman"
 
-#: views/list.py:1372
+#: views/list.py:1392
 msgid "The settings have been updated."
 msgstr "Pengaturan telah diperbarui."
 
-#: views/list.py:1375
+#: views/list.py:1395
 msgid "An error occurred: "
 msgstr "Galat terjadi: "
 
-#: views/list.py:1409
+#: views/list.py:1429
 #, python-format
 msgid "The user %(email)s is not in the %(role)s group"
 msgstr "Pengguna %(email)s bukan di grup %(role)s"
 
-#: views/list.py:1416
+#: views/list.py:1436
 msgid "Removing the last owner is impossible"
 msgstr "Tidak mungkin untuk menghapus pemilik terakhir"
 
-#: views/list.py:1434
+#: views/list.py:1454
 #, python-format
 msgid "The user could not be removed: %(msg)s"
 msgstr "Pengguna tidak bisa dihapus: %(msg)s"
 
-#: views/list.py:1440
+#: views/list.py:1460
 #, python-format
 msgid "The user %(address)s has been removed from the %(role)s group."
 msgstr "Pengguna %(address)s telah dihapus dari grup %(role)s."
 
-#: views/list.py:1461
+#: views/list.py:1481
 msgid "No member is subscribed to the list currently."
 msgstr "Tidak ada anggota yang saat ini berlangganan ke milis."
 
-#: views/list.py:1474
+#: views/list.py:1494
 msgid "All members have been unsubscribed from the list."
 msgstr "Semua anggota telah dibatalkan langganan dari milis."
 
-#: views/list.py:1553
+#: views/list.py:1573
 #, fuzzy
 msgid "The header matches were successfully modified."
 msgstr "Pencocokan tajuk telah berhasil diubah."
 
-#: views/list.py:1560
+#: views/list.py:1580
 #, fuzzy
 msgid "New header"
 msgstr "Tajuk baru"
 
-#: views/list.py:1561
+#: views/list.py:1581
 msgid "New pattern"
 msgstr "Pola baru"
 
-#: views/list.py:1593
+#: views/list.py:1613
 msgid "Invalid confirmation token"
 msgstr "Token konfirmasi tidak valid"
 
-#: views/list.py:1603 views/list.py:1619
+#: views/list.py:1623 views/list.py:1639
 msgid "Token expired or invalid."
 msgstr "Token kedaluwarsa atau salah."
 
@@ -3329,6 +3347,14 @@ msgstr "Berhasil memperbarui pengguna."
 #: views/user.py:485
 msgid "Password updated successfully"
 msgstr "Berhasil memperbarui kata sandi"
+
+#: views/user.py:522
+#, fuzzy
+msgid "Successfully deleted account"
+msgstr "Berhasil memperbarui pengguna."
+
+#~ msgid "Login"
+#~ msgstr "Masuk"
 
 #~ msgid "Only mailinglist members"
 #~ msgstr "Hanya anggota milis"
