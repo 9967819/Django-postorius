@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-02-21 23:44+0000\n"
-"PO-Revision-Date: 2023-01-06 13:52+0000\n"
+"PO-Revision-Date: 2023-02-28 10:35+0000\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/sq/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.15.1-dev\n"
+"X-Generator: Weblate 4.16-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -3376,7 +3376,7 @@ msgstr "Pas Mesazhesh"
 
 #: views/list.py:1320
 msgid "DMARC Mitigations"
-msgstr "Zbutjeeee efektesh DMARC"
+msgstr "Zbutje efektesh DMARC"
 
 #: views/list.py:1321
 msgid "Digest"
