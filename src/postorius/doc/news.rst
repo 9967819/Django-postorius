@@ -30,6 +30,7 @@ UI
 --
 
 * Use RFC 2047 decoded user names in the confirm_token view. (Fixes #564)
+* Fix issues with the mobile site after Bootstrap 5 upgrade. (Fixes #572)
 
 A11y
 ----
