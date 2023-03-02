@@ -23,3 +23,10 @@
 
 // $(function() {
 // });
+
+// Add an aria-label="unset" to all form values that are empty.
+$('select.form-select').children().filter(function() {
+    return this.text == "-----";
+}).each(function() {
+    $(this).attr('aria-label', 'unset')
+});

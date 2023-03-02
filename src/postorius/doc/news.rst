@@ -43,6 +43,11 @@ A11y
   and pending confirmation requests. (Closes #482)
 * Use white hamburger lines and white logo for better contrast with blue top
   bar. (Closes #569)
+* Use nav-pills and change role from tablist to navigation with an aria-label
+  to specify the navigation intent. (See #492)
+* Remove redundant table cell announcements from Mailman Settings page so the
+  field name isn't read twice. (Fixes #503)
+* Add aria label for all options that are set as '----' to be unset. (Fixes #504)
 
 
 .. _NEWS-1.3.8:
