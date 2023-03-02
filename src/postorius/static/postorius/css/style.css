@@ -144,3 +144,11 @@ button.user-button {
     background-color: inherit;
     border: none;
 }
+
+/* Disable the black border on the navbar toggler
+   when it is in focus. */
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    color: white;
+}

@@ -61,13 +61,17 @@
     {% endif %}
     {% if user.is_superuser %}
       <div class="col d-flex flex-row-reverse">
-
+          {% comment %}
+           The span below exists only because d-flex will strech the child elements completely. So, we wrap
+           them in span so that the width the span increases but the button remains original height.
+          {% endcomment %}
+          <span>
             {% if domain_count < 1 %}
                 <a class="btn btn-success" href="{% url 'domain_new' %}">{% trans 'Create New Domain' %}</a>
             {% else %}
                 <a class="btn btn-success" href="{% url 'list_new' %}">{% trans 'Create New List' %}</a>
             {% endif %}
-
+          </span>
       </div>
     {% endif %}
     </div>
