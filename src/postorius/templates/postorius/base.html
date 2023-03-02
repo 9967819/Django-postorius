@@ -23,7 +23,7 @@
     </head>
     <body>
         <header class="navbar navbar-expand-lg bd-navbar">
-            <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap navbar-default">
+            <nav class="container-xxl bd-gutter navbar-default navbar-expand-md">
                 <div class="navbar-header d-flex align-items-center flex-grow-1 flex-md-grow-0">
                     <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#header-nav" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
@@ -115,8 +115,8 @@
                             </a></li>
                         {% endif %}
                     </ul>
-                    {% if not user.is_authenticated %}
-                    <ul class="navbar-nav d-none d-md-flex">
+                {% if not user.is_authenticated %}
+                <ul class="navbar-nav d-none d-md-flex">
                         <li class="nav-item"><a class="nav-link" href="{% url LOGIN_URL %}?next={{ next|default:request.path|urlencode }}">
                             <span class="fa fa-sign-in"></span>
                             {% trans 'Sign In' %}
@@ -125,8 +125,7 @@
                             <span class="fa fa-user-plus"></span>
                             {% trans 'Sign Up' %}
                         </a>
-
-                    </ul>
+                </ul>
                 {% else %}
                 <div class="dropdown nav-item d-none d-md-flex">
                         <button href="#" class="btn btn-primary user-button dropdown-toggle" data-bs-toggle="dropdown"
