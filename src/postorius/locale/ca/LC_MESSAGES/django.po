@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Ecron <ecron_89@hotmail.com>, 2021.
+# Ivan Fustero <ifustero@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-02-21 23:44+0000\n"
-"PO-Revision-Date: 2021-11-24 21:51+0000\n"
-"Last-Translator: Ecron <ecron_89@hotmail.com>\n"
+"PO-Revision-Date: 2023-03-14 10:34+0000\n"
+"Last-Translator: Ivan Fustero <ifustero@gmail.com>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ca/>\n"
 "Language: ca\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.10-dev\n"
+"X-Generator: Weblate 4.16.2-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -141,13 +142,6 @@ msgid "Delivery mode"
 msgstr "Modalitat d’entrega"
 
 #: forms/fields.py:151
-#, fuzzy
-#| msgid ""
-#| "If you select summary digests , you'll get posts bundled together "
-#| "(usually one per day but possibly more on busy lists), instead of singly "
-#| "when they're sent. Your mail reader may or may not support MIME digests. "
-#| "In general MIME digests are preferred, but if you have a problem reading "
-#| "them, select plain text digests."
 msgid ""
 "If you select digests , you'll get posts bundled together (usually one per "
 "day but possibly more on busy lists), instead of singly when they're sent. "
@@ -155,7 +149,7 @@ msgid ""
 "digests are preferred, but if you have a problem reading them, select plain "
 "text digests. Summary Digests are currently equivalent to MIME Digests."
 msgstr ""
-"Si seleccioneu resums, rebrà els enviaments junts (normalment un a el dia, "
+"Si seleccioneu resums, rebrà els enviaments junts (normalment un al dia, "
 "però possiblement més en llistes amb molt trànsit), en lloc d'un a un tal "
 "com s'enviïn. El seu lector de correu pot o no admetre tractar resums MIME. "
 "En general, els resums MIME són preferibles, però si té problemes per llegir-"
@@ -240,7 +234,7 @@ msgstr "Només els moderadors de la llista"
 
 #: forms/list_forms.py:52
 msgid "Mailinglist administrators and members"
-msgstr ""
+msgstr "Administradors i membres de la llista de correu"
 
 #: forms/list_forms.py:53
 msgid "Anyone"
@@ -283,10 +277,8 @@ msgid "Hide this list in list index"
 msgstr "Amagar aquesta llista en l'índex de llistes"
 
 #: forms/list_forms.py:94 forms/list_forms.py:1126
-#, fuzzy
-#| msgid "Description"
 msgid "Short Description"
-msgstr "Descripció"
+msgstr "Descripció breu"
 
 #: forms/list_forms.py:104
 msgid "Choose an existing Domain."
@@ -325,6 +317,8 @@ msgid ""
 "Subscribing via \"Primary Address\" will change subscription address when "
 "you change your primary address."
 msgstr ""
+"La subscripció a través de l'\"Adreça primària\" canviarà l'adreça de "
+"subscripció quan canvieu la vostra adreça principal."
 
 #: forms/list_forms.py:179 forms/list_forms.py:210 forms/member_forms.py:30
 #: forms/system.py:38
@@ -341,10 +335,8 @@ msgid "Your name (optional)"
 msgstr "El seu nom (opcional)"
 
 #: forms/list_forms.py:198 forms/list_forms.py:1404 views/list.py:543
-#, fuzzy
-#| msgid "Email Address"
 msgid "Primary Address ({})"
-msgstr "Adreça de correu electrònic"
+msgstr "Adreça de correu electrònic principal ({})"
 
 #: forms/list_forms.py:233
 msgid "Open"
@@ -412,14 +404,12 @@ msgid "Discard"
 msgstr "Descartar"
 
 #: forms/list_forms.py:279
-#, fuzzy
-#| msgid "List metrics"
 msgid "List Admins"
-msgstr "Mètriques de la llista"
+msgstr "Llista d'administradors"
 
 #: forms/list_forms.py:280
 msgid "Site Admin"
-msgstr ""
+msgstr "Administrador del lloc"
 
 #: forms/list_forms.py:284 forms/list_forms.py:316 forms/list_forms.py:327
 #: forms/list_forms.py:338 forms/list_forms.py:467 forms/list_forms.py:477
@@ -467,10 +457,13 @@ msgid ""
 "automatically disabled. When the subscription is  re-enabled, their bounce "
 "score will be reset to zero."
 msgstr ""
+"Aquesta és la puntuació de rebot per sobre de la qual es desactivarà "
+"automàticament la subscripció d'un membre. Quan es torni a activar la "
+"subscripció, la puntuació de rebot es restablirà a zero."
 
 #: forms/list_forms.py:305
 msgid "Bounce info stale after"
-msgstr ""
+msgstr "La informació de retorn està obsoleta després de"
 
 #: forms/list_forms.py:308
 msgid ""
