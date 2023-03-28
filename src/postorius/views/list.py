@@ -340,6 +340,9 @@ class ListSummaryView(MailingListView):
             'subscribed_preferred': False,
             'public_archive': False,
             'hyperkitty_enabled': False,
+            'anon_subscribe': getattr(
+                settings, 'SHOW_ANONYMOUS_SUBSCRIBE_FORM', True
+            ),
         }
         if self.mailing_list.settings['archive_policy'] == 'public':
             data['public_archive'] = True

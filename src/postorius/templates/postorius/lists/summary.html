@@ -109,20 +109,22 @@
         {% endblocktrans %}</p>
         <p><a href="{% url LOGIN_URL %}?next={{ next|default:request.path|urlencode }}" class="btn btn-primary">{% trans 'Log In' %}</a></p>
       </div>
-      <hr />
-      <div>
-        <p>
-        {% blocktrans %}
-        You can also subscribe without creating an account.
-        If you wish to do so, please use the form below.
-        {% endblocktrans%}
-        </p>
-        <form action="{% url 'list_anonymous_subscribe' list.list_id %}"
-              method="post" class="form-horizontal">
-          {% bootstrap_form_horizontal anonymous_subscription_form 2 8 'Subscribe' %}
-          <p hidden>{% trans 'Subscribe' %}</p>
-        </form>
-      </div>
+      {% if anon_subscribe %}
+        <hr />
+        <div>
+          <p>
+          {% blocktrans %}
+          You can also subscribe without creating an account.
+          If you wish to do so, please use the form below.
+          {% endblocktrans%}
+          </p>
+          <form action="{% url 'list_anonymous_subscribe' list.list_id %}"
+                method="post" class="form-horizontal">
+            {% bootstrap_form_horizontal anonymous_subscription_form 2 8 'Subscribe' %}
+            <p hidden>{% trans 'Subscribe' %}</p>
+          </form>
+        </div>
+      {% endif %}
     {% endif %}
 
     {# List metrics #}
