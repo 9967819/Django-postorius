@@ -26,7 +26,7 @@
     {% if hyperkitty_enabled %}
       {% if not public_archive and not user.is_authenticated %}
         <p>
-          {% trans 'You have to login to visit the archives of this list.' %}
+          {% trans 'You have to sign in to visit the archives of this list.' %}
         </p>
       {% else %}
         {% url 'hk_list_overview' list.fqdn_listname as hyperkitty_list_url %}
@@ -103,11 +103,11 @@
       <div>
         <h2>{% trans 'Subscription / Unsubscription' %}</h2>
         <p>{% blocktrans %}
-        To subscribe or unsubscribe from this list, please log in first.
-        If you have not previously logged in, you may need to set up an account
+        To subscribe or unsubscribe from this list, please sign in first.
+        If you have not previously signed in, you may need to set up an account
         with the appropriate email address.
         {% endblocktrans %}</p>
-        <p><a href="{% url LOGIN_URL %}?next={{ next|default:request.path|urlencode }}" class="btn btn-primary">{% trans 'Log In' %}</a></p>
+        <p><a href="{% url LOGIN_URL %}?next={{ next|default:request.path|urlencode }}" class="btn btn-primary">{% trans 'Sign In' %}</a></p>
       </div>
       {% if anon_subscribe %}
         <hr />

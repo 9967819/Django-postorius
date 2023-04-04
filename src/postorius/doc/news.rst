@@ -33,6 +33,8 @@ UI
 * Fix issues with the mobile site after Bootstrap 5 upgrade. (Fixes #572)
 * A new SHOW_ANONYMOUS_SUBSCRIBE_FORM setting can be set to False to not
   display the form on list's info pages.  (Fixes #576)
+* Changed 'Login'/'Logout' to 'Sign In'/'Sign Out' for better
+  consistency between Postorius and HyperKitty. (Fixes #542)
 
 A11y
 ----
