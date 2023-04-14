@@ -1,22 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
+# Ram <airavatam@tutanota.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-02-21 23:44+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2023-04-14 12:52+0000\n"
+"Last-Translator: Ram <airavatam@tutanota.com>\n"
+"Language-Team: Malayalam <https://hosted.weblate.org/projects/gnu-mailman/"
+"postorius/ml/>\n"
+"Language: ml\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -48,7 +48,7 @@ msgstr ""
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:22
 #: templates/postorius/index.html:83
 msgid "Description"
-msgstr ""
+msgstr "വിവരണം"
 
 #: forms/domain_forms.py:59 templates/postorius/domain/index.html:23
 msgid "Alias Domain"
@@ -72,11 +72,11 @@ msgstr ""
 
 #: forms/domain_forms.py:111
 msgid "Owner's Email"
-msgstr ""
+msgstr "ഉടമയുടെ ഇമെയിൽ"
 
 #: forms/fields.py:36
 msgid "Regular"
-msgstr ""
+msgstr "പതിവ്"
 
 #: forms/fields.py:37
 msgid "Plain Text Digests"
@@ -92,15 +92,15 @@ msgstr ""
 
 #: forms/fields.py:44 forms/list_forms.py:164
 msgid "Enabled"
-msgstr ""
+msgstr "പ്രവർത്തനക്ഷമമാക്കി"
 
 #: forms/fields.py:45 forms/list_forms.py:165
 msgid "Disabled"
-msgstr ""
+msgstr "പ്രവർത്തനരഹിതമാക്കി"
 
 #: forms/fields.py:46
 msgid "Disabled by Owner"
-msgstr ""
+msgstr "ഉടമ പ്രവർത്തനരഹിതമാക്കി"
 
 #: forms/fields.py:47
 msgid "Disabled by Bounces"
@@ -112,15 +112,15 @@ msgstr ""
 
 #: forms/fields.py:52
 msgid "Reject (with notification)"
-msgstr ""
+msgstr "നിരസിക്കുക (അറിയിപ്പിനൊപ്പം)"
 
 #: forms/fields.py:53
 msgid "Discard (no notification)"
-msgstr ""
+msgstr "നിരസിക്കുക (അറിയിപ്പില്ല)"
 
 #: forms/fields.py:54
 msgid "Accept immediately (bypass other rules)"
-msgstr ""
+msgstr "ഉടനടി സ്വീകരിക്കുക (മറ്റ് നിയമങ്ങൾ മറികടക്കുക)"
 
 #: forms/fields.py:55
 msgid "Default processing"
@@ -128,7 +128,7 @@ msgstr ""
 
 #: forms/fields.py:138
 msgid "Make at least one selection"
-msgstr ""
+msgstr "കുറഞ്ഞത് ഒരു തിരഞ്ഞെടുപ്പ് നടത്തുക"
 
 #: forms/fields.py:149 templates/postorius/lists/summary.html:54
 msgid "Delivery mode"
@@ -180,11 +180,11 @@ msgstr ""
 
 #: forms/list_forms.py:43
 msgid "Daily"
-msgstr ""
+msgstr "ദിവസേന"
 
 #: forms/list_forms.py:44
 msgid "Weekly"
-msgstr ""
+msgstr "പ്രതിവാരം"
 
 #: forms/list_forms.py:45
 msgid "Quarterly"
@@ -192,11 +192,11 @@ msgstr ""
 
 #: forms/list_forms.py:46
 msgid "Monthly"
-msgstr ""
+msgstr "പ്രതിമാസ"
 
 #: forms/list_forms.py:47
 msgid "Yearly"
-msgstr ""
+msgstr "വാർഷിക"
 
 #: forms/list_forms.py:51
 msgid "Only mailinglist administrators"
@@ -208,19 +208,21 @@ msgstr ""
 
 #: forms/list_forms.py:53
 msgid "Anyone"
-msgstr ""
+msgstr "ആർക്കും"
 
 #: forms/list_forms.py:68 templates/postorius/user/subscriptions.html:22
+#, fuzzy
 msgid "List Name"
-msgstr ""
+msgstr "പട്ടികയുടെ പേര്"
 
 #: forms/list_forms.py:71
+#, fuzzy
 msgid "Please enter a name for your list."
-msgstr ""
+msgstr "നിങ്ങളുടെ പട്ടിക്ക ദയവായി ഒരു പേര് നൽകുക."
 
 #: forms/list_forms.py:72
 msgid "Please enter a valid list name."
-msgstr ""
+msgstr "സാധുവായ ഒരു പട്ടിക പേര് നൽകുക."
 
 #: forms/list_forms.py:77
 msgid "Initial list owner address"
@@ -232,11 +234,11 @@ msgstr ""
 
 #: forms/list_forms.py:85
 msgid "Advertise this list?"
-msgstr ""
+msgstr "ഈ പട്ടിക പരസ്യം ചെയ്യണോ?"
 
 #: forms/list_forms.py:86
 msgid "Please choose a list type."
-msgstr ""
+msgstr "ദയവായി ഒരു പട്ടിക തരം തിരഞ്ഞെടുക്കുക."
 
 #: forms/list_forms.py:89
 msgid "Advertise this list in list index"
@@ -247,8 +249,9 @@ msgid "Hide this list in list index"
 msgstr ""
 
 #: forms/list_forms.py:94 forms/list_forms.py:1126
+#, fuzzy
 msgid "Short Description"
-msgstr ""
+msgstr "ഹൃസ്വ വിവരണം"
 
 #: forms/list_forms.py:104
 msgid "Choose an existing Domain."
@@ -260,7 +263,7 @@ msgstr ""
 
 #: forms/list_forms.py:110
 msgid "List Style"
-msgstr ""
+msgstr "പട്ടിക ശൈലി"
 
 #: forms/list_forms.py:114
 msgid "Choose a List Style."
@@ -313,7 +316,7 @@ msgstr ""
 #: forms/list_forms.py:234 templates/postorius/domain/template_delete.html:27
 #: templates/postorius/lists/template_delete.html:24
 msgid "Confirm"
-msgstr ""
+msgstr "സ്ഥിരീകരിക്കുക"
 
 #: forms/list_forms.py:235
 msgid "Moderate"
@@ -2571,7 +2574,7 @@ msgstr ""
 
 #: templates/postorius/user/manage.html:96
 msgid "Username"
-msgstr ""
+msgstr "ഉപയോക്തൃനാമം"
 
 #: templates/postorius/user/manage.html:100
 msgid "Superuser"
