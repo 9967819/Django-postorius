@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-21 23:44+0000\n"
+"POT-Creation-Date: 2023-04-18 16:09+0000\n"
 "PO-Revision-Date: 2021-11-05 02:19+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/gnu-"
@@ -48,7 +48,7 @@ msgstr ""
 "testing@eksempel.no, skriv inn eksempel.no her."
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:22
-#: templates/postorius/index.html:83
+#: templates/postorius/index.html:88
 msgid "Description"
 msgstr "Beskrivelse"
 
@@ -311,7 +311,7 @@ msgstr "Skriv inn en gyldig e-postadresse."
 msgid "Your name (optional)"
 msgstr "Ditt navn (Valgfritt)"
 
-#: forms/list_forms.py:198 forms/list_forms.py:1404 views/list.py:543
+#: forms/list_forms.py:198 forms/list_forms.py:1404 views/list.py:546
 #, fuzzy
 #| msgid "Email Address"
 msgid "Primary Address ({})"
@@ -828,8 +828,8 @@ msgid ""
 "message applies."
 msgstr ""
 
-#: forms/list_forms.py:749 templates/postorius/lists/summary.html:144
-#: templates/postorius/lists/summary.html:153
+#: forms/list_forms.py:749 templates/postorius/lists/summary.html:146
+#: templates/postorius/lists/summary.html:155
 #: templatetags/membership_helpers.py:78 templatetags/membership_helpers.py:84
 msgid "None"
 msgstr "Ingen"
@@ -1767,68 +1767,70 @@ msgstr "Mailman-innstillinger"
 msgid "Mailman logo"
 msgstr "Mailman-logo"
 
-#: templates/postorius/base.html:40
-msgid "Lists"
-msgstr "Lister"
-
-#: templates/postorius/base.html:46 templates/postorius/domain/index.html:5
-#: templates/postorius/domain/index.html:11
-msgid "Domains"
-msgstr "Domener"
-
-#: templates/postorius/base.html:52
-msgid "Bans"
-msgstr ""
-
-#: templates/postorius/base.html:58
-msgid "System Information"
-msgstr "Systeminformasjon"
-
-#: templates/postorius/base.html:64 templates/postorius/menu/list_nav.html:40
-#: templates/postorius/user/all.html:8 templates/postorius/user/all.html:13
-msgid "Users"
-msgstr "Bruker"
-
-#: templates/postorius/base.html:71 templates/postorius/lists/summary.html:33
-msgid "Archives"
-msgstr "Arkiv"
-
-#: templates/postorius/base.html:79
+#: templates/postorius/base.html:39 templates/postorius/base.html:122
+#: templates/postorius/lists/summary.html:110
 #, fuzzy
 #| msgid "Sign Up"
 msgid "Sign In"
 msgstr "Registrer"
 
-#: templates/postorius/base.html:83
+#: templates/postorius/base.html:43 templates/postorius/base.html:126
 msgid "Sign Up"
 msgstr "Registrer"
 
-#: templates/postorius/base.html:99
+#: templates/postorius/base.html:58 templates/postorius/base.html:140
 msgid "Account"
 msgstr "Konto"
 
-#: templates/postorius/base.html:103
+#: templates/postorius/base.html:62 templates/postorius/base.html:144
 msgid "Mailman settings"
 msgstr "Mailman-innstillinger"
 
-#: templates/postorius/base.html:108
+#: templates/postorius/base.html:67 templates/postorius/base.html:149
 msgid "Posting activity"
 msgstr "Postingsaktivitet"
 
-#: templates/postorius/base.html:114
+#: templates/postorius/base.html:73 templates/postorius/base.html:155
 #, fuzzy
-msgid "Logout"
-msgstr "Logg ut"
+#| msgid "Sign Up"
+msgid "Sign Out"
+msgstr "Registrer"
 
-#: templates/postorius/base.html:136
+#: templates/postorius/base.html:83
+msgid "Lists"
+msgstr "Lister"
+
+#: templates/postorius/base.html:89 templates/postorius/domain/index.html:5
+#: templates/postorius/domain/index.html:11
+msgid "Domains"
+msgstr "Domener"
+
+#: templates/postorius/base.html:95
+msgid "Bans"
+msgstr ""
+
+#: templates/postorius/base.html:101
+msgid "System Information"
+msgstr "Systeminformasjon"
+
+#: templates/postorius/base.html:107 templates/postorius/menu/list_nav.html:40
+#: templates/postorius/user/all.html:8 templates/postorius/user/all.html:13
+msgid "Users"
+msgstr "Bruker"
+
+#: templates/postorius/base.html:114 templates/postorius/lists/summary.html:33
+msgid "Archives"
+msgstr "Arkiv"
+
+#: templates/postorius/base.html:179
 msgid "Postorius Documentation"
 msgstr "Postorius-dokumentasjon"
 
-#: templates/postorius/base.html:140
+#: templates/postorius/base.html:183
 msgid "Postorius Version"
 msgstr "Postorius-versjon"
 
-#: templates/postorius/base.html:143
+#: templates/postorius/base.html:186
 msgid "Happy Mailman Day!"
 msgstr ""
 
@@ -2064,37 +2066,37 @@ msgstr "Ikke-medlemmer"
 msgid "All"
 msgstr ""
 
-#: templates/postorius/index.html:67
+#: templates/postorius/index.html:72
 msgid "Create New Domain"
 msgstr "Opprett nytt domene"
 
-#: templates/postorius/index.html:69
+#: templates/postorius/index.html:74
 msgid "Create New List"
 msgstr "Opprett ny liste"
 
-#: templates/postorius/index.html:81
+#: templates/postorius/index.html:86
 msgid "List name"
 msgstr "Listenavn"
 
-#: templates/postorius/index.html:82
+#: templates/postorius/index.html:87
 msgid "Post address"
 msgstr "Postadresse"
 
-#: templates/postorius/index.html:93
+#: templates/postorius/index.html:98
 msgid "unadvertised"
 msgstr ""
 
-#: templates/postorius/index.html:105
+#: templates/postorius/index.html:110
 msgid ""
 "Only lists that you are owner, moderator or subscriber for are shown here. "
 "Click to <a href=\"?all-lists\"> see all lists</a>."
 msgstr ""
 
-#: templates/postorius/index.html:109
+#: templates/postorius/index.html:114
 msgid "Only admins see unadvertised lists in the list index."
 msgstr ""
 
-#: templates/postorius/index.html:115
+#: templates/postorius/index.html:120
 msgid "There are currently no mailing lists."
 msgstr ""
 
@@ -2380,7 +2382,7 @@ msgid "To contact the list owners, use the following email address:"
 msgstr "For å kontakte listeeierne, bruk følgende e-postadresse:"
 
 #: templates/postorius/lists/summary.html:29
-msgid "You have to login to visit the archives of this list."
+msgid "You have to sign in to visit the archives of this list."
 msgstr ""
 
 #: templates/postorius/lists/summary.html:35
@@ -2442,7 +2444,7 @@ msgid ""
 msgstr ""
 
 #: templates/postorius/lists/summary.html:96
-#: templates/postorius/lists/summary.html:123
+#: templates/postorius/lists/summary.html:124
 #, fuzzy
 #| msgid "Unsubscribe"
 msgid "Subscribe"
@@ -2457,42 +2459,38 @@ msgstr ""
 #: templates/postorius/lists/summary.html:105
 msgid ""
 "\n"
-"        To subscribe or unsubscribe from this list, please log in first.\n"
-"        If you have not previously logged in, you may need to set up an "
+"        To subscribe or unsubscribe from this list, please sign in first.\n"
+"        If you have not previously signed in, you may need to set up an "
 "account\n"
 "        with the appropriate email address.\n"
 "        "
 msgstr ""
 
-#: templates/postorius/lists/summary.html:110
-msgid "Log In"
-msgstr "Logg inn"
-
-#: templates/postorius/lists/summary.html:115
+#: templates/postorius/lists/summary.html:116
 msgid ""
 "\n"
-"        You can also subscribe without creating an account.\n"
-"        If you wish to do so, please use the form below.\n"
-"        "
-msgstr ""
-
-#: templates/postorius/lists/summary.html:132
-msgid "List metrics"
+"          You can also subscribe without creating an account.\n"
+"          If you wish to do so, please use the form below.\n"
+"          "
 msgstr ""
 
 #: templates/postorius/lists/summary.html:134
+msgid "List metrics"
+msgstr ""
+
+#: templates/postorius/lists/summary.html:136
 msgid "Created at"
 msgstr "Opprettet den"
 
-#: templates/postorius/lists/summary.html:139
+#: templates/postorius/lists/summary.html:141
 msgid "Last post at"
 msgstr "Siste post"
 
-#: templates/postorius/lists/summary.html:148
+#: templates/postorius/lists/summary.html:150
 msgid "Digest last sent at"
 msgstr "Føljetong sist sendt"
 
-#: templates/postorius/lists/summary.html:157
+#: templates/postorius/lists/summary.html:159
 msgid "Volume"
 msgstr "Lydstyrke"
 
@@ -2832,7 +2830,7 @@ msgstr ""
 msgid "Domain %s updated"
 msgstr ""
 
-#: views/domain.py:130 views/list.py:1029
+#: views/domain.py:130 views/list.py:1032
 msgid "Please check the errors below"
 msgstr ""
 
@@ -2862,7 +2860,7 @@ msgstr "Fjernet {} som eier for {}"
 msgid "The email {} has been banned."
 msgstr ""
 
-#: views/generic.py:122 views/generic.py:137 views/list.py:1569
+#: views/generic.py:122 views/generic.py:137 views/list.py:1572
 #, python-format
 msgid "An error occurred: %s"
 msgstr "En feil inntraff: %s"
@@ -2917,296 +2915,296 @@ msgstr ""
 msgid "The member's moderation settings have been updated."
 msgstr ""
 
-#: views/list.py:521
+#: views/list.py:524
 #, fuzzy
 #| msgid "You are subscribed to %s."
 msgid "You are not subscribed to {}."
 msgstr "Du abonnerer på %s."
 
-#: views/list.py:536
+#: views/list.py:539
 msgid "You are already subscribed"
 msgstr "Du har allerede abonnert"
 
-#: views/list.py:548
+#: views/list.py:551
 #, fuzzy
 #| msgid "Subscription changed to %s"
 msgid "Subscription changed to {}"
 msgstr "Abonnement endret til %s"
 
-#: views/list.py:553
+#: views/list.py:556
 #, fuzzy
 #| msgid "Something went wrong. Please try again."
 msgid "Something went wrong. Please try again. {} {}"
 msgstr "Noe gikk galt. Prøv igjen."
 
-#: views/list.py:607
+#: views/list.py:610
 msgid ""
 "Your subscription request has been submitted and is waiting for moderator "
 "approval."
 msgstr ""
 
-#: views/list.py:615
+#: views/list.py:618
 #, python-format
 msgid "You are subscribed to %s."
 msgstr "Du abonnerer på %s."
 
-#: views/list.py:620 views/list.py:656
+#: views/list.py:623 views/list.py:659
 msgid "Something went wrong. Please try again."
 msgstr "Noe gikk galt. Prøv igjen."
 
-#: views/list.py:652
+#: views/list.py:655
 msgid "Please check your inbox for further instructions"
 msgstr ""
 
-#: views/list.py:676
+#: views/list.py:679
 #, fuzzy
 #| msgid "You are subscribed to %s."
 msgid "You can only unsubscribe yourself."
 msgstr "Du abonnerer på %s."
 
-#: views/list.py:682
+#: views/list.py:685
 msgid ""
 "You have a pending unsubscription request waiting for moderator approval."
 msgstr ""
 
-#: views/list.py:693
+#: views/list.py:696
 msgid ""
 "Your unsubscription request has been submitted and is waiting for moderator "
 "approval."
 msgstr ""
 
-#: views/list.py:701
+#: views/list.py:704
 #, python-format
 msgid "%s has been unsubscribed from this list."
 msgstr ""
 
-#: views/list.py:738
+#: views/list.py:741
 #, python-format
 msgid "The address %(address)s has been invited to %(list)s."
 msgstr ""
 
-#: views/list.py:743
+#: views/list.py:746
 #, python-format
 msgid "The address %(address)s has been subscribed to %(list)s."
 msgstr ""
 
-#: views/list.py:748
+#: views/list.py:751
 msgid ""
 " Subscription may be pending address verification, confirmation or approval "
 "as appropriate."
 msgstr ""
 
-#: views/list.py:766 views/list.py:836
+#: views/list.py:769 views/list.py:839
 #, python-format
 msgid "The email address %s is not valid."
 msgstr "E-postadressen %s er ugyldig."
 
-#: views/list.py:805
+#: views/list.py:808
 msgid "Please fill out the form correctly."
 msgstr "Fyll ut skjemaet rett."
 
-#: views/list.py:823
+#: views/list.py:826
 #, fuzzy, python-brace-format
 #| msgid "The selected members have been unsubscribed"
 msgid "These addresses {address} have been unsubscribed from {list}."
 msgstr ""
 "Disse adressene {address} har fått sitt abonnement opphevet fra {list}."
 
-#: views/list.py:858
+#: views/list.py:861
 msgid "The selected messages were accepted"
 msgstr "De valgte meldingene ble godtkjent"
 
-#: views/list.py:863
+#: views/list.py:866
 msgid "The selected messages were rejected"
 msgstr "De valgte meldingene ble avslått"
 
-#: views/list.py:868
+#: views/list.py:871
 msgid "The selected messages were discarded"
 msgstr ""
 
-#: views/list.py:871
+#: views/list.py:874
 msgid "Message could not be found"
 msgstr "Meldingen ble ikke funnet"
 
-#: views/list.py:902
+#: views/list.py:905
 msgid "The message was accepted"
 msgstr "Meldingen ble godkjent"
 
-#: views/list.py:905
+#: views/list.py:908
 msgid "The message was rejected"
 msgstr "Meldingen ble avslått"
 
-#: views/list.py:908
+#: views/list.py:911
 msgid "The message was discarded"
 msgstr "Meldingen ble forkastet"
 
-#: views/list.py:911
+#: views/list.py:914
 #, fuzzy
 #| msgid "Page not found"
 msgid "Held message was not found."
 msgstr "Fant ikke siden"
 
-#: views/list.py:925
+#: views/list.py:928
 msgid "Moderation action for {} set to {}"
 msgstr "Modereringshandling for {} satt til {}"
 
-#: views/list.py:933
+#: views/list.py:936
 #, fuzzy
 #| msgid "Failed to set moderation action: {}"
 msgid "Failed to set moderation action for {}"
 msgstr "Klarte ikke å sette modereringshandling: {}"
 
-#: views/list.py:985
+#: views/list.py:988
 msgid "Choose a Domain"
 msgstr "Velg et domene"
 
-#: views/list.py:1009
+#: views/list.py:1012
 msgid "List created"
 msgstr "Liste opprettet"
 
-#: views/list.py:1021
+#: views/list.py:1024
 msgid "Mailing List already exists."
 msgstr ""
 
-#: views/list.py:1201
+#: views/list.py:1204
 #, fuzzy
 #| msgid "Subscription settings"
 msgid "Subscriptions pending user confirmation"
 msgstr "Abonnementsinnstillinger"
 
-#: views/list.py:1214
+#: views/list.py:1217
 #, fuzzy
 #| msgid "Subscription settings"
 msgid "Subscriptions pending approval"
 msgstr "Abonnementsinnstillinger"
 
-#: views/list.py:1227
+#: views/list.py:1230
 #, fuzzy
 #| msgid "Subscription settings"
 msgid "Un-subscriptions pending approval"
 msgstr "Abonnementsinnstillinger"
 
-#: views/list.py:1276
+#: views/list.py:1279
 msgid "The request has been accepted."
 msgstr "Forespørselen har blitt godtatt."
 
-#: views/list.py:1277
+#: views/list.py:1280
 msgid "The request has been rejected."
 msgstr "Forespørselen har blitt avslått."
 
-#: views/list.py:1278
+#: views/list.py:1281
 msgid "The request has been discarded."
 msgstr "Forespørselen har blitt forkastet."
 
-#: views/list.py:1279
+#: views/list.py:1282
 msgid "The request has been defered."
 msgstr ""
 
-#: views/list.py:1299
+#: views/list.py:1302
 #, python-format
 msgid "The request was already moderated: %s"
 msgstr "Forespørselen har allerede blitt moderert: %s"
 
-#: views/list.py:1303
+#: views/list.py:1306
 #, python-format
 msgid "The request could not be moderated: %s"
 msgstr ""
 
-#: views/list.py:1317
+#: views/list.py:1320
 msgid "List Identity"
 msgstr "Listeidentitet"
 
-#: views/list.py:1318
+#: views/list.py:1321
 msgid "Automatic Responses"
 msgstr "Automatiske svar"
 
-#: views/list.py:1319
+#: views/list.py:1322
 msgid "Alter Messages"
 msgstr ""
 
-#: views/list.py:1320
+#: views/list.py:1323
 msgid "DMARC Mitigations"
 msgstr ""
 
-#: views/list.py:1321
+#: views/list.py:1324
 msgid "Digest"
 msgstr "Føljetong"
 
-#: views/list.py:1322
+#: views/list.py:1325
 msgid "Message Acceptance"
 msgstr ""
 
-#: views/list.py:1323
+#: views/list.py:1326
 msgid "Archiving"
 msgstr "Arkivering"
 
-#: views/list.py:1324
+#: views/list.py:1327
 #, fuzzy
 #| msgid "Member options"
 msgid "Member Policy"
 msgstr "Medlemsvalg"
 
-#: views/list.py:1325
+#: views/list.py:1328
 #, fuzzy
 #| msgid "Default processing"
 msgid "Bounce Processing"
 msgstr "Forvalgt behandling"
 
-#: views/list.py:1392
+#: views/list.py:1395
 #, fuzzy
 msgid "The settings have been updated."
 msgstr "Innstillinger oppdatert."
 
-#: views/list.py:1395
+#: views/list.py:1398
 msgid "An error occurred: "
 msgstr ""
 
-#: views/list.py:1429
+#: views/list.py:1432
 #, python-format
 msgid "The user %(email)s is not in the %(role)s group"
 msgstr ""
 
-#: views/list.py:1436
+#: views/list.py:1439
 msgid "Removing the last owner is impossible"
 msgstr ""
 
-#: views/list.py:1454
+#: views/list.py:1457
 #, python-format
 msgid "The user could not be removed: %(msg)s"
 msgstr ""
 
-#: views/list.py:1460
+#: views/list.py:1463
 #, python-format
 msgid "The user %(address)s has been removed from the %(role)s group."
 msgstr ""
 
-#: views/list.py:1481
+#: views/list.py:1484
 msgid "No member is subscribed to the list currently."
 msgstr ""
 
-#: views/list.py:1494
+#: views/list.py:1497
 msgid "All members have been unsubscribed from the list."
 msgstr ""
 
-#: views/list.py:1573
+#: views/list.py:1576
 msgid "The header matches were successfully modified."
 msgstr ""
 
-#: views/list.py:1580
+#: views/list.py:1583
 msgid "New header"
 msgstr "Nytt hode"
 
-#: views/list.py:1581
+#: views/list.py:1584
 msgid "New pattern"
 msgstr "Nytt mønster"
 
-#: views/list.py:1613
+#: views/list.py:1616
 #, fuzzy
 #| msgid "System Configuration"
 msgid "Invalid confirmation token"
 msgstr "Systemoppsett"
 
-#: views/list.py:1623 views/list.py:1639
+#: views/list.py:1626 views/list.py:1642
 msgid "Token expired or invalid."
 msgstr ""
 
@@ -3265,6 +3263,13 @@ msgstr ""
 #, fuzzy
 msgid "Successfully deleted account"
 msgstr "Bannlyste adresser"
+
+#, fuzzy
+#~ msgid "Logout"
+#~ msgstr "Logg ut"
+
+#~ msgid "Log In"
+#~ msgstr "Logg inn"
 
 #, fuzzy
 #~ msgid "Login"

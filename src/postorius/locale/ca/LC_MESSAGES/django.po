@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-21 23:44+0000\n"
+"POT-Creation-Date: 2023-04-18 16:09+0000\n"
 "PO-Revision-Date: 2023-03-14 10:34+0000\n"
 "Last-Translator: Ivan Fustero <ifustero@gmail.com>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -52,7 +52,7 @@ msgstr ""
 "proves@exemple.com, indiqui aquí exemple.com."
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:22
-#: templates/postorius/index.html:83
+#: templates/postorius/index.html:88
 msgid "Description"
 msgstr "Descripció"
 
@@ -334,7 +334,7 @@ msgstr "Indicar una adreça de correu vàlida."
 msgid "Your name (optional)"
 msgstr "El seu nom (opcional)"
 
-#: forms/list_forms.py:198 forms/list_forms.py:1404 views/list.py:543
+#: forms/list_forms.py:198 forms/list_forms.py:1404 views/list.py:546
 msgid "Primary Address ({})"
 msgstr "Adreça de correu electrònic principal ({})"
 
@@ -913,8 +913,8 @@ msgstr ""
 "missatge original del missatge embolicat quan s'aplica l'acció de mitigació "
 "DMARC de missatge embolicat."
 
-#: forms/list_forms.py:749 templates/postorius/lists/summary.html:144
-#: templates/postorius/lists/summary.html:153
+#: forms/list_forms.py:749 templates/postorius/lists/summary.html:146
+#: templates/postorius/lists/summary.html:155
 #: templatetags/membership_helpers.py:78 templatetags/membership_helpers.py:84
 msgid "None"
 msgstr ""
@@ -2088,67 +2088,70 @@ msgstr "Configuració Global"
 msgid "Mailman logo"
 msgstr "Logotip de Mailman"
 
-#: templates/postorius/base.html:40
-msgid "Lists"
-msgstr "Llistes"
-
-#: templates/postorius/base.html:46 templates/postorius/domain/index.html:5
-#: templates/postorius/domain/index.html:11
-msgid "Domains"
-msgstr "Dominis"
-
-#: templates/postorius/base.html:52
-msgid "Bans"
-msgstr ""
-
-#: templates/postorius/base.html:58
-msgid "System Information"
-msgstr "Informació del sistema"
-
-#: templates/postorius/base.html:64 templates/postorius/menu/list_nav.html:40
-#: templates/postorius/user/all.html:8 templates/postorius/user/all.html:13
-msgid "Users"
-msgstr "Usuaris"
-
-#: templates/postorius/base.html:71 templates/postorius/lists/summary.html:33
-msgid "Archives"
-msgstr "Arxius"
-
-#: templates/postorius/base.html:79
+#: templates/postorius/base.html:39 templates/postorius/base.html:122
+#: templates/postorius/lists/summary.html:110
 #, fuzzy
 #| msgid "Sign Up"
 msgid "Sign In"
 msgstr "Registreu-vos"
 
-#: templates/postorius/base.html:83
+#: templates/postorius/base.html:43 templates/postorius/base.html:126
 msgid "Sign Up"
 msgstr "Registreu-vos"
 
-#: templates/postorius/base.html:99
+#: templates/postorius/base.html:58 templates/postorius/base.html:140
 msgid "Account"
 msgstr "Compte"
 
-#: templates/postorius/base.html:103
+#: templates/postorius/base.html:62 templates/postorius/base.html:144
 msgid "Mailman settings"
 msgstr "Configuració del Mailman"
 
-#: templates/postorius/base.html:108
+#: templates/postorius/base.html:67 templates/postorius/base.html:149
 msgid "Posting activity"
 msgstr "Activitat d'enviaments"
 
-#: templates/postorius/base.html:114
-msgid "Logout"
-msgstr "Surt"
+#: templates/postorius/base.html:73 templates/postorius/base.html:155
+#, fuzzy
+#| msgid "Sign Up"
+msgid "Sign Out"
+msgstr "Registreu-vos"
 
-#: templates/postorius/base.html:136
+#: templates/postorius/base.html:83
+msgid "Lists"
+msgstr "Llistes"
+
+#: templates/postorius/base.html:89 templates/postorius/domain/index.html:5
+#: templates/postorius/domain/index.html:11
+msgid "Domains"
+msgstr "Dominis"
+
+#: templates/postorius/base.html:95
+msgid "Bans"
+msgstr ""
+
+#: templates/postorius/base.html:101
+msgid "System Information"
+msgstr "Informació del sistema"
+
+#: templates/postorius/base.html:107 templates/postorius/menu/list_nav.html:40
+#: templates/postorius/user/all.html:8 templates/postorius/user/all.html:13
+msgid "Users"
+msgstr "Usuaris"
+
+#: templates/postorius/base.html:114 templates/postorius/lists/summary.html:33
+msgid "Archives"
+msgstr "Arxius"
+
+#: templates/postorius/base.html:179
 msgid "Postorius Documentation"
 msgstr "Documentació de Postorius"
 
-#: templates/postorius/base.html:140
+#: templates/postorius/base.html:183
 msgid "Postorius Version"
 msgstr "Versió de Postorius"
 
-#: templates/postorius/base.html:143
+#: templates/postorius/base.html:186
 msgid "Happy Mailman Day!"
 msgstr "Feliç dia de Mailman!"
 
@@ -2381,27 +2384,27 @@ msgstr "No Membres"
 msgid "All"
 msgstr ""
 
-#: templates/postorius/index.html:67
+#: templates/postorius/index.html:72
 msgid "Create New Domain"
 msgstr "Crear un domini nou"
 
-#: templates/postorius/index.html:69
+#: templates/postorius/index.html:74
 msgid "Create New List"
 msgstr "Crear una llista nova"
 
-#: templates/postorius/index.html:81
+#: templates/postorius/index.html:86
 msgid "List name"
 msgstr "Nom de la llista"
 
-#: templates/postorius/index.html:82
+#: templates/postorius/index.html:87
 msgid "Post address"
 msgstr "Adreça d'enviament"
 
-#: templates/postorius/index.html:93
+#: templates/postorius/index.html:98
 msgid "unadvertised"
 msgstr "no mostrat"
 
-#: templates/postorius/index.html:105
+#: templates/postorius/index.html:110
 #, fuzzy
 #| msgid ""
 #| "Only lists that you are owner, moderator or subscriber for are shown here."
@@ -2412,12 +2415,12 @@ msgstr ""
 "Aquí només es mostren les llistes que sou propietari, moderador o "
 "subscriptor."
 
-#: templates/postorius/index.html:109
+#: templates/postorius/index.html:114
 msgid "Only admins see unadvertised lists in the list index."
 msgstr ""
 "Només els administradors veuen llistes no anunciades a l'índex de la llista."
 
-#: templates/postorius/index.html:115
+#: templates/postorius/index.html:120
 msgid "There are currently no mailing lists."
 msgstr "En aquest moment no hi ha llistes de distribució."
 
@@ -2725,7 +2728,9 @@ msgstr ""
 "de correu:"
 
 #: templates/postorius/lists/summary.html:29
-msgid "You have to login to visit the archives of this list."
+#, fuzzy
+#| msgid "You have to login to visit the archives of this list."
+msgid "You have to sign in to visit the archives of this list."
 msgstr "Heu d’iniciar la sessió per visitar els arxius d’aquesta llista."
 
 #: templates/postorius/lists/summary.html:35
@@ -2811,7 +2816,7 @@ msgstr ""
 "              "
 
 #: templates/postorius/lists/summary.html:96
-#: templates/postorius/lists/summary.html:123
+#: templates/postorius/lists/summary.html:124
 #, fuzzy
 #| msgid "Unsubscribe"
 msgid "Subscribe"
@@ -2826,10 +2831,18 @@ msgstr ""
 "contacti amb els propietaris de la llista."
 
 #: templates/postorius/lists/summary.html:105
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "        To subscribe or unsubscribe from this list, please log in first.\n"
+#| "        If you have not previously logged in, you may need to set up an "
+#| "account\n"
+#| "        with the appropriate email address.\n"
+#| "        "
 msgid ""
 "\n"
-"        To subscribe or unsubscribe from this list, please log in first.\n"
-"        If you have not previously logged in, you may need to set up an "
+"        To subscribe or unsubscribe from this list, please sign in first.\n"
+"        If you have not previously signed in, you may need to set up an "
 "account\n"
 "        with the appropriate email address.\n"
 "        "
@@ -2842,39 +2855,41 @@ msgstr ""
 "        amb l’adreça de correu electrònic adequada.\n"
 "        "
 
-#: templates/postorius/lists/summary.html:110
-msgid "Log In"
-msgstr "Iniciar Sessió"
-
-#: templates/postorius/lists/summary.html:115
+#: templates/postorius/lists/summary.html:116
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "        You can also subscribe without creating an account.\n"
+#| "        If you wish to do so, please use the form below.\n"
+#| "        "
 msgid ""
 "\n"
-"        You can also subscribe without creating an account.\n"
-"        If you wish to do so, please use the form below.\n"
-"        "
+"          You can also subscribe without creating an account.\n"
+"          If you wish to do so, please use the form below.\n"
+"          "
 msgstr ""
 "\n"
 "        També us podeu subscriure sense crear cap compte.\n"
 "        Si voleu fer-ho, utilitzeu el formulari següent.\n"
 "        "
 
-#: templates/postorius/lists/summary.html:132
+#: templates/postorius/lists/summary.html:134
 msgid "List metrics"
 msgstr "Mètriques de la llista"
 
-#: templates/postorius/lists/summary.html:134
+#: templates/postorius/lists/summary.html:136
 msgid "Created at"
 msgstr "Creats a"
 
-#: templates/postorius/lists/summary.html:139
+#: templates/postorius/lists/summary.html:141
 msgid "Last post at"
 msgstr "Últim missatge el"
 
-#: templates/postorius/lists/summary.html:148
+#: templates/postorius/lists/summary.html:150
 msgid "Digest last sent at"
 msgstr "Resum enviat per última vegada en"
 
-#: templates/postorius/lists/summary.html:157
+#: templates/postorius/lists/summary.html:159
 msgid "Volume"
 msgstr "Volum"
 
@@ -3206,7 +3221,7 @@ msgstr "Nou domini registrat"
 msgid "Domain %s updated"
 msgstr "Domini %s actualitzat"
 
-#: views/domain.py:130 views/list.py:1029
+#: views/domain.py:130 views/list.py:1032
 msgid "Please check the errors below"
 msgstr "Comprovar els errors següents"
 
@@ -3236,7 +3251,7 @@ msgstr "Eliminat {} com a propietari de {}"
 msgid "The email {} has been banned."
 msgstr "El correu {} ha estat vetat."
 
-#: views/generic.py:122 views/generic.py:137 views/list.py:1569
+#: views/generic.py:122 views/generic.py:137 views/list.py:1572
 #, python-format
 msgid "An error occurred: %s"
 msgstr "S'ha produït un error: %s"
@@ -3291,29 +3306,29 @@ msgstr "No hi ha cap canvi a la moderació de membres."
 msgid "The member's moderation settings have been updated."
 msgstr "La configuració de moderació de membres s'ha actualitzat."
 
-#: views/list.py:521
+#: views/list.py:524
 #, fuzzy
 #| msgid "You are subscribed to %s."
 msgid "You are not subscribed to {}."
 msgstr "Està subscrit a %s."
 
-#: views/list.py:536
+#: views/list.py:539
 msgid "You are already subscribed"
 msgstr "Ja estàs subscrit"
 
-#: views/list.py:548
+#: views/list.py:551
 #, fuzzy
 #| msgid "Subscription changed to %s"
 msgid "Subscription changed to {}"
 msgstr "La subscripció s'ha canviat a %s"
 
-#: views/list.py:553
+#: views/list.py:556
 #, fuzzy
 #| msgid "Something went wrong. Please try again."
 msgid "Something went wrong. Please try again. {} {}"
 msgstr "Alguna cosa va sortir malament. Torneu-ho a provar."
 
-#: views/list.py:607
+#: views/list.py:610
 msgid ""
 "Your subscription request has been submitted and is waiting for moderator "
 "approval."
@@ -3321,26 +3336,26 @@ msgstr ""
 "La seva sol·licitud de subscripció s'ha enviat i està a l'espera d'aprovació "
 "del moderador."
 
-#: views/list.py:615
+#: views/list.py:618
 #, python-format
 msgid "You are subscribed to %s."
 msgstr "Està subscrit a %s."
 
-#: views/list.py:620 views/list.py:656
+#: views/list.py:623 views/list.py:659
 msgid "Something went wrong. Please try again."
 msgstr "Alguna cosa va sortir malament. Torneu-ho a provar."
 
-#: views/list.py:652
+#: views/list.py:655
 msgid "Please check your inbox for further instructions"
 msgstr "Consultar la vostra bústia per a més instruccions"
 
-#: views/list.py:676
+#: views/list.py:679
 #, fuzzy
 #| msgid "You are subscribed to %s."
 msgid "You can only unsubscribe yourself."
 msgstr "Està subscrit a %s."
 
-#: views/list.py:682
+#: views/list.py:685
 #, fuzzy
 #| msgid ""
 #| "Your subscription request has been submitted and is waiting for moderator "
@@ -3351,7 +3366,7 @@ msgstr ""
 "La seva sol·licitud de subscripció s'ha enviat i està a l'espera d'aprovació "
 "del moderador."
 
-#: views/list.py:693
+#: views/list.py:696
 #, fuzzy
 #| msgid ""
 #| "Your subscription request has been submitted and is waiting for moderator "
@@ -3363,231 +3378,231 @@ msgstr ""
 "La seva sol·licitud de subscripció s'ha enviat i està a l'espera d'aprovació "
 "del moderador."
 
-#: views/list.py:701
+#: views/list.py:704
 #, python-format
 msgid "%s has been unsubscribed from this list."
 msgstr "%s s'ha donat de baixa d'aquesta llista."
 
-#: views/list.py:738
+#: views/list.py:741
 #, fuzzy, python-format
 #| msgid "The address %(address)s has been subscribed to %(list)s."
 msgid "The address %(address)s has been invited to %(list)s."
 msgstr "L’adreça %(address)s s’ha subscrit a %(list)s."
 
-#: views/list.py:743
+#: views/list.py:746
 #, python-format
 msgid "The address %(address)s has been subscribed to %(list)s."
 msgstr "L’adreça %(address)s s’ha subscrit a %(list)s."
 
-#: views/list.py:748
+#: views/list.py:751
 msgid ""
 " Subscription may be pending address verification, confirmation or approval "
 "as appropriate."
 msgstr ""
 
-#: views/list.py:766 views/list.py:836
+#: views/list.py:769 views/list.py:839
 #, python-format
 msgid "The email address %s is not valid."
 msgstr "L'adreça de correu %s no és vàlida."
 
-#: views/list.py:805
+#: views/list.py:808
 msgid "Please fill out the form correctly."
 msgstr "Ompliu el formulari correctament."
 
-#: views/list.py:823
+#: views/list.py:826
 #, fuzzy, python-brace-format
 #| msgid "The address %(address)s has been unsubscribed from %(list)s."
 msgid "These addresses {address} have been unsubscribed from {list}."
 msgstr "L’adreça %(address)s s’ha donat de baixa de %(list)s."
 
-#: views/list.py:858
+#: views/list.py:861
 msgid "The selected messages were accepted"
 msgstr "S'han acceptat els missatges seleccionats"
 
-#: views/list.py:863
+#: views/list.py:866
 msgid "The selected messages were rejected"
 msgstr "Els missatges seleccionats van ser rebutjats"
 
-#: views/list.py:868
+#: views/list.py:871
 msgid "The selected messages were discarded"
 msgstr "S'han descartat els missatges seleccionats"
 
-#: views/list.py:871
+#: views/list.py:874
 msgid "Message could not be found"
 msgstr "No s'ha trobat el missatge"
 
-#: views/list.py:902
+#: views/list.py:905
 msgid "The message was accepted"
 msgstr "S'ha acceptat el missatge"
 
-#: views/list.py:905
+#: views/list.py:908
 msgid "The message was rejected"
 msgstr "El missatge es va rebutjar"
 
-#: views/list.py:908
+#: views/list.py:911
 msgid "The message was discarded"
 msgstr "El missatge es va descartar"
 
-#: views/list.py:911
+#: views/list.py:914
 msgid "Held message was not found."
 msgstr "El missatge retingut no es va trobar."
 
-#: views/list.py:925
+#: views/list.py:928
 msgid "Moderation action for {} set to {}"
 msgstr "Acció de moderació per a {} establerta a {}"
 
-#: views/list.py:933
+#: views/list.py:936
 #, fuzzy
 #| msgid "Failed to set moderation action: {}"
 msgid "Failed to set moderation action for {}"
 msgstr "No s'ha pogut definir l'acció de moderació: {}"
 
-#: views/list.py:985
+#: views/list.py:988
 msgid "Choose a Domain"
 msgstr "Triar un domini"
 
-#: views/list.py:1009
+#: views/list.py:1012
 msgid "List created"
 msgstr "Llista creada"
 
-#: views/list.py:1021
+#: views/list.py:1024
 msgid "Mailing List already exists."
 msgstr "La llista de correu ja existeix."
 
-#: views/list.py:1201
+#: views/list.py:1204
 msgid "Subscriptions pending user confirmation"
 msgstr "Subscripcions pendents de confirmació de l'usuari"
 
-#: views/list.py:1214
+#: views/list.py:1217
 msgid "Subscriptions pending approval"
 msgstr "Subscripcions pendents d'aprovació"
 
-#: views/list.py:1227
+#: views/list.py:1230
 #, fuzzy
 #| msgid "Subscriptions pending approval"
 msgid "Un-subscriptions pending approval"
 msgstr "Subscripcions pendents d'aprovació"
 
-#: views/list.py:1276
+#: views/list.py:1279
 msgid "The request has been accepted."
 msgstr "La sol·licitud ha estat acceptada."
 
-#: views/list.py:1277
+#: views/list.py:1280
 msgid "The request has been rejected."
 msgstr "La sol·licitud ha estat rebutjada."
 
-#: views/list.py:1278
+#: views/list.py:1281
 msgid "The request has been discarded."
 msgstr "La sol·licitud ha estat descartada."
 
-#: views/list.py:1279
+#: views/list.py:1282
 msgid "The request has been defered."
 msgstr "La sol·licitud ha estat ajornada."
 
-#: views/list.py:1299
+#: views/list.py:1302
 #, python-format
 msgid "The request was already moderated: %s"
 msgstr "La sol·licitud ja es va moderadar: %s"
 
-#: views/list.py:1303
+#: views/list.py:1306
 #, python-format
 msgid "The request could not be moderated: %s"
 msgstr "La sol·licitud no es va poder moderar: %s"
 
-#: views/list.py:1317
+#: views/list.py:1320
 msgid "List Identity"
 msgstr "Identitat de la llista"
 
-#: views/list.py:1318
+#: views/list.py:1321
 msgid "Automatic Responses"
 msgstr "Respostes automàtiques"
 
-#: views/list.py:1319
+#: views/list.py:1322
 msgid "Alter Messages"
 msgstr "Alterar missatges"
 
-#: views/list.py:1320
+#: views/list.py:1323
 msgid "DMARC Mitigations"
 msgstr "Mitigacions DMARC"
 
-#: views/list.py:1321
+#: views/list.py:1324
 msgid "Digest"
 msgstr "Resum"
 
-#: views/list.py:1322
+#: views/list.py:1325
 msgid "Message Acceptance"
 msgstr "Acceptació de missatge"
 
-#: views/list.py:1323
+#: views/list.py:1326
 msgid "Archiving"
 msgstr "Arxivant"
 
-#: views/list.py:1324
+#: views/list.py:1327
 #, fuzzy
 #| msgid "Member options"
 msgid "Member Policy"
 msgstr "Opcions de membres"
 
-#: views/list.py:1325
+#: views/list.py:1328
 #, fuzzy
 #| msgid "Default processing"
 msgid "Bounce Processing"
 msgstr "Processament per defecte"
 
-#: views/list.py:1392
+#: views/list.py:1395
 msgid "The settings have been updated."
 msgstr "Els ajustaments s'han actualitzat."
 
-#: views/list.py:1395
+#: views/list.py:1398
 msgid "An error occurred: "
 msgstr "S'ha produït un error: "
 
-#: views/list.py:1429
+#: views/list.py:1432
 #, python-format
 msgid "The user %(email)s is not in the %(role)s group"
 msgstr "L'usuari %(email)s no es troba en el grup %(role)s"
 
-#: views/list.py:1436
+#: views/list.py:1439
 msgid "Removing the last owner is impossible"
 msgstr "No es pot eliminar a l'últim propietari"
 
-#: views/list.py:1454
+#: views/list.py:1457
 #, python-format
 msgid "The user could not be removed: %(msg)s"
 msgstr "No s'ha pogut eliminar l'usuari: %(msg)s"
 
-#: views/list.py:1460
+#: views/list.py:1463
 #, python-format
 msgid "The user %(address)s has been removed from the %(role)s group."
 msgstr "L'usuari %(address)s ha estat eliminat del grup %(role)s."
 
-#: views/list.py:1481
+#: views/list.py:1484
 msgid "No member is subscribed to the list currently."
 msgstr "Cap membre no està subscrit a la llista actualment."
 
-#: views/list.py:1494
+#: views/list.py:1497
 msgid "All members have been unsubscribed from the list."
 msgstr "Tots els membres han estat donats de baixa de la llista."
 
-#: views/list.py:1573
+#: views/list.py:1576
 msgid "The header matches were successfully modified."
 msgstr "Les capçaleres coincidents es van modificar correctament."
 
-#: views/list.py:1580
+#: views/list.py:1583
 msgid "New header"
 msgstr "Nova capçalera"
 
-#: views/list.py:1581
+#: views/list.py:1584
 msgid "New pattern"
 msgstr "Nou patró"
 
-#: views/list.py:1613
+#: views/list.py:1616
 #, fuzzy
 #| msgid "Pending Confirmation"
 msgid "Invalid confirmation token"
 msgstr "Pendent de confirmació"
 
-#: views/list.py:1623 views/list.py:1639
+#: views/list.py:1626 views/list.py:1642
 msgid "Token expired or invalid."
 msgstr ""
 
@@ -3648,6 +3663,12 @@ msgstr ""
 #| msgid "Currently banned addresses"
 msgid "Successfully deleted account"
 msgstr "Adreces vetades actualment"
+
+#~ msgid "Logout"
+#~ msgstr "Surt"
+
+#~ msgid "Log In"
+#~ msgstr "Iniciar Sessió"
 
 #~ msgid "Login"
 #~ msgstr "Inici de sessió"
