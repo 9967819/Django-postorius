@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-21 23:44+0000\n"
+"POT-Creation-Date: 2023-04-18 16:09+0000\n"
 "PO-Revision-Date: 2023-02-25 13:37+0000\n"
 "Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -52,7 +52,7 @@ msgstr ""
 "istiyorsanız, buraya example.com yazın."
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:22
-#: templates/postorius/index.html:83
+#: templates/postorius/index.html:88
 msgid "Description"
 msgstr "Açıklama"
 
@@ -333,7 +333,7 @@ msgstr "Lütfen geçerli bir e-posta adresi girin."
 msgid "Your name (optional)"
 msgstr "Adınız (isteğe bağlı)"
 
-#: forms/list_forms.py:198 forms/list_forms.py:1404 views/list.py:543
+#: forms/list_forms.py:198 forms/list_forms.py:1404 views/list.py:546
 msgid "Primary Address ({})"
 msgstr "Birincil Adres ({})"
 
@@ -938,8 +938,8 @@ msgstr ""
 "DMARC azaltma mesajı sarmala eylemi uygulandığında sarılı mesajdaki orijinal "
 "mesaj bölümünden önce ayrı bir metin/düz MIME bölümü olarak eklenecek metin."
 
-#: forms/list_forms.py:749 templates/postorius/lists/summary.html:144
-#: templates/postorius/lists/summary.html:153
+#: forms/list_forms.py:749 templates/postorius/lists/summary.html:146
+#: templates/postorius/lists/summary.html:155
 #: templatetags/membership_helpers.py:78 templatetags/membership_helpers.py:84
 msgid "None"
 msgstr "Yok"
@@ -2028,65 +2028,68 @@ msgstr "Genel Yasaklamalar"
 msgid "Mailman logo"
 msgstr "Mailman logosu"
 
-#: templates/postorius/base.html:40
+#: templates/postorius/base.html:39 templates/postorius/base.html:122
+#: templates/postorius/lists/summary.html:110
+msgid "Sign In"
+msgstr "Oturum Aç"
+
+#: templates/postorius/base.html:43 templates/postorius/base.html:126
+msgid "Sign Up"
+msgstr "Kaydol"
+
+#: templates/postorius/base.html:58 templates/postorius/base.html:140
+msgid "Account"
+msgstr "Hesap"
+
+#: templates/postorius/base.html:62 templates/postorius/base.html:144
+msgid "Mailman settings"
+msgstr "Mailman ayarları"
+
+#: templates/postorius/base.html:67 templates/postorius/base.html:149
+msgid "Posting activity"
+msgstr "Gönderme etkinliği"
+
+#: templates/postorius/base.html:73 templates/postorius/base.html:155
+#, fuzzy
+#| msgid "Sign In"
+msgid "Sign Out"
+msgstr "Oturum Aç"
+
+#: templates/postorius/base.html:83
 msgid "Lists"
 msgstr "Listeler"
 
-#: templates/postorius/base.html:46 templates/postorius/domain/index.html:5
+#: templates/postorius/base.html:89 templates/postorius/domain/index.html:5
 #: templates/postorius/domain/index.html:11
 msgid "Domains"
 msgstr "Etki alanları"
 
-#: templates/postorius/base.html:52
+#: templates/postorius/base.html:95
 msgid "Bans"
 msgstr "Yasaklamalar"
 
-#: templates/postorius/base.html:58
+#: templates/postorius/base.html:101
 msgid "System Information"
 msgstr "Sistem Bilgileri"
 
-#: templates/postorius/base.html:64 templates/postorius/menu/list_nav.html:40
+#: templates/postorius/base.html:107 templates/postorius/menu/list_nav.html:40
 #: templates/postorius/user/all.html:8 templates/postorius/user/all.html:13
 msgid "Users"
 msgstr "Kullanıcılar"
 
-#: templates/postorius/base.html:71 templates/postorius/lists/summary.html:33
+#: templates/postorius/base.html:114 templates/postorius/lists/summary.html:33
 msgid "Archives"
 msgstr "Arşivler"
 
-#: templates/postorius/base.html:79
-msgid "Sign In"
-msgstr "Oturum Aç"
-
-#: templates/postorius/base.html:83
-msgid "Sign Up"
-msgstr "Kaydol"
-
-#: templates/postorius/base.html:99
-msgid "Account"
-msgstr "Hesap"
-
-#: templates/postorius/base.html:103
-msgid "Mailman settings"
-msgstr "Mailman ayarları"
-
-#: templates/postorius/base.html:108
-msgid "Posting activity"
-msgstr "Gönderme etkinliği"
-
-#: templates/postorius/base.html:114
-msgid "Logout"
-msgstr "Oturumu kapat"
-
-#: templates/postorius/base.html:136
+#: templates/postorius/base.html:179
 msgid "Postorius Documentation"
 msgstr "Postorius Belgelendirmesi"
 
-#: templates/postorius/base.html:140
+#: templates/postorius/base.html:183
 msgid "Postorius Version"
 msgstr "Postorius Sürümü"
 
-#: templates/postorius/base.html:143
+#: templates/postorius/base.html:186
 msgid "Happy Mailman Day!"
 msgstr "Postacı Gününüz kutlu olsun!"
 
@@ -2307,27 +2310,27 @@ msgstr "Üye olmayan"
 msgid "All"
 msgstr "Tümü"
 
-#: templates/postorius/index.html:67
+#: templates/postorius/index.html:72
 msgid "Create New Domain"
 msgstr "Yeni Etki Alanı Oluştur"
 
-#: templates/postorius/index.html:69
+#: templates/postorius/index.html:74
 msgid "Create New List"
 msgstr "Yeni Liste Oluştur"
 
-#: templates/postorius/index.html:81
+#: templates/postorius/index.html:86
 msgid "List name"
 msgstr "Liste adı"
 
-#: templates/postorius/index.html:82
+#: templates/postorius/index.html:87
 msgid "Post address"
 msgstr "Posta adresi"
 
-#: templates/postorius/index.html:93
+#: templates/postorius/index.html:98
 msgid "unadvertised"
 msgstr "tanıtılmayan"
 
-#: templates/postorius/index.html:105
+#: templates/postorius/index.html:110
 msgid ""
 "Only lists that you are owner, moderator or subscriber for are shown here. "
 "Click to <a href=\"?all-lists\"> see all lists</a>."
@@ -2336,11 +2339,11 @@ msgstr ""
 "gösterilmektedir. Tüm listeleri görmek için <a href=\"?all-lists\">tıklayın</"
 "a>."
 
-#: templates/postorius/index.html:109
+#: templates/postorius/index.html:114
 msgid "Only admins see unadvertised lists in the list index."
 msgstr "Yalnızca yöneticiler liste dizininde tanıtılmayan listeleri görür."
 
-#: templates/postorius/index.html:115
+#: templates/postorius/index.html:120
 msgid "There are currently no mailing lists."
 msgstr "Şu anda posta listesi yok."
 
@@ -2637,7 +2640,9 @@ msgstr ""
 "Liste sahipleriyle iletişim kurmak için aşağıdaki e-posta adresini kullanın:"
 
 #: templates/postorius/lists/summary.html:29
-msgid "You have to login to visit the archives of this list."
+#, fuzzy
+#| msgid "You have to login to visit the archives of this list."
+msgid "You have to sign in to visit the archives of this list."
 msgstr "Bu listenin arşivlerini ziyaret etmek için giriş yapmalısınız."
 
 #: templates/postorius/lists/summary.html:35
@@ -2705,7 +2710,7 @@ msgstr ""
 "            "
 
 #: templates/postorius/lists/summary.html:96
-#: templates/postorius/lists/summary.html:123
+#: templates/postorius/lists/summary.html:124
 msgid "Subscribe"
 msgstr "Abone ol"
 
@@ -2718,10 +2723,18 @@ msgstr ""
 "lütfen liste sahipleriyle iletişim kurun."
 
 #: templates/postorius/lists/summary.html:105
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "        To subscribe or unsubscribe from this list, please log in first.\n"
+#| "        If you have not previously logged in, you may need to set up an "
+#| "account\n"
+#| "        with the appropriate email address.\n"
+#| "        "
 msgid ""
 "\n"
-"        To subscribe or unsubscribe from this list, please log in first.\n"
-"        If you have not previously logged in, you may need to set up an "
+"        To subscribe or unsubscribe from this list, please sign in first.\n"
+"        If you have not previously signed in, you may need to set up an "
 "account\n"
 "        with the appropriate email address.\n"
 "        "
@@ -2733,39 +2746,41 @@ msgstr ""
 "        hesap oluşturmanız gerekebilir.\n"
 "        "
 
-#: templates/postorius/lists/summary.html:110
-msgid "Log In"
-msgstr "Oturum Aç"
-
-#: templates/postorius/lists/summary.html:115
+#: templates/postorius/lists/summary.html:116
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "        You can also subscribe without creating an account.\n"
+#| "        If you wish to do so, please use the form below.\n"
+#| "        "
 msgid ""
 "\n"
-"        You can also subscribe without creating an account.\n"
-"        If you wish to do so, please use the form below.\n"
-"        "
+"          You can also subscribe without creating an account.\n"
+"          If you wish to do so, please use the form below.\n"
+"          "
 msgstr ""
 "\n"
 "        Bir hesap oluşturmadan da abone olabilirsiniz.\n"
 "        Bunu yapmak istiyorsanız, lütfen aşağıdaki formu kullanın.\n"
 "        "
 
-#: templates/postorius/lists/summary.html:132
+#: templates/postorius/lists/summary.html:134
 msgid "List metrics"
 msgstr "Liste metrikleri"
 
-#: templates/postorius/lists/summary.html:134
+#: templates/postorius/lists/summary.html:136
 msgid "Created at"
 msgstr "Oluşturulma zamanı"
 
-#: templates/postorius/lists/summary.html:139
+#: templates/postorius/lists/summary.html:141
 msgid "Last post at"
 msgstr "Son gönderi zamanı"
 
-#: templates/postorius/lists/summary.html:148
+#: templates/postorius/lists/summary.html:150
 msgid "Digest last sent at"
 msgstr "Son özet gönderme zamanı"
 
-#: templates/postorius/lists/summary.html:157
+#: templates/postorius/lists/summary.html:159
 msgid "Volume"
 msgstr "Hacim"
 
@@ -3072,7 +3087,7 @@ msgstr "Yeni etki alanı kaydedildi"
 msgid "Domain %s updated"
 msgstr "%s etki alanı güncellendi"
 
-#: views/domain.py:130 views/list.py:1029
+#: views/domain.py:130 views/list.py:1032
 msgid "Please check the errors below"
 msgstr "Lütfen aşağıdaki hataları gözden geçirin"
 
@@ -3102,7 +3117,7 @@ msgstr "{}, {} için sahiplerden kaldırıldı"
 msgid "The email {} has been banned."
 msgstr "{} e-posta adresi yasaklandı."
 
-#: views/generic.py:122 views/generic.py:137 views/list.py:1569
+#: views/generic.py:122 views/generic.py:137 views/list.py:1572
 #, python-format
 msgid "An error occurred: %s"
 msgstr "Bir hata oluştu: %s"
@@ -3157,72 +3172,72 @@ msgstr "Üyenin denetiminde değişiklik yok."
 msgid "The member's moderation settings have been updated."
 msgstr "Üyenin denetim ayarları güncellendi."
 
-#: views/list.py:521
+#: views/list.py:524
 msgid "You are not subscribed to {}."
 msgstr "{} listesine abone değilsiniz."
 
-#: views/list.py:536
+#: views/list.py:539
 msgid "You are already subscribed"
 msgstr "Zaten abonesiniz"
 
-#: views/list.py:548
+#: views/list.py:551
 msgid "Subscription changed to {}"
 msgstr "Abonelik {} olarak değiştirildi"
 
-#: views/list.py:553
+#: views/list.py:556
 msgid "Something went wrong. Please try again. {} {}"
 msgstr "Bir şeyler yanlış gitti. Lütfen tekrar deneyin. {} {}"
 
-#: views/list.py:607
+#: views/list.py:610
 msgid ""
 "Your subscription request has been submitted and is waiting for moderator "
 "approval."
 msgstr "Abonelik isteğiniz gönderildi ve moderatör onayını bekliyor."
 
-#: views/list.py:615
+#: views/list.py:618
 #, python-format
 msgid "You are subscribed to %s."
 msgstr "%s'e abone oldunuz."
 
-#: views/list.py:620 views/list.py:656
+#: views/list.py:623 views/list.py:659
 msgid "Something went wrong. Please try again."
 msgstr "Bir şeyler yanlış gitti. Lütfen tekrar deneyin."
 
-#: views/list.py:652
+#: views/list.py:655
 msgid "Please check your inbox for further instructions"
 msgstr "Lütfen sonraki talimatlar için gelen kutunuza bakın"
 
-#: views/list.py:676
+#: views/list.py:679
 msgid "You can only unsubscribe yourself."
 msgstr "Yalnızca kendinizi abonelikten çıkarabilirsiniz."
 
-#: views/list.py:682
+#: views/list.py:685
 msgid ""
 "You have a pending unsubscription request waiting for moderator approval."
 msgstr "Moderatör onayını bekleyen bir abonelik iptali isteğiniz var."
 
-#: views/list.py:693
+#: views/list.py:696
 msgid ""
 "Your unsubscription request has been submitted and is waiting for moderator "
 "approval."
 msgstr "Abonelikten çıkma isteğiniz gönderildi ve moderatör onayını bekliyor."
 
-#: views/list.py:701
+#: views/list.py:704
 #, python-format
 msgid "%s has been unsubscribed from this list."
 msgstr "%s bu liste aboneliğinden çıktı."
 
-#: views/list.py:738
+#: views/list.py:741
 #, python-format
 msgid "The address %(address)s has been invited to %(list)s."
 msgstr "%(address)s adresi %(list)s'e davet edildi."
 
-#: views/list.py:743
+#: views/list.py:746
 #, python-format
 msgid "The address %(address)s has been subscribed to %(list)s."
 msgstr "%(address)s adresi %(list)s'e abone oldu."
 
-#: views/list.py:748
+#: views/list.py:751
 msgid ""
 " Subscription may be pending address verification, confirmation or approval "
 "as appropriate."
@@ -3230,198 +3245,198 @@ msgstr ""
 " Abonelik; adres doğrulama, doğrulama veya onay bekleme durumlarından "
 "birinde olabilir."
 
-#: views/list.py:766 views/list.py:836
+#: views/list.py:769 views/list.py:839
 #, python-format
 msgid "The email address %s is not valid."
 msgstr "%s e-posta adresi geçerli değil."
 
-#: views/list.py:805
+#: views/list.py:808
 msgid "Please fill out the form correctly."
 msgstr "Lütfen formu doğru bir şekilde doldurun."
 
-#: views/list.py:823
+#: views/list.py:826
 #, python-brace-format
 msgid "These addresses {address} have been unsubscribed from {list}."
 msgstr "Bu {address} adresleri, {list} aboneliğinden çıkarıldı."
 
-#: views/list.py:858
+#: views/list.py:861
 msgid "The selected messages were accepted"
 msgstr "Seçilen mesajlar kabul edildi"
 
-#: views/list.py:863
+#: views/list.py:866
 msgid "The selected messages were rejected"
 msgstr "Seçili mesajlar reddedildi"
 
-#: views/list.py:868
+#: views/list.py:871
 msgid "The selected messages were discarded"
 msgstr "Seçili mesajlar atıldı"
 
-#: views/list.py:871
+#: views/list.py:874
 msgid "Message could not be found"
 msgstr "Mesaj bulunamadı"
 
-#: views/list.py:902
+#: views/list.py:905
 msgid "The message was accepted"
 msgstr "Mesaj kabul edildi"
 
-#: views/list.py:905
+#: views/list.py:908
 msgid "The message was rejected"
 msgstr "Mesaj reddedildi"
 
-#: views/list.py:908
+#: views/list.py:911
 msgid "The message was discarded"
 msgstr "Mesaj atıldı"
 
-#: views/list.py:911
+#: views/list.py:914
 msgid "Held message was not found."
 msgstr "Bekletilen mesaj bulunamadı."
 
-#: views/list.py:925
+#: views/list.py:928
 msgid "Moderation action for {} set to {}"
 msgstr "{} için denetim eylemi {} olarak ayarlandı"
 
-#: views/list.py:933
+#: views/list.py:936
 msgid "Failed to set moderation action for {}"
 msgstr "{} için denetim eylemi ayarlanamadı"
 
-#: views/list.py:985
+#: views/list.py:988
 msgid "Choose a Domain"
 msgstr "Bir Etki Alanı Seçin"
 
-#: views/list.py:1009
+#: views/list.py:1012
 msgid "List created"
 msgstr "Liste oluşturuldu"
 
-#: views/list.py:1021
+#: views/list.py:1024
 msgid "Mailing List already exists."
 msgstr "Posta Listesi zaten var."
 
-#: views/list.py:1201
+#: views/list.py:1204
 msgid "Subscriptions pending user confirmation"
 msgstr "Kullanıcı doğrulaması bekleyen abonelikler"
 
-#: views/list.py:1214
+#: views/list.py:1217
 msgid "Subscriptions pending approval"
 msgstr "Onay bekleyen abonelikler"
 
-#: views/list.py:1227
+#: views/list.py:1230
 msgid "Un-subscriptions pending approval"
 msgstr "Onay bekleyen abonelikten çıkmalar"
 
-#: views/list.py:1276
+#: views/list.py:1279
 msgid "The request has been accepted."
 msgstr "İstek kabul edildi."
 
-#: views/list.py:1277
+#: views/list.py:1280
 msgid "The request has been rejected."
 msgstr "İstek reddedildi."
 
-#: views/list.py:1278
+#: views/list.py:1281
 msgid "The request has been discarded."
 msgstr "İstek atıldı."
 
-#: views/list.py:1279
+#: views/list.py:1282
 msgid "The request has been defered."
 msgstr "İstek ertelendi."
 
-#: views/list.py:1299
+#: views/list.py:1302
 #, python-format
 msgid "The request was already moderated: %s"
 msgstr "İstek zaten denetlendi: %s"
 
-#: views/list.py:1303
+#: views/list.py:1306
 #, python-format
 msgid "The request could not be moderated: %s"
 msgstr "İstek denetlenemedi: %s"
 
-#: views/list.py:1317
+#: views/list.py:1320
 msgid "List Identity"
 msgstr "Liste Kimliği"
 
-#: views/list.py:1318
+#: views/list.py:1321
 msgid "Automatic Responses"
 msgstr "Otomatik Yanıtlar"
 
-#: views/list.py:1319
+#: views/list.py:1322
 msgid "Alter Messages"
 msgstr "Mesajları Değiştir"
 
-#: views/list.py:1320
+#: views/list.py:1323
 msgid "DMARC Mitigations"
 msgstr "DMARC Azaltmaları"
 
-#: views/list.py:1321
+#: views/list.py:1324
 msgid "Digest"
 msgstr "Özet"
 
-#: views/list.py:1322
+#: views/list.py:1325
 msgid "Message Acceptance"
 msgstr "Mesaj Kabulü"
 
-#: views/list.py:1323
+#: views/list.py:1326
 msgid "Archiving"
 msgstr "Arşivleme"
 
-#: views/list.py:1324
+#: views/list.py:1327
 msgid "Member Policy"
 msgstr "Üye Politikası"
 
-#: views/list.py:1325
+#: views/list.py:1328
 msgid "Bounce Processing"
 msgstr "Geri Dönme İşleme"
 
-#: views/list.py:1392
+#: views/list.py:1395
 msgid "The settings have been updated."
 msgstr "Ayarlar güncellendi."
 
-#: views/list.py:1395
+#: views/list.py:1398
 msgid "An error occurred: "
 msgstr "Bir hata oluştu: "
 
-#: views/list.py:1429
+#: views/list.py:1432
 #, python-format
 msgid "The user %(email)s is not in the %(role)s group"
 msgstr "%(email)s kullanıcısı %(role)s grubunda değil"
 
-#: views/list.py:1436
+#: views/list.py:1439
 msgid "Removing the last owner is impossible"
 msgstr "Son sahibi kaldırmak mümkün değil"
 
-#: views/list.py:1454
+#: views/list.py:1457
 #, python-format
 msgid "The user could not be removed: %(msg)s"
 msgstr "Kullanıcı kaldırılamadı: %(msg)s"
 
-#: views/list.py:1460
+#: views/list.py:1463
 #, python-format
 msgid "The user %(address)s has been removed from the %(role)s group."
 msgstr "%(address)s kullanıcısı %(role)s grubundan kaldırıldı."
 
-#: views/list.py:1481
+#: views/list.py:1484
 msgid "No member is subscribed to the list currently."
 msgstr "Şu anda listeye hiçbir üye abone değil."
 
-#: views/list.py:1494
+#: views/list.py:1497
 msgid "All members have been unsubscribed from the list."
 msgstr "Tüm üyeler liste aboneliğinden çıkarıldı."
 
-#: views/list.py:1573
+#: views/list.py:1576
 msgid "The header matches were successfully modified."
 msgstr "Başlık eşleşmeleri başarıyla değiştirildi."
 
-#: views/list.py:1580
+#: views/list.py:1583
 msgid "New header"
 msgstr "Yeni başlık"
 
-#: views/list.py:1581
+#: views/list.py:1584
 msgid "New pattern"
 msgstr "Yeni kalıp"
 
-#: views/list.py:1613
+#: views/list.py:1616
 msgid "Invalid confirmation token"
 msgstr "Geçersiz doğrulama belirteci"
 
-#: views/list.py:1623 views/list.py:1639
+#: views/list.py:1626 views/list.py:1642
 msgid "Token expired or invalid."
 msgstr "Belirtecin süresi doldu veya geçersiz."
 
@@ -3476,6 +3491,12 @@ msgstr "Parola başarıyla güncellendi"
 #: views/user.py:522
 msgid "Successfully deleted account"
 msgstr "Hesap başarıyla silindi"
+
+#~ msgid "Logout"
+#~ msgstr "Oturumu kapat"
+
+#~ msgid "Log In"
+#~ msgstr "Oturum Aç"
 
 #~ msgid "Login"
 #~ msgstr "Oturum aç"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-21 23:44+0000\n"
+"POT-Creation-Date: 2023-04-18 16:09+0000\n"
 "PO-Revision-Date: 2023-02-28 10:35+0000\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -51,7 +51,7 @@ msgstr ""
 "tilla si testing@example.com, jepni këtu example.com."
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:22
-#: templates/postorius/index.html:83
+#: templates/postorius/index.html:88
 msgid "Description"
 msgstr "Përshkrim"
 
@@ -335,7 +335,7 @@ msgstr "Ju lutemi, jepni një adresë email të vlefshme."
 msgid "Your name (optional)"
 msgstr "Emri juaj (në daçi)"
 
-#: forms/list_forms.py:198 forms/list_forms.py:1404 views/list.py:543
+#: forms/list_forms.py:198 forms/list_forms.py:1404 views/list.py:546
 msgid "Primary Address ({})"
 msgstr "Adresë Parësore ({})"
 
@@ -946,8 +946,8 @@ msgstr ""
 "paraprin pjesës së mesazhit origjinal në mesazhin e mbështjellë kur për "
 "zbutje efektesh DMARC aplikohet veprimi i mbështjelljes së mesazheve."
 
-#: forms/list_forms.py:749 templates/postorius/lists/summary.html:144
-#: templates/postorius/lists/summary.html:153
+#: forms/list_forms.py:749 templates/postorius/lists/summary.html:146
+#: templates/postorius/lists/summary.html:155
 #: templatetags/membership_helpers.py:78 templatetags/membership_helpers.py:84
 msgid "None"
 msgstr "Asnjë"
@@ -2051,67 +2051,70 @@ msgstr "Dëbime Globale"
 msgid "Mailman logo"
 msgstr "Stemë e Mailman-it"
 
-#: templates/postorius/base.html:40
-msgid "Lists"
-msgstr "Lista"
-
-#: templates/postorius/base.html:46 templates/postorius/domain/index.html:5
-#: templates/postorius/domain/index.html:11
-msgid "Domains"
-msgstr "Përkatësi"
-
-#: templates/postorius/base.html:52
-msgid "Bans"
-msgstr "Dëbime"
-
-#: templates/postorius/base.html:58
-msgid "System Information"
-msgstr "Të dhëna Mbi Sistemin"
-
-#: templates/postorius/base.html:64 templates/postorius/menu/list_nav.html:40
-#: templates/postorius/user/all.html:8 templates/postorius/user/all.html:13
-msgid "Users"
-msgstr "Përdorues"
-
-#: templates/postorius/base.html:71 templates/postorius/lists/summary.html:33
-msgid "Archives"
-msgstr "Arkiva"
-
-#: templates/postorius/base.html:79
+#: templates/postorius/base.html:39 templates/postorius/base.html:122
+#: templates/postorius/lists/summary.html:110
 #, fuzzy
 #| msgid "Sign Up"
 msgid "Sign In"
 msgstr "Regjistrohuni"
 
-#: templates/postorius/base.html:83
+#: templates/postorius/base.html:43 templates/postorius/base.html:126
 msgid "Sign Up"
 msgstr "Regjistrohuni"
 
-#: templates/postorius/base.html:99
+#: templates/postorius/base.html:58 templates/postorius/base.html:140
 msgid "Account"
 msgstr "Llogari"
 
-#: templates/postorius/base.html:103
+#: templates/postorius/base.html:62 templates/postorius/base.html:144
 msgid "Mailman settings"
 msgstr "Rregullime Mailman-i"
 
-#: templates/postorius/base.html:108
+#: templates/postorius/base.html:67 templates/postorius/base.html:149
 msgid "Posting activity"
 msgstr "Veprimtari postimi"
 
-#: templates/postorius/base.html:114
-msgid "Logout"
-msgstr "Dalje"
+#: templates/postorius/base.html:73 templates/postorius/base.html:155
+#, fuzzy
+#| msgid "Sign Up"
+msgid "Sign Out"
+msgstr "Regjistrohuni"
 
-#: templates/postorius/base.html:136
+#: templates/postorius/base.html:83
+msgid "Lists"
+msgstr "Lista"
+
+#: templates/postorius/base.html:89 templates/postorius/domain/index.html:5
+#: templates/postorius/domain/index.html:11
+msgid "Domains"
+msgstr "Përkatësi"
+
+#: templates/postorius/base.html:95
+msgid "Bans"
+msgstr "Dëbime"
+
+#: templates/postorius/base.html:101
+msgid "System Information"
+msgstr "Të dhëna Mbi Sistemin"
+
+#: templates/postorius/base.html:107 templates/postorius/menu/list_nav.html:40
+#: templates/postorius/user/all.html:8 templates/postorius/user/all.html:13
+msgid "Users"
+msgstr "Përdorues"
+
+#: templates/postorius/base.html:114 templates/postorius/lists/summary.html:33
+msgid "Archives"
+msgstr "Arkiva"
+
+#: templates/postorius/base.html:179
 msgid "Postorius Documentation"
 msgstr "Dokumentim Postorius-i"
 
-#: templates/postorius/base.html:140
+#: templates/postorius/base.html:183
 msgid "Postorius Version"
 msgstr "Version Postorius-i"
 
-#: templates/postorius/base.html:143
+#: templates/postorius/base.html:186
 msgid "Happy Mailman Day!"
 msgstr "Gëzuar Ditën e Postierit!"
 
@@ -2332,27 +2335,27 @@ msgstr "Jo-Anëtar"
 msgid "All"
 msgstr "Krejt"
 
-#: templates/postorius/index.html:67
+#: templates/postorius/index.html:72
 msgid "Create New Domain"
 msgstr "Krijoni Përkatësi të Re"
 
-#: templates/postorius/index.html:69
+#: templates/postorius/index.html:74
 msgid "Create New List"
 msgstr "Krijoni Listë të Re"
 
-#: templates/postorius/index.html:81
+#: templates/postorius/index.html:86
 msgid "List name"
 msgstr "Emër liste"
 
-#: templates/postorius/index.html:82
+#: templates/postorius/index.html:87
 msgid "Post address"
 msgstr "Adresë Postimi"
 
-#: templates/postorius/index.html:93
+#: templates/postorius/index.html:98
 msgid "unadvertised"
 msgstr "e pareklamuar"
 
-#: templates/postorius/index.html:105
+#: templates/postorius/index.html:110
 msgid ""
 "Only lists that you are owner, moderator or subscriber for are shown here. "
 "Click to <a href=\"?all-lists\"> see all lists</a>."
@@ -2360,11 +2363,11 @@ msgstr ""
 "Këtu shfaqen vetëm lista për të cilat jeni i zoti, moderator ose pajtimtar. "
 "Klikoni që të <a href=\"?all-lists\"> shihni krejt listat</a>."
 
-#: templates/postorius/index.html:109
+#: templates/postorius/index.html:114
 msgid "Only admins see unadvertised lists in the list index."
 msgstr "Vetëm përgjegjësit shohin lista të pareklamuara te treguesi i listave."
 
-#: templates/postorius/index.html:115
+#: templates/postorius/index.html:120
 msgid "There are currently no mailing lists."
 msgstr "Hëpërhë s’ka lista postimesh."
 
@@ -2660,7 +2663,9 @@ msgid "To contact the list owners, use the following email address:"
 msgstr "Për t’u lidhur me të zotët e listës, përdorni adresën email vijuese:"
 
 #: templates/postorius/lists/summary.html:29
-msgid "You have to login to visit the archives of this list."
+#, fuzzy
+#| msgid "You have to login to visit the archives of this list."
+msgid "You have to sign in to visit the archives of this list."
 msgstr "Që të vizitoni arkivat e kësaj liste, duhet të bëni hyrjen."
 
 #: templates/postorius/lists/summary.html:35
@@ -2729,7 +2734,7 @@ msgstr ""
 "            "
 
 #: templates/postorius/lists/summary.html:96
-#: templates/postorius/lists/summary.html:123
+#: templates/postorius/lists/summary.html:124
 msgid "Subscribe"
 msgstr "Pajtohuni"
 
@@ -2742,10 +2747,18 @@ msgstr ""
 "lidhuni me të zotët e listës."
 
 #: templates/postorius/lists/summary.html:105
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "        To subscribe or unsubscribe from this list, please log in first.\n"
+#| "        If you have not previously logged in, you may need to set up an "
+#| "account\n"
+#| "        with the appropriate email address.\n"
+#| "        "
 msgid ""
 "\n"
-"        To subscribe or unsubscribe from this list, please log in first.\n"
-"        If you have not previously logged in, you may need to set up an "
+"        To subscribe or unsubscribe from this list, please sign in first.\n"
+"        If you have not previously signed in, you may need to set up an "
 "account\n"
 "        with the appropriate email address.\n"
 "        "
@@ -2756,16 +2769,18 @@ msgstr ""
 "        me adresën e duhur email.\n"
 "        "
 
-#: templates/postorius/lists/summary.html:110
-msgid "Log In"
-msgstr "Hyni"
-
-#: templates/postorius/lists/summary.html:115
+#: templates/postorius/lists/summary.html:116
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "        You can also subscribe without creating an account.\n"
+#| "        If you wish to do so, please use the form below.\n"
+#| "        "
 msgid ""
 "\n"
-"        You can also subscribe without creating an account.\n"
-"        If you wish to do so, please use the form below.\n"
-"        "
+"          You can also subscribe without creating an account.\n"
+"          If you wish to do so, please use the form below.\n"
+"          "
 msgstr ""
 "\n"
 "        Mundeni të pajtoheni edhe pa krijuar një llogari.\n"
@@ -2773,23 +2788,23 @@ msgstr ""
 "poshtë.\n"
 "        "
 
-#: templates/postorius/lists/summary.html:132
+#: templates/postorius/lists/summary.html:134
 msgid "List metrics"
 msgstr "Numra rreth listës"
 
-#: templates/postorius/lists/summary.html:134
+#: templates/postorius/lists/summary.html:136
 msgid "Created at"
 msgstr "Krijuar më"
 
-#: templates/postorius/lists/summary.html:139
+#: templates/postorius/lists/summary.html:141
 msgid "Last post at"
 msgstr "Postimi i fundit më"
 
-#: templates/postorius/lists/summary.html:148
+#: templates/postorius/lists/summary.html:150
 msgid "Digest last sent at"
 msgstr "Përmbledhje dërguar për herë të fundit më"
 
-#: templates/postorius/lists/summary.html:157
+#: templates/postorius/lists/summary.html:159
 msgid "Volume"
 msgstr "Vëllim"
 
@@ -3096,7 +3111,7 @@ msgstr "U regjistrua Përkatësi e Re"
 msgid "Domain %s updated"
 msgstr "U përditësua përkatësia %s"
 
-#: views/domain.py:130 views/list.py:1029
+#: views/domain.py:130 views/list.py:1032
 msgid "Please check the errors below"
 msgstr "Ju lutemi, kontrolloni gabimet më poshtë"
 
@@ -3126,7 +3141,7 @@ msgstr "U hoq {} si pronar për {}"
 msgid "The email {} has been banned."
 msgstr "Email-i {} është dëbuar."
 
-#: views/generic.py:122 views/generic.py:137 views/list.py:1569
+#: views/generic.py:122 views/generic.py:137 views/list.py:1572
 #, python-format
 msgid "An error occurred: %s"
 msgstr "Ndodhi një gabim: %s"
@@ -3181,23 +3196,23 @@ msgstr "Pa ndryshime te moderimi i anëtarëve."
 msgid "The member's moderation settings have been updated."
 msgstr "Rregullimet mbi moderimin e anëtarëve janë përditësuar."
 
-#: views/list.py:521
+#: views/list.py:524
 msgid "You are not subscribed to {}."
 msgstr "S’jeni i pajtuar te {}."
 
-#: views/list.py:536
+#: views/list.py:539
 msgid "You are already subscribed"
 msgstr "Jeni i regjistruar tashmë"
 
-#: views/list.py:548
+#: views/list.py:551
 msgid "Subscription changed to {}"
 msgstr "Pajtimi u ndryshua në {}"
 
-#: views/list.py:553
+#: views/list.py:556
 msgid "Something went wrong. Please try again. {} {}"
 msgstr "Diç shkoi ters. Ju lutemi, riprovoni. {} {}"
 
-#: views/list.py:607
+#: views/list.py:610
 msgid ""
 "Your subscription request has been submitted and is waiting for moderator "
 "approval."
@@ -3205,29 +3220,29 @@ msgstr ""
 "Kërkesa juaj për pajtim u parashtrua dhe është në pritje të miratimit nga "
 "moderatorë."
 
-#: views/list.py:615
+#: views/list.py:618
 #, python-format
 msgid "You are subscribed to %s."
 msgstr "Jeni pajtuar te %s."
 
-#: views/list.py:620 views/list.py:656
+#: views/list.py:623 views/list.py:659
 msgid "Something went wrong. Please try again."
 msgstr "Diç shkoi ters. Ju lutemi, riprovoni."
 
-#: views/list.py:652
+#: views/list.py:655
 msgid "Please check your inbox for further instructions"
 msgstr "Për udhëzime të mëtejshme kontrolloni mesazhet tuaj të marrë"
 
-#: views/list.py:676
+#: views/list.py:679
 msgid "You can only unsubscribe yourself."
 msgstr "Mund të shpajtoni vetëm veten."
 
-#: views/list.py:682
+#: views/list.py:685
 msgid ""
 "You have a pending unsubscription request waiting for moderator approval."
 msgstr "Keni një shpajtim pezull në pritje të miratimitn nga moderatorë."
 
-#: views/list.py:693
+#: views/list.py:696
 msgid ""
 "Your unsubscription request has been submitted and is waiting for moderator "
 "approval."
@@ -3235,22 +3250,22 @@ msgstr ""
 "Kërkesa juaj për shpajtim u parashtrua dhe është në pritje të miratimit nga "
 "moderatorë."
 
-#: views/list.py:701
+#: views/list.py:704
 #, python-format
 msgid "%s has been unsubscribed from this list."
 msgstr "%s është shpajtuar prej kësaj liste."
 
-#: views/list.py:738
+#: views/list.py:741
 #, python-format
 msgid "The address %(address)s has been invited to %(list)s."
 msgstr "Adresa %(address)s është ftuar te %(list)s."
 
-#: views/list.py:743
+#: views/list.py:746
 #, python-format
 msgid "The address %(address)s has been subscribed to %(list)s."
 msgstr "Adresa %(address)s është pajtuar te %(list)s."
 
-#: views/list.py:748
+#: views/list.py:751
 msgid ""
 " Subscription may be pending address verification, confirmation or approval "
 "as appropriate."
@@ -3258,198 +3273,198 @@ msgstr ""
 " Pajtimi mund të jetë në pritje të verifikimit të adresës, ripohimit ose "
 "miratimit si i saktë."
 
-#: views/list.py:766 views/list.py:836
+#: views/list.py:769 views/list.py:839
 #, python-format
 msgid "The email address %s is not valid."
 msgstr "Adresa email %s s’është e vlefshme."
 
-#: views/list.py:805
+#: views/list.py:808
 msgid "Please fill out the form correctly."
 msgstr "Ju lutemi, plotësojeni saktë formularin."
 
-#: views/list.py:823
+#: views/list.py:826
 #, python-brace-format
 msgid "These addresses {address} have been unsubscribed from {list}."
 msgstr "Këto adresa {address} janë shpajtuar prej {list}."
 
-#: views/list.py:858
+#: views/list.py:861
 msgid "The selected messages were accepted"
 msgstr "Mesazhet e përzgjedhur u pranuan"
 
-#: views/list.py:863
+#: views/list.py:866
 msgid "The selected messages were rejected"
 msgstr "Mesazhet e përzgjedhur u hodhën poshtë"
 
-#: views/list.py:868
+#: views/list.py:871
 msgid "The selected messages were discarded"
 msgstr "Mesazhet e përzgjedhur u hodhën tej"
 
-#: views/list.py:871
+#: views/list.py:874
 msgid "Message could not be found"
 msgstr "Mesazhi s’u gjet dot"
 
-#: views/list.py:902
+#: views/list.py:905
 msgid "The message was accepted"
 msgstr "Mesazhi u pranua"
 
-#: views/list.py:905
+#: views/list.py:908
 msgid "The message was rejected"
 msgstr "Mesazhi u hodh poshtë"
 
-#: views/list.py:908
+#: views/list.py:911
 msgid "The message was discarded"
 msgstr "Mesazhi u hodh tej"
 
-#: views/list.py:911
+#: views/list.py:914
 msgid "Held message was not found."
 msgstr "S’u gjetën mesazhe të mbajtur."
 
-#: views/list.py:925
+#: views/list.py:928
 msgid "Moderation action for {} set to {}"
 msgstr "Veprim moderimi për {} u caktua si {}"
 
-#: views/list.py:933
+#: views/list.py:936
 msgid "Failed to set moderation action for {}"
 msgstr "S’u arrit të caktohet veprim moderimi për {}"
 
-#: views/list.py:985
+#: views/list.py:988
 msgid "Choose a Domain"
 msgstr "Zgjidhni Përkatësi"
 
-#: views/list.py:1009
+#: views/list.py:1012
 msgid "List created"
 msgstr "Lista u krijuar"
 
-#: views/list.py:1021
+#: views/list.py:1024
 msgid "Mailing List already exists."
 msgstr "Lista e Postimeve ekziston tashmë."
 
-#: views/list.py:1201
+#: views/list.py:1204
 msgid "Subscriptions pending user confirmation"
 msgstr "Pajtime në pritje të ripohimit nga përdoruesi"
 
-#: views/list.py:1214
+#: views/list.py:1217
 msgid "Subscriptions pending approval"
 msgstr "Pajtime në pritje të miratimit"
 
-#: views/list.py:1227
+#: views/list.py:1230
 msgid "Un-subscriptions pending approval"
 msgstr "Shpajtime në pritje të miratimit"
 
-#: views/list.py:1276
+#: views/list.py:1279
 msgid "The request has been accepted."
 msgstr "Kërkesa u pranua."
 
-#: views/list.py:1277
+#: views/list.py:1280
 msgid "The request has been rejected."
 msgstr "Kërkesa u hodh poshtë."
 
-#: views/list.py:1278
+#: views/list.py:1281
 msgid "The request has been discarded."
 msgstr "Kërkesa u hodh tej."
 
-#: views/list.py:1279
+#: views/list.py:1282
 msgid "The request has been defered."
 msgstr "Kërkesa është shtyrë."
 
-#: views/list.py:1299
+#: views/list.py:1302
 #, python-format
 msgid "The request was already moderated: %s"
 msgstr "Kërkesa është moderuar tashmë: %s"
 
-#: views/list.py:1303
+#: views/list.py:1306
 #, python-format
 msgid "The request could not be moderated: %s"
 msgstr "Kërkesa s’u moderua dot: %s"
 
-#: views/list.py:1317
+#: views/list.py:1320
 msgid "List Identity"
 msgstr "Identitet Liste"
 
-#: views/list.py:1318
+#: views/list.py:1321
 msgid "Automatic Responses"
 msgstr "Përgjigje të Automatizuara"
 
-#: views/list.py:1319
+#: views/list.py:1322
 msgid "Alter Messages"
 msgstr "Pas Mesazhesh"
 
-#: views/list.py:1320
+#: views/list.py:1323
 msgid "DMARC Mitigations"
 msgstr "Zbutje efektesh DMARC"
 
-#: views/list.py:1321
+#: views/list.py:1324
 msgid "Digest"
 msgstr "Përmbledhje"
 
-#: views/list.py:1322
+#: views/list.py:1325
 msgid "Message Acceptance"
 msgstr "Pranim Mesazhesh"
 
-#: views/list.py:1323
+#: views/list.py:1326
 msgid "Archiving"
 msgstr "Arkivim"
 
-#: views/list.py:1324
+#: views/list.py:1327
 msgid "Member Policy"
 msgstr "Rregulla Anëtari"
 
-#: views/list.py:1325
+#: views/list.py:1328
 msgid "Bounce Processing"
 msgstr "Përpunim Kthimesh"
 
-#: views/list.py:1392
+#: views/list.py:1395
 msgid "The settings have been updated."
 msgstr "Rregullimet u përditësuan."
 
-#: views/list.py:1395
+#: views/list.py:1398
 msgid "An error occurred: "
 msgstr "Ndodhi një gabim: "
 
-#: views/list.py:1429
+#: views/list.py:1432
 #, python-format
 msgid "The user %(email)s is not in the %(role)s group"
 msgstr "Përdoruesi %(email)s s’gjendet te grupi %(role)s"
 
-#: views/list.py:1436
+#: views/list.py:1439
 msgid "Removing the last owner is impossible"
 msgstr "Është e pamundur të hiqet i zoti i fundit"
 
-#: views/list.py:1454
+#: views/list.py:1457
 #, python-format
 msgid "The user could not be removed: %(msg)s"
 msgstr "Përdoruesi s’u hoq dot: %(msg)s"
 
-#: views/list.py:1460
+#: views/list.py:1463
 #, python-format
 msgid "The user %(address)s has been removed from the %(role)s group."
 msgstr "Përdoruesi %(address)s është hequr prej grupit %(role)s."
 
-#: views/list.py:1481
+#: views/list.py:1484
 msgid "No member is subscribed to the list currently."
 msgstr "Hëpërhë s’ka përdorues të pajtuar te lista."
 
-#: views/list.py:1494
+#: views/list.py:1497
 msgid "All members have been unsubscribed from the list."
 msgstr "Krejt anëtarët janë shpajtuar prej kësaj liste."
 
-#: views/list.py:1573
+#: views/list.py:1576
 msgid "The header matches were successfully modified."
 msgstr "Përputhjet për kryet u ndryshuan me sukses."
 
-#: views/list.py:1580
+#: views/list.py:1583
 msgid "New header"
 msgstr "Krye e re"
 
-#: views/list.py:1581
+#: views/list.py:1584
 msgid "New pattern"
 msgstr "Rregullsi e re"
 
-#: views/list.py:1613
+#: views/list.py:1616
 msgid "Invalid confirmation token"
 msgstr "Token i pavlefshëm ripohimi"
 
-#: views/list.py:1623 views/list.py:1639
+#: views/list.py:1626 views/list.py:1642
 msgid "Token expired or invalid."
 msgstr "Token i skaduar ose i pavlefshëm."
 
@@ -3506,6 +3521,12 @@ msgstr "Fjalëkalimi u përditësua me sukses"
 #| msgid "Successfully updated user."
 msgid "Successfully deleted account"
 msgstr "Përdoruesi u përditësua me sukses."
+
+#~ msgid "Logout"
+#~ msgstr "Dalje"
+
+#~ msgid "Log In"
+#~ msgstr "Hyni"
 
 #~ msgid "Login"
 #~ msgstr "Hyrje"
