@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-18 16:09+0000\n"
-"PO-Revision-Date: 2023-02-25 13:37+0000\n"
+"PO-Revision-Date: 2023-04-20 13:47+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/he/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 4.18-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -1953,10 +1953,8 @@ msgid "Posting activity"
 msgstr "פעילות פרסום"
 
 #: templates/postorius/base.html:73 templates/postorius/base.html:155
-#, fuzzy
-#| msgid "Sign In"
 msgid "Sign Out"
-msgstr "כניסה"
+msgstr "יציאה"
 
 #: templates/postorius/base.html:83
 msgid "Lists"
@@ -2539,10 +2537,8 @@ msgid "To contact the list owners, use the following email address:"
 msgstr "כדי ליצור קשר עם בעלי הרשימה, יש להשתמש בכתובת הדוא״ל הבאה:"
 
 #: templates/postorius/lists/summary.html:29
-#, fuzzy
-#| msgid "You have to login to visit the archives of this list."
 msgid "You have to sign in to visit the archives of this list."
-msgstr "עליך להיכנס כדי לבקר בארכיוני הרשימה הזו."
+msgstr "יש להיכנס כדי לבקר בארכיוני הרשימה הזו."
 
 #: templates/postorius/lists/summary.html:35
 #, python-format
@@ -2622,14 +2618,6 @@ msgstr ""
 "הרשימה."
 
 #: templates/postorius/lists/summary.html:105
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "        To subscribe or unsubscribe from this list, please log in first.\n"
-#| "        If you have not previously logged in, you may need to set up an "
-#| "account\n"
-#| "        with the appropriate email address.\n"
-#| "        "
 msgid ""
 "\n"
 "        To subscribe or unsubscribe from this list, please sign in first.\n"
@@ -2639,18 +2627,12 @@ msgid ""
 "        "
 msgstr ""
 "\n"
-"        כדי לערוך או לבטל מינוי לרשימה, עליך להיכנס תחילה.\n"
-"        אם טרם נכנסת למערכת, יתכן שיהיה עליך ליצור חשבון\n"
+"        כדי לערוך או לבטל מינוי לרשימה, יש להיכנס תחילה.\n"
+"        אם טרם נכנסת למערכת, יתכן שצריך ליצור חשבון\n"
 "        עם כתובת דוא״ל תקנית.\n"
 "        "
 
 #: templates/postorius/lists/summary.html:116
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "        You can also subscribe without creating an account.\n"
-#| "        If you wish to do so, please use the form below.\n"
-#| "        "
 msgid ""
 "\n"
 "          You can also subscribe without creating an account.\n"
@@ -2658,9 +2640,9 @@ msgid ""
 "          "
 msgstr ""
 "\n"
-"        ניתן גם להירשם מבלי ליצור חשבון.\n"
-"        כדי לעשות זאת יש להשתמש בטופס שלהלן.\n"
-"        "
+"          ניתן גם להירשם מבלי ליצור חשבון.\n"
+"          כדי לעשות זאת יש להשתמש בטופס שלהלן.\n"
+"          "
 
 #: templates/postorius/lists/summary.html:134
 msgid "List metrics"
