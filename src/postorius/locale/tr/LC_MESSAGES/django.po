@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-18 16:09+0000\n"
-"PO-Revision-Date: 2023-02-25 13:37+0000\n"
+"PO-Revision-Date: 2023-04-20 13:47+0000\n"
 "Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/tr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 4.18-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -2050,10 +2050,8 @@ msgid "Posting activity"
 msgstr "Gönderme etkinliği"
 
 #: templates/postorius/base.html:73 templates/postorius/base.html:155
-#, fuzzy
-#| msgid "Sign In"
 msgid "Sign Out"
-msgstr "Oturum Aç"
+msgstr "Oturumu Kapat"
 
 #: templates/postorius/base.html:83
 msgid "Lists"
@@ -2640,10 +2638,8 @@ msgstr ""
 "Liste sahipleriyle iletişim kurmak için aşağıdaki e-posta adresini kullanın:"
 
 #: templates/postorius/lists/summary.html:29
-#, fuzzy
-#| msgid "You have to login to visit the archives of this list."
 msgid "You have to sign in to visit the archives of this list."
-msgstr "Bu listenin arşivlerini ziyaret etmek için giriş yapmalısınız."
+msgstr "Bu listenin arşivlerini ziyaret etmek için oturum açmanız gerekir."
 
 #: templates/postorius/lists/summary.html:35
 #, python-format
@@ -2723,14 +2719,6 @@ msgstr ""
 "lütfen liste sahipleriyle iletişim kurun."
 
 #: templates/postorius/lists/summary.html:105
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "        To subscribe or unsubscribe from this list, please log in first.\n"
-#| "        If you have not previously logged in, you may need to set up an "
-#| "account\n"
-#| "        with the appropriate email address.\n"
-#| "        "
 msgid ""
 "\n"
 "        To subscribe or unsubscribe from this list, please sign in first.\n"
@@ -2747,12 +2735,6 @@ msgstr ""
 "        "
 
 #: templates/postorius/lists/summary.html:116
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "        You can also subscribe without creating an account.\n"
-#| "        If you wish to do so, please use the form below.\n"
-#| "        "
 msgid ""
 "\n"
 "          You can also subscribe without creating an account.\n"
@@ -2760,9 +2742,9 @@ msgid ""
 "          "
 msgstr ""
 "\n"
-"        Bir hesap oluşturmadan da abone olabilirsiniz.\n"
-"        Bunu yapmak istiyorsanız, lütfen aşağıdaki formu kullanın.\n"
-"        "
+"          Bir hesap oluşturmadan da abone olabilirsiniz.\n"
+"          Bunu yapmak istiyorsanız, lütfen aşağıdaki formu kullanın.\n"
+"          "
 
 #: templates/postorius/lists/summary.html:134
 msgid "List metrics"
