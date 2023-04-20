@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-18 16:09+0000\n"
-"PO-Revision-Date: 2023-02-25 13:37+0000\n"
+"PO-Revision-Date: 2023-04-20 13:47+0000\n"
 "Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/es/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 4.18-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -2086,10 +2086,8 @@ msgid "Posting activity"
 msgstr "Actividad de envíos"
 
 #: templates/postorius/base.html:73 templates/postorius/base.html:155
-#, fuzzy
-#| msgid "Sign In"
 msgid "Sign Out"
-msgstr "Iniciar sesión"
+msgstr "Cerrar sesión"
 
 #: templates/postorius/base.html:83
 msgid "Lists"
@@ -2678,10 +2676,8 @@ msgstr ""
 "dirección de correo electrónico:"
 
 #: templates/postorius/lists/summary.html:29
-#, fuzzy
-#| msgid "You have to login to visit the archives of this list."
 msgid "You have to sign in to visit the archives of this list."
-msgstr "Tiene que iniciar sesión para visitar los archivos de esta lista."
+msgstr "Tienes que iniciar sesión para visitar los archivos de esta lista."
 
 #: templates/postorius/lists/summary.html:35
 #, python-format
@@ -2762,14 +2758,6 @@ msgstr ""
 "contacte con los propietarios de la lista."
 
 #: templates/postorius/lists/summary.html:105
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "        To subscribe or unsubscribe from this list, please log in first.\n"
-#| "        If you have not previously logged in, you may need to set up an "
-#| "account\n"
-#| "        with the appropriate email address.\n"
-#| "        "
 msgid ""
 "\n"
 "        To subscribe or unsubscribe from this list, please sign in first.\n"
@@ -2779,20 +2767,14 @@ msgid ""
 "        "
 msgstr ""
 "\n"
-"        Para suscribirse o darse de baja de esta lista, iniciar sesión "
-"antes.\n"
-"        Si no ha iniciado sesión anteriormente, puede que tenga que "
-"configurar una cuenta\n"
-"        con la dirección de correo adecuada.\n"
+"        Para suscribirte o darte de baja de esta lista, inicia primero la "
+"sesión.\n"
+"        Si no lo has hecho antes, es posible que tengas que crear una "
+"cuenta\n"
+"        con la dirección de correo electrónico adecuada.\n"
 "        "
 
 #: templates/postorius/lists/summary.html:116
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "        You can also subscribe without creating an account.\n"
-#| "        If you wish to do so, please use the form below.\n"
-#| "        "
 msgid ""
 "\n"
 "          You can also subscribe without creating an account.\n"
@@ -2800,9 +2782,9 @@ msgid ""
 "          "
 msgstr ""
 "\n"
-"        También puede suscribirse sin crear una cuenta.\n"
-"        Si desea hacerlo, use el formulario siguiente.\n"
-"        "
+"          También puedes suscribirte sin crear una cuenta.\n"
+"          Si lo deseas, utiliza el siguiente formulario.\n"
+"          "
 
 #: templates/postorius/lists/summary.html:134
 msgid "List metrics"
