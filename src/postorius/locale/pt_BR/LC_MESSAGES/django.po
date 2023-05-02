@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-18 16:09+0000\n"
-"PO-Revision-Date: 2023-04-20 13:47+0000\n"
+"PO-Revision-Date: 2023-05-02 06:52+0000\n"
 "Last-Translator: Wellington Terumi Uemura <wellingtonuemura@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "gnu-mailman/postorius/pt_BR/>\n"
@@ -1284,7 +1284,7 @@ msgid ""
 "Should Mailman send an auto-response to emails sent to the -owner address?"
 msgstr ""
 "O Mailman deve enviar uma resposta automática para mensagens enviadas para o "
-"endereço <lista>-owner?"
+"endereço -owner?"
 
 #: forms/list_forms.py:998
 msgid "Autoresponse owner text"
@@ -1292,9 +1292,7 @@ msgstr "Texto da resposta automática ao dono"
 
 #: forms/list_forms.py:1001
 msgid "Auto-response text to send to -owner emails."
-msgstr ""
-"Texto da resposta automática ao dono enviado para mensagens ao endereço "
-"<lista>-owner."
+msgstr "Texto da resposta automática ao endereço de e-mail do -owner."
 
 #: forms/list_forms.py:1006
 msgid "Autorespond postings"
