@@ -81,4 +81,4 @@ def delivery_mode(value):
 @register.filter
 def moderation_action(value):
     """Convert the moderation_action value into translated text."""
-    return dict(ACTION_CHOICES).get(value, _('None'))
+    return dict(ACTION_CHOICES).get(value, _('List default'))
