@@ -2,14 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # AtaZh <ipomoea@hilarious.com>, 2021.
-# Sergii Horichenko <m@sgg.im>, 2022.
+# Sergii Horichenko <m@sgg.im>, 2022, 2023.
 # Artem <artem@molotov.work>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-18 16:09+0000\n"
-"PO-Revision-Date: 2022-11-09 17:30+0000\n"
+"PO-Revision-Date: 2023-06-20 04:55+0000\n"
 "Last-Translator: Sergii Horichenko <m@sgg.im>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/uk/>\n"
@@ -17,9 +17,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.15-dev\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.1\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -230,14 +230,12 @@ msgid "Yearly"
 msgstr "Щороку"
 
 #: forms/list_forms.py:51
-#, fuzzy
-#| msgid "Only mailinglist moderators"
 msgid "Only mailinglist administrators"
-msgstr "Лише модератори списку розсилки"
+msgstr "Лише адміністратори списку розсилки"
 
 #: forms/list_forms.py:52
 msgid "Mailinglist administrators and members"
-msgstr ""
+msgstr "Адміністратори та учасники списку розсилки"
 
 #: forms/list_forms.py:53
 msgid "Anyone"
@@ -1712,20 +1710,14 @@ msgid "Hide address"
 msgstr "Приховати адресу"
 
 #: forms/user_forms.py:90
-#, fuzzy
-#| msgid ""
-#| "When someone views the list membership, your email address is normally "
-#| "shown (in an obscured fashion to thwart spam harvesters). If you do not "
-#| "want your email address to show up on this membership roster at all, "
-#| "select Yes for this option."
 msgid ""
 "When other members allowed to view the list membership, your email address "
 "is normally shown. If you do not want your email address to show up on this "
 "membership roster, select Yes for this option."
 msgstr ""
-"Коли хтось переглядає учасників списку розсилок, Ваша ел.адреса зазвичай "
-"відображається (у зміненому вигляді для уникнення спаму). Якщо хочете, щоб "
-"Ваша адреса взагалі не відображалася поставте \"Так\"."
+"Коли інші учасники мають дозвіл на перегляд списку учасників, Ваша ел.адреса "
+"зазвичай відображається. Якщо хочете, щоб Ваша адреса не відображалася "
+"поставте \"Так\"."
 
 #: forms/user_forms.py:99
 msgid "Receive list copies (possible duplicates)"
@@ -2042,10 +2034,8 @@ msgstr "Лого Mailman"
 
 #: templates/postorius/base.html:39 templates/postorius/base.html:122
 #: templates/postorius/lists/summary.html:110
-#, fuzzy
-#| msgid "Sign Up"
 msgid "Sign In"
-msgstr "Зареєструватися"
+msgstr "Увійти"
 
 #: templates/postorius/base.html:43 templates/postorius/base.html:126
 msgid "Sign Up"
@@ -2064,10 +2054,8 @@ msgid "Posting activity"
 msgstr "Активність"
 
 #: templates/postorius/base.html:73 templates/postorius/base.html:155
-#, fuzzy
-#| msgid "Sign Up"
 msgid "Sign Out"
-msgstr "Зареєструватися"
+msgstr "Вийти"
 
 #: templates/postorius/base.html:83
 msgid "Lists"
@@ -2598,14 +2586,12 @@ msgid "Moderation Action"
 msgstr "Дія модератора"
 
 #: templates/postorius/lists/members.html:90
-#, fuzzy
-#| msgid "Bounce score threshold"
 msgid "Bounce Score"
-msgstr "Поріг кількості повернень"
+msgstr "Кількість повернень"
 
 #: templates/postorius/lists/members.html:116
 msgid "Masked per the user request"
-msgstr ""
+msgstr "Приховано на запит користувача"
 
 #: templates/postorius/lists/new.html:6 templates/postorius/lists/new.html:17
 msgid "Create list"
@@ -2654,10 +2640,8 @@ msgid "To contact the list owners, use the following email address:"
 msgstr "Для зв'язку з власниками списку користуйтеся цією ел.адресою:"
 
 #: templates/postorius/lists/summary.html:29
-#, fuzzy
-#| msgid "You have to login to visit the archives of this list."
 msgid "You have to sign in to visit the archives of this list."
-msgstr "Для перегляду архіву цього списку Вам потрібно увійти."
+msgstr "Для перегляду архівів цього списку Вам потрібно увійти."
 
 #: templates/postorius/lists/summary.html:35
 #, python-format
@@ -2738,14 +2722,6 @@ msgstr ""
 "зв'яжіться, будь ласка, з власниками списку."
 
 #: templates/postorius/lists/summary.html:105
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "        To subscribe or unsubscribe from this list, please log in first.\n"
-#| "        If you have not previously logged in, you may need to set up an "
-#| "account\n"
-#| "        with the appropriate email address.\n"
-#| "        "
 msgid ""
 "\n"
 "        To subscribe or unsubscribe from this list, please sign in first.\n"
@@ -2757,18 +2733,12 @@ msgstr ""
 "\n"
 "        Для того, щоби підписатися або відписатися, спочатку, будь ласка, "
 "увійдіть.\n"
-"        Якщо Ви раніше не входили зі своїм логіном, Вам можливо знадобиться "
-"налаштувати обліковий запис\n"
+"        Якщо Ви раніше не входили, Вам можливо знадобиться налаштувати "
+"обліковий запис\n"
 "        з дійсною адресою ел.пошти.\n"
 "        "
 
 #: templates/postorius/lists/summary.html:116
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "        You can also subscribe without creating an account.\n"
-#| "        If you wish to do so, please use the form below.\n"
-#| "        "
 msgid ""
 "\n"
 "          You can also subscribe without creating an account.\n"
@@ -2776,9 +2746,9 @@ msgid ""
 "          "
 msgstr ""
 "\n"
-"        Ви можете підписатися і без створення облікового запису.\n"
-"        Якщо хочете, скористайтеся, будь ласка, цією формою.\n"
-"        "
+"          Ви можете підписатися і без створення облікового запису.\n"
+"          Якщо хочете, скористайтеся, будь ласка, цією формою.\n"
+"          "
 
 #: templates/postorius/lists/summary.html:134
 msgid "List metrics"
@@ -2870,7 +2840,7 @@ msgstr "Глобальні налаштування Mailman"
 
 #: templates/postorius/menu/user_nav.html:9
 msgid "Address-based preferences"
-msgstr "Налаштування на основі адреси"
+msgstr "Властивості на основі адреси"
 
 #: templates/postorius/menu/user_nav.html:10
 msgid "List-based preferences"
@@ -2935,16 +2905,16 @@ msgstr "Створено"
 #: templates/postorius/user/confirm_delete.html:13
 #: templates/postorius/user/confirm_delete.html:22
 #: templates/postorius/user/manage.html:119
-#, fuzzy
-#| msgid "Web Account"
 msgid "Delete Account"
-msgstr "Веб-акаунт"
+msgstr "Видалити обліковий запис"
 
 #: templates/postorius/user/confirm_delete.html:17
 msgid ""
 "Are you sure you want to delete this account? This will remove the account "
 "along with all its subscriptions."
 msgstr ""
+"Ви дійсно хочете видалити цей обліковий запис? Обліковий запис буде "
+"вилучений разом з усіма його підписками."
 
 #: templates/postorius/user/list_options.html:14
 msgid "Subscription options for"
@@ -3511,10 +3481,8 @@ msgid "Password updated successfully"
 msgstr "Пароль успішно оновлений"
 
 #: views/user.py:522
-#, fuzzy
-#| msgid "Successfully updated user."
 msgid "Successfully deleted account"
-msgstr "Обліковий запис користувача оновлений."
+msgstr "Обліковий запис успішно видалений"
 
 #~ msgid "Logout"
 #~ msgstr "Вийти"
