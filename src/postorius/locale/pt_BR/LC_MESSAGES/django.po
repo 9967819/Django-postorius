@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-18 16:09+0000\n"
-"PO-Revision-Date: 2023-05-02 06:52+0000\n"
+"PO-Revision-Date: 2023-06-22 19:20+0000\n"
 "Last-Translator: Wellington Terumi Uemura <wellingtonuemura@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "gnu-mailman/postorius/pt_BR/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.18-dev\n"
+"X-Generator: Weblate 4.18.1\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -2197,7 +2197,7 @@ msgstr "Editar"
 
 #: templates/postorius/domain/index.html:50
 msgid "remove"
-msgstr "Remover"
+msgstr "remover"
 
 #: templates/postorius/domain/index.html:54
 msgid "Add"
