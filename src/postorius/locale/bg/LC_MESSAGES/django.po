@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-18 16:09+0000\n"
+"POT-Creation-Date: 2023-06-26 20:12-0700\n"
 "PO-Revision-Date: 2023-02-19 17:21+0000\n"
 "Last-Translator: Дилян Палаузов <dpa-weblate@aegee.org>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -175,7 +175,8 @@ msgstr ""
 msgid "Moderation"
 msgstr "Модерация"
 
-#: forms/fields.py:190 forms/list_forms.py:1280
+#: forms/fields.py:190 forms/list_forms.py:1281
+#: templatetags/membership_helpers.py:84
 msgid "List default"
 msgstr ""
 
@@ -261,7 +262,7 @@ msgstr "Рекламирай този списък в каталога на по
 msgid "Hide this list in list index"
 msgstr "Скрий този списък от каталога на пощенските списъци"
 
-#: forms/list_forms.py:94 forms/list_forms.py:1126
+#: forms/list_forms.py:94 forms/list_forms.py:1127
 msgid "Short Description"
 msgstr "Кратко описание"
 
@@ -319,7 +320,7 @@ msgstr "Моля въведи правилен електронен адрес."
 msgid "Your name (optional)"
 msgstr "Твоето име (по желание)"
 
-#: forms/list_forms.py:198 forms/list_forms.py:1404 views/list.py:546
+#: forms/list_forms.py:198 forms/list_forms.py:1405 views/list.py:546
 msgid "Primary Address ({})"
 msgstr "Основен адрес ({})"
 
@@ -399,12 +400,12 @@ msgstr "Администратор на сървъра"
 #: forms/list_forms.py:284 forms/list_forms.py:316 forms/list_forms.py:327
 #: forms/list_forms.py:338 forms/list_forms.py:467 forms/list_forms.py:477
 #: forms/list_forms.py:526 forms/list_forms.py:657 forms/list_forms.py:664
-#: forms/list_forms.py:717 forms/list_forms.py:796 forms/list_forms.py:834
-#: forms/list_forms.py:851 forms/list_forms.py:862 forms/list_forms.py:873
-#: forms/list_forms.py:893 forms/list_forms.py:913 forms/list_forms.py:1044
-#: forms/list_forms.py:1055 forms/list_forms.py:1069 forms/list_forms.py:1081
-#: forms/list_forms.py:1095 forms/list_forms.py:1118 forms/list_forms.py:1167
-#: forms/list_forms.py:1176 forms/list_forms.py:1200 forms/list_forms.py:1278
+#: forms/list_forms.py:717 forms/list_forms.py:796 forms/list_forms.py:807
+#: forms/list_forms.py:827 forms/list_forms.py:847 forms/list_forms.py:911
+#: forms/list_forms.py:950 forms/list_forms.py:967 forms/list_forms.py:1045
+#: forms/list_forms.py:1056 forms/list_forms.py:1070 forms/list_forms.py:1082
+#: forms/list_forms.py:1096 forms/list_forms.py:1119 forms/list_forms.py:1168
+#: forms/list_forms.py:1177 forms/list_forms.py:1201 forms/list_forms.py:1279
 #: forms/user_forms.py:63
 msgid "Yes"
 msgstr "Да"
@@ -412,12 +413,12 @@ msgstr "Да"
 #: forms/list_forms.py:284 forms/list_forms.py:316 forms/list_forms.py:327
 #: forms/list_forms.py:338 forms/list_forms.py:467 forms/list_forms.py:477
 #: forms/list_forms.py:526 forms/list_forms.py:657 forms/list_forms.py:664
-#: forms/list_forms.py:717 forms/list_forms.py:796 forms/list_forms.py:834
-#: forms/list_forms.py:851 forms/list_forms.py:862 forms/list_forms.py:873
-#: forms/list_forms.py:893 forms/list_forms.py:913 forms/list_forms.py:1044
-#: forms/list_forms.py:1055 forms/list_forms.py:1069 forms/list_forms.py:1081
-#: forms/list_forms.py:1095 forms/list_forms.py:1118 forms/list_forms.py:1167
-#: forms/list_forms.py:1176 forms/list_forms.py:1200 forms/list_forms.py:1279
+#: forms/list_forms.py:717 forms/list_forms.py:796 forms/list_forms.py:807
+#: forms/list_forms.py:827 forms/list_forms.py:847 forms/list_forms.py:911
+#: forms/list_forms.py:950 forms/list_forms.py:967 forms/list_forms.py:1045
+#: forms/list_forms.py:1056 forms/list_forms.py:1070 forms/list_forms.py:1082
+#: forms/list_forms.py:1096 forms/list_forms.py:1119 forms/list_forms.py:1168
+#: forms/list_forms.py:1177 forms/list_forms.py:1201 forms/list_forms.py:1280
 #: forms/user_forms.py:63
 msgid "No"
 msgstr "Не"
@@ -864,7 +865,7 @@ msgstr ""
 
 #: forms/list_forms.py:749 templates/postorius/lists/summary.html:146
 #: templates/postorius/lists/summary.html:155
-#: templatetags/membership_helpers.py:78 templatetags/membership_helpers.py:84
+#: templatetags/membership_helpers.py:78
 msgid "None"
 msgstr "Няма"
 
@@ -932,85 +933,10 @@ msgid "Personalize"
 msgstr ""
 
 #: forms/list_forms.py:799
-msgid "Filter content"
-msgstr ""
-
-#: forms/list_forms.py:801
-msgid ""
-"Should Mailman filter the content of list traffic according to the settings "
-"below?"
-msgstr ""
-"Да филтрира ли Mailman съдържанието до пощенския списък, съгласно "
-"настройките по-долу?"
-
-#: forms/list_forms.py:806
-msgid "Filter types"
-msgstr ""
-
-#: forms/list_forms.py:809
-msgid ""
-"MIME types to filter from the incoming posts. A list of common types can be "
-"found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
-"Basics_of_HTTP/MIME_types/Common_types\">here </a>"
-msgstr ""
-
-#: forms/list_forms.py:815
-msgid "Filter extensions"
-msgstr ""
-
-#: forms/list_forms.py:817
-msgid "Extensions to filter from the incoming posts."
-msgstr ""
-
-#: forms/list_forms.py:820
-msgid "Pass types"
-msgstr ""
-
-#: forms/list_forms.py:823
-msgid ""
-"MIME types to allow in the incoming posts. A list of common types can be "
-"found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
-"Basics_of_HTTP/MIME_types/Common_types\">here </a>"
-msgstr ""
-
-#: forms/list_forms.py:829
-msgid "Pass extensions"
-msgstr ""
-
-#: forms/list_forms.py:831
-msgid "Extensions to allow in the incoming posts."
-msgstr ""
-
-#: forms/list_forms.py:837
-msgid "Collapse alternatives"
-msgstr ""
-
-#: forms/list_forms.py:839
-msgid ""
-"Should Mailman collapse multipart/alternative to its first part content?"
-msgstr ""
-
-#: forms/list_forms.py:847
-msgid "Filter Action"
-msgstr ""
-
-#: forms/list_forms.py:854
-msgid "Convert html to plaintext"
-msgstr "Преобразувай html в чист текст"
-
-#: forms/list_forms.py:856
-msgid ""
-"Should Mailman convert text/html parts to plain text? This conversion "
-"happens after MIME attachments have been stripped."
-msgstr ""
-"Да преобразува ли Mailman html-части в чист текс? Това преобразуване ще се "
-"случи след като MIME-прикачените файлове са отстранени."
-
-#: forms/list_forms.py:865
 msgid "Anonymous list"
 msgstr "Анонимен списък"
 
-#: forms/list_forms.py:867
+#: forms/list_forms.py:801
 msgid ""
 "Hide the sender of a message, replacing it with the list address (Removes "
 "From, Sender and Reply-To fields)"
@@ -1018,11 +944,11 @@ msgstr ""
 "Скрий подателя на съобщението, замествайки го с адреса на списъка (Изтрива "
 "From:, Sender: и Reply-To полетата)"
 
-#: forms/list_forms.py:876
+#: forms/list_forms.py:810
 msgid "Include RFC2369 headers"
 msgstr "Включи полета от RFC2369"
 
-#: forms/list_forms.py:878
+#: forms/list_forms.py:812
 msgid ""
 "Yes is highly recommended. RFC 2369 defines a set of List-* headers that are "
 "normally added to every message sent to the list membership. These greatly "
@@ -1047,11 +973,11 @@ msgstr ""
 "но това не се препоръчва (Всъщност в бъдеще тази опция може да не се "
 "предлага)."
 
-#: forms/list_forms.py:896
+#: forms/list_forms.py:830
 msgid "Include the list post header"
 msgstr "Включи полето съдържащо адреса за писане до пощенския списък"
 
-#: forms/list_forms.py:898
+#: forms/list_forms.py:832
 msgid ""
 "This can be set to no for announce lists that do not wish to include the "
 "List-Post header because posting to the list is discouraged."
@@ -1060,17 +986,17 @@ msgstr ""
 "List-Post няма смисъл да се включва, тъй като писма от читатели на списъка "
 "не се разпространяват."
 
-#: forms/list_forms.py:904
+#: forms/list_forms.py:838
 msgid "Explicit reply-to address"
 msgstr "Изричен Reply-To адрес"
 
-#: forms/list_forms.py:907
+#: forms/list_forms.py:841
 msgid ""
 "This option allows admins to set an explicit Reply-to address. It is only "
 "used if the reply-to is set to use an explicitly set header"
 msgstr ""
 
-#: forms/list_forms.py:917
+#: forms/list_forms.py:851
 msgid ""
 "Should any existing Reply-To: header found in the original message be "
 "stripped? If so, this will be done regardless of whether an explict Reply-"
@@ -1079,27 +1005,27 @@ msgstr ""
 "Да се изтрие ли съществуващо Reply-To: поле от първоначалното съобщение? Ако "
 "да, това ще се случи независимо дали Reply-To: поле се добавя от Mailman."
 
-#: forms/list_forms.py:923 forms/list_forms.py:929
+#: forms/list_forms.py:857 forms/list_forms.py:863
 msgid "Reply goes to list"
 msgstr "Отговори отиват до списъка"
 
-#: forms/list_forms.py:926
+#: forms/list_forms.py:860
 msgid "Please choose a reply-to action."
 msgstr "Моля избери действие при натискане на „Отговор“."
 
-#: forms/list_forms.py:928
+#: forms/list_forms.py:862
 msgid "No Munging"
 msgstr ""
 
-#: forms/list_forms.py:930
+#: forms/list_forms.py:864
 msgid "Explicit Reply-to header set"
 msgstr "Изрично добави полето Reply-To"
 
-#: forms/list_forms.py:931
+#: forms/list_forms.py:865
 msgid "Explicit Reply-to set; no Cc added"
 msgstr "Изрично добави Reply-To поле, не добавяй CC: поле"
 
-#: forms/list_forms.py:934
+#: forms/list_forms.py:868
 msgid ""
 "Where are replies to list messages directed? No Munging is strongly "
 "recommended for most mailing lists. \n"
@@ -1127,85 +1053,165 @@ msgid ""
 "the Reply-To: address option to point to the parallel list."
 msgstr ""
 
-#: forms/list_forms.py:968
+#: forms/list_forms.py:902
 msgid "Pipeline"
 msgstr "Поточна линия"
 
-#: forms/list_forms.py:974
+#: forms/list_forms.py:908
 msgid "Type of pipeline you want to use for this mailing list"
 msgstr "Поточната линия, която искаш да използваш за този пощенски списък"
 
-#: forms/list_forms.py:984
+#: forms/list_forms.py:914
+msgid "Filter content"
+msgstr ""
+
+#: forms/list_forms.py:916
+#, fuzzy
+#| msgid ""
+#| "Should Mailman filter the content of list traffic according to the "
+#| "settings below?"
+msgid ""
+"Should Mailman filter the content of list traffic according to the settings "
+"below?\n"
+"<b>None of the settings below have any effect if this is No.</b>"
+msgstr ""
+"Да филтрира ли Mailman съдържанието до пощенския списък, съгласно "
+"настройките по-долу?"
+
+#: forms/list_forms.py:922
+msgid "Filter types"
+msgstr ""
+
+#: forms/list_forms.py:925
+msgid ""
+"MIME types to filter from the incoming posts. A list of common types can be "
+"found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
+"Basics_of_HTTP/MIME_types/Common_types\">here </a>"
+msgstr ""
+
+#: forms/list_forms.py:931
+msgid "Filter extensions"
+msgstr ""
+
+#: forms/list_forms.py:933
+msgid "Extensions to filter from the incoming posts."
+msgstr ""
+
+#: forms/list_forms.py:936
+msgid "Pass types"
+msgstr ""
+
+#: forms/list_forms.py:939
+msgid ""
+"MIME types to allow in the incoming posts. A list of common types can be "
+"found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
+"Basics_of_HTTP/MIME_types/Common_types\">here </a>"
+msgstr ""
+
+#: forms/list_forms.py:945
+msgid "Pass extensions"
+msgstr ""
+
+#: forms/list_forms.py:947
+msgid "Extensions to allow in the incoming posts."
+msgstr ""
+
+#: forms/list_forms.py:953
+msgid "Collapse alternatives"
+msgstr ""
+
+#: forms/list_forms.py:955
+msgid ""
+"Should Mailman collapse multipart/alternative to its first part content?"
+msgstr ""
+
+#: forms/list_forms.py:963
+msgid "Filter Action"
+msgstr ""
+
+#: forms/list_forms.py:970
+msgid "Convert html to plaintext"
+msgstr "Преобразувай html в чист текст"
+
+#: forms/list_forms.py:972
+msgid ""
+"Should Mailman convert text/html parts to plain text? This conversion "
+"happens after MIME attachments have been stripped."
+msgstr ""
+"Да преобразува ли Mailman html-части в чист текс? Това преобразуване ще се "
+"случи след като MIME-прикачените файлове са отстранени."
+
+#: forms/list_forms.py:985
 msgid "Respond and continue processing"
 msgstr "Отговори и продължи да обработваш писмото"
 
-#: forms/list_forms.py:985
+#: forms/list_forms.py:986
 msgid "Respond and discard message"
 msgstr "Отговори и унищожи писмото"
 
-#: forms/list_forms.py:986
+#: forms/list_forms.py:987
 msgid "No automatic response"
 msgstr "Без автоматичен отговор"
 
-#: forms/list_forms.py:991
+#: forms/list_forms.py:992
 msgid "Autorespond to list owner"
 msgstr "Автоматичен отговор на писмата до администраторите на пощенския списък"
 
-#: forms/list_forms.py:993
+#: forms/list_forms.py:994
 msgid ""
 "Should Mailman send an auto-response to emails sent to the -owner address?"
 msgstr ""
 "Да изпраща ли Mailman автоматичен отговор на електронните писма изпратени на "
 "-owner адреса?"
 
-#: forms/list_forms.py:998
+#: forms/list_forms.py:999
 msgid "Autoresponse owner text"
 msgstr ""
 
-#: forms/list_forms.py:1001
+#: forms/list_forms.py:1002
 msgid "Auto-response text to send to -owner emails."
 msgstr ""
 
-#: forms/list_forms.py:1006
+#: forms/list_forms.py:1007
 msgid "Autorespond postings"
 msgstr "Автоматичен отговор на нови писма"
 
-#: forms/list_forms.py:1008
+#: forms/list_forms.py:1009
 msgid "Should Mailman send an auto-response to mailing list posters?"
 msgstr "Да изпраща ли Mailman автоматичен отговор до подателите на писма?"
 
-#: forms/list_forms.py:1012
+#: forms/list_forms.py:1013
 msgid "Autoresponse postings text"
 msgstr ""
 
-#: forms/list_forms.py:1015
+#: forms/list_forms.py:1016
 msgid "Auto-response text to send to mailing list posters."
 msgstr "Автоматичен отговор за изпращане до подателите на нови писма."
 
-#: forms/list_forms.py:1020
+#: forms/list_forms.py:1021
 msgid "Autorespond requests"
 msgstr ""
 
-#: forms/list_forms.py:1022
+#: forms/list_forms.py:1023
 msgid ""
 "Should Mailman send an auto-response to emails sent to the -request address? "
 "If you choose yes, decide whether you want Mailman to discard the original "
 "email, or forward it on to the system as a normal mail command."
 msgstr ""
 
-#: forms/list_forms.py:1029
+#: forms/list_forms.py:1030
 msgid "Autoresponse request text"
 msgstr ""
 
-#: forms/list_forms.py:1032
+#: forms/list_forms.py:1033
 msgid "Auto-response text to send to -request emails."
 msgstr ""
 
-#: forms/list_forms.py:1035
+#: forms/list_forms.py:1036
 msgid "Autoresponse grace period"
 msgstr ""
 
-#: forms/list_forms.py:1037
+#: forms/list_forms.py:1038
 msgid ""
 "Number of days between auto-responses to either the mailing list or -"
 "request/-owner address from the same poster. Set to zero (or negative) for "
@@ -1215,11 +1221,11 @@ msgstr ""
 "request/-owner адреса от същия подател. Сложи нула (или отрицателна "
 "стойност) за да изпраща отговор на всяко отдело съобщение."
 
-#: forms/list_forms.py:1047
+#: forms/list_forms.py:1048
 msgid "Notify users of held messages"
 msgstr "Уведоми потребителите за задържани съобщения"
 
-#: forms/list_forms.py:1049
+#: forms/list_forms.py:1050
 msgid ""
 "Should Mailman notify users about their messages held for approval. If you "
 "say 'No', no notifications will be sent to users about the pending approval "
@@ -1229,11 +1235,11 @@ msgstr ""
 "Ако избереш „Не“, на подателите няма да се изпраща съобщение, че писмото им "
 "е задържано за проверка."
 
-#: forms/list_forms.py:1058 forms/list_forms.py:1285
+#: forms/list_forms.py:1059 forms/list_forms.py:1286
 msgid "Send welcome message"
 msgstr "Изпрати съобщение за добре дошъл"
 
-#: forms/list_forms.py:1060
+#: forms/list_forms.py:1061
 msgid ""
 "Send welcome message to newly subscribed members? Turn this off only if you "
 "plan on subscribing people manually and don't want them to know that you did "
@@ -1248,11 +1254,11 @@ msgstr ""
 "Съдържанието на съобщенията за добре дошъл могат да се задават от секция "
 "“Шаблони“."
 
-#: forms/list_forms.py:1072
+#: forms/list_forms.py:1073
 msgid "Send goodbye message"
 msgstr "Изпрати съобщение за довиждане"
 
-#: forms/list_forms.py:1074
+#: forms/list_forms.py:1075
 msgid ""
 "Send goodbye message to newly unsubscribed members? Turn this off only if "
 "you plan on unsubscribing people manually and don't want them to know that "
@@ -1264,11 +1270,11 @@ msgstr ""
 "правиш.\n"
 "Текстът на съобщението за довиждане може да се настрои от раздела Шаблони."
 
-#: forms/list_forms.py:1083
+#: forms/list_forms.py:1084
 msgid "Admin immed notify"
 msgstr ""
 
-#: forms/list_forms.py:1085
+#: forms/list_forms.py:1086
 msgid ""
 "Should the list moderators get immediate notice of new requests, as well as "
 "daily notices about collected ones? List moderators (and list "
@@ -1278,36 +1284,36 @@ msgid ""
 "on the arrival of new requests as well. "
 msgstr ""
 
-#: forms/list_forms.py:1097
+#: forms/list_forms.py:1098
 msgid "Notify admin of membership changes"
 msgstr "Уведоми администратора при промени с абонаментите"
 
-#: forms/list_forms.py:1099
+#: forms/list_forms.py:1100
 msgid "Should administrator get notices of subscribes and unsubscribes?"
 msgstr "Да получава ли администраторът съобщения за нови и напуснали абонати?"
 
-#: forms/list_forms.py:1106
+#: forms/list_forms.py:1107
 msgid "Not Moderated"
 msgstr "Не е модериран"
 
-#: forms/list_forms.py:1107
+#: forms/list_forms.py:1108
 msgid "Moderated but allows for open posting"
 msgstr ""
 
-#: forms/list_forms.py:1108
+#: forms/list_forms.py:1109
 msgid "Moderated"
 msgstr "Модериран"
 
-#: forms/list_forms.py:1120
+#: forms/list_forms.py:1121
 msgid "Show list on index page"
 msgstr "Включи списъка в каталога на пощенски списъци"
 
-#: forms/list_forms.py:1122
+#: forms/list_forms.py:1123
 msgid "Choose whether to include this list on the list of all lists"
 msgstr ""
 "Избери дали да включиш този пощенски списък в каталога с пощенските списъци"
 
-#: forms/list_forms.py:1129
+#: forms/list_forms.py:1130
 msgid ""
 "This description is used when the mailing list is listed with other mailing "
 "lists, or in headers, and so forth. It should be as succinct as you can get "
@@ -1317,89 +1323,89 @@ msgstr ""
 "списъци, в писмата и др. Описанието следва да е сбито, но и да описва за "
 "какво е пощенският списък."
 
-#: forms/list_forms.py:1136
+#: forms/list_forms.py:1137
 msgid "Long Description"
 msgstr "Дълго описание"
 
-#: forms/list_forms.py:1137
+#: forms/list_forms.py:1138
 msgid "A longer description of this mailing list."
 msgstr "По-дълго описание за този пощенски списък."
 
-#: forms/list_forms.py:1142
+#: forms/list_forms.py:1143
 msgid "Display name"
 msgstr "Име"
 
-#: forms/list_forms.py:1144
+#: forms/list_forms.py:1145
 msgid "Display name is the name shown in the web interface."
 msgstr "Това е името показано на интернет страницата."
 
-#: forms/list_forms.py:1147
+#: forms/list_forms.py:1148
 msgid "Subject prefix"
 msgstr "Представка за темата"
 
-#: forms/list_forms.py:1152
+#: forms/list_forms.py:1153
 msgid "Preferred Language"
 msgstr "Предпочитан език"
 
-#: forms/list_forms.py:1158
+#: forms/list_forms.py:1159
 msgid "Members List Visibility"
 msgstr "Видимост на абонатите"
 
-#: forms/list_forms.py:1163
+#: forms/list_forms.py:1164
 msgid "Who is allowed to see members list for this MailingList?"
 msgstr "Кой може да вижда членовете на пощенския списък?"
 
-#: forms/list_forms.py:1169
+#: forms/list_forms.py:1170
 msgid "Gateway to mail"
 msgstr ""
 
-#: forms/list_forms.py:1171
+#: forms/list_forms.py:1172
 msgid ""
 "Flag indicating that posts to the linked newsgroup should be gated to the "
 "list"
 msgstr ""
 
-#: forms/list_forms.py:1178
+#: forms/list_forms.py:1179
 msgid "Gateway to news"
 msgstr ""
 
-#: forms/list_forms.py:1180
+#: forms/list_forms.py:1181
 msgid ""
 "Flag indicating that posts to the list should be gated to the linked "
 "newsgroup."
 msgstr ""
 
-#: forms/list_forms.py:1185
+#: forms/list_forms.py:1186
 msgid "Linked Newsgroup"
 msgstr ""
 
-#: forms/list_forms.py:1187
+#: forms/list_forms.py:1188
 msgid "The name of the linked newsgroup."
 msgstr ""
 
-#: forms/list_forms.py:1190
+#: forms/list_forms.py:1191
 msgid "Newsgroup moderation"
 msgstr ""
 
-#: forms/list_forms.py:1195
+#: forms/list_forms.py:1196
 msgid "The moderation policy for the linked newsgroup, if there is one."
 msgstr ""
 
-#: forms/list_forms.py:1202
+#: forms/list_forms.py:1203
 msgid "NNTP Include subject prefix "
 msgstr ""
 
-#: forms/list_forms.py:1204
+#: forms/list_forms.py:1205
 msgid ""
 "Flag indicating whether the list's \"Subject Prefix\" should be included in "
 "posts gated to usenet."
 msgstr ""
 
-#: forms/list_forms.py:1220
+#: forms/list_forms.py:1221
 msgid "Emails to mass subscribe"
 msgstr "Електронни адреси за масово записване"
 
-#: forms/list_forms.py:1222
+#: forms/list_forms.py:1223
 msgid ""
 "The following formats are accepted:\n"
 "jdoe@example.com\n"
@@ -1417,43 +1423,43 @@ msgstr ""
 "jdoe@example.com (John Doe)\n"
 "Изполвай последните три валианта за се свърже име към адреса\n"
 
-#: forms/list_forms.py:1233
+#: forms/list_forms.py:1234
 msgid "Pre confirm"
 msgstr ""
 
-#: forms/list_forms.py:1237
+#: forms/list_forms.py:1238
 msgid "If checked, users will not have to confirm their subscription."
 msgstr ""
 "Ако е избрано, потребителите няма нужда да потвърждават желанието да се "
 "абонират."
 
-#: forms/list_forms.py:1243
+#: forms/list_forms.py:1244
 msgid "Pre approved"
 msgstr ""
 
-#: forms/list_forms.py:1247
+#: forms/list_forms.py:1248
 msgid ""
 "If checked, moderators will not have to approve the subscription request."
 msgstr ""
 "Ако е избрано, модераторите няма да е нужно да одобряват нови желания за "
 "включване."
 
-#: forms/list_forms.py:1254
+#: forms/list_forms.py:1255
 msgid "Pre Verified"
 msgstr ""
 
-#: forms/list_forms.py:1258
+#: forms/list_forms.py:1259
 msgid ""
 "If checked, users will not have to verify that their email address is valid."
 msgstr ""
 "Ако избрано, потребителите няма да потвърждават, че техният електронен адрес "
 "е действителен."
 
-#: forms/list_forms.py:1265
+#: forms/list_forms.py:1266
 msgid "Invitation"
 msgstr "Покана"
 
-#: forms/list_forms.py:1269
+#: forms/list_forms.py:1270
 msgid ""
 "If checked, the other checkboxes are ignored and the users will be sent an "
 "invitation to join the list and will be subscribed upon acceptance thereof."
@@ -1461,7 +1467,7 @@ msgstr ""
 "Ако е избрано, останалите кутийки се пренебрегват. Потребителите ще получат "
 "покана за абониране и ще бъдат абонирани, щом я приемат."
 
-#: forms/list_forms.py:1287
+#: forms/list_forms.py:1288
 msgid ""
 "If set to \"Yes\" or \"No\", List's default setting of send_welcome_message "
 "will be ignored for these subscribers and a welcome message will be sent or "
@@ -1471,67 +1477,67 @@ msgstr ""
 "send_welcome_message ще бъдат пренебрегнати и дали ще се изпрати съобщение "
 "за Добре дошъл зависи от избора тук."
 
-#: forms/list_forms.py:1308
+#: forms/list_forms.py:1309
 msgid "Emails to Unsubscribe"
 msgstr "Електронни адреси за отписване"
 
-#: forms/list_forms.py:1309
+#: forms/list_forms.py:1310
 msgid "Add one email address on each line"
 msgstr "Добави по един електронен адрес на всеки ред"
 
-#: forms/list_forms.py:1325
+#: forms/list_forms.py:1326
 msgid "Default antispam action"
 msgstr ""
 
-#: forms/list_forms.py:1330
+#: forms/list_forms.py:1331
 msgid "Header"
 msgstr ""
 
-#: forms/list_forms.py:1331
+#: forms/list_forms.py:1332
 msgid "Email header to filter on (case-insensitive)."
 msgstr ""
 
-#: forms/list_forms.py:1333
+#: forms/list_forms.py:1334
 msgid "Please enter a header."
 msgstr "Моля въведи поле."
 
-#: forms/list_forms.py:1334
+#: forms/list_forms.py:1335
 msgid "Please enter a valid header."
 msgstr "Моля въведи валидно поле."
 
-#: forms/list_forms.py:1338
+#: forms/list_forms.py:1339
 msgid "Pattern"
 msgstr ""
 
-#: forms/list_forms.py:1339
+#: forms/list_forms.py:1340
 msgid "Regular expression matching the header's value."
 msgstr ""
 
-#: forms/list_forms.py:1341
+#: forms/list_forms.py:1342
 msgid "Please enter a pattern."
 msgstr ""
 
-#: forms/list_forms.py:1342
+#: forms/list_forms.py:1343
 msgid "Please enter a valid pattern."
 msgstr ""
 
-#: forms/list_forms.py:1346 templates/postorius/domain/index.html:26
+#: forms/list_forms.py:1347 templates/postorius/domain/index.html:26
 msgid "Action"
 msgstr "Действие"
 
-#: forms/list_forms.py:1347
+#: forms/list_forms.py:1348
 msgid "Please enter a valid action."
 msgstr "Моля избери валидно действие."
 
-#: forms/list_forms.py:1350
+#: forms/list_forms.py:1351
 msgid "Action to take when a header matches"
 msgstr ""
 
-#: forms/list_forms.py:1385
+#: forms/list_forms.py:1386
 msgid "Select Email"
 msgstr "Избери електронен адрес"
 
-#: forms/list_forms.py:1411
+#: forms/list_forms.py:1412
 msgid "Data"
 msgstr "Данни"
 
@@ -2329,7 +2335,7 @@ msgstr ""
 #: templates/postorius/lists/memberoptions.html:20
 #: templates/postorius/lists/memberoptions.html:28
 #: templates/postorius/lists/settings.html:30
-#: templates/postorius/user/list_options.html:27
+#: templates/postorius/user/list_options.html:28
 #: templates/postorius/user/mailman_settings.html:23
 msgid "Save changes"
 msgstr "Съхрани промените"
@@ -2775,8 +2781,12 @@ msgid "Each email address can have specific Mailman preferences."
 msgstr "Всеки електронен адрес може да има собствени Mailman настройки."
 
 #: templates/postorius/user/address_preferences.html:21
+#, fuzzy
+#| msgid ""
+#| "Any options showing as not set here have inherit at runtime from your "
+#| "global preferences (viewable on other tab)"
 msgid ""
-"Any options showing as not set here have inherit at runtime from your global "
+"Any options showing as not set here inherit at runtime from your global "
 "preferences (viewable on other tab)"
 msgstr ""
 "Всяка опция, която не е зададена изрично тук, взема стойността си от "
@@ -2813,13 +2823,23 @@ msgstr ""
 msgid "Subscription options for"
 msgstr "Абонаментни настройки за"
 
-#: templates/postorius/user/list_options.html:18
+#: templates/postorius/user/list_options.html:15
+#: templates/postorius/user/subscription_preferences.html:22
+msgid ""
+"Any options showing as not set inherit at runtime from your global or "
+"address specific preferences (viewable on other tabs)"
+msgstr ""
+"Всички настройки, които не са изрично задедени, вземат стойностите си от "
+"твоите глобални настройки или настройки специфични за електронен адрес, "
+"които се виждат в другите раздели"
+
+#: templates/postorius/user/list_options.html:19
 msgid "Use this form to change the email used for this subscription"
 msgstr ""
 "Използвай формуляра, за да си смениш електронния адрес използван за "
 "получаване на писма"
 
-#: templates/postorius/user/list_options.html:22
+#: templates/postorius/user/list_options.html:23
 msgid "Change email used for subscription"
 msgstr "Промени електронния адрес за абонамент"
 
@@ -2881,15 +2901,6 @@ msgstr "Промяна на парола"
 msgid "Each list subscription can have specific Mailman preferences."
 msgstr ""
 "Всеки абонамен за пощенски списък може да има различни Mailman предпочитания."
-
-#: templates/postorius/user/subscription_preferences.html:22
-msgid ""
-"Any options showing as not set inherit at runtime from your global or "
-"address specific preferences (viewable on other tabs)"
-msgstr ""
-"Всички настройки, които не са изрично задедени, вземат стойностите си от "
-"твоите глобални настройки или настройки специфични за електронен адрес, "
-"които се виждат в другите раздели"
 
 #: templates/postorius/user/subscription_preferences.html:32
 msgid "Subscription"

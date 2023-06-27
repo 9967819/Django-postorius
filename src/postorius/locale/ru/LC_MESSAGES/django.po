@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-18 16:09+0000\n"
+"POT-Creation-Date: 2023-06-26 20:12-0700\n"
 "PO-Revision-Date: 2022-11-30 14:48+0000\n"
 "Last-Translator: Alexander Ryazanov (alryaz) <alryaz@xavux.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -182,7 +182,8 @@ msgstr ""
 msgid "Moderation"
 msgstr "Модерирование"
 
-#: forms/fields.py:190 forms/list_forms.py:1280
+#: forms/fields.py:190 forms/list_forms.py:1281
+#: templatetags/membership_helpers.py:84
 msgid "List default"
 msgstr "По умолчанию списка рассылки"
 
@@ -281,7 +282,7 @@ msgstr "Показывать рассылку в общем списке"
 msgid "Hide this list in list index"
 msgstr "Скрывать рассылку в общем списке"
 
-#: forms/list_forms.py:94 forms/list_forms.py:1126
+#: forms/list_forms.py:94 forms/list_forms.py:1127
 msgid "Short Description"
 msgstr "Краткое описание"
 
@@ -339,7 +340,7 @@ msgstr "Пожалуйста, укажите корректный адрес E-M
 msgid "Your name (optional)"
 msgstr "Ваше имя (необязательно)"
 
-#: forms/list_forms.py:198 forms/list_forms.py:1404 views/list.py:546
+#: forms/list_forms.py:198 forms/list_forms.py:1405 views/list.py:546
 msgid "Primary Address ({})"
 msgstr "Основной адрес ({})"
 
@@ -419,12 +420,12 @@ msgstr "Администратор сервиса"
 #: forms/list_forms.py:284 forms/list_forms.py:316 forms/list_forms.py:327
 #: forms/list_forms.py:338 forms/list_forms.py:467 forms/list_forms.py:477
 #: forms/list_forms.py:526 forms/list_forms.py:657 forms/list_forms.py:664
-#: forms/list_forms.py:717 forms/list_forms.py:796 forms/list_forms.py:834
-#: forms/list_forms.py:851 forms/list_forms.py:862 forms/list_forms.py:873
-#: forms/list_forms.py:893 forms/list_forms.py:913 forms/list_forms.py:1044
-#: forms/list_forms.py:1055 forms/list_forms.py:1069 forms/list_forms.py:1081
-#: forms/list_forms.py:1095 forms/list_forms.py:1118 forms/list_forms.py:1167
-#: forms/list_forms.py:1176 forms/list_forms.py:1200 forms/list_forms.py:1278
+#: forms/list_forms.py:717 forms/list_forms.py:796 forms/list_forms.py:807
+#: forms/list_forms.py:827 forms/list_forms.py:847 forms/list_forms.py:911
+#: forms/list_forms.py:950 forms/list_forms.py:967 forms/list_forms.py:1045
+#: forms/list_forms.py:1056 forms/list_forms.py:1070 forms/list_forms.py:1082
+#: forms/list_forms.py:1096 forms/list_forms.py:1119 forms/list_forms.py:1168
+#: forms/list_forms.py:1177 forms/list_forms.py:1201 forms/list_forms.py:1279
 #: forms/user_forms.py:63
 msgid "Yes"
 msgstr "Да"
@@ -432,12 +433,12 @@ msgstr "Да"
 #: forms/list_forms.py:284 forms/list_forms.py:316 forms/list_forms.py:327
 #: forms/list_forms.py:338 forms/list_forms.py:467 forms/list_forms.py:477
 #: forms/list_forms.py:526 forms/list_forms.py:657 forms/list_forms.py:664
-#: forms/list_forms.py:717 forms/list_forms.py:796 forms/list_forms.py:834
-#: forms/list_forms.py:851 forms/list_forms.py:862 forms/list_forms.py:873
-#: forms/list_forms.py:893 forms/list_forms.py:913 forms/list_forms.py:1044
-#: forms/list_forms.py:1055 forms/list_forms.py:1069 forms/list_forms.py:1081
-#: forms/list_forms.py:1095 forms/list_forms.py:1118 forms/list_forms.py:1167
-#: forms/list_forms.py:1176 forms/list_forms.py:1200 forms/list_forms.py:1279
+#: forms/list_forms.py:717 forms/list_forms.py:796 forms/list_forms.py:807
+#: forms/list_forms.py:827 forms/list_forms.py:847 forms/list_forms.py:911
+#: forms/list_forms.py:950 forms/list_forms.py:967 forms/list_forms.py:1045
+#: forms/list_forms.py:1056 forms/list_forms.py:1070 forms/list_forms.py:1082
+#: forms/list_forms.py:1096 forms/list_forms.py:1119 forms/list_forms.py:1168
+#: forms/list_forms.py:1177 forms/list_forms.py:1201 forms/list_forms.py:1280
 #: forms/user_forms.py:63
 msgid "No"
 msgstr "Нет"
@@ -958,7 +959,7 @@ msgstr ""
 
 #: forms/list_forms.py:749 templates/postorius/lists/summary.html:146
 #: templates/postorius/lists/summary.html:155
-#: templatetags/membership_helpers.py:78 templatetags/membership_helpers.py:84
+#: templatetags/membership_helpers.py:78
 msgid "None"
 msgstr "Нет"
 
@@ -1024,97 +1025,10 @@ msgid "Personalize"
 msgstr "Персонализация"
 
 #: forms/list_forms.py:799
-msgid "Filter content"
-msgstr "Фильтрация содержимого"
-
-#: forms/list_forms.py:801
-msgid ""
-"Should Mailman filter the content of list traffic according to the settings "
-"below?"
-msgstr ""
-"Должна ли выполняться фильтрация содержимого сообщений в соответствии с "
-"правилами ниже?"
-
-#: forms/list_forms.py:806
-msgid "Filter types"
-msgstr "Удалять MIME-типы"
-
-#: forms/list_forms.py:809
-msgid ""
-"MIME types to filter from the incoming posts. A list of common types can be "
-"found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
-"Basics_of_HTTP/MIME_types/Common_types\">here </a>"
-msgstr ""
-"Удалять части/вложения, соответствующие указанным типам MIME. Список обычно "
-"используемых типов MIME можно найти <a href=\"https://developer.mozilla.org/"
-"en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types\">здесь </a>"
-
-#: forms/list_forms.py:815
-msgid "Filter extensions"
-msgstr "Удалять расширения"
-
-#: forms/list_forms.py:817
-msgid "Extensions to filter from the incoming posts."
-msgstr ""
-"Удалять из сообщений вложения, имеющие указанные расширения (суффиксы) "
-"файлов."
-
-#: forms/list_forms.py:820
-msgid "Pass types"
-msgstr "Пропускать MIME-типы"
-
-#: forms/list_forms.py:823
-msgid ""
-"MIME types to allow in the incoming posts. A list of common types can be "
-"found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
-"Basics_of_HTTP/MIME_types/Common_types\">here </a>"
-msgstr ""
-"Разрешённые MIME-типы для частей/вложений. Список обычно используемых типов "
-"MIME можно найти <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
-"Basics_of_HTTP/MIME_types/Common_types\">здесь </a>"
-
-#: forms/list_forms.py:829
-msgid "Pass extensions"
-msgstr "Пропускать расширения"
-
-#: forms/list_forms.py:831
-msgid "Extensions to allow in the incoming posts."
-msgstr ""
-"Сохранять в сообщениях вложения, имеющие указанные расширения (суффиксы) "
-"файлов. Оставьте список пустым, чтоб пропустить эту проверку."
-
-#: forms/list_forms.py:837
-msgid "Collapse alternatives"
-msgstr "Сжимать multipart/alternative"
-
-#: forms/list_forms.py:839
-msgid ""
-"Should Mailman collapse multipart/alternative to its first part content?"
-msgstr ""
-"Следует ли удалять части multipart/alternative, кроме содержимого первой "
-"части?"
-
-#: forms/list_forms.py:847
-msgid "Filter Action"
-msgstr "Действие после фильтрации содержимого"
-
-#: forms/list_forms.py:854
-msgid "Convert html to plaintext"
-msgstr "Преобразовать html в обычный текст"
-
-#: forms/list_forms.py:856
-msgid ""
-"Should Mailman convert text/html parts to plain text? This conversion "
-"happens after MIME attachments have been stripped."
-msgstr ""
-"Следует ли преобразовать части text/html в обычный текст? Преобразование "
-"выполняется после удаления MIME-вложений."
-
-#: forms/list_forms.py:865
 msgid "Anonymous list"
 msgstr "Анонимизировать участников"
 
-#: forms/list_forms.py:867
+#: forms/list_forms.py:801
 msgid ""
 "Hide the sender of a message, replacing it with the list address (Removes "
 "From, Sender and Reply-To fields)"
@@ -1122,11 +1036,11 @@ msgstr ""
 "Скрывать отправителя, заменяя его адресом списка рассылки (Скрывает "
 "заголовки From, Sender и Reply-To)"
 
-#: forms/list_forms.py:876
+#: forms/list_forms.py:810
 msgid "Include RFC2369 headers"
 msgstr "Включать заголовки RFC2369"
 
-#: forms/list_forms.py:878
+#: forms/list_forms.py:812
 msgid ""
 "Yes is highly recommended. RFC 2369 defines a set of List-* headers that are "
 "normally added to every message sent to the list membership. These greatly "
@@ -1147,11 +1061,11 @@ msgstr ""
 "подписчиков, касающихся строк вида List-*, можно выключить добавление этих "
 "заголовков. Но лучше все же так не делать..."
 
-#: forms/list_forms.py:896
+#: forms/list_forms.py:830
 msgid "Include the list post header"
 msgstr "Включать заголовок List-Post"
 
-#: forms/list_forms.py:898
+#: forms/list_forms.py:832
 msgid ""
 "This can be set to no for announce lists that do not wish to include the "
 "List-Post header because posting to the list is discouraged."
@@ -1160,11 +1074,11 @@ msgstr ""
 "рассылки. Можно выключить для рассылок типа анонса, куда отправка "
 "подписчиками сообщений ограничена."
 
-#: forms/list_forms.py:904
+#: forms/list_forms.py:838
 msgid "Explicit reply-to address"
 msgstr "Адрес для ответа"
 
-#: forms/list_forms.py:907
+#: forms/list_forms.py:841
 msgid ""
 "This option allows admins to set an explicit Reply-to address. It is only "
 "used if the reply-to is set to use an explicitly set header"
@@ -1172,7 +1086,7 @@ msgstr ""
 "Параметр позволяет указать адрес ответа посредством заголовка Reply-To. "
 "Используется, только если ниже выбрана опция использовать явный адрес ответа"
 
-#: forms/list_forms.py:917
+#: forms/list_forms.py:851
 msgid ""
 "Should any existing Reply-To: header found in the original message be "
 "stripped? If so, this will be done regardless of whether an explict Reply-"
@@ -1181,28 +1095,28 @@ msgstr ""
 "Задает, должен ли из исходного сообщения удаляться заголовок Reply-To: "
 "(адреса для ответа)."
 
-#: forms/list_forms.py:923 forms/list_forms.py:929
+#: forms/list_forms.py:857 forms/list_forms.py:863
 msgid "Reply goes to list"
 msgstr "Направлять ответы в рассылку"
 
-#: forms/list_forms.py:926
+#: forms/list_forms.py:860
 msgid "Please choose a reply-to action."
 msgstr "Пожалуйста, выберите действие для установки адреса ответа."
 
-#: forms/list_forms.py:928
+#: forms/list_forms.py:862
 msgid "No Munging"
 msgstr "Не изменять адрес ответа"
 
-#: forms/list_forms.py:930
+#: forms/list_forms.py:864
 msgid "Explicit Reply-to header set"
 msgstr "Явно указать адрес для ответа"
 
-#: forms/list_forms.py:931
+#: forms/list_forms.py:865
 #, fuzzy
 msgid "Explicit Reply-to set; no Cc added"
 msgstr "Явно указать адрес для ответа; не добавлять адреса в копию"
 
-#: forms/list_forms.py:934
+#: forms/list_forms.py:868
 msgid ""
 "Where are replies to list messages directed? No Munging is strongly "
 "recommended for most mailing lists. \n"
@@ -1250,72 +1164,164 @@ msgstr ""
 "их обсуждение. Тогда в сообщениях из первой рассылки полезно указать, что "
 "отвечать нужно во вторую рассылку."
 
-#: forms/list_forms.py:968
+#: forms/list_forms.py:902
 #, fuzzy
 msgid "Pipeline"
 msgstr "Порядок обработки сообщений"
 
-#: forms/list_forms.py:974
+#: forms/list_forms.py:908
 msgid "Type of pipeline you want to use for this mailing list"
 msgstr "Тип обработки сообщений для использования в этой рассылке"
 
-#: forms/list_forms.py:984
+#: forms/list_forms.py:914
+msgid "Filter content"
+msgstr "Фильтрация содержимого"
+
+#: forms/list_forms.py:916
+#, fuzzy
+#| msgid ""
+#| "Should Mailman filter the content of list traffic according to the "
+#| "settings below?"
+msgid ""
+"Should Mailman filter the content of list traffic according to the settings "
+"below?\n"
+"<b>None of the settings below have any effect if this is No.</b>"
+msgstr ""
+"Должна ли выполняться фильтрация содержимого сообщений в соответствии с "
+"правилами ниже?"
+
+#: forms/list_forms.py:922
+msgid "Filter types"
+msgstr "Удалять MIME-типы"
+
+#: forms/list_forms.py:925
+msgid ""
+"MIME types to filter from the incoming posts. A list of common types can be "
+"found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
+"Basics_of_HTTP/MIME_types/Common_types\">here </a>"
+msgstr ""
+"Удалять части/вложения, соответствующие указанным типам MIME. Список обычно "
+"используемых типов MIME можно найти <a href=\"https://developer.mozilla.org/"
+"en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types\">здесь </a>"
+
+#: forms/list_forms.py:931
+msgid "Filter extensions"
+msgstr "Удалять расширения"
+
+#: forms/list_forms.py:933
+msgid "Extensions to filter from the incoming posts."
+msgstr ""
+"Удалять из сообщений вложения, имеющие указанные расширения (суффиксы) "
+"файлов."
+
+#: forms/list_forms.py:936
+msgid "Pass types"
+msgstr "Пропускать MIME-типы"
+
+#: forms/list_forms.py:939
+msgid ""
+"MIME types to allow in the incoming posts. A list of common types can be "
+"found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
+"Basics_of_HTTP/MIME_types/Common_types\">here </a>"
+msgstr ""
+"Разрешённые MIME-типы для частей/вложений. Список обычно используемых типов "
+"MIME можно найти <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
+"Basics_of_HTTP/MIME_types/Common_types\">здесь </a>"
+
+#: forms/list_forms.py:945
+msgid "Pass extensions"
+msgstr "Пропускать расширения"
+
+#: forms/list_forms.py:947
+msgid "Extensions to allow in the incoming posts."
+msgstr ""
+"Сохранять в сообщениях вложения, имеющие указанные расширения (суффиксы) "
+"файлов. Оставьте список пустым, чтоб пропустить эту проверку."
+
+#: forms/list_forms.py:953
+msgid "Collapse alternatives"
+msgstr "Сжимать multipart/alternative"
+
+#: forms/list_forms.py:955
+msgid ""
+"Should Mailman collapse multipart/alternative to its first part content?"
+msgstr ""
+"Следует ли удалять части multipart/alternative, кроме содержимого первой "
+"части?"
+
+#: forms/list_forms.py:963
+msgid "Filter Action"
+msgstr "Действие после фильтрации содержимого"
+
+#: forms/list_forms.py:970
+msgid "Convert html to plaintext"
+msgstr "Преобразовать html в обычный текст"
+
+#: forms/list_forms.py:972
+msgid ""
+"Should Mailman convert text/html parts to plain text? This conversion "
+"happens after MIME attachments have been stripped."
+msgstr ""
+"Следует ли преобразовать части text/html в обычный текст? Преобразование "
+"выполняется после удаления MIME-вложений."
+
+#: forms/list_forms.py:985
 msgid "Respond and continue processing"
 msgstr "Ответить и продолжить обработку"
 
-#: forms/list_forms.py:985
+#: forms/list_forms.py:986
 msgid "Respond and discard message"
 msgstr "Ответить и удалить сообщение"
 
-#: forms/list_forms.py:986
+#: forms/list_forms.py:987
 msgid "No automatic response"
 msgstr "Нет автоответа"
 
-#: forms/list_forms.py:991
+#: forms/list_forms.py:992
 msgid "Autorespond to list owner"
 msgstr "Автоответ на письма владельцу рассылки"
 
-#: forms/list_forms.py:993
+#: forms/list_forms.py:994
 msgid ""
 "Should Mailman send an auto-response to emails sent to the -owner address?"
 msgstr ""
 "Должен ли Mailman отправлять автоматический ответ на сообщения, отправленные "
 "на адрес владельца рассылки (-owner)?"
 
-#: forms/list_forms.py:998
+#: forms/list_forms.py:999
 msgid "Autoresponse owner text"
 msgstr "Текст автоответа владельца"
 
-#: forms/list_forms.py:1001
+#: forms/list_forms.py:1002
 msgid "Auto-response text to send to -owner emails."
 msgstr ""
 "Текст автоматического ответа на сообщения, отправленные на адрес владельца "
 "рассылки."
 
-#: forms/list_forms.py:1006
+#: forms/list_forms.py:1007
 msgid "Autorespond postings"
 msgstr "Автоответ на сообщения в рассылку"
 
-#: forms/list_forms.py:1008
+#: forms/list_forms.py:1009
 msgid "Should Mailman send an auto-response to mailing list posters?"
 msgstr ""
 "Должен ли Mailman отправлять автоматический ответ на сообщения, присланные в "
 "рассылку?"
 
-#: forms/list_forms.py:1012
+#: forms/list_forms.py:1013
 msgid "Autoresponse postings text"
 msgstr "Текст автоответа на входящие сообщения"
 
-#: forms/list_forms.py:1015
+#: forms/list_forms.py:1016
 msgid "Auto-response text to send to mailing list posters."
 msgstr ""
 "Текст автоматического ответа на сообщения, отправленные на адрес рассылки."
 
-#: forms/list_forms.py:1020
+#: forms/list_forms.py:1021
 msgid "Autorespond requests"
 msgstr "Автоответ на запросы"
 
-#: forms/list_forms.py:1022
+#: forms/list_forms.py:1023
 msgid ""
 "Should Mailman send an auto-response to emails sent to the -request address? "
 "If you choose yes, decide whether you want Mailman to discard the original "
@@ -1325,21 +1331,21 @@ msgstr ""
 "request)? Если автоответ нужен, выберите, следует ли удалить исходный "
 "запрос, или же обработать его, как обычно."
 
-#: forms/list_forms.py:1029
+#: forms/list_forms.py:1030
 msgid "Autoresponse request text"
 msgstr "Текст автоответа на запрос"
 
-#: forms/list_forms.py:1032
+#: forms/list_forms.py:1033
 msgid "Auto-response text to send to -request emails."
 msgstr ""
 "Текст автоматического ответа на сообщения, отправленные на адрес запроса (-"
 "request)."
 
-#: forms/list_forms.py:1035
+#: forms/list_forms.py:1036
 msgid "Autoresponse grace period"
 msgstr "Период автоответов"
 
-#: forms/list_forms.py:1037
+#: forms/list_forms.py:1038
 msgid ""
 "Number of days between auto-responses to either the mailing list or -"
 "request/-owner address from the same poster. Set to zero (or negative) for "
@@ -1349,11 +1355,11 @@ msgstr ""
 "отправителя. Укажите 0 или отрицательное число, чтобы отправлять ответ на "
 "каждое сообщение."
 
-#: forms/list_forms.py:1047
+#: forms/list_forms.py:1048
 msgid "Notify users of held messages"
 msgstr "Уведомлять пользователей о задержанных сообщениях"
 
-#: forms/list_forms.py:1049
+#: forms/list_forms.py:1050
 msgid ""
 "Should Mailman notify users about their messages held for approval. If you "
 "say 'No', no notifications will be sent to users about the pending approval "
@@ -1363,11 +1369,11 @@ msgstr ""
 "решения модератора. Если отключить данную опцию, уведомления о задержке по "
 "причине потребности в модерации не будут рассылаться."
 
-#: forms/list_forms.py:1058 forms/list_forms.py:1285
+#: forms/list_forms.py:1059 forms/list_forms.py:1286
 msgid "Send welcome message"
 msgstr "Отправлять приветственное сообщение"
 
-#: forms/list_forms.py:1060
+#: forms/list_forms.py:1061
 msgid ""
 "Send welcome message to newly subscribed members? Turn this off only if you "
 "plan on subscribing people manually and don't want them to know that you did "
@@ -1381,11 +1387,11 @@ msgstr ""
 "из другого ПО.\n"
 "Текст сообщения можно задать во вкладке \"шаблоны\"."
 
-#: forms/list_forms.py:1072
+#: forms/list_forms.py:1073
 msgid "Send goodbye message"
 msgstr "Отправлять заключительное сообщение"
 
-#: forms/list_forms.py:1074
+#: forms/list_forms.py:1075
 msgid ""
 "Send goodbye message to newly unsubscribed members? Turn this off only if "
 "you plan on unsubscribing people manually and don't want them to know that "
@@ -1397,11 +1403,11 @@ msgstr ""
 "хотите их уведомлять об этом.\n"
 "Текст сообщения можно задать во вкладке \"шаблоны\"."
 
-#: forms/list_forms.py:1083
+#: forms/list_forms.py:1084
 msgid "Admin immed notify"
 msgstr "Немедленное уведомление модераторов"
 
-#: forms/list_forms.py:1085
+#: forms/list_forms.py:1086
 msgid ""
 "Should the list moderators get immediate notice of new requests, as well as "
 "daily notices about collected ones? List moderators (and list "
@@ -1415,126 +1421,126 @@ msgstr ""
 "удержанных для проверки и т.п. Следует ли немедленно извещать модераторов "
 "рассылки о новых запросах, сразу как они появляются? "
 
-#: forms/list_forms.py:1097
+#: forms/list_forms.py:1098
 msgid "Notify admin of membership changes"
 msgstr "Уведомлять администратора об изменении членства"
 
-#: forms/list_forms.py:1099
+#: forms/list_forms.py:1100
 msgid "Should administrator get notices of subscribes and unsubscribes?"
 msgstr ""
 "Должен ли администратор получать уведомления о подписках и отписках "
 "пользователей?"
 
-#: forms/list_forms.py:1106
+#: forms/list_forms.py:1107
 msgid "Not Moderated"
 msgstr "Немодерируемая"
 
-#: forms/list_forms.py:1107
+#: forms/list_forms.py:1108
 msgid "Moderated but allows for open posting"
 msgstr "Модерируемая, но открытая для публикаций"
 
-#: forms/list_forms.py:1108
+#: forms/list_forms.py:1109
 msgid "Moderated"
 msgstr "Модерируемая"
 
-#: forms/list_forms.py:1120
+#: forms/list_forms.py:1121
 msgid "Show list on index page"
 msgstr "Показывать рассылку в общем списке"
 
-#: forms/list_forms.py:1122
+#: forms/list_forms.py:1123
 msgid "Choose whether to include this list on the list of all lists"
 msgstr "Показывать рассылку в перечне всех рассылок"
 
-#: forms/list_forms.py:1129
+#: forms/list_forms.py:1130
 msgid ""
 "This description is used when the mailing list is listed with other mailing "
 "lists, or in headers, and so forth. It should be as succinct as you can get "
 "it, while still identifying what the list is."
 msgstr ""
 
-#: forms/list_forms.py:1136
+#: forms/list_forms.py:1137
 msgid "Long Description"
 msgstr "Полное описание"
 
-#: forms/list_forms.py:1137
+#: forms/list_forms.py:1138
 msgid "A longer description of this mailing list."
 msgstr "Более подробное описание списка рассылки."
 
-#: forms/list_forms.py:1142
+#: forms/list_forms.py:1143
 msgid "Display name"
 msgstr "Отображаемое имя"
 
-#: forms/list_forms.py:1144
+#: forms/list_forms.py:1145
 msgid "Display name is the name shown in the web interface."
 msgstr "Название, отображаемое на веб-страницах."
 
-#: forms/list_forms.py:1147
+#: forms/list_forms.py:1148
 msgid "Subject prefix"
 msgstr "Префикс темы письма"
 
-#: forms/list_forms.py:1152
+#: forms/list_forms.py:1153
 msgid "Preferred Language"
 msgstr "Предпочитаемый язык"
 
-#: forms/list_forms.py:1158
+#: forms/list_forms.py:1159
 msgid "Members List Visibility"
 msgstr "Видимость списка участников"
 
-#: forms/list_forms.py:1163
+#: forms/list_forms.py:1164
 msgid "Who is allowed to see members list for this MailingList?"
 msgstr "Кому разрешено просматривать участников этого списка рассылки?"
 
-#: forms/list_forms.py:1169
+#: forms/list_forms.py:1170
 msgid "Gateway to mail"
 msgstr "Шлюз к почте"
 
-#: forms/list_forms.py:1171
+#: forms/list_forms.py:1172
 msgid ""
 "Flag indicating that posts to the linked newsgroup should be gated to the "
 "list"
 msgstr ""
 
-#: forms/list_forms.py:1178
+#: forms/list_forms.py:1179
 msgid "Gateway to news"
 msgstr "Шлюз к новостям"
 
-#: forms/list_forms.py:1180
+#: forms/list_forms.py:1181
 msgid ""
 "Flag indicating that posts to the list should be gated to the linked "
 "newsgroup."
 msgstr ""
 
-#: forms/list_forms.py:1185
+#: forms/list_forms.py:1186
 msgid "Linked Newsgroup"
 msgstr "Связанная новостная группа"
 
-#: forms/list_forms.py:1187
+#: forms/list_forms.py:1188
 msgid "The name of the linked newsgroup."
 msgstr "Название связанной новостной группы."
 
-#: forms/list_forms.py:1190
+#: forms/list_forms.py:1191
 msgid "Newsgroup moderation"
 msgstr "Модерация новостной группы"
 
-#: forms/list_forms.py:1195
+#: forms/list_forms.py:1196
 msgid "The moderation policy for the linked newsgroup, if there is one."
 msgstr "Политика модерации новостной группы, если таковая существует."
 
-#: forms/list_forms.py:1202
+#: forms/list_forms.py:1203
 msgid "NNTP Include subject prefix "
 msgstr ""
 
-#: forms/list_forms.py:1204
+#: forms/list_forms.py:1205
 msgid ""
 "Flag indicating whether the list's \"Subject Prefix\" should be included in "
 "posts gated to usenet."
 msgstr ""
 
-#: forms/list_forms.py:1220
+#: forms/list_forms.py:1221
 msgid "Emails to mass subscribe"
 msgstr "Адреса для массовой отписки"
 
-#: forms/list_forms.py:1222
+#: forms/list_forms.py:1223
 msgid ""
 "The following formats are accepted:\n"
 "jdoe@example.com\n"
@@ -1552,111 +1558,111 @@ msgstr ""
 "iivanov@example.ru (Ivan Ivanov)\n"
 "Используйте один из последних трёх для уточнения отображаемого имени\n"
 
-#: forms/list_forms.py:1233
+#: forms/list_forms.py:1234
 msgid "Pre confirm"
 msgstr "Подтвердить автоматически"
 
-#: forms/list_forms.py:1237
+#: forms/list_forms.py:1238
 msgid "If checked, users will not have to confirm their subscription."
 msgstr "Если отмечено, пользователям не потребуется подтверждать их подписку."
 
-#: forms/list_forms.py:1243
+#: forms/list_forms.py:1244
 msgid "Pre approved"
 msgstr "Без одобрения"
 
-#: forms/list_forms.py:1247
+#: forms/list_forms.py:1248
 msgid ""
 "If checked, moderators will not have to approve the subscription request."
 msgstr "Если отмечено, подписка не потребует подтверждения модератором."
 
-#: forms/list_forms.py:1254
+#: forms/list_forms.py:1255
 msgid "Pre Verified"
 msgstr "Без подтверждения адреса"
 
-#: forms/list_forms.py:1258
+#: forms/list_forms.py:1259
 msgid ""
 "If checked, users will not have to verify that their email address is valid."
 msgstr ""
 "Если отмечено, пользователям не потребуется подтверждать свой почтовый адрес."
 
-#: forms/list_forms.py:1265
+#: forms/list_forms.py:1266
 msgid "Invitation"
 msgstr "Приглашение"
 
-#: forms/list_forms.py:1269
+#: forms/list_forms.py:1270
 msgid ""
 "If checked, the other checkboxes are ignored and the users will be sent an "
 "invitation to join the list and will be subscribed upon acceptance thereof."
 msgstr ""
 
-#: forms/list_forms.py:1287
+#: forms/list_forms.py:1288
 msgid ""
 "If set to \"Yes\" or \"No\", List's default setting of send_welcome_message "
 "will be ignored for these subscribers and a welcome message will be sent or "
 "not sent based on the choice."
 msgstr ""
 
-#: forms/list_forms.py:1308
+#: forms/list_forms.py:1309
 msgid "Emails to Unsubscribe"
 msgstr "Адреса для отписки"
 
-#: forms/list_forms.py:1309
+#: forms/list_forms.py:1310
 msgid "Add one email address on each line"
 msgstr "Добавляйте адреса по одному на строку"
 
-#: forms/list_forms.py:1325
+#: forms/list_forms.py:1326
 msgid "Default antispam action"
 msgstr "Действие антиспама по умолчанию"
 
-#: forms/list_forms.py:1330
+#: forms/list_forms.py:1331
 msgid "Header"
 msgstr "Заголовок"
 
-#: forms/list_forms.py:1331
+#: forms/list_forms.py:1332
 msgid "Email header to filter on (case-insensitive)."
 msgstr "Заголовок для фильтрации (ввод с учётом регистра)."
 
-#: forms/list_forms.py:1333
+#: forms/list_forms.py:1334
 msgid "Please enter a header."
 msgstr "Введите заголовок."
 
-#: forms/list_forms.py:1334
+#: forms/list_forms.py:1335
 msgid "Please enter a valid header."
 msgstr "Пожалуйста, введите корректный заголовок."
 
-#: forms/list_forms.py:1338
+#: forms/list_forms.py:1339
 msgid "Pattern"
 msgstr "Шаблон"
 
-#: forms/list_forms.py:1339
+#: forms/list_forms.py:1340
 msgid "Regular expression matching the header's value."
 msgstr "Регулярное выражения для поиска совпадений в значении заголовка."
 
-#: forms/list_forms.py:1341
+#: forms/list_forms.py:1342
 msgid "Please enter a pattern."
 msgstr "Введите шаблон."
 
-#: forms/list_forms.py:1342
+#: forms/list_forms.py:1343
 msgid "Please enter a valid pattern."
 msgstr "Пожалуйста, введите корректный шаблон."
 
-#: forms/list_forms.py:1346 templates/postorius/domain/index.html:26
+#: forms/list_forms.py:1347 templates/postorius/domain/index.html:26
 msgid "Action"
 msgstr "Действие"
 
-#: forms/list_forms.py:1347
+#: forms/list_forms.py:1348
 msgid "Please enter a valid action."
 msgstr "Введите исправное действие."
 
-#: forms/list_forms.py:1350
+#: forms/list_forms.py:1351
 msgid "Action to take when a header matches"
 msgstr "Действие по совпадению заголовка"
 
-#: forms/list_forms.py:1385
+#: forms/list_forms.py:1386
 msgid "Select Email"
 msgstr "Выберите адрес электронной почты"
 
-#: forms/list_forms.py:1411
+#: forms/list_forms.py:1412
 msgid "Data"
 msgstr "Данные"
 
@@ -2383,7 +2389,7 @@ msgstr "Фильтры заголовков"
 #: templates/postorius/lists/memberoptions.html:20
 #: templates/postorius/lists/memberoptions.html:28
 #: templates/postorius/lists/settings.html:30
-#: templates/postorius/user/list_options.html:27
+#: templates/postorius/user/list_options.html:28
 #: templates/postorius/user/mailman_settings.html:23
 msgid "Save changes"
 msgstr "Сохранить изменения"
@@ -2794,7 +2800,7 @@ msgstr ""
 
 #: templates/postorius/user/address_preferences.html:21
 msgid ""
-"Any options showing as not set here have inherit at runtime from your global "
+"Any options showing as not set here inherit at runtime from your global "
 "preferences (viewable on other tab)"
 msgstr ""
 
@@ -2829,12 +2835,19 @@ msgstr ""
 msgid "Subscription options for"
 msgstr "Опции подписки для"
 
-#: templates/postorius/user/list_options.html:18
+#: templates/postorius/user/list_options.html:15
+#: templates/postorius/user/subscription_preferences.html:22
+msgid ""
+"Any options showing as not set inherit at runtime from your global or "
+"address specific preferences (viewable on other tabs)"
+msgstr ""
+
+#: templates/postorius/user/list_options.html:19
 msgid "Use this form to change the email used for this subscription"
 msgstr ""
 "Используйте данную форму, чтобы изменить адрес, используемый для подписки"
 
-#: templates/postorius/user/list_options.html:22
+#: templates/postorius/user/list_options.html:23
 msgid "Change email used for subscription"
 msgstr "Изменить адрес, используемый для подписки"
 
@@ -2896,12 +2909,6 @@ msgstr "Изменить пароль"
 
 #: templates/postorius/user/subscription_preferences.html:21
 msgid "Each list subscription can have specific Mailman preferences."
-msgstr ""
-
-#: templates/postorius/user/subscription_preferences.html:22
-msgid ""
-"Any options showing as not set inherit at runtime from your global or "
-"address specific preferences (viewable on other tabs)"
 msgstr ""
 
 #: templates/postorius/user/subscription_preferences.html:32
