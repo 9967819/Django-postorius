@@ -792,72 +792,6 @@ class AlterMessagesForm(ListSettingsForm):
         label=_('Personalize'),
         help_text=PERSONALIZATION_CHOICES_HELP,
     )
-    filter_content = forms.ChoiceField(
-        choices=((True, _('Yes')), (False, _('No'))),
-        widget=forms.RadioSelect,
-        required=False,
-        label=_('Filter content'),
-        help_text=_(
-            'Should Mailman filter the content of list traffic '
-            'according to the settings below?'
-        ),
-    )
-    filter_types = ListOfStringsField(
-        label=_('Filter types'),
-        required=False,
-        help_text=_(
-            'MIME types to filter from the incoming posts. A list of common '
-            'types can be found '
-            '<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">here </a>'  # noqa# E501
-        ),
-    )
-    filter_extensions = ListOfStringsField(
-        label=_('Filter extensions'),
-        required=False,
-        help_text=_('Extensions to filter from the incoming posts.'),
-    )
-    pass_types = ListOfStringsField(
-        label=_('Pass types'),
-        required=False,
-        help_text=_(
-            'MIME types to allow in the incoming posts. A list of common '
-            'types can be found '
-            '<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">here </a>'  # noqa# E501
-        ),
-    )
-    pass_extensions = ListOfStringsField(
-        label=_('Pass extensions'),
-        required=False,
-        help_text=_('Extensions to allow in the incoming posts.'),
-    )
-    collapse_alternatives = forms.ChoiceField(
-        choices=((True, _('Yes')), (False, _('No'))),
-        widget=forms.RadioSelect,
-        required=False,
-        label=_('Collapse alternatives'),
-        help_text=_(
-            'Should Mailman collapse multipart/alternative to '
-            'its first part content?'
-        ),
-    )
-    filter_action = forms.ChoiceField(
-        choices=FILTER_ACTION_CHOICES,
-        widget=forms.RadioSelect,
-        required=False,
-        label=_('Filter Action'),
-        help_text=FILTER_ACTION_HELP,
-    )
-    convert_html_to_plaintext = forms.ChoiceField(
-        choices=((True, _('Yes')), (False, _('No'))),
-        widget=forms.RadioSelect,
-        required=False,
-        label=_('Convert html to plaintext'),
-        help_text=_(
-            'Should Mailman convert text/html parts to plain text? '
-            'This conversion happens after MIME attachments '
-            'have been stripped.'
-        ),
-    )
     anonymous_list = forms.ChoiceField(
         choices=((True, _('Yes')), (False, _('No'))),
         widget=forms.RadioSelect,
@@ -972,6 +906,73 @@ class AlterMessagesForm(ListSettingsForm):
             (p, p) for p in get_mailman_client().pipelines['pipelines']
         ),
         help_text=_('Type of pipeline you want to use for this mailing list'),
+    )
+    filter_content = forms.ChoiceField(
+        choices=((True, _('Yes')), (False, _('No'))),
+        widget=forms.RadioSelect,
+        required=False,
+        label=_('Filter content'),
+        help_text=_(
+            'Should Mailman filter the content of list traffic '
+            'according to the settings below?\n'
+            '<b>None of the settings below have any effect if this is No.</b>'
+        ),
+    )
+    filter_types = ListOfStringsField(
+        label=_('Filter types'),
+        required=False,
+        help_text=_(
+            'MIME types to filter from the incoming posts. A list of common '
+            'types can be found '
+            '<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">here </a>'  # noqa# E501
+        ),
+    )
+    filter_extensions = ListOfStringsField(
+        label=_('Filter extensions'),
+        required=False,
+        help_text=_('Extensions to filter from the incoming posts.'),
+    )
+    pass_types = ListOfStringsField(
+        label=_('Pass types'),
+        required=False,
+        help_text=_(
+            'MIME types to allow in the incoming posts. A list of common '
+            'types can be found '
+            '<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">here </a>'  # noqa# E501
+        ),
+    )
+    pass_extensions = ListOfStringsField(
+        label=_('Pass extensions'),
+        required=False,
+        help_text=_('Extensions to allow in the incoming posts.'),
+    )
+    collapse_alternatives = forms.ChoiceField(
+        choices=((True, _('Yes')), (False, _('No'))),
+        widget=forms.RadioSelect,
+        required=False,
+        label=_('Collapse alternatives'),
+        help_text=_(
+            'Should Mailman collapse multipart/alternative to '
+            'its first part content?'
+        ),
+    )
+    filter_action = forms.ChoiceField(
+        choices=FILTER_ACTION_CHOICES,
+        widget=forms.RadioSelect,
+        required=False,
+        label=_('Filter Action'),
+        help_text=FILTER_ACTION_HELP,
+    )
+    convert_html_to_plaintext = forms.ChoiceField(
+        choices=((True, _('Yes')), (False, _('No'))),
+        widget=forms.RadioSelect,
+        required=False,
+        label=_('Convert html to plaintext'),
+        help_text=_(
+            'Should Mailman convert text/html parts to plain text? '
+            'This conversion happens after MIME attachments '
+            'have been stripped.'
+        ),
     )
 
 

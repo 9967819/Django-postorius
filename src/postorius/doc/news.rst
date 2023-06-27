@@ -37,6 +37,8 @@ UI
 * Changed 'Login'/'Logout' to 'Sign In'/'Sign Out' for better
   consistency between Postorius and HyperKitty. (Fixes #542)
 * Display Moderation Action None as List default in members view.  (Fixes #577)
+* Clarified which settings on the Alter Messages view depend on Filter content.
+  (Closes #584)
 
 A11y
 ----
