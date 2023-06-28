@@ -4,21 +4,22 @@
 # AtaZh <ipomoea@hilarious.com>, 2021.
 # Sergii Horichenko <m@sgg.im>, 2022, 2023.
 # Artem <artem@molotov.work>, 2022.
+# Serhii Horichenko <m@sgg.im>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-26 20:12-0700\n"
-"PO-Revision-Date: 2023-06-20 04:55+0000\n"
-"Last-Translator: Sergii Horichenko <m@sgg.im>\n"
+"PO-Revision-Date: 2023-06-28 18:52+0000\n"
+"Last-Translator: Serhii Horichenko <m@sgg.im>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.18.1\n"
 
 #: forms/domain_forms.py:34
@@ -1168,17 +1169,14 @@ msgid "Filter content"
 msgstr "Фільтри змісту"
 
 #: forms/list_forms.py:916
-#, fuzzy
-#| msgid ""
-#| "Should Mailman filter the content of list traffic according to the "
-#| "settings below?"
 msgid ""
 "Should Mailman filter the content of list traffic according to the settings "
 "below?\n"
 "<b>None of the settings below have any effect if this is No.</b>"
 msgstr ""
 "Чи повинен Mailman фільтрувати зміст повідомлень відповідно до таких "
-"налаштувань?"
+"налаштувань?\n"
+"<b>Якщо Ні, жоден з наведених нижче параметрів не матиме жодного ефекту.</b>"
 
 #: forms/list_forms.py:922
 msgid "Filter types"
@@ -2888,16 +2886,12 @@ msgid "Each email address can have specific Mailman preferences."
 msgstr "Кожна ел.адреса має свої власні налаштування у Mailman."
 
 #: templates/postorius/user/address_preferences.html:21
-#, fuzzy
-#| msgid ""
-#| "Any options showing as not set here have inherit at runtime from your "
-#| "global preferences (viewable on other tab)"
 msgid ""
 "Any options showing as not set here inherit at runtime from your global "
 "preferences (viewable on other tab)"
 msgstr ""
-"Кожна опція, для якої не вказано значення тут, прийме глобальні налаштування "
-"(які видно на іншій вкладці)"
+"Кожна опція, для якої тут не вказано значення, прийме глобальні налаштування "
+"(можна переглянути на іншій вкладці)"
 
 #: templates/postorius/user/all.html:20
 msgid "Search"
