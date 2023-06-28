@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-26 20:12-0700\n"
-"PO-Revision-Date: 2023-04-20 13:47+0000\n"
+"PO-Revision-Date: 2023-06-28 18:52+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/he/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.18-dev\n"
+"X-Generator: Weblate 4.18.1\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -1128,15 +1128,13 @@ msgid "Filter content"
 msgstr "סינון תוכן"
 
 #: forms/list_forms.py:916
-#, fuzzy
-#| msgid ""
-#| "Should Mailman filter the content of list traffic according to the "
-#| "settings below?"
 msgid ""
 "Should Mailman filter the content of list traffic according to the settings "
 "below?\n"
 "<b>None of the settings below have any effect if this is No.</b>"
-msgstr "האם על Mailman לסנן את תוכן תעבורת הרשימה בהתאם להגדרות שלהלן?"
+msgstr ""
+"האם על Mailman לסנן את תוכן תעבורת הרשימה בהתאם להגדרות שלהלן?\n"
+"<b>לאף אחת מההגדרות שלהלן לא תהיה השפעה אם בחרת בלא.</b>"
 
 #: forms/list_forms.py:922
 msgid "Filter types"
@@ -2613,7 +2611,7 @@ msgstr ""
 #: templates/postorius/lists/summary.html:96
 #: templates/postorius/lists/summary.html:124
 msgid "Subscribe"
-msgstr "מינוי"
+msgstr "עריכת מינוי"
 
 #: templates/postorius/lists/summary.html:100
 msgid ""
@@ -2718,7 +2716,7 @@ msgstr "פעולות כמותיות"
 
 #: templates/postorius/menu/list_nav.html:63
 msgid "Mass removal"
-msgstr "הסרה כמותית"
+msgstr "הסרה במרוכז"
 
 #: templates/postorius/menu/list_nav.html:66
 msgid "Ban List"
@@ -2781,10 +2779,6 @@ msgid "Each email address can have specific Mailman preferences."
 msgstr "לכל כתובת דוא״ל יכולות להיות העדפות Mailman משלה."
 
 #: templates/postorius/user/address_preferences.html:21
-#, fuzzy
-#| msgid ""
-#| "Any options showing as not set here have inherit at runtime from your "
-#| "global preferences (viewable on other tab)"
 msgid ""
 "Any options showing as not set here inherit at runtime from your global "
 "preferences (viewable on other tab)"
@@ -2926,7 +2920,7 @@ msgstr "הודעות מוחזקות"
 
 #: templatetags/nav_helpers.py:31
 msgid "Mass Removal"
-msgstr "הסרה כמותית"
+msgstr "הסרה במרוכז"
 
 #: templatetags/nav_helpers.py:32
 msgid "Mass Subscription"
@@ -3314,7 +3308,7 @@ msgstr "כותרת חדשה"
 
 #: views/list.py:1584
 msgid "New pattern"
-msgstr "תבנית חדשה"
+msgstr "דפוס חדש"
 
 #: views/list.py:1616
 msgid "Invalid confirmation token"
