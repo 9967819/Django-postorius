@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-26 20:12-0700\n"
-"PO-Revision-Date: 2023-04-20 13:47+0000\n"
+"PO-Revision-Date: 2023-06-28 18:52+0000\n"
 "Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/tr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.18-dev\n"
+"X-Generator: Weblate 4.18.1\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -1169,17 +1169,14 @@ msgid "Filter content"
 msgstr "İçeriği filtrele"
 
 #: forms/list_forms.py:916
-#, fuzzy
-#| msgid ""
-#| "Should Mailman filter the content of list traffic according to the "
-#| "settings below?"
 msgid ""
 "Should Mailman filter the content of list traffic according to the settings "
 "below?\n"
 "<b>None of the settings below have any effect if this is No.</b>"
 msgstr ""
 "Mailman, liste trafiğinin içeriğini aşağıdaki ayarlara göre filtrelemeli "
-"midir?"
+"midir?\n"
+"<b>Bu Hayır ise aşağıdaki ayarların hiçbirinin etkisi yoktur.</b>"
 
 #: forms/list_forms.py:922
 msgid "Filter types"
@@ -2885,10 +2882,6 @@ msgid "Each email address can have specific Mailman preferences."
 msgstr "Her e-posta adresi ayrı Mailman tercihlerine sahip olabilir."
 
 #: templates/postorius/user/address_preferences.html:21
-#, fuzzy
-#| msgid ""
-#| "Any options showing as not set here have inherit at runtime from your "
-#| "global preferences (viewable on other tab)"
 msgid ""
 "Any options showing as not set here inherit at runtime from your global "
 "preferences (viewable on other tab)"
