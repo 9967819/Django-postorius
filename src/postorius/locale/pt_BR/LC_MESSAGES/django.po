@@ -10,10 +10,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-26 20:12-0700\n"
-"PO-Revision-Date: 2023-06-22 19:20+0000\n"
+"PO-Revision-Date: 2023-06-28 18:52+0000\n"
 "Last-Translator: Wellington Terumi Uemura <wellingtonuemura@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/gnu-"
-"mailman/postorius/pt_BR/>\n"
+"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
+"gnu-mailman/postorius/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1186,17 +1186,14 @@ msgid "Filter content"
 msgstr "Filtrar conteúdo"
 
 #: forms/list_forms.py:916
-#, fuzzy
-#| msgid ""
-#| "Should Mailman filter the content of list traffic according to the "
-#| "settings below?"
 msgid ""
 "Should Mailman filter the content of list traffic according to the settings "
 "below?\n"
 "<b>None of the settings below have any effect if this is No.</b>"
 msgstr ""
 "O Mailman deve filtrar o conteúdo do tráfego da lista de acordo com as "
-"configurações abaixo?"
+"configurações abaixo?\n"
+"<b>Nenhuma das configurações abaixo terá qualquer efeito se for Não.</b>"
 
 #: forms/list_forms.py:922
 msgid "Filter types"
@@ -2918,16 +2915,12 @@ msgid "Each email address can have specific Mailman preferences."
 msgstr "Cada endereço de e-mail pode ter preferências específicas."
 
 #: templates/postorius/user/address_preferences.html:21
-#, fuzzy
-#| msgid ""
-#| "Any options showing as not set here have inherit at runtime from your "
-#| "global preferences (viewable on other tab)"
 msgid ""
 "Any options showing as not set here inherit at runtime from your global "
 "preferences (viewable on other tab)"
 msgstr ""
-"Todas as opções mostradas como não definidas aqui foram herdadas em tempo de "
-"execução de suas preferências globais (visíveis em outra guia)"
+"Quaisquer opções exibidas aqui como não definidas são herdadas durante o "
+"tempo de execução das suas preferências globais (visíveis em outra guia)"
 
 #: templates/postorius/user/all.html:20
 msgid "Search"
