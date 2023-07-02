@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Victoriano Giralt <victoriano@uma.es>, 2020.
 # Guillermo Hernandez <guillermo@querysoft.es>, 2021.
-# Francisco Serrador <fserrador@gmail.com>, 2022.
+# Francisco Serrador <fserrador@gmail.com>, 2022, 2023.
 # gallegonovato <fran-carro@hotmail.es>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-26 20:12-0700\n"
-"PO-Revision-Date: 2023-04-20 13:47+0000\n"
-"Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
+"PO-Revision-Date: 2023-07-02 17:18+0000\n"
+"Last-Translator: Francisco Serrador <fserrador@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/es/>\n"
 "Language: es\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.18-dev\n"
+"X-Generator: Weblate 5.0-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -3003,11 +3003,11 @@ msgstr "Direcciones"
 
 #: templates/postorius/user/manage.html:28
 msgid "Email"
-msgstr "Correo electrónico"
+msgstr "Correo-e"
 
 #: templates/postorius/user/manage.html:62
 msgid "List"
-msgstr "Lista"
+msgstr "Listado"
 
 #: templates/postorius/user/manage.html:64
 #: templates/postorius/user/subscriptions.html:25
@@ -3024,7 +3024,7 @@ msgstr "Cuenta Web"
 
 #: templates/postorius/user/manage.html:96
 msgid "Username"
-msgstr "Nombre del usuario"
+msgstr "ID Usuario"
 
 #: templates/postorius/user/manage.html:100
 msgid "Superuser"
@@ -3054,15 +3054,15 @@ msgstr "Suscripción"
 
 #: templates/postorius/user/subscriptions.html:17
 msgid "You are subscribed to the following mailing lists:"
-msgstr "Está suscrito a las siguientes listas de correo:"
+msgstr "Está suscrito a los listados de correo siguientes:"
 
 #: templates/postorius/user/subscriptions.html:41
 msgid "You are not yet subscribed to any lists."
-msgstr "Aún no está suscrito a ninguna lista."
+msgstr "Aún no está suscrito a ningún listado."
 
 #: templatetags/nav_helpers.py:27
 msgid "Header Filters"
-msgstr "Filtros de cabecera"
+msgstr "Filtros de Cabecera"
 
 #: templatetags/nav_helpers.py:28
 msgid "Banned Addresses"
@@ -3070,7 +3070,7 @@ msgstr "Direcciones vetadas"
 
 #: templatetags/nav_helpers.py:29
 msgid "Delete List"
-msgstr "Borrar Lista"
+msgstr "Borrar listado"
 
 #: templatetags/nav_helpers.py:30
 msgid "Held Messages"
@@ -3090,7 +3090,7 @@ msgstr "Opciones de suscripción"
 
 #: templatetags/nav_helpers.py:34
 msgid "List Settings"
-msgstr "Configuración de la lista"
+msgstr "Parámetros del listado"
 
 #: templatetags/nav_helpers.py:35
 msgid "Summary"
