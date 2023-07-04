@@ -26,6 +26,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * Migrate to Bootstrap 5. (See !769)
 * Add ability to delete a user from the Users page (Closes #543)
 * Django 4.2 support
+* Make Postorius more usable with Javascript disabled. (Closes #544)
 
 UI
 --
