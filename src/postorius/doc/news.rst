@@ -54,6 +54,9 @@ A11y
   field name isn't read twice. (Fixes #503)
 * Add aria label for all options that are set as '----' to be unset. (Fixes #504)
 
+Other
+-----
+* Removed polyfills for Internet Explorer (Closes #570)
 
 .. _NEWS-1.3.8:
 
