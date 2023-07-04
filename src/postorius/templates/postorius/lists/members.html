@@ -186,8 +186,23 @@
 {% endblock content %}
 {% block additionaljs %}
 <script>
+/* When the select all "Checkbox" in the header of the table is clicked, select all the subs on the page. */
 $('#all-members-checkbox').change(function() {
   $('.member-checkbox').prop('checked', this.checked);
 });
+
+/* Move the focus to the search box when the page loads. This makes sure the user doesn't need to navigate
+   from the top back moving the entire menu item.
+*/
+function focus_searchbox() {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const searchTerm = urlParams.get('q');
+  if (searchTerm != null) {
+    $('input[name^="q"]')[0].focus();
+  }
+}
+
+focus_searchbox()
 </script>
 {% endblock %}

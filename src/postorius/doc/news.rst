@@ -56,6 +56,9 @@ A11y
 * Remove redundant table cell announcements from Mailman Settings page so the
   field name isn't read twice. (Fixes #503)
 * Add aria label for all options that are set as '----' to be unset. (Fixes #504)
+* Move the focus when the search box when the Member page page loads after
+  a search. This saves some time navigating down to the list of
+  search result members. (Fixes #506)
 
 
 .. _NEWS-1.3.8:
