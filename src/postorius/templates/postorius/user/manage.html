@@ -34,7 +34,6 @@
         </tr>
       </thead>
       {% endif %}
-      <tbody>
         <tr>
           <td>{{ form.address.email }}</td>
           {% for field in form %}
@@ -42,7 +41,6 @@
           {% endfor %}
         </tr>
         {% endfor %}
-      </tbody>
     </table>
   </div>
   <input class="btn btn-primary btn-sm" name="address_form" type="submit" value="{% trans 'Update' %}">
@@ -70,7 +68,6 @@
         </tr >
       </thead >
       {% endif %}
-      <tbody>
         <tr>
           <td>{{ form.member.list_id }}</td>
           <td>{{ form.member.address }}</td>
@@ -80,7 +77,6 @@
           {% endfor %}
         </tr>
       {% endfor %}
-    </tbody>
   </table>
   </div>
   <input class="btn btn-primary btn-sm" type="submit" name="subs_form" value="{% trans 'Update' %}">
