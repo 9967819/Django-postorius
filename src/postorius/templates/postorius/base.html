@@ -27,8 +27,8 @@
                         <span><img src="{% static 'postorius/img/mailman_logo_small_trans.png' %}" alt="{% trans 'Mailman logo' %}"/> Postorius</span>
                     </a>
                     {% if not user.is_authenticated %}
-                        <ul class="navbar-nav d-md-none">
-                            <li class="nav-item"><a class="nav-link" href="{% url LOGIN_URL %}?next={{ next|default:request.path|urlencode }}">
+                        <ul class="navbar-nav d-md-none flex-row">
+                            <li class="nav-item me-2"><a class="nav-link" href="{% url LOGIN_URL %}?next={{ next|default:request.path|urlencode }}">
                                 <span class="fa fa-sign-in"></span>
                                 {% trans 'Sign In' %}
                             </a>
