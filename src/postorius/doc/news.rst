@@ -60,6 +60,9 @@ A11y
   a search. This saves some time navigating down to the list of
   search result members. (Fixes #506)
 
+Other
+-----
+* Removed polyfills for Internet Explorer (Closes #570)
 
 .. _NEWS-1.3.8:
 
