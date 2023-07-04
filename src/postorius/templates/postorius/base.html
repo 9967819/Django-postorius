@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="{% static 'postorius/css/style.css' %}">
         <link rel="stylesheet" href="{% static 'postorius/libs/fonts/font-awesome/css/font-awesome.min.css' %}" type="text/css" media="all" />
         {% block additionalcss %}{% endblock %}
+        <noscript><style> .jsonly { display: none } </style></noscript>
     </head>
     <body>
         <header class="navbar navbar-expand-lg bd-navbar">
@@ -121,6 +122,29 @@
                         </a>
                 </ul>
                 {% else %}
+                <noscript>
+                <ul class="navbar-nav">
+                    <li><span class="username dropdown-item">{{ user.username|truncatechars:"35" }}</span></li>
+                    <li> <a href="{% url 'mm_user_profile' %}" class="dropdown-item">
+                        <span class="fa fa-user"></span>
+                        {% trans 'Account' %}
+                    </a>
+                    <li><a href="{% url 'ps_user_profile' %}" class="dropdown-item">
+                        <span class="fa fa-cog"></span>
+                        {% trans 'Mailman settings' %}
+                    </a>
+                    {% if 'hyperkitty' in INSTALLED_APPS %}
+                    <li><a href="{% url 'hk_user_profile' %}" class="dropdown-item">
+                            <span class="fa fa-comment"></span>
+                            {% trans 'Posting activity' %}
+                        </a>
+                    {% endif %}
+                    <li><a href="{% url LOGOUT_URL %}?next={% url 'list_index' %}" class="dropdown-item">
+                        <span class="fa fa-sign-out"></span>
+                        {% trans 'Sign Out' %}
+                    </a>
+                </ul>
+                </noscript>
                 <div class="dropdown nav-item d-none d-md-flex">
                         <button href="#" class="btn btn-primary user-button dropdown-toggle" data-bs-toggle="dropdown"
                             role="button" aria-haspopup="true" aria-expanded="false">

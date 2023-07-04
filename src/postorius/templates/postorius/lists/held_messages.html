@@ -46,13 +46,22 @@
                   <tr>
                     <td><input type="checkbox" id="id_choices_{{ forloop.counter0 }}" class="message-checkbox" name="choices" value="{{ msg.request_id }}"/></td>
                     <td>
-                      <a href="#" class="show-modal-btn" data-msgid="{{ msg.request_id }}">
+                      <a href="#" class="show-modal-btn jsonly" data-msgid="{{ msg.request_id }}">
                         {% if msg.subject %}
                           {{ msg.subject }}
                         {% else %}
                           {% trans 'No Subject' %}
                         {% endif %}
                       </a>
+                      <noscript>
+                        <a href="{% url 'rest_held_message' list.list_id msg.request_id %}?raw" target="_blank">
+                          {% if msg.subject %}
+                            {{ msg.subject }}
+                          {% else %}
+                            {% trans 'No Subject' %}
+                          {% endif %}
+                        </a>
+                      </noscript>
                     </td>
                     <td>{{ msg.sender }}</td>
                     <td>{{ msg.reason }}</td>
