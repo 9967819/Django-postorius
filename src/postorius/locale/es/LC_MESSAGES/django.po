@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-26 20:12-0700\n"
-"PO-Revision-Date: 2023-07-02 17:18+0000\n"
-"Last-Translator: Francisco Serrador <fserrador@gmail.com>\n"
+"PO-Revision-Date: 2023-07-05 11:45+0000\n"
+"Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/es/>\n"
 "Language: es\n"
@@ -1191,17 +1191,15 @@ msgid "Filter content"
 msgstr "Filtrar contenido"
 
 #: forms/list_forms.py:916
-#, fuzzy
-#| msgid ""
-#| "Should Mailman filter the content of list traffic according to the "
-#| "settings below?"
 msgid ""
 "Should Mailman filter the content of list traffic according to the settings "
 "below?\n"
 "<b>None of the settings below have any effect if this is No.</b>"
 msgstr ""
-"¿Debería Mailman filtrar el contenido del tráfico de la lista de acuerdo con "
-"la siguiente configuración?"
+"¿Debe Mailman filtrar el contenido del tráfico de la lista de acuerdo con la "
+"siguiente configuración?\n"
+"<b>Ninguna de las configuraciones a continuación tiene ningún efecto si es "
+"No.</b>"
 
 #: forms/list_forms.py:922
 msgid "Filter types"
@@ -2927,16 +2925,12 @@ msgstr ""
 "Mailman."
 
 #: templates/postorius/user/address_preferences.html:21
-#, fuzzy
-#| msgid ""
-#| "Any options showing as not set here have inherit at runtime from your "
-#| "global preferences (viewable on other tab)"
 msgid ""
 "Any options showing as not set here inherit at runtime from your global "
 "preferences (viewable on other tab)"
 msgstr ""
-"Cualquier opción que aparezca aquí como no establecida se hereda en "
-"ejecución desde sus preferencias globales (visible en otra pestaña)"
+"Cualquier opción que aparezca como no configurada aquí se hereda en tiempo "
+"de ejecución de sus preferencias globales (visibles en otra pestaña)"
 
 #: templates/postorius/user/all.html:20
 msgid "Search"
