@@ -40,6 +40,8 @@ UI
 * Display Moderation Action None as List default in members view.  (Fixes #577)
 * Clarified which settings on the Alter Messages view depend on Filter content.
   (Closes #584)
+* The Mailing list's dmarc_addresses attribute can now be viewed/set in
+  Postorius.  (Closes #585)
 
 A11y
 ----

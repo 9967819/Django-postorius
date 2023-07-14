@@ -724,6 +724,17 @@ class DMARCMitigationsForm(ListSettingsForm):
             'of the From: domain.'
         ),
     )
+    dmarc_addresses = ListOfStringsField(
+        label=_('DMARC Addresses'),
+        required=False,
+        help_text=_(
+            'Email addresses and regexps matching email addresses, one per '
+            "line. Regexps begin with '^' as in '^.*@example\\.com'. DMARC "
+            'mitigation action will apply to posts From: an address matching, '
+            'case insensitevely, one of these addresses or patterns '
+            "regardless of the From: domain's DMARC policy."
+        ),
+    )
     dmarc_moderation_notice = forms.CharField(
         label=_('DMARC rejection notice'),
         required=False,
