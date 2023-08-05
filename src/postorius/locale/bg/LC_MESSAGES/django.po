@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # dpa-weblate@aegee.org <dpa-weblate@aegee.org>, 2022.
 # Дилян Палаузов <dpa-weblate@aegee.org>, 2022, 2023.
+# Salif Mehmed <mail@salif.eu>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-26 20:12-0700\n"
-"PO-Revision-Date: 2023-02-19 17:21+0000\n"
-"Last-Translator: Дилян Палаузов <dpa-weblate@aegee.org>\n"
+"PO-Revision-Date: 2023-08-05 09:24+0000\n"
+"Last-Translator: Salif Mehmed <mail@salif.eu>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/bg/>\n"
 "Language: bg\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 5.0-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -1613,8 +1614,8 @@ msgid ""
 msgstr ""
 "Когато си посочен изрично в To: или Cc: полетата в писмо до пощенския "
 "списък, може да избереш да не получаваш копие от пощенския списък. Избери "
-"„Да“ за да получаваш копия.  Избери „Не“ за да избегнеш да получаваш копия "
-"от пощенския списък"
+"„Да“ за да получаваш копия. Избери „Не“ за да избегнеш да получаваш копия от "
+"пощенския списък"
 
 #: forms/user_forms.py:112
 msgid "Preferred language"
