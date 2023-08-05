@@ -637,7 +637,7 @@ class TestDMARCMitigationsForm(TestCase):
         formdata = dict(
             dmarc_mitigate_action='munge_from',
             dmarc_mitigate_unconditionally='True',
-            dmarc_addresses=['user@example.com', '^.*@example.net'],
+            dmarc_addresses='user@example.com\n^.*@example.net',
             dmarc_moderation_notice='This is a moderation notice',
             dmarc_wrapped_message_text='This is wrapped message text',
         )
