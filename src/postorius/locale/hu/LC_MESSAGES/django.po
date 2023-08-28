@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-26 20:12-0700\n"
-"PO-Revision-Date: 2023-03-31 08:38+0000\n"
+"PO-Revision-Date: 2023-08-28 17:27+0000\n"
 "Last-Translator: Peter Donka <peter.donka@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/hu/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.17-dev\n"
+"X-Generator: Weblate 5.0.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -1172,16 +1172,13 @@ msgid "Filter content"
 msgstr "Tartalom szűrése"
 
 #: forms/list_forms.py:916
-#, fuzzy
-#| msgid ""
-#| "Should Mailman filter the content of list traffic according to the "
-#| "settings below?"
 msgid ""
 "Should Mailman filter the content of list traffic according to the settings "
 "below?\n"
 "<b>None of the settings below have any effect if this is No.</b>"
 msgstr ""
-"Szűrje-e a Mailman a listai forgalom tartalmát az alábbi beállítások szerint?"
+"A Mailman szűri a listaforgalom tartalmát az alábbi beállítások szerint?\n"
+"<b> Az alábbi beállítások egyike sem befolyásolja, ha ez nem.</b>"
 
 #: forms/list_forms.py:922
 msgid "Filter types"
@@ -2058,10 +2055,8 @@ msgid "Posting activity"
 msgstr "Feladási tevékenység"
 
 #: templates/postorius/base.html:73 templates/postorius/base.html:155
-#, fuzzy
-#| msgid "Sign In"
 msgid "Sign Out"
-msgstr "Bejelentkezés"
+msgstr "Kijelentkezés"
 
 #: templates/postorius/base.html:83
 msgid "Lists"
@@ -2650,10 +2645,8 @@ msgstr ""
 "címet:"
 
 #: templates/postorius/lists/summary.html:29
-#, fuzzy
-#| msgid "You have to login to visit the archives of this list."
 msgid "You have to sign in to visit the archives of this list."
-msgstr "A lista archívumának megtekintéséhez be kell jelentkeznie."
+msgstr "Be kell jelentkeznie, hogy láthassa a lista archívumait."
 
 #: templates/postorius/lists/summary.html:35
 #, python-format
@@ -2734,14 +2727,6 @@ msgstr ""
 "kérjük, lépjen kapcsolatba a lista tulajdonosával."
 
 #: templates/postorius/lists/summary.html:105
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "        To subscribe or unsubscribe from this list, please log in first.\n"
-#| "        If you have not previously logged in, you may need to set up an "
-#| "account\n"
-#| "        with the appropriate email address.\n"
-#| "        "
 msgid ""
 "\n"
 "        To subscribe or unsubscribe from this list, please sign in first.\n"
@@ -2751,20 +2736,14 @@ msgid ""
 "        "
 msgstr ""
 "\n"
-"        Először jelentkezzen be, hogy feliratkozzon vagy leiratkozzon erről "
-"a listáról.\n"
-"        Ha korábban még nem jelentkezett be, előfordulhat, hogy be kell "
-"állítania egy fiókot\n"
-"        a megfelelő e-mail címmel.\n"
+"        Ahhoz, hogy feliratkozzon vagy lemondjon a listáról, először írjon "
+"alá.\n"
+"Ha korábban nem írta alá, előfordulhat, hogy fiókot kell létrehoznia\n"
+"megfelelő e-mail címmel.\n"
+".\n"
 "        "
 
 #: templates/postorius/lists/summary.html:116
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "        You can also subscribe without creating an account.\n"
-#| "        If you wish to do so, please use the form below.\n"
-#| "        "
 msgid ""
 "\n"
 "          You can also subscribe without creating an account.\n"
@@ -2772,9 +2751,10 @@ msgid ""
 "          "
 msgstr ""
 "\n"
-"        Fiók létrehozása nélkül is feliratkozhat.\n"
-"        Ha ezt szeretné, kérjük, használja az alábbi űrlapot.\n"
-"        "
+"          Feliratkozhat fiók létrehozása nélkül is.\n"
+"Ha ezt akarod, használd az alábbi formát.\n"
+".\n"
+"          "
 
 #: templates/postorius/lists/summary.html:134
 msgid "List metrics"
@@ -2909,16 +2889,12 @@ msgid "Each email address can have specific Mailman preferences."
 msgstr "Minden e-mail cím hez speciális Mailman-beállítások vonatkozhatnak."
 
 #: templates/postorius/user/address_preferences.html:21
-#, fuzzy
-#| msgid ""
-#| "Any options showing as not set here have inherit at runtime from your "
-#| "global preferences (viewable on other tab)"
 msgid ""
 "Any options showing as not set here inherit at runtime from your global "
 "preferences (viewable on other tab)"
 msgstr ""
-"Az itt nem beállított opciók futás közben öröklődnek a globális "
-"beállításokból (más lapon megtekinthetők)"
+"Minden olyan lehetőség, amely azt mutatja, hogy nem hozta létre az örökséget "
+"a globális preferenciáiból (más fülön látható)"
 
 #: templates/postorius/user/all.html:20
 msgid "Search"
