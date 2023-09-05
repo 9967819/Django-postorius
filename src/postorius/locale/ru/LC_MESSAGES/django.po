@@ -7,13 +7,14 @@
 # Ivan Kuznetsov <kia@solvo.ru>, 2021.
 # Alexander Ryazanov (alryaz) <alryaz@xavux.com>, 2022.
 # Serhii Horichenko <m@sgg.im>, 2023.
+# Aliaksandr Astrouski <aostrovsky87@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-26 20:12-0700\n"
-"PO-Revision-Date: 2023-07-10 16:43+0000\n"
-"Last-Translator: Serhii Horichenko <m@sgg.im>\n"
+"PO-Revision-Date: 2023-09-05 17:06+0000\n"
+"Last-Translator: Aliaksandr Astrouski <aostrovsky87@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ru/>\n"
 "Language: ru\n"
@@ -23,7 +24,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || ("
 "n%100>=11 && n%100<=14)? 2 : 3);\n"
-"X-Generator: Weblate 5.0-dev\n"
+"X-Generator: Weblate 5.0.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -234,14 +235,12 @@ msgid "Yearly"
 msgstr "Ежегодно"
 
 #: forms/list_forms.py:51
-#, fuzzy
-#| msgid "Only mailinglist moderators"
 msgid "Only mailinglist administrators"
 msgstr "Только модераторам рассылки"
 
 #: forms/list_forms.py:52
 msgid "Mailinglist administrators and members"
-msgstr ""
+msgstr "Администраторы и подписчики списков рассылки"
 
 #: forms/list_forms.py:53
 msgid "Anyone"
@@ -668,7 +667,7 @@ msgstr ""
 
 #: forms/list_forms.py:492
 msgid "Please choose a default member action."
-msgstr "Пожалуйста, выберите действие по умолчанию."
+msgstr "Пожалуйста, выберите действие подписчиков по умолчанию."
 
 #: forms/list_forms.py:497
 msgid ""
@@ -697,7 +696,7 @@ msgstr ""
 
 #: forms/list_forms.py:514
 msgid "Please choose a default non-member action."
-msgstr "Пожалуйста, выберите действие по умолчанию."
+msgstr "Пожалуйста, выберите действие по умолчанию для не-подписчиков."
 
 #: forms/list_forms.py:519
 msgid ""
@@ -876,9 +875,7 @@ msgstr "Порог размера тома обзора"
 
 #: forms/list_forms.py:683
 msgid "How big in Kb should a digest be before it gets sent out?"
-msgstr ""
-"Размер в Кб одного тома. При превышении - текущий том будет отправлен "
-"подписчикам, и создан новый том."
+msgstr "Насколько большим в Кб должен быть дайджест перед отправкой?"
 
 #: forms/list_forms.py:694
 msgid "DMARC mitigation action"
@@ -1113,7 +1110,6 @@ msgid "Explicit Reply-to header set"
 msgstr "Явно указать адрес для ответа"
 
 #: forms/list_forms.py:865
-#, fuzzy
 msgid "Explicit Reply-to set; no Cc added"
 msgstr "Явно указать адрес для ответа; не добавлять адреса в копию"
 
@@ -1144,26 +1140,26 @@ msgid ""
 "list. To support these types of mailing lists, select Explicit Reply and set "
 "the Reply-To: address option to point to the parallel list."
 msgstr ""
-"Куда должны быть направлены ответы на сообщения? Параметр позволяет задать "
-"или изменить заголовок Reply-To: в сообщениях, прошедших через рассылку. Для "
-"большинства списков рассылки рекомендуется задавать \"не изменять\", "
-"поскольку у отправителей писем могут быть свои причины самостоятельно "
-"указывать адрес для ответа. Есть разные точки зрения <a href=\"http://marc."
-"merlins.org/netrants/reply-to-harmful.html\">одна</a> и <a href=\"http://"
-"marc.merlins.org/netrants/reply-to-useful.html\">другая</a>.\n"
-"Не изменять: Mailman не будет добавлять заголовок Reply-To:. Если заголовок "
-"уже был в исходном сообщении, он не будет удален или изменен.\n"
+"Куда должны быть направлены ответы на сообщения? Для большинства списков "
+"рассылки настоятельно рекомендуется использовать \"Не очищать\". \n"
+"Параметр позволяет задать или изменить заголовок Reply-To: в сообщениях, "
+"прошедших через рассылку. Для большинства списков рассылки рекомендуется "
+"задавать \"не изменять\", поскольку у отправителей писем могут быть свои "
+"причины самостоятельно указывать адрес для ответа. Есть разные точки зрения "
+"<a href=\"http://marc.merlins.org/netrants/reply-to-harmful.html\">одна</a> "
+"и <a href=\"http://marc.merlins.org/netrants/reply-to-useful.html\">другая</"
+"a>. Не изменять: Mailman не будет добавлять заголовок Reply-To:. Если "
+"заголовок уже был в исходном сообщении, он не будет удален или изменен. "
 "Отвечать в рассылку: Mailman добавит адрес рассылки в заголовок Reply-To: "
-"или добавит такой заголовок, если в исходном сообщении его не было.\n"
-"Явно указать адрес для ответа: Mailman добавит указанный выше адрес в "
-"заголовок Reply-To: . Адрес рассылки будет добавлен в копию (заголовок CC:), "
-"если не задано не делать этого. \n"
-"Вариант \"без добавления адреса в копию\" может быть полезен для рассылок "
-"типа анонса с ограничениями на публикации для подписчиков. Например, могут "
-"быть две параллельные рассылки: в первую сообщения отправляются "
-"автоматически по мере выхода новых версий какого-нибудь ПО, а в второй идет "
-"их обсуждение. Тогда в сообщениях из первой рассылки полезно указать, что "
-"отвечать нужно во вторую рассылку."
+"или добавит такой заголовок, если в исходном сообщении его не было. Явно "
+"указать адрес для ответа: Mailman добавит указанный выше адрес в заголовок "
+"Reply-To: . Адрес рассылки будет добавлен в копию (заголовок CC:), если не "
+"задано не делать этого. Вариант \"без добавления адреса в копию\" может быть "
+"полезен для рассылок типа анонса с ограничениями на публикации для "
+"подписчиков. Например, могут быть две параллельные рассылки: в первую "
+"сообщения отправляются автоматически по мере выхода новых версий какого-"
+"нибудь ПО, а в второй идет их обсуждение. Тогда в сообщениях из первой "
+"рассылки полезно указать, что отвечать нужно во вторую рассылку."
 
 #: forms/list_forms.py:902
 msgid "Pipeline"
@@ -1178,17 +1174,15 @@ msgid "Filter content"
 msgstr "Фильтрация содержимого"
 
 #: forms/list_forms.py:916
-#, fuzzy
-#| msgid ""
-#| "Should Mailman filter the content of list traffic according to the "
-#| "settings below?"
 msgid ""
 "Should Mailman filter the content of list traffic according to the settings "
 "below?\n"
 "<b>None of the settings below have any effect if this is No.</b>"
 msgstr ""
-"Должна ли выполняться фильтрация содержимого сообщений в соответствии с "
-"правилами ниже?"
+"Должен ли Mailman фильтровать содержимое трафика списка в соответствии с "
+"настройками ниже?\n"
+"<b>Ни одна из настроек ниже не имеет никакого эффекта, если установлено "
+"значение «Нет».</b>"
 
 #: forms/list_forms.py:922
 msgid "Filter types"
@@ -1457,6 +1451,9 @@ msgid ""
 "lists, or in headers, and so forth. It should be as succinct as you can get "
 "it, while still identifying what the list is."
 msgstr ""
+"Это описание используется, когда список рассылки указан среди других списков "
+"рассылки или в заголовках и т. д. Он должен быть настолько кратким, "
+"насколько это возможно, но при этом указывать, что представляет собой список."
 
 #: forms/list_forms.py:1137
 msgid "Long Description"
@@ -1499,6 +1496,8 @@ msgid ""
 "Flag indicating that posts to the linked newsgroup should be gated to the "
 "list"
 msgstr ""
+"Флаг, указывающий, что сообщения в связанной группе новостей должны быть "
+"добавлены в список"
 
 #: forms/list_forms.py:1179
 msgid "Gateway to news"
@@ -1509,6 +1508,8 @@ msgid ""
 "Flag indicating that posts to the list should be gated to the linked "
 "newsgroup."
 msgstr ""
+"Флаг, указывающий, что сообщения в списке должны быть доступны связанной "
+"группе новостей."
 
 #: forms/list_forms.py:1186
 msgid "Linked Newsgroup"
@@ -1528,13 +1529,15 @@ msgstr "Политика модерации новостной группы, е�
 
 #: forms/list_forms.py:1203
 msgid "NNTP Include subject prefix "
-msgstr ""
+msgstr "NNTP включает префикс темы "
 
 #: forms/list_forms.py:1205
 msgid ""
 "Flag indicating whether the list's \"Subject Prefix\" should be included in "
 "posts gated to usenet."
 msgstr ""
+"Флаг, указывающий, следует ли включать «Префикс темы» списка в сообщения, "
+"доступные в usenet."
 
 #: forms/list_forms.py:1221
 msgid "Emails to mass subscribe"
@@ -1594,6 +1597,9 @@ msgid ""
 "If checked, the other checkboxes are ignored and the users will be sent an "
 "invitation to join the list and will be subscribed upon acceptance thereof."
 msgstr ""
+"Если отмечено, остальные флажки игнорируются, и пользователям будет "
+"отправлено приглашение присоединиться к списку, и они будут подписаны после "
+"его принятия."
 
 #: forms/list_forms.py:1288
 msgid ""
@@ -1601,6 +1607,10 @@ msgid ""
 "will be ignored for these subscribers and a welcome message will be sent or "
 "not sent based on the choice."
 msgstr ""
+"Если установлено значение «Да» или «Нет», настройка списка по умолчанию "
+"send_welcome_message будет игнорироваться для этих подписчиков, и "
+"приветственное сообщение будет отправлено или не отправлено в зависимости от "
+"выбора."
 
 #: forms/list_forms.py:1309
 msgid "Emails to Unsubscribe"
@@ -1668,7 +1678,7 @@ msgstr "Данные"
 
 #: forms/member_forms.py:28
 msgid "Email Address"
-msgstr "Почтовый адрес"
+msgstr "Адрес электронной почты"
 
 #: forms/member_forms.py:35 forms/user_forms.py:341
 msgid "Display Name"
@@ -1722,6 +1732,10 @@ msgid ""
 "is normally shown. If you do not want your email address to show up on this "
 "membership roster, select Yes for this option."
 msgstr ""
+"Когда кто-то просматривает список подписчиков, обычно отображается ваш адрес "
+"электронной почты (скрытым образом, чтобы помешать сборщикам спама). Если вы "
+"вообще не хотите, чтобы ваш адрес электронной почты отображался в этом "
+"списке подписчиков, выберите «Да» для этого параметра."
 
 #: forms/user_forms.py:99
 msgid "Receive list copies (possible duplicates)"
@@ -1733,6 +1747,10 @@ msgid ""
 "you can opt to not receive another copy from the mailing list. Select Yes to "
 "receive copies. Select No to avoid receiving copies from the mailing list"
 msgstr ""
+"Если вы явно указаны в заголовках «Кому:» или «Копия:» сообщения списка, вы "
+"можете отказаться от получения еще одной копии из списка рассылки. Выберите "
+"«Да», чтобы получить копии. Выберите «Нет», чтобы не получать копии из "
+"списка рассылки"
 
 #: forms/user_forms.py:112
 msgid "Preferred language"
@@ -1744,6 +1762,10 @@ msgid ""
 "will override the MailingList's preferred language. This affects which "
 "language is used for your email notifications and such."
 msgstr ""
+"Предпочитаемый язык для вашего взаимодействия с Mailman. Если этот параметр "
+"установлен, он будет переопределять предпочтительный язык списка рассылки. "
+"Это влияет на то, какой язык используется для уведомлений по электронной "
+"почте и т. д."
 
 #: forms/user_forms.py:170
 msgid "Cannot set delivery_status to {}"
@@ -1781,6 +1803,22 @@ msgid ""
 "$language: The two letter language code for list's preferred language e.g. "
 "fr, en, de \n"
 msgstr ""
+"Примечание. Не добавляйте в шаблоны секретный контент, поскольку он "
+"общедоступен.\n"
+"Вы можете использовать эти переменные в шаблонах. \n"
+"$hyperkitty_url: Постоянная ссылка на архивное сообщение в Hyperkitty\n"
+"$listname: Название списка рассылки, например ant@example.com \n"
+"$list_id: Заголовок List-ID, например ant.example.com \n"
+"$display_name: Отображаемое имя списка рассылки, например Ant \n"
+"$short_listname: Локальная часть имени списка, например ant \n"
+"$domain: Доменная часть имени списка, например example.com \n"
+"$info: Более длинный описательный текст списка рассылки \n"
+"$request_email: Адрес электронной почты запросов -request \n"
+"$owner_email: Адрес электронной почты владельца -owner \n"
+"$site_email: Адрес электронной почты, по которому можно связаться с "
+"владельцами сайта \n"
+"$language: Двухбуквенный код языка для предпочтительного языка списка, "
+"например fr, en, de \n"
 
 #: models.py:75
 msgid "owner"
@@ -1812,30 +1850,39 @@ msgid ""
 "Sent to the list administrators when moderator approval for a posting is "
 "required."
 msgstr ""
+"Отправляется администраторам списков, когда требуется одобрение модератора "
+"публикации."
 
 #: template_list.py:34
 msgid ""
 "Sent to the list administrators when moderator approval for a subscription "
 "request is required."
 msgstr ""
+"Отправляется администраторам списков, когда требуется одобрение модератора "
+"запроса на подписку."
 
 #: template_list.py:40
 msgid ""
 "Sent to the list administrators when moderator approval for an "
 "unsubscription request is required."
 msgstr ""
+"Отправляется администраторам списков, когда требуется одобрение модератора "
+"запроса на отмену подписки."
 
 #: template_list.py:46
 msgid ""
 "Sent to the list administrators to notify them when a new member has been "
 "subscribed."
 msgstr ""
+"Отправляется администраторам списков, чтобы уведомить их о новом подписчике."
 
 #: template_list.py:52
 msgid ""
 "Sent to the list administrators when a bounce message in an unrecognized "
 "format has been received."
 msgstr ""
+"Отправляется администраторам списков при получении сообщения о возврате в "
+"неизвестном формате."
 
 #: template_list.py:58
 msgid "Sent to the list administrators from the 'mailman notify' command."
@@ -1862,6 +1909,8 @@ msgid ""
 "Sent to the list administrators to notify them when a member has been "
 "unsubscribed."
 msgstr ""
+"Отправляется администраторам списков для уведомления их об отписке "
+"подписчика."
 
 #: template_list.py:79
 msgid "The footer for a digest message."
@@ -1875,6 +1924,7 @@ msgstr "Верхний колонтитул / преамбула для сооб
 msgid ""
 "The digest “masthead”; i.e. a common introduction for all digest messages."
 msgstr ""
+"\"Шапка\" дайджеста; то есть общее введение для всех дайджест-сообщений."
 
 #: template_list.py:89
 msgid "The footer for a regular (non-digest) message."
@@ -1898,56 +1948,74 @@ msgstr "Сообщение отправляется подписчикам дл�
 #: template_list.py:110
 msgid "The message sent to subscribers when they are invited to join a list."
 msgstr ""
+"Сообщение, отправляемое подписчикам, когда их приглашают присоединиться к "
+"списку."
 
 #: template_list.py:116
 msgid "The notice sent to a member when they unsubscribe from a mailing list."
 msgstr ""
+"Уведомление, отправляемое подписчику, когда он отписывается от списка "
+"рассылки."
 
 #: template_list.py:122
 msgid ""
 "The notice sent to a poster when their message is being held for moderator "
 "approval."
 msgstr ""
+"Уведомление, отправленное автору, когда его сообщение находится на "
+"рассмотрении модератора."
 
 #: template_list.py:128
 msgid ""
 "Sent to a user when the maximum number of autoresponses has been reached for "
 "that day."
 msgstr ""
+"Отправляется пользователю, когда за этот день было достигнуто максимальное "
+"количество автоответов."
 
 #: template_list.py:134
 msgid ""
 "Notice sent to a poster when their message has been received by the mailing "
 "list."
 msgstr ""
+"Уведомление отправляется автору, когда его сообщение получено списком "
+"рассылки."
 
 #: template_list.py:140
 msgid ""
 "A bounce probe sent to a member when their subscription has been disabled "
 "due to bounces."
 msgstr ""
+"Проверка отказов, отправленная подписчику, когда его подписка была отключена "
+"из-за отказов."
 
 #: template_list.py:146
 msgid ""
 "Notice sent to a poster when their message has been rejected by the list’s "
 "moderator."
 msgstr ""
+"Уведомление отправляется автору, когда его сообщение отклонено модератором "
+"списка."
 
 #: template_list.py:152
 msgid ""
 "Notice sent to a poster when their message has been rejected automatically."
 msgstr ""
+"Уведомление отправляется автору, когда его сообщение было автоматически "
+"отклонено."
 
 #: template_list.py:158
 msgid ""
 "The notice sent to a member when they are subscribed to the mailing list."
-msgstr ""
+msgstr "Уведомление, отправляемое подписчикам списка рассылки."
 
 #: template_list.py:164
 msgid ""
 "The notice sent to a member when their membership has been disabled due to "
 "excessive bounces."
 msgstr ""
+"Уведомление, отправленное подписчику, когда его членство было отключено из-"
+"за чрезмерного количества отказов."
 
 #: templates/403.html:5
 msgid "Forbidden"
@@ -1983,10 +2051,8 @@ msgstr "Логотип Mailman"
 
 #: templates/postorius/base.html:39 templates/postorius/base.html:122
 #: templates/postorius/lists/summary.html:110
-#, fuzzy
-#| msgid "Sign Up"
 msgid "Sign In"
-msgstr "Регистрация"
+msgstr "Вход"
 
 #: templates/postorius/base.html:43 templates/postorius/base.html:126
 msgid "Sign Up"
@@ -2005,10 +2071,8 @@ msgid "Posting activity"
 msgstr "Недавняя активность"
 
 #: templates/postorius/base.html:73 templates/postorius/base.html:155
-#, fuzzy
-#| msgid "Sign Up"
 msgid "Sign Out"
-msgstr "Регистрация"
+msgstr "Выход"
 
 #: templates/postorius/base.html:83
 msgid "Lists"
@@ -2046,7 +2110,7 @@ msgstr "Версия Postorius"
 
 #: templates/postorius/base.html:186
 msgid "Happy Mailman Day!"
-msgstr ""
+msgstr "Счастливого дня Mailman!"
 
 #: templates/postorius/domain/confirm_delete.html:5
 msgid "Confirm domain removal"
@@ -2067,6 +2131,9 @@ msgid ""
 "        This would delete %(size)s lists, some of which are:\n"
 "      "
 msgstr ""
+"\n"
+"        Это удалит списки размером %(size)s, некоторые из них:\n"
+"      "
 
 #: templates/postorius/domain/confirm_delete.html:33
 #: templates/postorius/domain/index.html:59
@@ -2190,6 +2257,10 @@ msgid ""
 "           for domain \"%(identifier)s\"?\n"
 "           "
 msgstr ""
+"\n"
+"           Вы уверены, что ходите удалить шаблон \"%(name)s\"\n"
+"           для домена \"%(identifier)s\"?\n"
+"           "
 
 #: templates/postorius/domain/template_index.html:16
 #: templates/postorius/lists/template_list.html:15
@@ -2216,7 +2287,7 @@ msgstr "Заблокировать адрес"
 
 #: templates/postorius/fragments/bans.html:22
 msgid "Currently banned addresses"
-msgstr "Заблокированные адреса"
+msgstr "Заблокированные в настоящее время адреса"
 
 #: templates/postorius/fragments/bans.html:35
 msgid "Un-ban this address"
@@ -2283,6 +2354,9 @@ msgid ""
 "Only lists that you are owner, moderator or subscriber for are shown here. "
 "Click to <a href=\"?all-lists\"> see all lists</a>."
 msgstr ""
+"Здесь показаны только списки, владельцем, модератором или подписчиком "
+"которых вы являетесь. Нажмите, чтобы <a href=\"?all-lists\"> увидеть все "
+"списки</a>."
 
 #: templates/postorius/index.html:114
 msgid "Only admins see unadvertised lists in the list index."
@@ -2324,7 +2398,7 @@ msgstr "Подтвердить удаление роли"
 #: templates/postorius/lists/confirm_remove_role.html:15
 #, python-format
 msgid "Remove %(address)s as %(role_translated)s?"
-msgstr ""
+msgstr "Удалить %(address)s как %(role_translated)s?"
 
 #: templates/postorius/lists/confirm_remove_role.html:19
 msgid "Are you sure?"
@@ -2346,6 +2420,9 @@ msgid ""
 "        Warning! This will remove every member from %(listname)s!\n"
 "    "
 msgstr ""
+"\n"
+"        Внимание! Это удалит каждого подписчика из списка %(listname)s!\n"
+"    "
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:21
 #: templates/postorius/lists/mass_removal.html:17
@@ -2360,6 +2437,9 @@ msgid ""
 "    Confirm subscription of %(addr)s to %(name)s(%(listid)s):\n"
 "    "
 msgstr ""
+"\n"
+"    Подтвердите подписку %(addr)s на %(name)s(%(listid)s):\n"
+"    "
 
 #: templates/postorius/lists/confirm_token.html:16
 #, python-format
@@ -2368,6 +2448,9 @@ msgid ""
 "    Confirm unsubscription of %(addr)s from %(name)s(%(listid)s):\n"
 "    "
 msgstr ""
+"\n"
+"    Подтвердите отписку %(addr)s от %(name)s(%(listid)s):\n"
+"    "
 
 #: templates/postorius/lists/confirm_token.html:20
 #, python-format
@@ -2439,7 +2522,7 @@ msgstr "Вложения"
 
 #: templates/postorius/lists/held_messages.html:92
 msgid "Set member moderation"
-msgstr ""
+msgstr "Установить модерацию подписчиков"
 
 #: templates/postorius/lists/held_messages.html:98
 msgid "Rejection reason:"
@@ -2450,6 +2533,8 @@ msgid ""
 "Reason sent to the sender for message rejection. For other actions, this is "
 "ignored."
 msgstr ""
+"Причина отклонения сообщения отправлена отправителю. Для других действий это "
+"игнорируется."
 
 #: templates/postorius/lists/held_messages.html:115
 msgid "Show Headers"
@@ -2457,11 +2542,11 @@ msgstr "Показать заголовки"
 
 #: templates/postorius/lists/held_messages.html:123
 msgid "There are currently no held messages."
-msgstr ""
+msgstr "На данный момент нет отложенных сообщений."
 
 #: templates/postorius/lists/held_messages.html:130
 msgid "Message could not be retrieved"
-msgstr ""
+msgstr "Сообщение не может быть получено"
 
 #: templates/postorius/lists/mass_removal.html:14
 msgid "Remove listed users"
@@ -2521,14 +2606,12 @@ msgid "Moderation Action"
 msgstr "Действия модерации"
 
 #: templates/postorius/lists/members.html:90
-#, fuzzy
-#| msgid "Bounce score threshold"
 msgid "Bounce Score"
-msgstr "Порог счетчика ошибок доставки"
+msgstr "Счётчик отказов"
 
 #: templates/postorius/lists/members.html:116
 msgid "Masked per the user request"
-msgstr ""
+msgstr "Маскировано по запросу пользователя"
 
 #: templates/postorius/lists/new.html:6 templates/postorius/lists/new.html:17
 msgid "Create list"
@@ -2574,13 +2657,11 @@ msgstr "Информация"
 
 #: templates/postorius/lists/summary.html:23
 msgid "To contact the list owners, use the following email address:"
-msgstr ""
+msgstr "Чтобы связаться с владельцами списков, используйте следующий адрес:"
 
 #: templates/postorius/lists/summary.html:29
-#, fuzzy
-#| msgid "You have to login to visit the archives of this list."
 msgid "You have to sign in to visit the archives of this list."
-msgstr "Для просмотра списков рассылки требуется авторизация."
+msgstr "Для просмотра архива списка рассылки требуется авторизация."
 
 #: templates/postorius/lists/summary.html:35
 #, python-format
@@ -2639,6 +2720,13 @@ msgid ""
 "                or use the form below:\n"
 "            "
 msgstr ""
+"\n"
+"                Для подписки отправьте сообщение со словом 'subscribe' в "
+"теме на адрес\n"
+"                <a href=\"mailto:%(address)s?subject=Subscribe\""
+">%(address)s</a>\n"
+"                или воспользуйтесь формой ниже:\n"
+"            "
 
 #: templates/postorius/lists/summary.html:96
 #: templates/postorius/lists/summary.html:124
@@ -2650,6 +2738,8 @@ msgid ""
 "You have a subscription request pending. If you don't hear back soon, please "
 "contact the list owners."
 msgstr ""
+"У вас есть запрос на подписку, ожидающий рассмотрения. Если вы не получите "
+"ответ в ближайшее время, свяжитесь с владельцами списков."
 
 #: templates/postorius/lists/summary.html:105
 msgid ""
@@ -2660,6 +2750,13 @@ msgid ""
 "        with the appropriate email address.\n"
 "        "
 msgstr ""
+"\n"
+"        Чтобы подписаться или отказаться от подписки на этот список, сначала "
+"войдите в систему.\n"
+"        Если вы ранее не входили в систему, возможно, вам потребуется "
+"создать учетную запись\n"
+"        с соответствующим адресом электронной почты.\n"
+"        "
 
 #: templates/postorius/lists/summary.html:116
 msgid ""
@@ -2668,6 +2765,10 @@ msgid ""
 "          If you wish to do so, please use the form below.\n"
 "          "
 msgstr ""
+"\n"
+"          Вы также можете подписаться без создания учетной записи.\n"
+"          Если вы хотите это сделать, пожалуйста, используйте форму ниже.\n"
+"          "
 
 #: templates/postorius/lists/summary.html:134
 msgid "List metrics"
@@ -2697,6 +2798,10 @@ msgid ""
 "     from list \"%(identifier)s\"?\n"
 "     "
 msgstr ""
+"\n"
+"     Вы уверены, что хотите удалить шаблон \"%(name)s\" \n"
+"     из списка \"%(identifier)s\"?\n"
+"     "
 
 #: templates/postorius/menu/list_nav.html:14
 msgid "Subscription requests"
@@ -2776,7 +2881,7 @@ msgstr "Очереди"
 #: templates/postorius/user/address_preferences.html:8
 #: templates/postorius/user/subscription_preferences.html:7
 msgid "Subscription preferences"
-msgstr "Настройки подписки"
+msgstr "Предпочтения подписки"
 
 #: templates/postorius/user/address_preferences.html:17
 #: templates/postorius/user/mailman_settings.html:17
@@ -2803,6 +2908,9 @@ msgid ""
 "Any options showing as not set here inherit at runtime from your global "
 "preferences (viewable on other tab)"
 msgstr ""
+"Любые параметры, отображаемые здесь как не установленные, наследуются во "
+"время выполнения от ваших глобальных настроек (можно просмотреть на другой "
+"вкладке)"
 
 #: templates/postorius/user/all.html:20
 msgid "Search"
@@ -2820,16 +2928,16 @@ msgstr "Создан"
 #: templates/postorius/user/confirm_delete.html:13
 #: templates/postorius/user/confirm_delete.html:22
 #: templates/postorius/user/manage.html:119
-#, fuzzy
-#| msgid "Account"
 msgid "Delete Account"
-msgstr "Аккаунт"
+msgstr "Удалить учетную запись"
 
 #: templates/postorius/user/confirm_delete.html:17
 msgid ""
 "Are you sure you want to delete this account? This will remove the account "
 "along with all its subscriptions."
 msgstr ""
+"Вы уверены, что хотите удалить эту учетную запись? Это приведет к удалению "
+"учетной записи вместе со всеми ее подписками."
 
 #: templates/postorius/user/list_options.html:14
 msgid "Subscription options for"
@@ -2841,6 +2949,9 @@ msgid ""
 "Any options showing as not set inherit at runtime from your global or "
 "address specific preferences (viewable on other tabs)"
 msgstr ""
+"Любые параметры, отображаемые как не установленные, наследуются во время "
+"выполнения от ваших глобальных настроек или настроек конкретного адреса ("
+"можно просмотреть на других вкладках)"
 
 #: templates/postorius/user/list_options.html:19
 msgid "Use this form to change the email used for this subscription"
@@ -2881,10 +2992,8 @@ msgid "User has no subscriptions."
 msgstr "У пользователя нет подписок."
 
 #: templates/postorius/user/manage.html:93
-#, fuzzy
-#| msgid "Account"
 msgid "Web Account"
-msgstr "Аккаунт"
+msgstr "Веб-аккаунт"
 
 #: templates/postorius/user/manage.html:96
 msgid "Username"
@@ -2909,7 +3018,7 @@ msgstr "Изменить пароль"
 
 #: templates/postorius/user/subscription_preferences.html:21
 msgid "Each list subscription can have specific Mailman preferences."
-msgstr ""
+msgstr "Каждая подписка на список может иметь определенные настройки Mailman."
 
 #: templates/postorius/user/subscription_preferences.html:32
 msgid "Subscription"
@@ -3043,20 +3152,20 @@ msgstr "Добавить {}"
 
 #: views/list.py:171
 msgid "No {}s were found matching the search."
-msgstr ""
+msgstr "{}s не найдено по запросу."
 
 #: views/list.py:174
 msgid "List has no {}s"
-msgstr ""
+msgstr "Список не содержит {}s"
 
 #: views/list.py:186
 msgid "The selected members have been unsubscribed"
-msgstr ""
+msgstr "Выбранные подписчики были отписаны"
 
 #: views/list.py:207
 #, python-brace-format
 msgid "{email} has been added with the role {role}"
-msgstr ""
+msgstr "{email} был добавлен с ролью {role}"
 
 #: views/list.py:257
 msgid "Member does not exist"
@@ -3094,7 +3203,7 @@ msgstr "Что-то пошло не так. Пожалуйста, повтори
 msgid ""
 "Your subscription request has been submitted and is waiting for moderator "
 "approval."
-msgstr ""
+msgstr "Ваш запрос на подписку отправлен и ожидает одобрения модератора."
 
 #: views/list.py:618
 #, python-format
@@ -3117,12 +3226,14 @@ msgstr "Вы можете отписывать только себя."
 msgid ""
 "You have a pending unsubscription request waiting for moderator approval."
 msgstr ""
+"У вас есть ожидающий рассмотрения запрос на отмену подписки, ожидающий "
+"одобрения модератора."
 
 #: views/list.py:696
 msgid ""
 "Your unsubscription request has been submitted and is waiting for moderator "
 "approval."
-msgstr ""
+msgstr "Ваш запрос на отмену подписки отправлен и ожидает одобрения модератора."
 
 #: views/list.py:704
 #, python-format
@@ -3144,6 +3255,8 @@ msgid ""
 " Subscription may be pending address verification, confirmation or approval "
 "as appropriate."
 msgstr ""
+" Подписка может ожидать проверки адреса, подтверждения или одобрения в "
+"зависимости от обстоятельств."
 
 #: views/list.py:769 views/list.py:839
 #, python-format
@@ -3193,11 +3306,11 @@ msgstr "Задержанное сообщение не найдено."
 
 #: views/list.py:928
 msgid "Moderation action for {} set to {}"
-msgstr ""
+msgstr "Действие модерации для установлено {} как {}"
 
 #: views/list.py:936
 msgid "Failed to set moderation action for {}"
-msgstr ""
+msgstr "Не удалось установить действие модерации для {}"
 
 #: views/list.py:988
 msgid "Choose a Domain"
@@ -3322,7 +3435,7 @@ msgstr "Все подписчики были отписаны от списка.
 
 #: views/list.py:1576
 msgid "The header matches were successfully modified."
-msgstr ""
+msgstr "Соответствия заголовков были успешно изменены."
 
 #: views/list.py:1583
 msgid "New header"
@@ -3389,10 +3502,8 @@ msgid "Password updated successfully"
 msgstr "Пароль успешно изменён"
 
 #: views/user.py:522
-#, fuzzy
-#| msgid "Successfully updated user."
 msgid "Successfully deleted account"
-msgstr "Пользователь успешно обновлён."
+msgstr "Учетная запись успешно удалена"
 
 #~ msgid "Logout"
 #~ msgstr "Выйти"
