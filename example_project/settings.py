@@ -90,6 +90,7 @@ INSTALLED_APPS = (
 
 
 MIDDLEWARE = [
+    'allauth.account.middleware.AccountMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     # NOTE: Do not include DebugToolbarMiddleware in any production site.
     'debug_toolbar.middleware.DebugToolbarMiddleware',
