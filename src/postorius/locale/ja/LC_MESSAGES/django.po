@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Shohei Kusakata <shohei@kusakata.com>, 2020, 2021, 2022.
 # Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2020.
+# Matsubara <matsubara.cc@mie-u.ac.jp>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-26 20:12-0700\n"
-"PO-Revision-Date: 2022-09-14 12:17+0000\n"
-"Last-Translator: Shohei Kusakata <shohei@kusakata.com>\n"
+"PO-Revision-Date: 2023-09-14 05:52+0000\n"
+"Last-Translator: Matsubara <matsubara.cc@mie-u.ac.jp>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ja/>\n"
 "Language: ja\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.1-dev\n"
+"X-Generator: Weblate 5.0.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -114,7 +115,7 @@ msgstr "バウンスによって無効"
 
 #: forms/fields.py:51
 msgid "Hold for moderation"
-msgstr ""
+msgstr "承認待ち"
 
 #: forms/fields.py:52
 msgid "Reject (with notification)"
@@ -130,7 +131,7 @@ msgstr "即座に承認 (他のルールを無視)"
 
 #: forms/fields.py:55
 msgid "Default processing"
-msgstr ""
+msgstr "デフォルト処理"
 
 #: forms/fields.py:138
 msgid "Make at least one selection"
@@ -175,7 +176,7 @@ msgstr ""
 
 #: forms/fields.py:188
 msgid "Moderation"
-msgstr ""
+msgstr "承認設定"
 
 #: forms/fields.py:190 forms/list_forms.py:1281
 #: templatetags/membership_helpers.py:84
@@ -217,14 +218,12 @@ msgid "Yearly"
 msgstr "毎年"
 
 #: forms/list_forms.py:51
-#, fuzzy
-#| msgid "Only mailinglist moderators"
 msgid "Only mailinglist administrators"
-msgstr "メーリングリストのモデレータのみ"
+msgstr "メーリングリストの管理者のみ"
 
 #: forms/list_forms.py:52
 msgid "Mailinglist administrators and members"
-msgstr ""
+msgstr "メーリングリストのモデレーターとメンバー"
 
 #: forms/list_forms.py:53
 msgid "Anyone"
@@ -252,25 +251,23 @@ msgstr "リストのオーナーのメールアドレスを入力してくださ
 
 #: forms/list_forms.py:85
 msgid "Advertise this list?"
-msgstr ""
+msgstr "メーリングリストを公開しますか？"
 
 #: forms/list_forms.py:86
 msgid "Please choose a list type."
-msgstr ""
+msgstr "メーリングリストのタイプを選択してください。"
 
 #: forms/list_forms.py:89
 msgid "Advertise this list in list index"
-msgstr ""
+msgstr "メーリングリストを公開する"
 
 #: forms/list_forms.py:90
 msgid "Hide this list in list index"
-msgstr ""
+msgstr "メーリングリストを非公開にする"
 
 #: forms/list_forms.py:94 forms/list_forms.py:1127
-#, fuzzy
-#| msgid "Description"
 msgid "Short Description"
-msgstr "説明"
+msgstr "簡易説明"
 
 #: forms/list_forms.py:104
 msgid "Choose an existing Domain."
@@ -278,27 +275,27 @@ msgstr "既存のドメインを選択してください。"
 
 #: forms/list_forms.py:105
 msgid "Choose a valid Mail Host"
-msgstr ""
+msgstr "有効なメールドメインを選択してください"
 
 #: forms/list_forms.py:110
 msgid "List Style"
-msgstr ""
+msgstr "メーリングリストの形式"
 
 #: forms/list_forms.py:114
 msgid "Choose a List Style."
-msgstr ""
+msgstr "メーリングリストの形式を選択してください。"
 
 #: forms/list_forms.py:115
 msgid "Choose a valid List Style."
-msgstr ""
+msgstr "有効なメーリングリストの形式を選択してください。"
 
 #: forms/list_forms.py:120
 msgid "Site admin has not created any domains"
-msgstr ""
+msgstr "ドメインが作成されていません"
 
 #: forms/list_forms.py:134
 msgid "Please enter a valid listname"
-msgstr ""
+msgstr "有効なメーリングリスト名を入力してください"
 
 #: forms/list_forms.py:169 forms/list_forms.py:207
 msgid "Your email address"
@@ -308,7 +305,8 @@ msgstr "あなたのメールアドレス"
 msgid ""
 "Subscribing via \"Primary Address\" will change subscription address when "
 "you change your primary address."
-msgstr ""
+msgstr "プライマリアドレスを変更した際に、変更後のメールアドレスが自動で適用されます"
+"。"
 
 #: forms/list_forms.py:179 forms/list_forms.py:210 forms/member_forms.py:30
 #: forms/system.py:38
@@ -339,15 +337,15 @@ msgstr "確認"
 
 #: forms/list_forms.py:235
 msgid "Moderate"
-msgstr ""
+msgstr "承認"
 
 #: forms/list_forms.py:236
 msgid "Confirm, then moderate"
-msgstr ""
+msgstr "確認後、承認"
 
 #: forms/list_forms.py:246
 msgid "Subscription Policy"
-msgstr ""
+msgstr "参加者ポリシー"
 
 #: forms/list_forms.py:249
 msgid ""
@@ -1216,10 +1214,8 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:1137
-#, fuzzy
-#| msgid "Description"
 msgid "Long Description"
-msgstr "説明"
+msgstr "詳細説明"
 
 #: forms/list_forms.py:1138
 msgid "A longer description of this mailing list."
@@ -1427,7 +1423,7 @@ msgstr "表示名"
 
 #: forms/member_forms.py:37
 msgid "Please enter a display name."
-msgstr "表示名を入力してください"
+msgstr "表示名を入力してください。"
 
 #: forms/system.py:32
 msgid "Add ban"
@@ -1527,26 +1523,18 @@ msgid ""
 msgstr ""
 
 #: models.py:75
-#, fuzzy
-#| msgid "Owners"
 msgid "owner"
 msgstr "オーナー"
 
 #: models.py:76
-#, fuzzy
-#| msgid "Members"
 msgid "member"
 msgstr "メンバー"
 
 #: models.py:77
-#, fuzzy
-#| msgid "Non-Members"
 msgid "nonmember"
 msgstr "非メンバー"
 
 #: models.py:78
-#, fuzzy
-#| msgid "Moderators"
 msgid "moderator"
 msgstr "モデレータ"
 
@@ -1731,10 +1719,8 @@ msgstr "Mailman ロゴ"
 
 #: templates/postorius/base.html:39 templates/postorius/base.html:122
 #: templates/postorius/lists/summary.html:110
-#, fuzzy
-#| msgid "Sign Up"
 msgid "Sign In"
-msgstr "登録"
+msgstr "サインイン"
 
 #: templates/postorius/base.html:43 templates/postorius/base.html:126
 msgid "Sign Up"
@@ -1750,13 +1736,11 @@ msgstr "Mailman 設定"
 
 #: templates/postorius/base.html:67 templates/postorius/base.html:149
 msgid "Posting activity"
-msgstr ""
+msgstr "投稿情報"
 
 #: templates/postorius/base.html:73 templates/postorius/base.html:155
-#, fuzzy
-#| msgid "Sign Up"
 msgid "Sign Out"
-msgstr "登録"
+msgstr "サインアウト"
 
 #: templates/postorius/base.html:83
 msgid "Lists"
@@ -1900,10 +1884,8 @@ msgid "Add a new domain"
 msgstr "新しいドメインを追加"
 
 #: templates/postorius/domain/new.html:17
-#, fuzzy
-#| msgid "Edit domain"
 msgid "Create domain"
-msgstr "ドメインを編集"
+msgstr "ドメインを作成"
 
 #: templates/postorius/domain/owners.html:6
 msgid "Add domain owner "
@@ -2216,10 +2198,8 @@ msgid "Mass subscribe"
 msgstr ""
 
 #: templates/postorius/lists/mass_subscribe.html:16
-#, fuzzy
-#| msgid "Unsubscribe"
 msgid "Subscribe users"
-msgstr "購読解除"
+msgstr "参加者を一括登録"
 
 #: templates/postorius/lists/memberoptions.html:7
 #: templates/postorius/user/list_options.html:7
@@ -2370,15 +2350,7 @@ msgid "Subscribe to this list"
 msgstr ""
 
 #: templates/postorius/lists/summary.html:88
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                  To subscribe you can send an email with 'subscribe' in "
-#| "the subject to\n"
-#| "                  <a href=\"mailto:%(address)s?subject=Subscribe\">"
-#| "%(address)s</a>\n"
-#| "                  or use the form below:\n"
-#| "              "
+#, python-format
 msgid ""
 "\n"
 "                To subscribe you can send an email with 'subscribe' in the "
@@ -2389,11 +2361,11 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"                  リストを購読するには題名に 'subscribe' と書いたメールを\n"
-"                  <a href=\"mailto:%(address)s?subject=Subscribe\">"
-"%(address)s</a>\n"
+"                リストを購読するには題名に 'subscribe' と書いたメールを\n"
+"                  <a href=\"mailto:%(address)s?subject=Subscribe\""
+">%(address)s</a>\n"
 "                  に送信するか、あるいは下のフォームを使ってください:\n"
-"              "
+"            "
 
 #: templates/postorius/lists/summary.html:96
 #: templates/postorius/lists/summary.html:124
@@ -2407,14 +2379,6 @@ msgid ""
 msgstr ""
 
 #: templates/postorius/lists/summary.html:105
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "        To subscribe or unsubscribe from this list, please log in first.\n"
-#| "        If you have not previously logged in, you may need to set up an "
-#| "account\n"
-#| "        with the appropriate email address.\n"
-#| "        "
 msgid ""
 "\n"
 "        To subscribe or unsubscribe from this list, please sign in first.\n"
@@ -2424,18 +2388,12 @@ msgid ""
 "        "
 msgstr ""
 "\n"
-"        リストを購読あるいは購読解除するにはまずログインしてください。\n"
-"        ログインしたことがない場合、適切なメールアドレス使って\n"
+"        リストを購読あるいは購読解除するにはまずサインインしてください。\n"
+"        サインインしたことがない場合、適切なメールアドレス使って\n"
 "        アカウントをセットアップする必要があります。\n"
 "        "
 
 #: templates/postorius/lists/summary.html:116
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "        You can also subscribe without creating an account.\n"
-#| "        If you wish to do so, please use the form below.\n"
-#| "        "
 msgid ""
 "\n"
 "          You can also subscribe without creating an account.\n"
@@ -2443,9 +2401,9 @@ msgid ""
 "          "
 msgstr ""
 "\n"
-"        アカウントを作成しなくてもリストを購読することができます。\n"
+"          アカウントを作成しなくてもリストを購読することができます。\n"
 "        そうしたい場合は、下のフォームを使ってください。\n"
-"        "
+"          "
 
 #: templates/postorius/lists/summary.html:134
 msgid "List metrics"
@@ -2595,10 +2553,8 @@ msgstr ""
 #: templates/postorius/user/confirm_delete.html:13
 #: templates/postorius/user/confirm_delete.html:22
 #: templates/postorius/user/manage.html:119
-#, fuzzy
-#| msgid "Account"
 msgid "Delete Account"
-msgstr "アカウント"
+msgstr "アカウント削除"
 
 #: templates/postorius/user/confirm_delete.html:17
 msgid ""
@@ -2622,10 +2578,8 @@ msgid "Use this form to change the email used for this subscription"
 msgstr ""
 
 #: templates/postorius/user/list_options.html:23
-#, fuzzy
-#| msgid "Manage Subscription"
 msgid "Change email used for subscription"
-msgstr "購読管理"
+msgstr "購読に使用するメールアドレスを変更する"
 
 #: templates/postorius/user/mailman_settings.html:7
 msgid "Subscription settings"
@@ -2653,16 +2607,12 @@ msgid "Role"
 msgstr ""
 
 #: templates/postorius/user/manage.html:89
-#, fuzzy
-#| msgid "Manage Subscription"
 msgid "User has no subscriptions."
-msgstr "購読管理"
+msgstr "まだ、どのメーリングリストにも参加していません。"
 
 #: templates/postorius/user/manage.html:93
-#, fuzzy
-#| msgid "Account"
 msgid "Web Account"
-msgstr "アカウント"
+msgstr "ウェブアカウント"
 
 #: templates/postorius/user/manage.html:96
 msgid "Username"
@@ -2887,10 +2837,8 @@ msgid "Please check your inbox for further instructions"
 msgstr ""
 
 #: views/list.py:679
-#, fuzzy
-#| msgid "You are not subscribed to {}."
 msgid "You can only unsubscribe yourself."
-msgstr "{} は購読していません。"
+msgstr "購読解除は自分自身でのみ行えます。"
 
 #: views/list.py:685
 msgid ""
@@ -3128,10 +3076,8 @@ msgid "Attachment does not exist"
 msgstr "添付ファイルが存在しません"
 
 #: views/system.py:31
-#, fuzzy
-#| msgid "Mailman logo"
 msgid "Mailman Core Version"
-msgstr "Mailman ロゴ"
+msgstr "Mailman Core バージョン"
 
 #: views/system.py:32
 msgid "Mailman Core API Version"
