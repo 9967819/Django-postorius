@@ -1348,7 +1348,10 @@ class ListHeaderMatchForm(forms.Form):
     )
     pattern = forms.CharField(
         label=_('Pattern'),
-        help_text=_("Regular expression matching the header's value."),
+        help_text=_(
+            "Regular expression matching the header's value "
+            "(case-insensitive)."
+        ),
         error_messages={
             'required': _('Please enter a pattern.'),
             'invalid': _('Please enter a valid pattern.'),
