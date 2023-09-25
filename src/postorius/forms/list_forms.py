@@ -1350,7 +1350,7 @@ class ListHeaderMatchForm(forms.Form):
         label=_('Pattern'),
         help_text=_(
             "Regular expression matching the header's value "
-            "(case-insensitive)."
+            '(case-insensitive).'
         ),
         error_messages={
             'required': _('Please enter a pattern.'),
