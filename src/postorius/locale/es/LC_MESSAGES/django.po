@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-25 18:55+0000\n"
-"PO-Revision-Date: 2023-07-05 11:45+0000\n"
+"PO-Revision-Date: 2023-09-27 03:35+0000\n"
 "Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/es/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"X-Generator: Weblate 5.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -929,10 +929,8 @@ msgstr ""
 "De:."
 
 #: forms/list_forms.py:728
-#, fuzzy
-#| msgid "Addresses"
 msgid "DMARC Addresses"
-msgstr "Direcciones"
+msgstr "Direcciones DMARC"
 
 #: forms/list_forms.py:731
 msgid ""
@@ -941,6 +939,12 @@ msgid ""
 "to posts From: an address matching, case insensitevely, one of these "
 "addresses or patterns regardless of the From: domain's DMARC policy."
 msgstr ""
+"Direcciones de correo electrónico y expresiones regulares que coincidan con "
+"direcciones de correo electrónico, una por línea. Las expresiones regulares "
+"empiezan por '^', como en '^.*@ejemplo\\.com'. La acción de mitigación DMARC "
+"se aplicará a los mensajes De: una dirección que coincida, sin distinción de "
+"mayúsculas y minúsculas, con una de estas direcciones o patrones, "
+"independientemente de la política DMARC del dominio De:."
 
 #: forms/list_forms.py:739
 msgid "DMARC rejection notice"
@@ -1671,10 +1675,10 @@ msgid "Pattern"
 msgstr "Patrón"
 
 #: forms/list_forms.py:1352
-#, fuzzy
-#| msgid "Regular expression matching the header's value."
 msgid "Regular expression matching the header's value (case-insensitive)."
-msgstr "Expresión regular que encaje con el valor de la cabecera."
+msgstr ""
+"Expresión regular que coincide con el valor de la cabecera (no distingue "
+"mayúsculas de minúsculas)."
 
 #: forms/list_forms.py:1356
 msgid "Please enter a pattern."
