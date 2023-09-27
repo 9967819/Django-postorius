@@ -10,16 +10,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-25 18:55+0000\n"
-"PO-Revision-Date: 2023-06-28 18:52+0000\n"
+"PO-Revision-Date: 2023-09-27 03:35+0000\n"
 "Last-Translator: Wellington Terumi Uemura <wellingtonuemura@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/gnu-"
-"mailman/postorius/pt_BR/>\n"
+"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
+"gnu-mailman/postorius/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.18.1\n"
+"X-Generator: Weblate 5.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -926,10 +926,8 @@ msgstr ""
 "De:."
 
 #: forms/list_forms.py:728
-#, fuzzy
-#| msgid "Addresses"
 msgid "DMARC Addresses"
-msgstr "Endereços"
+msgstr "Endereços DMARC"
 
 #: forms/list_forms.py:731
 msgid ""
@@ -938,6 +936,11 @@ msgid ""
 "to posts From: an address matching, case insensitevely, one of these "
 "addresses or patterns regardless of the From: domain's DMARC policy."
 msgstr ""
+"Os endereços de e-mail e os regexps que correspondam a endereços de e-mail, "
+"um por linha. Os regexps começam com \"^\", como em \"^.*@example\\.com\". A "
+"ação de atenuação do DMARC será aplicada às mensagens From: de um endereço "
+"que corresponda, sem distinção de casos, a um desses endereços ou padrões, "
+"independentemente da política DMARC do domínio From:."
 
 #: forms/list_forms.py:739
 msgid "DMARC rejection notice"
@@ -1671,10 +1674,10 @@ msgid "Pattern"
 msgstr "Expressão Regular"
 
 #: forms/list_forms.py:1352
-#, fuzzy
-#| msgid "Regular expression matching the header's value."
 msgid "Regular expression matching the header's value (case-insensitive)."
-msgstr "Expressão regular correspondente ao valor do cabeçalho."
+msgstr ""
+"Expressão regular correspondente ao valor do cabeçalho (sem distinção entre "
+"maiúsculas e minúsculas)."
 
 #: forms/list_forms.py:1356
 msgid "Please enter a pattern."
