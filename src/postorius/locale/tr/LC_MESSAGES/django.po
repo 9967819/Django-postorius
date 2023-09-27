@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-25 18:55+0000\n"
-"PO-Revision-Date: 2023-06-28 18:52+0000\n"
+"PO-Revision-Date: 2023-09-27 03:35+0000\n"
 "Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/tr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.18.1\n"
+"X-Generator: Weblate 5.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -915,10 +915,8 @@ msgstr ""
 "DMARC politikasından bağımsız olarak tüm mesajlar için geçerli olmalıdır."
 
 #: forms/list_forms.py:728
-#, fuzzy
-#| msgid "Addresses"
 msgid "DMARC Addresses"
-msgstr "Adresler"
+msgstr "DMARC Adresleri"
 
 #: forms/list_forms.py:731
 msgid ""
@@ -927,6 +925,12 @@ msgid ""
 "to posts From: an address matching, case insensitevely, one of these "
 "addresses or patterns regardless of the From: domain's DMARC policy."
 msgstr ""
+"Her satırda bir tane olacak şekilde e-posta adresleri ve e-posta "
+"adresleriyle eşleşen düzenli ifadeler. Düzenli ifadeler '^.*@example\\.com' "
+"örneğinde olduğu gibi '^' ile başlar. DMARC azaltma eylemi, Kimden: etki "
+"alanının DMARC politikasına bakılmaksızın, bu adreslerden veya kalıplardan "
+"biriyle büyük/küçük harf duyarlı olmadan eşleşen Kimden: adresine "
+"uygulanacaktır."
 
 #: forms/list_forms.py:739
 msgid "DMARC rejection notice"
@@ -1646,10 +1650,9 @@ msgid "Pattern"
 msgstr "Kalıp"
 
 #: forms/list_forms.py:1352
-#, fuzzy
-#| msgid "Regular expression matching the header's value."
 msgid "Regular expression matching the header's value (case-insensitive)."
-msgstr "Başlığın değeriyle eşleşen düzenli ifade."
+msgstr ""
+"Başlığın değeriyle eşleşen düzenli ifade (büyük/küçük harf duyarlı olmadan)."
 
 #: forms/list_forms.py:1356
 msgid "Please enter a pattern."
