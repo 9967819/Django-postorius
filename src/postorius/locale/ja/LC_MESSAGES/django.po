@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-25 18:55+0000\n"
-"PO-Revision-Date: 2023-10-03 07:56+0000\n"
+"PO-Revision-Date: 2023-10-05 08:12+0000\n"
 "Last-Translator: Matsubara <matsubara.cc@mie-u.ac.jp>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ja/>\n"
@@ -116,7 +116,7 @@ msgstr "バウンスによって無効"
 
 #: forms/fields.py:51
 msgid "Hold for moderation"
-msgstr "承認待ち"
+msgstr "保留(承認待ち)"
 
 #: forms/fields.py:52
 msgid "Reject (with notification)"
@@ -368,8 +368,7 @@ msgid ""
 msgstr ""
 "開く: 購読は自動的に追加されます\n"
 "確認 : 購読者は、送信されたEメールを使って購読を確認する必要があります。\n"
-"モデレート: モデレータは各サブスクリプションを手動で承認する必要があります。"
-"\n"
+"モデレート: モデレータは各購読を手動で承認する必要があります。\n"
 "確認してからモデレートする : "
 "まず購読者が確認し、次にモデレーターが承認する必要があります。"
 
@@ -454,10 +453,8 @@ msgid ""
 "This is the bounce score above which a member's subscription  will be "
 "automatically disabled. When the subscription is  re-enabled, their bounce "
 "score will be reset to zero."
-msgstr ""
-"これは、メンバーのサブスクリプションが自動的に無効になるバウンス "
-"スコアです。サブスクリプションが再度有効になると、バウンス "
-"スコアはゼロにリセットされます。"
+msgstr "これは、メンバーの購読が自動的に無効になるバウンス "
+"スコアです。購読が再度有効になると、バウンス スコアはゼロにリセットされます。"
 
 #: forms/list_forms.py:305
 msgid "Bounce info stale after"
@@ -744,7 +741,7 @@ msgstr ""
 
 #: forms/list_forms.py:583
 msgid "Hold these non-members"
-msgstr "承認待ちとする非メンバーリスト"
+msgstr "保留とする非メンバーリスト"
 
 #: forms/list_forms.py:586
 msgid ""
@@ -1026,11 +1023,11 @@ msgstr ""
 "トを定義しています。これらは標準に準拠したメールソフトを使っているエンドユー"
 "ザーを大いに助けるものです。通常は常に有効にしておくべきです。しかし、まだす"
 "べてのメールソフトが標準に準拠しているわけではありませんし、非準拠のメールソ"
-"フトを使っている会員が多数いる場合は、これらのヘッダを見ていらいらするかもし"
-"れません。まず、これらのヘッダーがなぜ存在するのか、メールソフトでどのように"
-"非表示にするのかについて、メンバーを教育する努力をすべきです。最後の手段とし"
-"て、これらのヘッダーを無効にすることもできますが、これは推奨されません（実際"
-"、これらのヘッダーを無効にする機能はいずれなくなるかもしれません）。"
+"フトを使っているメンバーが多数いる場合は、これらのヘッダを見ていらいらするか"
+"もしれません。まず、これらのヘッダーがなぜ存在するのか、メールソフトでどのよ"
+"うに非表示にするのかについて、メンバーを教育する努力をすべきです。最後の手段"
+"として、これらのヘッダーを無効にすることもできますが、これは推奨されません（"
+"実際、これらのヘッダーを無効にする機能はいずれなくなるかもしれません）。"
 
 #: forms/list_forms.py:841
 msgid "Include the list post header"
@@ -1325,8 +1322,8 @@ msgid ""
 "say 'No', no notifications will be sent to users about the pending approval "
 "on their messages."
 msgstr ""
-"Mailmanはユーザーに承認待ちのメッセージを通知しますか？「いいえ」と答えた場合"
-"、承認待ちのメッセージに関する通知はユーザーに送られません。"
+"Mailmanはユーザーに保留（承認待ち）のメッセージを通知しますか？「いいえ」と答"
+"えた場合、承認待ちのメッセージに関する通知はユーザーに送られません。"
 
 #: forms/list_forms.py:1070 forms/list_forms.py:1297
 msgid "Send welcome message"
@@ -1357,8 +1354,9 @@ msgid ""
 "you did so.\n"
 "The text of Goodbye message can be set via the Templates tab."
 msgstr ""
-"新しく退会した会員にお別れのメッセージを送りますか？ 手動で退会する予定で、退"
-"会したことを知られたくない場合のみ、このオプションをオフにしてください。\n"
+"新しく退会したメンバーにお別れのメッセージを送りますか？ 手動で退会する予定で"
+"、退会したことを知られたくない場合のみ、このオプションをオフにしてください。"
+"\n"
 "お別れのメッセージのテキストはテンプレートタブで設定できます。"
 
 #: forms/list_forms.py:1095
@@ -1885,7 +1883,7 @@ msgstr "メーリングリストへの招待時に購読者に送られるメッ
 
 #: template_list.py:116
 msgid "The notice sent to a member when they unsubscribe from a mailing list."
-msgstr "メーリングリストから退会する際に会員に送られる通知。"
+msgstr "メーリングリストから退会する際にメンバーに送られる通知。"
 
 #: template_list.py:122
 msgid ""
@@ -2207,7 +2205,7 @@ msgstr "エラーが発生しました"
 
 #: templates/postorius/fragments/bans.html:14
 msgid "Ban email"
-msgstr "メールアドレスをブロックしました"
+msgstr "メールアドレスをブロック"
 
 #: templates/postorius/fragments/bans.html:22
 msgid "Currently banned addresses"
@@ -2301,7 +2299,7 @@ msgstr "このリストを永久に削除してもよろしいですか？"
 
 #: templates/postorius/lists/confirm_delete.html:14
 msgid "All settings and membership data will be lost!"
-msgstr "すべての設定と会員データは失われます！"
+msgstr "すべての設定とメンバーデータは失われます！"
 
 #: templates/postorius/lists/confirm_delete.html:20
 #, python-format
