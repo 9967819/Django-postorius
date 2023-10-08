@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-25 18:55+0000\n"
-"PO-Revision-Date: 2023-08-05 09:24+0000\n"
-"Last-Translator: Salif Mehmed <mail@salif.eu>\n"
+"PO-Revision-Date: 2023-10-08 21:22+0000\n"
+"Last-Translator: Дилян Палаузов <dpa-weblate@aegee.org>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/bg/>\n"
 "Language: bg\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"X-Generator: Weblate 5.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -221,7 +221,7 @@ msgstr "Само администратори на пощенския списъ
 
 #: forms/list_forms.py:52
 msgid "Mailinglist administrators and members"
-msgstr ""
+msgstr "Администратори на пощенския списък и членове"
 
 #: forms/list_forms.py:53
 msgid "Anyone"
@@ -444,8 +444,8 @@ msgid ""
 "automatically disabled. When the subscription is  re-enabled, their bounce "
 "score will be reset to zero."
 msgstr ""
-"Това е броят върнати писма, над който абонаментът автоматично ще се изключи. "
-"Когато абонаментът се поднови, броят върнати писма ще се нулира."
+"Това е броят върнати писма, над който абонаментът автоматично ще се "
+"прекрати. Когато абонаментът се поднови, броят върнати писма ще се нулира."
 
 #: forms/list_forms.py:305
 msgid "Bounce info stale after"
@@ -711,7 +711,7 @@ msgid ""
 msgstr ""
 "Това е списък от регулярни изрази, по един на ред, за електронни адреси, "
 "които могат да пишат до този пощенски списък, без да са абонати на списъка. "
-"Всеки ред е регулярен израз започващ с `^' и се сравняват с подателите на "
+"Всеки ред е регулярен израз започващ с `^' и се сравнява с подателя на "
 "електронни писма. Макар тук да може да се въведат и адреси, които не са "
 "регулярни изрази, за предпочитане е такива адреси да се добавят като не-"
 "абонати с Модериране: Обработка по подразбиране."
@@ -844,10 +844,8 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:728
-#, fuzzy
-#| msgid "Addresses"
 msgid "DMARC Addresses"
-msgstr "адреси"
+msgstr "DMARC адреси"
 
 #: forms/list_forms.py:731
 msgid ""
@@ -1081,17 +1079,14 @@ msgid "Filter content"
 msgstr ""
 
 #: forms/list_forms.py:927
-#, fuzzy
-#| msgid ""
-#| "Should Mailman filter the content of list traffic according to the "
-#| "settings below?"
 msgid ""
 "Should Mailman filter the content of list traffic according to the settings "
 "below?\n"
 "<b>None of the settings below have any effect if this is No.</b>"
 msgstr ""
 "Да филтрира ли Mailman съдържанието до пощенския списък, съгласно "
-"настройките по-долу?"
+"настройките по-долу?\n"
+"<b>Никоя от настройките долу няма ефект, ако това е Не</b>"
 
 #: forms/list_forms.py:933
 msgid "Filter types"
@@ -1182,6 +1177,8 @@ msgstr ""
 #: forms/list_forms.py:1010
 msgid "Autoresponse owner text"
 msgstr ""
+"Текст на автоматичния отговор на писмата до администраторите на пощенския "
+"списък"
 
 #: forms/list_forms.py:1013
 msgid "Auto-response text to send to -owner emails."
@@ -1456,7 +1453,7 @@ msgstr ""
 msgid ""
 "If checked, moderators will not have to approve the subscription request."
 msgstr ""
-"Ако е избрано, модераторите няма да е нужно да одобряват нови желания за "
+"Ако е избрано, модераторите няма да е нужно да одобряват тези заявки за "
 "включване."
 
 #: forms/list_forms.py:1266
@@ -1929,8 +1926,6 @@ msgstr ""
 
 #: templates/postorius/base.html:34 templates/postorius/base.html:117
 #: templates/postorius/lists/summary.html:110
-#, fuzzy
-#| msgid "Sign Up"
 msgid "Sign In"
 msgstr "Нова регистрация"
 
@@ -1955,10 +1950,8 @@ msgstr "Пишеща дейност"
 
 #: templates/postorius/base.html:68 templates/postorius/base.html:144
 #: templates/postorius/base.html:173
-#, fuzzy
-#| msgid "Sign Up"
 msgid "Sign Out"
-msgstr "Нова регистрация"
+msgstr "Изход"
 
 #: templates/postorius/base.html:78
 msgid "Lists"
@@ -2473,7 +2466,7 @@ msgstr ""
 
 #: templates/postorius/lists/members.html:62
 msgid "Remove Selected"
-msgstr ""
+msgstr "Изтрий избраните"
 
 #: templates/postorius/lists/members.html:78
 #: templates/postorius/user/address_preferences.html:32
@@ -2488,13 +2481,11 @@ msgstr "Режим на доставка"
 
 #: templates/postorius/lists/members.html:85
 msgid "Moderation Action"
-msgstr ""
+msgstr "Действие на модериратора"
 
 #: templates/postorius/lists/members.html:90
-#, fuzzy
-#| msgid "Bounce score threshold"
 msgid "Bounce Score"
-msgstr "Горна граница за върнати писма"
+msgstr "Граница за върнати писма"
 
 #: templates/postorius/lists/members.html:116
 msgid "Masked per the user request"
@@ -2547,8 +2538,6 @@ msgid "To contact the list owners, use the following email address:"
 msgstr "За връзка със собствениците на пощенския списък пиши на:"
 
 #: templates/postorius/lists/summary.html:29
-#, fuzzy
-#| msgid "You have to login to visit the archives of this list."
 msgid "You have to sign in to visit the archives of this list."
 msgstr "Необходимо е да влезеш, за да видиш архивите на този пощенски списък."
 
@@ -2631,14 +2620,6 @@ msgstr ""
 "свържи със собствениците на пощенския списък."
 
 #: templates/postorius/lists/summary.html:105
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "        To subscribe or unsubscribe from this list, please log in first.\n"
-#| "        If you have not previously logged in, you may need to set up an "
-#| "account\n"
-#| "        with the appropriate email address.\n"
-#| "        "
 msgid ""
 "\n"
 "        To subscribe or unsubscribe from this list, please sign in first.\n"
@@ -2654,12 +2635,6 @@ msgstr ""
 "        "
 
 #: templates/postorius/lists/summary.html:116
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "        You can also subscribe without creating an account.\n"
-#| "        If you wish to do so, please use the form below.\n"
-#| "        "
 msgid ""
 "\n"
 "          You can also subscribe without creating an account.\n"
@@ -2667,9 +2642,9 @@ msgid ""
 "          "
 msgstr ""
 "\n"
-"        Можеш да се запишеш и без да си правиш регистрация.\n"
-"        За целта използвай следния формуляр.\n"
-"        "
+"          Можеш да се запишеш и без да си правиш регистрация.\n"
+"          За целта използвай следния формуляр.\n"
+"          "
 
 #: templates/postorius/lists/summary.html:134
 msgid "List metrics"
@@ -2784,7 +2759,7 @@ msgstr "Mailman система"
 
 #: templates/postorius/system_information.html:23
 msgid "Queues"
-msgstr ""
+msgstr "Опашки"
 
 #: templates/postorius/user/address_preferences.html:8
 #: templates/postorius/user/subscription_preferences.html:7
@@ -2810,10 +2785,6 @@ msgid "Each email address can have specific Mailman preferences."
 msgstr "Всеки електронен адрес може да има собствени Mailman настройки."
 
 #: templates/postorius/user/address_preferences.html:21
-#, fuzzy
-#| msgid ""
-#| "Any options showing as not set here have inherit at runtime from your "
-#| "global preferences (viewable on other tab)"
 msgid ""
 "Any options showing as not set here inherit at runtime from your global "
 "preferences (viewable on other tab)"
@@ -2837,10 +2808,8 @@ msgstr "Създаден"
 #: templates/postorius/user/confirm_delete.html:13
 #: templates/postorius/user/confirm_delete.html:22
 #: templates/postorius/user/manage.html:115
-#, fuzzy
-#| msgid "Account"
 msgid "Delete Account"
-msgstr "Регистрация"
+msgstr "Изтрий регистрация"
 
 #: templates/postorius/user/confirm_delete.html:17
 msgid ""
@@ -3413,10 +3382,8 @@ msgid "Password updated successfully"
 msgstr "Паролата беше променена"
 
 #: views/user.py:522
-#, fuzzy
-#| msgid "Successfully updated user."
 msgid "Successfully deleted account"
-msgstr "Успешно обнових потребителя."
+msgstr "Успешно изтрих регистрацията"
 
 #~ msgid "Logout"
 #~ msgstr "Изход"
