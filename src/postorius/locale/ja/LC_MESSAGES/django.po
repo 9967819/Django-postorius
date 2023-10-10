@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-25 18:55+0000\n"
-"PO-Revision-Date: 2023-10-05 08:12+0000\n"
+"PO-Revision-Date: 2023-10-10 01:48+0000\n"
 "Last-Translator: Matsubara <matsubara.cc@mie-u.ac.jp>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ja/>\n"
@@ -197,14 +197,14 @@ msgid ""
 "Accept -- accepts any postings without any further checks. \n"
 "Default Processing -- run additional checks and accept the message. \n"
 msgstr ""
-"このメンバーがリストに投稿するときに実行されるデフォルトのアクション。\n"
+"このメンバーがリストに投稿するときに実行されるデフォルトの処理。\n"
 "リストのデフォルト -- リストのデフォルトのメンバーアクションに従います。\n"
 "保留 -- リストモデレーターによる承認のためにメッセージを保留します。\n"
 "拒否 -- 投稿者にバウンス通知を送ることで、自動的にメッセージを拒否します。バ"
 "ウンス通知の文面は自分で設定できます。\n"
 "破棄 -- これは単にメッセージを破棄し、投稿者には何も通知しません。\n"
-"承認 -- 投稿をそのまま受け入れる。\n"
-"デフォルト処理 -- 追加のチェックを実行し、メッセージを受け入れる。 \n"
+"承認 -- 投稿をそのまま受け入れます。\n"
+"デフォルト処理 -- 追加のチェックを実行し、メッセージを受け入れます。 \n"
 
 #: forms/list_forms.py:43
 msgid "Daily"
@@ -232,7 +232,7 @@ msgstr "メーリングリストの管理者のみ"
 
 #: forms/list_forms.py:52
 msgid "Mailinglist administrators and members"
-msgstr "メーリングリストのモデレーターとメンバー"
+msgstr "メーリングリストの管理者とメンバー"
 
 #: forms/list_forms.py:53
 msgid "Anyone"
@@ -268,11 +268,11 @@ msgstr "メーリングリストのタイプを選択してください。"
 
 #: forms/list_forms.py:89
 msgid "Advertise this list in list index"
-msgstr "メーリングリストを公開する"
+msgstr "メーリングリストを公開します"
 
 #: forms/list_forms.py:90
 msgid "Hide this list in list index"
-msgstr "メーリングリストを非公開にする"
+msgstr "メーリングリストを非公開にします"
 
 #: forms/list_forms.py:94 forms/list_forms.py:1138
 msgid "Short Description"
@@ -300,7 +300,7 @@ msgstr "有効なメーリングリストの形式を選択してください。
 
 #: forms/list_forms.py:120
 msgid "Site admin has not created any domains"
-msgstr "ドメインが作成されていません"
+msgstr "サイト管理者はドメインを作成していません"
 
 #: forms/list_forms.py:134
 msgid "Please enter a valid listname"
@@ -314,9 +314,7 @@ msgstr "あなたのメールアドレス"
 msgid ""
 "Subscribing via \"Primary Address\" will change subscription address when "
 "you change your primary address."
-msgstr ""
-"プライマリアドレスを変更した際に、変更後のメールアドレスが自動で適用されま"
-"す。"
+msgstr "プライマリアドレスを変更すると、購読しているアドレスも自動で変更されます。"
 
 #: forms/list_forms.py:179 forms/list_forms.py:210 forms/member_forms.py:30
 #: forms/system.py:38
@@ -355,7 +353,7 @@ msgstr "確認後、承認"
 
 #: forms/list_forms.py:246
 msgid "Subscription Policy"
-msgstr "参加者ポリシー"
+msgstr "購読ポリシー"
 
 #: forms/list_forms.py:249
 msgid ""
@@ -367,9 +365,9 @@ msgid ""
 "needs to authorize."
 msgstr ""
 "開く: 購読は自動的に追加されます\n"
-"確認 : 購読者は、送信されたEメールを使って購読を確認する必要があります。\n"
-"モデレート: モデレータは各購読を手動で承認する必要があります。\n"
-"確認してからモデレートする : "
+"確認 : 購読者は、送信されたメールを使って購読を確認する必要があります。\n"
+"承認: モデレーターは各購読を手動で承認する必要があります。\n"
+"確認してから承認する : "
 "まず購読者が確認し、次にモデレーターが承認する必要があります。"
 
 #: forms/list_forms.py:260
@@ -386,12 +384,12 @@ msgid ""
 "needs to authorize."
 msgstr ""
 "開く: 購読解除は自動的に行われます。\n"
-"確認: 購読者は、自分に送信された電子メールを使用して購読解除を確認する必要が"
-"あります。\n"
-"モデレート: モデレート モデレーターは手動で登録解除を承認する必要があります。"
+"確認: "
+"購読者は、自分に送信されたメールを使用して購読解除を確認する必要があります。"
 "\n"
+"承認: モデレーターは手動で登録解除を承認する必要があります。\n"
 "確認してからモデレートする: "
-"最初に加入者が確認する必要があり、次にモデレータが承認する必要があります。"
+"最初に加入者が確認する必要があり、次にモデレーターが承認する必要があります。"
 
 #: forms/list_forms.py:278 forms/list_forms.py:777
 #: templates/postorius/lists/held_messages.html:30
@@ -484,7 +482,7 @@ msgstr "このオプションは、メンバーのバウンススコアがバウ
 
 #: forms/list_forms.py:329
 msgid "Notify owner on disable"
-msgstr "無効化時に所有者に通知"
+msgstr "無効化時にオーナーに通知"
 
 #: forms/list_forms.py:331
 msgid ""
@@ -492,11 +490,11 @@ msgid ""
 "member's subscription is automatically disabled due to their bounce "
 "threshold being reached. "
 msgstr "このオプションは、バウンスのしきい値に達したメンバーの購読が自動的に無効にな"
-"った場合に、リスト所有者に通知するかどうかを制御します。 "
+"った場合に、リストオーナーに通知するかどうかを制御します。 "
 
 #: forms/list_forms.py:340
 msgid "Notify owner on removal"
-msgstr "所有者に撤去を通知"
+msgstr "オーナーに削除を通知"
 
 #: forms/list_forms.py:342
 msgid ""
@@ -504,7 +502,7 @@ msgid ""
 "is removed from the list after their disabled notifications have been "
 "exhausted. "
 msgstr "このオプションは、メンバーが無効化された後メンバーが退会させられる際に、リス"
-"ト所有者に通知するかどうかを制御します。 "
+"トオーナーに通知するかどうかを制御します。 "
 
 #: forms/list_forms.py:351
 msgid "Forward unrecognized bounces"
@@ -979,8 +977,8 @@ msgid ""
 " Forward = forward the message to the list owner(s).\n"
 " Preserve = save the message in qfiles/bad.\n"
 msgstr ""
-"フィルタリング後、内容がないメッセージに取るべきアクション\n"
-"アクション。\n"
+"フィルタリング後、内容がないメッセージに\n"
+"取るべきアクション。\n"
 " Discard = 静かにメッセージを破棄する。\n"
 " Reject = メッセージを破棄し、送信者に通知する。\n"
 " Forward = メッセージをリストのオーナーに転送する。\n"
