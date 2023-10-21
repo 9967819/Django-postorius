@@ -17,12 +17,27 @@ General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 
+
+.. _NEWS-1.3.10:
+
+1.3.10
+======
+
+(2023-10-21)
+
+Fixes
+-----
+
+* Fix min dependency requirement of django-mailman3 to 1.3.10. This
+  was missed in the previous 1.3.9 release.
+
+
 .. _NEWS-1.3.9:
 
 1.3.9
 =====
 
-(2023-10-24)
+(2023-10-21)
 
 * Honor per-list member roster visibility options (Closes #369)
 * Migrate to Bootstrap 5. (See !769)
