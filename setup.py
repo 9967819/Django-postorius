@@ -53,7 +53,7 @@ setup(
     package_dir={'': 'src'},
     include_package_data=True,
     install_requires=[
-        'django-mailman3>=1.3.8',
+        'django-mailman3>=1.3.10',
         'django>=3.2,<4.3',
         'mailmanclient>=3.3.3',
         'readme_renderer[md]',
