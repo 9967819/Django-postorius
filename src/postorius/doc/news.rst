@@ -22,6 +22,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 1.3.9
 =====
 
+(2023-10-24)
+
 * Honor per-list member roster visibility options (Closes #369)
 * Migrate to Bootstrap 5. (See !769)
 * Add ability to delete a user from the Users page (Closes #543)
