@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Fré van Limpt <fre@freedom.nl>, 2022.
 # Michael Smith <shmitty@protonmail.com>, 2022.
+# Thijs Kinkhorst <thijs@kinkhorst.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-25 18:55+0000\n"
-"PO-Revision-Date: 2022-11-16 21:03+0000\n"
-"Last-Translator: Fré van Limpt <fre@freedom.nl>\n"
+"PO-Revision-Date: 2023-10-30 19:16+0000\n"
+"Last-Translator: Thijs Kinkhorst <thijs@kinkhorst.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/nl/>\n"
 "Language: nl\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.15-dev\n"
+"X-Generator: Weblate 5.2-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -2098,7 +2099,7 @@ msgstr "Log in"
 
 #: templates/postorius/base.html:38 templates/postorius/base.html:121
 msgid "Sign Up"
-msgstr "Log in"
+msgstr "Aanmelden"
 
 #: templates/postorius/base.html:53 templates/postorius/base.html:130
 #: templates/postorius/base.html:158
