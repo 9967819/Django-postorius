@@ -43,17 +43,22 @@ _email_template_help_text = _(
     'Note: Do not add any secret content in templates as they are '
     'publicly accessible.\n'
     'You can use these variables in the templates. \n'
-    '$hyperkitty_url: Permalink to archived message in Hyperkitty\n'
+    '$hyperkitty_url: Permalink to archived message in Hyperkitty '
+    ' - only in list:member:regular:footer and list:member:regular:header\n'
     '$listname: Name of the Mailing List e.g. ant@example.com \n'
     '$list_id: The List-ID header e.g. ant.example.com \n'
     '$display_name: Display name of the mailing list e.g. Ant \n'
     '$short_listname: Local part of the listname e.g. ant \n'
     '$domain: The domain part of the listname e.g. example.com \n'
+    "$description: The mailing list's short description text \n"
     "$info: The mailing list's longer descriptive text \n"
     '$request_email: The email address for -request address \n'
     '$owner_email: The email address for -owner address \n'
     '$site_email: The email address to reach the owners of the site \n'
-    "$language: The two letter language code for list's preferred language e.g. fr, en, de \n"  # noqa: E501
+    "$language: The two letter language code for list's preferred language "
+    'e.g. fr, en, de \n'
+    'Some templates accept additional variables. See '
+    '<a href="https://docs.mailman3.org/projects/mailman/en/latest/src/mailman/rest/docs/templates.html#templated-texts">this doc</a> \n'  # noqa: E501
 )
 
 
