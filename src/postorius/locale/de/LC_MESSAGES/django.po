@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-25 18:55+0000\n"
+"POT-Creation-Date: 2023-11-04 18:38+0000\n"
 "PO-Revision-Date: 2023-01-18 19:47+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -412,7 +412,7 @@ msgstr ""
 
 #: forms/list_forms.py:278 forms/list_forms.py:777
 #: templates/postorius/lists/held_messages.html:30
-#: templates/postorius/lists/held_messages.html:117
+#: templates/postorius/lists/held_messages.html:119
 #: templates/postorius/lists/pending_confirmations.html:37
 #: templates/postorius/lists/subscription_requests.html:37
 msgid "Discard"
@@ -1019,7 +1019,7 @@ msgstr ""
 "Kopfzeilen           verändert. "
 
 #: forms/list_forms.py:778 templates/postorius/lists/held_messages.html:29
-#: templates/postorius/lists/held_messages.html:116
+#: templates/postorius/lists/held_messages.html:118
 #: templates/postorius/lists/subscription_requests.html:40
 msgid "Reject"
 msgstr "Zurückweisen"
@@ -1836,22 +1836,44 @@ msgid "Invalid: \"{0}\" should be either email or UUID"
 msgstr "Ungültig: \"{0}\" sollte entweder eine E-Mail oder eine UUID sein"
 
 #: models.py:43
+#, fuzzy
+#| msgid ""
+#| "Note: Do not add any secret content in templates as they are publicly "
+#| "accessible.\n"
+#| "You can use these variables in the templates. \n"
+#| "$hyperkitty_url: Permalink to archived message in Hyperkitty\n"
+#| "$listname: Name of the Mailing List e.g. ant@example.com \n"
+#| "$list_id: The List-ID header e.g. ant.example.com \n"
+#| "$display_name: Display name of the mailing list e.g. Ant \n"
+#| "$short_listname: Local part of the listname e.g. ant \n"
+#| "$domain: The domain part of the listname e.g. example.com \n"
+#| "$info: The mailing list's longer descriptive text \n"
+#| "$request_email: The email address for -request address \n"
+#| "$owner_email: The email address for -owner address \n"
+#| "$site_email: The email address to reach the owners of the site \n"
+#| "$language: The two letter language code for list's preferred language e."
+#| "g. fr, en, de \n"
 msgid ""
 "Note: Do not add any secret content in templates as they are publicly "
 "accessible.\n"
 "You can use these variables in the templates. \n"
-"$hyperkitty_url: Permalink to archived message in Hyperkitty\n"
+"$hyperkitty_url: Permalink to archived message in Hyperkitty  - only in list:"
+"member:regular:footer and list:member:regular:header\n"
 "$listname: Name of the Mailing List e.g. ant@example.com \n"
 "$list_id: The List-ID header e.g. ant.example.com \n"
 "$display_name: Display name of the mailing list e.g. Ant \n"
 "$short_listname: Local part of the listname e.g. ant \n"
 "$domain: The domain part of the listname e.g. example.com \n"
+"$description: The mailing list's short description text \n"
 "$info: The mailing list's longer descriptive text \n"
 "$request_email: The email address for -request address \n"
 "$owner_email: The email address for -owner address \n"
 "$site_email: The email address to reach the owners of the site \n"
 "$language: The two letter language code for list's preferred language e.g. "
 "fr, en, de \n"
+"Some templates accept additional variables. See <a href=\"https://docs."
+"mailman3.org/projects/mailman/en/latest/src/mailman/rest/docs/templates."
+"html#templated-texts\">this doc</a> \n"
 msgstr ""
 "Hinweis: Fügen Sie keine vertraulichen Inhalte in Vorlagen hinzu, da diese "
 "öffentlich verfügbar sind.\n"
@@ -1869,27 +1891,27 @@ msgstr ""
 "$language: Der zweistellige Sprachcode für die bevorzugte Sprache der Liste, "
 "z.B. fr, en, de \n"
 
-#: models.py:75
+#: models.py:80
 msgid "owner"
 msgstr "Besitzer"
 
-#: models.py:76
+#: models.py:81
 msgid "member"
 msgstr "Mitglied"
 
-#: models.py:77
+#: models.py:82
 msgid "nonmember"
 msgstr "Nicht-Mitglied"
 
-#: models.py:78
+#: models.py:83
 msgid "moderator"
 msgstr "Moderator"
 
-#: models.py:256
+#: models.py:261
 msgid "Choose the template you want to customize."
 msgstr "Wählen Sie die zu bearbeitende Vorlage."
 
-#: models.py:266
+#: models.py:271
 msgid ""
 "Language for the template, this should be the list's preferred language."
 msgstr ""
@@ -2080,10 +2102,6 @@ msgstr ""
 #: templates/403.html:5
 msgid "Forbidden"
 msgstr "Verboten"
-
-#: templates/403.html:6
-msgid "You do not have permissions to visit this page."
-msgstr "Sie haben keine Berechtigungen zum Besuch dieser Seite."
 
 #: templates/404.html:5
 msgid "Page not found"
@@ -2573,45 +2591,49 @@ msgid "Perform action on selected messages"
 msgstr "Aktion auf ausgewählten Nachrichten ausführen"
 
 #: templates/postorius/lists/held_messages.html:28
-#: templates/postorius/lists/held_messages.html:115
+#: templates/postorius/lists/held_messages.html:117
 #: templates/postorius/lists/subscription_requests.html:36
 msgid "Accept"
 msgstr "Akzeptieren"
 
-#: templates/postorius/lists/held_messages.html:38
+#: templates/postorius/lists/held_messages.html:33
+msgid "Click the message's subject for more options."
+msgstr ""
+
+#: templates/postorius/lists/held_messages.html:40
 msgid "Subject"
 msgstr "Betreff"
 
-#: templates/postorius/lists/held_messages.html:39
+#: templates/postorius/lists/held_messages.html:41
 msgid "Sender"
 msgstr "Absender"
 
-#: templates/postorius/lists/held_messages.html:40
+#: templates/postorius/lists/held_messages.html:42
 msgid "Reason"
 msgstr "Grund"
 
-#: templates/postorius/lists/held_messages.html:41
+#: templates/postorius/lists/held_messages.html:43
 msgid "Hold Date"
 msgstr "Haltezeitpunkt"
 
-#: templates/postorius/lists/held_messages.html:53
-#: templates/postorius/lists/held_messages.html:61
+#: templates/postorius/lists/held_messages.html:55
+#: templates/postorius/lists/held_messages.html:63
 msgid "No Subject"
 msgstr "Kein Betreff"
 
-#: templates/postorius/lists/held_messages.html:90
+#: templates/postorius/lists/held_messages.html:92
 msgid "Attachments"
 msgstr "Anhänge"
 
-#: templates/postorius/lists/held_messages.html:101
+#: templates/postorius/lists/held_messages.html:103
 msgid "Set member moderation"
 msgstr "Einstellen der Mitglieder-Moderation"
 
-#: templates/postorius/lists/held_messages.html:107
+#: templates/postorius/lists/held_messages.html:109
 msgid "Rejection reason:"
 msgstr "Grund der Zurückweisung:"
 
-#: templates/postorius/lists/held_messages.html:110
+#: templates/postorius/lists/held_messages.html:112
 msgid ""
 "Reason sent to the sender for message rejection. For other actions, this is "
 "ignored."
@@ -2619,15 +2641,15 @@ msgstr ""
 "Grund für die Ablehnung der Nachricht an den Absender. Bei anderen Aktionen "
 "wird dies ignoriert."
 
-#: templates/postorius/lists/held_messages.html:124
+#: templates/postorius/lists/held_messages.html:126
 msgid "Show Headers"
 msgstr "Header anzeigen"
 
-#: templates/postorius/lists/held_messages.html:132
+#: templates/postorius/lists/held_messages.html:134
 msgid "There are currently no held messages."
 msgstr "Derzeit gibt es keine zurückgehaltenen Nachrichten."
 
-#: templates/postorius/lists/held_messages.html:139
+#: templates/postorius/lists/held_messages.html:141
 msgid "Message could not be retrieved"
 msgstr "Nachricht konnte nicht abgerufen werden"
 
@@ -3621,6 +3643,9 @@ msgstr "Passwort erfolgreich geändert"
 #| msgid "Successfully updated user."
 msgid "Successfully deleted account"
 msgstr "Benutzerkonto erfolgreich geändert."
+
+#~ msgid "You do not have permissions to visit this page."
+#~ msgstr "Sie haben keine Berechtigungen zum Besuch dieser Seite."
 
 #~ msgid "Logout"
 #~ msgstr "Ausloggen"

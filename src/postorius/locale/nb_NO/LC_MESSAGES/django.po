@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-25 18:55+0000\n"
+"POT-Creation-Date: 2023-11-04 18:38+0000\n"
 "PO-Revision-Date: 2021-11-05 02:19+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/gnu-"
@@ -367,7 +367,7 @@ msgstr ""
 
 #: forms/list_forms.py:278 forms/list_forms.py:777
 #: templates/postorius/lists/held_messages.html:30
-#: templates/postorius/lists/held_messages.html:117
+#: templates/postorius/lists/held_messages.html:119
 #: templates/postorius/lists/pending_confirmations.html:37
 #: templates/postorius/lists/subscription_requests.html:37
 msgid "Discard"
@@ -870,7 +870,7 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:778 templates/postorius/lists/held_messages.html:29
-#: templates/postorius/lists/held_messages.html:116
+#: templates/postorius/lists/held_messages.html:118
 #: templates/postorius/lists/subscription_requests.html:40
 msgid "Reject"
 msgstr ""
@@ -1568,49 +1568,54 @@ msgid ""
 "Note: Do not add any secret content in templates as they are publicly "
 "accessible.\n"
 "You can use these variables in the templates. \n"
-"$hyperkitty_url: Permalink to archived message in Hyperkitty\n"
+"$hyperkitty_url: Permalink to archived message in Hyperkitty  - only in list:"
+"member:regular:footer and list:member:regular:header\n"
 "$listname: Name of the Mailing List e.g. ant@example.com \n"
 "$list_id: The List-ID header e.g. ant.example.com \n"
 "$display_name: Display name of the mailing list e.g. Ant \n"
 "$short_listname: Local part of the listname e.g. ant \n"
 "$domain: The domain part of the listname e.g. example.com \n"
+"$description: The mailing list's short description text \n"
 "$info: The mailing list's longer descriptive text \n"
 "$request_email: The email address for -request address \n"
 "$owner_email: The email address for -owner address \n"
 "$site_email: The email address to reach the owners of the site \n"
 "$language: The two letter language code for list's preferred language e.g. "
 "fr, en, de \n"
+"Some templates accept additional variables. See <a href=\"https://docs."
+"mailman3.org/projects/mailman/en/latest/src/mailman/rest/docs/templates."
+"html#templated-texts\">this doc</a> \n"
 msgstr ""
 
-#: models.py:75
+#: models.py:80
 #, fuzzy
 #| msgid "Owners"
 msgid "owner"
 msgstr "Eiere"
 
-#: models.py:76
+#: models.py:81
 #, fuzzy
 #| msgid "Members"
 msgid "member"
 msgstr "Medlemmer"
 
-#: models.py:77
+#: models.py:82
 #, fuzzy
 #| msgid "Non-Members"
 msgid "nonmember"
 msgstr "Ikke-medlemmer"
 
-#: models.py:78
+#: models.py:83
 #, fuzzy
 #| msgid "Moderators"
 msgid "moderator"
 msgstr "Moderatorer"
 
-#: models.py:256
+#: models.py:261
 msgid "Choose the template you want to customize."
 msgstr ""
 
-#: models.py:266
+#: models.py:271
 msgid ""
 "Language for the template, this should be the list's preferred language."
 msgstr ""
@@ -1756,10 +1761,6 @@ msgstr ""
 #: templates/403.html:5
 msgid "Forbidden"
 msgstr ""
-
-#: templates/403.html:6
-msgid "You do not have permissions to visit this page."
-msgstr "Du har ikke tilgang til å besøke denne siden."
 
 #: templates/404.html:5
 msgid "Page not found"
@@ -2234,59 +2235,63 @@ msgid "Perform action on selected messages"
 msgstr ""
 
 #: templates/postorius/lists/held_messages.html:28
-#: templates/postorius/lists/held_messages.html:115
+#: templates/postorius/lists/held_messages.html:117
 #: templates/postorius/lists/subscription_requests.html:36
 msgid "Accept"
 msgstr ""
 
-#: templates/postorius/lists/held_messages.html:38
+#: templates/postorius/lists/held_messages.html:33
+msgid "Click the message's subject for more options."
+msgstr ""
+
+#: templates/postorius/lists/held_messages.html:40
 msgid "Subject"
 msgstr "Emne"
 
-#: templates/postorius/lists/held_messages.html:39
+#: templates/postorius/lists/held_messages.html:41
 msgid "Sender"
 msgstr "Avsender"
 
-#: templates/postorius/lists/held_messages.html:40
+#: templates/postorius/lists/held_messages.html:42
 msgid "Reason"
 msgstr "Grunn"
 
-#: templates/postorius/lists/held_messages.html:41
+#: templates/postorius/lists/held_messages.html:43
 msgid "Hold Date"
 msgstr ""
 
-#: templates/postorius/lists/held_messages.html:53
-#: templates/postorius/lists/held_messages.html:61
+#: templates/postorius/lists/held_messages.html:55
+#: templates/postorius/lists/held_messages.html:63
 msgid "No Subject"
 msgstr ""
 
-#: templates/postorius/lists/held_messages.html:90
+#: templates/postorius/lists/held_messages.html:92
 msgid "Attachments"
 msgstr "Vedlegg"
 
-#: templates/postorius/lists/held_messages.html:101
+#: templates/postorius/lists/held_messages.html:103
 msgid "Set member moderation"
 msgstr ""
 
-#: templates/postorius/lists/held_messages.html:107
+#: templates/postorius/lists/held_messages.html:109
 msgid "Rejection reason:"
 msgstr ""
 
-#: templates/postorius/lists/held_messages.html:110
+#: templates/postorius/lists/held_messages.html:112
 msgid ""
 "Reason sent to the sender for message rejection. For other actions, this is "
 "ignored."
 msgstr ""
 
-#: templates/postorius/lists/held_messages.html:124
+#: templates/postorius/lists/held_messages.html:126
 msgid "Show Headers"
 msgstr "Vis hoder"
 
-#: templates/postorius/lists/held_messages.html:132
+#: templates/postorius/lists/held_messages.html:134
 msgid "There are currently no held messages."
 msgstr ""
 
-#: templates/postorius/lists/held_messages.html:139
+#: templates/postorius/lists/held_messages.html:141
 msgid "Message could not be retrieved"
 msgstr ""
 
@@ -3298,6 +3303,9 @@ msgstr ""
 #, fuzzy
 msgid "Successfully deleted account"
 msgstr "Bannlyste adresser"
+
+#~ msgid "You do not have permissions to visit this page."
+#~ msgstr "Du har ikke tilgang til å besøke denne siden."
 
 #, fuzzy
 #~ msgid "Logout"
