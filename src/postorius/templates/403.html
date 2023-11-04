@@ -3,5 +3,5 @@
 
 {% block content %}
     <h1>{% trans 'Forbidden' %}</h1>
-    <div class="alert alert-danger">{% trans "You do not have permissions to visit this page." %}</div>
+    <div class="alert alert-danger">{{ exception }}</div>
 {% endblock %}
