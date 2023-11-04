@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-25 18:55+0000\n"
+"POT-Creation-Date: 2023-11-04 18:38+0000\n"
 "PO-Revision-Date: 2022-10-30 14:02+0000\n"
 "Last-Translator: 이정희 <daemul72@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -401,7 +401,7 @@ msgstr ""
 
 #: forms/list_forms.py:278 forms/list_forms.py:777
 #: templates/postorius/lists/held_messages.html:30
-#: templates/postorius/lists/held_messages.html:117
+#: templates/postorius/lists/held_messages.html:119
 #: templates/postorius/lists/pending_confirmations.html:37
 #: templates/postorius/lists/subscription_requests.html:37
 msgid "Discard"
@@ -991,7 +991,7 @@ msgstr ""
 "    전체: 모든 '개별' 개인화에 더불어 수신자 헤더도 수정. "
 
 #: forms/list_forms.py:778 templates/postorius/lists/held_messages.html:29
-#: templates/postorius/lists/held_messages.html:116
+#: templates/postorius/lists/held_messages.html:118
 #: templates/postorius/lists/subscription_requests.html:40
 msgid "Reject"
 msgstr "거부하다"
@@ -1825,22 +1825,44 @@ msgid "Invalid: \"{0}\" should be either email or UUID"
 msgstr ""
 
 #: models.py:43
+#, fuzzy
+#| msgid ""
+#| "Note: Do not add any secret content in templates as they are publicly "
+#| "accessible.\n"
+#| "You can use these variables in the templates. \n"
+#| "$hyperkitty_url: Permalink to archived message in Hyperkitty\n"
+#| "$listname: Name of the Mailing List e.g. ant@example.com \n"
+#| "$list_id: The List-ID header e.g. ant.example.com \n"
+#| "$display_name: Display name of the mailing list e.g. Ant \n"
+#| "$short_listname: Local part of the listname e.g. ant \n"
+#| "$domain: The domain part of the listname e.g. example.com \n"
+#| "$info: The mailing list's longer descriptive text \n"
+#| "$request_email: The email address for -request address \n"
+#| "$owner_email: The email address for -owner address \n"
+#| "$site_email: The email address to reach the owners of the site \n"
+#| "$language: The two letter language code for list's preferred language e."
+#| "g. fr, en, de \n"
 msgid ""
 "Note: Do not add any secret content in templates as they are publicly "
 "accessible.\n"
 "You can use these variables in the templates. \n"
-"$hyperkitty_url: Permalink to archived message in Hyperkitty\n"
+"$hyperkitty_url: Permalink to archived message in Hyperkitty  - only in list:"
+"member:regular:footer and list:member:regular:header\n"
 "$listname: Name of the Mailing List e.g. ant@example.com \n"
 "$list_id: The List-ID header e.g. ant.example.com \n"
 "$display_name: Display name of the mailing list e.g. Ant \n"
 "$short_listname: Local part of the listname e.g. ant \n"
 "$domain: The domain part of the listname e.g. example.com \n"
+"$description: The mailing list's short description text \n"
 "$info: The mailing list's longer descriptive text \n"
 "$request_email: The email address for -request address \n"
 "$owner_email: The email address for -owner address \n"
 "$site_email: The email address to reach the owners of the site \n"
 "$language: The two letter language code for list's preferred language e.g. "
 "fr, en, de \n"
+"Some templates accept additional variables. See <a href=\"https://docs."
+"mailman3.org/projects/mailman/en/latest/src/mailman/rest/docs/templates."
+"html#templated-texts\">this doc</a> \n"
 msgstr ""
 "참고: 공개적으로 액세스할 수 있으므로 템플릿에 비밀 컨텐츠를 추가하지 마십시"
 "오.\n"
@@ -1858,35 +1880,35 @@ msgstr ""
 "$language: 목록의 선호하는 언어에 대한 두 개의 문자 언어 코드(예: fr, en, "
 "en) \n"
 
-#: models.py:75
+#: models.py:80
 #, fuzzy
 #| msgid "Owners"
 msgid "owner"
 msgstr "오너"
 
-#: models.py:76
+#: models.py:81
 #, fuzzy
 #| msgid "Members"
 msgid "member"
 msgstr "회원들"
 
-#: models.py:77
+#: models.py:82
 #, fuzzy
 #| msgid "Non-Members"
 msgid "nonmember"
 msgstr "비회원들"
 
-#: models.py:78
+#: models.py:83
 #, fuzzy
 #| msgid "Moderators"
 msgid "moderator"
 msgstr "의장"
 
-#: models.py:256
+#: models.py:261
 msgid "Choose the template you want to customize."
 msgstr "사용자 지정할 템플릿을 선택하십시오."
 
-#: models.py:266
+#: models.py:271
 msgid ""
 "Language for the template, this should be the list's preferred language."
 msgstr "템플릿에 대한 언어, 이 언어가 목록의 선호 언어여야 한다."
@@ -2062,10 +2084,6 @@ msgstr "회원의 가입이 취소되었을 때 회원으로 보내는 바운스
 #: templates/403.html:5
 msgid "Forbidden"
 msgstr "금지된"
-
-#: templates/403.html:6
-msgid "You do not have permissions to visit this page."
-msgstr "이 페이지를 방문할 권한이 없다."
 
 #: templates/404.html:5
 msgid "Page not found"
@@ -2559,59 +2577,63 @@ msgid "Perform action on selected messages"
 msgstr "선택한 메시지에 대해 작업 수행"
 
 #: templates/postorius/lists/held_messages.html:28
-#: templates/postorius/lists/held_messages.html:115
+#: templates/postorius/lists/held_messages.html:117
 #: templates/postorius/lists/subscription_requests.html:36
 msgid "Accept"
 msgstr "받아들이세요"
 
-#: templates/postorius/lists/held_messages.html:38
+#: templates/postorius/lists/held_messages.html:33
+msgid "Click the message's subject for more options."
+msgstr ""
+
+#: templates/postorius/lists/held_messages.html:40
 msgid "Subject"
 msgstr "주제"
 
-#: templates/postorius/lists/held_messages.html:39
+#: templates/postorius/lists/held_messages.html:41
 msgid "Sender"
 msgstr "보낸 사람"
 
-#: templates/postorius/lists/held_messages.html:40
+#: templates/postorius/lists/held_messages.html:42
 msgid "Reason"
 msgstr "이유"
 
-#: templates/postorius/lists/held_messages.html:41
+#: templates/postorius/lists/held_messages.html:43
 msgid "Hold Date"
 msgstr "보류 날짜"
 
-#: templates/postorius/lists/held_messages.html:53
-#: templates/postorius/lists/held_messages.html:61
+#: templates/postorius/lists/held_messages.html:55
+#: templates/postorius/lists/held_messages.html:63
 msgid "No Subject"
 msgstr "과목 없음"
 
-#: templates/postorius/lists/held_messages.html:90
+#: templates/postorius/lists/held_messages.html:92
 msgid "Attachments"
 msgstr "첨부 파일"
 
-#: templates/postorius/lists/held_messages.html:101
+#: templates/postorius/lists/held_messages.html:103
 msgid "Set member moderation"
 msgstr "멤버 절제 설정"
 
-#: templates/postorius/lists/held_messages.html:107
+#: templates/postorius/lists/held_messages.html:109
 msgid "Rejection reason:"
 msgstr ""
 
-#: templates/postorius/lists/held_messages.html:110
+#: templates/postorius/lists/held_messages.html:112
 msgid ""
 "Reason sent to the sender for message rejection. For other actions, this is "
 "ignored."
 msgstr ""
 
-#: templates/postorius/lists/held_messages.html:124
+#: templates/postorius/lists/held_messages.html:126
 msgid "Show Headers"
 msgstr "머리글 표시"
 
-#: templates/postorius/lists/held_messages.html:132
+#: templates/postorius/lists/held_messages.html:134
 msgid "There are currently no held messages."
 msgstr "현재 보류된 메시지가 없다."
 
-#: templates/postorius/lists/held_messages.html:139
+#: templates/postorius/lists/held_messages.html:141
 msgid "Message could not be retrieved"
 msgstr "메시지를 검색할 수 없음"
 
@@ -3663,6 +3685,9 @@ msgstr ""
 #| msgid "Currently banned addresses"
 msgid "Successfully deleted account"
 msgstr "현재 금지된 주소"
+
+#~ msgid "You do not have permissions to visit this page."
+#~ msgstr "이 페이지를 방문할 권한이 없다."
 
 #~ msgid "Logout"
 #~ msgstr "로그아웃"
