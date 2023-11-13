@@ -18,7 +18,7 @@
 import re
 import sys
 
-from setuptools import find_packages, setup
+from setuptools import find_namespace_packages, setup
 
 
 # Calculate the version number without importing the postorius package.
@@ -49,7 +49,7 @@ setup(
         'Topic :: Communications :: Email :: Mailing List Servers',
         'Programming Language :: Python :: 3',
     ],
-    packages=find_packages('src'),
+    packages=find_namespace_packages(where='src'),
     package_dir={'': 'src'},
     include_package_data=True,
     install_requires=[
