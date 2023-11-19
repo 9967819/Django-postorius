@@ -4,11 +4,6 @@ image: ghcr.io/maxking/mailman-ci-runner
 include:
   - template: 'Workflows/MergeRequest-Pipelines.gitlab-ci.yml'
 
-py39-django32:
-  stage: test
-  script:
-    - tox -e py39-django32-git
-
 py39-django40:
   stage: test
   script:
@@ -18,11 +13,6 @@ py39-django41:
   stage: test
   script:
     - tox -e py39-django41-git
-
-py310-django32:
-  stage: test
-  script:
-    - tox -e py310-django32-git
 
 py310-django40:
   stage: test
