@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Lens0021 <lorentz0021@gmail.com>, 2021.
 # 이정희 <daemul72@gmail.com>, 2022.
+# MyoungHyun Kim <company@nya.kr>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-11-04 18:38+0000\n"
-"PO-Revision-Date: 2022-10-30 14:02+0000\n"
-"Last-Translator: 이정희 <daemul72@gmail.com>\n"
+"PO-Revision-Date: 2023-12-06 02:08+0000\n"
+"Last-Translator: MyoungHyun Kim <company@nya.kr>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ko/>\n"
 "Language: ko\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.2-dev\n"
+"X-Generator: Weblate 5.3-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -2139,10 +2140,8 @@ msgstr "포스팅 기록"
 
 #: templates/postorius/base.html:68 templates/postorius/base.html:144
 #: templates/postorius/base.html:173
-#, fuzzy
-#| msgid "Sign Up"
 msgid "Sign Out"
-msgstr "회원가입"
+msgstr "로그아웃"
 
 #: templates/postorius/base.html:78
 msgid "Lists"
