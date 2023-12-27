@@ -1,24 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# ButterflyOfFire <boffire@users.noreply.hosted.weblate.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-11-04 18:38+0000\n"
-"PO-Revision-Date: 2019-07-14 17:01+0000\n"
-"Last-Translator: ButterflyOfFire <ButterflyOfFire@protonmail.com>\n"
+"PO-Revision-Date: 2023-12-27 07:10+0000\n"
+"Last-Translator: ButterflyOfFire <boffire@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Arabic <https://hosted.weblate.org/projects/gnu-mailman/"
-"translations/ar/>\n"
+"postorius/ar/>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Weblate 3.8-dev\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -215,7 +214,7 @@ msgstr ""
 
 #: forms/list_forms.py:68 templates/postorius/user/subscriptions.html:22
 msgid "List Name"
-msgstr ""
+msgstr "اسم القائمة"
 
 #: forms/list_forms.py:71
 msgid "Please enter a name for your list."
@@ -250,10 +249,8 @@ msgid "Hide this list in list index"
 msgstr ""
 
 #: forms/list_forms.py:94 forms/list_forms.py:1138
-#, fuzzy
-#| msgid "Description"
 msgid "Short Description"
-msgstr "الوصف"
+msgstr "وصف قصير للقائمة"
 
 #: forms/list_forms.py:104
 msgid "Choose an existing Domain."
@@ -499,11 +496,11 @@ msgstr ""
 
 #: forms/list_forms.py:387
 msgid "Public archives"
-msgstr ""
+msgstr "المحفوظات العامة"
 
 #: forms/list_forms.py:388
 msgid "Private archives"
-msgstr ""
+msgstr "المحفوظات الخاصة"
 
 #: forms/list_forms.py:389
 msgid "Do not archive this list"
@@ -1215,14 +1212,12 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:1148
-#, fuzzy
-#| msgid "Description"
 msgid "Long Description"
-msgstr "الوصف"
+msgstr "وصف طويل للقائمة"
 
 #: forms/list_forms.py:1149
 msgid "A longer description of this mailing list."
-msgstr ""
+msgstr "وصف أطول لهذه القائمة البريدية."
 
 #: forms/list_forms.py:1154
 msgid "Display name"
@@ -1747,7 +1742,7 @@ msgstr "إعدادات مايل مان"
 #: templates/postorius/base.html:62 templates/postorius/base.html:139
 #: templates/postorius/base.html:167
 msgid "Posting activity"
-msgstr ""
+msgstr "النشاط البريدي"
 
 #: templates/postorius/base.html:68 templates/postorius/base.html:144
 #: templates/postorius/base.html:173
@@ -1780,7 +1775,7 @@ msgstr ""
 
 #: templates/postorius/base.html:109 templates/postorius/lists/summary.html:33
 msgid "Archives"
-msgstr ""
+msgstr "الأرشيف"
 
 #: templates/postorius/base.html:197
 msgid "Postorius Documentation"
@@ -1871,7 +1866,7 @@ msgstr ""
 
 #: templates/postorius/domain/index.html:54
 msgid "Add"
-msgstr ""
+msgstr "إضافة"
 
 #: templates/postorius/domain/index.html:57
 #: templates/postorius/domain/template_add.html:6
@@ -1979,7 +1974,7 @@ msgstr ""
 
 #: templates/postorius/index.html:12
 msgid "Mailing Lists"
-msgstr ""
+msgstr "القوائم البريدية"
 
 #: templates/postorius/index.html:20
 msgid "Role: "
@@ -2037,7 +2032,7 @@ msgstr ""
 
 #: templates/postorius/index.html:120
 msgid "There are currently no mailing lists."
-msgstr ""
+msgstr "لا توجد حاليا أية قوائم بريدية."
 
 #: templates/postorius/lists/bans.html:8
 msgid "Banned addresses"
@@ -2158,7 +2153,7 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:40
 msgid "Subject"
-msgstr ""
+msgstr "الموضوع"
 
 #: templates/postorius/lists/held_messages.html:41
 msgid "Sender"
@@ -2321,7 +2316,7 @@ msgstr ""
 
 #: templates/postorius/lists/summary.html:29
 msgid "You have to sign in to visit the archives of this list."
-msgstr ""
+msgstr "عليك القيام بالتسجيل لزيارة محفوظات هذه القائمة."
 
 #: templates/postorius/lists/summary.html:35
 #, python-format
@@ -2331,6 +2326,10 @@ msgid ""
 "\">Archives</a>\n"
 "          "
 msgstr ""
+"\n"
+"            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s\""
+">الأرشيف</a>\n"
+"          "
 
 #: templates/postorius/lists/summary.html:47
 #: templates/postorius/lists/summary.html:104
@@ -2495,7 +2494,7 @@ msgstr ""
 #: templates/postorius/user/manage.html:49
 #: templates/postorius/user/subscriptions.html:8 templatetags/nav_helpers.py:43
 msgid "Subscriptions"
-msgstr ""
+msgstr "الاشتراكات"
 
 #: templates/postorius/menu/user_nav.html:8
 msgid "Global Mailman preferences"
@@ -2669,7 +2668,7 @@ msgstr ""
 
 #: templates/postorius/user/subscriptions.html:17
 msgid "You are subscribed to the following mailing lists:"
-msgstr ""
+msgstr "إنك مشترك في القوائم البريدية التالية:"
 
 #: templates/postorius/user/subscriptions.html:41
 msgid "You are not yet subscribed to any lists."
