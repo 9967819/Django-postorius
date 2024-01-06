@@ -1,13 +1,13 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Besnik Bleta <besnik@programeshqip.org>, 2020, 2021, 2023.
+# Besnik Bleta <besnik@programeshqip.org>, 2020, 2021, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-11-04 18:38+0000\n"
-"PO-Revision-Date: 2023-02-28 10:35+0000\n"
+"PO-Revision-Date: 2024-01-06 10:09+0000\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/sq/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -229,14 +229,12 @@ msgid "Yearly"
 msgstr "Vjetore"
 
 #: forms/list_forms.py:51
-#, fuzzy
-#| msgid "Only mailinglist moderators"
 msgid "Only mailinglist administrators"
-msgstr "Vetëm për moderatorë të listës së postimeve"
+msgstr "Vetëm për përgjegjës të listës së postimeve"
 
 #: forms/list_forms.py:52
 msgid "Mailinglist administrators and members"
-msgstr ""
+msgstr "Përgjegjës dhe anëtarë liste postimesh"
 
 #: forms/list_forms.py:53
 msgid "Anyone"
@@ -921,10 +919,8 @@ msgstr ""
 "pavarësisht nga rregulli DMARC për përkatësinë Nga:."
 
 #: forms/list_forms.py:728
-#, fuzzy
-#| msgid "Addresses"
 msgid "DMARC Addresses"
-msgstr "Adresa"
+msgstr "Adresa DMARC"
 
 #: forms/list_forms.py:731
 msgid ""
@@ -933,6 +929,12 @@ msgid ""
 "to posts From: an address matching, case insensitevely, one of these "
 "addresses or patterns regardless of the From: domain's DMARC policy."
 msgstr ""
+"Adresa email dhe shprehje të rregullta që kërkojnë për përputhje në adresa "
+"email, një për rresht. Shprehjet e rregullta fillojnë me '^', si te '^.*@"
+"example\\.com'. Veprimi për zbutje DMARC do të aplikohet në postime Nga: të "
+"një adrese që ka përputhje, pa u marrë parasysh dallimi shkonjë e madhe "
+"shkronjë e vogël, një nga këto adresa, ose rregullsi, pavarësisht rregullash "
+"DMARC mbi Nga: të përkatësisë."
 
 #: forms/list_forms.py:739
 msgid "DMARC rejection notice"
@@ -1194,17 +1196,14 @@ msgid "Filter content"
 msgstr "Filtro lëndë"
 
 #: forms/list_forms.py:927
-#, fuzzy
-#| msgid ""
-#| "Should Mailman filter the content of list traffic according to the "
-#| "settings below?"
 msgid ""
 "Should Mailman filter the content of list traffic according to the settings "
 "below?\n"
 "<b>None of the settings below have any effect if this is No.</b>"
 msgstr ""
 "A duhet Mailman-i të filtrojë lëndën e trafikut në listë sipas rregullimeve "
-"më poshtë?"
+"më poshtë?\n"
+"<b>Asnjë nga rregullimet më poshtë s’ka ndonjë ndikim, nëse kjo është Jo.</b>"
 
 #: forms/list_forms.py:933
 msgid "Filter types"
@@ -1669,10 +1668,10 @@ msgid "Pattern"
 msgstr "Rregullsi"
 
 #: forms/list_forms.py:1352
-#, fuzzy
-#| msgid "Regular expression matching the header's value."
 msgid "Regular expression matching the header's value (case-insensitive)."
-msgstr "Shprehje e rregullt për përputhje me vlerën e kreut."
+msgstr ""
+"Shprehje e rregullt për përputhje me vlerën e kreut (s’merret parasysh "
+"dallimi shkronjë e madhe shkronjë e vogël)."
 
 #: forms/list_forms.py:1356
 msgid "Please enter a pattern."
@@ -1751,21 +1750,14 @@ msgid "Hide address"
 msgstr "Fshihe adresën"
 
 #: forms/user_forms.py:90
-#, fuzzy
-#| msgid ""
-#| "When someone views the list membership, your email address is normally "
-#| "shown (in an obscured fashion to thwart spam harvesters). If you do not "
-#| "want your email address to show up on this membership roster at all, "
-#| "select Yes for this option."
 msgid ""
 "When other members allowed to view the list membership, your email address "
 "is normally shown. If you do not want your email address to show up on this "
 "membership roster, select Yes for this option."
 msgstr ""
-"Kur dikush sheh anëtarësinë e listës, adresa juaj email normalisht shfaqet "
-"(në një mënyrë të errët, për të penguar grumbulluesit e adresave për mesazhe "
-"të padëshiruar). Nëse s’doni që adresa juaj email të shfaqet në këtë listë "
-"anëtarësie, përzgjidhni “Po” për këtë mundësi."
+"Kur anëtarë të tjerë janë lejuar të shohin anëtarësinë e listës, adresa juaj "
+"email normalisht shfaqet. Nëse s’doni që adresa juaj email të shfaqet në "
+"këtë listë anëtarësie, përzgjidhni “Po” për këtë mundësi."
 
 #: forms/user_forms.py:99
 msgid "Receive list copies (possible duplicates)"
@@ -1814,23 +1806,6 @@ msgid "Invalid: \"{0}\" should be either email or UUID"
 msgstr "E pavlefshme: \"{0}\" duhet të jetë ose email, ose UUID"
 
 #: models.py:43
-#, fuzzy
-#| msgid ""
-#| "Note: Do not add any secret content in templates as they are publicly "
-#| "accessible.\n"
-#| "You can use these variables in the templates. \n"
-#| "$hyperkitty_url: Permalink to archived message in Hyperkitty\n"
-#| "$listname: Name of the Mailing List e.g. ant@example.com \n"
-#| "$list_id: The List-ID header e.g. ant.example.com \n"
-#| "$display_name: Display name of the mailing list e.g. Ant \n"
-#| "$short_listname: Local part of the listname e.g. ant \n"
-#| "$domain: The domain part of the listname e.g. example.com \n"
-#| "$info: The mailing list's longer descriptive text \n"
-#| "$request_email: The email address for -request address \n"
-#| "$owner_email: The email address for -owner address \n"
-#| "$site_email: The email address to reach the owners of the site \n"
-#| "$language: The two letter language code for list's preferred language e."
-#| "g. fr, en, de \n"
 msgid ""
 "Note: Do not add any secret content in templates as they are publicly "
 "accessible.\n"
@@ -1856,18 +1831,23 @@ msgstr ""
 "Shënim: Mos shtoni te gjedhe ndonjë lëndë të fshehtë, ngaqë janë të "
 "përdorshme publikisht.\n"
 "Te gjedhet mund të përdorni këto ndryshore. \n"
-"$hyperkitty_url: Permalidhje te mesazh i arkivuar në Hyperkitty\n"
+"$hyperkitty_url: Permalidhje te mesazh i arkivuar në Hyperkitty  - vetëm në "
+"list:member:regular:footer dhe list:member:regular:header\n"
 "$listname: Emër i Listës së Postimeve, për shembull, ant@example.com \n"
 "$list_id: Kryet List-ID, për shembull ant.example.com \n"
 "$display_name: Shfaq emër të listës së postimeve, për shembull, Ant \n"
 "$short_listname: Pjesë lokale e emrit të listës, për shembull, ant \n"
 "$domain: Pjesa e përkatësisë së emrit të listës, për shembull, example.com \n"
+"$description: Teksti i përshkrimit të shkurtër i listës së postimeve\n"
 "$info: Teksti i përshkrimit më të gjatë të listës së postimeve \n"
 "$request_email: Adresa email për adresë -request \n"
 "$owner_email: Adresa email për adresë -owner \n"
 "$site_email: Adresa email për t’u lidhur me të zotët e sajtit \n"
 "$language: Kodi me dy shkronja i gjuhës për gjuhën e parapëlqyer të listës, "
 "për shembull, sq, fr, it \n"
+"Disa gjedhe pranojnë ndryshore shtesë. Shihni <a href=\"https://docs.mailman3"
+".org/projects/mailman/en/latest/src/mailman/rest/docs/templates.html"
+"#templated-texts\">këtë dokumentim</a> \n"
 
 #: models.py:80
 msgid "owner"
@@ -2093,10 +2073,8 @@ msgstr "Stemë e Mailman-it"
 
 #: templates/postorius/base.html:34 templates/postorius/base.html:117
 #: templates/postorius/lists/summary.html:110
-#, fuzzy
-#| msgid "Sign Up"
 msgid "Sign In"
-msgstr "Regjistrohuni"
+msgstr "Hyni"
 
 #: templates/postorius/base.html:38 templates/postorius/base.html:121
 msgid "Sign Up"
