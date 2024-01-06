@@ -5,22 +5,23 @@
 # Sergii Horichenko <m@sgg.im>, 2022, 2023.
 # Artem <artem@molotov.work>, 2022.
 # Serhii Horichenko <m@sgg.im>, 2023.
+# Сергій <sergiy.goncharuk.1@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-11-04 18:38+0000\n"
-"PO-Revision-Date: 2023-09-10 21:15+0000\n"
-"Last-Translator: Serhii Horichenko <m@sgg.im>\n"
+"PO-Revision-Date: 2024-01-06 18:19+0000\n"
+"Last-Translator: Сергій <sergiy.goncharuk.1@gmail.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.0.1-dev\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -913,10 +914,8 @@ msgstr ""
 "домена у полі \"From\"."
 
 #: forms/list_forms.py:728
-#, fuzzy
-#| msgid "Addresses"
 msgid "DMARC Addresses"
-msgstr "Адреси"
+msgstr "Адреси DMARC"
 
 #: forms/list_forms.py:731
 msgid ""
@@ -925,6 +924,11 @@ msgid ""
 "to posts From: an address matching, case insensitevely, one of these "
 "addresses or patterns regardless of the From: domain's DMARC policy."
 msgstr ""
+"Адреси електронної пошти та регулярні вирази, що відповідають електронним "
+"адресам, по одному в рядку. Регулярні вирази починаються з '^', наприклад, "
+"'^.*@example\\.com'. Обхід DMARC буде застосовуватися до повідомлень з "
+"адресою From:, що збігається без урахування регістру з однією з цих адрес "
+"або шаблонів, незалежно від політики DMARC для домену From:."
 
 #: forms/list_forms.py:739
 msgid "DMARC rejection notice"
@@ -1648,10 +1652,10 @@ msgid "Pattern"
 msgstr "Шаблон"
 
 #: forms/list_forms.py:1352
-#, fuzzy
-#| msgid "Regular expression matching the header's value."
 msgid "Regular expression matching the header's value (case-insensitive)."
-msgstr "Регулярний вираз, який відповідає значенню заголовка."
+msgstr ""
+"Регулярний вираз, який відповідає значенню заголовка (без урахування "
+"регістру)."
 
 #: forms/list_forms.py:1356
 msgid "Please enter a pattern."
@@ -1786,23 +1790,6 @@ msgid "Invalid: \"{0}\" should be either email or UUID"
 msgstr "Помилка: \"{0}\" має бути ел.поштою або UUID"
 
 #: models.py:43
-#, fuzzy
-#| msgid ""
-#| "Note: Do not add any secret content in templates as they are publicly "
-#| "accessible.\n"
-#| "You can use these variables in the templates. \n"
-#| "$hyperkitty_url: Permalink to archived message in Hyperkitty\n"
-#| "$listname: Name of the Mailing List e.g. ant@example.com \n"
-#| "$list_id: The List-ID header e.g. ant.example.com \n"
-#| "$display_name: Display name of the mailing list e.g. Ant \n"
-#| "$short_listname: Local part of the listname e.g. ant \n"
-#| "$domain: The domain part of the listname e.g. example.com \n"
-#| "$info: The mailing list's longer descriptive text \n"
-#| "$request_email: The email address for -request address \n"
-#| "$owner_email: The email address for -owner address \n"
-#| "$site_email: The email address to reach the owners of the site \n"
-#| "$language: The two letter language code for list's preferred language e."
-#| "g. fr, en, de \n"
 msgid ""
 "Note: Do not add any secret content in templates as they are publicly "
 "accessible.\n"
@@ -1828,18 +1815,23 @@ msgstr ""
 "Примітка: Не додавайте секретний вміст у шаблони, оскільки вони є "
 "загальнодоступними.\n"
 "Ви можете використовувати такі змінні в шаблонах. \n"
-"$hyperkitty_url: Постійне посилання на архівні повідомлення в Hyperkitty\n"
+"$hyperkitty_url: Постійне посилання на архівні повідомлення в Hyperkitty - "
+"лише у list:member:regular:footer та list:member:regular:header\n"
 "$listname: Назва списку розсилки, наприклад: ant@example.com \n"
 "$list_id: Заголовок List-ID, наприклад: ant.example.com \n"
 "$display_name: Назва списку розсилки для відображення, наприклад: Ant \n"
 "$short_listname: Локальна частина назви списку, наприклад: ant \n"
 "$domain: Доменна частина назви списку, наприклад: example.com \n"
+"$description: Короткий опис списку розсилки \n"
 "$info: докладніший опис списку розсилки \n"
 "$request_email: Адреса ел.пошти для адреси -request \n"
 "$owner_email: Адреса ел.пошти для адреси -owner \n"
 "$site_email: Адреса ел.пошти для зв'язку з власниками сайту \n"
 "$language: Двобуквений мовний код для бажаної мови списку, наприклад: fr, "
 "en, de \n"
+"Деякі шаблони приймають додаткові параметри. Перегляньте <a href=\"https"
+"://docs.mailman3.org/projects/mailman/en/latest/src/mailman/rest/docs/"
+"templates.html#templated-texts\">цей документ</a> \n"
 
 #: models.py:80
 msgid "owner"
@@ -2521,7 +2513,7 @@ msgstr "Прийняти"
 
 #: templates/postorius/lists/held_messages.html:33
 msgid "Click the message's subject for more options."
-msgstr ""
+msgstr "Натисніть на тему повідомлення для додаткових опцій."
 
 #: templates/postorius/lists/held_messages.html:40
 msgid "Subject"
