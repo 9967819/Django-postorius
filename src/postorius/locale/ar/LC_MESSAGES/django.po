@@ -1,13 +1,13 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# ButterflyOfFire <boffire@users.noreply.hosted.weblate.org>, 2023.
+# ButterflyOfFire <boffire@users.noreply.hosted.weblate.org>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-11-04 18:38+0000\n"
-"PO-Revision-Date: 2023-12-27 07:10+0000\n"
+"PO-Revision-Date: 2024-01-30 17:03+0000\n"
 "Last-Translator: ButterflyOfFire <boffire@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Arabic <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ar/>\n"
@@ -194,7 +194,7 @@ msgstr ""
 
 #: forms/list_forms.py:46
 msgid "Monthly"
-msgstr ""
+msgstr "شهريا"
 
 #: forms/list_forms.py:47
 msgid "Yearly"
@@ -218,11 +218,11 @@ msgstr "اسم القائمة"
 
 #: forms/list_forms.py:71
 msgid "Please enter a name for your list."
-msgstr ""
+msgstr "رجاءً إدخلْ a اسم لقائمتك."
 
 #: forms/list_forms.py:72
 msgid "Please enter a valid list name."
-msgstr ""
+msgstr "رجاءً إدخل اسم قائمة صحيحة."
 
 #: forms/list_forms.py:77
 msgid "Initial list owner address"
@@ -278,7 +278,7 @@ msgstr ""
 
 #: forms/list_forms.py:134
 msgid "Please enter a valid listname"
-msgstr ""
+msgstr "يرجى إدخال اسم قائمة صحيحة"
 
 #: forms/list_forms.py:169 forms/list_forms.py:207
 msgid "Your email address"
@@ -1841,7 +1841,7 @@ msgstr ""
 #: templates/postorius/user/manage.html:46
 #: templates/postorius/user/manage.html:82
 msgid "Update"
-msgstr ""
+msgstr "تحديث"
 
 #: templates/postorius/domain/index.html:14
 msgid "Add Domain"
@@ -2010,11 +2010,11 @@ msgstr ""
 
 #: templates/postorius/index.html:86
 msgid "List name"
-msgstr ""
+msgstr "اسم القائمة"
 
 #: templates/postorius/index.html:87
 msgid "Post address"
-msgstr ""
+msgstr "عنوان بريد الإرسال"
 
 #: templates/postorius/index.html:98
 msgid "unadvertised"
@@ -2566,10 +2566,8 @@ msgstr ""
 #: templates/postorius/user/confirm_delete.html:13
 #: templates/postorius/user/confirm_delete.html:22
 #: templates/postorius/user/manage.html:115
-#, fuzzy
-#| msgid "Account"
 msgid "Delete Account"
-msgstr "الحساب"
+msgstr "حذف الحساب"
 
 #: templates/postorius/user/confirm_delete.html:17
 msgid ""
