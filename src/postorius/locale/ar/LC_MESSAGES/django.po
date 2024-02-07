@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-11-04 18:38+0000\n"
-"PO-Revision-Date: 2024-01-30 17:03+0000\n"
+"PO-Revision-Date: 2024-02-07 02:01+0000\n"
 "Last-Translator: ButterflyOfFire <boffire@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Arabic <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ar/>\n"
@@ -2299,7 +2299,7 @@ msgstr ""
 #: templates/postorius/lists/settings.html:7
 #: templates/postorius/menu/list_nav.html:72
 msgid "Settings"
-msgstr ""
+msgstr "اﻹعدادات"
 
 #: templates/postorius/lists/subscription_requests.html:39
 msgid "Rejection reason"
