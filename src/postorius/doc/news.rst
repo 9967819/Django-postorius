@@ -31,6 +31,12 @@ Fixes
 * Fix min dependency requirement of django-mailman3 to 1.3.10. This
   was missed in the previous 1.3.9 release.
 
+Features
+--------
+
+* Show which Lists a user is an owner or moderator of in 'Manage User'
+  page. (Closes #580)
+
 
 .. _NEWS-1.3.9:
 

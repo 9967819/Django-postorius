@@ -85,6 +85,32 @@
   {% trans 'User has no subscriptions.' %}
 {% endif %}
 
+<h4>{% trans 'Ownerships' %}</h4>
+{% if ownerships %}
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      {% for ownership in ownerships %}
+      {% if forloop.first %}
+      <thead>
+        <tr>
+          <th>{% trans 'List' %}</th>
+          <th>{% trans 'Address' %}</th>
+          <th>{% trans 'Role' %}</th>
+        </tr >
+      </thead >
+      {% endif %}
+        <tr>
+          <td>{{ ownership.list_id }}</td>
+          <td>{{ ownership.address }}</td>
+          <td>{% trans ownership.role %}</td>
+        </tr>
+      {% endfor %}
+  </table>
+  </div>
+{% else %}
+  {% trans 'User has no ownerships.' %}
+{% endif %}
+
 {% if django_user %}
 <h4>{% trans 'Web Account' %}</h4>
 <table class="table">
