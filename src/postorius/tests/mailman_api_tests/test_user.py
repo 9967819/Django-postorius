@@ -507,8 +507,8 @@ class TestManageUser(ViewTestCase):
         super().setUp()
         self.user = self.mm_client.create_user('user@example.com', 'testpass')
         self.su = User.objects.create_superuser('su', 'su@example.com', 'pass')
-        dom = self.mm_client.create_domain('example.com')
-        self.mlist = dom.create_list('test')
+        self.dom = self.mm_client.create_domain('example.com')
+        self.mlist = self.dom.create_list('test')
         self.mlist.subscribe(
             'user@example.com', pre_verified=True, pre_confirmed=True
         )
@@ -687,4 +687,41 @@ class TestManageUser(ViewTestCase):
             Mailman404Error,
             MailmanUser.objects.get,
             address='deluser2-another@example.com',
+        )
+
+    def test_get_ownerships_on_manage_user(self):
+        self.client.force_login(self.su)
+        response = self.client.get(
+            reverse('manage_user', args=[self.user.user_id])
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(response.context['ownerships']), 0)
+        self.mlist.add_owner(self.user.addresses[0].email)
+        response = self.client.get(
+            reverse('manage_user', args=[self.user.user_id])
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(response.context['ownerships']), 1)
+        self.assertEqual(
+            response.context['ownerships'][0].list_id, self.mlist.list_id
+        )
+        self.assertEqual(response.context['ownerships'][0].role, 'owner')
+        self.assertEqual(
+            response.context['ownerships'][0].address.email,
+            self.user.addresses[0].email,
+        )
+        mlist2 = self.dom.create_list('test2')
+        mlist2.add_moderator(self.user.addresses[0].email)
+        response = self.client.get(
+            reverse('manage_user', args=[self.user.user_id])
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(response.context['ownerships']), 2)
+        self.assertEqual(
+            response.context['ownerships'][1].list_id, mlist2.list_id
+        )
+        self.assertEqual(response.context['ownerships'][1].role, 'moderator')
+        self.assertEqual(
+            response.context['ownerships'][1].address.email,
+            self.user.addresses[0].email,
         )

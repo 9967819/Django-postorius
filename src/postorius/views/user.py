@@ -427,8 +427,13 @@ def manage_user(request, user_id):
     addresses = addr_formset(addresses=user.addresses)
     subscriptions = sub_formset(
         members=filter_memberships_by_roles(
-            user.subscriptions, roles=['member', 'nonmember']
+            user.subscriptions,
+            roles=['member', 'nonmember'],
         )
+    )
+    ownerships = filter_memberships_by_roles(
+        user.subscriptions,
+        roles=['owner', 'moderator'],
     )
 
     change_password = None
@@ -502,6 +507,7 @@ def manage_user(request, user_id):
             'django_user': django_user,
             'addresses': addresses,
             'subscriptions': subscriptions,
+            'ownerships': ownerships,
         },
     )
 
