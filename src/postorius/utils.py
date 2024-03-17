@@ -20,7 +20,7 @@
 import logging
 
 from django.shortcuts import render
-from django.utils.translation import gettext as _
+from django.utils.translation import gettext_lazy as _
 
 from allauth.account.models import EmailAddress
 from django_mailman3.lib import mailman

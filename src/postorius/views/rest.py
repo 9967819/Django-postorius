@@ -23,7 +23,7 @@ from email.parser import HeaderParser
 from django.contrib.auth.decorators import login_required
 from django.http import Http404, HttpResponse
 from django.urls import reverse
-from django.utils.translation import gettext as _
+from django.utils.translation import gettext_lazy as _
 
 from django_mailman3.lib.scrub import Scrubber
 
