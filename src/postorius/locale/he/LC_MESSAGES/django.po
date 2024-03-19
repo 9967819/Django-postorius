@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-19 17:57+0000\n"
-"PO-Revision-Date: 2024-01-11 21:06+0000\n"
+"PO-Revision-Date: 2024-03-19 18:23+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/he/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -1053,7 +1053,7 @@ msgstr ""
 
 #: forms/list_forms.py:861
 msgid "First strip Reply-To"
-msgstr ""
+msgstr "קודם להשמיט את להגיב אל/Reply-To"
 
 #: forms/list_forms.py:863
 msgid ""
@@ -2908,16 +2908,12 @@ msgid "User has no subscriptions."
 msgstr "למשתמש אין מינויים."
 
 #: templates/postorius/user/manage.html:88
-#, fuzzy
-#| msgid "Owners"
 msgid "Ownerships"
-msgstr "בעלים"
+msgstr "בעלויות"
 
 #: templates/postorius/user/manage.html:111
-#, fuzzy
-#| msgid "User has no subscriptions."
 msgid "User has no ownerships."
-msgstr "למשתמש אין מינויים."
+msgstr "למשתמש אין בעלויות."
 
 #: templates/postorius/user/manage.html:115
 msgid "Web Account"
