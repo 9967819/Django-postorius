@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-04 18:38+0000\n"
+"POT-Creation-Date: 2024-03-19 17:57+0000\n"
 "PO-Revision-Date: 2024-01-06 18:19+0000\n"
 "Last-Translator: Сергій <sergiy.goncharuk.1@gmail.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -19,8 +19,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 5.4-dev\n"
 
 #: forms/domain_forms.py:34
@@ -183,7 +183,7 @@ msgstr ""
 msgid "Moderation"
 msgstr "Модерація"
 
-#: forms/fields.py:190 forms/list_forms.py:1292
+#: forms/fields.py:190 forms/list_forms.py:1293
 #: templatetags/membership_helpers.py:84
 msgid "List default"
 msgstr "Типові налаштування списку"
@@ -280,7 +280,7 @@ msgstr "Рекламувати цей список у перелікові сп�
 msgid "Hide this list in list index"
 msgstr "Приховати цей список із переліку списків"
 
-#: forms/list_forms.py:94 forms/list_forms.py:1138
+#: forms/list_forms.py:94 forms/list_forms.py:1139
 msgid "Short Description"
 msgstr "Короткий опис"
 
@@ -338,7 +338,7 @@ msgstr "Будь ласка, введіть дійсну електронну п
 msgid "Your name (optional)"
 msgstr "Ваше ім'я (за бажанням)"
 
-#: forms/list_forms.py:198 forms/list_forms.py:1419 views/list.py:546
+#: forms/list_forms.py:198 forms/list_forms.py:1420 views/list.py:545
 msgid "Primary Address ({})"
 msgstr "Основна адреса ({})"
 
@@ -419,11 +419,11 @@ msgstr "Адміністратор сайту"
 #: forms/list_forms.py:338 forms/list_forms.py:467 forms/list_forms.py:477
 #: forms/list_forms.py:526 forms/list_forms.py:657 forms/list_forms.py:664
 #: forms/list_forms.py:717 forms/list_forms.py:807 forms/list_forms.py:818
-#: forms/list_forms.py:838 forms/list_forms.py:858 forms/list_forms.py:922
-#: forms/list_forms.py:961 forms/list_forms.py:978 forms/list_forms.py:1056
-#: forms/list_forms.py:1067 forms/list_forms.py:1081 forms/list_forms.py:1093
-#: forms/list_forms.py:1107 forms/list_forms.py:1130 forms/list_forms.py:1179
-#: forms/list_forms.py:1188 forms/list_forms.py:1212 forms/list_forms.py:1290
+#: forms/list_forms.py:838 forms/list_forms.py:858 forms/list_forms.py:923
+#: forms/list_forms.py:962 forms/list_forms.py:979 forms/list_forms.py:1057
+#: forms/list_forms.py:1068 forms/list_forms.py:1082 forms/list_forms.py:1094
+#: forms/list_forms.py:1108 forms/list_forms.py:1131 forms/list_forms.py:1180
+#: forms/list_forms.py:1189 forms/list_forms.py:1213 forms/list_forms.py:1291
 #: forms/user_forms.py:63
 msgid "Yes"
 msgstr "Так"
@@ -432,11 +432,11 @@ msgstr "Так"
 #: forms/list_forms.py:338 forms/list_forms.py:467 forms/list_forms.py:477
 #: forms/list_forms.py:526 forms/list_forms.py:657 forms/list_forms.py:664
 #: forms/list_forms.py:717 forms/list_forms.py:807 forms/list_forms.py:818
-#: forms/list_forms.py:838 forms/list_forms.py:858 forms/list_forms.py:922
-#: forms/list_forms.py:961 forms/list_forms.py:978 forms/list_forms.py:1056
-#: forms/list_forms.py:1067 forms/list_forms.py:1081 forms/list_forms.py:1093
-#: forms/list_forms.py:1107 forms/list_forms.py:1130 forms/list_forms.py:1179
-#: forms/list_forms.py:1188 forms/list_forms.py:1212 forms/list_forms.py:1291
+#: forms/list_forms.py:838 forms/list_forms.py:858 forms/list_forms.py:923
+#: forms/list_forms.py:962 forms/list_forms.py:979 forms/list_forms.py:1057
+#: forms/list_forms.py:1068 forms/list_forms.py:1082 forms/list_forms.py:1094
+#: forms/list_forms.py:1108 forms/list_forms.py:1131 forms/list_forms.py:1180
+#: forms/list_forms.py:1189 forms/list_forms.py:1213 forms/list_forms.py:1292
 #: forms/user_forms.py:63
 msgid "No"
 msgstr "Ні"
@@ -1089,7 +1089,11 @@ msgstr ""
 "Ця опція дозволяє адміністраторам визначити конкретну адресу для відповіді. "
 "Використовується лише коли для reply-to встановлено явно"
 
-#: forms/list_forms.py:862
+#: forms/list_forms.py:861
+msgid "First strip Reply-To"
+msgstr ""
+
+#: forms/list_forms.py:863
 msgid ""
 "Should any existing Reply-To: header found in the original message be "
 "stripped? If so, this will be done regardless of whether an explict Reply-"
@@ -1099,27 +1103,27 @@ msgstr ""
 "\"Reply-To:\"? Якщо так, це буде зроблено незалежно від того чи додається "
 "явний заголовок Mailman'ом."
 
-#: forms/list_forms.py:868 forms/list_forms.py:874
+#: forms/list_forms.py:869 forms/list_forms.py:875
 msgid "Reply goes to list"
 msgstr "Відповідь у список"
 
-#: forms/list_forms.py:871
+#: forms/list_forms.py:872
 msgid "Please choose a reply-to action."
 msgstr "Оберіть, будь ласка, дію відповіді (reply-to)."
 
-#: forms/list_forms.py:873
+#: forms/list_forms.py:874
 msgid "No Munging"
 msgstr "Не приховувати"
 
-#: forms/list_forms.py:875
+#: forms/list_forms.py:876
 msgid "Explicit Reply-to header set"
 msgstr "Явний заголовок Reply-To встановлений"
 
-#: forms/list_forms.py:876
+#: forms/list_forms.py:877
 msgid "Explicit Reply-to set; no Cc added"
 msgstr "Явний Reply-To встановлений; Cc не доданий"
 
-#: forms/list_forms.py:879
+#: forms/list_forms.py:880
 msgid ""
 "Where are replies to list messages directed? No Munging is strongly "
 "recommended for most mailing lists. \n"
@@ -1174,19 +1178,19 @@ msgstr ""
 "Для підтримки таких типів розсилок, оберіть \"Явну відповідь\" та встановіть "
 "опцію \"Reply-To\" на окрему адресу такого паралельного списку розсилки."
 
-#: forms/list_forms.py:913
+#: forms/list_forms.py:914
 msgid "Pipeline"
 msgstr "Ланцюг обробки"
 
-#: forms/list_forms.py:919
+#: forms/list_forms.py:920
 msgid "Type of pipeline you want to use for this mailing list"
 msgstr "Тип ланцюгу обробки для цього списку розсилки"
 
-#: forms/list_forms.py:925
+#: forms/list_forms.py:926
 msgid "Filter content"
 msgstr "Фільтри змісту"
 
-#: forms/list_forms.py:927
+#: forms/list_forms.py:928
 msgid ""
 "Should Mailman filter the content of list traffic according to the settings "
 "below?\n"
@@ -1196,11 +1200,11 @@ msgstr ""
 "налаштувань?\n"
 "<b>Якщо Ні, жоден з наведених нижче параметрів не матиме жодного ефекту.</b>"
 
-#: forms/list_forms.py:933
+#: forms/list_forms.py:934
 msgid "Filter types"
 msgstr "Фільтри Mime-типів"
 
-#: forms/list_forms.py:936
+#: forms/list_forms.py:937
 msgid ""
 "MIME types to filter from the incoming posts. A list of common types can be "
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
@@ -1210,19 +1214,19 @@ msgstr ""
 "переглянути <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">тут</a>"
 
-#: forms/list_forms.py:942
+#: forms/list_forms.py:943
 msgid "Filter extensions"
 msgstr "Фільтр за типами файлів"
 
-#: forms/list_forms.py:944
+#: forms/list_forms.py:945
 msgid "Extensions to filter from the incoming posts."
 msgstr "Типи файлів для фільтрування вхідних дописів."
 
-#: forms/list_forms.py:947
+#: forms/list_forms.py:948
 msgid "Pass types"
 msgstr "Дозволені типи"
 
-#: forms/list_forms.py:950
+#: forms/list_forms.py:951
 msgid ""
 "MIME types to allow in the incoming posts. A list of common types can be "
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
@@ -1232,34 +1236,34 @@ msgstr ""
 "переглянути <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">тут</a>"
 
-#: forms/list_forms.py:956
+#: forms/list_forms.py:957
 msgid "Pass extensions"
 msgstr "Дозволені типи файлів"
 
-#: forms/list_forms.py:958
+#: forms/list_forms.py:959
 msgid "Extensions to allow in the incoming posts."
 msgstr "Типи файлів, дозволені у вхідних повідомленнях."
 
-#: forms/list_forms.py:964
+#: forms/list_forms.py:965
 msgid "Collapse alternatives"
 msgstr "Згорнути альтернативи"
 
-#: forms/list_forms.py:966
+#: forms/list_forms.py:967
 msgid ""
 "Should Mailman collapse multipart/alternative to its first part content?"
 msgstr ""
 "Чи повинен Mailman згортати багатоскладові/альтернативи до першої частини "
 "змісту?"
 
-#: forms/list_forms.py:974
+#: forms/list_forms.py:975
 msgid "Filter Action"
 msgstr "Дії фільтрів"
 
-#: forms/list_forms.py:981
+#: forms/list_forms.py:982
 msgid "Convert html to plaintext"
 msgstr "Перетворити HTML на звичайний текст"
 
-#: forms/list_forms.py:983
+#: forms/list_forms.py:984
 msgid ""
 "Should Mailman convert text/html parts to plain text? This conversion "
 "happens after MIME attachments have been stripped."
@@ -1267,60 +1271,60 @@ msgstr ""
 "Чи повинен Mailman перетворювати уривки text/html у звичайний текст? Це "
 "перетворення відбувається після видалення прикріплень MIME."
 
-#: forms/list_forms.py:996
+#: forms/list_forms.py:997
 msgid "Respond and continue processing"
 msgstr "Відповісти та продовжити обробку"
 
-#: forms/list_forms.py:997
+#: forms/list_forms.py:998
 msgid "Respond and discard message"
 msgstr "Відповісти та відкинути повідомлення"
 
-#: forms/list_forms.py:998
+#: forms/list_forms.py:999
 msgid "No automatic response"
 msgstr "Без автоматичної відповіді"
 
-#: forms/list_forms.py:1003
+#: forms/list_forms.py:1004
 msgid "Autorespond to list owner"
 msgstr "Автоматична відповідь власнику розсилки"
 
-#: forms/list_forms.py:1005
+#: forms/list_forms.py:1006
 msgid ""
 "Should Mailman send an auto-response to emails sent to the -owner address?"
 msgstr ""
 "Чи повинен Mailman надсилати автовідповідь на ел.листи, надіслані на адресу "
 "власника \"-owner\"?"
 
-#: forms/list_forms.py:1010
+#: forms/list_forms.py:1011
 msgid "Autoresponse owner text"
 msgstr "Текст автоматичної відповіді власника"
 
-#: forms/list_forms.py:1013
+#: forms/list_forms.py:1014
 msgid "Auto-response text to send to -owner emails."
 msgstr "Текст автоматичної відповіді на адресу \"-owner\"."
 
-#: forms/list_forms.py:1018
+#: forms/list_forms.py:1019
 msgid "Autorespond postings"
 msgstr "Автоматичні відповіді на повідомлення"
 
-#: forms/list_forms.py:1020
+#: forms/list_forms.py:1021
 msgid "Should Mailman send an auto-response to mailing list posters?"
 msgstr ""
 "Чи повинен Mailman надсилати автовідповіді на вхідні повідомлення до списку "
 "розсилки?"
 
-#: forms/list_forms.py:1024
+#: forms/list_forms.py:1025
 msgid "Autoresponse postings text"
 msgstr "Текст автоматичної відповіді на повідомлення у список"
 
-#: forms/list_forms.py:1027
+#: forms/list_forms.py:1028
 msgid "Auto-response text to send to mailing list posters."
 msgstr "Текст автовідповіді дописувачам у список розсилки."
 
-#: forms/list_forms.py:1032
+#: forms/list_forms.py:1033
 msgid "Autorespond requests"
 msgstr "Автовідповідь на запити"
 
-#: forms/list_forms.py:1034
+#: forms/list_forms.py:1035
 msgid ""
 "Should Mailman send an auto-response to emails sent to the -request address? "
 "If you choose yes, decide whether you want Mailman to discard the original "
@@ -1331,19 +1335,19 @@ msgstr ""
 "відкидав оригінальний ел.лист чи пересилав його до системи як звичайну "
 "поштову команду."
 
-#: forms/list_forms.py:1041
+#: forms/list_forms.py:1042
 msgid "Autoresponse request text"
 msgstr "Текст запиту автовідповідача"
 
-#: forms/list_forms.py:1044
+#: forms/list_forms.py:1045
 msgid "Auto-response text to send to -request emails."
 msgstr "Текст автовідповіді на адресу \"-request\"."
 
-#: forms/list_forms.py:1047
+#: forms/list_forms.py:1048
 msgid "Autoresponse grace period"
 msgstr "Час затримки на автовідповідь"
 
-#: forms/list_forms.py:1049
+#: forms/list_forms.py:1050
 msgid ""
 "Number of days between auto-responses to either the mailing list or -"
 "request/-owner address from the same poster. Set to zero (or negative) for "
@@ -1354,11 +1358,11 @@ msgstr ""
 "число, не буде часу затримки (тобто буде автовідповідь на кожне "
 "повідомлення)."
 
-#: forms/list_forms.py:1059
+#: forms/list_forms.py:1060
 msgid "Notify users of held messages"
 msgstr "Сповіщати користувачів щодо затриманих повідомлень"
 
-#: forms/list_forms.py:1061
+#: forms/list_forms.py:1062
 msgid ""
 "Should Mailman notify users about their messages held for approval. If you "
 "say 'No', no notifications will be sent to users about the pending approval "
@@ -1368,11 +1372,11 @@ msgstr ""
 "до схвалення. Якщо \"Ні\", вони не отримуватимуть сповіщень, про те, що їх "
 "повідомлення очікують схвалення."
 
-#: forms/list_forms.py:1070 forms/list_forms.py:1297
+#: forms/list_forms.py:1071 forms/list_forms.py:1298
 msgid "Send welcome message"
 msgstr "Надсилати привітальне повідомлення"
 
-#: forms/list_forms.py:1072
+#: forms/list_forms.py:1073
 msgid ""
 "Send welcome message to newly subscribed members? Turn this off only if you "
 "plan on subscribing people manually and don't want them to know that you did "
@@ -1386,11 +1390,11 @@ msgstr ""
 "перенесення розсилок з інших систем до Mailman.\n"
 "Текст Привітального повідомлення можна налаштувати на закладці Шаблони."
 
-#: forms/list_forms.py:1084
+#: forms/list_forms.py:1085
 msgid "Send goodbye message"
 msgstr "Надсилати прощальне повідомлення"
 
-#: forms/list_forms.py:1086
+#: forms/list_forms.py:1087
 msgid ""
 "Send goodbye message to newly unsubscribed members? Turn this off only if "
 "you plan on unsubscribing people manually and don't want them to know that "
@@ -1402,11 +1406,11 @@ msgstr ""
 "бажаєте їм про це повідомляти.\n"
 "Текст прощального повідомлення можна налаштувати на закладці Шаблони."
 
-#: forms/list_forms.py:1095
+#: forms/list_forms.py:1096
 msgid "Admin immed notify"
 msgstr "Негайно повідомляти адміністратору"
 
-#: forms/list_forms.py:1097
+#: forms/list_forms.py:1098
 msgid ""
 "Should the list moderators get immediate notice of new requests, as well as "
 "daily notices about collected ones? List moderators (and list "
@@ -1422,37 +1426,37 @@ msgstr ""
 "затримані з інших причин повідомлення. Увімкнення цієї опції вмикає негайне "
 "надсилання сповіщень щодо нових запитів. "
 
-#: forms/list_forms.py:1109
+#: forms/list_forms.py:1110
 msgid "Notify admin of membership changes"
 msgstr "Сповіщати адміністратора щодо змін серед учасників"
 
-#: forms/list_forms.py:1111
+#: forms/list_forms.py:1112
 msgid "Should administrator get notices of subscribes and unsubscribes?"
 msgstr ""
 "Чи повинен адміністратор отримувати сповіщення щодо підписок та відписок?"
 
-#: forms/list_forms.py:1118
+#: forms/list_forms.py:1119
 msgid "Not Moderated"
 msgstr "Не модерується"
 
-#: forms/list_forms.py:1119
+#: forms/list_forms.py:1120
 msgid "Moderated but allows for open posting"
 msgstr "Модерується але дозволяє публікувати"
 
-#: forms/list_forms.py:1120
+#: forms/list_forms.py:1121
 msgid "Moderated"
 msgstr "Модерується"
 
-#: forms/list_forms.py:1132
+#: forms/list_forms.py:1133
 msgid "Show list on index page"
 msgstr "Показати список на сторінці індексу"
 
-#: forms/list_forms.py:1134
+#: forms/list_forms.py:1135
 msgid "Choose whether to include this list on the list of all lists"
 msgstr ""
 "Оберіть чи потрібно включати цей список розсилки до списку усіх списків"
 
-#: forms/list_forms.py:1141
+#: forms/list_forms.py:1142
 msgid ""
 "This description is used when the mailing list is listed with other mailing "
 "lists, or in headers, and so forth. It should be as succinct as you can get "
@@ -1462,43 +1466,43 @@ msgstr ""
 "розсилок, або у заголовках та ін. Він повинен бути якомога стисліше, лише "
 "для розуміння щодо списку."
 
-#: forms/list_forms.py:1148
+#: forms/list_forms.py:1149
 msgid "Long Description"
 msgstr "Довгий опис"
 
-#: forms/list_forms.py:1149
+#: forms/list_forms.py:1150
 msgid "A longer description of this mailing list."
 msgstr "Більш розгорнутий опис цього списку розсилки."
 
-#: forms/list_forms.py:1154
+#: forms/list_forms.py:1155
 msgid "Display name"
 msgstr "Ім'я для відображення"
 
-#: forms/list_forms.py:1156
+#: forms/list_forms.py:1157
 msgid "Display name is the name shown in the web interface."
 msgstr "Назва списку росзилки, яка відображається у веб-інтерфейсі."
 
-#: forms/list_forms.py:1159
+#: forms/list_forms.py:1160
 msgid "Subject prefix"
 msgstr "Префікс для теми"
 
-#: forms/list_forms.py:1164
+#: forms/list_forms.py:1165
 msgid "Preferred Language"
 msgstr "Бажана мова"
 
-#: forms/list_forms.py:1170
+#: forms/list_forms.py:1171
 msgid "Members List Visibility"
 msgstr "Видимість учасників списку"
 
-#: forms/list_forms.py:1175
+#: forms/list_forms.py:1176
 msgid "Who is allowed to see members list for this MailingList?"
 msgstr "Кому дозволено бачити учасників цього списку розсилки?"
 
-#: forms/list_forms.py:1181
+#: forms/list_forms.py:1182
 msgid "Gateway to mail"
 msgstr "Поштовий шлюз"
 
-#: forms/list_forms.py:1183
+#: forms/list_forms.py:1184
 msgid ""
 "Flag indicating that posts to the linked newsgroup should be gated to the "
 "list"
@@ -1506,11 +1510,11 @@ msgstr ""
 "Позначка, яка вказує, що дописи до пов'язаної групи новин повинні бути "
 "включені до списку"
 
-#: forms/list_forms.py:1190
+#: forms/list_forms.py:1191
 msgid "Gateway to news"
 msgstr "Шлюз для новин"
 
-#: forms/list_forms.py:1192
+#: forms/list_forms.py:1193
 msgid ""
 "Flag indicating that posts to the list should be gated to the linked "
 "newsgroup."
@@ -1518,27 +1522,27 @@ msgstr ""
 "Позначка, яка вказує, що дописи у цей список повинні бути прив'язані до "
 "групи новин."
 
-#: forms/list_forms.py:1197
+#: forms/list_forms.py:1198
 msgid "Linked Newsgroup"
 msgstr "Прив'язана група новин"
 
-#: forms/list_forms.py:1199
+#: forms/list_forms.py:1200
 msgid "The name of the linked newsgroup."
 msgstr "Назва прив'язаної групи новин."
 
-#: forms/list_forms.py:1202
+#: forms/list_forms.py:1203
 msgid "Newsgroup moderation"
 msgstr "Модерація групи новин"
 
-#: forms/list_forms.py:1207
+#: forms/list_forms.py:1208
 msgid "The moderation policy for the linked newsgroup, if there is one."
 msgstr "Правила модерації прив'язаної групи, при її наявності."
 
-#: forms/list_forms.py:1214
+#: forms/list_forms.py:1215
 msgid "NNTP Include subject prefix "
 msgstr "NNTP включає префікс теми "
 
-#: forms/list_forms.py:1216
+#: forms/list_forms.py:1217
 msgid ""
 "Flag indicating whether the list's \"Subject Prefix\" should be included in "
 "posts gated to usenet."
@@ -1546,11 +1550,11 @@ msgstr ""
 "Позначка, яка вказує на те чи потрібно включати \"Префікс теми\" до дописів "
 "у Usenet."
 
-#: forms/list_forms.py:1232
+#: forms/list_forms.py:1233
 msgid "Emails to mass subscribe"
 msgstr "Ел.адреси для масової реєстрації"
 
-#: forms/list_forms.py:1234
+#: forms/list_forms.py:1235
 msgid ""
 "The following formats are accepted:\n"
 "jdoe@example.com\n"
@@ -1568,39 +1572,39 @@ msgstr ""
 "jdoe@example.com (John Doe)\n"
 "Для асоціації імені з ел.адресою візьміть до уваги три останніх приклади\n"
 
-#: forms/list_forms.py:1245
+#: forms/list_forms.py:1246
 msgid "Pre confirm"
 msgstr "Попередня ухвала"
 
-#: forms/list_forms.py:1249
+#: forms/list_forms.py:1250
 msgid "If checked, users will not have to confirm their subscription."
 msgstr "Якщо відмічено, користувачам не потрібно ухвалювати свою підписку."
 
-#: forms/list_forms.py:1255
+#: forms/list_forms.py:1256
 msgid "Pre approved"
 msgstr "Попередньо схвалено"
 
-#: forms/list_forms.py:1259
+#: forms/list_forms.py:1260
 msgid ""
 "If checked, moderators will not have to approve the subscription request."
 msgstr "Якщо відмічено, модератори не повинні схвалювати запит на підписку."
 
-#: forms/list_forms.py:1266
+#: forms/list_forms.py:1267
 msgid "Pre Verified"
 msgstr "Попередньо перевірено"
 
-#: forms/list_forms.py:1270
+#: forms/list_forms.py:1271
 msgid ""
 "If checked, users will not have to verify that their email address is valid."
 msgstr ""
 "Якщо відмічено, користувачам не потрібно проходити перевірку адрес ел.пошти "
 "на справжність."
 
-#: forms/list_forms.py:1277
+#: forms/list_forms.py:1278
 msgid "Invitation"
 msgstr "Запрошення"
 
-#: forms/list_forms.py:1281
+#: forms/list_forms.py:1282
 msgid ""
 "If checked, the other checkboxes are ignored and the users will be sent an "
 "invitation to join the list and will be subscribed upon acceptance thereof."
@@ -1609,7 +1613,7 @@ msgstr ""
 "надіслані запрошення для приєднання до списку розсилки та підписки будуть "
 "активовані після їх схвалення."
 
-#: forms/list_forms.py:1299
+#: forms/list_forms.py:1300
 msgid ""
 "If set to \"Yes\" or \"No\", List's default setting of send_welcome_message "
 "will be ignored for these subscribers and a welcome message will be sent or "
@@ -1619,69 +1623,69 @@ msgstr ""
 "проігноровані для цих підписників та привітальні повідомлення будуть чи не "
 "будуть надіслані, – згідно цього вибору."
 
-#: forms/list_forms.py:1320
+#: forms/list_forms.py:1321
 msgid "Emails to Unsubscribe"
 msgstr "Адреси ел.пошти для скасування підписки"
 
-#: forms/list_forms.py:1321
+#: forms/list_forms.py:1322
 msgid "Add one email address on each line"
 msgstr "Додайте по одній адресі на рядок"
 
-#: forms/list_forms.py:1337
+#: forms/list_forms.py:1338
 msgid "Default antispam action"
 msgstr "Типова дія антиспаму"
 
-#: forms/list_forms.py:1342
+#: forms/list_forms.py:1343
 msgid "Header"
 msgstr "Заголовок"
 
-#: forms/list_forms.py:1343
+#: forms/list_forms.py:1344
 msgid "Email header to filter on (case-insensitive)."
 msgstr "Заголовок ел.листів для фільтрування (регістр тексту ігнорується)."
 
-#: forms/list_forms.py:1345
+#: forms/list_forms.py:1346
 msgid "Please enter a header."
 msgstr "Напишіть заголовок, будь ласка."
 
-#: forms/list_forms.py:1346
+#: forms/list_forms.py:1347
 msgid "Please enter a valid header."
 msgstr "Будь ласка, напишіть дійсний заголовок."
 
-#: forms/list_forms.py:1350
+#: forms/list_forms.py:1351
 msgid "Pattern"
 msgstr "Шаблон"
 
-#: forms/list_forms.py:1352
+#: forms/list_forms.py:1353
 msgid "Regular expression matching the header's value (case-insensitive)."
 msgstr ""
 "Регулярний вираз, який відповідає значенню заголовка (без урахування "
 "регістру)."
 
-#: forms/list_forms.py:1356
+#: forms/list_forms.py:1357
 msgid "Please enter a pattern."
 msgstr "Напишіть, будь ласка, шаблон."
 
-#: forms/list_forms.py:1357
+#: forms/list_forms.py:1358
 msgid "Please enter a valid pattern."
 msgstr "Напишіть, будь ласка, дійсний шаблон."
 
-#: forms/list_forms.py:1361 templates/postorius/domain/index.html:26
+#: forms/list_forms.py:1362 templates/postorius/domain/index.html:26
 msgid "Action"
 msgstr "Дія"
 
-#: forms/list_forms.py:1362
+#: forms/list_forms.py:1363
 msgid "Please enter a valid action."
 msgstr "Задайте, будь ласка, правильну дію."
 
-#: forms/list_forms.py:1365
+#: forms/list_forms.py:1366
 msgid "Action to take when a header matches"
 msgstr "Дія, яку потрібно виконати при відповідних заголовках"
 
-#: forms/list_forms.py:1400
+#: forms/list_forms.py:1401
 msgid "Select Email"
 msgstr "Оберіть ел.пошту"
 
-#: forms/list_forms.py:1426
+#: forms/list_forms.py:1427
 msgid "Data"
 msgstr "Дані"
 
@@ -1829,9 +1833,9 @@ msgstr ""
 "$site_email: Адреса ел.пошти для зв'язку з власниками сайту \n"
 "$language: Двобуквений мовний код для бажаної мови списку, наприклад: fr, "
 "en, de \n"
-"Деякі шаблони приймають додаткові параметри. Перегляньте <a href=\"https"
-"://docs.mailman3.org/projects/mailman/en/latest/src/mailman/rest/docs/"
-"templates.html#templated-texts\">цей документ</a> \n"
+"Деякі шаблони приймають додаткові параметри. Перегляньте <a href=\"https://"
+"docs.mailman3.org/projects/mailman/en/latest/src/mailman/rest/docs/templates."
+"html#templated-texts\">цей документ</a> \n"
 
 #: models.py:80
 msgid "owner"
@@ -2614,6 +2618,7 @@ msgstr "Вилучити вибране"
 #: templates/postorius/lists/members.html:78
 #: templates/postorius/user/address_preferences.html:32
 #: templates/postorius/user/manage.html:61
+#: templates/postorius/user/manage.html:97
 msgid "Address"
 msgstr "Адреса"
 
@@ -2952,7 +2957,7 @@ msgstr "Створено"
 #: templates/postorius/user/confirm_delete.html:9
 #: templates/postorius/user/confirm_delete.html:13
 #: templates/postorius/user/confirm_delete.html:22
-#: templates/postorius/user/manage.html:115
+#: templates/postorius/user/manage.html:141
 msgid "Delete Account"
 msgstr "Видалити обліковий запис"
 
@@ -3004,10 +3009,12 @@ msgid "Email"
 msgstr "Ел.пошта"
 
 #: templates/postorius/user/manage.html:60
+#: templates/postorius/user/manage.html:96
 msgid "List"
 msgstr "Список"
 
 #: templates/postorius/user/manage.html:62
+#: templates/postorius/user/manage.html:98
 #: templates/postorius/user/subscriptions.html:25
 msgid "Role"
 msgstr "Роль"
@@ -3016,28 +3023,40 @@ msgstr "Роль"
 msgid "User has no subscriptions."
 msgstr "Користувач не має підписок."
 
-#: templates/postorius/user/manage.html:89
+#: templates/postorius/user/manage.html:88
+#, fuzzy
+#| msgid "Owners"
+msgid "Ownerships"
+msgstr "Власники"
+
+#: templates/postorius/user/manage.html:111
+#, fuzzy
+#| msgid "User has no subscriptions."
+msgid "User has no ownerships."
+msgstr "Користувач не має підписок."
+
+#: templates/postorius/user/manage.html:115
 msgid "Web Account"
 msgstr "Веб-акаунт"
 
-#: templates/postorius/user/manage.html:92
+#: templates/postorius/user/manage.html:118
 msgid "Username"
 msgstr "Ім'я користувача"
 
-#: templates/postorius/user/manage.html:96
+#: templates/postorius/user/manage.html:122
 msgid "Superuser"
 msgstr "Суперкористувач"
 
-#: templates/postorius/user/manage.html:100
+#: templates/postorius/user/manage.html:126
 msgid "Last login"
 msgstr "Останній вхід"
 
-#: templates/postorius/user/manage.html:104
+#: templates/postorius/user/manage.html:130
 msgid "Date joined"
 msgstr "Дата приєднання"
 
-#: templates/postorius/user/manage.html:109
-#: templates/postorius/user/manage.html:112
+#: templates/postorius/user/manage.html:135
+#: templates/postorius/user/manage.html:138
 msgid "Change password"
 msgstr "Змінити пароль"
 
@@ -3123,7 +3142,7 @@ msgstr "Реєстрація нового домена"
 msgid "Domain %s updated"
 msgstr "Домен %s оновлений"
 
-#: views/domain.py:130 views/list.py:1032
+#: views/domain.py:130 views/list.py:1031
 msgid "Please check the errors below"
 msgstr "Перевірте, будь ласка, помилки"
 
@@ -3153,7 +3172,7 @@ msgstr "Вилучаємо {} з власників {}"
 msgid "The email {} has been banned."
 msgstr "Ел.адреса {} була заблокована."
 
-#: views/generic.py:122 views/generic.py:137 views/list.py:1572
+#: views/generic.py:122 views/generic.py:137 views/list.py:1571
 #, python-format
 msgid "An error occurred: %s"
 msgstr "Виникла помилка: %s"
@@ -3167,95 +3186,95 @@ msgstr "Хибні дані: %s"
 msgid "The email {} has been un-banned"
 msgstr "Ел.адреса {} була розблокована"
 
-#: views/list.py:151
+#: views/list.py:150
 msgid "List {}s"
 msgstr "Список {}s"
 
-#: views/list.py:168
+#: views/list.py:167
 msgid "Add {}"
 msgstr "Додати {}"
 
-#: views/list.py:171
+#: views/list.py:170
 msgid "No {}s were found matching the search."
 msgstr "Результатів пошуку {}s немає."
 
-#: views/list.py:174
+#: views/list.py:173
 msgid "List has no {}s"
 msgstr "Список не містить {}s"
 
-#: views/list.py:186
+#: views/list.py:185
 msgid "The selected members have been unsubscribed"
 msgstr "Підписка для позначених учасників була скасована"
 
-#: views/list.py:207
+#: views/list.py:206
 #, python-brace-format
 msgid "{email} has been added with the role {role}"
 msgstr "Адреса {email} додана з роллю {role}"
 
-#: views/list.py:257
+#: views/list.py:256
 msgid "Member does not exist"
 msgstr "Учасник не існує"
 
-#: views/list.py:283
+#: views/list.py:282
 msgid "The member's preferences have been updated."
 msgstr "Налаштування учасника були оновлені."
 
-#: views/list.py:293
+#: views/list.py:292
 msgid "No change to the member's moderation."
 msgstr "Змін у модерації учасників немає."
 
-#: views/list.py:309
+#: views/list.py:308
 msgid "The member's moderation settings have been updated."
 msgstr "Налаштування модерації учасників були оновлені."
 
-#: views/list.py:524
+#: views/list.py:523
 msgid "You are not subscribed to {}."
 msgstr "Ви не підписані на {}."
 
-#: views/list.py:539
+#: views/list.py:538
 msgid "You are already subscribed"
 msgstr "Ви вже підписані"
 
-#: views/list.py:551
+#: views/list.py:550
 msgid "Subscription changed to {}"
 msgstr "Підписка змінена на {}"
 
-#: views/list.py:556
+#: views/list.py:555
 msgid "Something went wrong. Please try again. {} {}"
 msgstr "Щось пішло не так. Спробуйте, будь ласка, ще раз. {} {}"
 
-#: views/list.py:610
+#: views/list.py:609
 msgid ""
 "Your subscription request has been submitted and is waiting for moderator "
 "approval."
 msgstr ""
 "Ваш запит на підписку був отриманий і тепер очікує на схвалення модератором."
 
-#: views/list.py:618
+#: views/list.py:617
 #, python-format
 msgid "You are subscribed to %s."
 msgstr "Ви підписані на %s."
 
-#: views/list.py:623 views/list.py:659
+#: views/list.py:622 views/list.py:658
 msgid "Something went wrong. Please try again."
 msgstr "Щось пішло не так. Будь ласка, спробуйте ще раз."
 
-#: views/list.py:655
+#: views/list.py:654
 msgid "Please check your inbox for further instructions"
 msgstr "Перевірте, будь ласка, свою ел.пошту на наявність інструкцій"
 
-#: views/list.py:679
+#: views/list.py:678
 msgid "You can only unsubscribe yourself."
 msgstr "Ви можете лише скасувати свою підписку."
 
-#: views/list.py:685
+#: views/list.py:684
 msgid ""
 "You have a pending unsubscription request waiting for moderator approval."
 msgstr ""
 "У Вас наявний запит на скасування підписки. ВІн очікує на схвалення "
 "модератора."
 
-#: views/list.py:696
+#: views/list.py:695
 msgid ""
 "Your unsubscription request has been submitted and is waiting for moderator "
 "approval."
@@ -3263,22 +3282,22 @@ msgstr ""
 "Ваш запит на скасування підписки отриманий і тепер очікує на схвалення "
 "модератора."
 
-#: views/list.py:704
+#: views/list.py:703
 #, python-format
 msgid "%s has been unsubscribed from this list."
 msgstr "%s скасовує підписку на цей список розсилки."
 
-#: views/list.py:741
+#: views/list.py:740
 #, python-format
 msgid "The address %(address)s has been invited to %(list)s."
 msgstr "Адреса %(address)s запрошена до списку %(list)s."
 
-#: views/list.py:746
+#: views/list.py:745
 #, python-format
 msgid "The address %(address)s has been subscribed to %(list)s."
 msgstr "Адреса %(address)s була підписана на %(list)s."
 
-#: views/list.py:751
+#: views/list.py:750
 msgid ""
 " Subscription may be pending address verification, confirmation or approval "
 "as appropriate."
@@ -3286,198 +3305,198 @@ msgstr ""
 " Підписка може затримуватися через очікування на перевірку адреси, а також "
 "підтвердження та схвалення модератором."
 
-#: views/list.py:769 views/list.py:839
+#: views/list.py:768 views/list.py:838
 #, python-format
 msgid "The email address %s is not valid."
 msgstr "Адреса %s не дійсна."
 
-#: views/list.py:808
+#: views/list.py:807
 msgid "Please fill out the form correctly."
 msgstr "Будь ласка, заповніть форму правильно."
 
-#: views/list.py:826
+#: views/list.py:825
 #, python-brace-format
 msgid "These addresses {address} have been unsubscribed from {list}."
 msgstr "Ці адреси {address} були відписані від {list}."
 
-#: views/list.py:861
+#: views/list.py:860
 msgid "The selected messages were accepted"
 msgstr "Позначені повідомлення отримані"
 
-#: views/list.py:866
+#: views/list.py:865
 msgid "The selected messages were rejected"
 msgstr "Позначені повідомлення відкинуті"
 
-#: views/list.py:871
+#: views/list.py:870
 msgid "The selected messages were discarded"
 msgstr "Позначені повідомлення відхилені"
 
-#: views/list.py:874
+#: views/list.py:873
 msgid "Message could not be found"
 msgstr "Знайти повідомлення не вийшло"
 
-#: views/list.py:905
+#: views/list.py:904
 msgid "The message was accepted"
 msgstr "Повідомлення було прийняте"
 
-#: views/list.py:908
+#: views/list.py:907
 msgid "The message was rejected"
 msgstr "Повідомлення було відкинуте"
 
-#: views/list.py:911
+#: views/list.py:910
 msgid "The message was discarded"
 msgstr "Повідомлення було відхилене"
 
-#: views/list.py:914
+#: views/list.py:913
 msgid "Held message was not found."
 msgstr "Затриманих повідомлень не знайдено."
 
-#: views/list.py:928
+#: views/list.py:927
 msgid "Moderation action for {} set to {}"
 msgstr "Дії модераторів для {} призначені {}"
 
-#: views/list.py:936
+#: views/list.py:935
 msgid "Failed to set moderation action for {}"
 msgstr "Дію модераторів для {} призначити вийшло"
 
-#: views/list.py:988
+#: views/list.py:987
 msgid "Choose a Domain"
 msgstr "Оберіть домен"
 
-#: views/list.py:1012
+#: views/list.py:1011
 msgid "List created"
 msgstr "Список створений"
 
-#: views/list.py:1024
+#: views/list.py:1023
 msgid "Mailing List already exists."
 msgstr "Список розсилки вже існує."
 
-#: views/list.py:1204
+#: views/list.py:1203
 msgid "Subscriptions pending user confirmation"
 msgstr "Підписки очікують на схвалення користувачів"
 
-#: views/list.py:1217
+#: views/list.py:1216
 msgid "Subscriptions pending approval"
 msgstr "Підписки очікують схвалення"
 
-#: views/list.py:1230
+#: views/list.py:1229
 msgid "Un-subscriptions pending approval"
 msgstr "Відписки очікують схвалення"
 
-#: views/list.py:1279
+#: views/list.py:1278
 msgid "The request has been accepted."
 msgstr "Запит був схвалений."
 
-#: views/list.py:1280
+#: views/list.py:1279
 msgid "The request has been rejected."
 msgstr "Запит був відкинутий."
 
-#: views/list.py:1281
+#: views/list.py:1280
 msgid "The request has been discarded."
 msgstr "Запит був відхилений."
 
-#: views/list.py:1282
+#: views/list.py:1281
 msgid "The request has been defered."
 msgstr "Запит був відкладений."
 
-#: views/list.py:1302
+#: views/list.py:1301
 #, python-format
 msgid "The request was already moderated: %s"
 msgstr "Запит вже оброблений модератором: %s"
 
-#: views/list.py:1306
+#: views/list.py:1305
 #, python-format
 msgid "The request could not be moderated: %s"
 msgstr "Запит не може бути оброблений: %s"
 
-#: views/list.py:1320
+#: views/list.py:1319
 msgid "List Identity"
 msgstr "Ідентифікатор списку"
 
-#: views/list.py:1321
+#: views/list.py:1320
 msgid "Automatic Responses"
 msgstr "Автоматичні відповіді"
 
-#: views/list.py:1322
+#: views/list.py:1321
 msgid "Alter Messages"
 msgstr "Змінити повідомлення"
 
-#: views/list.py:1323
+#: views/list.py:1322
 msgid "DMARC Mitigations"
 msgstr "Заходи для обходу DMARC"
 
-#: views/list.py:1324
+#: views/list.py:1323
 msgid "Digest"
 msgstr "Дайджест"
 
-#: views/list.py:1325
+#: views/list.py:1324
 msgid "Message Acceptance"
 msgstr "Прийняття повідомлень"
 
-#: views/list.py:1326
+#: views/list.py:1325
 msgid "Archiving"
 msgstr "Архівація"
 
-#: views/list.py:1327
+#: views/list.py:1326
 msgid "Member Policy"
 msgstr "Політика членства"
 
-#: views/list.py:1328
+#: views/list.py:1327
 msgid "Bounce Processing"
 msgstr "Обробка повернень"
 
-#: views/list.py:1395
+#: views/list.py:1394
 msgid "The settings have been updated."
 msgstr "Налаштування оновлені."
 
-#: views/list.py:1398
+#: views/list.py:1397
 msgid "An error occurred: "
 msgstr "Виникла помилка: "
 
-#: views/list.py:1432
+#: views/list.py:1431
 #, python-format
 msgid "The user %(email)s is not in the %(role)s group"
 msgstr "Користувач %(email)s не є учасником групи %(role)s"
 
-#: views/list.py:1439
+#: views/list.py:1438
 msgid "Removing the last owner is impossible"
 msgstr "Вилучення останнього власника неможливе"
 
-#: views/list.py:1457
+#: views/list.py:1456
 #, python-format
 msgid "The user could not be removed: %(msg)s"
 msgstr "Користувача не можна вилучити: %(msg)s"
 
-#: views/list.py:1463
+#: views/list.py:1462
 #, python-format
 msgid "The user %(address)s has been removed from the %(role)s group."
 msgstr "Користувач %(address)s був вилучений з групи %(role)s."
 
-#: views/list.py:1484
+#: views/list.py:1483
 msgid "No member is subscribed to the list currently."
 msgstr "На цей список наразі ніхто не підписаний."
 
-#: views/list.py:1497
+#: views/list.py:1496
 msgid "All members have been unsubscribed from the list."
 msgstr "Усі учасники були відписані від розсилки."
 
-#: views/list.py:1576
+#: views/list.py:1575
 msgid "The header matches were successfully modified."
 msgstr "Відповідні заголовки успішно змінені."
 
-#: views/list.py:1583
+#: views/list.py:1582
 msgid "New header"
 msgstr "Новий заголовок"
 
-#: views/list.py:1584
+#: views/list.py:1583
 msgid "New pattern"
 msgstr "Новий шаблон"
 
-#: views/list.py:1616
+#: views/list.py:1615
 msgid "Invalid confirmation token"
 msgstr "Хибний токен підтвердження"
 
-#: views/list.py:1626 views/list.py:1642
+#: views/list.py:1625 views/list.py:1641
 msgid "Token expired or invalid."
 msgstr "Токен хибний або вже не діє."
 
@@ -3513,23 +3532,23 @@ msgstr "Ваші налаштування не змінені."
 msgid "Subscription does not exist"
 msgstr "Підписка не існує"
 
-#: views/user.py:452
+#: views/user.py:457
 msgid "Successfully updated addresses {}"
 msgstr "Адреси успішно оновлені {}"
 
-#: views/user.py:466
+#: views/user.py:471
 msgid "Successfully updated memberships for {}"
 msgstr "Членство для {} успішно оновлене"
 
-#: views/user.py:475
+#: views/user.py:480
 msgid "Successfully updated user."
 msgstr "Обліковий запис користувача оновлений."
 
-#: views/user.py:485
+#: views/user.py:490
 msgid "Password updated successfully"
 msgstr "Пароль успішно оновлений"
 
-#: views/user.py:522
+#: views/user.py:528
 msgid "Successfully deleted account"
 msgstr "Обліковий запис успішно видалений"
 
