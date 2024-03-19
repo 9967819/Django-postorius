@@ -858,6 +858,7 @@ class AlterMessagesForm(ListSettingsForm):
         choices=((True, _('Yes')), (False, _('No'))),
         widget=forms.RadioSelect,
         required=False,
+        label=_('First strip Reply-To'),
         help_text=_(
             'Should any existing Reply-To: header found in the original '
             'message be stripped? If so, this will be done regardless of '
