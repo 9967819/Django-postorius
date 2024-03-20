@@ -4,13 +4,13 @@
 # Victoriano Giralt <victoriano@uma.es>, 2020.
 # Guillermo Hernandez <guillermo@querysoft.es>, 2021.
 # Francisco Serrador <fserrador@gmail.com>, 2022, 2023.
-# gallegonovato <fran-carro@hotmail.es>, 2023.
+# gallegonovato <fran-carro@hotmail.es>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-19 17:57+0000\n"
-"PO-Revision-Date: 2023-11-05 08:06+0000\n"
+"PO-Revision-Date: 2024-03-20 12:02+0000\n"
 "Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/es/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.2-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -1110,7 +1110,7 @@ msgstr ""
 
 #: forms/list_forms.py:861
 msgid "First strip Reply-To"
-msgstr ""
+msgstr "Primera franja Responder a"
 
 #: forms/list_forms.py:863
 msgid ""
@@ -3061,16 +3061,12 @@ msgid "User has no subscriptions."
 msgstr "El usuario no tiene suscripciones."
 
 #: templates/postorius/user/manage.html:88
-#, fuzzy
-#| msgid "Owners"
 msgid "Ownerships"
-msgstr "Propietarios"
+msgstr "Propiedad"
 
 #: templates/postorius/user/manage.html:111
-#, fuzzy
-#| msgid "User has no subscriptions."
 msgid "User has no ownerships."
-msgstr "El usuario no tiene suscripciones."
+msgstr "El usuario no tiene ninguna titularidad."
 
 #: templates/postorius/user/manage.html:115
 msgid "Web Account"
