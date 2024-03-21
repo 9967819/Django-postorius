@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Oğuz Ersen <oguzersen@protonmail.com>, 2020, 2021, 2022.
-# Oğuz Ersen <oguz@ersen.moe>, 2022, 2023.
+# Oğuz Ersen <oguz@ersen.moe>, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-19 17:57+0000\n"
-"PO-Revision-Date: 2023-11-05 19:43+0000\n"
+"PO-Revision-Date: 2024-03-21 14:31+0000\n"
 "Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/tr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.2-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -1092,7 +1092,7 @@ msgstr ""
 
 #: forms/list_forms.py:861
 msgid "First strip Reply-To"
-msgstr ""
+msgstr "Önce Yanıtla başlığını kaldır"
 
 #: forms/list_forms.py:863
 msgid ""
@@ -3018,16 +3018,12 @@ msgid "User has no subscriptions."
 msgstr "Kullanıcının aboneliği yok."
 
 #: templates/postorius/user/manage.html:88
-#, fuzzy
-#| msgid "Owners"
 msgid "Ownerships"
-msgstr "Sahipleri"
+msgstr "Sahiplikler"
 
 #: templates/postorius/user/manage.html:111
-#, fuzzy
-#| msgid "User has no subscriptions."
 msgid "User has no ownerships."
-msgstr "Kullanıcının aboneliği yok."
+msgstr "Kullanıcının sahipliği yok."
 
 #: templates/postorius/user/manage.html:115
 msgid "Web Account"
