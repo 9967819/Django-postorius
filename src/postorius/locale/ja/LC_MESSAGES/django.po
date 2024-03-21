@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-19 17:57+0000\n"
-"PO-Revision-Date: 2024-03-18 20:40+0000\n"
+"PO-Revision-Date: 2024-03-21 14:31+0000\n"
 "Last-Translator: SATOH Fumiyasu <fumiyas@osstech.co.jp>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ja/>\n"
@@ -506,7 +506,7 @@ msgstr ""
 
 #: forms/list_forms.py:340
 msgid "Notify owner on removal"
-msgstr "オーナーに削除を通知"
+msgstr "退会時にオーナーに通知"
 
 #: forms/list_forms.py:342
 msgid ""
@@ -550,9 +550,9 @@ msgid ""
 "an address from the list once their bounce score exceeds the threshold. This "
 "value must be an integer. "
 msgstr ""
-"無効化されたメンバーのアドレスがメーリングリストから削除されるまでの通知回"
-"数。これを 0 に設定すると、バウンススコアがしきい値を超えると、そのアドレスは"
-"即座にメーリングリストから削除されます。この値は整数でなければなりません。 "
+"無効化されたメンバーのアドレスがメーリングリストから退会されるまでの通知回数"
+"。これを 0 に設定すると、バウンススコアがしきい値を超えると、そのアドレスは即"
+"座にメーリングリストから退会されます。この値は整数でなければなりません。 "
 
 #: forms/list_forms.py:387
 msgid "Public archives"
@@ -864,7 +864,7 @@ msgstr "From: をリストのアドレスに置き換える"
 
 #: forms/list_forms.py:705
 msgid "Wrap the message in an outer message From: the list."
-msgstr "From: をリストの投稿用アドレスにし、投稿されたメッセージを添付します。"
+msgstr "From: をリストの投稿用アドレスにして投稿メッセージを添付する"
 
 #: forms/list_forms.py:707
 msgid "Reject the message"
@@ -892,8 +892,9 @@ msgid ""
 "If DMARC mitigation action is munge_from or wrap_message, should it apply to "
 "all messages regardless of the DMARC policy of the From: domain."
 msgstr ""
-"DMARC の緩和処理が From を書き換え または メール内に添付 の場合、From: ドメイ"
-"ンの DMARC ポリシーに関係なく、すべてのメッセージに適用される。"
+"DMARC の緩和処理が「From: をリストのアドレスに置き換える」または「From: "
+"をリストの投稿用アドレスにして投稿メッセージを添付する」の場合、From: "
+"ドメインの DMARC ポリシーに関係なく、すべてのメッセージに適用する。"
 
 #: forms/list_forms.py:728
 msgid "DMARC Addresses"
@@ -926,7 +927,7 @@ msgstr ""
 
 #: forms/list_forms.py:748
 msgid "DMARC wrapped message text"
-msgstr "DMARCラップされたメッセージテキスト"
+msgstr "DMARC ラップされたメッセージテキスト"
 
 #: forms/list_forms.py:752
 msgid ""
@@ -934,9 +935,9 @@ msgid ""
 "message part in the wrapped message when DMARC mitigation action of wrap "
 "message applies."
 msgstr ""
-"DMARCの緩和処理であるメール内添付が適用される場合、添付されたメッセージのオリ"
-"ジナルメッセージ部分の前に、別のtext/plain MIMEパートとして追加されるテキス"
-"ト。"
+"DMARC の緩和処理であるメール内添付が適用される場合、添付されたメッセージのオ"
+"リジナルメッセージ部分の前に、別の text/plain MIME "
+"パートとして追加されるテキスト。"
 
 #: forms/list_forms.py:760 templates/postorius/lists/summary.html:146
 #: templates/postorius/lists/summary.html:155
@@ -1011,9 +1012,8 @@ msgstr "匿名リスト"
 msgid ""
 "Hide the sender of a message, replacing it with the list address (Removes "
 "From, Sender and Reply-To fields)"
-msgstr ""
-"メッセージの送信者を隠し、メーリングリストのアドレスに置き換えます (From、"
-"Sender、Reply-To ヘッダーを削除します)"
+msgstr "メッセージの送信者を隠し、メーリングリストのアドレスに置き換えます "
+"(From:、Sender:、Reply-To: ヘッダーを削除します)"
 
 #: forms/list_forms.py:821
 msgid "Include RFC2369 headers"
@@ -1071,7 +1071,7 @@ msgstr ""
 
 #: forms/list_forms.py:861
 msgid "First strip Reply-To"
-msgstr ""
+msgstr "投稿の Reply-To を除去"
 
 #: forms/list_forms.py:863 forms/list_forms.py:862
 msgid ""
@@ -1130,31 +1130,33 @@ msgid ""
 "list. To support these types of mailing lists, select Explicit Reply and set "
 "the Reply-To: address option to point to the parallel list."
 msgstr ""
-"メーリングリストへの返信はどこにするべきでしょうか? ほどんどのメーリングリス"
-"トでは、返信設定を行わないことを推奨します。\n"
-"このオプションは、このメーリング リストを流れるメッセージの Reply-To: ヘッ"
-"ダーに対して Mailman が行う処理を制御します。「返信設定を変更しない」を設定し"
-"たとき、Reply-To: ヘッダーは Mailman によって追加されません。元のメッセージに"
-"存在する場合も削除されません。この値を「メーリングリストへの返信」「明示的に "
-"Reply-To ヘッダーを設定」「明示的に Reply-To ヘッダーを設定 (Cc は追加しな"
-"い)」に設定すると、Mailman はすべてのメッセージに特定の Reply-To: ヘッダーを"
-"挿入し、必要に応じて元のメッセージのヘッダーを上書きします (「明示的に Reply-"
-"To ヘッダーを設定」は「明示的な Reply-To アドレス」の値を挿入します)。「明示"
-"的に Reply-To ヘッダーを設定 (Cc は追加しない)」は、誰かがリストのアドレスに"
-"返信することを避けたいアナウンス専用リストに便利です。Reply-To: ヘッダーを付"
-"け加えたり変更するべきではない 理由はたくさんあります。 ひとつは、Reply-To: "
-"により返信先を指定したい人がいるということです。 また、Reply-To: を変更すると"
-"個人的な返信が 面倒になるという理由もあります。「<a href=\"http://marc."
-"merlins.org/netrants/reply-to-harmful.html\">`Reply-To' Munging Considered "
-"Harmful</a>」でこの件に関する総括的な議論を読むことができます。これに対する反"
-"論は「 <a href=\"http://marc.merlins.org/netrants/reply-to-useful."
-"html\">Reply-To Munging Considered Useful</a>」にありますので参考にしてくださ"
-"い。メーリングリストによっては投稿を制限し、並行して討論用の リストを設置する"
-"こともあります。例としては「patches」や「checkin」リスト があります。これらの"
-"リストは、ソフトウェアの変更がリビジョン管理システム (RCS) から投稿されます。"
-"しかし、変更についての議論は別の開発者メーリングリストで行われます。このよう"
-"なメーリングリストの運用には、別のアドレスを選び、下の Reply-To: アドレスを並"
-"行リストの投稿アドレスに 設定してください。"
+"メーリングリストへの返信はどこにするべきでしょうか? "
+"ほどんどのメーリングリストでは、返信設定を行わないことを推奨します。\n"
+"このオプションは、このメーリング リストを流れるメッセージの Reply-To: "
+"ヘッダーに対して Mailman "
+"が行う処理を制御します。「返信設定を変更しない」を設定したとき、Reply-To: "
+"ヘッダーは Mailman によって追加されません。元のメッセージに存在する場合も削除"
+"されません。この値を「メーリングリストへの返信」「明示的に Reply-To: "
+"ヘッダーを設定」「明示的に Reply-To: ヘッダーを設定 (Cc: "
+"は追加しない)」に設定すると、Mailman はすべてのメッセージに特定の Reply-To: "
+"ヘッダーを挿入し、必要に応じて元のメッセージのヘッダーを上書きします (「"
+"明示的に Reply-To: ヘッダーを設定」は「明示的な Reply-To: "
+"アドレス」の値を挿入します)。「明示的に Reply-To: ヘッダーを設定 (Cc: は追加"
+"しない)」は、誰かがリストのアドレスに返信することを避けたいアナウンス専用リス"
+"トに便利です。Reply-To: ヘッダーを付け加えたり変更するべきではない "
+"理由はたくさんあります。 ひとつは、Reply-To: "
+"により返信先を指定したい人がいるということです。 また、Reply-To: "
+"を変更すると個人的な返信が 面倒になるという理由もあります。「<a href=\"http"
+"://marc.merlins.org/netrants/reply-to-harmful.html\">`Reply-To' Munging "
+"Considered Harmful</a>」でこの件に関する総括的な議論を読むことができます。こ"
+"れに対する反論は「 <a href=\"http://marc.merlins.org/netrants/reply-to-useful"
+".html\">Reply-To Munging Considered Useful</a>」にありますので参考にしてくだ"
+"さい。メーリングリストによっては投稿を制限し、並行して討論用の "
+"リストを設置することもあります。例としては「patches」や「checkin」リスト "
+"があります。これらのリストは、ソフトウェアの変更がリビジョン管理システム "
+"(RCS) から投稿されます。しかし、変更についての議論は別の開発者メーリングリス"
+"トで行われます。このようなメーリングリストの運用には、別のアドレスを選び、"
+"下の Reply-To: アドレスを並行リストの投稿アドレスに 設定してください。"
 
 #: forms/list_forms.py:914 forms/list_forms.py:913
 msgid "Pipeline"
@@ -1190,7 +1192,7 @@ msgid ""
 msgstr ""
 "受信した投稿からフィルタリングする MIME タイプ。一般的なタイプのリストは、<a "
 "href=\"https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Basics_of_HTTP/"
-"MIME_types/Common_types\">こちら </a> でご覧いただけます"
+"MIME_types/Common_types\">こちら</a>でご覧いただけます"
 
 #: forms/list_forms.py:943 forms/list_forms.py:942
 msgid "Filter extensions"
@@ -1210,9 +1212,9 @@ msgid ""
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
-"受信した投稿で許可する MIME タイプ。一般的なタイプのリストは、<a "
-"href=\"https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Basics_of_HTTP/"
-"MIME_types/Common_types\">こちら </a> でご覧いただけます"
+"受信した投稿で許可する MIME タイプ。一般的なタイプのリストは、<a href=\"https"
+"://developer.mozilla.org/ja-JP/docs/Web/HTTP/Basics_of_HTTP/MIME_types/"
+"Common_types\">こちら</a>でご覧いただけます"
 
 #: forms/list_forms.py:957 forms/list_forms.py:956
 msgid "Pass extensions"
@@ -1581,10 +1583,8 @@ msgid ""
 "If set to \"Yes\" or \"No\", List's default setting of send_welcome_message "
 "will be ignored for these subscribers and a welcome message will be sent or "
 "not sent based on the choice."
-msgstr ""
-"「はい」または「いいえ」に設定すると、リストのデフォルト設定である "
-"send_welcome_message はこれらのメンバーに対して無視され、歓迎メッセージが送信"
-"されたり送信されなかったりします。"
+msgstr "「はい」または「いいえ」に設定するとそれに従い、リストのデフォルト "
+"(「歓迎メッセージを送信」設定) は無視されます。"
 
 #: forms/list_forms.py:1321 forms/list_forms.py:1320
 msgid "Emails to Unsubscribe"
@@ -2092,7 +2092,7 @@ msgid ""
 "      "
 msgstr ""
 "\n"
-"        これは、%(size)sのリストを削除することになります:\n"
+"        これは、%(size)s のリストを削除することになります:\n"
 "      "
 
 #: templates/postorius/domain/confirm_delete.html:33
@@ -2354,7 +2354,7 @@ msgstr ""
 
 #: templates/postorius/lists/confirm_remove_role.html:5
 msgid "Confirm remove role"
-msgstr "役割の削除を確認する"
+msgstr "役割の削除の確認"
 
 #: templates/postorius/lists/confirm_remove_role.html:15
 #, python-format
@@ -2368,7 +2368,7 @@ msgstr "よろしいですか?"
 #: templates/postorius/lists/confirm_remove_role.html:22
 #, python-format
 msgid " Remove %(role_translated)s"
-msgstr " %(role_translated)sを削除する"
+msgstr " %(role_translated)s を削除"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 msgid "Unsubscribe all members"
@@ -2382,14 +2382,14 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"        警告! これにより、%(listname)s からすべてのメンバーが削除されます!\n"
+"        警告! これにより、%(listname)s からすべてのメンバーが退会されます!\n"
 "    "
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:21
 #: templates/postorius/lists/mass_removal.html:17
 #: templates/postorius/lists/members.html:63
 msgid "Remove ALL members"
-msgstr "すべてのメンバーを削除する"
+msgstr "すべてのメンバーを退会"
 
 #: templates/postorius/lists/confirm_token.html:12
 #, python-format
@@ -2517,7 +2517,7 @@ msgstr "メッセージが取得できませんでした"
 
 #: templates/postorius/lists/mass_removal.html:14
 msgid "Remove listed users"
-msgstr "リストアップされたユーザーを削除する"
+msgstr "リストアップされたユーザーを退会"
 
 #: templates/postorius/lists/mass_subscribe.html:7
 #: templates/postorius/menu/list_nav.html:79
@@ -2556,7 +2556,7 @@ msgstr "CSV エクスポート"
 
 #: templates/postorius/lists/members.html:62
 msgid "Remove Selected"
-msgstr "選択削除"
+msgstr "選択したものを退会"
 
 #: templates/postorius/lists/members.html:78
 #: templates/postorius/user/address_preferences.html:32
@@ -2812,7 +2812,7 @@ msgstr "一括処理"
 #: templates/postorius/menu/list_nav.html:80
 #: templates/postorius/menu/list_nav.html:84
 msgid "Mass removal"
-msgstr "一括削除"
+msgstr "一括退会"
 
 #: templates/postorius/menu/list_nav.html:87
 msgid "Ban List"
@@ -2901,7 +2901,7 @@ msgstr "作成"
 #: templates/postorius/user/manage.html:141
 #: templates/postorius/user/manage.html:115
 msgid "Delete Account"
-msgstr "アカウント削除"
+msgstr "アカウントを削除"
 
 #: templates/postorius/user/confirm_delete.html:17
 msgid ""
@@ -3033,7 +3033,7 @@ msgstr "ブロックされたアドレス"
 
 #: templatetags/nav_helpers.py:29
 msgid "Delete List"
-msgstr "メーリングリスト削除"
+msgstr "メーリングリストを削除"
 
 #: templatetags/nav_helpers.py:30
 msgid "Held Messages"
@@ -3041,7 +3041,7 @@ msgstr "保留メッセージ"
 
 #: templatetags/nav_helpers.py:31
 msgid "Mass Removal"
-msgstr "一括削除"
+msgstr "一括退会"
 
 #: templatetags/nav_helpers.py:32
 msgid "Mass Subscription"
@@ -3061,7 +3061,7 @@ msgstr "概要"
 
 #: templatetags/nav_helpers.py:37
 msgid "Confirm Removal of All Members"
-msgstr "全メンバーの削除を確認"
+msgstr "全メンバー退会の確認"
 
 #: templatetags/nav_helpers.py:40
 msgid "Address-based Settings"
@@ -3112,7 +3112,7 @@ msgstr "{}は{}のオーナーではありません"
 
 #: views/domain.py:227
 msgid "Removed {} as an owner for {}"
-msgstr "{}のオーナーとして{}を削除"
+msgstr "オーナー {} をドメイン {} から削除しました"
 
 #: views/generic.py:116
 msgid "The email {} has been banned."
@@ -3353,7 +3353,7 @@ msgstr "申請を処理できませんでした: %s"
 
 #: views/list.py:1319 views/list.py:1320
 msgid "List Identity"
-msgstr "メーリングリストの基本設定"
+msgstr "メーリングリスト識別設定"
 
 #: views/list.py:1320 views/list.py:1321
 msgid "Automatic Responses"
