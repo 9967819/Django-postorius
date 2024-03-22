@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-19 17:57+0000\n"
-"PO-Revision-Date: 2024-03-21 14:31+0000\n"
+"PO-Revision-Date: 2024-03-22 18:00+0000\n"
 "Last-Translator: SATOH Fumiyasu <fumiyas@osstech.co.jp>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ja/>\n"
@@ -198,14 +198,14 @@ msgid ""
 "Accept -- accepts any postings without any further checks. \n"
 "Default Processing -- run additional checks and accept the message. \n"
 msgstr ""
-"このメンバーがリストに投稿するときに実行されるデフォルトの処理。\n"
-"リストのデフォルト -- リストのデフォルトのメンバー処理に従います。\n"
+"このメンバーがリストに投稿したときに実行されるデフォルトの処理。\n"
+"リストのデフォルト: リストのデフォルトのメンバー処理に従います。\n"
 "保留: リストモデレーターによる承認のためにメッセージを保留します。\n"
 "拒否: 投稿者にバウンス通知を送ることで、自動的にメッセージを拒否します。バウ"
 "ンス通知の文面は自分で設定できます。\n"
 "破棄: これは単にメッセージを破棄し、投稿者には何も通知しません。\n"
 "承認: 投稿をそのまま受け入れます。\n"
-"デフォルト処理 -- 追加のチェックを実行し、メッセージを受け入れます。 \n"
+"デフォルト処理: 追加のチェックを実行し、メッセージを受け入れます。 \n"
 
 #: forms/list_forms.py:43
 msgid "Daily"
@@ -402,11 +402,11 @@ msgstr "破棄"
 
 #: forms/list_forms.py:279
 msgid "List Admins"
-msgstr "リストの管理者"
+msgstr "メーリングリスト管理者"
 
 #: forms/list_forms.py:280
 msgid "Site Admin"
-msgstr "サイトの管理者"
+msgstr "サイト管理者"
 
 #: forms/list_forms.py:284 forms/list_forms.py:316 forms/list_forms.py:327
 #: forms/list_forms.py:338 forms/list_forms.py:467 forms/list_forms.py:477
@@ -615,10 +615,10 @@ msgid ""
 "meaning they are anchored to the start of the string."
 msgstr ""
 "これはメールアドレスとアドレスにマッチする正規表現のリストです。「明示的な宛"
-"先設定」が有効になっている場合、To: や Cc: の投稿アドレスの代わりとして使用で"
-"きます。 正規表現は「^」で始まるエントリーを記述し、メッセージ中の全ての宛先"
-"アドレスとマッチします。マッチングは Python の re.match() 関数で行われ、文字"
-"列の先頭に固定されます。"
+"先設定」が有効になっている場合、To: や Cc: "
+"の投稿アドレスの代わりとして使用できます。 正規表現は「^」で始まるエントリー"
+"を記述し、メッセージ中の全ての宛先アドレスとマッチします。マッチングは "
+"Python の re.match() 関数で行われ、文字列の先頭から走査されます。"
 
 #: forms/list_forms.py:469
 msgid "Require Explicit Destination"
@@ -675,7 +675,7 @@ msgstr ""
 
 #: forms/list_forms.py:512
 msgid "Default action to take when a non-member posts to the list"
-msgstr "非メンバーがリストに投稿したときに実行されるデフォルトの処理"
+msgstr "非メンバーがリストに投稿したときのデフォルト処理"
 
 #: forms/list_forms.py:514
 msgid "Please choose a default non-member action."
@@ -687,9 +687,9 @@ msgid ""
 "against the list of explicitly accepted, held, rejected (bounced), and "
 "discarded addresses. If no match is found, then this action is taken."
 msgstr ""
-"非メンバーからの投稿を受信すると、そのメッセージの差出人は、明示的に受理、保"
-"留、拒否 (バウンス)、破棄されたアドレスのリストと照合されます。一致しない場"
-"合、この処理が実行されます。"
+"非メンバーからの投稿を受信すると、そのメッセージの差出人は、明示的に投稿を承"
+"認、保留、拒否 (バウンス)、破棄するアドレスのリストと照合されます。それらリス"
+"トと一致しない場合、この処理が適用されます。"
 
 #: forms/list_forms.py:528
 msgid "Emergency Moderation"
@@ -733,7 +733,7 @@ msgstr ""
 
 #: forms/list_forms.py:568
 msgid "Accept these non-members"
-msgstr "投稿を許可する非メンバー"
+msgstr "投稿を承認する非メンバー"
 
 #: forms/list_forms.py:571
 msgid ""
@@ -745,10 +745,10 @@ msgid ""
 "Default Processing."
 msgstr ""
 "これは、メーリングリストに入会せずにこのメーリングリストへの投稿を許可するア"
-"ドレスにマッチする正規表現のリストです。入力項目は「^」で始まる正規表現で、"
-"メッセージ中の差出人アドレスとマッチします。正規表現以外のアドレスをここに入"
-"力することもできますが、メールアドレスを非メンバーとして登録し、非メンバーの"
-"投稿処理を「デフォルト処理」に設定する方法をおすすめします。"
+"ドレスにマッチする正規表現のリストです。入力項目は「^」で始まる正規表現で、メ"
+"ッセージ中の差出人アドレスとマッチします。正規表現以外のアドレスをここに入力"
+"することもできますが、メールアドレスを非メンバーとして登録し、非メンバーの投"
+"稿処理を「デフォルト処理」に設定する方法を推奨します。"
 
 #: forms/list_forms.py:583
 msgid "Hold these non-members"
@@ -848,15 +848,15 @@ msgstr ""
 
 #: forms/list_forms.py:694
 msgid "DMARC mitigation action"
-msgstr "DMARCの緩和処理"
+msgstr "DMARC の緩和処理"
 
 #: forms/list_forms.py:698
 msgid "Please choose a DMARC mitigation action."
-msgstr "DMARCの緩和処理を選択してください。"
+msgstr "DMARC の緩和処理を選択してください。"
 
 #: forms/list_forms.py:701
 msgid "No DMARC mitigations"
-msgstr "DMARCの緩和なし"
+msgstr "DMARC の緩和なし"
 
 #: forms/list_forms.py:702
 msgid "Replace From: with list address"
@@ -880,12 +880,12 @@ msgid ""
 "reject or quarantine or to all messages if DMARC Mitigate unconditionally is "
 "True."
 msgstr ""
-"From: ドメインの DMARC ポリシーが reject か quarantine の場合、または「DMARC"
+"From: ドメインの DMARC ポリシーが reject か quarantine の場合、または「DMARC "
 "対策を無条件に実施」が「はい」に設定されている場合の動作。"
 
 #: forms/list_forms.py:720
 msgid "DMARC Mitigate unconditionally"
-msgstr "DMARC対策を無条件に実施"
+msgstr "DMARC 対策を無条件に実施"
 
 #: forms/list_forms.py:722
 msgid ""
@@ -898,7 +898,7 @@ msgstr ""
 
 #: forms/list_forms.py:728
 msgid "DMARC Addresses"
-msgstr "DMARCアドレス"
+msgstr "DMARC アドレス"
 
 #: forms/list_forms.py:731
 msgid ""
@@ -915,15 +915,14 @@ msgstr ""
 
 #: forms/list_forms.py:739
 msgid "DMARC rejection notice"
-msgstr "DMARC拒否通知"
+msgstr "DMARC 拒否通知"
 
 #: forms/list_forms.py:743
 msgid ""
 "Text to replace the default reason in any rejection notice to be sent when "
 "DMARC mitigation action of reject applies."
-msgstr ""
-"DMARCの緩和処理によって、メッセージが拒否される際の、拒否通知内容を設定しま"
-"す。"
+msgstr "DMARC "
+"の緩和処理によって、メッセージが拒否される際の、拒否通知内容を設定します。"
 
 #: forms/list_forms.py:748
 msgid "DMARC wrapped message text"
@@ -994,7 +993,7 @@ msgid ""
 " Forward = forward the message to the list owner(s).\n"
 " Preserve = save the message in qfiles/bad.\n"
 msgstr ""
-"フィルタリング後、内容がないメッセージに取るべき処理。\n"
+"フィルター処理後、内容が完全に空になったメッセージに取るべき処理。\n"
 " 破棄: 静かにメッセージを破棄する。\n"
 " 拒否: メッセージを破棄し、送信者に通知する。\n"
 " 転送: メッセージをリストのオーナーに転送する。\n"
@@ -1017,7 +1016,7 @@ msgstr "メッセージの送信者を隠し、メーリングリストのアド
 
 #: forms/list_forms.py:821
 msgid "Include RFC2369 headers"
-msgstr "RFC2369ヘッダーを含める"
+msgstr "RFC 2369 ヘッダーを含める"
 
 #: forms/list_forms.py:823
 msgid ""
@@ -1032,16 +1031,17 @@ msgid ""
 "headers, but this is not recommended (and in fact, your ability to disable "
 "these headers may eventually go away)."
 msgstr ""
-"「はい」を推奨します。RFC 2369は、リストメンバーに送られるすべてのメッセージ"
-"に通常追加される List-*ヘッダーのセットを定義しています。これらは標準に準拠し"
-"たメールソフトを使っているエンドユーザーを大いに助けるものです。通常は常に有"
-"効にしておくべきです。しかし、まだすべてのメールソフトが標準に準拠しているわ"
-"けではありませんし、非準拠のメールソフトを使っているメンバーが多数いる場合"
-"は、これらのヘッダーを見ていらいらするかもしれません。まず、これらのヘッダー"
-"がなぜ存在するのか、メールソフトでどのように非表示にするのかについて、メン"
-"バーを教育する努力をすべきです。最後の手段として、これらのヘッダーを無効にす"
-"ることもできますが、これは推奨されません (実際、これらのヘッダーを無効にする"
-"機能はいずれなくなるかもしれません)。"
+"「はい」を推奨します。RFC 2369 は、"
+"リストメンバーに送られるすべてのメッセージに通常追加される List-*:ヘッダーの"
+"セットを定義しています。これらは標準に準拠したメールソフトを使っているエンド"
+"ユーザーを大いに助けるものです。通常は常に有効にしておくべきです。しかし、ま"
+"だすべてのメールソフトが標準に準拠しているわけではありませんし、非準拠のメー"
+"ルソフトを使っているメンバーが多数いる場合は、これらのヘッダーを見ていらいら"
+"するかもしれません。まず、これらのヘッダーがなぜ存在するのか、メールソフトで"
+"どのように非表示にするのかについて、メンバーを教育する努力をすべきです。最後"
+"の手段として、これらのヘッダーを無効にすることもできますが、"
+"これは推奨されません "
+"(実際、これらのヘッダーを無効にする機能はいずれなくなるかもしれません)。"
 
 #: forms/list_forms.py:841
 msgid "Include the list post header"
@@ -1058,20 +1058,20 @@ msgstr ""
 
 #: forms/list_forms.py:849
 msgid "Explicit reply-to address"
-msgstr "明示的な Reply-To アドレス"
+msgstr "明示的な Reply-To: アドレス"
 
 #: forms/list_forms.py:852
 msgid ""
 "This option allows admins to set an explicit Reply-to address. It is only "
 "used if the reply-to is set to use an explicitly set header"
 msgstr ""
-"このオプションにより、管理者は明示的な Reply-To アドレスを設定することができ"
-"ます。これは Reply-To が明示的に設定されたヘッダーを使うように設定されている"
-"場合にのみ使われます"
+"このオプションにより、管理者は明示的な Reply-To: "
+"アドレスを設定することができます。これは Reply-To: "
+"が明示的に設定されたヘッダーを使うように設定されている場合にのみ使われます"
 
 #: forms/list_forms.py:861
 msgid "First strip Reply-To"
-msgstr "投稿の Reply-To を除去"
+msgstr "投稿の Reply-To: を除去"
 
 #: forms/list_forms.py:863 forms/list_forms.py:862
 msgid ""
@@ -1097,11 +1097,11 @@ msgstr "返信設定を変更しない"
 
 #: forms/list_forms.py:876 forms/list_forms.py:875
 msgid "Explicit Reply-to header set"
-msgstr "明示的に Reply-To ヘッダーを設定"
+msgstr "明示的に Reply-To: ヘッダーを設定"
 
 #: forms/list_forms.py:877 forms/list_forms.py:876
 msgid "Explicit Reply-to set; no Cc added"
-msgstr "明示的に Reply-To ヘッダーを設定 (Cc は追加しない)"
+msgstr "明示的に Reply-To: ヘッダーを設定 (Cc: は追加しない)"
 
 #: forms/list_forms.py:880 forms/list_forms.py:879
 msgid ""
@@ -1168,7 +1168,7 @@ msgstr "このメーリングリストに使用するパイプラインのタイ
 
 #: forms/list_forms.py:926 forms/list_forms.py:925
 msgid "Filter content"
-msgstr "コンテンツフィルター"
+msgstr "コンテンツの除去・通過"
 
 #: forms/list_forms.py:928 forms/list_forms.py:927
 msgid ""
@@ -1176,13 +1176,13 @@ msgid ""
 "below?\n"
 "<b>None of the settings below have any effect if this is No.</b>"
 msgstr ""
-"Mailman は以下の設定に従ってメーリングリストへの投稿内容をフィルタリングする"
-"必要がありますか?\n"
+"Mailman は以下の設定に従ってメーリングリストへの投稿内容をフィルターする必要"
+"がありますか?\n"
 "<b>これが [いいえ] の場合、以下の設定はどれも効果がありません。</b>"
 
 #: forms/list_forms.py:934 forms/list_forms.py:933
 msgid "Filter types"
-msgstr "種別でのフィルター"
+msgstr "除去対象の種別"
 
 #: forms/list_forms.py:937 forms/list_forms.py:936
 msgid ""
@@ -1190,21 +1190,21 @@ msgid ""
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
-"受信した投稿からフィルタリングする MIME タイプ。一般的なタイプのリストは、<a "
-"href=\"https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Basics_of_HTTP/"
+"投稿から除去するパートを MIME タイプで指定します。一般的なタイプのリストは、"
+"<a href=\"https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Basics_of_HTTP/"
 "MIME_types/Common_types\">こちら</a>でご覧いただけます"
 
 #: forms/list_forms.py:943 forms/list_forms.py:942
 msgid "Filter extensions"
-msgstr "拡張子でのフィルター"
+msgstr "除去対象の拡張子"
 
 #: forms/list_forms.py:945 forms/list_forms.py:944
 msgid "Extensions to filter from the incoming posts."
-msgstr "フィルタリング対象とする、投稿の拡張子を設定します。"
+msgstr "投稿から除去するパートを拡張子で指定します。"
 
 #: forms/list_forms.py:948 forms/list_forms.py:947
 msgid "Pass types"
-msgstr "許可する種別"
+msgstr "通過対象の種別"
 
 #: forms/list_forms.py:951 forms/list_forms.py:950
 msgid ""
@@ -1212,17 +1212,17 @@ msgid ""
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
-"受信した投稿で許可する MIME タイプ。一般的なタイプのリストは、<a href=\"https"
-"://developer.mozilla.org/ja-JP/docs/Web/HTTP/Basics_of_HTTP/MIME_types/"
-"Common_types\">こちら</a>でご覧いただけます"
+"投稿に許可するパートを MIME タイプで指定します。一般的なタイプのリストは、<a "
+"href=\"https://developer.mozilla.org/ja-JP/docs/Web/HTTP/Basics_of_HTTP/"
+"MIME_types/Common_types\">こちら</a>でご覧いただけます"
 
 #: forms/list_forms.py:957 forms/list_forms.py:956
 msgid "Pass extensions"
-msgstr "許可する拡張子"
+msgstr "通過対象の拡張子"
 
 #: forms/list_forms.py:959 forms/list_forms.py:958
 msgid "Extensions to allow in the incoming posts."
-msgstr "投稿を許可する拡張子を設定します。"
+msgstr "投稿を許可するパートを拡張子で指定します。"
 
 #: forms/list_forms.py:965 forms/list_forms.py:964
 msgid "Collapse alternatives"
@@ -1237,7 +1237,7 @@ msgstr ""
 
 #: forms/list_forms.py:975 forms/list_forms.py:974
 msgid "Filter Action"
-msgstr "フィルター処理"
+msgstr "除去後の処理"
 
 #: forms/list_forms.py:982 forms/list_forms.py:981
 msgid "Convert html to plaintext"
@@ -1248,8 +1248,8 @@ msgid ""
 "Should Mailman convert text/html parts to plain text? This conversion "
 "happens after MIME attachments have been stripped."
 msgstr ""
-"Mailmanはtext/html部分をプレーンテキストに変換しますか? この変換はMIMEの添付"
-"ファイルが取り除かれた後に行われます。"
+"Mailman は text/html 部分をプレーンテキストに変換しますか? この変換は MIME "
+"の添付ファイルが取り除かれた後に行われます。"
 
 #: forms/list_forms.py:997 forms/list_forms.py:996
 msgid "Respond and continue processing"
@@ -1402,7 +1402,7 @@ msgstr ""
 
 #: forms/list_forms.py:1110 forms/list_forms.py:1109
 msgid "Notify admin of membership changes"
-msgstr "メンバー変更の管理者への通知"
+msgstr "メンバー変更を管理者に通知"
 
 #: forms/list_forms.py:1112 forms/list_forms.py:1111
 msgid "Should administrator get notices of subscribes and unsubscribes?"
@@ -1422,7 +1422,7 @@ msgstr "承認"
 
 #: forms/list_forms.py:1133 forms/list_forms.py:1132
 msgid "Show list on index page"
-msgstr "インデックスページにリストを表示"
+msgstr "一覧ページにリストを表示"
 
 #: forms/list_forms.py:1135 forms/list_forms.py:1134
 msgid "Choose whether to include this list on the list of all lists"
@@ -1604,7 +1604,7 @@ msgstr "ヘッダー"
 
 #: forms/list_forms.py:1344 forms/list_forms.py:1343
 msgid "Email header to filter on (case-insensitive)."
-msgstr "フィルタリングするメールヘッダー (大文字・小文字の区別なし)。"
+msgstr "フィルターするメールヘッダー (大文字・小文字の区別なし)。"
 
 #: forms/list_forms.py:1346 forms/list_forms.py:1345
 msgid "Please enter a header."
@@ -1781,8 +1781,8 @@ msgstr ""
 "注意: テンプレートは一般に公開されるため、テンプレート内に秘密のコンテンツを"
 "追加しないでください。\n"
 "テンプレートでは以下の変数を使用できます。\n"
-"$hyperkitty_url: Hyperkittyのアーカイブメッセージへのリンク (list:member:"
-"regular:footer、list:member:regular:header 内のみ)\n"
+"$hyperkitty_url: Hyperkitty のアーカイブメッセージへのリンク "
+"(list:member:regular:footer、list:member:regular:header 内のみ)\n"
 "$listname: メーリングリストの名前 (例: ant@example.com)\n"
 "$list_id: List-IDヘッダー (例: ant.example.com)\n"
 "$display_name: メーリングリストの表示名 (例: Ant)\n"
@@ -1795,8 +1795,8 @@ msgstr ""
 "$site_email: サイトのオーナーに連絡するためのメールアドレス \n"
 "$language: メーリングリストの優先言語の2文字の言語コード (例: fr、en、de) \n"
 "いくつかのテンプレートはほかの変数も使用可能です。<a href=\"https://docs."
-"mailman3.org/projects/mailman/en/latest/src/mailman/rest/docs/templates."
-"html#templated-texts\">こちらの文書を参照</a>。 \n"
+"mailman3.org/projects/mailman/en/latest/src/mailman/rest/docs/templates.html"
+"#templated-texts\">こちらの文書を参照</a>。 \n"
 
 #: models.py:80
 msgid "owner"
@@ -2260,7 +2260,7 @@ msgstr "現在、ブロックしているアドレスはありません。"
 
 #: templates/postorius/index.html:6
 msgid "List Index"
-msgstr "リストインデックス"
+msgstr "メーリングリスト一覧"
 
 #: templates/postorius/index.html:12
 msgid "Mailing Lists"
@@ -2321,8 +2321,7 @@ msgstr ""
 
 #: templates/postorius/index.html:114
 msgid "Only admins see unadvertised lists in the list index."
-msgstr ""
-"管理者だけがリストインデックスで非公開のメーリングリストを見ることができま"
+msgstr "管理者だけがメーリングリスト一覧で非公開のメーリングリストを見ることができま"
 "す。"
 
 #: templates/postorius/index.html:120
@@ -3053,7 +3052,7 @@ msgstr "入会オプション"
 
 #: templatetags/nav_helpers.py:34
 msgid "List Settings"
-msgstr "リスト設定"
+msgstr "メーリングリスト設定"
 
 #: templatetags/nav_helpers.py:35
 msgid "Summary"
@@ -3353,7 +3352,7 @@ msgstr "申請を処理できませんでした: %s"
 
 #: views/list.py:1319 views/list.py:1320
 msgid "List Identity"
-msgstr "メーリングリスト識別設定"
+msgstr "リスト識別設定"
 
 #: views/list.py:1320 views/list.py:1321
 msgid "Automatic Responses"
@@ -3365,7 +3364,7 @@ msgstr "メッセージ変更"
 
 #: views/list.py:1322 views/list.py:1323
 msgid "DMARC Mitigations"
-msgstr "DMARC対策"
+msgstr "DMARC 対策"
 
 #: views/list.py:1323 views/list.py:1324
 msgid "Digest"
