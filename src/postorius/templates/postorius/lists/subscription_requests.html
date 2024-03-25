@@ -2,6 +2,8 @@
 {% load i18n %}
 {% load nav_helpers %}
 {% load pagination %}
+{% load date_helpers %}
+{% load tz %}
 
 {% block head_title %}
 {{ page_title }} | {{ list.fqdn_listname }} - {{ block.super }}
@@ -17,20 +19,24 @@
                 <thead>
                     <tr>
                         <th>{% trans 'E-Mail Address' %}</th>
+                        <th>{% trans 'Date' %}</th>
                         <th>{% trans 'Actions' %}</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for request in paginated_requests.object_list %}
                     <tr>
-                      <td>
+                        <td>
                           {% if request.display_name %}
                               "{{ request.display_name }}" &lt;{{ request.email }}&gt;
                           {% else %}
                               {{ request.email }}
                           {% endif %}
                         </td>
-                      <td>
+                        <td>
+                            {{ request.request_date|datetime_parse|localtime|date:"DATETIME_FORMAT" }}
+                        </td>
+                        <td>
                         <form action="{% url 'handle_subscription_request' list.list_id request.token %}" method="POST">
                             {% csrf_token %}
                             <input type="submit" class="btn btn-xs btn-success" name='accept' value="{% trans 'Accept' %}">

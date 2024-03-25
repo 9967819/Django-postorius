@@ -38,6 +38,8 @@ Features
 
 * Show which Lists a user is an owner or moderator of in 'Manage User'
   page. (Closes #580)
+* Add date when the subscription request was created in 'Pending subscription'
+  and 'Pending un-subscription' pages. (Fixes #575)
 
 
 .. _NEWS-1.3.9:
