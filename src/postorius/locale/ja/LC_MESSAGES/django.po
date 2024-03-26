@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-19 17:57+0000\n"
-"PO-Revision-Date: 2024-03-22 18:00+0000\n"
+"PO-Revision-Date: 2024-03-26 18:52+0000\n"
 "Last-Translator: SATOH Fumiyasu <fumiyas@osstech.co.jp>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ja/>\n"
@@ -752,7 +752,7 @@ msgstr ""
 
 #: forms/list_forms.py:583
 msgid "Hold these non-members"
-msgstr "投稿を保留とする非メンバー"
+msgstr "投稿を保留する非メンバー"
 
 #: forms/list_forms.py:586
 msgid ""
