@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-19 17:57+0000\n"
-"PO-Revision-Date: 2024-03-26 18:52+0000\n"
+"PO-Revision-Date: 2024-03-27 07:43+0000\n"
 "Last-Translator: SATOH Fumiyasu <fumiyas@osstech.co.jp>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ja/>\n"
@@ -269,11 +269,11 @@ msgstr "メーリングリストのタイプを選択してください。"
 
 #: forms/list_forms.py:89
 msgid "Advertise this list in list index"
-msgstr "メーリングリスト名を公開します"
+msgstr "メーリングリスト名を公開する"
 
 #: forms/list_forms.py:90
 msgid "Hide this list in list index"
-msgstr "メーリングリスト名を非公開にします"
+msgstr "メーリングリスト名を非公開にする"
 
 #: forms/list_forms.py:94 forms/list_forms.py:1139 forms/list_forms.py:1138
 msgid "Short Description"
@@ -1359,11 +1359,11 @@ msgid ""
 "some other mailing list manager to Mailman.\n"
 "The text of Welcome message can be set via the Templates tab."
 msgstr ""
-"新規入会メンバーにウェルカムメッセージを送信しますか? 手動で入会するつもり"
-"で、入会したことを知られたくない場合のみ、この設定をオフにしてください。これ"
-"を「いいえ」に設定すると、他のメーリングリストマネージャーからMailmanへメーリ"
-"ングリストを透過的に移行する場合に最も便利です。\n"
-"ウェルカムメッセージのテキストはテンプレートタブで設定できます。"
+"新規入会メンバーに挨拶のメッセージを送信しますか? 手動で入会されたことをメン"
+"バーに通知したくないときは「いいえ」にしてください。「いいえ」の設定は、"
+"他のメーリングリストマネージャーから Mailman "
+"へメーリングリストを透過的に移行する場合に便利です。\n"
+"挨拶のメッセージのテキストはテンプレートタブで設定できます。"
 
 #: forms/list_forms.py:1085 forms/list_forms.py:1084
 msgid "Send goodbye message"
@@ -1376,9 +1376,8 @@ msgid ""
 "you did so.\n"
 "The text of Goodbye message can be set via the Templates tab."
 msgstr ""
-"新しく退会したメンバーにお別れのメッセージを送りますか? 手動で退会する予定"
-"で、退会したことを知られたくない場合のみ、このオプションをオフにしてくださ"
-"い。\n"
+"新しく退会したメンバーにお別れのメッセージを送りますか? 手動で退会されたこと"
+"をメンバーに通知したくないときは「いいえ」にしてください。\n"
 "お別れのメッセージのテキストはテンプレートタブで設定できます。"
 
 #: forms/list_forms.py:1096 forms/list_forms.py:1095
@@ -1394,11 +1393,11 @@ msgid ""
 "reason or another. Setting this option causes notices to be sent immediately "
 "on the arrival of new requests as well. "
 msgstr ""
-"メーリングリストのモデレーターは新しい申請の即時通知を受けますか? モデレー"
-"ター (およびオーナー) には、承認待ちの申請 (たとえば、管理対象リストへの入会"
-"申請や、何らかの理由で保留されている投稿など) のリマインダーが毎日送られま"
-"す。このオプションを設定すると、新しい申請が届いたしたときにもすぐに通知が送"
-"られるようになります。 "
+"メーリングリストのモデレーターは新しい申請の即時通知を受けますか? "
+"モデレーター (およびオーナー) には、承認待ちの申請 "
+"(管理対象リストへの入会申請や、何らかの理由で保留されている投稿など) のリマイ"
+"ンダーが毎日送られます。このオプションを設定すると、新しい申請が届いたしたと"
+"きにもすぐに通知が送られるようになります。 "
 
 #: forms/list_forms.py:1110 forms/list_forms.py:1109
 msgid "Notify admin of membership changes"
@@ -2189,7 +2188,7 @@ msgstr "ドメインオーナーの追加 "
 
 #: templates/postorius/domain/owners.html:12
 msgid "Add a new owner to"
-msgstr "オーナーを新規追加"
+msgstr "新しいオーナーを追加"
 
 #: templates/postorius/domain/template_add.html:17
 #: templates/postorius/domain/template_delete.html:16
@@ -2587,7 +2586,7 @@ msgstr "リストの作成"
 
 #: templates/postorius/lists/new.html:12
 msgid "Create a new list"
-msgstr "新しいリストを作成する"
+msgstr "新しいメーリングリストを作成する"
 
 #: templates/postorius/lists/pending_confirmations.html:19
 #: templates/postorius/lists/subscription_requests.html:19
