@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-19 17:57+0000\n"
-"PO-Revision-Date: 2024-03-28 19:20+0000\n"
+"PO-Revision-Date: 2024-03-29 10:04+0000\n"
 "Last-Translator: SATOH Fumiyasu <fumiyas@osstech.co.jp>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ja/>\n"
@@ -117,7 +117,7 @@ msgstr "バウンスによって無効"
 
 #: forms/fields.py:51
 msgid "Hold for moderation"
-msgstr "保留 (承認待ち)"
+msgstr "保留 (審査待ち)"
 
 #: forms/fields.py:52
 msgid "Reject (with notification)"
@@ -141,7 +141,7 @@ msgstr "どれかひとつは選択してください"
 
 #: forms/fields.py:149 templates/postorius/lists/summary.html:54
 msgid "Delivery mode"
-msgstr "配信モード"
+msgstr "配信形式"
 
 #: forms/fields.py:151
 msgid ""
@@ -178,7 +178,7 @@ msgstr ""
 
 #: forms/fields.py:188
 msgid "Moderation"
-msgstr "承認設定"
+msgstr "審査設定"
 
 #: forms/fields.py:190 forms/list_forms.py:1293
 #: templatetags/membership_helpers.py:84 forms/list_forms.py:1292
@@ -200,12 +200,12 @@ msgid ""
 msgstr ""
 "このメンバーがリストに投稿したときに実行されるデフォルトの処理。\n"
 "リストのデフォルト: リストのデフォルトのメンバー処理に従います。\n"
-"保留: リストモデレーターによる承認のためにメッセージを保留します。\n"
-"拒否: 投稿者にバウンス通知を送ることで、自動的にメッセージを拒否します。バウ"
-"ンス通知の文面は自分で設定できます。\n"
-"破棄: これは単にメッセージを破棄し、投稿者には何も通知しません。\n"
-"承認: 投稿をそのまま受け入れます。\n"
-"デフォルト処理: 追加のチェックを実行し、メッセージを受け入れます。 \n"
+"保留: リストのモデレーターによる審査のためにメッセージを保留します。\n"
+"拒否: 投稿者にバウンス通知を送ることで自動的にメッセージを拒否します。バウン"
+"ス通知の文面はテンプレートで設定できます。\n"
+"破棄: 単にメッセージを破棄し、投稿者には何も通知しません。\n"
+"承認: これ以上のチェックを行わずに投稿を承認します。\n"
+"デフォルト処理: 追加のチェックを実行しをメッセージを受理します。 \n"
 
 #: forms/list_forms.py:43
 msgid "Daily"
@@ -315,8 +315,7 @@ msgstr "あなたのメールアドレス"
 msgid ""
 "Subscribing via \"Primary Address\" will change subscription address when "
 "you change your primary address."
-msgstr ""
-"プライマリアドレスを変更すると、入会しているアドレスも自動で変更されます。"
+msgstr "メインメールアドレスを変更すると、入会しているアドレスも自動で変更されます。"
 
 #: forms/list_forms.py:179 forms/list_forms.py:210 forms/member_forms.py:30
 #: forms/system.py:38
@@ -335,7 +334,7 @@ msgstr "あなたの名前 (任意)"
 #: forms/list_forms.py:198 forms/list_forms.py:1420 views/list.py:545
 #: forms/list_forms.py:1419 views/list.py:546
 msgid "Primary Address ({})"
-msgstr "プライマリアドレス ({})"
+msgstr "{} (メインメールアドレス)"
 
 #: forms/list_forms.py:233
 msgid "Open"
@@ -348,11 +347,11 @@ msgstr "確認"
 
 #: forms/list_forms.py:235
 msgid "Moderate"
-msgstr "承認"
+msgstr "審査"
 
 #: forms/list_forms.py:236
 msgid "Confirm, then moderate"
-msgstr "確認後に承認"
+msgstr "確認後に審査"
 
 #: forms/list_forms.py:246
 msgid "Subscription Policy"
@@ -368,10 +367,10 @@ msgid ""
 "needs to authorize."
 msgstr ""
 "開放: 入会は自動的に行なわれます。\n"
-"確認: 入会者が自分宛に送信されるメールを参照して入会を確認する必要がありま"
-"す。\n"
-"承認: モデレーターが手動で入会申請を承認する必要があります。\n"
-"確認後に承認: まず入会者が確認し、次にモデレーターが承認する必要があります。"
+"確認: "
+"入会者が自分宛に送信されるメールを参照して入会を確認する必要があります。\n"
+"審査: モデレーターが手動で入会申請を承認する必要があります。\n"
+"確認後に審査: まず入会者が確認し、次にモデレーターが審査する必要があります。"
 
 #: forms/list_forms.py:260
 msgid "Un-Subscription Policy"
@@ -387,10 +386,10 @@ msgid ""
 "needs to authorize."
 msgstr ""
 "開放: 退会は自動的に行われます。\n"
-"確認: 入会者が自分宛に送信されるメールを参照して退会を確認する必要がありま"
-"す。\n"
-"承認: モデレーターが手動で退会申請を承認する必要があります。\n"
-"確認後に承認: まず入会者が確認し、次にモデレーターが承認する必要があります。"
+"確認: "
+"入会者が自分宛に送信されるメールを参照して退会を確認する必要があります。\n"
+"審査: モデレーターが手動で退会申請を審査する必要があります。\n"
+"確認後に審査: まず入会者が確認し、次にモデレーターが審査する必要があります。"
 
 #: forms/list_forms.py:278 forms/list_forms.py:777
 #: templates/postorius/lists/held_messages.html:30
@@ -666,12 +665,12 @@ msgid ""
 "Default Processing: run additional checks and accept the message."
 msgstr ""
 "メンバーがリストに投稿したときのデフォルト処理。\n"
-"保留: リストのモデレーターによる承認のためにメッセージを保留します。\n"
-"拒否: 投稿の作成者にバウンス通知を送信することで、メッセージを自動的に拒否し"
-"ます。バウンス通知のテキストは管理者が設定できます。\n"
-"破棄: これは単にメッセージを破棄し、投稿者に通知は送信されません。\n"
-"承認: それ以上のチェックを行わずに投稿を承認します。\n"
-"デフォルトの処理: 追加のチェックを実行し、メッセージを受け入れます。"
+"保留: リストのモデレーターによる審査のためにメッセージを保留します。\n"
+"拒否: 投稿者にバウンス通知を送ることで自動的にメッセージを拒否します。バウン"
+"ス通知の文面はテンプレートで設定できます。\n"
+"破棄: 単にメッセージを破棄し、投稿者には何も通知しません。\n"
+"承認: これ以上のチェックを行わずに投稿を承認します。\n"
+"デフォルト処理: 追加のチェックを実行してメッセージを受理します。"
 
 #: forms/list_forms.py:512
 msgid "Default action to take when a non-member posts to the list"
@@ -687,9 +686,9 @@ msgid ""
 "against the list of explicitly accepted, held, rejected (bounced), and "
 "discarded addresses. If no match is found, then this action is taken."
 msgstr ""
-"非メンバーからの投稿を受信すると、そのメッセージの差出人は、明示的に投稿を承"
-"認、保留、拒否 (バウンス)、破棄するアドレスのリストと照合されます。それらリス"
-"トと一致しない場合、この処理が適用されます。"
+"非メンバーからの投稿を受信すると、投稿者のメールアドレスが明示的に下記の投稿"
+"を承認、保留、拒否、破棄する非メンバーのリストと照合されます。それらリストと"
+"一致しない場合、この処理が適用されます。"
 
 #: forms/list_forms.py:528
 msgid "Emergency Moderation"
@@ -701,9 +700,9 @@ msgid ""
 "held for moderation. Turn this option on when your list is experiencing a "
 "flamewar and you want a cooling off period. "
 msgstr ""
-"このオプションを有効にすると、 リストへの投稿をすべて緊急に制限し, 承認のため"
-"に保留します。リストが炎上していて、冷却期間が必要なときにこのオプションをオ"
-"ンにしてください。 "
+"このオプションを有効にすると、 リストへの投稿をすべて緊急に制限し、審査のため"
+"に保留します。リストが炎上していて、冷却期間が必要なときにこのオプションを有"
+"効にしてください。 "
 
 #: forms/list_forms.py:538
 msgid "Maximum message size"
@@ -727,7 +726,7 @@ msgid ""
 "will be held for moderation. This can be used to prevent mass mailings from "
 "being accepted. A value of 0 disables the check."
 msgstr ""
-"この数以上の宛先 (To: と Cc:) が明示されている場合、その投稿は承認のために保"
+"この数以上の宛先 (To: と Cc:) が明示されている場合、その投稿は審査のために保"
 "留されます。これは大量のメールを受け付けないようにするために使用できます。0 "
 "を設定するとチェックを無効にします。"
 
@@ -1011,8 +1010,9 @@ msgstr "匿名リスト"
 msgid ""
 "Hide the sender of a message, replacing it with the list address (Removes "
 "From, Sender and Reply-To fields)"
-msgstr "メッセージの送信者を隠し、メーリングリストのアドレスに置き換えます "
-"(From:、Sender:、Reply-To: ヘッダーを削除します)"
+msgstr ""
+"メッセージの送信者を隠し、メーリングリストのアドレスに置き換えます (元の "
+"From:、Sender:、Reply-To: ヘッダーは削除します)"
 
 #: forms/list_forms.py:821
 msgid "Include RFC2369 headers"
@@ -1031,30 +1031,29 @@ msgid ""
 "headers, but this is not recommended (and in fact, your ability to disable "
 "these headers may eventually go away)."
 msgstr ""
-"「はい」を推奨します。RFC 2369 は、"
-"リストメンバーに送られるすべてのメッセージに通常追加される List-*:ヘッダーの"
-"セットを定義しています。これらは標準に準拠したメールソフトを使っているエンド"
-"ユーザーを大いに助けるものです。通常は常に有効にしておくべきです。しかし、ま"
-"だすべてのメールソフトが標準に準拠しているわけではありませんし、非準拠のメー"
-"ルソフトを使っているメンバーが多数いる場合は、これらのヘッダーを見ていらいら"
-"するかもしれません。まず、これらのヘッダーがなぜ存在するのか、メールソフトで"
-"どのように非表示にするのかについて、メンバーを教育する努力をすべきです。最後"
-"の手段として、これらのヘッダーを無効にすることもできますが、"
-"これは推奨されません "
+"「はい」を推奨します。RFC 2369 は List-*:ヘッダー群を定義しており、リストメン"
+"バーに送られるすべてのメッセージに追加することを想定しています。これらは標準"
+"に準拠したメールソフトを使っているエンドユーザーを大いに助けるものです。通常"
+"は常に有効にしておくべきです。しかし、まだすべてのメールソフトが標準に準拠し"
+"ているわけではありませんし、非準拠のメールソフトを使っているメンバーが多数い"
+"る場合は、これらのヘッダーに悩まされるかもしれません。まず、これらのヘッダー"
+"がなぜ存在するのか、メールソフトでどのように非表示にするのかについて、メンバ"
+"ーを教育する努力をすべきです。最後の手段として、これらのヘッダーを無効にする"
+"こともできますが、これは推奨されません "
 "(実際、これらのヘッダーを無効にする機能はいずれなくなるかもしれません)。"
 
 #: forms/list_forms.py:841
 msgid "Include the list post header"
-msgstr "List-Post: のヘッダーを含める"
+msgstr "List-Post: ヘッダーを含める"
 
 #: forms/list_forms.py:843
 msgid ""
 "This can be set to no for announce lists that do not wish to include the "
 "List-Post header because posting to the list is discouraged."
 msgstr ""
-"メーリングリストがメンバーからの投稿が推奨されていない場合、List-Postヘッダー"
-"を含めたくない、アナウンス専用のメーリングリストでは、これはnoに設定できま"
-"す。"
+"「いいえ」に設定することで List-Post: ヘッダーが追加されなくなります。メンバ"
+"ーからの投稿を想定していないアナウンス専用のメーリングリストでは「いいえ」に"
+"設定してください。"
 
 #: forms/list_forms.py:849
 msgid "Explicit reply-to address"
@@ -1132,7 +1131,7 @@ msgid ""
 msgstr ""
 "メーリングリストへの返信はどこにするべきでしょうか? "
 "ほどんどのメーリングリストでは、返信設定を行わないことを推奨します。\n"
-"このオプションは、このメーリング リストを流れるメッセージの Reply-To: "
+"このオプションは、このメーリングリストを流れるメッセージの Reply-To: "
 "ヘッダーに対して Mailman "
 "が行う処理を制御します。「返信設定を変更しない」を設定したとき、Reply-To: "
 "ヘッダーは Mailman によって追加されません。元のメッセージに存在する場合も削除"
@@ -1143,20 +1142,21 @@ msgstr ""
 "明示的に Reply-To: ヘッダーを設定」は「明示的な Reply-To: "
 "アドレス」の値を挿入します)。「明示的に Reply-To: ヘッダーを設定 (Cc: は追加"
 "しない)」は、誰かがリストのアドレスに返信することを避けたいアナウンス専用リス"
-"トに便利です。Reply-To: ヘッダーを付け加えたり変更するべきではない "
-"理由はたくさんあります。 ひとつは、Reply-To: "
-"により返信先を指定したい人がいるということです。 また、Reply-To: "
+"トに便利です。Reply-To: "
+"ヘッダーを付け加えたり変更するべきではない理由はたくさんあります。 ひとつは"
+"、Reply-To: により返信先を指定したい人がいるということです。また、Reply-To: "
 "を変更すると個人的な返信が 面倒になるという理由もあります。「<a href=\"http"
 "://marc.merlins.org/netrants/reply-to-harmful.html\">`Reply-To' Munging "
 "Considered Harmful</a>」でこの件に関する総括的な議論を読むことができます。こ"
 "れに対する反論は「 <a href=\"http://marc.merlins.org/netrants/reply-to-useful"
 ".html\">Reply-To Munging Considered Useful</a>」にありますので参考にしてくだ"
-"さい。メーリングリストによっては投稿を制限し、並行して討論用の "
+"さい。メーリングリストによっては投稿を制限し、別に議論用の "
 "リストを設置することもあります。例としては「patches」や「checkin」リスト "
 "があります。これらのリストは、ソフトウェアの変更がリビジョン管理システム "
 "(RCS) から投稿されます。しかし、変更についての議論は別の開発者メーリングリス"
-"トで行われます。このようなメーリングリストの運用には、別のアドレスを選び、"
-"下の Reply-To: アドレスを並行リストの投稿アドレスに 設定してください。"
+"トで行われます。このようなメーリングリストの運用ならば「明示的に Reply-To: "
+"ヘッダーを設定」を設定し、「明示的な Reply-To: "
+"アドレス」に議論用のメーリングリストの投稿アドレスを設定してください。"
 
 #: forms/list_forms.py:914 forms/list_forms.py:913
 msgid "Pipeline"
@@ -1178,7 +1178,7 @@ msgid ""
 msgstr ""
 "Mailman は以下の設定に従ってメーリングリストへの投稿内容をフィルターする必要"
 "がありますか?\n"
-"<b>これが [いいえ] の場合、以下の設定はどれも効果がありません。</b>"
+"<strong>これが「いいえ」の場合、以下の設定はどれも効果がありません。</strong>"
 
 #: forms/list_forms.py:934 forms/list_forms.py:933
 msgid "Filter types"
@@ -1343,13 +1343,13 @@ msgid ""
 "say 'No', no notifications will be sent to users about the pending approval "
 "on their messages."
 msgstr ""
-"Mailmanはユーザーに保留 (承認待ち) のメッセージを通知しますか?「いいえ」と答"
-"えた場合、承認待ちのメッセージに関する通知はユーザーに送られません。"
+"投稿メッセージが保留 (審査待ち) されたときに投稿者に通知しますか?「いいえ」に"
+"設定すると、審査待ちを知らせるメッセージはユーザーに送られません。"
 
 #: forms/list_forms.py:1071 forms/list_forms.py:1298 forms/list_forms.py:1070
 #: forms/list_forms.py:1297
 msgid "Send welcome message"
-msgstr "歓迎メッセージを送信"
+msgstr "挨拶メッセージを送信"
 
 #: forms/list_forms.py:1073 forms/list_forms.py:1072
 msgid ""
@@ -1394,7 +1394,7 @@ msgid ""
 "on the arrival of new requests as well. "
 msgstr ""
 "メーリングリストのモデレーターは新しい申請の即時通知を受けますか? "
-"モデレーター (およびオーナー) には、承認待ちの申請 "
+"モデレーター (およびオーナー) には、審査待ちの申請 "
 "(管理対象リストへの入会申請や、何らかの理由で保留されている投稿など) のリマイ"
 "ンダーが毎日送られます。このオプションを設定すると、新しい申請が届いたしたと"
 "きにもすぐに通知が送られるようになります。 "
@@ -1409,15 +1409,15 @@ msgstr "入会と退会の通知を管理者が受け取りますか?"
 
 #: forms/list_forms.py:1119 forms/list_forms.py:1118
 msgid "Not Moderated"
-msgstr "承認されていません"
+msgstr "審査なし"
 
 #: forms/list_forms.py:1120 forms/list_forms.py:1119
 msgid "Moderated but allows for open posting"
-msgstr "承認制ですが、公開投稿が可能です"
+msgstr "審査制、ただし公開投稿可能"
 
 #: forms/list_forms.py:1121 forms/list_forms.py:1120
 msgid "Moderated"
-msgstr "承認"
+msgstr "審査済み"
 
 #: forms/list_forms.py:1133 forms/list_forms.py:1132
 msgid "Show list on index page"
@@ -1499,11 +1499,11 @@ msgstr "関連するニュースグループの名前。"
 
 #: forms/list_forms.py:1203 forms/list_forms.py:1202
 msgid "Newsgroup moderation"
-msgstr "ニュースグループの承認"
+msgstr "ニュースグループの審査"
 
 #: forms/list_forms.py:1208 forms/list_forms.py:1207
 msgid "The moderation policy for the linked newsgroup, if there is one."
-msgstr "関連するニュースグループの承認ポリシーがある場合。"
+msgstr "関連するニュースグループの審査ポリシーがある場合。"
 
 #: forms/list_forms.py:1215 forms/list_forms.py:1214
 msgid "NNTP Include subject prefix "
@@ -1552,7 +1552,7 @@ msgstr "事前承認済み"
 #: forms/list_forms.py:1260 forms/list_forms.py:1259
 msgid ""
 "If checked, moderators will not have to approve the subscription request."
-msgstr "チェックした場合、モデレーターは申請を承認する必要はありません。"
+msgstr "チェックした場合、モデレーターは申請を審査する必要はありません。"
 
 #: forms/list_forms.py:1267 forms/list_forms.py:1266
 msgid "Pre Verified"
@@ -1583,7 +1583,7 @@ msgid ""
 "will be ignored for these subscribers and a welcome message will be sent or "
 "not sent based on the choice."
 msgstr "「はい」または「いいえ」に設定するとそれに従い、リストのデフォルト "
-"(「歓迎メッセージを送信」設定) は無視されます。"
+"(「挨拶メッセージを送信」設定) は無視されます。"
 
 #: forms/list_forms.py:1321 forms/list_forms.py:1320
 msgid "Emails to Unsubscribe"
@@ -1827,24 +1827,21 @@ msgstr ""
 msgid ""
 "Sent to the list administrators when moderator approval for a posting is "
 "required."
-msgstr ""
-"投稿に対してモデレーターの承認が必要な場合に、リスト管理者に送信されます。"
+msgstr "投稿に対してモデレーターの審査が必要な場合に、リスト管理者に送信されます。"
 
 #: template_list.py:34
 msgid ""
 "Sent to the list administrators when moderator approval for a subscription "
 "request is required."
-msgstr ""
-"入会申請に対するモデレーターの承認が必要な場合に、リスト管理者に送信されま"
-"す。"
+msgstr "入会申請に対するモデレーターの審査が必要な場合に、リスト管理者に送信されます"
+"。"
 
 #: template_list.py:40
 msgid ""
 "Sent to the list administrators when moderator approval for an "
 "unsubscription request is required."
-msgstr ""
-"退会申請に対するモデレーターの承認が必要な場合に、リスト管理者に送信されま"
-"す。"
+msgstr "退会申請に対するモデレーターの審査が必要な場合に、リスト管理者に送信されます"
+"。"
 
 #: template_list.py:46
 msgid ""
@@ -1928,8 +1925,7 @@ msgstr "メーリングリストから退会する際にメンバーに送られ
 msgid ""
 "The notice sent to a poster when their message is being held for moderator "
 "approval."
-msgstr ""
-"メッセージがモデレーターの承認のために保留されているときに、投稿者に送られる"
+msgstr "メッセージがモデレーターの審査のために保留されているときに、投稿者に送られる"
 "通知。"
 
 #: template_list.py:128
@@ -2566,11 +2562,11 @@ msgstr "メールアドレス"
 #: templates/postorius/lists/members.html:82
 #: templates/postorius/user/subscriptions.html:24
 msgid "Delivery Mode"
-msgstr "配信方法"
+msgstr "配信形式"
 
 #: templates/postorius/lists/members.html:85
 msgid "Moderation Action"
-msgstr "承認処理"
+msgstr "審査処理"
 
 #: templates/postorius/lists/members.html:90
 msgid "Bounce Score"
@@ -2667,7 +2663,7 @@ msgstr "退会"
 #: templates/postorius/lists/summary.html:63
 #: templates/postorius/user/subscription_preferences.html:49
 msgid "Primary Address"
-msgstr "プライマリメールアドレス"
+msgstr "メインメールアドレス"
 
 #: templates/postorius/lists/summary.html:71
 msgid "Manage Subscription"
@@ -2704,9 +2700,8 @@ msgstr "入会"
 msgid ""
 "You have a subscription request pending. If you don't hear back soon, please "
 "contact the list owners."
-msgstr ""
-"入会申請は保留されています。すぐに返信がない場合は、リストオーナーに連絡して"
-"ください。"
+msgstr "入会申請は審査中です。すぐに返信がない場合は、リストオーナーにご連絡ください"
+"。"
 
 #: templates/postorius/lists/summary.html:105
 msgid ""
@@ -2775,17 +2770,17 @@ msgstr "入会申請"
 #: templates/postorius/menu/list_nav.html:19
 #: templates/postorius/menu/list_nav.html:30
 msgid "Pending Approval"
-msgstr "入会申請中"
+msgstr "審査中の入会申請"
 
 #: templates/postorius/menu/list_nav.html:22
 #: templates/postorius/menu/list_nav.html:33
 msgid "Pending Confirmation"
-msgstr "確認中"
+msgstr "確認中の申請"
 
 #: templates/postorius/menu/list_nav.html:25
 #: templates/postorius/menu/list_nav.html:36
 msgid "Unsubscription Requests"
-msgstr "退会申請中"
+msgstr "審査中の退会申請"
 
 #: templates/postorius/menu/list_nav.html:54
 #: templates/postorius/menu/list_nav.html:60
@@ -3166,11 +3161,11 @@ msgstr "メンバーのお気に入りが更新されました。"
 
 #: views/list.py:292 views/list.py:293
 msgid "No change to the member's moderation."
-msgstr "メンバーの承認設定に変更はありません。"
+msgstr "メンバーの審査設定に変更はありません。"
 
 #: views/list.py:308 views/list.py:309
 msgid "The member's moderation settings have been updated."
-msgstr "メンバーの承認設定が更新されました。"
+msgstr "メンバーの審査設定が更新されました。"
 
 #: views/list.py:523 views/list.py:524
 msgid "You are not subscribed to {}."
@@ -3192,7 +3187,7 @@ msgstr "何かエラーが発生しました。もう一度お試しください
 msgid ""
 "Your subscription request has been submitted and is waiting for moderator "
 "approval."
-msgstr "入会申請が送信され、モデレーターの承認待ちとなっています。"
+msgstr "入会申請が送信され、モデレーターの審査待ちとなっています。"
 
 #: views/list.py:617 views/list.py:618
 #, python-format
@@ -3214,13 +3209,13 @@ msgstr "退会は自分自身でのみ行えます。"
 #: views/list.py:684 views/list.py:685
 msgid ""
 "You have a pending unsubscription request waiting for moderator approval."
-msgstr "モデレーターの承認待ちの退会申請があります。"
+msgstr "モデレーターの審査待ちの退会申請があります。"
 
 #: views/list.py:695 views/list.py:696
 msgid ""
 "Your unsubscription request has been submitted and is waiting for moderator "
 "approval."
-msgstr "退会申請が送信され、モデレーターの承認待ちとなっています。"
+msgstr "退会申請が送信され、モデレーターの審査待ちとなっています。"
 
 #: views/list.py:703 views/list.py:704
 #, python-format
@@ -3241,9 +3236,8 @@ msgstr "メールアドレス %(address)s が %(list)s に入会しました。"
 msgid ""
 " Subscription may be pending address verification, confirmation or approval "
 "as appropriate."
-msgstr ""
-" 入会の申し込みは、アドレスの検証、確認または承認を必要に応じて保留にしている"
-"場合があります。"
+msgstr " 入会申請は、メールアドレスの検証と入会の確認待ち、または審査待ちになる場合が"
+"あります。"
 
 #: views/list.py:768 views/list.py:838 views/list.py:769 views/list.py:839
 #, python-format
@@ -3293,11 +3287,11 @@ msgstr "保留されたメッセージは見つかりませんでした。"
 
 #: views/list.py:927 views/list.py:928
 msgid "Moderation action for {} set to {}"
-msgstr "{} を {} に設定するための承認処理"
+msgstr "{} の審査処理が {} に設定に設定されました"
 
 #: views/list.py:935 views/list.py:936
 msgid "Failed to set moderation action for {}"
-msgstr "{} の承認処理を設定できませんでした"
+msgstr "{} の審査処理を設定できませんでした"
 
 #: views/list.py:987 views/list.py:988
 msgid "Choose a Domain"
@@ -3313,19 +3307,19 @@ msgstr "メーリングリストが既に存在します。"
 
 #: views/list.py:1203 views/list.py:1204
 msgid "Subscriptions pending user confirmation"
-msgstr "ユーザーの確認待ちの入会"
+msgstr "ユーザーの確認待ちの入会申請"
 
 #: views/list.py:1216 views/list.py:1217
 msgid "Subscriptions pending approval"
-msgstr "承認待ちの入会"
+msgstr "審査中の入会申請"
 
 #: views/list.py:1229 views/list.py:1230
 msgid "Un-subscriptions pending approval"
-msgstr "承認待ちの退会"
+msgstr "審査中の退会申請"
 
 #: views/list.py:1278 views/list.py:1279
 msgid "The request has been accepted."
-msgstr "申請は承認されました。"
+msgstr "申請が承認されました。"
 
 #: views/list.py:1279 views/list.py:1280
 msgid "The request has been rejected."
