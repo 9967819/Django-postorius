@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-19 17:57+0000\n"
-"PO-Revision-Date: 2024-03-29 18:56+0000\n"
+"PO-Revision-Date: 2024-04-01 21:27+0000\n"
 "Last-Translator: SATOH Fumiyasu <fumiyas@osstech.co.jp>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ja/>\n"
@@ -979,7 +979,7 @@ msgstr "拒否"
 
 #: forms/list_forms.py:779
 msgid "Forward"
-msgstr "前へ"
+msgstr "転送"
 
 #: forms/list_forms.py:780
 msgid "Preserve"
@@ -1309,9 +1309,10 @@ msgid ""
 "If you choose yes, decide whether you want Mailman to discard the original "
 "email, or forward it on to the system as a normal mail command."
 msgstr ""
-"Mailman は -request アドレスへのメール送信者に自動応答メッセージを送ります"
-"か? 「はい」を選んだ場合、Mailman に元のメールを破棄させたいのか、それとも通"
-"常のメールコマンドとしてシステムに転送させたいのかを決めてください。"
+"Mailman は -request "
+"アドレスへのメール送信者に自動応答メッセージを送りますか? 自動応答する場合、"
+"Mailman に元のメールを破棄させたいのか、それとも通常のメールコマンドとしてシ"
+"ステムに転送させたいのかを決めてください。"
 
 #: forms/list_forms.py:1042 forms/list_forms.py:1041
 msgid "Autoresponse request text"
@@ -1331,9 +1332,10 @@ msgid ""
 "request/-owner address from the same poster. Set to zero (or negative) for "
 "no grace period (i.e. auto-respond to every message)."
 msgstr ""
-"同じ投稿者からメーリングリストまたは -request/-owner アドレスのどちらかに自動"
-"応答するまでの日数。猶予期間を設定しない (つまり、すべてのメッセージに自動応"
-"答する) 場合はゼロ (またはマイナス) に設定します。"
+"同一の送信者からの投稿や -request/-owner "
+"アドレス宛の申請に対して自動応答するまでの日数。猶予期間を設定しない "
+"(つまり、すべてのメッセージに自動応答する) 場合はゼロ (またはマイナス) "
+"に設定します。"
 
 #: forms/list_forms.py:1060 forms/list_forms.py:1059
 msgid "Notify users of held messages"
@@ -3375,7 +3377,7 @@ msgstr "アーカイブ設定"
 
 #: views/list.py:1326 views/list.py:1327
 msgid "Member Policy"
-msgstr "メンバーポリシー"
+msgstr "入退会ポリシー"
 
 #: views/list.py:1327 views/list.py:1328
 msgid "Bounce Processing"
