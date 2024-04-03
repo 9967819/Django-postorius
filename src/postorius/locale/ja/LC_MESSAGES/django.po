@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-19 17:57+0000\n"
-"PO-Revision-Date: 2024-04-01 21:27+0000\n"
+"PO-Revision-Date: 2024-04-03 10:50+0000\n"
 "Last-Translator: SATOH Fumiyasu <fumiyas@osstech.co.jp>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ja/>\n"
@@ -3335,7 +3335,7 @@ msgstr "申請は破棄されました。"
 
 #: views/list.py:1281 views/list.py:1282
 msgid "The request has been defered."
-msgstr "申請処理は延期されました。"
+msgstr "申請は保留されました。"
 
 #: views/list.py:1301 views/list.py:1302
 #, python-format
