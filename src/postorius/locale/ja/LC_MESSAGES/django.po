@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-19 17:57+0000\n"
-"PO-Revision-Date: 2024-04-03 10:50+0000\n"
+"PO-Revision-Date: 2024-04-05 16:01+0000\n"
 "Last-Translator: SATOH Fumiyasu <fumiyas@osstech.co.jp>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ja/>\n"
@@ -2910,7 +2910,7 @@ msgstr ""
 
 #: templates/postorius/user/list_options.html:14
 msgid "Subscription options for"
-msgstr "入会オプション"
+msgstr "メンバーオプション"
 
 #: templates/postorius/user/list_options.html:15
 #: templates/postorius/user/subscription_preferences.html:22
@@ -3046,7 +3046,7 @@ msgstr "一括入会"
 
 #: templatetags/nav_helpers.py:33
 msgid "Subscription Options"
-msgstr "入会オプション"
+msgstr "メンバーオプション"
 
 #: templatetags/nav_helpers.py:34
 msgid "List Settings"
@@ -3161,7 +3161,7 @@ msgstr "メンバーが存在しません"
 
 #: views/list.py:282 views/list.py:283
 msgid "The member's preferences have been updated."
-msgstr "メンバーのお気に入りが更新されました。"
+msgstr "メンバーのオプションが更新されました。"
 
 #: views/list.py:292 views/list.py:293
 msgid "No change to the member's moderation."
