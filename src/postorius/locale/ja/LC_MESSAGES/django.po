@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-19 17:57+0000\n"
-"PO-Revision-Date: 2024-04-05 16:01+0000\n"
+"PO-Revision-Date: 2024-04-09 02:01+0000\n"
 "Last-Translator: SATOH Fumiyasu <fumiyas@osstech.co.jp>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ja/>\n"
@@ -634,7 +634,7 @@ msgstr ""
 
 #: forms/list_forms.py:479
 msgid "Administrivia"
-msgstr "投稿アドレスでの申請受取"
+msgstr "投稿アドレス宛の申請を保留"
 
 #: forms/list_forms.py:481
 msgid ""
@@ -642,9 +642,8 @@ msgid ""
 "an administrative request (like subscribe, unsubscribe, etc), and will add "
 "it to the administrative requests queue, notifying the administrator of the "
 "new request, in the process."
-msgstr ""
-"本来は -request アドレス宛に送るべき各種申請 (入会、退会など) がメーリングリ"
-"ストの投稿アドレスに送られたとき、申請として処理します。"
+msgstr "本来は -request アドレス宛に送るべき各種申請 (入会、退会など) "
+"がメーリングリストの投稿アドレスに送られたときに保留します。"
 
 #: forms/list_forms.py:490
 msgid "Default action to take when a member posts to the list"
